@@ -22,7 +22,7 @@
 
 .chain {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 52px 0 0;
   padding: 0;
   list-style: none;
@@ -30,8 +30,8 @@
 
 .chainCell {
   min-width: 0;
-  min-height: 250px;
-  padding: 24px;
+  min-height: 226px;
+  padding: 24px 26px;
   border: 1px solid rgba(251, 250, 247, 0.25);
 }
 
@@ -39,9 +39,19 @@
   border-left: 0;
 }
 
+.chainCell:nth-child(4) {
+  border-top: 0;
+  border-left: 1px solid rgba(251, 250, 247, 0.25);
+}
+
+.chainCell:nth-child(5) {
+  grid-column: span 2;
+  border-top: 0;
+}
+
 .chainNumber {
   display: block;
-  margin-bottom: 38px;
+  margin-bottom: 28px;
   color: #e96a50;
   font-family: var(--font-ui);
   font-size: 13px;
@@ -54,18 +64,20 @@
   margin: 0;
   color: #fbfaf7;
   font-family: var(--font-ui);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 650;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: auto;
 }
 
 .chainCell p {
   margin: 15px 0 0;
   color: rgba(251, 250, 247, 0.7);
   font-family: var(--font-reading);
-  font-size: 16px;
+  font-size: 16.5px;
   line-height: 1.5;
 }
 
@@ -219,6 +231,10 @@
     border-top: 0;
   }
 
+  .chainCell:nth-child(4) {
+    border-left: 0;
+  }
+
   .chainCell:last-child {
     grid-column: 1 / -1;
     min-height: auto;
@@ -251,6 +267,10 @@
 
   .chainNumber {
     margin-bottom: 24px;
+  }
+
+  .chainCell:nth-child(4) {
+    border-left: 1px solid rgba(251, 250, 247, 0.25);
   }
 
   .formula {

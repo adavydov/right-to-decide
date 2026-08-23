@@ -17,9 +17,6 @@ export function DecisionArtwork({ className }: DecisionArtworkProps) {
       <rect x="1160" y="0" width="440" height="256" fill="#c74b36" />
 
       <g stroke="#292927" strokeWidth="2">
-        <path d="M102 734H1498" />
-        <path d="M102 748H1498" />
-        <path d="M318 716V766M610 716V766M904 716V766M1196 716V766" />
         <path d="M184 604L334 454L502 604L668 340L842 604L1048 418L1260 604" />
         <path d="M184 604H1260" />
         <circle cx="334" cy="454" r="10" fill="#f3efe8" />

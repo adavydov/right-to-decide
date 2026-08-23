@@ -297,7 +297,7 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 44px;
   align-items: end;
-  margin-top: 76px;
+  margin-top: 56px;
   padding: 34px 0;
   border-top: 3px solid var(--ink);
   border-bottom: 1px solid var(--ink);
@@ -377,9 +377,12 @@
 
   .timelineSection,
   .credentialsGrid,
-  .linksGrid,
-  .contact {
+  .linksGrid {
     margin-top: 60px;
+  }
+
+  .contact {
+    margin-top: 48px;
   }
 
   .timelineRow {
