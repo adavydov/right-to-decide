@@ -1,0 +1,172 @@
+.section {
+  background: var(--paper);
+}
+
+.groups {
+  margin-top: 64px;
+}
+
+.group + .group {
+  margin-top: 64px;
+}
+
+.groupHeader {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  margin-bottom: 30px;
+}
+
+.groupTitle {
+  margin: 0;
+  padding: 5px 28px 0 0;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.groupThesis {
+  min-width: 0;
+  margin: 0;
+  padding-left: 40px;
+  border-left: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  list-style: none;
+}
+
+.card {
+  min-width: 0;
+  min-height: 240px;
+  padding: 26px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  transition: background-color var(--motion-fast) var(--ease);
+}
+
+.card:hover {
+  background: #f3efe8;
+}
+
+.number {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.body {
+  margin: 18px 0 0;
+  color: var(--ink-soft);
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.consequence {
+  margin: 22px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.sources a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 8px;
+  border: 1px solid var(--rule);
+  color: var(--accent-dark);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.sources a:hover {
+  background: var(--paper);
+  color: var(--accent-dark);
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .groups {
+    margin-top: 52px;
+  }
+
+  .group + .group {
+    margin-top: 56px;
+  }
+
+  .groupHeader {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+  }
+
+  .groupTitle {
+    padding: 0 0 12px;
+  }
+
+  .groupThesis {
+    padding: 20px 0 0;
+    border-top: 1px solid var(--rule);
+    border-left: 0;
+    font-size: 25px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 24px 20px 26px;
+  }
+}

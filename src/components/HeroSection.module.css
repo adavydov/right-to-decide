@@ -1,0 +1,172 @@
+.hero {
+  padding-top: 72px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--paper-strong);
+}
+
+.artwork {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.coverOverlay {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 54fr) minmax(0, 46fr);
+  width: 100%;
+  height: 100%;
+  padding: clamp(32px, 5vw, 72px);
+  background: linear-gradient(
+    90deg,
+    rgba(243, 239, 232, 0.98) 0%,
+    rgba(243, 239, 232, 0.92) 37%,
+    rgba(243, 239, 232, 0.44) 59%,
+    rgba(243, 239, 232, 0) 78%
+  );
+  font-family: var(--font-ui);
+}
+
+.titleBlock {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+}
+
+.eyebrow {
+  max-width: 580px;
+  margin: 0 0 clamp(28px, 4vw, 54px);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.titleBlock h1 {
+  max-width: 720px;
+  margin: 0;
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+  font-size: clamp(48px, 6.1vw, 82px);
+  font-weight: 750;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.subtitle {
+  max-width: 43ch;
+  margin: clamp(23px, 2.6vw, 36px) 0 0;
+  font-family: var(--font-reading);
+  font-size: clamp(17px, 1.65vw, 23px);
+  line-height: 1.35;
+}
+
+.coverStatement {
+  align-self: end;
+  margin: 0 0 0 clamp(18px, 3vw, 48px);
+  padding-top: 15px;
+  border-top: 1px solid var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.caption {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 0 30px;
+}
+
+.caption > p {
+  max-width: 680px;
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .cover {
+    aspect-ratio: 4 / 5;
+  }
+
+  .artwork {
+    left: 16%;
+    width: 112%;
+    opacity: 0.46;
+  }
+
+  .coverOverlay {
+    grid-template-columns: 1fr;
+    padding: 26px 24px;
+    background: linear-gradient(
+      90deg,
+      rgba(243, 239, 232, 0.98) 0%,
+      rgba(243, 239, 232, 0.88) 54%,
+      rgba(243, 239, 232, 0.28) 100%
+    );
+  }
+
+  .eyebrow {
+    max-width: 34ch;
+    margin-bottom: 34px;
+  }
+
+  .titleBlock h1 {
+    font-size: clamp(42px, 13vw, 56px);
+  }
+
+  .subtitle {
+    max-width: 34ch;
+    margin-top: 22px;
+  }
+
+  .coverStatement {
+    align-self: end;
+    max-width: 31ch;
+    margin: 0;
+  }
+
+  .caption {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .caption > p {
+    font-size: 19px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+}

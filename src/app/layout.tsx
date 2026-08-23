@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${siteConfig.publicUrl}/`),
   title: siteConfig.title,
   description: siteConfig.description,
+  applicationName: siteConfig.title,
+  authors: [{ name: siteConfig.author }],
+  creator: siteConfig.author,
+  publisher: siteConfig.author,
+  keywords: [
+    "инженерное образование",
+    "искусственный интеллект",
+    "когнитивный допуск",
+    "инженерное суждение",
+    "Алексей Давыдов",
+  ],
   alternates: { canonical: `${siteConfig.publicUrl}/` },
   openGraph: {
     type: "website",
@@ -18,6 +29,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.title} — ${siteConfig.subtitle}`,
     description: siteConfig.description,
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -27,4 +39,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

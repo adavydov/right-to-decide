@@ -5,6 +5,7 @@ const requiredFiles = [
   "src/app/page.tsx",
   "src/data/content.ts",
   "src/data/author.ts",
+  "src/lib/site-config.ts",
 ];
 
 for (const file of requiredFiles) {
@@ -28,4 +29,3 @@ for (const phrase of requiredPhrases) {
 }
 
 console.log(`Content validation passed: ${requiredPhrases.length} anchors found.`);
-

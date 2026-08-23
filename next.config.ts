@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   basePath,
+  agentRules: false,
   images: {
     unoptimized: true,
   },
 };
 
 export default nextConfig;
-

@@ -1,0 +1,163 @@
+.section {
+  background: var(--paper);
+}
+
+.practices {
+  margin: 58px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.practice {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  padding: 38px 0;
+}
+
+.practice + .practice {
+  border-top: 1px solid var(--border);
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 28px 0 0;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.index span:last-child {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.content {
+  min-width: 0;
+  padding-left: 40px;
+  border-left: 1px solid var(--rule);
+}
+
+.content h3 {
+  max-width: 740px;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 34px;
+  margin-top: 26px;
+}
+
+.description p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.description .boundary {
+  grid-column: 1 / -1;
+  padding: 16px 18px;
+  background: var(--paper-strong);
+  color: var(--ink);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 22px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  color: var(--accent-dark);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration-color: rgba(150, 50, 31, 0.42);
+  transition: color var(--motion-fast) var(--ease), text-decoration-color var(--motion-fast) var(--ease);
+}
+
+.links a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.links a span {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform var(--motion-fast) var(--ease);
+}
+
+.links a:hover span {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 760px) {
+  .practices {
+    margin-top: 48px;
+  }
+
+  .practice {
+    grid-template-columns: 1fr;
+    padding: 32px 0;
+  }
+
+  .index {
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0 0 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .content {
+    padding: 22px 0 0;
+    border-left: 0;
+  }
+
+  .content h3 {
+    font-size: 26px;
+  }
+
+  .description {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 24px;
+  }
+
+  .description .boundary {
+    grid-column: auto;
+  }
+}

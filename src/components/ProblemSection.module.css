@@ -1,0 +1,125 @@
+.problem {
+  scroll-margin-top: 32px;
+}
+
+.doubleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.rupturePanel {
+  min-width: 0;
+  padding: 30px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.panelNumber {
+  margin: 0 0 26px;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rupturePanel h3 {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.panelText {
+  max-width: 43ch;
+  margin: 17px 0 0;
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.conclusion {
+  margin: 24px 0 0;
+  padding: 24px 28px;
+  border-left: 4px solid var(--accent);
+  background: var(--paper-strong);
+  font-family: var(--font-ui);
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.stakeholderGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.stakeholderCard {
+  min-width: 0;
+  padding: 22px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.audience {
+  margin: 0 0 22px;
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.warning {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.demand {
+  margin: 18px 0 0;
+  color: var(--ink-soft);
+  font-family: var(--font-reading);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .stakeholderGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .doubleGrid,
+  .stakeholderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rupturePanel {
+    padding: 26px 24px;
+  }
+
+  .conclusion {
+    padding: 22px 23px;
+    font-size: 19px;
+  }
+
+  .stakeholderCard {
+    padding: 24px;
+  }
+}
