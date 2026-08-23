@@ -1,0 +1,49 @@
+{
+  "name": "right-to-decide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Право на решение — публичный проспект монографии об инженерном образовании в эпоху ИИ",
+  "author": "Alexey M. Davydov",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adavydov/right-to-decide.git"
+  },
+  "homepage": "https://adavydov.github.io/right-to-decide/",
+  "keywords": [
+    "engineering-education",
+    "artificial-intelligence",
+    "cognitive-admission",
+    "scientific-monograph",
+    "engineering-judgment"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check:content": "node scripts/validate-content.mjs",
+    "check:export": "node scripts/validate-export.mjs",
+    "check": "npm run lint && npm run typecheck && npm run check:content && npm run build && npm run check:export"
+  },
+  "dependencies": {
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+
