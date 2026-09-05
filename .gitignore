@@ -59,3 +59,8 @@ scripts/sync-skills.mjs
 docs/research/brand-ai/source.html
 docs/design-references/brand-ai/
 docs/research/brand-ai/extracted.json
+# Local reader reference captures and preview logs
+/docs/research/kobo-public-reference.json
+/docs/design-references/kobo-reader/kobo-public-guide.png
+/docs/design-references/kobo-reader/kobo-reader-reference.png
+/docs/research/reader-preview*.log

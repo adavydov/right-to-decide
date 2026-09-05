@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-09-05T11:18:35.410Z",
+  "base": "http://127.0.0.1:3210/right-to-decide",
+  "status": "passed",
+  "browser": "isolated headless Microsoft Edge context",
+  "checks": [
+    "Nine responsive reader layouts, images and tables",
+    "Settings keyboard controls, theme/font persistence and Escape focus",
+    "Reload restores location: body-0474 → body-0474",
+    "Chapter keeps its own location: body-0474 → body-0474",
+    "Second chapter keeps a separate location: body-0111 → body-0111",
+    "Midchapter reload and independent chapter locations",
+    "Bookmark restores passage: body-0472 → body-0472",
+    "Bookmark save, jump and delete",
+    "Search empty state and navigation to manuscript passage",
+    "Explicit fragment takes precedence over stored progress",
+    "TOC route transition, resume link and focus mode",
+    "Mobile settings and TOC stay in viewport",
+    "Reader survives corrupt storage in a fresh isolated context",
+    "Reader survives blocked storage in a fresh isolated context",
+    "Reader survives quota storage in a fresh isolated context"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "chapter": "introduction"
+    },
+    {
+      "width": 1440,
+      "chapter": "chapter-12"
+    },
+    {
+      "width": 1440,
+      "chapter": "appendix-k"
+    },
+    {
+      "width": 768,
+      "chapter": "introduction"
+    },
+    {
+      "width": 768,
+      "chapter": "chapter-12"
+    },
+    {
+      "width": 768,
+      "chapter": "appendix-k"
+    },
+    {
+      "width": 390,
+      "chapter": "introduction"
+    },
+    {
+      "width": 390,
+      "chapter": "chapter-12"
+    },
+    {
+      "width": 390,
+      "chapter": "appendix-k"
+    }
+  ],
+  "errors": []
+}

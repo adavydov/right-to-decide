@@ -78,7 +78,9 @@ try {
   await page.getByRole("link", { name: /От знания к полномочию/ }).click();
   await page.waitForURL("**/read/chapter-01/");
   assert.match(await page.locator("h1").innerText(), /От знания к полномочию/);
-  await page.getByRole("button", { name: "Крупный текст" }).click();
+  await page.getByRole("button", { name: "Настройки чтения" }).click();
+  await page.getByRole("slider", { name: "Размер текста" }).fill("22");
+  await page.keyboard.press("Escape");
   assert.equal(
     await page
       .locator(".reading-copy")

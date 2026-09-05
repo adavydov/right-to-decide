@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ReaderShell } from "@/components/ReaderShell";
 import {
+  book,
   readingChapters,
   getChapterNeighbors,
   getChapterReadingMinutes,
@@ -18,6 +19,8 @@ import { assetPath } from "@/lib/site-config";
 function ManuscriptTable({ block }: { block: TableBlock }) {
   return (
     <div
+      id={block.id}
+      data-reader-block
       className="table-scroll"
       tabIndex={0}
       role="region"
@@ -73,7 +76,7 @@ function renderBlock(block: BookBlock): ReactNode {
     return <ManuscriptTable key={block.id} block={block} />;
   if (block.type === "image") {
     return (
-      <figure key={block.id}>
+      <figure key={block.id} id={block.id} data-reader-block>
         <Image
           src={assetPath(block.src)}
           alt={block.alt}
@@ -86,18 +89,18 @@ function renderBlock(block: BookBlock): ReactNode {
   if (block.type === "heading") {
     const title = displayBookTitle(block.text);
     return (block.level || 2) <= 2 ? (
-      <h2 id={block.id} key={block.id}>
+      <h2 data-reader-block id={block.id} key={block.id}>
         {title}
       </h2>
     ) : (
-      <h3 id={block.id} key={block.id}>
+      <h3 data-reader-block id={block.id} key={block.id}>
         {title}
       </h3>
     );
   }
   if (block.role === "quote") {
     return (
-      <blockquote key={block.id}>
+      <blockquote key={block.id} id={block.id} data-reader-block>
         <p>{block.text}</p>
       </blockquote>
     );
@@ -105,6 +108,8 @@ function renderBlock(block: BookBlock): ReactNode {
   return (
     <p
       key={block.id}
+      id={block.id}
+      data-reader-block
       className={block.role === "caption" ? "figure-caption" : undefined}
       style={{ whiteSpace: "pre-line" }}
     >
@@ -152,7 +157,7 @@ function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
         style={{ paddingLeft: Math.min(list.level, 3) * 14 }}
       >
         {entries.map((entry) => (
-          <li key={entry.id}>
+          <li key={entry.id} id={entry.id} data-reader-block>
             <span className="list-marker">{entry.list.marker}</span>
             {entry.role === "quote" ? (
               <blockquote>
@@ -183,8 +188,11 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
   }));
 
   return (
-    <main id="main-content" className="subpage wrap">
-      <ReaderShell currentId={chapter.id} items={items}>
+    <main id="main-content" className="reader-page">
+      <ReaderShell key={chapter.id} currentId={chapter.id} items={items}
+        revision={book.source.sha256}
+        headings={chapter.blocks.flatMap(block => block.type === "heading" ? [{ id: block.id, title: displayBookTitle(block.text) }] : [])}
+      >
         <article>
           <p className="eyebrow" style={{ marginBottom: 18 }}>
             {chapter.part ? displayBookTitle(chapter.part) : "Право на решение"}

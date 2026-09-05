@@ -1,0 +1,11 @@
+# Kobo-inspired reader · 2026-09-05
+
+Reference: https://help.kobo.com/hc/en-us/articles/4408228476567-About-Kobo-Web-Reader and linked navigation guide; supplied PDF as research input. Third-party pattern adaptation with original branding/icons and author manuscript. Private reader not accessed; exact computed styles unavailable. The following tokens are our design decisions, not Kobo measurements.
+
+ReaderShell: fixed toolbar 72px / footer 64px, document scrolling, centered 680px Georgia 20px/1.8, generous top/bottom margins, white #fff, ink #292825, muted #76736d, line #e8e6e1, hover #f3f2ef, accent #ae512f. Sepia #f5eddd; night #202221. Widths 540/680/820. Original outline icons 20px, all hit targets 44px. At <=700 hide repeated labels, text gutters24px; <=390 gutters20px. Hide site header/footer only on read/chapter routes.
+
+ReaderPanels: native modal dialog right top84px width360px max-height calc(100dvh - 100px), border1px, radius12px shadow 0 12px 40px #0002, backdrop #0002. <=700 bottom sheet inset auto 12px 12px maxheight80dvh. Padding24px, group labels, dividers, close44px. Native focus trap/Escape, restore opener focus, backdrop closes. Settings: light/sepia/dark, serif/sans, size16..28 step2, spacing1.5/1.8/2.1, width narrow/normal/wide, reset; aria-pressed and associated labels. Contents: grouped chapter links and current headings. Search: current chapter only, snippets/count/empty. Bookmarks: snippet/progress/open/remove, add-current and empty state. State note says saved in this browser.
+
+Persistence: validated settings; old font key compatible. Location {blockId,offset,progress,revision}; explicit hash wins; version mismatch uses progress. Save throttled/pagehide, hold paragraph during typography change. Existing last-reading {id,title} preserved. Server-rendered author text unchanged. Add DOM ids for paragraphs/tables/figures/list items. No whole book client import.
+
+Validation: baseline build passed. npm run check with NEXT_PUBLIC_BASE_PATH=/right-to-decide. Isolated browser desktop1440/tablet768/mobile390; persistence, bookmarks, search, navigation/hash, progress/focus, tables, corrupt/blocked storage. Browser plugin failed to start with Windows sandbox lock error; isolated Playwright fallback does not touch user profile. Screenshots docs/design-references/kobo-reader/.

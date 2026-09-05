@@ -1,7 +1,8 @@
 "use client";
 import { useSyncExternalStore } from "react";
 const fallback: Record<string, string | null> = {};
-function read(key: string) {
+export function readReadingPreference(key: string) {
+  if (Object.prototype.hasOwnProperty.call(fallback, key)) return fallback[key];
   try {
     return window.localStorage.getItem(key);
   } catch {
@@ -16,18 +17,19 @@ function subscribe(callback: () => void) {
     window.removeEventListener("book-reading-preference", callback);
   };
 }
-export function writeReadingPreference(key: string, value: string) {
+export function writeReadingPreference(key: string, value: string, notify = true) {
   try {
     window.localStorage.setItem(key, value);
+    delete fallback[key];
   } catch {
     fallback[key] = value;
   }
-  window.dispatchEvent(new Event("book-reading-preference"));
+  if (notify) window.dispatchEvent(new Event("book-reading-preference"));
 }
 export function useReadingPreference(key: string) {
   return useSyncExternalStore(
     subscribe,
-    () => read(key),
+    () => readReadingPreference(key),
     () => null,
   );
 }
