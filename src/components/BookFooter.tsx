@@ -10,6 +10,7 @@ export function BookFooter() {
           <div className={styles.links}>
             <Link href="/">О книге</Link>
             <Link href="/contents/">Содержание</Link>
+            <Link href="/manifesto/">Манифест</Link>
             <Link href="/read/">Читать</Link>
             <Link href="/authors/">Авторы</Link>
             <Link href="/library/">Библиотека</Link>

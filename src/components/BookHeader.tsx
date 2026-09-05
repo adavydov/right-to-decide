@@ -17,6 +17,7 @@ export function BookHeader() {
   const links = [
     { href: "/", label: "О книге" },
     { href: "/contents/", label: "Содержание" },
+    { href: "/manifesto/", label: "Манифест" },
     { href: "/authors/", label: "Авторы" },
     { href: "/library/", label: "Библиотека" },
     { href: "/wiki/", label: "Вики" },

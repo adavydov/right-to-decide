@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "releaseId": "literary-manuscript-v5.0-8146f5ce29fd",
-  "architectureVersion": "5.0",
+  "releaseId": "literary-manuscript-v4.0-b9e6ea52b433",
+  "architectureVersion": "4.0",
   "chapterNumbers": [
     1,
     2,
@@ -70,8 +70,8 @@
     }
   ],
   "authorContents": {
-    "path": "manuscript/2026-09-05-rebuild/contents-v5.0.md",
-    "sha256": "842bd97fb1a3c68fb79b8aa5b6d4f7ab63d31076c4b470551b58d26974e90375"
+    "path": "manuscript/2026-09-05-rebuild/contents-v4.0.md",
+    "sha256": "46184da37a5cb58723f196cda7086ef99faf5b1cce2738995cd89135a96187e1"
   },
   "prologue": {
     "path": "manuscript/2026-09-05-rebuild/prologue-v1.0.md",
@@ -81,13 +81,8 @@
     "path": "src/data/previous-edition.json",
     "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
   },
-  "bookSha256": "c48b9f7c3cc8d061e1ff27c21d1f0b79ee64f562e40ced3ca9f4fa6887d50520",
-  "importerSha256": "b042564627dc2904ef35010e3ebdb60f09f641d751e33f79f5b11f74c6affe18",
+  "bookSha256": "6ca0f530ae665d455a401394ada3eb3c6014a00c54478b2494a07b8a99e33918",
+  "importerSha256": "0836d7fcd50191c1f6527d1c0fc4738c6c73aea3cfee0e491948cc7245c4f455",
   "sourceHashPolicy": "book.source.sha256 hashes the preserved contents/prologue sources and the ordered selected chapter sources",
-  "constitution": {
-    "path": "CONSTITUTION.md",
-    "sha256": "30bdbe70301ef358a2f1f8b712d77d816704445b3188f05ee77cad264a5df143"
-  },
-  "acceptanceStatus": "published-texts-pending-constitution-review",
-  "scope": "Переход оглавления на Конституцию 1.0 при сохранении текстов и статусов уже опубликованных глав. Повторная приёмка корпуса по новой Конституции не выполнялась."
+  "scope": "Литературный выпуск явно выбранных глав. Пролог, развёрнутое содержание и прежняя редакция сохранены без переработки."
 }

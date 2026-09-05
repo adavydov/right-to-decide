@@ -116,6 +116,14 @@
   line-height: 1.4;
 }
 .link:hover { border-color: var(--accent-dark); }
+.practicalProject { margin-top: 36px; padding: 28px; border: 1px solid var(--border); border-radius: 6px; }
+.practicalProject h3 { font-size: 25px; line-height: 1.25; }
+.practicalProject > p { margin-top: 14px; max-width: 900px; color: var(--ink-soft); font-size: 15px; line-height: 1.6; }
+.practicalProject p.pilotStatus { color: var(--ink); }
+.pilotRoles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 24px 0 0; }
+.pilotRoles > div { border-top: 1px solid var(--border); padding-top: 18px; }
+.pilotRoles dt { font-size: 17px; line-height: 1.35; }
+.pilotRoles dd { margin: 8px 0 0; color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
 @media (min-width: 1200px) {
   .compact .groups { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
   .compact .groupTitle { font-size: 22px; }
@@ -126,6 +134,8 @@
   .direction, .conductor, .principleIntro { grid-template-columns: minmax(0, 1fr); gap: 18px; }
 }
 @media (max-width: 640px) {
+  .practicalProject { padding: 22px 18px; }
+  .pilotRoles { grid-template-columns: minmax(0, 1fr); }
   .team { margin-top: 48px; padding-top: 40px; }
   .header { margin-bottom: 32px; }
   .introduction { font-size: 17px; }

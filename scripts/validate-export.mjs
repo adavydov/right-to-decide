@@ -14,7 +14,7 @@ const output = path.resolve("out");
 const base = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
 const publicOrigin = new URL(siteConfig.publicUrl).origin;
 const available = book.chapters.filter((chapter) => chapter.id !== "source-contents" && chapter.status === "available");
-const routes = ["/", "/contents/", "/authors/", "/read/", "/library/", "/wiki/", "/archive/",
+const routes = ["/", "/contents/", "/authors/", "/read/", "/library/", "/wiki/", "/archive/", "/manifesto/",
   ...archiveChapters.map(c => "/archive/" + c.id + "/"),
   ...available.map((chapter) => "/read/" + chapter.id + "/"),
   ...cards.map((card) => "/wiki/" + card.id + "/")];
@@ -156,7 +156,9 @@ for (const part of book.parts) {
 }
 for (const chapter of book.chapters.filter(c => c.kind === "chapter")) {
   assert.ok(contentsPage.text.includes(normalized(chapter.title.replace(/^Глава \d+\.\s*/u, ""))), "Missing chapter heading: " + chapter.id);
+  assert.ok(contentsPage.text.includes(normalized(chapter.summary)), "Missing constitutional chapter function: " + chapter.id);
 }
+assert.ok(contentsPage.text.includes("Следующий вопрос — не наш"), "Missing separately planned epilogue");
 const legacyPreface = htmlInfo(routeFile("/read/preface/"));
 assert.ok(legacyPreface.raw.includes("/read/prologue/"), "Legacy preface must lead to the current prologue");
 assert.ok(!legacyPreface.raw.includes("preface-v8-p"), "Legacy address still contains the replaced preface");
@@ -225,11 +227,19 @@ assert.deepEqual(teamDocument.groups.map(({ id, title, description, roles }) => 
   id, title, description, roles: roles.map(({ id, name, description }) => ({ id, name, description })),
 })), teamSource.groups, "Machine-readable agent roles drifted");
 const teamRoles = teamDocument.groups.flatMap((group) => group.roles);
+const layerRoles = teamDocument.groups.find((group) => group.id === "eight-layers")?.roles;
+assert.equal(layerRoles?.length, 8, "The constitution needs eight distinct layer curators");
+assert.deepEqual(layerRoles.map((role) => role.name.slice(0, 3)), Array.from({ length: 8 }, (_, index) => "С0" + (index + 1)));
+assert.equal(teamDocument.practicalProject.assignments, "not-confirmed", "Do not imply that the pilot roles have been assigned");
+assert.deepEqual(teamDocument.practicalProject.roles.map(({ id, name, description }) => ({ id, name, description })), teamSource.practicalProject.roles);
+assert.ok(teamDocument.practicalProject.roles.every((role) => role.type === "required-human-function" && role.assignedTo === null), "Human pilot accountability cannot be assigned to editorial AI roles");
 assert.equal(new Set([teamDocument.conductor.id, ...teamRoles.map((role) => role.id)]).size,
   teamRoles.length + 1, "Duplicate editorial role ID");
 assert.ok(teamRoles.some((role) => role.id === teamDocument.governance.commonVersionEditor));
 assert.ok(teamRoles.every((role) => role.type === "ai-agent-role" && role.coordinatedBy === teamDocument.conductor.id));
 for (const info of [homepage, authorsPage]) {
+  assert.ok(info.text.includes(normalized(teamSource.practicalProject.status)), "Missing visible pilot assignment status");
+  assert.ok(info.text.includes(normalized(teamSource.practicalProject.description)), "Missing distinction between editorial AI and human responsibility");
   assert.ok(info.ids.has("literary-team"), "Missing visible editorial team");
   for (const author of authors) {
     assert.ok(info.raw.indexOf('id="author-' + author.id + '"') < info.raw.indexOf('id="literary-team"'),
@@ -267,3 +277,5 @@ for (const card of cards) {
 }
 console.log("Export passed: " + routes.length + " publication routes; " + files.length +
   " files; local assets and anchors; current cover/subtitle and biographies; library/wiki; notes and privacy boundaries.");
+
+await import("./validate-manifesto-export.mjs");

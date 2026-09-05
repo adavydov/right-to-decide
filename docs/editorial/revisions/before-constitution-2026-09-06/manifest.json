@@ -1,0 +1,35 @@
+{
+  "status": "historical; superseded by CONSTITUTION.md and current AGENTS.md",
+  "files": [
+    {
+      "path": "right-to-decide-site/AGENTS.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/right-to-decide-site/AGENTS.md",
+      "sha256": "a853fbd56e74e0570f03534bf092daa8b3c28e6a598d85a57b3a7a8be2c65691"
+    },
+    {
+      "path": "right-to-decide-site/README.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/right-to-decide-site/README.md",
+      "sha256": "29e220224df4c0c4e1506c2d5b839e168022e23d713c0d8c6321e3e96abf5452"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/README.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/right-to-decide-site/manuscript/2026-09-05-rebuild/README.md",
+      "sha256": "9c52f0ce0a3c61c8c0cb8b9a170d2beedb4681defbed5e0675bfb55928dbc841"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/chapters-v4/README.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/right-to-decide-site/manuscript/2026-09-05-rebuild/chapters-v4/README.md",
+      "sha256": "412b62e6b267d1ee436f8eed3a2bc0d5eed531ed181d27b641dd36005d81b41e"
+    },
+    {
+      "path": "AGENTS.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/AGENTS.md",
+      "sha256": "08f5aa9f6d3270de15d8aacbbc771995d608e3dff4ba4b9bdef9e957831b732a"
+    },
+    {
+      "path": "docs/editorial/README.md",
+      "snapshot": "docs/editorial/revisions/before-constitution-2026-09-06/docs/editorial/README.md",
+      "sha256": "ca8d49553a49913a34eb6a93d9698772d530bca3f2f2d86b13a5010128112e40"
+    }
+  ]
+}

@@ -50,6 +50,15 @@ export function getEditorialTeamDocument() {
       groupMeaning: "Work areas, not additional management levels.",
       ...editorialTeam.principle,
     },
+    practicalProject: {
+      ...editorialTeam.practicalProject,
+      assignments: "not-confirmed",
+      roles: editorialTeam.practicalProject.roles.map((role) => ({
+        ...role,
+        type: "required-human-function",
+        assignedTo: null,
+      })),
+    },
     basis: editorialTeam.basis,
   };
 }

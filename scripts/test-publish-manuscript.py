@@ -38,7 +38,16 @@ class ReleaseBoundaries(unittest.TestCase):
         book, sources = release.assemble(self.base, numbers, {n: self.source(n) for n in numbers})
         self.assertEqual(len(sources), 18)
         self.assertEqual(book["statistics"]["plannedChapters"], 0)
-        self.assertTrue(all(c["status"] == "available" for c in book["chapters"]))
+        self.assertTrue(all(c["status"] == "available" for c in book["chapters"] if c["id"] != "epilogue"))
+        self.assertEqual(book["chapters"][-1]["id"], "epilogue")
+        self.assertEqual(book["chapters"][-1]["status"], "planned")
+
+    def test_architecture_matches_constitution_and_retains_epilogue(self):
+        self.assertEqual(self.base["version"], "5.0")
+        self.assertEqual(self.base["parts"][2]["title"], "Часть III. Инженерная школа как место изобретения деятельности")
+        self.assertEqual(self.base["chapters"][-1]["title"], "Эпилог. Следующий вопрос — не наш")
+        source = (release.ROOT / release.outline.SOURCE).read_bytes()
+        self.assertEqual(source, release.outline.source_projection())
 
     def test_paragraphs_subheadings_and_separators_keep_order(self):
         body = "Первый абзац.\nСтрока того же абзаца.\n\n## Новый вопрос\n\n⸻\n\nПоследний абзац."

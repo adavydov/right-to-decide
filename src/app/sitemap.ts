@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/contents/",
+    "/manifesto/",
     "/archive/",
     "/authors/",
     "/read/",
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   return [...new Set(routes)].map((route) => ({
     url: siteConfig.publicUrl + route,
-    lastModified,
+    lastModified: route === "/manifesto/" ? new Date("2026-09-06") : lastModified,
     changeFrequency: "monthly" as const,
     priority: route === "/" ? 1 : 0.7,
   }));

@@ -55,7 +55,7 @@ export function PublicationHero() {
               Знание. Самостоятельность. Возможность изменить будущее.
             </span>
             <span className={styles.edition}>
-              Сайт обновлён · 5 сентября 2026
+              Сайт обновлён · 6 сентября 2026
             </span>
           </figcaption>
         </figure>

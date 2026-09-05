@@ -68,9 +68,23 @@ export function LiteraryTeam({ compact = false }: { compact?: boolean }) {
           ))}
         </ol>
       </div>
+      <aside className={styles.practicalProject} aria-labelledby="practical-project-roles-title">
+        <h3 id="practical-project-roles-title">{team.practicalProject.title}</h3>
+        <p className={styles.pilotStatus}>{team.practicalProject.status}</p>
+        <p>{team.practicalProject.description}</p>
+        <dl className={styles.pilotRoles}>
+          {team.practicalProject.roles.map((role) => (
+            <div key={role.id}>
+              <dt>{role.name}</dt>
+              <dd>{role.description}</dd>
+            </div>
+          ))}
+        </dl>
+      </aside>
       <div className={styles.links}>
         {compact && <Link href="/authors/#literary-team" className={styles.link}>Подробнее о команде <span aria-hidden="true">↗</span></Link>}
         <a href={assetPath("/editorial-team.json")} type="application/json" className={styles.link}>Команда в JSON <span aria-hidden="true">↗</span></a>
+        <Link href="/manifesto/" className={styles.link}>Конституция проекта <span aria-hidden="true">↗</span></Link>
       </div>
     </section>
   );

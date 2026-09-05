@@ -31,3 +31,12 @@ scripts/author_prologue.py -text
 manuscript/2026-09-05-rebuild/chapters-v4/** -text
 scripts/publish-manuscript.py -text
 docs/editorial/STYLE-01-v2.0.md whitespace=-blank-at-eof
+
+# Constitution originals, derived source manifests and snapshots retain their bytes.
+CONSTITUTION.md -text whitespace=cr-at-eol
+manuscript/2026-09-05-rebuild/contents-v5.0.md -text
+manuscript/2026-09-05-rebuild/contents-v5.0-manifest.json -text
+public/book/contents-v5.0.md -text
+scripts/constitution_contents.py -text whitespace=cr-at-eol
+docs/editorial/revisions/before-constitution-2026-09-06/** -text -whitespace
+manuscript/2026-09-05-rebuild/revisions/pre-constitution-v1.0-2026-09-06/** -text -whitespace

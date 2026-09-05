@@ -7,7 +7,7 @@ import { siteConfig } from "../src/lib/site-config.ts";
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
-const manifest = readJSON("manuscript/2026-09-05-rebuild/contents-v4.0-manifest.json");
+const manifest = readJSON("manuscript/2026-09-05-rebuild/contents-v5.0-manifest.json");
 const literaryManifest = book.contentKind === "manuscript"
   ? readJSON("manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
 const sha = (raw) => createHash("sha256").update(raw).digest("hex");
@@ -68,7 +68,7 @@ const chapterIds = uniqueIds(book.chapters, "chapter");
 assert.deepEqual(mainChapters.map((chapter) => Number(chapter.number)), Array.from({ length: 18 }, (_, index) => index + 1));
 assert.equal(book.schemaVersion, 2);
 assert.ok(["outline", "manuscript"].includes(book.contentKind));
-assert.equal(book.version, "4.0");
+assert.equal(book.version, "5.0");
 const releasedChapters = mainChapters.filter(c => c.status === "available");
 const plannedChapters = mainChapters.filter(c => c.status === "planned");
 assert.deepEqual(book.chapters.filter(c => c.status === "available").map(c => c.id),
@@ -78,7 +78,8 @@ assert.equal(book.statistics.plannedChapters, plannedChapters.length);
 if (literaryManifest) {
   assert.ok(releasedChapters.length, "A manuscript release must contain a numbered chapter");
   assert.equal(literaryManifest.schemaVersion, 1);
-  assert.equal(literaryManifest.architectureVersion, "4.0");
+  assert.equal(literaryManifest.architectureVersion, "5.0");
+  assert.equal(literaryManifest.acceptanceStatus, "published-texts-pending-constitution-review");
   assert.equal(literaryManifest.releaseId, book.releaseId);
   assert.deepEqual(literaryManifest.chapterNumbers, releasedChapters.map(c => c.number));
   assert.deepEqual(literaryManifest.chapters,
@@ -95,11 +96,19 @@ if (literaryManifest) {
   assert.equal(releasedChapters.length, 0, "Outline-only release cannot contain new prose");
 }
 assert.ok(!book.chapters.some(c => c.id === "preface"), "Replaced preface is still active");
-assert.equal(book.chapters.length, 20);
+assert.equal(book.chapters.length, 21);
+const epilogue = book.chapters.at(-1);
+assert.equal(epilogue.id, "epilogue");
+assert.equal(epilogue.title, "Эпилог. Следующий вопрос — не наш");
+assert.equal(epilogue.kind, "backmatter");
+assert.equal(epilogue.status, "planned", "Outline migration does not publish an unwritten epilogue");
+assert.equal(manifest.checks.separateEpilogue, true);
+assert.equal(manifest.constitution.sha256, sha(fs.readFileSync("CONSTITUTION.md")));
 assert.deepEqual(book.parts.map(p => p.number), ["I", "II", "III", "IV", "V", "VI"]);
 for (const part of book.parts) {
   assert.equal(mainChapters.filter(c => c.part === part.title).length, 3, "Each part must contain three chapters");
-  assert.ok(Array.isArray(part.description) && part.description.length, "Missing author part description");
+  assert.ok(Array.isArray(part.description), "Missing part description collection");
+  assert.ok(mainChapters.filter(c => c.part === part.title).every(c => c.summary), "Missing constitutional chapter function");
 }
 const prologue = book.chapters.find(c => c.id === "prologue");
 const contents = book.chapters.find(c => c.id === "contents");
@@ -107,7 +116,7 @@ assert.equal(prologue.title, "Пролог");
 assert.equal(prologue.version, "1.0");
 assert.equal(prologue.blocks.length, 65);
 assert.equal(prologue.blocks.filter(b => b.text === "⸻").length, 4);
-assert.equal(contents.blocks.length, 42, "Contents body excludes its book title and subtitle");
+assert.equal(contents.blocks.length, 47, "Constitution architecture contains 20 described sections, six parts and its closing policy");
 assert.equal(book.notes.length, 0, "Current prologue and contents have no notes");
 for (const chapter of [prologue, contents]) {
   const raw = fs.readFileSync(chapter.source.path);
@@ -118,7 +127,7 @@ for (const chapter of [prologue, contents]) {
 }
 assert.equal(prologue.source.sha256, "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288");
 assert.ok(prologue.blocks.every(b => b.type === "paragraph" && !b.runs?.some(r => r.href || r.noteId)), "Source links in prologue");
-assert.equal(sha(fs.readFileSync("public/book/contents-v4.0.md")), contents.source.sha256, "Contents download differs");
+assert.equal(sha(fs.readFileSync("public/book/contents-v5.0.md")), contents.source.sha256, "Contents download differs");
 assert.deepEqual(manifest.prologue, prologue.source);
 assert.deepEqual(manifest.authorSource, contents.source);
 if (!literaryManifest) assert.equal(manifest.bookSha256, sha(fs.readFileSync("src/data/book.json")));

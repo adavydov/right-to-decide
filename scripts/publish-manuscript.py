@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CHAPTER_DIRECTORY = Path("manuscript/2026-09-05-rebuild/chapters-v4")
 RELEASE_MANIFEST = CHAPTER_DIRECTORY / "release-manifest.json"
 BOOK = Path("src/data/book.json")
-spec = importlib.util.spec_from_file_location("author_contents", ROOT / "scripts/publish-author-contents.py")
+spec = importlib.util.spec_from_file_location("author_contents", ROOT / "scripts/constitution_contents.py")
 assert spec and spec.loader
 outline = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(outline)
@@ -84,10 +84,10 @@ def assemble(base_book: dict, numbers: list[int], source_bytes: dict[int, bytes]
     identity = {"contents": book["source"]["sha256"], "prologue": book["chapters"][0]["source"], "chapters": sources}
     source_hash = outline.sha(outline.encoded(identity))
     book["contentKind"] = "manuscript"
-    book["releaseId"] = f"literary-manuscript-v4.0-{source_hash[:12]}"
+    book["releaseId"] = f"literary-manuscript-v5.0-{source_hash[:12]}"
     book["source"] = {"filename": RELEASE_MANIFEST.name, "format": "markdown-manuscript",
                       "sha256": source_hash, "importer": "scripts/publish-manuscript.py",
-                      "textPolicy": "Пролог и авторское содержание сохранены. Опубликованы только главы, явно включённые в состав литературного выпуска. Прежняя редакция доступна в отдельном архиве."}
+                      "textPolicy": "Содержание следует §7 Конституции 1.0. Тексты ранее опубликованных пролога и глав сохранены. Их соответствие новой конституционной приёмке не заявляется; эпилог остаётся в плане."}
     blocks = [block for chapter in book["chapters"] for block in chapter["blocks"]]
     text = "\n\n".join(block["text"] for block in blocks)
     book["statistics"] = {"sections": len(book["chapters"]), "chapters": 18, "parts": 6,
@@ -99,21 +99,24 @@ def assemble(base_book: dict, numbers: list[int], source_bytes: dict[int, bytes]
 
 def build(numbers: list[int]) -> dict[Path, bytes]:
     foundation = outline.build()
-    # The original outline release remains independently reproducible and unchanged.
+    # Current outline artifacts must match the Constitution; v4 artifacts remain historical.
     for path, expected in foundation.items():
-        if path != BOOK and (ROOT / path).read_bytes() != expected:
-            raise ValueError("Preserved author outline artifact differs: " + path.as_posix())
+        if path != BOOK and (ROOT / path).exists() and (ROOT / path).read_bytes() != expected:
+            raise ValueError("Constitution outline artifact differs: " + path.as_posix())
     base_book = json.loads(foundation[BOOK])
     source_bytes = {number: (ROOT / CHAPTER_DIRECTORY / f"chapter-{number:02d}.md").read_bytes() for number in numbers}
     book, sources = assemble(base_book, numbers, source_bytes)
-    manifest = {"schemaVersion": 1, "releaseId": book["releaseId"], "architectureVersion": "4.0",
+    manifest = {"schemaVersion": 1, "releaseId": book["releaseId"], "architectureVersion": "5.0",
                 "chapterNumbers": numbers, "chapters": sources,
                 "authorContents": base_book["chapters"][1]["source"], "prologue": base_book["chapters"][0]["source"],
                 "archive": {"path": outline.ARCHIVE.as_posix(), "sha256": outline.sha((ROOT / outline.ARCHIVE).read_bytes())},
                 "bookSha256": outline.sha(outline.encoded(book)), "importerSha256": outline.sha(Path(__file__).read_bytes()),
                 "sourceHashPolicy": "book.source.sha256 hashes the preserved contents/prologue sources and the ordered selected chapter sources",
-                "scope": "Литературный выпуск явно выбранных глав. Пролог, развёрнутое содержание и прежняя редакция сохранены без переработки."}
-    return {BOOK: outline.encoded(book), RELEASE_MANIFEST: outline.encoded(manifest)}
+                "constitution": {"path": "CONSTITUTION.md", "sha256": outline.sha((ROOT / "CONSTITUTION.md").read_bytes())},
+                "acceptanceStatus": "published-texts-pending-constitution-review",
+                "scope": "Переход оглавления на Конституцию 1.0 при сохранении текстов и статусов уже опубликованных глав. Повторная приёмка корпуса по новой Конституции не выполнялась."}
+    return {**{path: raw for path, raw in foundation.items() if path != BOOK},
+            BOOK: outline.encoded(book), RELEASE_MANIFEST: outline.encoded(manifest)}
 
 
 def main():
