@@ -2,12 +2,12 @@
 import Link from "next/link";
 import { displayBookTitle } from "@/lib/book-display";
 import { useReadingPreference } from "@/lib/reading-storage";
-export function ContinueReading({ validIds, revision, allowLegacy = false }: { validIds: string[]; revision: string; allowLegacy?: boolean }) {
+export function ContinueReading({ validIds, revision, revisions, allowLegacy = false }: { validIds: string[]; revision: string; revisions?: Record<string, string>; allowLegacy?: boolean }) {
   const raw = useReadingPreference("right-to-decide-reading");
   let last: { id: string; title: string } | null = null;
   try {
     const saved = JSON.parse(raw || "null");
-    if (saved && (saved.revision === revision || (allowLegacy && saved.revision === undefined)) && validIds.includes(saved.id) && typeof saved.title === "string")
+    if (saved && (saved.revision === (revisions?.[saved.id] ?? revision) || (allowLegacy && saved.revision === undefined)) && validIds.includes(saved.id) && typeof saved.title === "string")
       last = saved;
   } catch {}
   return last ? (

@@ -1,0 +1,67 @@
+{
+  "version": "4.0",
+  "purpose": "Byte-preserved documents immediately before contents 4.0 synchronization; historical material",
+  "files": [
+    {
+      "source": "manuscript/2026-09-05-rebuild/01-book-concept.md",
+      "snapshot": "manuscript/2026-09-05-rebuild/01-book-concept.md",
+      "sha256": "81562270f9221f32934124c20fa35806546014fb174771f6be8296727999ae18"
+    },
+    {
+      "source": "manuscript/2026-09-05-rebuild/02-thesis-architecture.md",
+      "snapshot": "manuscript/2026-09-05-rebuild/02-thesis-architecture.md",
+      "sha256": "eefd893c764bc9c748185f530588bff6a82bdb8e81113829525b97286b15ee84"
+    },
+    {
+      "source": "manuscript/2026-09-05-rebuild/03-contents-and-migration.md",
+      "snapshot": "manuscript/2026-09-05-rebuild/03-contents-and-migration.md",
+      "sha256": "32c0b0374940646251fcba5756b8c6ab20ba3f11c8d15627ac3cf20a9b1eb64b"
+    },
+    {
+      "source": "manuscript/2026-09-05-rebuild/book-architecture.md",
+      "snapshot": "manuscript/2026-09-05-rebuild/book-architecture.md",
+      "sha256": "9e14754faedee52528765eea378712b2603bee55beba2c130dc69e038a69043f"
+    },
+    {
+      "source": "manuscript/2026-09-05-rebuild/README.md",
+      "snapshot": "manuscript/2026-09-05-rebuild/README.md",
+      "sha256": "f0b74e58f5f7b1ad3a581377ec0697face831aee4310559e1ab8c5ebb7c1cc5f"
+    },
+    {
+      "source": "AGENTS.md",
+      "snapshot": "AGENTS.md",
+      "sha256": "898022059f104af990648803072a5d80fc96c3ecad039d17271362042ce3be61"
+    },
+    {
+      "source": "README.md",
+      "snapshot": "README.md",
+      "sha256": "b7a1b7199bb333d36ed025f818ae73f815740747196b74a5c6f75aa16831f8aa"
+    },
+    {
+      "source": "docs/editorial/PRINCIPLES-01-v1.0.md",
+      "snapshot": "docs/editorial/PRINCIPLES-01-v1.0.md",
+      "sha256": "37692b3b64b2d24011bfa223e8392d6f9896660f72f02081911321aa5769fd84"
+    },
+    {
+      "source": "docs/editorial/TRANSPORT-PRACTICE-01.md",
+      "snapshot": "docs/editorial/TRANSPORT-PRACTICE-01.md",
+      "sha256": "95481e5d7760a7ba53f5cb9166ed6bd894e0074a1d116de66f8d237432965384"
+    },
+    {
+      "source": "workspace/AGENTS.md",
+      "snapshot": "workspace/AGENTS.md",
+      "sha256": "9110d71cd38d9c796ca0f78a4c978c1a4470ae4440a75c5b4a78a418e50ab6d9"
+    },
+    {
+      "source": "workspace/docs/editorial/README.md",
+      "snapshot": "workspace/docs/editorial/README.md",
+      "sha256": "5c54fbbbc14608a9f1cfabda5788b6f48bd1dc031317e55b25d3e57a63b1161f"
+    },
+    {
+      "source": "workspace/README.md",
+      "snapshot": "workspace/README.md",
+      "sha256": "6dbb913e6b65f4c3eb93d79431d935046be4470bf853a8bceb97098bbbaedffb"
+    }
+  ],
+  "privateMemory": "Preserved separately under local book-memory/revisions; no private files in this snapshot"
+}

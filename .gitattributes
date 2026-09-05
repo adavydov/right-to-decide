@@ -16,3 +16,16 @@ src/data/evidence-cards.json -text whitespace=cr-at-eol
 
 # Keep the author preface checksum stable on Windows and Linux.
 manuscript/2026-09-05-rebuild/preface-v8.0.md text eol=lf
+
+# Author-approved contents and source hashes must survive platform line endings.
+manuscript/2026-09-05-rebuild/contents-v4.0.md -text
+manuscript/2026-09-05-rebuild/contents-v4.0-manifest.json -text
+manuscript/2026-09-05-rebuild/preface-v8.0.md -text
+manuscript/2026-09-05-rebuild/revisions/pre-contents-v4.0-2026-09-05/** -text -whitespace
+src/data/book.json -text
+src/data/previous-edition.json -text
+public/book/contents-v4.0.md -text
+scripts/publish-author-contents.py -text
+manuscript/2026-09-05-rebuild/prologue-v1.0.md -text
+scripts/author_prologue.py -text
+docs/editorial/STYLE-01-v2.0.md whitespace=-blank-at-eof

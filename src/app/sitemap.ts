@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/contents/",
+    "/archive/",
     "/authors/",
     "/read/",
     "/library/",

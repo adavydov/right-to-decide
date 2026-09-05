@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { siteConfig } from "@/lib/site-config";
+import { assetPath, siteConfig } from "@/lib/site-config";
 import { BookHeader } from "@/components/BookHeader";
 import { BookFooter } from "@/components/BookFooter";
 import authorsData from "@/data/authors.json";
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   keywords: [
     "инженерное образование",
     "искусственный интеллект",
-    "доверие",
-    "когнитивный допуск",
+    "общественная самостоятельность",
+    "создание будущего",
     "Право на решение",
   ],
   openGraph: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: siteConfig.publicUrl + siteConfig.coverPath,
         width: siteConfig.coverWidth,
         height: siteConfig.coverHeight,
-        alt: "Обложка монографии «Право на решение»",
+        alt: "Обложка книги «Право на решение»",
       },
     ],
   },
@@ -55,6 +55,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" data-scroll-behavior="smooth">
+      <head>
+        <link rel="alternate" type="application/json" title="Авторы и литературные ИИ-агенты" href={assetPath("/editorial-team.json")} />
+      </head>
       <body className={interfaceFont.variable}>
         <BookHeader />
         {children}

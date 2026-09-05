@@ -1,43 +1,6 @@
 import Link from "next/link";
-import { ContentsCatalog } from "@/components/ContentsCatalog";
-import { book, readingChapters, getChapterReadingMinutes } from "@/lib/book";
-import { siteConfig } from "@/lib/site-config";
-export const metadata = {
-  title: "Содержание",
-  alternates: { canonical: siteConfig.publicUrl + "/contents/" },
-};
-export default function ContentsPage() {
-  const items = readingChapters.map((c) => ({
-    id: c.id,
-    title: c.title,
-    part: c.part,
-    kind: c.kind,
-    number: c.number,
-    status: c.status,
-    minutes: getChapterReadingMinutes(c),
-    headings: c.blocks
-      .filter((b) => b.type === "heading")
-      .map((b) => ("text" in b ? b.text : "")),
-  }));
-  return (
-    <main id="main-content" className="subpage wrap">
-      <div className="page-heading-row">
-        <div>
-          <p className="eyebrow">Карта книги</p>
-          <h1 className="page-heading">Содержание</h1>
-          <p className="page-intro">
-            {book.schemaVersion === 1 ? "Содержание редакции от 4 сентября 2026 года. Авторы пересматривают концепцию книги; новый текст появится после этой работы." : "Шесть частей связывают делегирование, доверие, образование и общественное участие с вопросом о том, кто сможет изменить унаследованный мир."}
-          </p>
-          <p className="eyebrow" style={{ marginTop: 22 }}>
-            <span className="status-dot" />
-            Рабочая редакция · {book.edition.split("-").reverse().join(".")}
-          </p>
-        </div>
-        <Link href="/read/" className="button">
-          Начать чтение <span aria-hidden="true">↗</span>
-        </Link>
-      </div>
-      <ContentsCatalog items={items} />
-    </main>
-  );
-}
+import {ContentsCatalog} from "@/components/ContentsCatalog";
+import {book,readingChapters,getChapterReadingMinutes,publicationSummary} from "@/lib/book";
+import {assetPath,siteConfig} from "@/lib/site-config";
+export const metadata={title:"Развёрнутое содержание",alternates:{canonical:siteConfig.publicUrl+"/contents/"}};
+export default function ContentsPage(){const items=readingChapters.filter(c=>c.id!=="contents").map(c=>({id:c.id,title:c.outlineTitle||c.title,part:c.part,kind:c.kind,number:c.number,status:c.status,summary:c.summary,minutes:getChapterReadingMinutes(c)}));return <main id="main-content" className="subpage wrap"><div className="page-heading-row"><div><p className="eyebrow">Карта книги</p><h1 className="page-heading">Развёрнутое содержание</h1><p className="page-intro">Шесть частей и восемнадцать глав: от мира, который может развиваться без нас, к устройству деятельности, открытой следующим поколениям.</p><p className="page-intro" style={{marginTop:18}}>{publicationSummary} Ниже — главы книги и авторские описания частей.</p><p className="eyebrow" style={{marginTop:22}}><span className="status-dot"/>Содержание · версия {book.version} · {book.edition.split("-").reverse().join(".")}</p><p style={{marginTop:18}}><a className="text-link" href={assetPath("/book/contents-v4.0.md")} download>Скачать содержание ↗</a></p></div><Link href="/read/contents/" className="button">Открыть в читалке ↗</Link></div><ContentsCatalog items={items} parts={book.parts}/><div className="edition-notice"><p>Тексты прежней редакции сохранены в <Link className="text-link" href="/archive/">архиве книги</Link>.</p></div></main>}

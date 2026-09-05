@@ -64,3 +64,22 @@
     font-size: 9px;
   }
 }
+
+.teamLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.teamLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--border);
+}
+.teamLinks a:hover { text-decoration-color: currentColor; }

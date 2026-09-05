@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { assetPath } from "@/lib/site-config";
 import styles from "./BookFooter.module.css";
 export function BookFooter() {
   return (
     <footer className={styles.footer}>
       <div className="wrap">
         <div className={styles.top}>
-          <span className="eyebrow">Монография · 2026</span>
+          <span className="eyebrow">Футурологический манифест · 2026</span>
           <div className={styles.links}>
             <Link href="/">О книге</Link>
             <Link href="/contents/">Содержание</Link>
@@ -18,9 +19,13 @@ export function BookFooter() {
         <p className={styles.title}>
           Право на решение<span>↗</span>
         </p>
+        <div className={styles.teamLinks}>
+          <Link href="/authors/#literary-team">Литературная команда</Link>
+          <a href={assetPath("/editorial-team.json")} type="application/json">Авторы и агенты · JSON <span aria-hidden="true">↗</span></a>
+        </div>
         <div className={styles.bottom}>
           <span>© А. М. Давыдов, А. А. Давыдов, Е. А. Давыдов</span>
-          <span>Как оставаться авторами будущего</span>
+          <span>Как остаться авторами будущего</span>
         </div>
       </div>
     </footer>

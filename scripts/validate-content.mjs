@@ -1,10 +1,16 @@
 import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { siteConfig } from "../src/lib/site-config.ts";
 
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
+const archive = readJSON("src/data/previous-edition.json");
+const manifest = readJSON("manuscript/2026-09-05-rebuild/contents-v4.0-manifest.json");
+const literaryManifest = book.contentKind === "manuscript"
+  ? readJSON("manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
+const sha = (raw) => createHash("sha256").update(raw).digest("hex");
 const authors = readJSON("src/data/authors.json").authors;
 const sources = readJSON("src/data/library.json").sources;
 const cards = readJSON("src/data/evidence-cards.json").cards;
@@ -60,7 +66,71 @@ assert.equal(mainChapters.length, 18, "The selected edition must retain its eigh
 uniqueIds(book.parts, "part");
 const chapterIds = uniqueIds(book.chapters, "chapter");
 assert.deepEqual(mainChapters.map((chapter) => Number(chapter.number)), Array.from({ length: 18 }, (_, index) => index + 1));
-assert.ok(book.chapters.some((chapter) => chapter.id === "preface" && chapter.status === "available"), "Missing available preface");
+assert.equal(book.schemaVersion, 2);
+assert.ok(["outline", "manuscript"].includes(book.contentKind));
+assert.equal(book.version, "4.0");
+const releasedChapters = mainChapters.filter(c => c.status === "available");
+const plannedChapters = mainChapters.filter(c => c.status === "planned");
+assert.deepEqual(book.chapters.filter(c => c.status === "available").map(c => c.id),
+  ["prologue", "contents", ...releasedChapters.map(c => c.id)]);
+assert.equal(book.statistics.availableChapters, releasedChapters.length);
+assert.equal(book.statistics.plannedChapters, plannedChapters.length);
+if (literaryManifest) {
+  assert.ok(releasedChapters.length, "A manuscript release must contain a numbered chapter");
+  assert.equal(literaryManifest.schemaVersion, 1);
+  assert.equal(literaryManifest.architectureVersion, "4.0");
+  assert.equal(literaryManifest.releaseId, book.releaseId);
+  assert.deepEqual(literaryManifest.chapterNumbers, releasedChapters.map(c => c.number));
+  assert.deepEqual(literaryManifest.chapters,
+    releasedChapters.map(c => ({ id: c.id, number: c.number, ...c.source })));
+  assert.equal(literaryManifest.bookSha256, sha(fs.readFileSync("src/data/book.json")));
+  assert.deepEqual(literaryManifest.archive, manifest.archive);
+  for (const chapter of releasedChapters) {
+    assert.equal(chapter.contentKind, "manuscript");
+    assert.equal(chapter.publicationStatus, "published");
+    assert.equal(chapter.source.path, `manuscript/2026-09-05-rebuild/chapters-v4/${chapter.id}.md`);
+    assert.equal(sha(fs.readFileSync(chapter.source.path)), chapter.source.sha256, "Chapter source checksum: " + chapter.id);
+  }
+} else {
+  assert.equal(releasedChapters.length, 0, "Outline-only release cannot contain new prose");
+}
+assert.ok(!book.chapters.some(c => c.id === "preface"), "Replaced preface is still active");
+assert.equal(book.chapters.length, 20);
+assert.deepEqual(book.parts.map(p => p.number), ["I", "II", "III", "IV", "V", "VI"]);
+for (const part of book.parts) {
+  assert.equal(mainChapters.filter(c => c.part === part.title).length, 3, "Each part must contain three chapters");
+  assert.ok(Array.isArray(part.description) && part.description.length, "Missing author part description");
+}
+const prologue = book.chapters.find(c => c.id === "prologue");
+const contents = book.chapters.find(c => c.id === "contents");
+assert.equal(prologue.title, "Пролог");
+assert.equal(prologue.version, "1.0");
+assert.equal(prologue.blocks.length, 65);
+assert.equal(prologue.blocks.filter(b => b.text === "⸻").length, 4);
+assert.equal(contents.blocks.length, 42, "Contents body excludes its book title and subtitle");
+assert.equal(book.notes.length, 0, "Current prologue and contents have no notes");
+for (const chapter of [prologue, contents]) {
+  const raw = fs.readFileSync(chapter.source.path);
+  assert.equal(sha(raw), chapter.source.sha256, "Author source checksum: " + chapter.id);
+  const chunks = raw.toString("utf8").replace(/^\uFEFF/, "").trim().split(/\n\s*\n/u);
+  const body = chunks.slice(chapter.id === "prologue" ? 1 : 2).map(text => text.replace(/^#{2,3} /u, "").trim());
+  assert.deepEqual(chapter.blocks.map(b => b.text), body, "Author text/order changed: " + chapter.id);
+}
+assert.equal(prologue.source.sha256, "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288");
+assert.ok(prologue.blocks.every(b => b.type === "paragraph" && !b.runs?.some(r => r.href || r.noteId)), "Source links in prologue");
+assert.equal(sha(fs.readFileSync("public/book/contents-v4.0.md")), contents.source.sha256, "Contents download differs");
+assert.deepEqual(manifest.prologue, prologue.source);
+assert.deepEqual(manifest.authorSource, contents.source);
+if (!literaryManifest) assert.equal(manifest.bookSha256, sha(fs.readFileSync("src/data/book.json")));
+else {
+  assert.deepEqual(literaryManifest.prologue, prologue.source);
+  assert.deepEqual(literaryManifest.authorContents, contents.source);
+}
+assert.equal(manifest.archive.sha256, sha(fs.readFileSync("src/data/previous-edition.json")));
+assert.equal(manifest.archive.sha256, "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35", "Previous edition snapshot changed");
+assert.equal(archive.chapters.length, 38);
+assert.equal(archive.chapters.filter(c => c.kind === "chapter").length, 18);
+assert.equal(archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available").length, 37);
 assert.equal(authors.length, 3);
 uniqueIds(authors, "author");
 assert.ok(Array.isArray(book.notes), "Book notes must be an array");
@@ -131,6 +201,17 @@ for (const note of book.notes) {
 }
 for (const note of book.notes) assert.ok(references.has(note.id), "Note has no reference: " + note.id);
 
+const activeBlockCount = blockCount;
+uniqueIds(archive.chapters, "archive chapter");
+for (const chapter of archive.chapters) {
+  nonempty(chapter.title, "Archive title: " + chapter.id);
+  assert.equal(chapter.status, "available", "Archived section lost its text");
+  assert.ok(chapter.blocks.length, "Empty archive section: " + chapter.id);
+  for (const block of chapter.blocks) validateBlock(block, chapter.id);
+}
+assert.equal(book.statistics.blocks, activeBlockCount);
+assert.equal(archive.statistics.blocks, blockCount - activeBlockCount);
+
 for (const author of authors) {
   nonempty(author.name, "Author name");
   nonempty(author.bio, "Author biography: " + author.id);
@@ -142,7 +223,7 @@ for (const author of authors) {
   }
 }
 localMedia(siteConfig.coverPath, "Book cover");
-assert.equal(siteConfig.coverPath, "/images/book-cover-new-subtitle.png");
+assert.equal(siteConfig.coverPath, "/images/book-cover-contents-v4.png");
 
 assert.equal(sources.length, 48, "Incomplete selected public bibliography");
 assert.equal(cards.length, 30, "Incomplete selected public card collection");
@@ -179,5 +260,5 @@ for (const card of cards) {
 
 console.log("Content passed: schema " + book.schemaVersion + "; " +
   mainChapters.filter((chapter) => chapter.status === "available").length + "/" + mainChapters.length +
-  " available chapters; " + blockCount + " blocks; " + book.notes.length + " notes; " +
+  " available chapters; " + activeBlockCount + " current blocks; " + (blockCount - activeBlockCount) + " archive blocks; " + book.notes.length + " notes; " +
   authors.length + " authors; " + sources.length + " sources; " + cards.length + " cards.");

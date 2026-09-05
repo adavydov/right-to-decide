@@ -1,0 +1,30 @@
+{
+  "releaseId": "author-contents-v4.0-2026-09-05",
+  "version": "4.0",
+  "edition": "2026-09-05",
+  "authorSource": {
+    "path": "manuscript/2026-09-05-rebuild/contents-v4.0.md",
+    "sha256": "46184da37a5cb58723f196cda7086ef99faf5b1cce2738995cd89135a96187e1"
+  },
+  "sourceSelection": "Последнее уточнение автора: шесть частей, восемнадцать глав и пролог; заменяет предшествующее поручение о пяти частях.",
+  "normalization": "Добавлена Markdown-разметка, сохранены текст и порядок всех пунктов; в отдельных названиях глав снята завершающая точка списка.",
+  "bookSha256": "2d2d0ddbae8cdddc818cf880ebd83c4339acf9080b1b443f04e7999781781ef3",
+  "archive": {
+    "path": "src/data/previous-edition.json",
+    "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
+  },
+  "importerSha256": "66599bfefe41f2d221f2d08cab34beeae3107c4ae0784c0e1959c99fb9d823e8",
+  "checks": {
+    "parts": 6,
+    "numberedChapters": 18,
+    "plannedChapters": 18,
+    "prologue": true,
+    "separateEpilogue": false,
+    "allAuthorParagraphsPreserved": true
+  },
+  "prologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v1.0.md",
+    "sha256": "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288"
+  },
+  "scope": "Сохранён новый опубликованный авторский пролог. Публикация содержания; написание и научная приёмка новых глав не выполнялись."
+}

@@ -42,7 +42,7 @@ export function PublicationHero() {
               <Image
                 className={styles.cover}
                 src={assetPath(siteConfig.coverPath)}
-                alt="Обложка книги «Право на решение. Как оставаться авторами будущего рядом с более сильным интеллектом»"
+                alt="Обложка книги «Право на решение. Как остаться авторами будущего рядом с более сильным интеллектом»"
                 width={siteConfig.coverWidth}
                 height={siteConfig.coverHeight}
                 sizes="(max-width: 375px) 76vw, (max-width: 760px) 280px, (max-width: 1100px) 280px, 320px"

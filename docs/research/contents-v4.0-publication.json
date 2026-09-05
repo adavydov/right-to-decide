@@ -1,0 +1,21 @@
+{
+  "edition": "author-contents-v4.0-2026-09-05",
+  "structure": {
+    "parts": 6,
+    "chapters": 18
+  },
+  "available": [
+    "prologue",
+    "contents"
+  ],
+  "validation": {
+    "npm run check": "passed including source, lint, types, content, build and export",
+    "python scripts/test-publish-manuscript.py": "6 tests passed",
+    "author_prologue.py --check --html": "passed, 65 blocks, 61 paragraphs, 4 separators, no source links",
+    "Chrome desktop": "contents full text and search verified visually",
+    "Chrome responsive": "viewport/screenshot operation timed out; responsive screenshot verification not completed"
+  },
+  "archive": "37 readable previous-edition sections preserved",
+  "documentationSnapshotFiles": 12,
+  "cover": "public/images/book-cover-contents-v4.png"
+}

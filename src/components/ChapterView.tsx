@@ -132,7 +132,7 @@ function renderBlock(block: BookBlock): ReactNode {
   );
 }
 
-function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
+export function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
   const rendered: ReactNode[] = [];
   let index = 0;
 
@@ -221,7 +221,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
           </p>
           <h1 className="reading-title">{displayBookTitle(chapter.title)}</h1>
           <p className="reading-meta">
-            {getChapterReadingMinutes(chapter)} мин чтения · Рабочая редакция
+            {getChapterReadingMinutes(chapter)} мин чтения · {chapter.contentKind === "outline" ? "Авторское содержание · версия 4.0" : "Авторский текст · версия " + chapter.version}
           </p>
           <div className="reading-copy">
             {renderBookBlocks(chapter.blocks)}

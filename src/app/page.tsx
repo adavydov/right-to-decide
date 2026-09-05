@@ -2,10 +2,10 @@ import Link from "next/link";
 import { PublicationHero } from "@/components/PublicationHero";
 import { AuthorsGrid } from "@/components/AuthorsGrid";
 import { siteConfig } from "@/lib/site-config";
-import { book, mainChapters } from "@/lib/book";
+import { book, publicationSummary } from "@/lib/book";
 import { displayBookTitle } from "@/lib/book-display";
 import { cards, sources } from "@/lib/library";
-import authorsData from "@/data/authors.json";
+import { getBookCreditsStructuredData } from "@/lib/editorial-team";
 
 export const metadata = { alternates: { canonical: siteConfig.publicUrl + "/" } };
 const pillars = [
@@ -14,13 +14,7 @@ const pillars = [
   { title: "Создавать и пересматривать альтернативы", text: "Замыслу нужны ресурсы, опыт и право на первую попытку. Как образование и организации могут поддерживать людей, способных воплотить иной путь и изменить унаследованный порядок?" },
 ];
 export default function HomePage() {
-  const available = mainChapters.filter(c => c.status === "available").length;
-  const structured = {
-    "@context": "https://schema.org", "@type": "Book", name: siteConfig.title,
-    alternateName: siteConfig.subtitle, inLanguage: "ru", isAccessibleForFree: true,
-    url: siteConfig.publicUrl + "/", image: siteConfig.publicUrl + siteConfig.coverPath,
-    author: authorsData.authors.map(a => ({ "@type": "Person", name: a.name })),
-  };
+  const structured = getBookCreditsStructuredData();
   return <main id="main-content">
     <PublicationHero />
     <section className="publication-section wrap" id="about">
@@ -29,7 +23,7 @@ export default function HomePage() {
         <div className="publication-prose">
           <p>Искусственный интеллект меняет работу, способы исследования и представления о том, что возможно. Вместе с его возможностями должна развиваться человеческая способность создавать цели, решения и институты.</p>
           <p>Авторы исследуют, как связать развитие человека с деятельностью рядом с сильным ИИ. Фундаментальное знание, исследование и практика помогают проверять основания доверия и создавать то, чего ещё нет.</p>
-          <p>Российская транспортная школа даёт этому замыслу историческую и предметную опору. Через становление инженера и устройство университета книга выходит к вопросу о том, какие люди и институты смогут определять направление общего развития.</p>
+          <p>Инженерная школа рассматривается как место изобретения новой деятельности. Созданная система должна работать, участники — становиться способнее, а способ сотрудничества — позволять продолжать дело и включать новых людей без постоянной зависимости от основателя.</p>
         </div>
       </div>
     </section>
@@ -41,7 +35,7 @@ export default function HomePage() {
     </section>
     <section className="publication-section wrap">
       <div className="section-top"><div><p className="eyebrow">Текст книги</p><h2>Выберите вопрос,<br />с которого начать</h2></div><Link href="/contents/" className="text-link">Полное содержание ↗</Link></div>
-      <div className="edition-notice"><span className="status-dot" /><p>{book.schemaVersion === 1 ? "Авторы пересматривают концепцию книги. В читалке сохранена редакция от 4 сентября 2026 года." : `Опубликованы предисловие и ${available} глав. Остальные главы готовятся.`}</p></div>
+      <div className="edition-notice"><span className="status-dot" /><p>{publicationSummary}</p></div>
       <div className="preview-list">{book.parts.map(part => <Link className="preview-row" href={`/contents/#${part.id}`} key={part.id}><small>{part.number}</small><span>{displayBookTitle(part.title).replace(/^Часть\s+[IVXLC\d]+[.\s:—–-]*/i, "")}</span><span className="arrow" aria-hidden="true">↗</span></Link>)}</div>
       <div className="book-callout"><div><h3>Вернуться к тексту<br />со своим вопросом</h3><p>Размер текста, шрифт и тема настраиваются под вас. Читалка сохраняет место и закладки.</p></div><Link href="/read/" className="button">Читать книгу ↗</Link></div>
     </section>

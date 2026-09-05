@@ -1,4 +1,5 @@
 import bookData from "@/data/book.json";
+import previousEditionData from "@/data/previous-edition.json";
 import authorsData from "@/data/authors.json";
 
 export type BookList = {
@@ -47,6 +48,8 @@ export type ImageBlock = {
 export type BookBlock = TextBlock | TableBlock | ImageBlock;
 
 export type BookChapter = {
+  outlineTitle?: string;
+  contentKind?: "outline" | "manuscript";
   id: string;
   number: number | string | null;
   title: string;
@@ -65,6 +68,8 @@ export type BookChapter = {
 };
 
 export type Book = {
+  contentKind?: "outline" | "manuscript";
+  version?: string;
   schemaVersion: number;
   title: string;
   subtitle: string;
@@ -77,7 +82,7 @@ export type Book = {
     importer: string;
     textPolicy: string;
   };
-  parts: { id: string; number: string; title: string }[];
+  parts: { id: string; number: string; title: string; description?: string[] }[];
   chapters: BookChapter[];
   notes: { id: string; kind: "footnote" | "endnote"; blocks: BookBlock[]; chapterId?: string; number?: number | string; sourceId?: string }[];
   statistics: Record<string, number | string>;
@@ -111,7 +116,13 @@ export const book: Book = {
   })),
 };
 export const chapters = book.chapters;
+export const previousEdition = previousEditionData as Book;
+export const archiveChapters = previousEdition.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 export const mainChapters = chapters.filter((chapter) => chapter.kind === "chapter");
+export const publishedChapterCount = mainChapters.filter((chapter) => chapter.status === "available").length;
+export const publicationSummary = publishedChapterCount === 0
+  ? "Опубликованы авторский пролог и развёрнутое содержание. Главы готовятся к публикации."
+  : `Опубликованы пролог и главы: ${publishedChapterCount} из ${mainChapters.length}.`;
 export const appendices = chapters.filter((chapter) => chapter.kind === "appendix");
 /** Retain the DOCX page index in source data; use chapter links for web navigation. */
 export const readingChapters = chapters.filter((chapter) => chapter.id !== "source-contents");
