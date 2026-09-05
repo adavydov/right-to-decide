@@ -10,3 +10,6 @@
 
 # Preserve exact original bytes of the imported editorial snapshot.
 docs/editorial/agent-system-2026-09-05/** -text
+# Preserve the exact reviewed public evidence snapshots.
+src/data/library.json -text whitespace=cr-at-eol
+src/data/evidence-cards.json -text whitespace=cr-at-eol

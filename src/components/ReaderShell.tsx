@@ -31,7 +31,8 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
   const legacySize = useReadingPreference("right-to-decide-font-size");
   const settings = useMemo(() => parseSettings(rawSettings, legacySize), [rawSettings, legacySize]);
   const rawBookmarks = useReadingPreference("right-to-decide-bookmarks");
-  const bookmarks = useMemo(() => parseBookmarks(rawBookmarks).filter(b => items.some(c => c.id === b.chapterId && c.status === "available")), [rawBookmarks, items]);
+  const allBookmarks = useMemo(() => parseBookmarks(rawBookmarks), [rawBookmarks]);
+  const bookmarks = useMemo(() => allBookmarks.filter(b => b.revision === revision && items.some(c => c.id === b.chapterId && c.status === "available")), [allBookmarks, items, revision]);
   const [panel, setPanel] = useState<ReaderPanel | null>(null);
   const [focus, setFocus] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -71,6 +72,11 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
   }, [revision]);
 
   const restore = useCallback((location: ReadingLocation) => {
+    if (location.revision && location.revision !== revision) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+      setNotice("Текст обновился. Чтение этой редакции начато с начала.");
+      return;
+    }
     const element = location.revision === revision ? document.getElementById(location.blockId) : null;
     const top = element && article.current?.contains(element)
       ? window.scrollY + element.getBoundingClientRect().top + element.getBoundingClientRect().height * location.offset - 112
@@ -102,7 +108,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       if (!position) return;
       lastLocation = position;
       writeReadingPreference(positionKey(currentId), JSON.stringify(position), false);
-      writeReadingPreference("right-to-decide-reading", JSON.stringify({ id: currentId, title: current.title, progress: position.progress }), false);
+      writeReadingPreference("right-to-decide-reading", JSON.stringify({ id: currentId, title: current.title, revision, progress: position.progress }), false);
     };
     const update = () => {
       cancelAnimationFrame(frame);
@@ -157,7 +163,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       window.removeEventListener("scroll", update); window.removeEventListener("resize", update);
       window.removeEventListener("pagehide", save); window.removeEventListener("hashchange", hashJump);
     };
-  }, [currentId, current.title, capture, restore, jump]);
+  }, [currentId, current.title, revision, capture, restore, jump]);
 
   useLayoutEffect(() => {
     if (!pending.current) return;
@@ -211,7 +217,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       setNotice("Это место уже в закладках"); return;
     }
     const bookmark: ReaderBookmark = { ...position, id: `${currentId}-${Date.now()}`, chapterId: currentId, title: displayBookTitle(current.title), excerpt: element?.textContent?.trim().slice(0, 150) || displayBookTitle(current.title) };
-    writeReadingPreference("right-to-decide-bookmarks", JSON.stringify([bookmark, ...bookmarks].slice(0, 200)));
+    writeReadingPreference("right-to-decide-bookmarks", JSON.stringify([bookmark, ...allBookmarks].slice(0, 200)));
     setNotice("Закладка добавлена");
   }
   function openBookmark(bookmark: ReaderBookmark) {
@@ -273,7 +279,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
         </div>
         {next ? <Link href={`/read/${next.id}/`} className={styles.chapterNav} aria-label="Следующий раздел"><span>Следующий раздел</span><Icon name="next" /></Link> : <Link href="/contents/" className={styles.chapterNav}><span>К содержанию</span><Icon name="next" /></Link>}
       </footer>
-      <ReaderPanels panel={panel} onClose={() => setPanel(null)} settings={draftSettings || settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(bookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
+      <ReaderPanels panel={panel} onClose={() => setPanel(null)} settings={draftSettings || settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(allBookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
       <div role="status" className={notice ? styles.toast : styles.srOnly}>{notice}</div>
     </div>
   );

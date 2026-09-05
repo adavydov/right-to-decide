@@ -1,0 +1,1264 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-09-05",
+  "sources": [
+    {
+      "id": "source-01",
+      "number": 1,
+      "title": "«Ракеты и люди», четыре тома",
+      "authors": [
+        "Борис Черток"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "NASA History Series, тома I–IV: 2005, 2006, 2009, 2011. Русская книга 1: Машиностроение, 2-е издание, 1999.",
+      "languages": [
+        "ru",
+        "en"
+      ],
+      "materialNote": "На английском получены полные четыре тома; на русском — полная книга 1. Русские книги 2–4 отсутствуют. Иллюстрации русской веб-версии не собраны, печатная пагинация не восстановлена.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Четыре английских тома · NASA",
+          "url": "https://www.nasa.gov/history/history-publications-and-resources/nasa-history-series/rockets-and-people/",
+          "kind": "archive"
+        },
+        {
+          "label": "Русская книга 1",
+          "url": "https://epizodsspace.narod.ru/bibl/chertok/kniga-1/obl.html",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-02",
+      "number": 2,
+      "title": "Оружие победы",
+      "authors": [
+        "Василий Гаврилович Грабин"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Москва: Политиздат, 1989. Использован электронный экземпляр FB2.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Предоставленный автором проекта FB2 без печатной пагинации. Цитаты сверены по этому экземпляру; номера Pxxxxx обозначают абзацы электронной версии.",
+      "availability": "provided",
+      "reading": "documented-text-reading",
+      "readingNote": "Чтение 3811 извлечённых абзацев документировано, включая вступление и примечания. Иллюстрации не проверялись; постраничная сверка с печатным изданием не выполнена.",
+      "links": [
+        {
+          "label": "Другая электронная публикация",
+          "url": "https://royallib.com/read/grabin_vasiliy/orugie_pobedi.html",
+          "kind": "text",
+          "note": "Ссылка из библиографического реестра. Её тождество использованному FB2 1989 года не установлено; цитаты сверены по предоставленному экземпляру."
+        }
+      ],
+      "cardIds": [
+        "GRABIN1989-P1-C01",
+        "GRABIN1989-P1-C02",
+        "GRABIN1989-P1-C03",
+        "GRABIN1989-P1-C04",
+        "GRABIN1989-P1-C05",
+        "GRABIN1989-P1-C06",
+        "GRABIN1989-P1-C07",
+        "GRABIN1989-P1-C08",
+        "GRABIN1989-P1-C09",
+        "GRABIN1989-P1-C10",
+        "GRABIN1989-C2-01",
+        "GRABIN1989-C2-02",
+        "GRABIN1989-C2-03",
+        "GRABIN1989-C2-04",
+        "GRABIN1989-C2-05",
+        "GRABIN1989-C2-06",
+        "GRABIN1989-C2-07",
+        "GRABIN1989-C2-08",
+        "GRABIN1989-C2-09",
+        "GRABIN1989-C2-10",
+        "GRABIN1989-P3-C01",
+        "GRABIN1989-P3-C02",
+        "GRABIN1989-P3-C03",
+        "GRABIN1989-P3-C04",
+        "GRABIN1989-P3-C05",
+        "GRABIN1989-P3-C06",
+        "GRABIN1989-P3-C07",
+        "GRABIN1989-P3-C08",
+        "GRABIN1989-P3-C09",
+        "GRABIN1989-P3-C10"
+      ]
+    },
+    {
+      "id": "source-03",
+      "number": 3,
+      "title": "Мои воспоминания",
+      "authors": [
+        "Алексей Крылов"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "9-е исправленное и дополненное издание. Санкт-Петербург: Политехника, 2003. Электронная публикация Flot.com.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://flot.com/publications/books/shelf/memories/",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-04",
+      "number": 4,
+      "title": "Воспоминания",
+      "authors": [
+        "Степан Тимошенко"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Киев: Наукова думка, 1993. ISBN 5-12-003734-8. Выходные данные из метаданных FB2.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://rasa-usa.org/project/memoriam/stephen_timoshenko/",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-05",
+      "number": 5,
+      "title": "Цель жизни. Записки авиаконструктора",
+      "authors": [
+        "Александр Яковлев"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "3-е издание. Москва: Политиздат, 1973. Электронная публикация Militera.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://militera.lib.ru/memo/russian/yakovlev-as/index.html",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-06",
+      "number": 6,
+      "title": "Десять раз сначала",
+      "authors": [
+        "Олег Антонов"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Электронный перенабор в PDF. Печатная редакция и выходные данные не установлены.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Доступен PDF объёмом 69 страниц. До сопоставления с оглавлением и печатным изданием полнота остаётся неопределённой.",
+      "availability": "completeness-unverified",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Библиографическая запись",
+          "url": "https://www.rulit.me/genre/non-fiction/desyat-raz-snachala-download-588359.html",
+          "kind": "catalog"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-07",
+      "number": 7,
+      "title": "Туполевская шарага",
+      "authors": [
+        "Леонид Кербер"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Основа: Г. Озеров, «Туполевская шарага». Посев, 2-е издание, 1973. Электронная редакция с дополнениями.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://lib.ru/MEMUARY/KERBER/tupolewskaya_sharaga.txt",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-08",
+      "number": 8,
+      "title": "Голубая спираль",
+      "authors": [
+        "Александр Москалёв"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Воронеж, 1999. Электронная публикация Militera.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://militera.lib.ru/memo/russian/moskalev_as/index.html",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-09",
+      "number": 9,
+      "title": "Через невидимые барьеры",
+      "authors": [
+        "Марк Галлай"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Электронный сборник «Через невидимые барьеры. Испытано в небе» на Testpilot. Печатная основа отдельной электронной версии не установлена.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Произведение получено в составе электронного сборника двух книг.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://testpilot.ru/review/gallai/barrier/index.php",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-10",
+      "number": 10,
+      "title": "Траектория жизни. Между вчера и завтра",
+      "authors": [
+        "Константин Феоктистов"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Москва: Вагриус, 2000. ISBN 5-264-00383-1. Электронная публикация Astronaut.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "http://www.astronaut.ru/bookcase/books/feoktistov/feoktistov.htm",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-11",
+      "number": 11,
+      "title": "Триумф и трагедия “Энергии”. Размышления главного конструктора",
+      "authors": [
+        "Борис Губанов"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Четыре тома. НИЭР, 1998–2000. Каталог «Новостей космонавтики» обобщённо указывает 1999 год.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Найдены записи четырёх томов; ни одного полного тома в исследовательском корпусе нет.",
+      "availability": "unavailable",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Архив и каталог",
+          "url": "https://novosti-kosmonavtiki.ru/books/77386/",
+          "kind": "archive"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-12",
+      "number": 12,
+      "title": "У истоков рукотворного мира. Записки конструктора",
+      "authors": [
+        "Николай Доллежаль"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "4-е дополненное издание. Москва: ИздАТ, 2010. 262 с., 8 л. ил.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://elib.biblioatom.ru/text/dollezhal_u-istokov-mira_2010/",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-13",
+      "number": 13,
+      "title": "Письма о науке. 1930–1980",
+      "authors": [
+        "Пётр Капица"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Москва: Московский рабочий, 1989. ISBN 5-239-00269-X. Выходные данные из метаданных FB2.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://royallib.com/book/kapitsa_pyotr/pisma_o_nauke_19301980.html",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-14",
+      "number": 14,
+      "title": "Воспоминания об А. Ф. Иоффе",
+      "authors": [
+        "Коллектив авторов"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Ленинград: Наука, 1973. 252 с., 5 л. ил. Ответственный редактор В. П. Жузе.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Получен скан доступной электронной версии: 262 страницы файла, без распознанного текста. Это число страниц файла, а не печатная пагинация.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://elib.biblioatom.ru/text/vospominaniya-ob-ioffe_1973/",
+          "kind": "text"
+        }
+      ],
+      "cardIds": [],
+      "contributors": [
+        "В. П. Жузе — ответственный редактор"
+      ]
+    },
+    {
+      "id": "source-15",
+      "number": 15,
+      "title": "Воспоминания",
+      "authors": [
+        "Андрей Сахаров"
+      ],
+      "category": "Инженерные воспоминания",
+      "edition": "Электронная публикация Архива Сахарова. Точная печатная основа этой версии не установлена.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Получены 49 из 50 разделов. Отсутствует глава 6 части II; полный текст не заявлен.",
+      "availability": "partial",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Архив и каталог",
+          "url": "https://www.sakharov-archive.ru/sakharov/works/vospominanija/",
+          "kind": "archive"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-16",
+      "number": 16,
+      "title": "The Idea Factory: Learning to Think at MIT",
+      "authors": [
+        "Pepper White"
+      ],
+      "category": "Создатели и организации",
+      "edition": "MIT Press, 2001. ISBN 9780262731423.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://mitpress.mit.edu/9780262731423/the-idea-factory/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-17",
+      "number": 17,
+      "title": "Skunk Works: A Personal Memoir of My Years at Lockheed",
+      "authors": [
+        "Ben R. Rich",
+        "Leo Janos"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Британское издание в мягкой обложке: 1995, ISBN 9780751515039. Аудиоиздание 2015 года имеет другой ISBN: 9781478907183.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверены разные форматы издания; полного текста в корпусе нет. ISBN аудиокниги не следует использовать для печатного издания.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.littlebrown.co.uk/titles/leo-janos/skunk-works/9780751515039/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-18",
+      "number": 18,
+      "title": "Kelly: More Than My Share of It All",
+      "authors": [
+        "Clarence L. “Kelly” Johnson"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Smithsonian Institution Press, 1985. ISBN 0874745640.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.smithsonianbooks.com/store/aviation-military-history/kelly-more-than-my-share-of-it-all/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": [],
+      "contributors": [
+        "При участии Мэгги Смит (with Maggie Smith)"
+      ]
+    },
+    {
+      "id": "source-19",
+      "number": 19,
+      "title": "The Wind and Beyond: Theodore von Kármán, Pioneer in Aviation and Pathfinder in Space",
+      "authors": [
+        "Theodore von Kármán",
+        "Lee Edson"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Little, Brown, 1967.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Полного текста в исследовательском корпусе нет.",
+      "availability": "unavailable",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Библиографическая запись",
+          "url": "https://play.google.com/store/books/details/Theodore_von_K%C3%A1rm%C3%A1n_The_Wind_and_Beyond_Theodore_v?id=reBwEAAAQBAJ",
+          "kind": "catalog"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-20",
+      "number": 20,
+      "title": "747: Creating the World’s First Jumbo Jet and Other Adventures from a Life in Aviation",
+      "authors": [
+        "Joe Sutter",
+        "Jay Spenser"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Collins Reference, электронное издание, 3 августа 2010. 304 с. по издательской карточке.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Библиографическая запись",
+          "url": "https://books.apple.com/us/book/747/id360628644",
+          "kind": "catalog"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-21",
+      "number": 21,
+      "title": "How to Build a Car",
+      "authors": [
+        "Adrian Newey"
+      ],
+      "category": "Создатели и организации",
+      "edition": "HarperCollins, 2017. Электронное издание: ISBN 9780008196813.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://litres.com/book/adrian-newey/how-to-build-a-car-63153440/read/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-22",
+      "number": 22,
+      "title": "Failure Is Not an Option: Mission Control from Mercury to Apollo 13 and Beyond",
+      "authors": [
+        "Gene Kranz"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Издательская страница Simon & Schuster: ISBN 9781439148815. Точное издание доступного фрагмента не установлено.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.simonandschuster.com/books/Failure-Is-Not-an-Option/Gene-Kranz/9781439148815",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-23",
+      "number": 23,
+      "title": "Flight: My Life in Mission Control",
+      "authors": [
+        "Chris Kraft"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Dutton, 2001. ISBN 9780525945710. 371 с.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверены каталоги. Библиография NASA дополнительно указывает Schefter; состав авторства требует сверки с конкретным экземпляром.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Библиографическая запись",
+          "url": "https://search.worldcat.org/title/1244730512",
+          "kind": "catalog"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-24",
+      "number": 24,
+      "title": "Slide Rule: Autobiography of an Engineer",
+      "authors": [
+        "Nevil Shute"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Vintage Digital, 1 июля 2010. ISBN 9781409087458. 272 с.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.penguin.co.nz/books/slide-rule-9781409087458",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-25",
+      "number": 25,
+      "title": "Rocket Boys, также издавалась как October Sky",
+      "authors": [
+        "Homer H. Hickam Jr."
+      ],
+      "category": "Создатели и организации",
+      "edition": "Издание в мягкой обложке, 11 января 2000. ISBN 9780385333214. 384 с.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.penguinrandomhouse.com/books/79590/rocket-boys-by-homer-h-hickam-jr/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-26",
+      "number": 26,
+      "title": "Ignition! An Informal History of Liquid Rocket Propellants",
+      "authors": [
+        "John D. Clark"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Rutgers University Press Classics, 2018. ISBN 9780813595832. Первое издание — 1972.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.rutgersuniversitypress.org/ignition/9780813595832",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-27",
+      "number": 27,
+      "title": "Invention: A Life",
+      "authors": [
+        "James Dyson"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Издание в мягкой обложке, 6 сентября 2022. ISBN 9781982188450. 368 с.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.simonandschuster.com/books/Invention/James-Dyson/9781982188450",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-28",
+      "number": 28,
+      "title": "The Soul of a New Machine / «Душа новой машины»",
+      "authors": [
+        "Tracy Kidder"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Книга представлена издательской страницей Hachette и журнальными фрагментами The Atlantic за июль и август 1981 года. Точное издание для цитирования полного текста не установлено.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступны журнальные фрагменты, связанные с книгой. Они не заменяют полный текст выбранного издания.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.hachettebookgroup.com/titles/tracy-kidder/the-soul-of-a-new-machine/9780316491976/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-29",
+      "number": 29,
+      "title": "The Idea Factory: Bell Labs and the Great Age of American Innovation",
+      "authors": [
+        "Jon Gertner"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Penguin, издание в мягкой обложке, 2013. ISBN 9780143122791.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.penguinrandomhouse.com/books/303275/the-idea-factory-by-jon-gertner/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-30",
+      "number": 30,
+      "title": "Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age",
+      "authors": [
+        "Michael A. Hiltzik"
+      ],
+      "category": "Создатели и организации",
+      "edition": "HarperCollins, 1999. ISBN 9780887308918. 480 с.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Библиографическая запись",
+          "url": "https://michaelhiltzik.com/books/",
+          "kind": "catalog"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-31",
+      "number": 31,
+      "title": "The Making of the Atomic Bomb",
+      "authors": [
+        "Richard Rhodes"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Simon & Schuster, электронное издание, 2012. ISBN 9781439126226.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.simonandschuster.co.uk/books/The-Making-of-the-Atomic-Bomb/Richard-Rhodes/9781439126226",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-32",
+      "number": 32,
+      "title": "The Great Bridge",
+      "authors": [
+        "David McCullough"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Издательская страница Simon & Schuster: ISBN 9781451683233. Точное издание доступного фрагмента не установлено.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.simonandschuster.com/books/The-Great-Bridge/David-McCullough/9781451683233",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-33",
+      "number": 33,
+      "title": "The Dream Machine: J.C.R. Licklider and the Revolution That Made Computing Personal",
+      "authors": [
+        "M. Mitchell Waldrop"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Первое издание — 2001. Переиздание Stripe Press включает три работы Дж. К. Р. Ликлайдера.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверены сведения о первом издании и переиздании Stripe Press. Полного текста в корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://press.stripe.com/the-dream-machine",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-34",
+      "number": 34,
+      "title": "Rise of the Rocket Girls: The Women Who Propelled Us, from Missiles to the Moon to Mars",
+      "authors": [
+        "Nathalia Holt"
+      ],
+      "category": "Создатели и организации",
+      "edition": "Издательская страница Hachette: ISBN 9780316338912. Доступный журнальный фрагмент опубликован в The Atlantic в 2016 году; это отдельная публикация.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.hachettebookgroup.com/titles/nathalia-holt/rise-of-the-rocket-girls/9780316338912/?lens=little-brown",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-35",
+      "number": 35,
+      "title": "Талант (Жизнь Бережкова)",
+      "authors": [
+        "Александр Бек"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Собрание сочинений в 4 томах. Т. 3. Москва: Художественная литература, 1975. 544 с. Комментарии Т. Бек. Электронная редакция от 12 августа 2003.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://lib.ru/PROZA/BEK/talant.txt",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-36",
+      "number": 36,
+      "title": "Искатели",
+      "authors": [
+        "Даниил Гранин"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "АСТ / Редакция Елены Шубиной, 2017. Сочинения в 2 томах. Т. 1: «Эта странная жизнь; Искатели». 704 с. ISBN 9785179828471.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Доступный фрагмент",
+          "url": "https://ndc.book24.ru/pim/products/images/93/05/018ede68-5763-7794-a4ff-0a19c2229305.pdf",
+          "kind": "excerpt"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-37",
+      "number": 37,
+      "title": "Иду на грозу",
+      "authors": [
+        "Даниил Гранин"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Азбука, 2021. 416 с. ISBN 9785389102156.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://azbooka.ru/books/idu-na-grozu-3ax4",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-38",
+      "number": 38,
+      "title": "«Студенты» и «Инженеры»",
+      "authors": [
+        "Николай Гарин-Михайловский"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Две публикации Викитеки. «Студенты»: по изданию «Студенты. Инженеры», Москва: Художественная литература, 1977, электронная ревизия 5588259. «Инженеры»: ревизия 5345897; печатная основа не установлена.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Получены оба произведения как самостоятельные электронные публикации. Печатная основа «Инженеров» не установлена.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Студенты · Викитека",
+          "url": "https://ru.wikisource.org/wiki/Студенты_(Гарин-Михайловский)",
+          "kind": "text"
+        },
+        {
+          "label": "Инженеры · Викитека",
+          "url": "https://ru.wikisource.org/wiki/Инженеры_(Гарин-Михайловский)",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-39",
+      "number": 39,
+      "title": "Не хлебом единым",
+      "authors": [
+        "Владимир Дудинцев"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Электронная публикация Литрес, запись № 136194, 2014. Произведение 1956 года. Печатная основа доступного фрагмента не установлена.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.litres.ru/book/vladimir-dudincev/ne-hlebom-edinym-136194/chitat-onlayn/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-40",
+      "number": 40,
+      "title": "Епифанские шлюзы",
+      "authors": [
+        "Андрей Платонов"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "По изданию: Избранные произведения в 2 томах. Москва: Художественная литература, 1978. Т. 1. Первая публикация — 1927. Электронная страница от 4 апреля 2026.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Полная доступная электронная версия получена для исследования.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "http://az.lib.ru/p/platonow_a_p/text_1927_epifanskie_shlyuzy.shtml",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-41",
+      "number": 41,
+      "title": "The Monkey’s Wrench / La chiave a stella",
+      "authors": [
+        "Primo Levi"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Penguin Classics, 1995. 176 с. ISBN 9780140188929. Перевод William Weaver. Итальянский оригинал: Einaudi, 1978.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.penguinrandomhouse.com/books/323096/the-monkeys-wrench-by-primo-levi/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": [],
+      "contributors": [
+        "William Weaver — переводчик"
+      ]
+    },
+    {
+      "id": "source-42",
+      "number": 42,
+      "title": "No Highway",
+      "authors": [
+        "Nevil Shute"
+      ],
+      "category": "Инженерный опыт в литературе",
+      "edition": "Faded Page № 20120814. Печатный источник по каталогу: The Book Society Ltd., 1948.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Полный текст отмечен во внешнем каталоге Faded Page; получение электронной версии в исследовательский корпус не состоялось.",
+      "availability": "external-only",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Архив и каталог",
+          "url": "https://www.fadedpage.com/showbook.php?pid=20120814",
+          "kind": "archive"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-43",
+      "number": 43,
+      "title": "Mind and Hand: The Birth of MIT",
+      "authors": [
+        "Julius A. Stratton",
+        "Loretta H. Mannix"
+      ],
+      "category": "История и устройство образования",
+      "edition": "MIT Press, 2005. 792 с. ISBN 9780262195249. Электронный ISBN 9780262284486; DOI 10.7551/mitpress/4620.001.0001.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://mitpress.mit.edu/9780262195249/mind-and-hand/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-44",
+      "number": 44,
+      "title": "A Whole New Engineer: The Coming Revolution in Engineering Education",
+      "authors": [
+        "David E. Goldberg",
+        "Mark Somerville"
+      ],
+      "category": "История и устройство образования",
+      "edition": "Первое издание. ThreeJoy Associates, 2014. ISBN 9780986080005.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступен фрагмент произведения. Полного текста в исследовательском корпусе нет.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://wholenewengineer.org/about-wne/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-45",
+      "number": 45,
+      "title": "Becoming MIT: Moments of Decision",
+      "authors": [],
+      "category": "История и устройство образования",
+      "edition": "MIT Press, 2010. 224 с. ISBN 9780262113236. Издание в мягкой обложке: 2012, ISBN 9780262518154.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://mitpress.mit.edu/9780262113236/becoming-mit/",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": [],
+      "contributors": [
+        "David Kaiser — редактор"
+      ]
+    },
+    {
+      "id": "source-46",
+      "number": 46,
+      "title": "What Engineers Know and How They Know It: Analytical Studies from Aeronautical History",
+      "authors": [
+        "Walter G. Vincenti"
+      ],
+      "category": "История и устройство образования",
+      "edition": "Johns Hopkins University Press, 1990. Издание в мягкой обложке: 1993, 336 с., ISBN 9780801845888. DOI 10.56021/9780801839740.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Проверена библиографическая запись. Полного текста в исследовательском корпусе нет.",
+      "availability": "catalog",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Об издании",
+          "url": "https://www.press.jhu.edu/books/title/3022/what-engineers-know-and-how-they-know-it",
+          "kind": "publisher"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-47",
+      "number": 47,
+      "title": "Educating the Reflective Practitioner: Toward a New Design for Teaching and Learning in the Professions",
+      "authors": [
+        "Donald A. Schön"
+      ],
+      "category": "История и устройство образования",
+      "edition": "Jossey-Bass, первое издание, 1987. Wiley, издание в мягкой обложке, 1991. 384 с. ISBN 9781555422202. Университетская подборка содержит титул издания 1987 года.",
+      "languages": [
+        "en"
+      ],
+      "materialNote": "Доступна университетская подборка фрагментов, а не полный текст книги.",
+      "availability": "excerpt",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Доступный фрагмент",
+          "url": "https://web.eecs.umich.edu/~mjguz/csl/home.cc.gatech.edu/allison/uploads/4/schon1987c.pdf",
+          "kind": "excerpt"
+        }
+      ],
+      "cardIds": []
+    },
+    {
+      "id": "source-48",
+      "number": 48,
+      "title": "Engineering Education in Russia",
+      "authors": [
+        "Stephen P. Timoshenko"
+      ],
+      "category": "История и устройство образования",
+      "edition": "Русский перевод: Люберцы, Производственно-издательский комбинат ВИНИТИ, 1997. Английский оригинал — 1959.",
+      "languages": [
+        "ru"
+      ],
+      "materialNote": "Получен полный русский перевод. Английский оригинал отсутствует.",
+      "availability": "complete",
+      "reading": "not-claimed",
+      "readingNote": "Внимательное чтение полного произведения не заявлено; получение и индексация текста учитываются отдельно.",
+      "links": [
+        {
+          "label": "Электронная публикация",
+          "url": "https://www.ihim.uran.ru/files/info/2014/STimoshenko.pdf",
+          "kind": "text"
+        }
+      ],
+      "cardIds": []
+    }
+  ]
+}

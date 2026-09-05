@@ -92,7 +92,7 @@ export function AuthorsGrid({ compact = false }: AuthorsGridProps) {
           <div>
             <p className={styles.eyebrow}>Авторы</p>
             <h2 className={styles.title} id="authors-heading">
-              Три взгляда на один вопрос.
+              Образование, технологии и управление
             </h2>
           </div>
           <Link className={styles.more} href="/authors/">

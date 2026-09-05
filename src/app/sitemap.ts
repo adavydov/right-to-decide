@@ -1,20 +1,31 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { readingChapters } from "@/lib/book";
+import { book, readingChapters } from "@/lib/book";
+import { cards } from "@/lib/library";
+import libraryData from "@/data/library.json";
+
 export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const routes = [
     "/",
     "/contents/",
     "/authors/",
     "/read/",
+    "/library/",
+    "/wiki/",
+    ...cards.map((card) => "/wiki/" + card.id + "/"),
     ...readingChapters
-      .filter((c) => c.status === "available")
-      .map((c) => "/read/" + c.id + "/"),
-  ].map((path) => ({
-    url: siteConfig.publicUrl + path,
-    lastModified: new Date("2026-09-05"),
+      .filter((chapter) => chapter.status === "available")
+      .map((chapter) => "/read/" + chapter.id + "/"),
+  ];
+  const lastModified = new Date(
+    [book.edition, libraryData.asOf].sort().at(-1)!,
+  );
+  return [...new Set(routes)].map((route) => ({
+    url: siteConfig.publicUrl + route,
+    lastModified,
     changeFrequency: "monthly" as const,
-    priority: path === "/" ? 1 : 0.7,
+    priority: route === "/" ? 1 : 0.7,
   }));
 }

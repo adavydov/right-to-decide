@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   padding: 9px 10px 9px 22px;
-  gap: 32px;
+  gap: 16px;
   min-height: 61px;
   box-shadow: 0 4px 25px #00000008;
 }
@@ -41,7 +41,7 @@
 .links a {
   font-size: 12px;
   font-family: Consolas, "Courier New", monospace;
-  padding: 11px 13px;
+  padding: 13px 11px;
   color: #b4b1aa;
   border-radius: 5px;
   letter-spacing: -0.035em;
@@ -90,7 +90,7 @@
     gap: 10px;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 1050px) {
   .header {
     top: 14px;
     padding: 0 20px;
@@ -124,8 +124,9 @@
     color: white;
     font-size: 20px;
     line-height: 1;
-    width: 29px;
-    min-height: 32px;
+    width: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
   .links {
     display: none;
@@ -159,3 +160,7 @@
     padding: 10px;
   }
 }
+
+@media (max-width: 440px) { .nav { gap: 6px; padding: 7px 9px; } .brand { font-size: 14px; gap: 6px; } .read { padding: 12px 9px; } }
+
+.read { min-height: 44px; }

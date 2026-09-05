@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ContentsCatalog } from "@/components/ContentsCatalog";
-import { readingChapters, getChapterReadingMinutes } from "@/lib/book";
+import { book, readingChapters, getChapterReadingMinutes } from "@/lib/book";
 import { siteConfig } from "@/lib/site-config";
 export const metadata = {
   title: "Содержание",
@@ -26,12 +26,11 @@ export default function ContentsPage() {
           <p className="eyebrow">Карта книги</p>
           <h1 className="page-heading">Содержание</h1>
           <p className="page-intro">
-            От истории инженерного доверия — к устройству образования в эпоху
-            искусственного интеллекта.
+            {book.schemaVersion === 1 ? "Содержание редакции от 4 сентября 2026 года. Авторы пересматривают концепцию книги; новый текст появится после этой работы." : "Шесть частей связывают делегирование, доверие, образование и общественное участие с вопросом о том, кто сможет изменить унаследованный мир."}
           </p>
           <p className="eyebrow" style={{ marginTop: 22 }}>
             <span className="status-dot" />
-            Рабочая редакция · 04.09.2026
+            Рабочая редакция · {book.edition.split("-").reverse().join(".")}
           </p>
         </div>
         <Link href="/read/" className="button">

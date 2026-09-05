@@ -18,6 +18,8 @@ export function BookHeader() {
     { href: "/", label: "О книге" },
     { href: "/contents/", label: "Содержание" },
     { href: "/authors/", label: "Авторы" },
+    { href: "/library/", label: "Библиотека" },
+    { href: "/wiki/", label: "Вики" },
   ];
   return (
     <>

@@ -11,6 +11,8 @@ export function BookFooter() {
             <Link href="/contents/">Содержание</Link>
             <Link href="/read/">Читать</Link>
             <Link href="/authors/">Авторы</Link>
+            <Link href="/library/">Библиотека</Link>
+            <Link href="/wiki/">Вики</Link>
           </div>
         </div>
         <p className={styles.title}>
@@ -18,7 +20,7 @@ export function BookFooter() {
         </p>
         <div className={styles.bottom}>
           <span>© А. М. Давыдов, А. А. Давыдов, Е. А. Давыдов</span>
-          <span>Инженерное образование в эпоху ИИ</span>
+          <span>Как оставаться авторами будущего</span>
         </div>
       </div>
     </footer>

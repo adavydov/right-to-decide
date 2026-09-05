@@ -45,7 +45,7 @@ export function ContentsCatalog({ items }: { items: ChapterNavigation[] }) {
         <span className={styles.count} role="status">
           {query
             ? "Найдено разделов: " + filtered.length
-            : "18 глав · 6 частей · 10 приложений"}
+            : `${items.filter(c => c.kind === "chapter" && c.status === "available").length} глав для чтения${items.some(c => c.status === "planned") ? " · " + items.filter(c => c.kind === "chapter" && c.status === "planned").length + " готовятся" : ""}${items.some(c => c.kind === "appendix") ? " · " + items.filter(c => c.kind === "appendix").length + " приложений" : ""}`}
         </span>
       </div>
       {filtered.length === 0 ? (
@@ -54,7 +54,7 @@ export function ContentsCatalog({ items }: { items: ChapterNavigation[] }) {
         </p>
       ) : (
         groups.map((group) => (
-          <section className={styles.group} key={group}>
+          <section className={styles.group} key={group} id={/^часть /i.test(group) ? "part-" + group.split(/[ .]/)[1].toLowerCase() : undefined}>
             <h2>{displayBookTitle(group)}</h2>
             <div>
               {filtered
@@ -87,7 +87,7 @@ export function ContentsCatalog({ items }: { items: ChapterNavigation[] }) {
                       <span className={styles.meta}>
                         {c.status === "available"
                           ? c.minutes + " мин"
-                          : "Скоро"}
+                          : "Готовится"}
                       </span>
                       <span aria-hidden="true">
                         {c.status === "available" ? "↗" : "·"}

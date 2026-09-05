@@ -8,6 +8,15 @@ export type BookList = {
   sourceNumberId: string;
 };
 
+export type TextRun = {
+  text: string;
+  href?: string;
+  emphasis?: boolean;
+  strong?: boolean;
+  code?: boolean;
+  noteId?: string;
+};
+
 export type TextBlock = {
   type: "paragraph" | "heading";
   id: string;
@@ -16,6 +25,7 @@ export type TextBlock = {
   role?: "quote" | "caption";
   list?: BookList;
   math?: { text: string; omml: string }[];
+  runs?: TextRun[];
 };
 
 export type TableBlock = {
@@ -45,6 +55,13 @@ export type BookChapter = {
   status: "available" | "planned";
   publicationStatus: "draft" | "published";
   blocks: BookBlock[];
+  version?: string;
+  summary?: string;
+  notesHeading?: string;
+  editorialStatus?: string;
+  source?: { path: string; sha256: string };
+  sourceFile?: string;
+  sourceSha256?: string;
 };
 
 export type Book = {
@@ -62,7 +79,7 @@ export type Book = {
   };
   parts: { id: string; number: string; title: string }[];
   chapters: BookChapter[];
-  notes: { id: string; kind: "footnote" | "endnote"; blocks: BookBlock[] }[];
+  notes: { id: string; kind: "footnote" | "endnote"; blocks: BookBlock[]; chapterId?: string; number?: number | string; sourceId?: string }[];
   statistics: Record<string, number | string>;
 };
 
@@ -88,7 +105,7 @@ export const book: Book = {
   chapters: (bookData as Book).chapters.map((chapter) => ({
     ...chapter,
     blocks: chapter.blocks.map((block) => {
-      const text = authorTextByBlockId.get(block.id);
+      const text = bookData.source.format === "docx" ? authorTextByBlockId.get(block.id) : undefined;
       return block.type === "paragraph" && text ? { ...block, text } : block;
     }),
   })),

@@ -12,9 +12,23 @@ import {
   type BookList,
   type TableBlock,
   type TextBlock,
+  type TextRun,
 } from "@/lib/book";
 import { displayBookTitle } from "@/lib/book-display";
 import { assetPath } from "@/lib/site-config";
+
+function InlineText({ block }: { block: TextBlock }) {
+  if (!block.runs?.length) return block.text;
+  return block.runs.map((run: TextRun, index: number) => {
+    let content: ReactNode = run.text;
+    if (run.code) content = <code>{content}</code>;
+    if (run.emphasis) content = <em>{content}</em>;
+    if (run.strong) content = <strong>{content}</strong>;
+    if (run.noteId) return <a key={index} id={`${block.id}-ref-${index}`} className="note-reference" href={`#${run.noteId}`} aria-label={`Примечание ${run.text.replace(/[\[\]]/g, "")}`}>{content}</a>;
+    if (run.href && /^(https?:\/\/|mailto:|#)/i.test(run.href)) return <a key={index} href={run.href} rel={run.href.startsWith("http") ? "noopener noreferrer" : undefined}>{content}</a>;
+    return <span key={index}>{content}</span>;
+  });
+}
 
 function ManuscriptTable({ block }: { block: TableBlock }) {
   return (
@@ -101,7 +115,7 @@ function renderBlock(block: BookBlock): ReactNode {
   if (block.role === "quote") {
     return (
       <blockquote key={block.id} id={block.id} data-reader-block>
-        <p>{block.text}</p>
+        <p><InlineText block={block} /></p>
       </blockquote>
     );
   }
@@ -113,7 +127,7 @@ function renderBlock(block: BookBlock): ReactNode {
       className={block.role === "caption" ? "figure-caption" : undefined}
       style={{ whiteSpace: "pre-line" }}
     >
-      {block.text}
+      <InlineText block={block} />
     </p>
   );
 }
@@ -161,10 +175,10 @@ function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
             <span className="list-marker">{entry.list.marker}</span>
             {entry.role === "quote" ? (
               <blockquote>
-                <p>{entry.text}</p>
+                <p><InlineText block={entry} /></p>
               </blockquote>
             ) : (
-              <span>{entry.text}</span>
+              <span><InlineText block={entry} /></span>
             )}
           </li>
         ))}
@@ -177,6 +191,14 @@ function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
 
 export function ChapterView({ chapter }: { chapter: BookChapter }) {
   const { previous, next } = getChapterNeighbors(chapter.id);
+  const notes = book.notes.filter(note => note.chapterId === chapter.id);
+  const references = new Map<string, string[]>();
+  for (const block of chapter.blocks) {
+    if (block.type !== "paragraph" && block.type !== "heading") continue;
+    block.runs?.forEach((run, index) => {
+      if (run.noteId) references.set(run.noteId, [...(references.get(run.noteId) || []), `${block.id}-ref-${index}`]);
+    });
+  }
   const items = readingChapters.map((c) => ({
     id: c.id,
     title: c.title,
@@ -199,10 +221,20 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
           </p>
           <h1 className="reading-title">{displayBookTitle(chapter.title)}</h1>
           <p className="reading-meta">
-            {getChapterReadingMinutes(chapter)} мин чтения · Текст авторской
-            рукописи
+            {getChapterReadingMinutes(chapter)} мин чтения · Рабочая редакция
           </p>
-          <div className="reading-copy">{renderBookBlocks(chapter.blocks)}</div>
+          <div className="reading-copy">
+            {renderBookBlocks(chapter.blocks)}
+            {notes.length > 0 && <section className="reading-notes" aria-labelledby={`${chapter.id}-notes-heading`}>
+              <h2 id={`${chapter.id}-notes-heading`}>{chapter.notesHeading || "Примечания"}</h2>
+              <ol>
+                {notes.map(note => <li id={note.id} key={note.id} value={Number(note.number) || undefined}>
+                  {renderBookBlocks(note.blocks)}
+                  <div className="note-backlinks">{(references.get(note.id) || []).map((id, index) => <a key={id} href={`#${id}`} aria-label={`Вернуться к ссылке ${note.number}${index ? `, вхождение ${index + 1}` : ""}`}>↩ К тексту{index ? ` ${index + 1}` : ""}</a>)}</div>
+                </li>)}
+              </ol>
+            </section>}
+          </div>
           <nav className="chapter-end" aria-label="Переход между разделами">
             {previous ? (
               <Link href={"/read/" + previous.id + "/"}>
@@ -219,7 +251,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
               </Link>
             ) : (
               <Link href="/contents/">
-                <small>КНИГА ПРОЧИТАНА</small>
+                <small>К СОДЕРЖАНИЮ</small>
                 Вернуться к содержанию ↗
               </Link>
             )}
