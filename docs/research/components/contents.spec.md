@@ -1,0 +1,2 @@
+# ContentsCatalog
+Adaptation of Brand AI typography: paper#f7f5f2 ink#1b1b1b muted#8c877d, H1 70/73.5, section title28/34, text18/25.2. Root wrap1240px, margins100px desktop/20px mobile. Click navigation to real chapter routes; input-driven search filters title, part and headings, separate group headings. Available and planned explicit. Thin top-border rows, numeric column32px, text flexible, minutes+arrow right. Below760 minutes hidden, title17px. No arbitrary sample chapters. All real imported sections except duplicate paper TOC.

@@ -1,0 +1,5 @@
+# AudienceSection
+Target src/components/AudienceSection.tsx.
+Reference docs/design-references/brand-ai/desktop.png.
+Reference body #f7f5f2, ink #1b1b1b, muted #8c877d. H2 44px/48.4px regular, tracking -.88px; body18px/25.2px. Buttons reference mono14px/18.2px padding10px19px radius6px transition background/color. Layout margins100px at1440/max1240.
+Original adaptation section with eyebrow «Для кого эта книга», h2 «Вопрос один. Ставки у каждого свои.»; four tabs «Студенту», «Университету», «Бизнесу», «Обществу». Interaction CLICK to show matching statement and explanation. Default Студенту. Static no auto-cycle. Underline/dark active tab, contrast visible. Content derive stakeholderStakes from src/data/content.ts but simplify prose without inventing claims. Use native buttons roles tab/tablist/tabpanel aria-selected, arrow-key focus, unique ids. Active panel grid 1fr1fr, headline32px and description18px. Warm grey background #efede8 and radius14px, padding40px. Responsive below760 stack panel, padding24, scroll tabs horizontally. Export AudienceSection. All CSS within AudienceSection.module.css, no shared files. Verify npx tsc --noEmit.

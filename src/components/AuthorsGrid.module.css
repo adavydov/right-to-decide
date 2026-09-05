@@ -1,0 +1,211 @@
+.section {
+  padding-block: 80px;
+  background: #f7f5f2;
+  color: #1b1b1b;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  color: #8c877d;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 650px;
+  margin-top: 20px;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.more {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  color: #1b1b1b;
+}
+
+.author {
+  min-width: 0;
+}
+
+.figure {
+  margin: 0;
+}
+
+.portrait,
+.monogramPanel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e8e4dd;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.monogramPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e4dd;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 19px,
+    #dad5cc 19px,
+    #dad5cc 20px
+  );
+}
+
+.monogram {
+  color: #8c877d;
+  font-size: clamp(88px, 9vw, 132px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.075em;
+}
+
+.monogramCaption {
+  position: absolute;
+  right: 22px;
+  bottom: 21px;
+  left: 22px;
+  color: #716b61;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.details {
+  padding-top: 24px;
+}
+
+.name {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+
+.name span {
+  display: block;
+}
+
+.role {
+  margin-top: 16px;
+  color: #77736c;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .015em;
+  text-transform: uppercase;
+}
+
+.bio {
+  margin-top: 25px;
+  color: #6f6a63;
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: -.01em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  border-bottom: 1px solid #dcd9d2;
+  padding-bottom: 2px;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -.01em;
+}
+
+.links a:hover {
+  border-bottom-color: currentColor;
+}
+
+.credit {
+  margin-top: 22px;
+  color: #77736c;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@media (max-width: 760px) {
+  .header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .more {
+    margin-top: 25px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 46px;
+  }
+
+  .portrait,
+  .monogramPanel {
+    width: 100%;
+    max-width: none;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .monogram {
+    font-size: clamp(100px, 25vw, 150px);
+  }
+}

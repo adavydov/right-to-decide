@@ -1,0 +1,210 @@
+.layout {
+  display: grid;
+  grid-template-columns: 235px minmax(0, 740px);
+  gap: 70px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: start;
+}
+.sidebar {
+  position: sticky;
+  top: 110px;
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  font-size: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #c9c5be transparent;
+}
+.sidebar summary {
+  font-family: Consolas, monospace;
+  color: var(--ink);
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 0 22px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar summary::-webkit-details-marker {
+  display: none;
+}
+.sidebar nav {
+  display: grid;
+  gap: 3px;
+}
+.chapterLink,
+.planned {
+  display: block;
+  border-radius: 5px;
+  padding: 9px 11px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.chapterLink:hover {
+  background: #ebe7df;
+  color: var(--ink);
+}
+.chapterLink[aria-current="page"] {
+  background: #e9e5dc;
+  color: var(--ink);
+}
+.planned {
+  opacity: 0.55;
+}
+.allContents {
+  display: block;
+  padding: 25px 11px;
+  font-size: 12px;
+}
+.articleColumn {
+  min-width: 0;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 19px;
+  margin-bottom: 33px;
+  font-size: 10px;
+  font-family: Consolas, monospace;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+}
+.tools > div {
+  display: flex;
+  gap: 4px;
+}
+.tools button {
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-soft);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.articleColumn :global(.reading-copy) {
+  font-size: var(--reader-size, 20px);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.articleColumn :global(.reading-title) {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 23px;
+}
+.articleColumn :global(.reading-meta) {
+  font-family: Consolas, monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-bottom: 40px;
+  letter-spacing: 0;
+}
+.articleColumn :global(.chapter-end) {
+  margin-top: 65px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+.articleColumn :global(.chapter-end a) {
+  font-size: 16px;
+  line-height: 1.35;
+}
+.articleColumn :global(.chapter-end small) {
+  display: block;
+  font-size: 10px;
+  font-family: Consolas, monospace;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.articleColumn :global(.chapter-end a:last-child) {
+  text-align: right;
+}
+.articleColumn :global(.list-paragraph) {
+  display: flex;
+  gap: 12px;
+}
+.articleColumn :global(.list-marker) {
+  min-width: 20px;
+  flex-shrink: 0;
+}
+.articleColumn :global(.figure-caption) {
+  font-size: 0.82em;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+@media (max-width: 1100px) {
+  .layout {
+    gap: 40px;
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .layout {
+    display: block;
+    max-width: 740px;
+  }
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+  }
+  .sidebar summary {
+    margin: 0;
+    font-size: 13px;
+    min-height: 30px;
+    align-items: center;
+  }
+  .sidebar nav {
+    margin-top: 20px;
+    max-height: 340px;
+    overflow: auto;
+  }
+  .sidebar .allContents {
+    display: none;
+  }
+  .articleColumn :global(.reading-title) {
+    font-size: 38px;
+  }
+  .tools {
+    font-size: 9px;
+  }
+  .articleColumn :global(.chapter-end) {
+    gap: 22px;
+  }
+  .articleColumn :global(.chapter-end a) {
+    font-size: 14px;
+  }
+}
+@media (max-width: 760px) {
+  .articleColumn :global(.reading-title) {
+    font-size: 33px;
+  }
+  .tools {
+    margin-bottom: 28px;
+  }
+  .articleColumn :global(.reading-meta) {
+    margin-bottom: 30px;
+  }
+}
+.articleColumn :global(.manuscript-list li > span:last-child) {
+  min-width: 0;
+}
+.articleColumn :global(.table-scroll) {
+  max-width: 100%;
+  overflow-x: auto;
+}

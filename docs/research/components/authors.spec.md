@@ -1,0 +1,7 @@
+# AuthorsGrid
+Target src/components/AuthorsGrid.tsx and AuthorsGrid.module.css. Reference docs/design-references/brand-ai/desktop.png.
+Computed reference #f7f5f2 paper, #1b1b1b ink, #8c877d muted; title44px/48.4px normal tracking-.88px; body18px/25.2px. Adapted grid3columns gap28px, each image square-ish 4/5 aspect object-fit cover, monochrome CSS grayscale(1), radius10px. Name 26px line1.1, role12px mono uppercase, biography16px line1.55. Name display as given+patronymic on first line and Давыдов on second.
+Props compact?:boolean default false. Data import from src/data/authors.json (root copies your research JSON). If compact render images, names, roles + heading with link /authors/; omit biography/links/credits until authors page. Full biographies plus source links and photo credits. Egor photo null: intentional monogram ЕД in muted patterned panel, tiny caption «Егор Давыдов»; no fake portrait and no explanatory editorial notes on card.
+Use next/link for local routes and next/image with unoptimized true inherited config plus assetPath imported @/lib/site-config for basePath.
+Responsive <=760 one column, portrait max-width:none, names26px. Full page root supplies heading above; compact section supplies own heading «Три взгляда на один вопрос.» and eyebrow «Авторы». Width .wrap, verticalpadding80px only compact. Full mode no duplicate wrap.
+Do not create page routes. Verify npx tsc --noEmit and report.

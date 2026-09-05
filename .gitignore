@@ -55,3 +55,7 @@ docs/design-references/comparison.png
 docs/research/INSPECTION_GUIDE.md
 scripts/sync-agent-rules.sh
 scripts/sync-skills.mjs
+# Local third-party visual-reference captures (tokens and specs are versioned)
+docs/research/brand-ai/source.html
+docs/design-references/brand-ai/
+docs/research/brand-ai/extracted.json

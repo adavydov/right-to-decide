@@ -1,18 +1,3 @@
-export const siteConfig = {
-  title: "Право на решение",
-  subtitle: "Инженерное образование как система когнитивного допуска в эпоху искусственного интеллекта",
-  description:
-    "Публичный проспект будущей монографии Алексея Михайловича Давыдова о том, как формировать и доказывать инженерную готовность в эпоху искусственного интеллекта.",
-  author: "Алексей Михайлович Давыдов",
-  email: "letterdam@mail.ru",
-  repository: "https://github.com/adavydov/right-to-decide",
-  publicUrl: "https://adavydov.github.io/right-to-decide",
-} as const;
-
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-export function assetPath(path: string): string {
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${basePath}${normalized}`;
-}
-
+export const siteConfig={title:"Право на решение",subtitle:"Инженерное образование как система воспроизводства доверенной способности к решению в эпоху искусственного интеллекта",description:"Монография А. М. Давыдова, А. А. Давыдова и Е. А. Давыдова о способности человека принимать, обосновывать и пересматривать решения в эпоху ИИ. Содержание, текст книги и авторы.",author:"Алексей Михайлович Давыдов",email:"letterdam@mail.ru",repository:"https://github.com/adavydov/right-to-decide",publicUrl:"https://adavydov.github.io/right-to-decide"} as const;
+export const basePath=process.env.NEXT_PUBLIC_BASE_PATH??"";
+export function assetPath(path:string):string{return basePath+(path.startsWith("/")?path:"/"+path);}

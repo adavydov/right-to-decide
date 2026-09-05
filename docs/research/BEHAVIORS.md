@@ -1,39 +1,9 @@
-# Behavior inventory
-
-Reference: `https://adavydov.github.io/edu40-monograph/`, desktop 1440, mobile 390, 23.08.2026.
-
-## Global
-
-- Static header, 1 px terracotta rule.
-- Paper background `#fbfaf7`; no shadows except dropdown; no rounded cards.
-- Links and controls have minimum 44 px touch target.
-- Focus ring: 3 px `#1864ab`, offset 3 px.
-- Primary controls change `#c74b36 → #96321f`; duration 180 ms.
-
-## Header
-
-- Desktop: brand left, three anchor links right, square 42×42 menu trigger.
-- Mobile ≤760 px: direct nav hidden; menu contains all anchors.
-- Dropdown: right aligned, 248 px max width, opacity + `translateY(-6px)`, closes on outside click and Escape.
-
-## Editorial content
-
-- Desktop: numbered left rail + vertical rule + content column.
-- Mobile: section number on top, horizontal rule, content below.
-- Thesis cards do not lift or gain decorative shadows; hover changes background only.
-- `<details>` summaries expose an explicit plus/minus mark and remain keyboard accessible.
-
-## Responsive
-
-- 1440: 1070 px centered canvas, 35 px internal gutters, two-column editorial rows.
-- 768: 32 px gutters; dense grids reduce columns.
-- 390: 20 px gutters; all grids one column; paired buttons full width; no horizontal overflow.
-- Hero: 16:9 desktop; tall editorial cover mobile; title fluid 64→42 px.
-
-## Accessibility and motion
-
-- Skip link appears on focus.
-- `aria-expanded` and `aria-controls` on menu.
-- `prefers-reduced-motion` removes smooth scroll and transitions.
-- Decorative cover artwork is `aria-hidden`; visible claims remain real text.
-
+# Взаимодействия
+Извлечено getComputedStyle с https://brand.ai/ 2026-09-05.
+Header fixed, padding 20px 100px, nav background rgb(27,27,27), border-radius 14px.
+Body transition background-color 0.25s, color 0.25s.
+CTA transition background-color 0.25s, color 0.25s, border-color 0.25s; radius 5.999px; padding 10px 19px.
+Headline 80px/80px, 700, letter-spacing -3.2px. H2 44px/48.4px, 400, tracking -0.88px.
+Копия взаимодействий адаптирована к чтению: фиксированная навигация; mobile menu click; аудитории click (без автоматического переключения читаемого текста); contents search input; chapter routing; сохранение последней открытой главы локально.
+Reduced motion отключает плавный scroll и анимации. Focus видим на ссылках.
+Screenshot до завершения вступительной анимации может содержать скрытые элементы; повторный проход снят с ожиданием.

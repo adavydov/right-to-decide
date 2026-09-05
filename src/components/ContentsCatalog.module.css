@@ -1,0 +1,119 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  margin-bottom: 48px;
+}
+.search {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  max-width: 500px;
+  flex: 1;
+}
+.search > span {
+  font-size: 28px;
+}
+.search input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  font-size: 17px;
+  min-height: 40px;
+  outline-offset: 3px;
+}
+.search input::placeholder {
+  color: var(--ink-soft);
+}
+.count {
+  font-family: Consolas, monospace;
+  color: var(--ink-soft);
+  font-size: 11px;
+  letter-spacing: 0;
+}
+.group {
+  margin-bottom: 45px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+}
+.group h2 {
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  padding-top: 22px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 30px 1fr 55px 18px;
+  gap: 15px;
+  align-items: start;
+  border-top: 1px solid var(--border);
+  padding: 21px 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.row:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.number,
+.meta {
+  font-family: Consolas, monospace;
+  font-size: 11px;
+  color: var(--ink-soft);
+  padding-top: 4px;
+  letter-spacing: 0;
+}
+.row[aria-disabled="true"] {
+  opacity: 0.55;
+}
+.title {
+  max-width: 650px;
+}
+.row:hover .title {
+  color: var(--accent-dark);
+}
+@media (max-width: 1000px) {
+  .group {
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+  }
+  .row {
+    grid-template-columns: 25px 1fr 18px;
+  }
+  .meta {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .toolbar {
+    display: block;
+    padding: 16px 0;
+  }
+  .count {
+    display: block;
+    padding-top: 10px;
+    font-size: 10px;
+  }
+  .group {
+    display: block;
+  }
+  .group h2 {
+    font-size: 22px;
+    margin-bottom: 22px;
+    padding: 0;
+  }
+  .row {
+    font-size: 16px;
+    gap: 11px;
+    padding: 20px 0;
+  }
+  .search input {
+    font-size: 16px;
+  }
+}

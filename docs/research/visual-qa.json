@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-09-05T07:37:32.988Z",
+  "results": [
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/contents/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/authors/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/read/introduction/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/read/chapter-12/",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/read/appendix-k/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/contents/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/authors/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/read/introduction/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/read/chapter-12/",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "/read/appendix-k/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/contents/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/authors/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/read/introduction/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/read/chapter-12/",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/read/appendix-k/",
+      "overflow": false
+    }
+  ],
+  "checks": [
+    "18 viewport/route combinations",
+    "search empty and matching states",
+    "chapter navigation",
+    "font preference persists",
+    "resume reading",
+    "audience tabs",
+    "mobile menu"
+  ],
+  "errors": []
+}
