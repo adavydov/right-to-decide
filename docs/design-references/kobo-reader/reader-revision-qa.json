@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-05T16:00:32.764Z",
+  "status": "passed",
+  "revision": "84374ccd2ecb5e752e5f15f40c3f8960995d35dc32187baa60cef424b95530f9",
+  "checks": [
+    "Resume from another revision is not offered",
+    "Stored position from another revision starts at beginning with a notice",
+    "Only same-revision bookmarks are shown",
+    "Adding current bookmark retains the hidden old bookmark unchanged",
+    "Deleting current bookmark retains the hidden old bookmark unchanged",
+    "Resume stores current SHA and restores same-revision passage"
+  ],
+  "errors": []
+}

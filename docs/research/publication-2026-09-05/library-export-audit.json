@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-09-05",
+  "sourceEntries": 48,
+  "cards": 30,
+  "quotesVerified": 58,
+  "sourceSha256": "fadadd0d3931cbbd18f0b81d81411ec98ad854816dc396f2b006c2488ecc8a77",
+  "acceptedCardFiles": [
+    {
+      "file": "part-1.json",
+      "sha256": "0951f46996076837586f3be8d8372024ed41715ab9a4d8d68a2359a2fd51f6d5",
+      "cards": 10,
+      "review": "context_reviewed"
+    },
+    {
+      "file": "part-2.json",
+      "sha256": "266054de3bea84a67a0e486c53ddad3d0a5546db28a5bcfde28777399ff6031d",
+      "cards": 10,
+      "review": "context_reviewed"
+    },
+    {
+      "file": "part-3.json",
+      "sha256": "7eba4723cd7987cb735c0496b316c55373dfee7193dc4733c56656bcb22847ca",
+      "cards": 10,
+      "review": "context_reviewed"
+    }
+  ],
+  "availabilityCounts": {
+    "complete": 15,
+    "provided": 1,
+    "catalog": 15,
+    "excerpt": 12,
+    "unavailable": 2,
+    "completeness-unverified": 1,
+    "partial": 1,
+    "external-only": 1
+  },
+  "checks": {
+    "sourceIntegrity": true,
+    "acceptedCardHashes": true,
+    "reviewReportHashes": true,
+    "readingReportHashes": true,
+    "uniqueIdentifiers": true,
+    "cardSourceReferences": true,
+    "httpLinksOnly": true,
+    "literalQuotesAtStatedLocators": true,
+    "privatePathScan": true,
+    "explicitFieldProjection": true,
+    "completeForeignBooksPublished": false
+  },
+  "publicationNotes": [
+    "Полные книги и извлечения не экспортируются.",
+    "Цитаты сохранены без изменений. Публичные оговорки переформулированы с сохранением существенных ограничений.",
+    "Историческое подтверждение независимыми документами не заявлено.",
+    "Внешние URL взяты из реестра от 05.09.2026; повторная сетевая проверка при экспорте не выполнялась.",
+    "Вложенные голоса Калеганова и реплики по памяти обозначены отдельно."
+  ],
+  "outputs": [
+    {
+      "file": "library.json",
+      "sha256": "d25d4ab10d8b39ed9c2e4b2ce5b56747dab0ee6bbb82a2516fab3c8dc135f7c2",
+      "bytes": 59576
+    },
+    {
+      "file": "evidence-cards.json",
+      "sha256": "b2bec9a2bfcde8bce4a31af466e66fcf63c081444e37403689aa8f1cfaae965c",
+      "bytes": 164319
+    }
+  ]
+}

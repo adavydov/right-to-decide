@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-05T12:21:33.965Z",
+  "checkedAt": "2026-09-05T15:57:54.980Z",
   "base": "http://127.0.0.1:3210/right-to-decide",
   "status": "passed",
   "browser": "isolated headless Microsoft Edge contexts",
@@ -479,6 +479,7 @@
   ],
   "fontRequests": [
     "http://127.0.0.1:3210/right-to-decide/_next/static/media/golos_text_normal-s.2bsptl5czxpl5.woff2",
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/golos_text_normal-s.p.2bsptl5czxpl5.woff2",
     "http://127.0.0.1:3210/right-to-decide/_next/static/media/literata_italic-s.2vtyruob1ficn.woff2",
     "http://127.0.0.1:3210/right-to-decide/_next/static/media/literata_normal-s.0us-hn5aapf6t.woff2",
     "http://127.0.0.1:3210/right-to-decide/_next/static/media/source_serif_4_italic-s.3mdku3_oc1f_c.woff2",

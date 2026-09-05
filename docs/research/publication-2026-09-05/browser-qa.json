@@ -1,0 +1,140 @@
+{
+  "base": "http://127.0.0.1:3210/right-to-decide",
+  "status": "passed",
+  "at": "2026-09-05T16:05:17.059Z",
+  "checks": [
+    "Mobile menu opens, navigates, closes, and Escape returns hidden state",
+    "Library search, AND filter, empty state, reset, and literal source/card route",
+    "Wiki search, filter and detail retain quotations and context limits",
+    "Book navigation has the declared edition and preserves current reader"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "name": "home",
+      "viewport": 1440,
+      "h1": "Право на решение",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 1440,
+      "name": "contents",
+      "viewport": 1440,
+      "h1": "Содержание",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 1440,
+      "name": "authors",
+      "viewport": 1440,
+      "h1": "Об авторах",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 1440,
+      "name": "library",
+      "viewport": 1440,
+      "h1": "Библиотека",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 1440,
+      "name": "wiki",
+      "viewport": 1440,
+      "h1": "Исторический опыт в деталях",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 1440,
+      "name": "card",
+      "viewport": 1440,
+      "h1": "Память старших и вопросы у станка: выпускник продолжает учиться",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "home",
+      "viewport": 768,
+      "h1": "Право на решение",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "contents",
+      "viewport": 768,
+      "h1": "Содержание",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "authors",
+      "viewport": 768,
+      "h1": "Об авторах",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "library",
+      "viewport": 768,
+      "h1": "Библиотека",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "wiki",
+      "viewport": 768,
+      "h1": "Исторический опыт в деталях",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 768,
+      "name": "card",
+      "viewport": 768,
+      "h1": "Память старших и вопросы у станка: выпускник продолжает учиться",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "home",
+      "viewport": 390,
+      "h1": "Право на решение",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "contents",
+      "viewport": 390,
+      "h1": "Содержание",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "authors",
+      "viewport": 390,
+      "h1": "Об авторах",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "library",
+      "viewport": 390,
+      "h1": "Библиотека",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "wiki",
+      "viewport": 390,
+      "h1": "Исторический опыт в деталях",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    },
+    {
+      "width": 390,
+      "name": "card",
+      "viewport": 390,
+      "h1": "Память старших и вопросы у станка: выпускник продолжает учиться",
+      "font": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+    }
+  ],
+  "errors": []
+}
