@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "literary-manuscript-v4.0-d3d3a29863e7",
+  "architectureVersion": "4.0",
+  "chapterNumbers": [
+    1,
+    2,
+    3
+  ],
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "number": 1,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v4/chapter-01.md",
+      "sha256": "18d53762f4b8dfa37a2703547d9493a3b11cc812c0737683f5f4109e6ca33733"
+    },
+    {
+      "id": "chapter-02",
+      "number": 2,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v4/chapter-02.md",
+      "sha256": "c82e96f5a6a1f32bad38fa3dbcaf8c3e6e1d8b871b9a3d5275e2d5e3611168d2"
+    },
+    {
+      "id": "chapter-03",
+      "number": 3,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v4/chapter-03.md",
+      "sha256": "8ee7f58ace38c7bfde0a846b5d142a145e491a0150c0985b12de4d6af6e06ebb"
+    }
+  ],
+  "authorContents": {
+    "path": "manuscript/2026-09-05-rebuild/contents-v4.0.md",
+    "sha256": "46184da37a5cb58723f196cda7086ef99faf5b1cce2738995cd89135a96187e1"
+  },
+  "prologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v1.0.md",
+    "sha256": "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288"
+  },
+  "archive": {
+    "path": "src/data/previous-edition.json",
+    "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
+  },
+  "bookSha256": "53b9bbd8fedafc2737ba2fc1bbf4038a1fac2a8f4adbbe04c20cc9a232c26749",
+  "importerSha256": "0836d7fcd50191c1f6527d1c0fc4738c6c73aea3cfee0e491948cc7245c4f455",
+  "sourceHashPolicy": "book.source.sha256 hashes the preserved contents/prologue sources and the ordered selected chapter sources",
+  "scope": "Литературный выпуск явно выбранных глав. Пролог, развёрнутое содержание и прежняя редакция сохранены без переработки."
+}

@@ -28,4 +28,6 @@ public/book/contents-v4.0.md -text
 scripts/publish-author-contents.py -text
 manuscript/2026-09-05-rebuild/prologue-v1.0.md -text
 scripts/author_prologue.py -text
+manuscript/2026-09-05-rebuild/chapters-v4/** -text
+scripts/publish-manuscript.py -text
 docs/editorial/STYLE-01-v2.0.md whitespace=-blank-at-eof
