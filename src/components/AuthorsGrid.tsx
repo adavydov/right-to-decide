@@ -68,9 +68,11 @@ export function AuthorsGrid({ compact = false }: AuthorsGridProps) {
                 )}
                 {author.photo && (
                   <p className={styles.credit}>
-                    <a href={author.photo.sourceUrl} target="_blank" rel="noreferrer">
-                      {author.photo.credit}
-                    </a>
+                    {author.photo.sourceUrl ? (
+                      <a href={author.photo.sourceUrl} target="_blank" rel="noreferrer">
+                        {author.photo.credit}
+                      </a>
+                    ) : author.photo.credit}
                   </p>
                 )}
               </>

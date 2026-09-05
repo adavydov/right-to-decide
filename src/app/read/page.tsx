@@ -56,7 +56,7 @@ export default function ReadIndex() {
           />
         </div>
         <Image
-          src={assetPath("/images/book-cover.png")}
+          src={assetPath("/images/book-cover-new-subtitle.png")}
           alt="Обложка монографии «Право на решение»"
           width={1024}
           height={1536}

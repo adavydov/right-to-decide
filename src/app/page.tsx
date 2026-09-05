@@ -35,7 +35,7 @@ export default function HomePage() {
     inLanguage: "ru",
     isAccessibleForFree: true,
     url: siteConfig.publicUrl + "/",
-    image: siteConfig.publicUrl + "/images/book-cover.png",
+    image: siteConfig.publicUrl + "/images/book-cover-new-subtitle.png",
     author: authorsData.authors.map((a) => ({
       "@type": "Person",
       name: a.name,
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="scene-axis" aria-hidden="true" />
           <div className="book-object">
             <Image
-              src={assetPath("/images/book-cover.png")}
+              src={assetPath("/images/book-cover-new-subtitle.png")}
               alt="Обложка «Право на решение»: человек перед освещённым порталом в системе инженерных связей"
               width={1024}
               height={1536}

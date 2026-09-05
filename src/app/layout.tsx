@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: siteConfig.publicUrl + "/",
     images: [
       {
-        url: siteConfig.publicUrl + "/images/book-cover.png",
+        url: siteConfig.publicUrl + "/images/book-cover-new-subtitle.png",
         width: 1024,
         height: 1536,
         alt: "Обложка монографии «Право на решение»",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [siteConfig.publicUrl + "/images/book-cover.png"],
+    images: [siteConfig.publicUrl + "/images/book-cover-new-subtitle.png"],
   },
   robots: { index: true, follow: true },
 };

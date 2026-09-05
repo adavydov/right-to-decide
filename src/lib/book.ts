@@ -1,4 +1,5 @@
 import bookData from "@/data/book.json";
+import authorsData from "@/data/authors.json";
 
 export type BookList = {
   kind: "ordered" | "unordered";
@@ -65,8 +66,33 @@ export type Book = {
   statistics: Record<string, number | string>;
 };
 
-/** Generated from the author's DOCX. Render text as text, never raw HTML/OMML. */
-export const book = bookData as Book;
+/** User-approved author updates shared by the cards and reader.
+ * Keep the imported DOCX snapshot intact; preserve reader block anchors.
+ */
+const authorTextByBlockId = new Map(
+  authorsData.authors.map((author) => [
+    "body-" + author.manuscriptParagraph.slice(1),
+    author.name + " — " + author.bio.charAt(0).toLocaleLowerCase("ru") + author.bio.slice(1),
+  ]),
+);
+authorTextByBlockId.set(
+  "body-0006",
+  "Авторы: " + authorsData.authors.map((author) =>
+    author.publicationName + " (" + author.affiliation + ")"
+  ).join("; ") + ".",
+);
+
+/** Render text as text, never raw HTML/OMML. */
+export const book: Book = {
+  ...(bookData as Book),
+  chapters: (bookData as Book).chapters.map((chapter) => ({
+    ...chapter,
+    blocks: chapter.blocks.map((block) => {
+      const text = authorTextByBlockId.get(block.id);
+      return block.type === "paragraph" && text ? { ...block, text } : block;
+    }),
+  })),
+};
 export const chapters = book.chapters;
 export const mainChapters = chapters.filter((chapter) => chapter.kind === "chapter");
 export const appendices = chapters.filter((chapter) => chapter.kind === "appendix");
