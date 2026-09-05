@@ -1,0 +1,35 @@
+{
+  "releaseId": "constitution-contents-v5.1-2026-09-06",
+  "version": "5.1",
+  "edition": "2026-09-06",
+  "constitution": {
+    "path": "CONSTITUTION.md",
+    "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+    "section": "7"
+  },
+  "authorSource": {
+    "path": "manuscript/2026-09-05-rebuild/contents-v5.1.md",
+    "sha256": "3504c509a3745aed4b9c24f17e53b480c5984a47562acb29cd8895f8d79d06a6"
+  },
+  "sourceSelection": "По поручению автора от 06.09.2026 правила пересобраны по Конституции 1.1; оглавления v4.0 и v5.0 сохранены как история. Согласие всех соавторов не заявляется.",
+  "normalization": "Раздел 7 целиком; жирные заголовки вынесены в Markdown-заголовки, описания сохранены в том же порядке. Названия в навигации без конечной точки.",
+  "bookSha256": "682b767af0651d7bc191b855a98387bdd4eb800750a4ede24e14e45b9dce3b5f",
+  "archive": {
+    "path": "src/data/previous-edition.json",
+    "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
+  },
+  "importerSha256": "cc4836de7dafef3185f12556c8bea1fd89ebab57d298304b10ee1bf36933fc8f",
+  "checks": {
+    "parts": 6,
+    "numberedChapters": 18,
+    "plannedChapters": 18,
+    "prologue": true,
+    "separateEpilogue": true,
+    "allAuthorParagraphsPreserved": true
+  },
+  "prologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v1.0.md",
+    "sha256": "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288"
+  },
+  "scope": "Архитектура книги. Написание и повторная приёмка пролога, глав и эпилога не выполнялись; доступность прозы задаётся отдельным литературным выпуском."
+}

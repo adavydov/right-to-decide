@@ -10,10 +10,10 @@ from author_prologue import build_author_prologue
 
 ROOT = Path(__file__).resolve().parents[1]
 CONSTITUTION = Path("CONSTITUTION.md")
-SOURCE = Path("manuscript/2026-09-05-rebuild/contents-v5.0.md")
+SOURCE = Path("manuscript/2026-09-05-rebuild/contents-v5.1.md")
 ARCHIVE = Path("src/data/previous-edition.json")
-MANIFEST = Path("manuscript/2026-09-05-rebuild/contents-v5.0-manifest.json")
-DOWNLOAD = Path("public/book/contents-v5.0.md")
+MANIFEST = Path("manuscript/2026-09-05-rebuild/contents-v5.1-manifest.json")
+DOWNLOAD = Path("public/book/contents-v5.1.md")
 
 
 def sha(raw):
@@ -43,7 +43,7 @@ def source_projection() -> bytes:
 def build():
     raw = source_projection()
     if (ROOT / SOURCE).exists() and (ROOT / SOURCE).read_bytes() != raw:
-        raise ValueError("contents-v5.0.md differs from Constitution §7; update the explicit projection")
+        raise ValueError("contents-v5.1.md differs from Constitution §7; update the explicit projection")
     chunks = re.split(r"\n\s*\n", raw.decode("utf-8").strip())
     parts, definitions, blocks = [], [], []
     prologue, epilogue, current = None, None, None
@@ -87,7 +87,7 @@ def build():
         result = {"id": identifier, "number": number, "title": title, "part": part, "kind": kind,
                   "status": "available" if available else "planned",
                   "publicationStatus": "published" if available else "draft", "blocks": body or [],
-                  "version": "5.0", "contentKind": "outline", "source": source,
+                  "version": "5.1", "contentKind": "outline", "source": source,
                   "editorialStatus": "constitution-outline" if available else "planned-chapter"}
         if summary:
             result["summary"] = "\n\n".join(summary)
@@ -101,20 +101,20 @@ def build():
                   for c in definitions],
                 entry("epilogue", epilogue["title"], "backmatter", summary=epilogue["summary"])]
     text = "\n\n".join(b["text"] for c in chapters for b in c["blocks"])
-    book = {"schemaVersion": 2, "contentKind": "outline", "version": "5.0", "title": chunks[0][2:],
-            "subtitle": chunks[1], "edition": "2026-09-06", "releaseId": "constitution-contents-v5.0-2026-09-06",
+    book = {"schemaVersion": 2, "contentKind": "outline", "version": "5.1", "title": chunks[0][2:],
+            "subtitle": chunks[1], "edition": "2026-09-06", "releaseId": "constitution-contents-v5.1-2026-09-06",
             "publicationStatus": "published",
             "source": {"filename": SOURCE.name, "format": "constitution_outline", "sha256": sha(raw),
                        "importer": "scripts/constitution_contents.py",
-                       "textPolicy": "Точная архитектурная проекция §7 Конституции 1.0. Сохранены опубликованные тексты; новая редакционная приёмка не заявляется."},
+                       "textPolicy": "Точная архитектурная проекция §7 Конституции 1.1. Сохранены опубликованные тексты; новая редакционная приёмка не заявляется."},
             "parts": parts, "chapters": chapters, "notes": [],
             "statistics": {"sections": len(chapters), "chapters": 18, "parts": 6, "availableChapters": 0,
                            "plannedChapters": 18, "blocks": sum(len(c["blocks"]) for c in chapters), "notes": 0,
                            "words": len(re.findall(r"\S+", text)), "characters": len(text)}}
-    manifest = {"releaseId": book["releaseId"], "version": "5.0", "edition": book["edition"],
+    manifest = {"releaseId": book["releaseId"], "version": "5.1", "edition": book["edition"],
                 "constitution": {"path": CONSTITUTION.as_posix(), "sha256": sha((ROOT / CONSTITUTION).read_bytes()), "section": "7"},
                 "authorSource": source,
-                "sourceSelection": "Конституция 1.0 принята автором как действующая рамка 06.09.2026; оглавление v4 сохранено как история.",
+                "sourceSelection": "По поручению автора от 06.09.2026 правила пересобраны по Конституции 1.1; оглавления v4.0 и v5.0 сохранены как история. Согласие всех соавторов не заявляется.",
                 "normalization": "Раздел 7 целиком; жирные заголовки вынесены в Markdown-заголовки, описания сохранены в том же порядке. Названия в навигации без конечной точки.",
                 "bookSha256": sha(encoded(book)),
                 "archive": {"path": ARCHIVE.as_posix(), "sha256": sha((ROOT / ARCHIVE).read_bytes())},

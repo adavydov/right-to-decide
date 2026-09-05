@@ -5,7 +5,7 @@ import { getBookCreditsStructuredData } from "@/lib/editorial-team";
 export const metadata: Metadata = {
   title: "Авторы",
   description:
-    "Три автора «Права на решение», восемь кураторов слоёв и редакционные ИИ-роли по конституции проекта. Ответственность людей в практическом проекте.",
+    "Три автора «Права на решение», девять кураторов слоёв и редакционные ИИ-роли по конституции 1.2.1. Ответственность людей в практическом проекте.",
   alternates: { canonical: siteConfig.publicUrl + "/authors/" },
 };
 export default function AuthorsPage() {

@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-06",
+  "reason": "Прямое поручение пользователя: обновился манифест; пересобрать правила агентов по версии 1.1. Согласие соавторов и публикация этим действием не утверждаются.",
+  "previous_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "f5a6f5453f89ff1731b5c307a0d88b3bb0e2a1fe5c00b64c3d9cdf5913052d37"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8e68710643fd00a6f36f05be07f0785b26dd46aeb9c8ea44eed61a7c0def57d9"
+    },
+    {
+      "path": "docs/editorial/README.md",
+      "sha256": "04b7c6ff2e300bb8d7b8d717c3fe6e6046efd4c5ce51f5f051d98016fb1d1a77"
+    },
+    {
+      "path": "right-to-decide-site/CONSTITUTION.md",
+      "sha256": "30bdbe70301ef358a2f1f8b712d77d816704445b3188f05ee77cad264a5df143"
+    },
+    {
+      "path": "right-to-decide-site/AGENTS.md",
+      "sha256": "d8e33d0a64b5535482e960609fa627b7d3cf107121345dbc75b8de681f963f66"
+    },
+    {
+      "path": "right-to-decide-site/README.md",
+      "sha256": "fe68729e42730ef5d38e09fbde1e80eb35fe4cefe96195587b929b47e8097190"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/README.md",
+      "sha256": "0b7b447c2771edea3145ac3faad58c862b2337bb1f011f0914a0fe1e97621d34"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/README.md",
+      "sha256": "45151420541587b8dedcc8579a888650b51cafedf8dfc857836722a5bf0bc23a"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/chapters-v4/README.md",
+      "sha256": "7994abfc918695232ca38df08690611a6eff5b9ec031851ea65ae66f9851a391"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/01-book-concept.md",
+      "sha256": "f11487bd90822a2ed11cb1d319f21e6cbb6b09b36970f440fdaa39a8e5efc502"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/02-thesis-architecture.md",
+      "sha256": "da6a285c5c79a959997641928ccc55ed2755239d08dc517eba42fb27372b5ae4"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/03-contents-and-migration.md",
+      "sha256": "7359f1acdba48e4d71348d64206fab357bb1ebe123643428ea8567ae6a4cdfa5"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/book-architecture.md",
+      "sha256": "447ba04ef4ca0fdcd32ea4385d5dc1a404c363e2eef7f0d3c29b2bdce834ab18"
+    },
+    {
+      "path": "right-to-decide-team-release/AGENTS.md",
+      "sha256": "21d97eadfdef331818f8e1b87d4270d4a4892ac425b09a562e073fcecc150397"
+    },
+    {
+      "path": "right-to-decide-team-release/README.md",
+      "sha256": "a431ff8e4dd31b4b192924e6243ef851554a75bbc2e249d5cb364da82eed5d14"
+    },
+    {
+      "path": "right-to-decide-site/scripts/sync-contents-v4-docs.py",
+      "sha256": "eb4657e974189210d13f3a648793d918926bd57177bb09e6993c211ff2af1d99"
+    }
+  ],
+  "new_sources": [
+    {
+      "name": "Pravo_na_reshenie_Manifest_Constitution_v1.1.md",
+      "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+    },
+    {
+      "name": "Pravo_na_reshenie_Manifest_Constitution_v1.1.docx",
+      "sha256": "fbaeb92ca535808cadd3881583192739c728179026a514927bdc08fee7f8fd47"
+    }
+  ],
+  "checks": {
+    "word_has_v1_1": true,
+    "word_has_scenario_passport": true,
+    "word_has_genre_rejection": true,
+    "word_has_anthropology": true,
+    "md_identical": true,
+    "word_identical": true
+  },
+  "source_policy": "Markdown перенесён побайтно как канон. DOCX сохранён побайтно как предоставленная читательская копия; проверены ключевые разделы, полное текстовое тождество Word и Markdown не заявляется."
+}

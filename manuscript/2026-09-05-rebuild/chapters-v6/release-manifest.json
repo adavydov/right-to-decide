@@ -1,0 +1,670 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "literary-manuscript-v6-07fe16b2a858",
+  "editionVersion": "6.0",
+  "architectureVersion": "5.1",
+  "chapterNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "includesEpilogue": true,
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "number": 1,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-01.md",
+      "sha256": "798ae29de1df728098140c52230faf0fac5fb7b6035d48170b7c689a3bc36f9a"
+    },
+    {
+      "id": "chapter-02",
+      "number": 2,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-02.md",
+      "sha256": "80a6662d90d53e8d87b5cd3cce92497372e88122f0711c799fe7fb619f71e427"
+    },
+    {
+      "id": "chapter-03",
+      "number": 3,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-03.md",
+      "sha256": "0b8e522cf5f7ada88949f6f437e3e975656d7afbb001bc8867c961ef4db7ad76"
+    },
+    {
+      "id": "chapter-04",
+      "number": 4,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-04.md",
+      "sha256": "b8e4feda068f233a3b4b1fb3effc0ebf22cfcefa657b47115e26757af1f837bf"
+    },
+    {
+      "id": "chapter-05",
+      "number": 5,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-05.md",
+      "sha256": "025f402ff28373bafe3945b8134fe45d11f2244a85952caac524c8fd72201115"
+    },
+    {
+      "id": "chapter-06",
+      "number": 6,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-06.md",
+      "sha256": "6641423059b08086487ada488f98b65879a8e96e0b9a86d8cb536b762f4dcfea"
+    },
+    {
+      "id": "chapter-07",
+      "number": 7,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-07.md",
+      "sha256": "1a808f03ffab97b39d9c521671c1d0b940eb02bd598a709bffc33fac0f4918c6"
+    },
+    {
+      "id": "chapter-08",
+      "number": 8,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-08.md",
+      "sha256": "ae46b506990b2a02e6989a979c8f9dd4d036daf7929c6a040923e6aba675a83c"
+    },
+    {
+      "id": "chapter-09",
+      "number": 9,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-09.md",
+      "sha256": "215e6aa50898e992b515c91008c8ba34ab724365749acd7743c2d2229c3537e5"
+    },
+    {
+      "id": "chapter-10",
+      "number": 10,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-10.md",
+      "sha256": "4e5ca01c7442dddf0f2f2f21e57efdb8064d3a8a1b35523120f0d3183cb613fa"
+    },
+    {
+      "id": "chapter-11",
+      "number": 11,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-11.md",
+      "sha256": "c8b71e12a7a89e17201351b1236ce0a3a65f3b08ea497455cb7c19f0fd942ad4"
+    },
+    {
+      "id": "chapter-12",
+      "number": 12,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-12.md",
+      "sha256": "eb831ff4c5160ad8dd22f88bf0c768ba24329cbc9f1c0f1f9688b28e94874218"
+    },
+    {
+      "id": "chapter-13",
+      "number": 13,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-13.md",
+      "sha256": "acf8049d48d086d81201521a4327fc6a5b117a09b04f95d5419796b45e8d2fcc"
+    },
+    {
+      "id": "chapter-14",
+      "number": 14,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-14.md",
+      "sha256": "8fa41f2e799d908bb55faee966c657dbf9e367aac72f7f33e5799b3b20a6e69f"
+    },
+    {
+      "id": "chapter-15",
+      "number": 15,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-15.md",
+      "sha256": "b4b3a3a8b50c60aa15fb1c1398f4fbe68de14d255f00265d6ff10ea33bbd0870"
+    },
+    {
+      "id": "chapter-16",
+      "number": 16,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-16.md",
+      "sha256": "e726777e0320a8207a42938e12b0a1b3200c1706829dde5853b238a1762404bc"
+    },
+    {
+      "id": "chapter-17",
+      "number": 17,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-17.md",
+      "sha256": "345fd929f37591f48aa98696410ca761702f46e8cd107e338e10b9541f454d1e"
+    },
+    {
+      "id": "chapter-18",
+      "number": 18,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/chapter-18.md",
+      "sha256": "f4c00689db3a49660bec269a8966a8da3b9db84265c9599485042807504f41f0"
+    },
+    {
+      "id": "epilogue",
+      "number": null,
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/epilogue.md",
+      "sha256": "2fdf87208a53f5835afa1ab9f176e2962284d6236d5f4605dad6fc4375db4ce4"
+    }
+  ],
+  "authorContents": {
+    "path": "manuscript/2026-09-05-rebuild/contents-v5.1.md",
+    "sha256": "3504c509a3745aed4b9c24f17e53b480c5984a47562acb29cd8895f8d79d06a6"
+  },
+  "prologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v2.1.md",
+    "sha256": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8"
+  },
+  "constitution": {
+    "path": "CONSTITUTION.md",
+    "version": "1.2.1",
+    "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+  },
+  "prologueSelection": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v2.1.md",
+    "version": "2.1",
+    "status": "accepted",
+    "sha256": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8",
+    "review": "docs/editorial/PROLOGUE-ADDITION-REVIEW-v2.1-2026-09-06.md",
+    "reviewer": "constitution-patch-integrator",
+    "reviewSha256": "f3adf86760b29a5d4f52b3beaca526514f22ebf65f2a6e4d6e45f09c35b6e046"
+  },
+  "masterPrologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v2.0.md",
+    "version": "2.0",
+    "sha256": "732ef9208463e2b6cf23d31ac6ed62d73486b4e27aa74b4a3135ef6d1970f308"
+  },
+  "acceptanceStatus": "independent-editorial-review",
+  "acceptance": {
+    "path": "manuscript/2026-09-05-rebuild/chapters-v6/acceptance.json",
+    "sha256": "0855d4e08e9c46c984f11f2aa109684bb850ab2bdd9b58dd5539d612873fac4b"
+  },
+  "reviews": [
+    {
+      "id": "prologue",
+      "reviewer": "constitution-patch-integrator",
+      "path": "docs/editorial/PROLOGUE-ADDITION-REVIEW-v2.1-2026-09-06.md",
+      "sha256": "f3adf86760b29a5d4f52b3beaca526514f22ebf65f2a6e4d6e45f09c35b6e046"
+    },
+    {
+      "id": "chapter-01",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-01-review.md",
+      "sha256": "30e9d7e8ac779f1d6b56e39a7696d6f18b73c8265fb3f395dcf1822e15916dc2",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-02",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-02-review.md",
+      "sha256": "1cf311352db89ecffea6ea63677c83c5adf51c61b0ecdc0fc74c4036cf1893c5",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-03",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-03-review.md",
+      "sha256": "fa27d476665f774e0262ab24938cedbe463d596d7560545b04a8e775e4f896f1",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-04",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-04-review.md",
+      "sha256": "aeea384eda16f6c191054365f44a8a513747af49c192827036a8a11e13057658",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-05",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-05-review.md",
+      "sha256": "b0de485a10f47c4324fea312f8721cdb069bb77466a6eacb77990742b78cfa0a",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-06",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-06-review.md",
+      "sha256": "ff125070bf5ad251e27e2608b92ecab5c64bda222cedbe0852d2734dcca3b87e",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-07",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-07-review.md",
+      "sha256": "31a563ef79fd09ce2b7d18401e3a60a727aaa677b2715f0634c157d9f59a1e7d",
+      "constitutionBasis": {
+        "path": "docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/CONSTITUTION-v1.1.md",
+        "sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074"
+      },
+      "constitutionVersion": "1.1"
+    },
+    {
+      "id": "chapter-08",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-08-review.md",
+      "sha256": "cd0d5a22ec2a9c66428e169fabf63b1e79ed6b564b6e9fb09df9cbca4f019077",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-08-economic-review.md",
+          "sha256": "c32db711e6a7cbfc178a526e900ee6511811f59ba2f24e5d1c13bcb7f63c4866"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-09",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-09-review.md",
+      "sha256": "ed53b33a5c12b1c5aaab01b06556e44f91e985fdf108ea77032b81a1976f8ef8",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-09-economic-review.md",
+          "sha256": "21ce7282ea79b1d186652d1fbb7368571972afa9cd524e00acb9bb701059d17c"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-10",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-10-review.md",
+      "sha256": "ffd01aca3958be9c9eaee58b4ff78c3709b675dfa099d54492482c2250b5ef88",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-10-economic-review.md",
+          "sha256": "1a0a0c05e6a001cfc4e18a3d2176c005fb7e49e3e12f79bc5d81a297fde3ca54"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-11",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-11-review.md",
+      "sha256": "a8164aab7e026b28ddd9e633cd581b1e63326d941e3ff659c8791986fd41eb2f",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-11-economic-review.md",
+          "sha256": "618543c67c06ebe710d18b8e629356d755dc871971836d00d9bcbb9bc5e3a9ed"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-12",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-12-review.md",
+      "sha256": "96c28c29cf8736b7d0a7455fdd8fa51c7234905230ed18ca8ec788e7a882ae61",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-12-economic-review.md",
+          "sha256": "b7a91e297d97858bf5e085b97e0e1a9d89e245e80f93256068d806cab0be026f"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-13",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-13-review.md",
+      "sha256": "edaca38f63093f5609dda7b42eb4cff8d36abb8222c90af8d6249553e93fcc19",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-13-economic-review.md",
+          "sha256": "0da72825558ae8ab34f7e7346e3fb7c0f53f1ae31643036b7b308137243f92a3"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-14",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-14-review.md",
+      "sha256": "ae5d2911cbbbb43b5d07c3b61d3613a7e39f11c14525602210a057f82f843497",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-14-economic-review.md",
+          "sha256": "0b664ec44bfe547ac1d5b58a8674866d65b83f59a95093f82b98a52cb60375b2"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-15",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-15-review.md",
+      "sha256": "35c3e0ed19664966c734deb10ede8db28dea207b61ebf60167210689da455b9e",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-15-economic-review.md",
+          "sha256": "07b840429e8760b967ec65fae500ce2326ec1ec65b7cf1c86f9b11300d48eff1"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-16",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-16-review.md",
+      "sha256": "6c862fd420e561aa3a5d1b1a61df7ad099d21f3dff868f66b9a9cc3916ee4493",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-16-economic-review.md",
+          "sha256": "8f1dc6fb1ea131bd2b13bd3c7747a926061b53bf7f726eff4ea96b6e7d13798d"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-17",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-17-review.md",
+      "sha256": "8073988f3215e9ecbff8ccbaf3918d6eab912bfd1dc26c4dca1c6c6444b13af4",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-17-economic-review.md",
+          "sha256": "592e3127bdd06dd616d1a82d3a8e6d1f3bfbfa44fb74f203064b7b47227f8a72"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "chapter-18",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-18-review.md",
+      "sha256": "8a8fac8a517ee6e023fa60e30c6cf1b7e0d86c3a968f44cebd2b6527e37158f8",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-18-economic-review.md",
+          "sha256": "215a8bfd916ad39d177cf778b4427bd2c2cc75714c6985bebf722887069bae96"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    },
+    {
+      "id": "epilogue",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/epilogue-review.md",
+      "sha256": "c5bb923e6530b1384e00d8eef0d93780ec02561e53afb9d26b507f4783d654b5",
+      "constitutionBasis": {
+        "path": "CONSTITUTION.md",
+        "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+      },
+      "supportingReviews": [
+        {
+          "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/epilogue-economic-review.md",
+          "sha256": "f6cd0c228a68f3ec30b2b85982823533b7ebe162cd6c1cffafdbf7ee294806bf"
+        }
+      ],
+      "constitutionVersion": "1.2.1"
+    }
+  ],
+  "bookReviews": [
+    {
+      "id": "argument-without-space",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/book-argument-test.md",
+      "status": "accepted",
+      "sha256": "1a4edfac30ce1808a59e596b9b15ce1677fdd04e4ba46c64fe8e6f9976b6f011",
+      "sourceHashes": {
+        "prologue": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8",
+        "chapter-01": "798ae29de1df728098140c52230faf0fac5fb7b6035d48170b7c689a3bc36f9a",
+        "chapter-02": "80a6662d90d53e8d87b5cd3cce92497372e88122f0711c799fe7fb619f71e427",
+        "chapter-03": "0b8e522cf5f7ada88949f6f437e3e975656d7afbb001bc8867c961ef4db7ad76",
+        "chapter-04": "b8e4feda068f233a3b4b1fb3effc0ebf22cfcefa657b47115e26757af1f837bf",
+        "chapter-05": "025f402ff28373bafe3945b8134fe45d11f2244a85952caac524c8fd72201115",
+        "chapter-06": "6641423059b08086487ada488f98b65879a8e96e0b9a86d8cb536b762f4dcfea",
+        "chapter-07": "1a808f03ffab97b39d9c521671c1d0b940eb02bd598a709bffc33fac0f4918c6",
+        "chapter-08": "ae46b506990b2a02e6989a979c8f9dd4d036daf7929c6a040923e6aba675a83c",
+        "chapter-09": "215e6aa50898e992b515c91008c8ba34ab724365749acd7743c2d2229c3537e5",
+        "chapter-10": "4e5ca01c7442dddf0f2f2f21e57efdb8064d3a8a1b35523120f0d3183cb613fa",
+        "chapter-11": "c8b71e12a7a89e17201351b1236ce0a3a65f3b08ea497455cb7c19f0fd942ad4",
+        "chapter-12": "eb831ff4c5160ad8dd22f88bf0c768ba24329cbc9f1c0f1f9688b28e94874218",
+        "chapter-13": "acf8049d48d086d81201521a4327fc6a5b117a09b04f95d5419796b45e8d2fcc",
+        "chapter-14": "8fa41f2e799d908bb55faee966c657dbf9e367aac72f7f33e5799b3b20a6e69f",
+        "chapter-15": "b4b3a3a8b50c60aa15fb1c1398f4fbe68de14d255f00265d6ff10ea33bbd0870",
+        "chapter-16": "e726777e0320a8207a42938e12b0a1b3200c1706829dde5853b238a1762404bc",
+        "chapter-17": "345fd929f37591f48aa98696410ca761702f46e8cd107e338e10b9541f454d1e",
+        "chapter-18": "f4c00689db3a49660bec269a8966a8da3b9db84265c9599485042807504f41f0",
+        "epilogue": "2fdf87208a53f5835afa1ab9f176e2962284d6236d5f4605dad6fc4375db4ce4"
+      }
+    },
+    {
+      "id": "space-continuity",
+      "reviewer": "independent_editor",
+      "path": "manuscript/2026-09-05-rebuild/chapters-v6/editorial/book-scenario-test.md",
+      "status": "accepted",
+      "sha256": "37de08c77236313610f91628e8f11499ab263fae6384cd2760dfa05b1fe127b3",
+      "sourceHashes": {
+        "prologue": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8",
+        "chapter-01": "798ae29de1df728098140c52230faf0fac5fb7b6035d48170b7c689a3bc36f9a",
+        "chapter-02": "80a6662d90d53e8d87b5cd3cce92497372e88122f0711c799fe7fb619f71e427",
+        "chapter-03": "0b8e522cf5f7ada88949f6f437e3e975656d7afbb001bc8867c961ef4db7ad76",
+        "chapter-04": "b8e4feda068f233a3b4b1fb3effc0ebf22cfcefa657b47115e26757af1f837bf",
+        "chapter-05": "025f402ff28373bafe3945b8134fe45d11f2244a85952caac524c8fd72201115",
+        "chapter-06": "6641423059b08086487ada488f98b65879a8e96e0b9a86d8cb536b762f4dcfea",
+        "chapter-07": "1a808f03ffab97b39d9c521671c1d0b940eb02bd598a709bffc33fac0f4918c6",
+        "chapter-08": "ae46b506990b2a02e6989a979c8f9dd4d036daf7929c6a040923e6aba675a83c",
+        "chapter-09": "215e6aa50898e992b515c91008c8ba34ab724365749acd7743c2d2229c3537e5",
+        "chapter-10": "4e5ca01c7442dddf0f2f2f21e57efdb8064d3a8a1b35523120f0d3183cb613fa",
+        "chapter-11": "c8b71e12a7a89e17201351b1236ce0a3a65f3b08ea497455cb7c19f0fd942ad4",
+        "chapter-12": "eb831ff4c5160ad8dd22f88bf0c768ba24329cbc9f1c0f1f9688b28e94874218",
+        "chapter-13": "acf8049d48d086d81201521a4327fc6a5b117a09b04f95d5419796b45e8d2fcc",
+        "chapter-14": "8fa41f2e799d908bb55faee966c657dbf9e367aac72f7f33e5799b3b20a6e69f",
+        "chapter-15": "b4b3a3a8b50c60aa15fb1c1398f4fbe68de14d255f00265d6ff10ea33bbd0870",
+        "chapter-16": "e726777e0320a8207a42938e12b0a1b3200c1706829dde5853b238a1762404bc",
+        "chapter-17": "345fd929f37591f48aa98696410ca761702f46e8cd107e338e10b9541f454d1e",
+        "chapter-18": "f4c00689db3a49660bec269a8966a8da3b9db84265c9599485042807504f41f0",
+        "epilogue": "2fdf87208a53f5835afa1ab9f176e2962284d6236d5f4605dad6fc4375db4ce4"
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "id": "prologue",
+      "path": "public/book/chapters/prologue-v2.1.docx",
+      "sha256": "3c08edafe70a87fe735705ba880f63eb929b3c263ac8d9882ecf783afb0a3a11",
+      "sourceSha256": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8"
+    },
+    {
+      "id": "chapter-01",
+      "path": "public/book/chapters/chapter-01-v6.0.docx",
+      "sha256": "103c66b1a3d60951b67e8f346e55f65daa64e223f374fbef788241e484f6f298",
+      "sourceSha256": "798ae29de1df728098140c52230faf0fac5fb7b6035d48170b7c689a3bc36f9a"
+    },
+    {
+      "id": "chapter-02",
+      "path": "public/book/chapters/chapter-02-v6.0.docx",
+      "sha256": "97f0d604731a363340fd227a1136a15be017bd1cd9c80b0d3f050eb5f56a032d",
+      "sourceSha256": "80a6662d90d53e8d87b5cd3cce92497372e88122f0711c799fe7fb619f71e427"
+    },
+    {
+      "id": "chapter-03",
+      "path": "public/book/chapters/chapter-03-v6.0.docx",
+      "sha256": "fa4c766cef097fd7915216d4f35cdddc6b5649a2c19d6ff662f4494f9b5f270a",
+      "sourceSha256": "0b8e522cf5f7ada88949f6f437e3e975656d7afbb001bc8867c961ef4db7ad76"
+    },
+    {
+      "id": "chapter-04",
+      "path": "public/book/chapters/chapter-04-v6.0.docx",
+      "sha256": "fb2e4a83e2c93922c321fbe882707041700db911f3dd1623dd9dbfad400b42a2",
+      "sourceSha256": "b8e4feda068f233a3b4b1fb3effc0ebf22cfcefa657b47115e26757af1f837bf"
+    },
+    {
+      "id": "chapter-05",
+      "path": "public/book/chapters/chapter-05-v6.0.docx",
+      "sha256": "eb642d58649316176bf2ad5f90436b0a99df4fd824ce2a5aaefe5883d315068e",
+      "sourceSha256": "025f402ff28373bafe3945b8134fe45d11f2244a85952caac524c8fd72201115"
+    },
+    {
+      "id": "chapter-06",
+      "path": "public/book/chapters/chapter-06-v6.0.docx",
+      "sha256": "daeb116e1e3903a3052569f16df50b5cd2742f0f1d396af07dd355ceabe205e8",
+      "sourceSha256": "6641423059b08086487ada488f98b65879a8e96e0b9a86d8cb536b762f4dcfea"
+    },
+    {
+      "id": "chapter-07",
+      "path": "public/book/chapters/chapter-07-v6.0.docx",
+      "sha256": "daa6ea698b814f0f0bc711f482499ae9360cdce6addfd6eb0e3bd81ba1c30d01",
+      "sourceSha256": "1a808f03ffab97b39d9c521671c1d0b940eb02bd598a709bffc33fac0f4918c6"
+    },
+    {
+      "id": "chapter-08",
+      "path": "public/book/chapters/chapter-08-v6.0.docx",
+      "sha256": "55f9c2eb67d1f04f06ce46df743da8545c8d6a1a95896a9fd9b48edc38fb06fd",
+      "sourceSha256": "ae46b506990b2a02e6989a979c8f9dd4d036daf7929c6a040923e6aba675a83c"
+    },
+    {
+      "id": "chapter-09",
+      "path": "public/book/chapters/chapter-09-v6.0.docx",
+      "sha256": "3e17195d7e9e99d1eeb3ac58f9664b2c5cbd88eff034e9427ce892f587d3649f",
+      "sourceSha256": "215e6aa50898e992b515c91008c8ba34ab724365749acd7743c2d2229c3537e5"
+    },
+    {
+      "id": "chapter-10",
+      "path": "public/book/chapters/chapter-10-v6.0.docx",
+      "sha256": "313b36b1c95f3ae8cd8b3709fe6d79bc2477639b9cc15fffef8447e1fc0ef84e",
+      "sourceSha256": "4e5ca01c7442dddf0f2f2f21e57efdb8064d3a8a1b35523120f0d3183cb613fa"
+    },
+    {
+      "id": "chapter-11",
+      "path": "public/book/chapters/chapter-11-v6.0.docx",
+      "sha256": "605e821a6a4f7ed04e836de2d410eba1a8911f1e67a5399f9001e73fa48e4124",
+      "sourceSha256": "c8b71e12a7a89e17201351b1236ce0a3a65f3b08ea497455cb7c19f0fd942ad4"
+    },
+    {
+      "id": "chapter-12",
+      "path": "public/book/chapters/chapter-12-v6.0.docx",
+      "sha256": "0da09a152ef06fd534f345018527e77dd0548472c5a853a2e321e8aac2701ff1",
+      "sourceSha256": "eb831ff4c5160ad8dd22f88bf0c768ba24329cbc9f1c0f1f9688b28e94874218"
+    },
+    {
+      "id": "chapter-13",
+      "path": "public/book/chapters/chapter-13-v6.0.docx",
+      "sha256": "ed26d3fc7dce806e1fff8a2fcba237fd1156dca4ac86137ad9c6050fa7376e99",
+      "sourceSha256": "acf8049d48d086d81201521a4327fc6a5b117a09b04f95d5419796b45e8d2fcc"
+    },
+    {
+      "id": "chapter-14",
+      "path": "public/book/chapters/chapter-14-v6.0.docx",
+      "sha256": "8ffc1e7e4c9ae6abdbe79ba4b70ad42a6f727510340a5fb741f869853cb3d9e4",
+      "sourceSha256": "8fa41f2e799d908bb55faee966c657dbf9e367aac72f7f33e5799b3b20a6e69f"
+    },
+    {
+      "id": "chapter-15",
+      "path": "public/book/chapters/chapter-15-v6.0.docx",
+      "sha256": "c0b148b9891d8a0ac8f5a092f4a1812d373f476d2ebfb6db0275251aa52a5cc7",
+      "sourceSha256": "b4b3a3a8b50c60aa15fb1c1398f4fbe68de14d255f00265d6ff10ea33bbd0870"
+    },
+    {
+      "id": "chapter-16",
+      "path": "public/book/chapters/chapter-16-v6.0.docx",
+      "sha256": "27cf12b0096a8f24e46ba9b5eae0707a15a8b08dc8186307e3aa60d9f550689e",
+      "sourceSha256": "e726777e0320a8207a42938e12b0a1b3200c1706829dde5853b238a1762404bc"
+    },
+    {
+      "id": "chapter-17",
+      "path": "public/book/chapters/chapter-17-v6.0.docx",
+      "sha256": "21bf66900fadb85d3fd655c8be7c2e6ee1105be65f29694ef6074e4d00846c51",
+      "sourceSha256": "345fd929f37591f48aa98696410ca761702f46e8cd107e338e10b9541f454d1e"
+    },
+    {
+      "id": "chapter-18",
+      "path": "public/book/chapters/chapter-18-v6.0.docx",
+      "sha256": "667ae2be1a0ca3fef28e9b9074263901da0209c6eafab14d1f89f93543a5c1ff",
+      "sourceSha256": "f4c00689db3a49660bec269a8966a8da3b9db84265c9599485042807504f41f0"
+    },
+    {
+      "id": "epilogue",
+      "path": "public/book/chapters/epilogue-v6.0.docx",
+      "sha256": "36371117945dd8172bf27a8a6c576ab354845368bb75388046d26b498e6d2309",
+      "sourceSha256": "2fdf87208a53f5835afa1ab9f176e2962284d6236d5f4605dad6fc4375db4ce4"
+    }
+  ],
+  "archive": {
+    "path": "src/data/previous-edition.json",
+    "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
+  },
+  "bookSha256": "c0b6c573064962fcd4c4f7540498da36b8567913632c342ffc204452f0c95a7d",
+  "generators": [
+    {
+      "path": "scripts/publish-manuscript.py",
+      "sha256": "e80158d87b62523c10b97fa40048146ba3036d90a436cdb14cf48a8f8f02aa33"
+    },
+    {
+      "path": "scripts/release_v6.py",
+      "sha256": "9a871ef35e7d8965ba0ba8d869ecbb562e00ebec3725949df83cf2a0272424a8"
+    },
+    {
+      "path": "scripts/manuscript_markdown.py",
+      "sha256": "58bcc7d703940fb4c32dc45210689f7456749d67a5b7eb78c82cafe4695d04e4"
+    },
+    {
+      "path": "scripts/chapter_docx.py",
+      "sha256": "ed4595b264d1754699f5f272b481bdf70eeb06888715b6916115eb2fa4f3088f"
+    }
+  ],
+  "scope": "Пересборка явно выбранных глав с сохранением конституционной основы их приёмки. Новая редакция конституции не означает ретроактивной переработки или приёмки прежних глав. Агентная проверка не объявляется внешней экспертизой или проведённым практическим пилотом."
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-06",
+  "constitution_version": "1.1",
+  "source_md_byte_identical": true,
+  "source_docx_byte_identical": true,
+  "canonical_sha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074",
+  "active_markdown_files_checked": 47,
+  "local_markdown_links_checked": 325,
+  "missing_links": [],
+  "preserved_texts": [
+    "prologue",
+    "chapter-01",
+    "chapter-02",
+    "chapter-03",
+    "chapter-04",
+    "chapter-05",
+    "chapter-06",
+    "chapter-07",
+    "chapter-08",
+    "chapter-09"
+  ],
+  "preserved_fields": [
+    "blocks",
+    "source",
+    "status",
+    "publicationStatus",
+    "version",
+    "editorialStatus"
+  ],
+  "selected_chapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "epilogue": "planned",
+  "legacy_contents_v5_0_unchanged": true,
+  "technical_checks": {
+    "npm_run_check": "passed (independent_audit agent)",
+    "existing_publisher_tests": "7 passed (independent_audit agent)",
+    "final_build_and_export": "passed after final manifesto status copy; 86 routes, 589 files",
+    "legacy_rule_generator_guard": "confirmed: exits before mutation with CONSTITUTION.md present"
+  },
+  "scope": "Local agent rules and dependent projections; chapter prose and prior acceptance preserved. No commit, push, deployment or pilot launch performed."
+}

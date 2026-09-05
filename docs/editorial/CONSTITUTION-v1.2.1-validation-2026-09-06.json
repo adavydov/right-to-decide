@@ -1,0 +1,53 @@
+{
+  "constitutionArchiveSha256": "92cde819a757ff61faa2fedc84b99c2ad31dfbc1346ae4fc47cd485f7a08d074",
+  "constitutionArchiveMatchesRecorded": true,
+  "architectureSection7Unchanged": true,
+  "coreK01K12Unchanged": true,
+  "all12PriorCriteriaUnchanged": true,
+  "layerIds": [
+    "С01",
+    "С02",
+    "С03",
+    "С04",
+    "С05",
+    "С06",
+    "С07",
+    "С08",
+    "С09"
+  ],
+  "exactlyNineLayers": true,
+  "hypothesesH1H11Present": true,
+  "sourcesS1S21Present": true,
+  "prologueOnlyInsertions": true,
+  "originalPrologueBytesRestored": true,
+  "prologueInsertionSites": 2,
+  "prologueAddedWords": 203,
+  "prologue2.0Sha256": "732ef9208463e2b6cf23d31ac6ed62d73486b4e27aa74b4a3135ef6d1970f308",
+  "prologue2.1Sha256": "e8ae6dd6d1754ee33bf10ca55369ff7b758ab628afaad302bb692b61c387f2b8",
+  "originalMasterHashUnchanged": true,
+  "reviewMatchesCurrentPrologue": true,
+  "priorManuscriptSnapshotFiles": 134,
+  "changesSinceSnapshot": [
+    "right-to-decide-site/manuscript/2026-09-05-rebuild/chapters-v6/editorial/reviews/chapter-05-review.md"
+  ],
+  "snapshotNote": "Изменения, если есть, требуют сопоставления с продолжающейся сборкой; этот патч не редактирует главы.",
+  "patchCopyMatchesOriginal": true,
+  "brokenLocalLinks": [],
+  "registryHasNineUniqueLayers": true,
+  "separateGitRepositoryExists": true,
+  "publicRoleProjectionHasNineCurators": true,
+  "liveRoleDataUnchangedByPatch": true,
+  "constitutionSha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+  "newRuleHashes": {
+    "PRINCIPLES-01-v3.1.md": "7e67ea2fd426329f302c9c35577f9816313c611d9e3e1950650dbf0ff4432542",
+    "STYLE-01-v5.1.md": "9a7026cefac343f1d2e093b98603bf9bf326f577b64b71b74379682679ba53d6",
+    "LITERARY-WORKFLOW-01-v3.1.md": "ae8a605e6e4bcf80752666beb39d2f3ea89b061079450fec5e6ce9fceb9ec0fd",
+    "AGENT-ROLES-01-v2.1.md": "f421dce591ff043157a9f036fd2dde922629b00b6c736c26cdf2f9b8dd43dead",
+    "ACCEPTANCE-01-v2.1.md": "5b3a7e60bf4dd0024aae3154b8608f89348f932ed9b3d594b1aa943ff228e8a5",
+    "LAYER-REPOSITORIES-01-v2.1.md": "a3d2c256a5ff010e92a9f19d5010284e34df8b6b97404c30560d0795352d6219",
+    "TECH-ENTREPRENEUR-01-v3.1.md": "41df9041c624290f1e780c169117a6f5bc895bd937e84c801aa40ccce93f323e"
+  },
+  "sourceVerification": "S1–S21 transferred from supplied patch; not reverified in this task.",
+  "checksScope": "Document integrity, provenance, version routing, prologue insertions. No website deployment or retrospective chapter acceptance.",
+  "validationFailures": []
+}

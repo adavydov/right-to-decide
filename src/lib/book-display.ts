@@ -18,4 +18,5 @@ export type ChapterNavigation = {
   status: string;
   minutes: number;
   headings?: string[];
+  docx?: string;
 };

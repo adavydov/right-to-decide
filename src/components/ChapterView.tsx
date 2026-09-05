@@ -101,7 +101,7 @@ function renderBlock(block: BookBlock): ReactNode {
     );
   }
   if (block.type === "heading") {
-    const title = displayBookTitle(block.text);
+    const title = block.id.startsWith("manuscript-v6-") ? <InlineText block={block} /> : displayBookTitle(block.text);
     return (block.level || 2) <= 2 ? (
       <h2 data-reader-block id={block.id} key={block.id}>
         {title}
@@ -221,7 +221,8 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
           </p>
           <h1 className="reading-title">{displayBookTitle(chapter.title)}</h1>
           <p className="reading-meta">
-            {getChapterReadingMinutes(chapter)} мин чтения · {chapter.contentKind === "outline" ? "Авторское содержание · версия 4.0" : "Авторский текст · версия " + chapter.version}
+            <span>{getChapterReadingMinutes(chapter)} мин чтения · {chapter.contentKind === "outline" ? "Авторское содержание · версия " + chapter.version : "Авторский текст · версия " + chapter.version}</span>
+            {chapter.download && <a className="reading-download" href={assetPath(chapter.download.docx)} download aria-label={`Скачать DOCX: ${chapter.title}`}>Скачать DOCX ↓</a>}
           </p>
           <div className="reading-copy">
             {renderBookBlocks(chapter.blocks)}

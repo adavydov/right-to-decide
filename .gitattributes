@@ -39,4 +39,26 @@ manuscript/2026-09-05-rebuild/contents-v5.0-manifest.json -text
 public/book/contents-v5.0.md -text
 scripts/constitution_contents.py -text whitespace=cr-at-eol
 docs/editorial/revisions/before-constitution-2026-09-06/** -text -whitespace
+docs/editorial/revisions/before-constitution-v1.1-2026-09-06/** -text -whitespace
+docs/editorial/revisions/before-constitution-v1.2.1-2026-09-06/** -text -whitespace
 manuscript/2026-09-05-rebuild/revisions/pre-constitution-v1.0-2026-09-06/** -text -whitespace
+
+# Keep exact reviewed v6 manuscripts, receipts and generator hashes portable.
+manuscript/2026-09-05-rebuild/prologue-v2.0.md -text whitespace=cr-at-eol,-blank-at-eof
+manuscript/2026-09-05-rebuild/prologue-v2.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/PROLOGUE-ADDITION-REVIEW-v2.1-2026-09-06.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/PRINCIPLES-01-v3.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/STYLE-01-v5.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/LITERARY-WORKFLOW-01-v3.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/AGENT-ROLES-01-v2.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/ACCEPTANCE-01-v2.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/LAYER-REPOSITORIES-01-v2.1.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/TECH-ENTREPRENEUR-01-v3.1.md -text whitespace=cr-at-eol,-blank-at-eof
+manuscript/2026-09-05-rebuild/chapters-v6/** -text whitespace=cr-at-eol,-blank-at-eof
+manuscript/2026-09-05-rebuild/contents-v5.1.md -text
+manuscript/2026-09-05-rebuild/contents-v5.1-manifest.json -text
+public/book/contents-v5.1.md -text
+public/book/chapters/*.docx binary
+scripts/release_v6.py -text
+scripts/manuscript_markdown.py -text
+scripts/chapter_docx.py -text

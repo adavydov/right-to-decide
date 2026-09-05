@@ -84,10 +84,10 @@ def assemble(base_book: dict, numbers: list[int], source_bytes: dict[int, bytes]
     identity = {"contents": book["source"]["sha256"], "prologue": book["chapters"][0]["source"], "chapters": sources}
     source_hash = outline.sha(outline.encoded(identity))
     book["contentKind"] = "manuscript"
-    book["releaseId"] = f"literary-manuscript-v5.0-{source_hash[:12]}"
+    book["releaseId"] = f"literary-manuscript-v5.1-{source_hash[:12]}"
     book["source"] = {"filename": RELEASE_MANIFEST.name, "format": "markdown-manuscript",
                       "sha256": source_hash, "importer": "scripts/publish-manuscript.py",
-                      "textPolicy": "Содержание следует §7 Конституции 1.0. Тексты ранее опубликованных пролога и глав сохранены. Их соответствие новой конституционной приёмке не заявляется; эпилог остаётся в плане."}
+                      "textPolicy": "Содержание следует §7 Конституции 1.1. Тексты ранее опубликованных пролога и глав сохранены. Их соответствие новой конституционной приёмке не заявляется; эпилог остаётся в плане."}
     blocks = [block for chapter in book["chapters"] for block in chapter["blocks"]]
     text = "\n\n".join(block["text"] for block in blocks)
     book["statistics"] = {"sections": len(book["chapters"]), "chapters": 18, "parts": 6,
@@ -106,7 +106,7 @@ def build(numbers: list[int]) -> dict[Path, bytes]:
     base_book = json.loads(foundation[BOOK])
     source_bytes = {number: (ROOT / CHAPTER_DIRECTORY / f"chapter-{number:02d}.md").read_bytes() for number in numbers}
     book, sources = assemble(base_book, numbers, source_bytes)
-    manifest = {"schemaVersion": 1, "releaseId": book["releaseId"], "architectureVersion": "5.0",
+    manifest = {"schemaVersion": 1, "releaseId": book["releaseId"], "architectureVersion": "5.1",
                 "chapterNumbers": numbers, "chapters": sources,
                 "authorContents": base_book["chapters"][1]["source"], "prologue": base_book["chapters"][0]["source"],
                 "archive": {"path": outline.ARCHIVE.as_posix(), "sha256": outline.sha((ROOT / outline.ARCHIVE).read_bytes())},
@@ -114,7 +114,7 @@ def build(numbers: list[int]) -> dict[Path, bytes]:
                 "sourceHashPolicy": "book.source.sha256 hashes the preserved contents/prologue sources and the ordered selected chapter sources",
                 "constitution": {"path": "CONSTITUTION.md", "sha256": outline.sha((ROOT / "CONSTITUTION.md").read_bytes())},
                 "acceptanceStatus": "published-texts-pending-constitution-review",
-                "scope": "Переход оглавления на Конституцию 1.0 при сохранении текстов и статусов уже опубликованных глав. Повторная приёмка корпуса по новой Конституции не выполнялась."}
+                "scope": "Переход оглавления на Конституцию 1.1 при сохранении текстов и статусов уже опубликованных глав. Повторная приёмка корпуса по новой Конституции не выполнялась."}
     return {**{path: raw for path, raw in foundation.items() if path != BOOK},
             BOOK: outline.encoded(book), RELEASE_MANIFEST: outline.encoded(manifest)}
 
@@ -123,10 +123,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--chapters", help="Explicit complete release selection, for example 1-3,5 or 1-18")
+    parser.add_argument("--edition", choices=["v4", "v6"], help="Literary source directory; check detects the saved release")
+    parser.add_argument("--epilogue", action="store_true", help="Include the independently reviewed v6 epilogue")
     args = parser.parse_args()
     if args.check and args.chapters:
         parser.error("--check reads the saved release selection; do not combine it with --chapters")
     try:
+        current = json.loads((ROOT / BOOK).read_text("utf-8")) if (ROOT / BOOK).exists() else {}
+        use_v6 = args.edition == "v6" or (args.edition is None and current.get("editionVersion") == "6.0")
+        if use_v6:
+            import release_v6
+            release_v6.main(args, parser, chapter_selection)
+            return
+        if args.epilogue:
+            parser.error("--epilogue is supported only with --edition v6")
         if args.check and not (ROOT / RELEASE_MANIFEST).exists():
             outputs = outline.build()
         else:

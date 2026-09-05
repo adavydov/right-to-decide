@@ -3,7 +3,7 @@ import path from "node:path";
 
 export const manifestoSource = path.join(process.cwd(), "CONSTITUTION.md");
 export const manifestoMarkdownPath = "/manifesto/constitution.md";
-export const manifestoWordPath = "/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.0.docx";
+export const manifestoWordPath = "/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.2.1.docx";
 
 type ManifestoBlock = {
   id: string;

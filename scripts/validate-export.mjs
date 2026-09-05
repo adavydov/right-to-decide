@@ -31,6 +31,49 @@ function decodeEntities(value) {
 function normalized(value) {
   return decodeEntities(value).replace(/\s+/gu, " ").trim();
 }
+function mergeRuns(runs) {
+  const merged = [];
+  for (const run of runs) {
+    if (!run.text) continue;
+    const previous = merged.at(-1);
+    if (previous && ["strong", "emphasis", "code", "href"].every((key) => previous[key] === run[key])) previous.text += run.text;
+    else merged.push({ ...run });
+  }
+  return merged;
+}
+function readerRuns(markup) {
+  const result = new Map();
+  const stack = [];
+  let active;
+  const voidTags = new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
+  for (const token of markup.matchAll(/<[^>]*>|[^<]+/g)) {
+    const closing = /^<\/([\w-]+)/.exec(token[0]);
+    const opening = /^<([\w-]+)/.exec(token[0]);
+    if (closing) {
+      const index = stack.findLastIndex((entry) => entry.tag === closing[1].toLowerCase());
+      if (index >= 0) stack.length = index;
+      if (active && stack.length < active.depth) active = undefined;
+    } else if (opening) {
+      const tag = opening[1].toLowerCase();
+      const attrs = new Map([...token[0].matchAll(/([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g)]
+        .map((match) => [match[1].toLowerCase(), decodeEntities(match[2] ?? match[3])]));
+      if (!voidTags.has(tag)) {
+        stack.push({ tag, attrs });
+        if (attrs.has("data-reader-block") && attrs.has("id") && !active) {
+          active = { depth: stack.length, runs: [] };
+          result.set(attrs.get("id"), active.runs);
+        }
+      }
+    } else if (active && !token[0].startsWith("<") && !stack.some((entry) => entry.attrs.get("class")?.split(/\s+/).includes("list-marker"))) {
+      const href = stack.findLast((entry) => entry.tag === "a")?.attrs.get("href");
+      active.runs.push({ text: decodeEntities(token[0]),
+        strong: stack.some((entry) => entry.tag === "strong"),
+        emphasis: stack.some((entry) => entry.tag === "em"),
+        code: stack.some((entry) => entry.tag === "code"), href: href || null });
+    }
+  }
+  return new Map([...result].map(([id, runs]) => [id, mergeRuns(runs)]));
+}
 function routeFile(route) {
   return path.join(output, ...route.split("/").filter(Boolean), "index.html");
 }
@@ -53,7 +96,7 @@ function htmlInfo(file) {
     attributes.push({ tag: tag[1].toLowerCase(), attrs });
   }
   const text = normalized(markup.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "").replace(/<[^>]*>/g, " "));
-  const info = { raw, text, ids, attributes };
+  const info = { raw, text, ids, attributes, readerRuns: readerRuns(markup) };
   htmlCache.set(file, info);
   return info;
 }
@@ -186,11 +229,26 @@ for (const chapter of available) {
   for (const block of chapter.blocks) {
     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
     if (block.type === "paragraph" || block.type === "heading") {
-      assert.ok(info.text.includes(normalized(block.text)), "Lost current author text: " + block.id);
+      if (block.id.startsWith("manuscript-v6-")) {
+        const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
+          text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
+          href: run.noteId ? "#" + run.noteId : run.href || null,
+        })));
+        assert.deepEqual(info.readerRuns.get(block.id), expectedRuns, "Reader text, formatting or source target drifted: " + block.id);
+      } else {
+        assert.ok(info.text.includes(normalized(block.text)), "Lost current author text: " + block.id);
+      }
     }
     if (block.type === "image") {
       assert.ok(info.attributes.some(({ tag, attrs }) => tag === "img" && attrs.get("src")?.split("?")[0] === base + block.src), "Missing chapter figure: " + block.src);
     }
+  }
+  if (chapter.download) {
+    const href = base + chapter.download.docx;
+    assert.ok(info.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === href), "Missing reader DOCX link: " + chapter.id);
+    assert.ok(contentsPage.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === href), "Missing contents DOCX link: " + chapter.id);
+    const exported = internalTarget(href, urlForFile(routeFile("/contents/")), chapter.id + " DOCX");
+    assert.deepEqual(fs.readFileSync(exported), fs.readFileSync("public" + chapter.download.docx), "Exported DOCX differs: " + chapter.id);
   }
   const notes = book.notes.filter((note) => note.chapterId === chapter.id);
   if (notes.length) {
@@ -209,6 +267,7 @@ for (const chapter of available) {
 }
 
 const teamSource = readJSON("src/data/editorial-team.json");
+assert.deepEqual(teamSource, readJSON("docs/editorial/editorial-team-v3.1.json"), "The public team must match the accepted editorial contract");
 const teamDocument = readJSON(path.join(output, "editorial-team.json"));
 assert.equal(teamDocument.schemaVersion, 1);
 assert.equal(teamDocument.scope, "editorial-role-catalog");
@@ -227,9 +286,9 @@ assert.deepEqual(teamDocument.groups.map(({ id, title, description, roles }) => 
   id, title, description, roles: roles.map(({ id, name, description }) => ({ id, name, description })),
 })), teamSource.groups, "Machine-readable agent roles drifted");
 const teamRoles = teamDocument.groups.flatMap((group) => group.roles);
-const layerRoles = teamDocument.groups.find((group) => group.id === "eight-layers")?.roles;
-assert.equal(layerRoles?.length, 8, "The constitution needs eight distinct layer curators");
-assert.deepEqual(layerRoles.map((role) => role.name.slice(0, 3)), Array.from({ length: 8 }, (_, index) => "С0" + (index + 1)));
+const layerRoles = teamDocument.groups.find((group) => group.id === "nine-layers")?.roles;
+assert.equal(layerRoles?.length, 9, "The constitution needs nine distinct layer curators");
+assert.deepEqual(layerRoles.map((role) => role.name.slice(0, 3)), Array.from({ length: 9 }, (_, index) => "С0" + (index + 1)));
 assert.equal(teamDocument.practicalProject.assignments, "not-confirmed", "Do not imply that the pilot roles have been assigned");
 assert.deepEqual(teamDocument.practicalProject.roles.map(({ id, name, description }) => ({ id, name, description })), teamSource.practicalProject.roles);
 assert.ok(teamDocument.practicalProject.roles.every((role) => role.type === "required-human-function" && role.assignedTo === null), "Human pilot accountability cannot be assigned to editorial AI roles");

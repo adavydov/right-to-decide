@@ -29,7 +29,7 @@
     "check:content": "node scripts/validate-content.mjs",
     "check:export": "node scripts/validate-export.mjs",
     "check": "npm run check:source && npm run lint && npm run typecheck && npm run check:content && npm run build && npm run check:export",
-    "check:source": "python scripts/publish-manuscript.py --check"
+    "check:source": "python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/publish-manuscript.py --check"
   },
   "dependencies": {
     "next": "16.3.2",

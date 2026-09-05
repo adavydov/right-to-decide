@@ -37,6 +37,9 @@
 .articleColumn :global(.eyebrow) { font: 11px/1.7 Arial, sans-serif; letter-spacing: .12em; color: var(--reader-muted); margin-bottom: 23px !important; }
 .articleColumn :global(.reading-title) { font: 400 42px/1.23 Georgia, "Times New Roman", serif; letter-spacing: -.03em; margin: 0 0 22px; text-wrap: balance; }
 .articleColumn :global(.reading-meta) { color: var(--reader-muted); font: 12px/1.6 Arial, sans-serif; padding-bottom: 32px; margin-bottom: 38px; border-bottom: 1px solid var(--reader-border); }
+.articleColumn :global(.reading-meta) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+.articleColumn :global(.reading-download) { display: inline-flex; align-items: center; min-height: 44px; color: var(--reader-ink); text-decoration: underline; text-underline-offset: 4px; }
+.articleColumn :global(.reading-download):hover { text-decoration-thickness: 2px; }
 .articleColumn :global(.reading-copy) { font-family: var(--reader-font); font-optical-sizing: auto; font-size: var(--reader-size); line-height: var(--reader-spacing); letter-spacing: 0; overflow-wrap: break-word; }
 .articleColumn :global(.reading-copy p) { margin-bottom: 1.2em; }
 .articleColumn :global(.reading-copy h2) { font: 400 1.48em/1.35 var(--reader-font); margin: 2.4em 0 1em; letter-spacing: -.02em; }

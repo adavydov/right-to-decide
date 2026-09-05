@@ -7,7 +7,7 @@ import styles from "./Manifesto.module.css";
 
 export const metadata: Metadata = {
   title: "Манифест и конституция проекта",
-  description: "Главный вопрос и ответ «Права на решение», восемь слоёв книги, правила работы и критерии приёмки. Полный авторский текст конституции проекта, версия 1.0.",
+  description: "Главный вопрос и ответ «Права на решение», девять слоёв книги, правила работы и критерии приёмки. Полный текст конституции проекта, версия 1.2.1.",
   alternates: { canonical: siteConfig.publicUrl + "/manifesto/" },
 };
 
@@ -30,18 +30,18 @@ export default function ManifestoPage() {
   return (
     <main id="main-content" className={`subpage wrap ${styles.page}`}>
       <header className={styles.intro}>
-        <p className="eyebrow">Право на решение · Версия 1.0</p>
+        <p className="eyebrow">Право на решение · Версия 1.2.1</p>
         <h1 className="page-heading">Манифест и конституция проекта</h1>
-        <p className={`page-intro ${styles.lead}`}>Главный вопрос, авторский ответ и восемь слоёв одной книги. Основа работы над текстом и практической проверкой его идей.</p>
+        <p className={`page-intro ${styles.lead}`}>Главный вопрос, авторский ответ и девять слоёв одной книги. Основа работы над текстом и практической проверкой его идей.</p>
         <div className={styles.actions}>
           <a className="button" href={assetPath(manifestoWordPath)} download>Скачать Word <span aria-hidden="true">↓</span></a>
           <a className="button secondary" href={assetPath(manifestoMarkdownPath)} download="CONSTITUTION.md">Скачать Markdown <span aria-hidden="true">↓</span></a>
           <Link className="text-link" href="/contents/">Содержание книги <span aria-hidden="true">↗</span></Link>
         </div>
         <div className={styles.status}>
-          <span className="eyebrow">Статус публикации · 6 сентября 2026</span>
-          <p>Инициатор принял этот документ как действующую конституцию проекта. Ниже — полный авторский текст от 5 сентября 2026 года, с сохранённой формулировкой «Для принятия соавторами». Она не означает подтверждённого согласия всех соавторов.</p>
-          <p>Публикация конституции не означает повторной приёмки ранее написанных глав.</p>
+          <span className="eyebrow">Рабочая редакция · 6 сентября 2026</span>
+          <p>Редакция 1.2.1 включает девятый социально-экономический слой и условные сценарии машинной субъектности. Ниже — полный текст конституции от 6 сентября 2026 года. Инициатор принял рабочую редакцию; согласие остальных соавторов фиксируется отдельно.</p>
+          <p>Обновление конституции не означает повторной приёмки ранее написанных глав.</p>
         </div>
       </header>
       <div className={styles.layout}>

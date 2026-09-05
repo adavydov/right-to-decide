@@ -29,8 +29,8 @@ try {
     } else {
       const contents = page.locator("main details");
       await contents.locator("summary").click();
-      await contents.getByRole("link", { name: "5. Восемь слоёв одной книги", exact: true }).click();
-      const heading = page.getByRole("heading", { name: "5. Восемь слоёв одной книги", exact: true });
+      await contents.getByRole("link", { name: "5. Девять слоёв одного исследования", exact: true }).click();
+      const heading = page.getByRole("heading", { name: "5. Девять слоёв одного исследования", exact: true });
       const top = await heading.evaluate((element) => element.getBoundingClientRect().top);
       assert.ok(top >= 90 && top < 200, "Section anchor clears the fixed header at " + width + ": " + top);
       await page.getByRole("button", { name: "Открыть меню", exact: true }).click();
@@ -46,27 +46,32 @@ try {
   const download = await page.request.get(base + "/manifesto/constitution.md");
   assert.equal(download.status(), 200);
   assert.deepEqual(await download.body(), canonical);
-  const word = await page.request.get(base + "/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.0.docx");
+  const word = await page.request.get(base + "/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.2.1.docx");
   assert.equal(word.status(), 200);
-  assert.deepEqual(await word.body(), fs.readFileSync("public/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.0.docx"));
+  assert.deepEqual(await word.body(), fs.readFileSync("public/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.2.1.docx"));
   await page.goto(base + "/contents/", { waitUntil: "networkidle" });
   const groupIds = await page.locator("main section").evaluateAll((sections) => sections.map((section) => section.id));
   assert.equal(groupIds.at(-1), "epilogue-section", "The epilogue must follow the six parts");
   const epilogue = page.locator("#epilogue");
-  assert.ok((await epilogue.innerText()).includes("В плане"));
-  assert.equal(await epilogue.locator("a").count(), 0, "A planned epilogue has no reader link");
+  const epilogueSource = JSON.parse(fs.readFileSync("src/data/book.json", "utf8")).chapters.find((chapter) => chapter.id === "epilogue");
+  if (epilogueSource.status === "planned") {
+    assert.ok((await epilogue.innerText()).includes("В плане"));
+    assert.equal(await epilogue.locator("a").count(), 0, "A planned epilogue has no reader link");
+  } else {
+    assert.equal(await epilogue.locator('a[href$="/read/epilogue/"]').count(), 1, "The published epilogue must open its reader");
+  }
   for (const width of [1440, 390]) {
     await page.setViewportSize({ width, height: 960 });
     await page.goto(base + "/authors/#literary-team", { waitUntil: "networkidle" });
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), "Editorial team overflow at " + width);
     const team = page.locator("#literary-team");
-    assert.ok((await team.innerText()).includes("Восемь кураторов слоёв"));
+    assert.ok((await team.innerText()).includes("Девять кураторов слоёв"));
     assert.ok((await team.innerText()).includes("Назначения не подтверждены; пилот не объявлен запущенным."));
-    assert.equal(await team.locator("dt").filter({ hasText: /^С0[1-8]\./ }).count(), 8);
+    assert.equal(await team.locator("dt").filter({ hasText: /^С0[1-9]\./ }).count(), 9);
     await page.screenshot({ path: destination + "/authors-" + width + ".png" });
   }
   assert.deepEqual(errors, []);
-  console.log("Manifesto browser QA passed: five layouts, navigation, anchor, source downloads, planned epilogue, eight curators, human pilot responsibilities and no browser errors.");
+  console.log("Manifesto browser QA passed: five layouts, navigation, anchor, source downloads, epilogue status, nine curators, human pilot responsibilities and no browser errors.");
 } finally {
   await browser.close();
 }

@@ -1,12 +1,14 @@
 import fs from "node:fs";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 
 const canonical = fs.readFileSync("CONSTITUTION.md");
 const download = fs.readFileSync("out/manifesto/constitution.md");
 assert.deepEqual(download, canonical, "The public Markdown must exactly match CONSTITUTION.md");
-const wordName = "Pravo_na_reshenie_Manifest_Constitution_v1.0.docx";
+const wordName = "Pravo_na_reshenie_Manifest_Constitution_v1.2.1.docx";
 assert.deepEqual(fs.readFileSync("out/manifesto/" + wordName), fs.readFileSync("public/manifesto/" + wordName),
-  "The Word download must preserve the supplied author document");
+  "The Word download must preserve the verified reader copy");
+execFileSync("python", ["scripts/constitution_docx.py", "--check"], { stdio: "inherit" });
 
 const html = fs.readFileSync("out/manifesto/index.html", "utf8");
 const article = html.match(/<article\b[^>]*aria-label="Полный авторский текст конституции"[^>]*>([\s\S]*?)<\/article>/)?.[1];
@@ -27,7 +29,7 @@ const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 for (const asset of ["constitution.md", wordName]) {
   assert.ok(html.includes('href="' + base + "/manifesto/" + asset + '"'), "Missing manifesto download " + asset);
 }
-assert.ok(html.includes("Для принятия соавторами"), "Preserve the original authorship status");
-assert.ok(html.includes("Публикация конституции не означает повторной приёмки ранее написанных глав."), "Do not reapprove chapters by publishing the constitution");
+assert.ok(html.includes("Нон-фикшн: редакция для принятия соавторами"), "Preserve the original authorship status");
+assert.ok(html.includes("Обновление конституции не означает повторной приёмки ранее написанных глав."), "Do not reapprove chapters by publishing the constitution");
 assert.ok(fs.readFileSync("out/sitemap.xml", "utf8").includes("/manifesto/"), "The manifesto belongs in the sitemap");
-console.log("Manifesto passed: exact canonical Markdown, preserved Word download, complete rendered text and publication status.");
+console.log("Manifesto passed: exact canonical Markdown, verified complete Word copy, rendered text and publication status.");

@@ -23,7 +23,7 @@ export type TextBlock = {
   id: string;
   text: string;
   level?: number;
-  role?: "quote" | "caption";
+  role?: "quote" | "caption" | "separator";
   list?: BookList;
   math?: { text: string; omml: string }[];
   runs?: TextRun[];
@@ -65,11 +65,13 @@ export type BookChapter = {
   source?: { path: string; sha256: string };
   sourceFile?: string;
   sourceSha256?: string;
+  download?: { docx: string; sha256: string; bytes: number };
 };
 
 export type Book = {
   contentKind?: "outline" | "manuscript";
   version?: string;
+  editionVersion?: string;
   schemaVersion: number;
   title: string;
   subtitle: string;
@@ -77,6 +79,7 @@ export type Book = {
   publicationStatus: "draft" | "published";
   source: {
     filename: string;
+    path?: string;
     format: string;
     sha256: string;
     importer: string;
@@ -122,7 +125,7 @@ export const mainChapters = chapters.filter((chapter) => chapter.kind === "chapt
 export const publishedChapterCount = mainChapters.filter((chapter) => chapter.status === "available").length;
 export const publicationSummary = publishedChapterCount === 0
   ? "Опубликованы авторский пролог и развёрнутое содержание. Главы готовятся к публикации."
-  : `Опубликованы пролог и главы: ${publishedChapterCount} из ${mainChapters.length}.`;
+  : `Опубликованы пролог и главы: ${publishedChapterCount} из ${mainChapters.length}${chapters.some(c => c.id === "epilogue" && c.status === "available") ? ", а также эпилог" : ""}.`;
 export const appendices = chapters.filter((chapter) => chapter.kind === "appendix");
 /** Retain the DOCX page index in source data; use chapter links for web navigation. */
 export const readingChapters = chapters.filter((chapter) => chapter.id !== "source-contents");

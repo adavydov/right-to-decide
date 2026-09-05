@@ -43,7 +43,7 @@ class ReleaseBoundaries(unittest.TestCase):
         self.assertEqual(book["chapters"][-1]["status"], "planned")
 
     def test_architecture_matches_constitution_and_retains_epilogue(self):
-        self.assertEqual(self.base["version"], "5.0")
+        self.assertEqual(self.base["version"], "5.1")
         self.assertEqual(self.base["parts"][2]["title"], "Часть III. Инженерная школа как место изобретения деятельности")
         self.assertEqual(self.base["chapters"][-1]["title"], "Эпилог. Следующий вопрос — не наш")
         source = (release.ROOT / release.outline.SOURCE).read_bytes()
