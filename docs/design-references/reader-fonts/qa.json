@@ -1,0 +1,488 @@
+{
+  "checkedAt": "2026-09-05T12:21:33.965Z",
+  "base": "http://127.0.0.1:3210/right-to-decide",
+  "status": "passed",
+  "browser": "isolated headless Microsoft Edge contexts",
+  "checks": [
+    "Five named fonts share an identical preview in their own typeface",
+    "Literata applies real Cyrillic glyphs, weights and italics",
+    "Literata preserves the current passage on selection and reload",
+    "Source Serif 4 applies real Cyrillic glyphs, weights and italics",
+    "Source Serif 4 preserves the current passage on selection and reload",
+    "Golos Text applies real Cyrillic glyphs, weights and italics",
+    "Golos Text preserves the current passage on selection and reload",
+    "A saved new font restores the passage with a cold cache and delayed font requests",
+    "Font download timeout keeps the saved passage stable after the late font arrives",
+    "390 px settings previews fit the viewport and keep controls usable",
+    "Legacy serif preference retains Georgia",
+    "Legacy sans preference retains Arial",
+    "Changing theme and size during font loading preserves all three settings",
+    "A later Arial choice wins while an earlier webfont is still loading",
+    "A failed font request keeps the previous font and gives a retry notice",
+    "Fonts are served locally with no external font requests or browser errors"
+  ],
+  "fonts": [
+    {
+      "id": "literata",
+      "family": "literata, \"literata Fallback\", Georgia, serif",
+      "style": "normal",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Literata",
+          "postScriptName": "Literata-36pt",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "literata",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "literata",
+      "family": "literata, \"literata Fallback\", Georgia, serif",
+      "style": "normal",
+      "weight": "700",
+      "platformFonts": [
+        {
+          "familyName": "Literata",
+          "postScriptName": "Literata-36pt-Bold",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "literata",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "literata",
+      "family": "literata, \"literata Fallback\", Georgia, serif",
+      "style": "italic",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Literata",
+          "postScriptName": "LiterataItalic-36pt-Italic",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "literata",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "literata Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "source-serif",
+      "family": "sourceSerif, \"sourceSerif Fallback\", Georgia, serif",
+      "style": "normal",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Source Serif 4",
+          "postScriptName": "SourceSerif4Roman-24pt",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "sourceSerif",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "source-serif",
+      "family": "sourceSerif, \"sourceSerif Fallback\", Georgia, serif",
+      "style": "normal",
+      "weight": "700",
+      "platformFonts": [
+        {
+          "familyName": "Source Serif 4",
+          "postScriptName": "SourceSerif4Roman-24pt-Bold",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "sourceSerif",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "source-serif",
+      "family": "sourceSerif, \"sourceSerif Fallback\", Georgia, serif",
+      "style": "italic",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Source Serif 4",
+          "postScriptName": "SourceSerif4Italic-24pt-Italic",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "sourceSerif",
+          "style": "normal",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif",
+          "style": "italic",
+          "weight": "200 900",
+          "status": "loaded"
+        },
+        {
+          "family": "sourceSerif Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "golos",
+      "family": "golos, \"golos Fallback\", Arial, sans-serif",
+      "style": "normal",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Golos Text",
+          "postScriptName": "GolosText",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "golos",
+          "style": "normal",
+          "weight": "400 900",
+          "status": "loaded"
+        },
+        {
+          "family": "golos Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "golos",
+      "family": "golos, \"golos Fallback\", Arial, sans-serif",
+      "style": "normal",
+      "weight": "700",
+      "platformFonts": [
+        {
+          "familyName": "Golos Text",
+          "postScriptName": "GolosText-Bold",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "golos",
+          "style": "normal",
+          "weight": "400 900",
+          "status": "loaded"
+        },
+        {
+          "family": "golos Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    },
+    {
+      "id": "golos",
+      "family": "golos, \"golos Fallback\", Arial, sans-serif",
+      "style": "italic",
+      "weight": "400",
+      "platformFonts": [
+        {
+          "familyName": "Golos Text",
+          "postScriptName": "GolosText",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ],
+      "faces": [
+        {
+          "family": "golos",
+          "style": "normal",
+          "weight": "400 900",
+          "status": "loaded"
+        },
+        {
+          "family": "golos Fallback",
+          "style": "normal",
+          "weight": "normal",
+          "status": "loaded"
+        }
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "label": "Literata selection",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      }
+    },
+    {
+      "label": "Literata reload",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      }
+    },
+    {
+      "label": "Source Serif 4 selection",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      }
+    },
+    {
+      "label": "Source Serif 4 reload",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      }
+    },
+    {
+      "label": "Golos Text selection",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      }
+    },
+    {
+      "label": "Golos Text reload",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      }
+    },
+    {
+      "label": "Cold delayed Literata restoration",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      }
+    },
+    {
+      "label": "Late font arrival after timeout",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      }
+    },
+    {
+      "label": "Saved passage survives initial timeout",
+      "expected": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4511
+      },
+      "actual": {
+        "id": "body-0474",
+        "index": 32,
+        "top": -41.578125,
+        "height": 180,
+        "scrollY": 4403
+      }
+    }
+  ],
+  "screenshots": [
+    "desktop-font-previews.png",
+    "desktop-reading-literata.png",
+    "desktop-reading-source-serif.png",
+    "desktop-reading-golos.png",
+    "cold-delayed-restored-passage.png",
+    "slow-font-stable-fallback.png",
+    "mobile-font-previews.png",
+    "mobile-reading-golos.png",
+    "font-failure-retry-notice.png"
+  ],
+  "fontRequests": [
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/golos_text_normal-s.2bsptl5czxpl5.woff2",
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/literata_italic-s.2vtyruob1ficn.woff2",
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/literata_normal-s.0us-hn5aapf6t.woff2",
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/source_serif_4_italic-s.3mdku3_oc1f_c.woff2",
+    "http://127.0.0.1:3210/right-to-decide/_next/static/media/source_serif_4_normal-s.21xwuuf62fsit.woff2"
+  ],
+  "errors": []
+}

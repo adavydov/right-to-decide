@@ -1,0 +1,69 @@
+.root {
+  min-width: 0;
+  color: var(--reader-ink, #292825);
+  font: 13px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.picker { min-width: 0; }
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid var(--reader-border, #e8e6e1);
+  border-radius: 6px;
+  background: var(--reader-bg, #fff);
+  color: inherit;
+  list-style: none;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.summary::-webkit-details-marker { display: none; }
+.summary:hover, .choice:hover { background: var(--reader-hover, #f3f2ef); }
+.summary:focus-visible, .choice:focus-visible {
+  outline: 2px solid var(--reader-accent, #ae512f);
+  outline-offset: 3px;
+}
+
+.chevron { flex: 0 0 16px; color: var(--reader-muted, #76736d); }
+.picker[open] .chevron { transform: rotate(180deg); }
+.choices { display: grid; gap: 8px; min-width: 0; margin-top: 12px; }
+
+.choice {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 12px;
+  border: 1px solid var(--reader-border, #e8e6e1);
+  border-radius: 6px;
+  background: var(--reader-bg, #fff);
+  color: inherit;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.choice[aria-pressed="true"] {
+  border-color: var(--reader-accent, #ae512f);
+  background: var(--reader-hover, #f3f2ef);
+  box-shadow: inset 0 0 0 1px var(--reader-accent, #ae512f);
+}
+
+.choiceHeading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.name { font-weight: 600; }
+.check { flex: 0 0 auto; color: var(--reader-accent, #ae512f); }
+.description { display: block; margin-top: 2px; color: var(--reader-muted, #76736d); font-size: 12px; }
+.sample { display: block; margin: 10px 0 0; font-size: 16px; font-weight: 400; line-height: 1.6; letter-spacing: normal; overflow-wrap: anywhere; }
+.selectedPreview { margin: 12px 0 0; }
+.picker[open] + .selectedPreview { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .summary, .choice { transition: background-color .12s ease, border-color .12s ease; }
+  .chevron { transition: transform .12s ease; }
+}

@@ -13,6 +13,7 @@ import type {
 } from "@/lib/reader";
 import { defaultReaderSettings } from "@/lib/reader";
 import styles from "./ReaderPanels.module.css";
+import ReaderFontPicker from "./ReaderFontPicker";
 
 type ReaderPanelsProps = {
   panel: ReaderPanel | null;
@@ -128,10 +129,7 @@ export function ReaderPanels({
           </div>
           <fieldset className={styles.setting}>
             <legend>Шрифт</legend>
-            <div className={styles.options}>
-              <button type="button" className={styles.serif} aria-pressed={settings.font === "serif"} onClick={() => updateSettings({ font: "serif" })}>С засечками</button>
-              <button type="button" aria-pressed={settings.font === "sans"} onClick={() => updateSettings({ font: "sans" })}>Без засечек</button>
-            </div>
+            <ReaderFontPicker value={settings.font} onChange={(font) => updateSettings({ font })} />
           </fieldset>
           <fieldset className={styles.setting}>
             <legend>Тема</legend>

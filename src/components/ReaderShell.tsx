@@ -9,6 +9,7 @@ import { readReadingPreference, useReadingPreference, writeReadingPreference } f
 import { parseBookmarks, parseLocation, parseSettings } from "@/lib/reader";
 import type { ReaderBookmark, ReaderHeading, ReaderPanel, ReaderSettings, ReaderSearchResult, ReadingLocation } from "@/lib/reader";
 import { ReaderPanels } from "./ReaderPanels";
+import { ensureReaderFont, readerFonts } from "@/lib/reader-fonts";
 import styles from "./ReaderShell.module.css";
 
 function Icon({ name }: { name: "back" | "next" | "contents" | "search" | "bookmark" | "focus" }) {
@@ -37,9 +38,12 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ReaderSearchResult[]>([]);
   const [notice, setNotice] = useState("");
+  const [draftSettings, setDraftSettings] = useState<ReaderSettings | null>(null);
+  const [fontReady, setFontReady] = useState(false);
   const article = useRef<HTMLDivElement>(null);
   const ready = useRef(false);
   const pending = useRef<ReadingLocation | null>(null);
+  const fontChangeVersion = useRef(0);
   const current = items.find(c => c.id === currentId)!;
   const available = items.filter(c => c.status === "available");
   const index = available.findIndex(c => c.id === currentId);
@@ -87,6 +91,9 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
   useEffect(() => {
     blocks.current = Array.from(article.current?.querySelectorAll<HTMLElement>("[data-reader-block]") || []);
     let frame = 0, startFrame = 0, saveTimer: ReturnType<typeof setTimeout> | undefined;
+    let disposed = false;
+    const fontRequests = fontChangeVersion;
+    const initialFontChangeVersion = fontRequests.current;
     ready.current = false;
     let lastLocation: ReadingLocation | null = null;
     const save = () => {
@@ -110,25 +117,42 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       try { id = decodeURIComponent(window.location.hash.slice(1)); } catch {}
       if (id && document.getElementById(id)) jump(id);
     };
-    startFrame = requestAnimationFrame(() => {
+    const initialize = async () => {
+      const savedSettings = parseSettings(
+        readReadingPreference("right-to-decide-settings"),
+        readReadingPreference("right-to-decide-font-size"),
+      );
+      try {
+        await ensureReaderFont(savedSettings.font, savedSettings.size);
+        if (!disposed && fontRequests.current === initialFontChangeVersion) setFontReady(true);
+      } catch {
+        if (!disposed && fontRequests.current === initialFontChangeVersion)
+          setNotice("Шрифт пока недоступен. Текст показан запасным шрифтом.");
+      }
+      if (disposed) return;
       startFrame = requestAnimationFrame(() => {
-        if (window.location.hash) hashJump();
-        else {
-          const saved = parseLocation(readReadingPreference(positionKey(currentId)));
-          if (saved) restore(saved);
-          else window.scrollTo({ top: 0, behavior: "instant" });
-        }
-        ready.current = true;
-        update();
-        save();
+        startFrame = requestAnimationFrame(() => {
+          if (disposed) return;
+          if (window.location.hash) hashJump();
+          else if (fontRequests.current === initialFontChangeVersion) {
+            const saved = parseLocation(readReadingPreference(positionKey(currentId)));
+            if (saved) restore(saved);
+            else window.scrollTo({ top: 0, behavior: "instant" });
+          }
+          ready.current = true;
+          update();
+          save();
+        });
       });
-    });
+    };
+    void initialize();
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
     window.addEventListener("pagehide", save);
     window.addEventListener("hashchange", hashJump);
     return () => {
-      save(); ready.current = false;
+      save(); ready.current = false; disposed = true;
+      fontRequests.current++;
       cancelAnimationFrame(startFrame); cancelAnimationFrame(frame); clearTimeout(saveTimer);
       window.removeEventListener("scroll", update); window.removeEventListener("resize", update);
       window.removeEventListener("pagehide", save); window.removeEventListener("hashchange", hashJump);
@@ -140,7 +164,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
     const location = pending.current;
     pending.current = null;
     restore(location);
-  }, [settings, restore]);
+  }, [settings, fontReady, restore]);
 
   useEffect(() => {
     if (!notice) return;
@@ -162,8 +186,21 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
     return () => window.removeEventListener("keydown", handle);
   }, [panel]);
 
-  function changeSettings(value: ReaderSettings) {
+  async function changeSettings(value: ReaderSettings) {
+    const request = ++fontChangeVersion.current;
+    setDraftSettings(value);
+    try { await ensureReaderFont(value.font, value.size); }
+    catch {
+      if (request === fontChangeVersion.current && article.current?.isConnected) {
+        setDraftSettings(null);
+        setNotice("Не удалось загрузить шрифт. Попробуйте ещё раз.");
+      }
+      return;
+    }
+    if (request !== fontChangeVersion.current || !article.current?.isConnected) return;
     pending.current = window.scrollY < 120 ? { blockId: "", offset: 0, progress: 0, revision: "" } : capture();
+    setFontReady(true);
+    setDraftSettings(null);
     writeReadingPreference("right-to-decide-settings", JSON.stringify(value));
     writeReadingPreference("right-to-decide-font-size", String(value.size));
   }
@@ -199,15 +236,17 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       return [{ id: element.id, excerpt: (start ? "…" : "") + value.slice(start, match + needle.length + 120) + (value.length > match + needle.length + 120 ? "…" : "") }];
     }));
   }
+  // A timed-out webfont must not swap in later and move the saved reading position.
+  const renderedFont = fontReady ? settings.font : settings.font === "golos" || settings.font === "sans" ? "sans" : "serif";
   const readerStyle = {
     "--reader-size": `${settings.size}px`, "--reader-spacing": settings.spacing,
     "--reader-width": `${{ narrow: 540, normal: 680, wide: 820 }[settings.width]}px`,
-    "--reader-font": settings.font === "serif" ? 'Georgia, "Times New Roman", serif' : 'Arial, Helvetica, sans-serif',
+    "--reader-font": readerFonts[renderedFont].family,
   } as CSSProperties;
   const percent = Math.round(progress * 100);
   const remaining = Math.max(0, Math.ceil(current.minutes * (1 - progress)));
   return (
-    <div className={styles.reader} data-theme={settings.theme} data-focus={focus} style={readerStyle} data-testid="reader">
+    <div className={styles.reader} data-theme={settings.theme} data-font={settings.font} data-focus={focus} style={readerStyle} data-testid="reader">
       <header className={styles.toolbar} data-testid="reader-toolbar" inert={focus}>
         <div className={styles.identity}>
           <Link href="/read/" className={styles.back} aria-label="К книге"><Icon name="back" /><span>К книге</span></Link>
@@ -234,7 +273,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
         </div>
         {next ? <Link href={`/read/${next.id}/`} className={styles.chapterNav} aria-label="Следующий раздел"><span>Следующий раздел</span><Icon name="next" /></Link> : <Link href="/contents/" className={styles.chapterNav}><span>К содержанию</span><Icon name="next" /></Link>}
       </footer>
-      <ReaderPanels panel={panel} onClose={() => setPanel(null)} settings={settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(bookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
+      <ReaderPanels panel={panel} onClose={() => setPanel(null)} settings={draftSettings || settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(bookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
       <div role="status" className={notice ? styles.toast : styles.srOnly}>{notice}</div>
     </div>
   );

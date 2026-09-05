@@ -153,7 +153,9 @@ try {
   await check("Settings keyboard controls, theme/font persistence and Escape focus", async () => {
     const settings = await openPanel(page, "Настройки чтения");
     await setRange(settings.getByRole("slider", { name: "Размер текста", exact: true }), 24);
-    for (const name of ["Без засечек", "Сепия", "Широкая"])
+    await settings.locator('[data-reader-font-picker-summary]').click();
+    await settings.getByRole("button", { name: "Arial", exact: true }).click();
+    for (const name of ["Сепия", "Широкая"])
       await settings.getByRole("button", { name, exact: true }).click();
     await screenshot(page, "desktop-settings-sepia");
     await closePanel(page, "Настройки чтения");
@@ -162,7 +164,8 @@ try {
     await page.reload({ waitUntil: "networkidle" });
     const restored = await openPanel(page, "Настройки чтения");
     assert.equal(await restored.getByRole("slider", { name: "Размер текста", exact: true }).inputValue(), "24");
-    for (const name of ["Без засечек", "Сепия", "Широкая"])
+    await restored.locator('[data-reader-font-picker-summary]').click();
+    for (const name of ["Arial", "Сепия", "Широкая"])
       assert.equal(await restored.getByRole("button", { name, exact: true }).getAttribute("aria-pressed"), "true", name + " persists");
     assert.equal(await page.locator(".reading-copy").evaluate((element) => getComputedStyle(element).fontFamily), font);
     await restored.getByRole("button", { name: "Тёмная", exact: true }).click();

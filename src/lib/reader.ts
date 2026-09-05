@@ -1,6 +1,7 @@
+export type ReaderFont = "serif" | "sans" | "literata" | "source-serif" | "golos";
 export type ReaderSettings = {
   theme: "light" | "sepia" | "dark";
-  font: "serif" | "sans";
+  font: ReaderFont;
   size: number;
   spacing: number;
   width: "narrow" | "normal" | "wide";
@@ -17,7 +18,7 @@ export function parseSettings(raw: string | null, legacySize: string | null): Re
   const size = Number(saved.size ?? legacySize);
   return {
     theme: ["light", "sepia", "dark"].includes(saved.theme || "") ? saved.theme! : "light",
-    font: saved.font === "sans" ? "sans" : "serif",
+    font: ["serif", "sans", "literata", "source-serif", "golos"].includes(saved.font || "") ? saved.font! : "serif",
     size: Number.isFinite(size) && size >= 16 && size <= 28 ? size : 20,
     spacing: [1.5, 1.8, 2.1].includes(Number(saved.spacing)) ? Number(saved.spacing) : 1.8,
     width: ["narrow", "normal", "wide"].includes(saved.width || "") ? saved.width! : "normal",
