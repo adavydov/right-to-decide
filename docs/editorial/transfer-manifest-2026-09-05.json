@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-05",
+  "sourceTask": {
+    "id": "01a0702b-2a99-7760-ba13-1ef50fec5bf9",
+    "title": "Усилить монографию Право на решение"
+  },
+  "sourceDirectory": "Ньютон книги/docs",
+  "destinationRepository": "https://github.com/adavydov/right-to-decide",
+  "editorialVersions": {
+    "architecture": "0.2",
+    "roles": "0.2",
+    "chapterPacket": "0.2",
+    "style": "STYLE-01 1.0"
+  },
+  "scope": "Complete original editorial folder only. Research report, manuscript audit, and raw manuscript/case extracts remain local in the original workspace and are not included in this Git transfer.",
+  "integrity": "SHA-256 of original file bytes. Imported snapshot paths use -text in .gitattributes to preserve bytes through Git.",
+  "files": [
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/apply_style_rule.py",
+      "bytes": 9786,
+      "sha256": "e346d9be240dab4a521537ac7fd5b2bebf5510cb13f1b1423bdfac5b326631cf"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/build_design_docx.py",
+      "bytes": 4979,
+      "sha256": "1704a9805895651a7fb1bd8048e4784c5c2db6101612b98e292caf0914577ad6"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/build_style_docx.py",
+      "bytes": 4933,
+      "sha256": "2beb3d9f45771d19003f0ca9041d276a7d210833c455a1e95bd1e27b591f9b0d"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/chapter-packet-and-pilot.md",
+      "bytes": 21727,
+      "sha256": "a12c7f01edbd7ba67a3e6011fe0c72581f30dd536fc80f845a9abdbeefb34229"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-agent-architecture.docx",
+      "bytes": 51641,
+      "sha256": "fd5d76125b16c07638c7acaac59b0e3aad67aa3b3a6522ae72463dd27d0567af"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-agent-architecture.md",
+      "bytes": 44969,
+      "sha256": "a90dbb9a5adbe978aa8f7dc0157dc754d9d10a63516597a4d71e91a7f8426445"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-agent-architecture.pdf",
+      "bytes": 180051,
+      "sha256": "37a54b66d3ce587e6fcd528df28951a11b3897cac2a0ea413bfe19fd815f286c"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-style.docx",
+      "bytes": 45166,
+      "sha256": "0e71656b40378cd59d7876cf42d2e62f290238c4b5625d6597be45f0f76972d9"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-style.md",
+      "bytes": 22067,
+      "sha256": "368f02e44010dd7cdc4d861594ecb5aad5cff96b228eef5c5aabf4599d5f690c"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/editorial-style.pdf",
+      "bytes": 127661,
+      "sha256": "8ae82e79f003bbe77d9dbcd1a9ec7ef33fb4b128cf058fc522664317d8dca28a"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/prepare_builder.py",
+      "bytes": 1657,
+      "sha256": "5cbe98a3a60c1637d4c7a84029d535630d0fde66945156ab6a69574d199a5885"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/preview_design.py",
+      "bytes": 1454,
+      "sha256": "87d4ba1370d0df9a1e168a4743f1cca04cb7c5abdfc2bf9da49d0675b1257fb7"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/preview-page-1.png",
+      "bytes": 174772,
+      "sha256": "7fc0696bbe41abc51a2b322d4bbb82919b4d685c758d0533b85c7e1b2d5a0121"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/preview-page-3.png",
+      "bytes": 169987,
+      "sha256": "768bd094aeadeeffe1d94c2fd4697174e13efecba8a2571ca01e1ed09ff347a9"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/refresh_documents.py",
+      "bytes": 1347,
+      "sha256": "22a2cd86079a69a2978d2d0b25d6317555025c67afa2d40bf389b86925f0ad98"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/revisions/v0.1-before-style-01/chapter-packet-and-pilot.md",
+      "bytes": 20573,
+      "sha256": "f78102b98a728f4c47e37af90dca27e5d2f32af3b8f1490cbbe0cb1317b7e8b2"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/revisions/v0.1-before-style-01/editorial-agent-architecture.docx",
+      "bytes": 50908,
+      "sha256": "ed614fd105774785480d995c587751e1a3a1f4933d1081ab5d4d1de9bb4b443e"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/revisions/v0.1-before-style-01/editorial-agent-architecture.md",
+      "bytes": 42121,
+      "sha256": "06ecc03953b4dbef45e28bc569121e9b8dff8ab8746f59d5917f58672f44611a"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/revisions/v0.1-before-style-01/editorial-agent-architecture.pdf",
+      "bytes": 174509,
+      "sha256": "d067565a98c74c49deeaa53b891eae9a66bcecb8653ba91b70e164aadafad0c3"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/revisions/v0.1-before-style-01/role-contracts.md",
+      "bytes": 27835,
+      "sha256": "1528ee9f14849bb94554ee1cf498c0cffd9adef3db9dd87ec923b91d88ba39d5"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/role-contracts.md",
+      "bytes": 31088,
+      "sha256": "de9ba07a1f5fbfad305d2a3c16a9a09bc6f4dc6ebb8926a4027c556fdf5d680b"
+    },
+    {
+      "path": "docs/editorial/agent-system-2026-09-05/style-preview-page-1.png",
+      "bytes": 206580,
+      "sha256": "311eb2714463a64ef46539e792e3acdd0e3298be26894201ef82376c99213516"
+    }
+  ]
+}

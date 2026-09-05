@@ -7,3 +7,6 @@
 # Batch files must always use CRLF
 *.bat text eol=crlf
 *.cmd text eol=crlf
+
+# Preserve exact original bytes of the imported editorial snapshot.
+docs/editorial/agent-system-2026-09-05/** -text
