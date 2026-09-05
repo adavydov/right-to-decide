@@ -13,3 +13,6 @@ docs/editorial/agent-system-2026-09-05/** -text
 # Preserve the exact reviewed public evidence snapshots.
 src/data/library.json -text whitespace=cr-at-eol
 src/data/evidence-cards.json -text whitespace=cr-at-eol
+
+# Keep the author preface checksum stable on Windows and Linux.
+manuscript/2026-09-05-rebuild/preface-v8.0.md text eol=lf

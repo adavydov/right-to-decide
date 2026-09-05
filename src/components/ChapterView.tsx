@@ -212,7 +212,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
   return (
     <main id="main-content" className="reader-page">
       <ReaderShell key={chapter.id} currentId={chapter.id} items={items}
-        revision={book.source.sha256}
+        revision={chapter.source?.sha256 ?? book.source.sha256}
         headings={chapter.blocks.flatMap(block => block.type === "heading" ? [{ id: block.id, title: displayBookTitle(block.text) }] : [])}
       >
         <article>

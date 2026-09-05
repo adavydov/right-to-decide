@@ -269,6 +269,8 @@ def main():
         importer = Importer(archive)
         extracted = importer.run()
     result = {"schemaVersion": 1, "title": "Право на решение", "subtitle": "Инженерное образование как система воспроизводства доверенной способности к решению в эпоху искусственного интеллекта", "edition": args.edition, "publicationStatus": "draft", "source": {"filename": source.name, "format": "docx", "sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "importer": "scripts/import-manuscript.py", "textPolicy": "Текст авторской рукописи без редакторского изменения; формулы представлены линейной записью с сохранением исходного OMML."}, **extracted}
+    from author_preface import apply_author_preface
+    apply_author_preface(result)
     serialized = json.dumps(result, ensure_ascii=False, indent=2)+"\n"
     destination = ROOT/"src/data/book.json"
     if args.check:
