@@ -11,11 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/contents/",
     "/manifesto/",
-    "/archive/",
     "/authors/",
     "/read/",
     "/library/",
-    "/wiki/",
     ...cards.map((card) => "/wiki/" + card.id + "/"),
     ...readingChapters
       .filter((chapter) => chapter.status === "available")

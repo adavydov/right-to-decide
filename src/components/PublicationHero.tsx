@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { assetPath, siteConfig } from "@/lib/site-config";
+import { home } from "@/data/site-copy.json";
 import styles from "./PublicationHero.module.css";
 
 export function PublicationHero() {
@@ -9,15 +10,14 @@ export function PublicationHero() {
       <div className="wrap">
         <header className={styles.introduction}>
           <p className={`eyebrow ${styles.eyebrow}`}>
-            Человек, искусственный интеллект и образование
+            {home.hero.eyebrow}
           </p>
           <h1 id="publication-title" className={styles.title}>
             {siteConfig.title}
           </h1>
           <p className={styles.subtitle}>{siteConfig.subtitle}</p>
           <p className={styles.answer}>
-            Как сделать так, чтобы работа рядом с сильным ИИ развивала человеческую
-            способность ставить цели, создавать новое и менять общий курс.
+            {home.hero.answer}
           </p>
           <div className={styles.actions}>
             <Link href="/read/" className="button">
@@ -38,24 +38,22 @@ export function PublicationHero() {
 
         <figure className={styles.figure}>
           <div className={styles.stage}>
-            <div className={styles.book}>
               <Image
                 className={styles.cover}
                 src={assetPath(siteConfig.coverPath)}
-                alt="Обложка книги «Право на решение. Как остаться авторами будущего рядом с более сильным интеллектом»"
+                alt="Терракотовая линия меняет траекторию сложной орбитальной структуры и открывает несколько новых направлений — образ права на самостоятельное решение."
                 width={siteConfig.coverWidth}
                 height={siteConfig.coverHeight}
-                sizes="(max-width: 375px) 76vw, (max-width: 760px) 280px, (max-width: 1100px) 280px, 320px"
+                sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) calc(100vw - 96px), 1240px"
                 priority
               />
-            </div>
           </div>
           <figcaption className={styles.caption}>
             <span className={styles.captionIdea}>
-              Знание. Самостоятельность. Возможность изменить будущее.
+              {home.hero.captionIdea}
             </span>
             <span className={styles.edition}>
-              Сайт обновлён · 6 сентября 2026
+              Электронная книга · 2026
             </span>
           </figcaption>
         </figure>

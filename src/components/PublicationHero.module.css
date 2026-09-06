@@ -77,62 +77,17 @@
 }
 
 .stage {
-  position: relative;
-  display: grid;
-  place-items: center;
-  height: 600px;
   overflow: hidden;
   border-radius: 12px;
-  background:
-    radial-gradient(ellipse at 43% 13%, #f3eee4 0, transparent 64%),
-    linear-gradient(130deg, #e5e0d6 0%, #dfd5c6 62%, #d4c5b1 100%);
-  isolation: isolate;
-}
-
-.stage::before {
-  position: absolute;
-  right: -15%;
-  bottom: -70%;
-  left: -15%;
-  height: 110%;
-  border-top: 1px solid #ffffff45;
-  background: #ffffff0d;
-  content: "";
-  transform: rotate(-12deg);
-  z-index: -1;
-}
-
-.book {
-  position: relative;
-  width: 320px;
-  transform: perspective(1600px) rotateY(-8deg) rotateZ(-3deg);
-  filter: drop-shadow(24px 30px 23px #4b382d36);
-}
-
-.book::before {
-  position: absolute;
-  top: 4px;
-  right: -9px;
-  bottom: 2px;
-  width: 12px;
-  border: 1px solid #c7bdac;
-  border-radius: 0 2px 2px 0;
-  background: repeating-linear-gradient(
-    to right,
-    #e4ddcf 0,
-    #f8f4e9 1px,
-    #ded5c5 2px
-  );
-  content: "";
-  transform: skewY(5deg);
-  z-index: -1;
+  background: var(--paper-strong);
 }
 
 .cover {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 1px 2px 2px 1px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .caption {
@@ -170,14 +125,6 @@
 
   .answer {
     max-width: 620px;
-  }
-
-  .stage {
-    height: 500px;
-  }
-
-  .book {
-    width: 280px;
   }
 
   .caption {
@@ -231,18 +178,12 @@
   }
 
   .stage {
-    height: 470px;
+    border-radius: 8px;
   }
 
-  .book {
-    width: min(280px, 76vw);
-    transform: perspective(1600px) rotateY(-6deg) rotateZ(-2deg);
-    filter: drop-shadow(12px 15px 15px #4b382d30);
-  }
-
-  .book::before {
-    right: -6px;
-    width: 9px;
+  .cover {
+    aspect-ratio: 1 / 1;
+    object-position: 54% center;
   }
 
   .caption {

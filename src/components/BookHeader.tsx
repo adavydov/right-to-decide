@@ -20,7 +20,6 @@ export function BookHeader() {
     { href: "/manifesto/", label: "Манифест" },
     { href: "/authors/", label: "Авторы" },
     { href: "/library/", label: "Библиотека" },
-    { href: "/wiki/", label: "Вики" },
   ];
   return (
     <>
@@ -58,7 +57,8 @@ export function BookHeader() {
                 href={l.href}
                 onClick={() => setOpen(false)}
                 aria-current={
-                  pathname === l.href || pathname === l.href.slice(0, -1)
+                  pathname === l.href || pathname === l.href.slice(0, -1) ||
+                  (l.href === "/library/" && pathname.startsWith("/wiki/"))
                     ? "page"
                     : undefined
                 }

@@ -1,6 +1,35 @@
 import Link from "next/link";
-import {ContentsCatalog} from "@/components/ContentsCatalog";
-import {book,readingChapters,getChapterReadingMinutes,publicationSummary} from "@/lib/book";
-import {assetPath,siteConfig} from "@/lib/site-config";
-export const metadata={title:"Развёрнутое содержание",alternates:{canonical:siteConfig.publicUrl+"/contents/"}};
-export default function ContentsPage(){const items=readingChapters.filter(c=>c.id!=="contents").map(c=>({id:c.id,title:c.outlineTitle||c.title,part:c.part,kind:c.kind,number:c.number,status:c.status,summary:c.summary,docx:c.download?.docx,minutes:getChapterReadingMinutes(c)}));return <main id="main-content" className="subpage wrap"><div className="page-heading-row"><div><p className="eyebrow">Карта книги</p><h1 className="page-heading">Развёрнутое содержание</h1><p className="page-intro">Пролог, шесть частей, восемнадцать глав и эпилог: от мира, который может развиваться без нас, к устройству деятельности, открытой следующим поколениям.</p><p className="page-intro" style={{marginTop:18}}>{publicationSummary} Ниже — структура и авторские функции глав из конституции проекта.</p><p className="eyebrow" style={{marginTop:22}}><span className="status-dot"/>Содержание · версия {book.version} · {book.edition.split("-").reverse().join(".")}</p><p style={{marginTop:18}}><a className="text-link" href={assetPath("/book/contents-v5.1.md")} download>Скачать содержание ↗</a></p></div><Link href="/read/contents/" className="button">Открыть в читалке ↗</Link></div><ContentsCatalog items={items} parts={book.parts}/><div className="edition-notice"><p>Тексты прежней редакции сохранены в <Link className="text-link" href="/archive/">архиве книги</Link>. {book.editionVersion === "6.0" ? <>Редакция 6.0 собрана по <Link className="text-link" href="/manifesto/">конституции проекта</Link> и мастер-прологу. Рядом с каждым опубликованным текстом доступна копия в Word.</> : <>Обновление структуры по <Link className="text-link" href="/manifesto/">конституции проекта</Link> не означает повторной приёмки опубликованных глав.</>}</p></div></main>}
+import { contents } from "@/data/site-copy.json";
+import { ContentsCatalog } from "@/components/ContentsCatalog";
+import { book, readingChapters, publicationSummary, getChapterReadingMinutes } from "@/lib/book";
+import { assetPath, siteConfig } from "@/lib/site-config";
+
+export const metadata = {
+  title: "Развёрнутое содержание",
+  alternates: { canonical: siteConfig.publicUrl + "/contents/" },
+};
+
+export default function ContentsPage() {
+  const items = readingChapters.filter(chapter => chapter.id !== "contents").map(chapter => ({
+    id: chapter.id, title: chapter.outlineTitle || chapter.title, part: chapter.part,
+    kind: chapter.kind, number: chapter.number, status: chapter.status, summary: chapter.summary,
+    docx: chapter.download?.docx, minutes: getChapterReadingMinutes(chapter),
+  }));
+  return <main id="main-content" className="subpage wrap">
+    <div className="page-heading-row">
+      <div>
+        <p className="eyebrow">Карта книги</p>
+        <h1 className="page-heading">Развёрнутое содержание</h1>
+        <p className="page-intro">{contents.intro}</p>
+        <p className="page-intro" style={{ marginTop: 18 }}>{publicationSummary}</p>
+        <p style={{ marginTop: 22 }}><a className="text-link" href={assetPath("/book/contents-v5.1.md")} download>Скачать содержание ↓</a></p>
+      </div>
+      <Link href="/read/contents/" className="button">Открыть в читалке ↗</Link>
+    </div>
+    <ContentsCatalog items={items} parts={book.parts} />
+    <div className="book-callout">
+      <div><h3>Мир меняется.<br />Кто сможет менять его дальше?</h3><p>Начните с пролога — о прогрессе, который не обещает каждому место в будущем.</p></div>
+      <Link className="button" href="/read/prologue/">Читать пролог ↗</Link>
+    </div>
+  </main>;
+}

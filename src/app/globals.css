@@ -697,16 +697,17 @@ a:hover {
 }
 .read-entrance {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr minmax(300px, 0.85fr);
   gap: 100px;
   align-items: center;
   min-height: 570px;
 }
 .entrance-cover {
-  width: 300px;
-  transform: rotate(3deg);
-  box-shadow: 22px 30px 45px #33261b25;
-  border-radius: 3px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 54% center;
+  border-radius: 12px;
 }
 .preview-row > span:nth-child(2) {
   text-transform: none;
@@ -717,7 +718,7 @@ a:hover {
     gap: 45px;
   }
   .entrance-cover {
-    width: 220px;
+    width: 100%;
   }
 }
 @media (max-width: 760px) {
@@ -729,7 +730,7 @@ a:hover {
     min-height: 0;
   }
   .entrance-cover {
-    width: 220px;
+    width: min(100%, 460px);
     align-self: center;
     margin-bottom: 20px;
   }

@@ -2,6 +2,7 @@
 import copy
 import importlib.util
 import json
+import re
 from pathlib import Path
 import unittest
 
@@ -48,6 +49,19 @@ class ReleaseBoundaries(unittest.TestCase):
         self.assertEqual(self.base["chapters"][-1]["title"], "Эпилог. Следующий вопрос — не наш")
         source = (release.ROOT / release.outline.SOURCE).read_bytes()
         self.assertEqual(source, release.outline.source_projection())
+
+    def test_reader_contents_preserves_structure_and_rejects_extra_prose(self):
+        raw = (release.ROOT / release.outline.SOURCE).read_bytes()
+        text = raw.decode("utf-8")
+        headings = lambda value: re.findall(r"(?m)^#{1,3} .+$", value)
+        self.assertEqual(headings(text), headings(release.outline.constitution_projection().decode("utf-8")))
+        for changed in [text + "\nЛишний технический абзац.\n", text.replace("## Часть I.", "## Часть X.", 1)]:
+            with self.subTest(changed=changed[-60:]), self.assertRaises(ValueError):
+                release.outline.validate_reader_outline(changed.encode("utf-8"))
+        chunks = re.split(r"\n\s*\n", text.strip())
+        chunks[3] = "Самостоятельный читательский абзац без изменения структуры."
+        edited = ("\n\n".join(chunks) + "\n").encode("utf-8")
+        self.assertEqual(release.outline.validate_reader_outline(edited), edited)
 
     def test_paragraphs_subheadings_and_separators_keep_order(self):
         body = "Первый абзац.\nСтрока того же абзаца.\n\n## Новый вопрос\n\n⸻\n\nПоследний абзац."

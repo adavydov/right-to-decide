@@ -1,4 +1,4 @@
-"""Project Constitution §7 into the current outline without publishing chapter prose."""
+"""Build the reader outline while preserving the architecture of Constitution §7."""
 from __future__ import annotations
 
 import hashlib
@@ -24,7 +24,7 @@ def encoded(value):
     return (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 
 
-def source_projection() -> bytes:
+def constitution_projection() -> bytes:
     text = (ROOT / CONSTITUTION).read_text("utf-8-sig").replace("\r\n", "\n")
     section = text.split("## 7. Архитектура книги\n", 1)[1].split("\n## 8.", 1)[0].strip()
     paragraphs = []
@@ -40,10 +40,40 @@ def source_projection() -> bytes:
             + "\n\n".join(paragraphs) + "\n").encode("utf-8")
 
 
+def validate_reader_outline(raw: bytes) -> bytes:
+    """Reader prose may evolve; the ordered constitutional headings may not drift."""
+    text = raw.decode("utf-8-sig").replace("\r\n", "\n")
+    expected = re.findall(r"(?m)^#{1,3} .+$", constitution_projection().decode("utf-8"))
+    actual = re.findall(r"(?m)^#{1,3} .+$", text)
+    if actual != expected:
+        raise ValueError("Reader contents headings/order differ from Constitution §7")
+    chunks = re.split(r"\n\s*\n", text.strip())
+    if chunks[:2] != constitution_projection().decode("utf-8").strip().split("\n\n")[:2]:
+        raise ValueError("Reader contents book title/subtitle changed")
+    described = 0
+    index = 2
+    while index < len(chunks):
+        heading = chunks[index]
+        if heading.startswith("## Часть "):
+            index += 1
+            continue
+        if not re.fullmatch(r"#{2,3} (?:Пролог|Эпилог|\d+)\. .+", heading):
+            raise ValueError("Reader contents contains material outside its section summaries")
+        if index + 1 >= len(chunks) or re.match(r"[#>*`~-]|[-+] ", chunks[index + 1]):
+            raise ValueError("Every reader section needs exactly one prose paragraph")
+        described += 1
+        index += 2
+    if described != 20:
+        raise ValueError("Reader contents needs prologue, eighteen chapters and epilogue")
+    return raw
+
+
+def source_projection() -> bytes:
+    return validate_reader_outline((ROOT / SOURCE).read_bytes())
+
+
 def build():
     raw = source_projection()
-    if (ROOT / SOURCE).exists() and (ROOT / SOURCE).read_bytes() != raw:
-        raise ValueError("contents-v5.1.md differs from Constitution §7; update the explicit projection")
     chunks = re.split(r"\n\s*\n", raw.decode("utf-8").strip())
     parts, definitions, blocks = [], [], []
     prologue, epilogue, current = None, None, None
@@ -58,7 +88,6 @@ def build():
         if not heading:
             if current is not None:
                 current["summary"].append(text)
-                # The closing architecture policy belongs to the outline, not the epilogue summary.
                 current = None
             continue
         if text.startswith("Часть "):
@@ -106,7 +135,7 @@ def build():
             "publicationStatus": "published",
             "source": {"filename": SOURCE.name, "format": "constitution_outline", "sha256": sha(raw),
                        "importer": "scripts/constitution_contents.py",
-                       "textPolicy": "Точная архитектурная проекция §7 Конституции 1.1. Сохранены опубликованные тексты; новая редакционная приёмка не заявляется."},
+                       "textPolicy": "Читательская редакция аннотаций по прямому поручению автора от 06.09.2026. Заголовки и порядок соответствуют §7 конституции; тексты глав сохранены."},
             "parts": parts, "chapters": chapters, "notes": [],
             "statistics": {"sections": len(chapters), "chapters": 18, "parts": 6, "availableChapters": 0,
                            "plannedChapters": 18, "blocks": sum(len(c["blocks"]) for c in chapters), "notes": 0,
@@ -114,13 +143,13 @@ def build():
     manifest = {"releaseId": book["releaseId"], "version": "5.1", "edition": book["edition"],
                 "constitution": {"path": CONSTITUTION.as_posix(), "sha256": sha((ROOT / CONSTITUTION).read_bytes()), "section": "7"},
                 "authorSource": source,
-                "sourceSelection": "По поручению автора от 06.09.2026 правила пересобраны по Конституции 1.1; оглавления v4.0 и v5.0 сохранены как история. Согласие всех соавторов не заявляется.",
-                "normalization": "Раздел 7 целиком; жирные заголовки вынесены в Markdown-заголовки, описания сохранены в том же порядке. Названия в навигации без конечной точки.",
+                "sourceSelection": "По прямому поручению автора от 06.09.2026 аннотации переписаны для читателя. Структура 5.1 сохранена; прежняя редакционная проекция §7 сохранена в docs/editorial/revisions/before-digital-edition-2026-09-06/.",
+                "normalization": "Названия и порядок сверяются с §7; у пролога, каждой главы и эпилога ровно один читательский абзац. Техническая политика композиции остаётся в конституции. Названия в навигации без конечной точки.",
                 "bookSha256": sha(encoded(book)),
                 "archive": {"path": ARCHIVE.as_posix(), "sha256": sha((ROOT / ARCHIVE).read_bytes())},
                 "importerSha256": sha(Path(__file__).read_bytes()),
                 "checks": {"parts": 6, "numberedChapters": 18, "plannedChapters": 18, "prologue": True,
-                           "separateEpilogue": True, "allAuthorParagraphsPreserved": True},
+                           "separateEpilogue": True, "constitutionalHeadingsPreserved": True, "oneReaderParagraphPerSection": True},
                 "prologue": current_prologue["source"],
                 "scope": "Архитектура книги. Написание и повторная приёмка пролога, глав и эпилога не выполнялись; доступность прозы задаётся отдельным литературным выпуском."}
     return {Path("src/data/book.json"): encoded(book), SOURCE: raw, DOWNLOAD: raw, MANIFEST: encoded(manifest)}

@@ -71,7 +71,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
   return (
     <main id="main-content" className={`subpage wrap ${styles.articlePage}`}>
       <nav aria-label="Хлебные крошки" className={styles.breadcrumb}>
-        <Link href="/wiki/">Вики</Link>
+        <Link href="/library/">Библиотека</Link>
         <span aria-hidden="true">/</span>
         <span aria-current="page">{card.title}</span>
       </nav>
@@ -211,7 +211,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
         </section>
       )}
       <nav className={styles.backlinks} aria-label="Продолжение чтения">
-        <Link href="/wiki/">← Все свидетельства</Link>
+        <Link href="/library/#history">← Все свидетельства</Link>
         <Link href="/library/">Библиотека <span aria-hidden="true">↗</span></Link>
       </nav>
     </main>

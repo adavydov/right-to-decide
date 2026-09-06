@@ -9,24 +9,23 @@
   },
   "authorSource": {
     "path": "manuscript/2026-09-05-rebuild/contents-v5.1.md",
-    "sha256": "07fecd4dc66f0b0d7acad2d609e6e18bb9d3003af5c825b007a9dbc532e2f855"
+    "sha256": "3504c509a3745aed4b9c24f17e53b480c5984a47562acb29cd8895f8d79d06a6"
   },
-  "sourceSelection": "По прямому поручению автора от 06.09.2026 аннотации переписаны для читателя. Структура 5.1 сохранена; прежняя редакционная проекция §7 сохранена в docs/editorial/revisions/before-digital-edition-2026-09-06/.",
-  "normalization": "Названия и порядок сверяются с §7; у пролога, каждой главы и эпилога ровно один читательский абзац. Техническая политика композиции остаётся в конституции. Названия в навигации без конечной точки.",
-  "bookSha256": "2338f22b6547c9282ae61c8beb200074a982350d4daf69e281b5b1fb3e0ba9a9",
+  "sourceSelection": "По поручению автора от 06.09.2026 правила пересобраны по Конституции 1.1; оглавления v4.0 и v5.0 сохранены как история. Согласие всех соавторов не заявляется.",
+  "normalization": "Раздел 7 целиком; жирные заголовки вынесены в Markdown-заголовки, описания сохранены в том же порядке. Названия в навигации без конечной точки.",
+  "bookSha256": "682b767af0651d7bc191b855a98387bdd4eb800750a4ede24e14e45b9dce3b5f",
   "archive": {
     "path": "src/data/previous-edition.json",
     "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
   },
-  "importerSha256": "51fcabe7a25861557131b4fc1a70c469574c4a44bbe793c801f73a44ce43ad8b",
+  "importerSha256": "cc4836de7dafef3185f12556c8bea1fd89ebab57d298304b10ee1bf36933fc8f",
   "checks": {
     "parts": 6,
     "numberedChapters": 18,
     "plannedChapters": 18,
     "prologue": true,
     "separateEpilogue": true,
-    "constitutionalHeadingsPreserved": true,
-    "oneReaderParagraphPerSection": true
+    "allAuthorParagraphsPreserved": true
   },
   "prologue": {
     "path": "manuscript/2026-09-05-rebuild/prologue-v1.0.md",

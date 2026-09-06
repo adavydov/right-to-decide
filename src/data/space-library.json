@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "catalogDates": [
+    "2026-09-05",
+    "2026-09-06"
+  ],
+  "note": "Библиографическая подборка из исследовательских пакетов 5–6 сентября 2026 года. Добавление в этот раздел не означает новой проверки внешних публикаций.",
+  "sources": [
+    {
+      "id": "space-isru",
+      "title": "Использование местных ресурсов в космосе",
+      "originalTitle": "In Situ Resource Utilization overview",
+      "publisher": "NASA",
+      "topic": "Ресурсы и производство",
+      "url": "https://www.nasa.gov/overview-in-situ-resource-utilization/",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S001"
+    },
+    {
+      "id": "space-bennu",
+      "title": "Что рассказывает образец Бенну",
+      "originalTitle": "Surprising Phosphate Finding in NASA’s OSIRIS-REx Asteroid Sample",
+      "publisher": "NASA",
+      "topic": "Астероиды и образцы",
+      "url": "https://www.nasa.gov/missions/osiris-rex/surprising-phosphate-finding-in-nasas-osiris-rex-asteroid-sample/",
+      "catalog": "Resource Foundry · Asteroid Industry Lab",
+      "catalogDate": "2026-09-06",
+      "sourceId": "S002 / S10"
+    },
+    {
+      "id": "space-hayabusa",
+      "title": "Hayabusa2: исследование астероида Рюгу",
+      "originalTitle": "Hayabusa2",
+      "publisher": "JAXA",
+      "topic": "Астероиды и образцы",
+      "url": "https://global.jaxa.jp/projects/sas/hayabusa2/",
+      "catalog": "Resource Foundry · Asteroid Industry Lab",
+      "catalogDate": "2026-09-06",
+      "sourceId": "S003 / S12"
+    },
+    {
+      "id": "space-moon-water",
+      "title": "Вода на Луне",
+      "originalTitle": "Exploring the Presence of Water on the Moon",
+      "publisher": "NASA",
+      "topic": "Ресурсы и производство",
+      "url": "https://science.nasa.gov/science-research/planetary-science/exploring-the-presence-of-water-on-the-moon/",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S004"
+    },
+    {
+      "id": "space-orbits",
+      "title": "База малых тел: орбиты и параметры",
+      "originalTitle": "SBDB API documentation",
+      "publisher": "NASA / JPL",
+      "topic": "Маршруты и транспорт",
+      "url": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S007"
+    },
+    {
+      "id": "space-nhats",
+      "title": "Доступность астероидов: определения NHATS",
+      "originalTitle": "NHATS details and definitions",
+      "publisher": "NASA / JPL",
+      "topic": "Маршруты и транспорт",
+      "url": "https://cneos.jpl.nasa.gov/nhats/details.html",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S008"
+    },
+    {
+      "id": "space-propulsion",
+      "title": "Солнечная электрореактивная тяга",
+      "originalTitle": "Solar Electric Propulsion",
+      "publisher": "NASA",
+      "topic": "Энергия и движение",
+      "url": "https://www.nasa.gov/space-technology-mission-directorate/tdm/solar-electric-propulsion/",
+      "catalog": "Asteroid Industry Lab",
+      "catalogDate": "2026-09-06",
+      "sourceId": "S07"
+    },
+    {
+      "id": "space-minerals",
+      "title": "Минеральное сырьё: мировой обзор 2026 года",
+      "originalTitle": "Mineral Commodity Summaries 2026",
+      "publisher": "USGS",
+      "topic": "Рынки и спрос",
+      "url": "https://pubs.usgs.gov/publication/mcs2026",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S010"
+    },
+    {
+      "id": "space-treaty",
+      "title": "Договор о космосе",
+      "originalTitle": "Outer Space Treaty",
+      "publisher": "ООН / UNOOSA",
+      "topic": "Право и ответственность",
+      "url": "https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties/introouterspacetreaty.html",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S012"
+    },
+    {
+      "id": "space-resource-law",
+      "title": "Правовые вопросы использования космических ресурсов",
+      "originalTitle": "Working Group on Legal Aspects of Space Resource Activities",
+      "publisher": "ООН / UNOOSA",
+      "topic": "Право и ответственность",
+      "url": "https://www.unoosa.org/oosa/en/ourwork/copuos/lsc/space-resources/index.html",
+      "catalog": "Resource Foundry",
+      "catalogDate": "2026-09-05",
+      "sourceId": "S013"
+    }
+  ],
+  "projects": [
+    {
+      "id": "resource-foundry",
+      "title": "Resource Foundry",
+      "version": "0.1",
+      "date": "2026-09-05",
+      "subtitle": "От вещества в астероиде — к продукту, который кому-то нужен",
+      "description": "Исследовательский проект связывает добычу с её назначением: какой ресурс нужен покупателю, где его будут использовать, как доставить и какие испытания должны предшествовать поставке. Вода для работы в космосе, металлы для Земли и местное производство требуют разных решений. Для книги это способ удержать вместе техническую возможность и смысл будущего предприятия.",
+      "questions": [
+        "Как выбор покупателя меняет ресурс, маршрут и способ производства?",
+        "Когда лунный узел помогает предприятию, а когда добавляет лишний этап?",
+        "Какие испытания позволяют продолжать разработку — и какие результаты требуют остановки?"
+      ],
+      "boundary": "Предпроект с условными расчётами. Наличие ресурса, спрос и готовность производственной цепочки требуют собственных подтверждений.",
+      "sourceIds": [
+        "space-isru",
+        "space-bennu",
+        "space-nhats",
+        "space-minerals"
+      ]
+    },
+    {
+      "id": "asteroid-industry-lab",
+      "title": "Asteroid Industry Lab",
+      "version": "0.1.0",
+      "date": "2026-09-06",
+      "subtitle": "Что происходит с замыслом, когда считаешь энергию и массу",
+      "description": "Исследовательский проект прослеживает, как способ переработки определяет мощность, размеры оборудования, теплоотвод и стоимость доставки. Лунная вода, возврат платины и электрореактивный транспорт рассматриваются раздельно. Для книги это проверка цены обещанного изобилия: какие ограничения сохраняются даже при сильном интеллекте и что потребуется узнать до следующего шага.",
+      "questions": [
+        "Сколько оборудования и энергии требует выбранный способ извлечения ресурса?",
+        "Как обратный груз меняет транспорт и экономику предприятия?",
+        "Какие неизвестные нужно проверить прежде, чем увеличивать масштаб?"
+      ],
+      "boundary": "Раннее исследование с условными моделями. Воспроизводимость расчёта не подтверждает исходные физические параметры или окупаемость.",
+      "sourceIds": [
+        "space-moon-water",
+        "space-propulsion",
+        "space-minerals",
+        "space-treaty"
+      ]
+    }
+  ]
+}

@@ -130,7 +130,8 @@ if (!isV6) {
   }
   assert.ok(prologue.blocks.some(b => b.runs?.some(r => r.href)), "Master prologue source links are missing");
 }
-assert.equal(contents.blocks.length, 47, "Constitution architecture contains 20 described sections, six parts and its closing policy");
+assert.equal(contents.blocks.length, 46, "Reader outline contains 20 headings and summaries, plus six part headings");
+assert.equal(contents.blocks.filter(block => block.type === "paragraph").length, 20, "Each reader section has one paragraph");
 assert.equal(book.notes.length, 0, "Current prologue and contents have no notes");
 for (const chapter of isV6 ? [contents] : [prologue, contents]) {
   const raw = fs.readFileSync(chapter.source.path);
@@ -264,7 +265,7 @@ for (const author of authors) {
   }
 }
 localMedia(siteConfig.coverPath, "Book cover");
-assert.equal(siteConfig.coverPath, "/images/book-cover-contents-v4.png");
+assert.equal(siteConfig.coverPath, "/images/book-cover-digital-v1.webp");
 
 assert.equal(sources.length, 48, "Incomplete selected public bibliography");
 assert.equal(cards.length, 30, "Incomplete selected public card collection");

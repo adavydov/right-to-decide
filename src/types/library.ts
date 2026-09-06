@@ -14,3 +14,12 @@ export type EvidenceCard = {
   review: {date: string; sourceCorrespondence: "checked"; historicalCorroboration: "not-established"; note: string};
 };
 export type PublicLibrary = {schemaVersion: 1; asOf: string; sources: LibrarySource[]; cards: EvidenceCard[]};
+
+export type SpaceLibrarySource = {
+  id: string; title: string; originalTitle: string; publisher: string; topic: string;
+  url: string; catalog: string; catalogDate: string; sourceId: string;
+};
+export type SpaceLibraryProject = {
+  id: string; title: string; version: string; date: string; subtitle: string;
+  description: string; questions: string[]; boundary: string; sourceIds: string[];
+};

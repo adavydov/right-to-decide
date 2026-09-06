@@ -14,7 +14,6 @@ export function BookFooter() {
             <Link href="/read/">Читать</Link>
             <Link href="/authors/">Авторы</Link>
             <Link href="/library/">Библиотека</Link>
-            <Link href="/wiki/">Вики</Link>
           </div>
         </div>
         <p className={styles.title}>

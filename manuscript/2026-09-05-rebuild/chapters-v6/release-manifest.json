@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "releaseId": "literary-manuscript-v6-07fe16b2a858",
+  "releaseId": "literary-manuscript-v6-67b660773c98",
   "editionVersion": "6.0",
   "architectureVersion": "5.1",
   "chapterNumbers": [
@@ -142,7 +142,7 @@
   ],
   "authorContents": {
     "path": "manuscript/2026-09-05-rebuild/contents-v5.1.md",
-    "sha256": "3504c509a3745aed4b9c24f17e53b480c5984a47562acb29cd8895f8d79d06a6"
+    "sha256": "07fecd4dc66f0b0d7acad2d609e6e18bb9d3003af5c825b007a9dbc532e2f855"
   },
   "prologue": {
     "path": "manuscript/2026-09-05-rebuild/prologue-v2.1.md",
@@ -647,7 +647,7 @@
     "path": "src/data/previous-edition.json",
     "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
   },
-  "bookSha256": "c0b6c573064962fcd4c4f7540498da36b8567913632c342ffc204452f0c95a7d",
+  "bookSha256": "ede9ed8d9b4e5366f1a32aaceb78a140f62b96d9d3bbf0c1679246f4b4f2a18f",
   "generators": [
     {
       "path": "scripts/publish-manuscript.py",
