@@ -32,7 +32,7 @@
     "check:source": "python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/test-release-v7.py && python scripts/publish-manuscript.py --check",
     "editorial:build": "node scripts/build-open-editorial.mjs",
     "prebuild": "npm run editorial:build",
-    "editorial:static:test": "node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs",
+    "editorial:static:test": "node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs",
     "editorial:static:check": "node scripts/build-open-editorial.mjs --check && npm run editorial:static:test",
     "check:editorial-export": "node scripts/validate-open-editorial-export.mjs && node scripts/scan-open-editorial-artifacts.mjs"
   },

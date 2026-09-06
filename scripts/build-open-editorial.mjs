@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { extractLayerRegistry } from "../shared/open-editorial-layers.mjs";
 import { siteConfig } from "../src/lib/site-config.ts";
 import { normalizeText, NORMALIZATION } from "../shared/open-editorial-text.mjs";
+import { assertEditionId, EDITION_PATTERN, verifyTransition } from "./open-editorial-identity-transition.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const checking = process.argv.includes("--check");
 const read = relative => fs.readFileSync(path.join(root, relative), "utf8").replace(/^\uFEFF/, "");
@@ -30,11 +31,12 @@ const book = json("src/data/book.json");
 if (book.publicationStatus !== "published" || book.source.format !== "markdown-manuscript")
   throw new Error("Only the published Markdown manuscript renderer has been verified.");
 const editionId = book.releaseId || "edition-" + book.editionVersion + "-" + book.source.sha256.slice(0, 12);
-if (!/^[a-zA-Z0-9-]+$/.test(editionId)) throw new Error("Unsafe edition identifier.");
+assertEditionId(editionId);
 const site = siteConfig.publicUrl;
 const base = site + "/editorial/editions/" + editionId;
 const mapPath = "docs/open-editorial/block-identities.json";
-const identities = fs.existsSync(path.join(root, mapPath)) ? json(mapPath) : { schema_version: "1.0", chapters: {} };
+const identityBytes = fs.existsSync(path.join(root, mapPath)) ? fs.readFileSync(path.join(root, mapPath)) : Buffer.from(encode({ schema_version: "1.0", chapters: {} }));
+const identities = verifyTransition(root, book, identityBytes);
 const seen = new Set();
 const chapters = book.chapters.filter(c => c.status === "available" && c.publicationStatus === "published" && c.id !== "source-contents").map(c => {
   const source = c.source?.sha256 ?? c.sourceSha256;
@@ -112,7 +114,7 @@ if (connectedMode) {
   if (fs.existsSync(openapiPath)) output("public/open-editorial/openapi.json", read("open-editorial-service/openapi.json"));
 } else {
   const operation = (summary, mediaType, parameters = []) => ({ get: { summary, ...(parameters.length ? { parameters } : {}), responses: { "200": { description: "Published static file", content: { [mediaType]: { schema: mediaType === "application/json" ? { type: "object" } : { type: "string" } } } }, "404": { description: "Published file not found" } } } });
-  const parameter = name => ({ name, in: "path", required: true, schema: { type: "string", pattern: "^[a-zA-Z0-9-]+$" } });
+  const parameter = name => ({ name, in: "path", required: true, schema: { type: "string", pattern: name === "edition_id" ? EDITION_PATTERN : "^[a-zA-Z0-9-]+$" } });
   const paths = {
     "/editorial/corpus.json": operation("Опубликованный корпус и версии", "application/json"),
     "/editorial/layers.json": operation("Реестр девяти слоёв", "application/json"),

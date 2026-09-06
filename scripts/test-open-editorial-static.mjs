@@ -65,8 +65,16 @@ test('public corpus references complete immutable files and keeps original manif
 test('default static generator is reproducible in a minimal checkout with no service or npm modules',t=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'oe-static-build-'));
  t.after(()=>{const within=path.relative(os.tmpdir(),dir);assert.ok(within&&!within.startsWith('..')&&!path.isAbsolute(within));assert.ok(path.basename(dir).startsWith('oe-static-build-'));fs.rmSync(dir,{recursive:true,force:true});});
- const inputs=['scripts/build-open-editorial.mjs','shared/open-editorial-text.mjs','shared/open-editorial-layers.mjs','src/lib/site-config.ts','src/data/site-copy.json','src/data/book.json','CONSTITUTION.md','docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md','docs/open-editorial/block-identities.json','docs/open-editorial/STATIC_AGENT_GUIDE.md'];
- for(const input of inputs){const dest=path.join(dir,input);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,input),dest);}
+ const inputs=['scripts/open-editorial-identity-transition.mjs','scripts/build-open-editorial.mjs','shared/open-editorial-text.mjs','shared/open-editorial-layers.mjs','src/lib/site-config.ts','src/data/site-copy.json','src/data/book.json','CONSTITUTION.md','docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md','docs/open-editorial/block-identities.json','docs/open-editorial/STATIC_AGENT_GUIDE.md'];
+ const book=json(root,'src/data/book.json');
+ const receiptPath='docs/open-editorial/identity-transitions/'+book.releaseId+'.json';
+ if(fs.existsSync(path.join(root,receiptPath))){
+  const receipt=json(root,receiptPath),selection=json(root,receipt.publication_selection.path);
+  const release=json(root,receipt.release_manifest.path);
+  inputs.push(...[release.prologue,...release.chapters,release.authorContents].map(item=>item.path));
+  inputs.push(receiptPath,...[receipt.book,receipt.release_manifest,receipt.publication_selection,receipt.previous_identity_map,receipt.previous_corpus,receipt.previous_edition,...selection.inputs,...receipt.frozen_files].map(item=>item.path));
+ }
+ for(const input of new Set(inputs)){const dest=path.join(dir,input);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,input),dest);}
  // fs.cpSync exits natively on this Windows Node 24.14.1 host; copy the identical fixture using explicit traversal.
  const copyTree=(from,to)=>{
   fs.mkdirSync(to,{recursive:true});

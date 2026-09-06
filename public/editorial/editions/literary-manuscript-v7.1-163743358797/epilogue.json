@@ -1,0 +1,111 @@
+{
+  "id": "epilogue",
+  "title": "Эпилог. Следующий вопрос — не наш",
+  "version": "7.0",
+  "source_sha256": "890f7ee96fec4de9df9ea660b8039b068ce92f129279187afc0aedd08020bf71",
+  "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html",
+  "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/",
+  "json_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.json",
+  "markdown_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.md",
+  "text_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.txt",
+  "normalization": "oe-text-v1",
+  "markdown": "# Эпилог. Следующий вопрос — не наш\n\nМост стоит. Вода доставлена. Сложная работа выполнена лучше, чем мы умели ожидать.\n\nВ начале книги такой успех мог показаться завершением задачи. Теперь рядом с ним виден ещё один участок будущего. Что смогут начать люди, которым достался результат? Не только насколько хорошо они его освоят, но и найдут ли средства для вопроса, которого не задавали создатели системы.\n\nЭто меняет взгляд на самые обычные вещи. В доступном объяснении становится виден возможный вход в работу. В хорошем регламенте — место, где он однажды перестанет отвечать новой задаче. В выпускнике — человек, чьё продолжение может потребовать ухода. В удачном проекте — возможность передать дальше часть средств, которые сделали его удачным.\n\nДля первого шага не обязательно ждать космической добычи или окончательной формы сильного интеллекта. Можно обратиться к делу, которое уже находится в пределах наших полномочий. Выделить в нём небольшой, но настоящий вопрос. Дать людям время разобраться и возможность повлиять на решение по результату проверки. Заранее оставить путь к следующему шагу — либо честно назвать границу, за которую этой договорённости пока не хватает.\n\nНельзя потребовать, чтобы они оправдали наше предложение своей жизнью. Кто-то предпочтёт готовую помощь. Кто-то изменит тему. Кто-то увидит недостаток в самой книге. Возможность такого ответа входит в смысл того, что мы пытались построить.\n\nМы начали с людей, чья единственная жизнь оказалась слишком короткой для обещанного историей перехода. Техническое будущее может быть куда щедрее к своим участникам. Хотелось бы, чтобы оно было открыто им и в другом отношении: позволяло не только хорошо жить внутри полученного мира, но и всерьёз участвовать в том, каким он станет.\n\nТогда продолжение не будет похоже на сохранение нашего проекта. Следующие люди иначе распределят важное, соединят неизвестные нам знания, откажутся от части наших решений. Название «образование, которого нет» может им ничего не сказать.\n\nДостаточно, чтобы их вопрос получил место, время и средства. А ответ они могли не только получить, но и воплотить.\n",
+  "blocks": [
+    {
+      "id": "manuscript-v7-epilogue-p001",
+      "dom_id": "manuscript-v7-epilogue-p001",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Мост стоит. Вода доставлена. Сложная работа выполнена лучше, чем мы умели ожидать.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "2800e98d8dde2f68219a5fb8692f030829cc512252a20e63963e3bfe3d2d0abf",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p001",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p001",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p002",
+      "dom_id": "manuscript-v7-epilogue-p002",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "В начале книги такой успех мог показаться завершением задачи. Теперь рядом с ним виден ещё один участок будущего. Что смогут начать люди, которым достался результат? Не только насколько хорошо они его освоят, но и найдут ли средства для вопроса, которого не задавали создатели системы.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "9a0aff4a082f1d19dabc70ed791b34a879e358d4a7eed06c206f3dcf9a9fc5e5",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p002",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p002",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p003",
+      "dom_id": "manuscript-v7-epilogue-p003",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Это меняет взгляд на самые обычные вещи. В доступном объяснении становится виден возможный вход в работу. В хорошем регламенте — место, где он однажды перестанет отвечать новой задаче. В выпускнике — человек, чьё продолжение может потребовать ухода. В удачном проекте — возможность передать дальше часть средств, которые сделали его удачным.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "c61723c4e356f40a7c74d85969ca34f3d1eecc6c1dd01028737a9e6d955c81ac",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p003",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p003",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p004",
+      "dom_id": "manuscript-v7-epilogue-p004",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Для первого шага не обязательно ждать космической добычи или окончательной формы сильного интеллекта. Можно обратиться к делу, которое уже находится в пределах наших полномочий. Выделить в нём небольшой, но настоящий вопрос. Дать людям время разобраться и возможность повлиять на решение по результату проверки. Заранее оставить путь к следующему шагу — либо честно назвать границу, за которую этой договорённости пока не хватает.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "4bf8b98c25295e95cd32465a1c2a20e27513b62b8d867d5b494aff090145812e",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p004",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p004",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p005",
+      "dom_id": "manuscript-v7-epilogue-p005",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Нельзя потребовать, чтобы они оправдали наше предложение своей жизнью. Кто-то предпочтёт готовую помощь. Кто-то изменит тему. Кто-то увидит недостаток в самой книге. Возможность такого ответа входит в смысл того, что мы пытались построить.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "9e1a40c76da6c0bfd7bdc655f62e30205df993ffc90a53b91a3f6b0456f9ca16",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p005",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p005",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p006",
+      "dom_id": "manuscript-v7-epilogue-p006",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Мы начали с людей, чья единственная жизнь оказалась слишком короткой для обещанного историей перехода. Техническое будущее может быть куда щедрее к своим участникам. Хотелось бы, чтобы оно было открыто им и в другом отношении: позволяло не только хорошо жить внутри полученного мира, но и всерьёз участвовать в том, каким он станет.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "c7ea5256fc36a5892227bad659496f33687a96a1961af14392742577522e0b9e",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p006",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p006",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p007",
+      "dom_id": "manuscript-v7-epilogue-p007",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Тогда продолжение не будет похоже на сохранение нашего проекта. Следующие люди иначе распределят важное, соединят неизвестные нам знания, откажутся от части наших решений. Название «образование, которого нет» может им ничего не сказать.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "447c613ba79093d5a07d25a549cc835a33c675c32db488d9c298455e8439f241",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p007",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p007",
+      "selection_supported": true
+    },
+    {
+      "id": "manuscript-v7-epilogue-p008",
+      "dom_id": "manuscript-v7-epilogue-p008",
+      "chapter_id": "epilogue",
+      "type": "paragraph",
+      "text": "Достаточно, чтобы их вопрос получил место, время и средства. А ответ они могли не только получить, но и воплотить.",
+      "normalization": "oe-text-v1",
+      "snapshot_sha256": "7f26915f92dd8c8966f40d969ef3b5ffb15ad886e60119a73690fbc9bd9b2128",
+      "canonical_url": "https://adavydov.github.io/right-to-decide/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html#manuscript-v7-epilogue-p008",
+      "reader_url": "https://adavydov.github.io/right-to-decide/read/epilogue/#manuscript-v7-epilogue-p008",
+      "selection_supported": true
+    }
+  ]
+}

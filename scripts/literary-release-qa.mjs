@@ -28,6 +28,11 @@ const context = await browser.newContext({ reducedMotion: "reduce", viewport: { 
 const page = await context.newPage();
 page.setDefaultTimeout(15000);
 page.on("pageerror", error => report.errors.push({ page: page.url(), error: error.message }));
+page.on("request", request => {
+  if (request.url().startsWith(base + "/") && !["GET", "HEAD"].includes(request.method())) {
+    report.errors.push({ url: request.url(), method: request.method(), error: "Reading must not submit editorial data" });
+  }
+});
 page.on("response", response => {
   if (response.status() >= 400 && response.url().startsWith(base + "/")) {
     report.errors.push({ url: response.url(), status: response.status() });
@@ -96,6 +101,9 @@ try {
 
   for (const chapter of chapters) {
     await open("/read/" + chapter.id + "/");
+    const editorialEntry = page.locator("details").filter({ has: page.getByText("Личная заметка или черновик замечания", { exact: true }) });
+    assert.equal(await editorialEntry.count(), 1, "Integrated optional editorial entry: " + chapter.id);
+    assert.equal(await editorialEntry.getAttribute("open"), null, "Reading starts without opening the contribution form: " + chapter.id);
     const notes = book.notes.filter(note => note.chapterId === chapter.id);
     if (notes.length) {
       assert.equal(await page.locator(".reading-notes ol").evaluate(element => getComputedStyle(element).listStyleType), "decimal", "Visible note numbering: " + chapter.id);

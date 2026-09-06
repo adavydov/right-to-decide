@@ -93,3 +93,6 @@ manuscript/2026-09-05-rebuild/build_reading_documents.py -text -whitespace
 /docs/open-editorial/STATIC_AGENT_GUIDE.md text eol=lf
 /public/editorial/** text eol=lf
 /public/open-editorial/** text eol=lf
+
+# Frozen public snapshots and reviewed transition receipts keep exact bytes.
+docs/open-editorial/identity-transitions/** -text whitespace=cr-at-eol,-blank-at-eof
