@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 const root = path.resolve("out");
 const base = "/right-to-decide";
+const port = Number(process.env.PORT || 3210);
 const mime = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css",
@@ -49,6 +50,6 @@ http
       res.end("Bad request");
     }
   })
-  .listen(3210, "127.0.0.1", () =>
-    console.log("Preview: http://127.0.0.1:3210/right-to-decide/"),
+  .listen(port, "127.0.0.1", () =>
+    console.log("Preview: http://127.0.0.1:" + port + "/right-to-decide/"),
   );

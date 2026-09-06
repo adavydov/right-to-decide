@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "date": "2026-09-06",
+  "edition": "7.1",
+  "method": "Independent comparison of web paragraphs and cells to previously accepted whole-book Word XML. Whitespace, inline Markdown emphasis and global/local note numbering normalized; section apparatus headings and ornamental separators excluded. No prose rewrite.",
+  "comparedParagraphsAndCells": 460,
+  "missing": [],
+  "acceptedWordSha256": "db3b59d48c8652b8f40f118395e3c37a45348903b6466e05a3a6017e6f9506f6",
+  "bookJsonSha256": "b84eff36e178274410552fcf4e3b77d96813bbd388eb675b9207454df9bc7909"
+}

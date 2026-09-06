@@ -38,7 +38,7 @@ function ManuscriptTable({ block }: { block: TableBlock }) {
       className="table-scroll"
       tabIndex={0}
       role="region"
-      aria-label="Таблица из монографии"
+      aria-label="Таблица из книги"
     >
       <table>
         <tbody>
@@ -67,7 +67,7 @@ function ManuscriptTable({ block }: { block: TableBlock }) {
                     rowSpan={rowSpan}
                     style={{ whiteSpace: "pre-line" }}
                   >
-                    {cell}
+                    {block.cellRuns?.[ri]?.[ci] ? <InlineText block={{ type: "paragraph", id: `${block.id}-r${ri}-c${ci}`, text: cell, runs: block.cellRuns[ri][ci] }} /> : cell}
                   </Cell>
                 );
               })}
@@ -101,7 +101,7 @@ function renderBlock(block: BookBlock): ReactNode {
     );
   }
   if (block.type === "heading") {
-    const title = block.id.startsWith("manuscript-v6-") ? <InlineText block={block} /> : displayBookTitle(block.text);
+    const title = /^manuscript-v[67]-/.test(block.id) ? <InlineText block={block} /> : displayBookTitle(block.text);
     return (block.level || 2) <= 2 ? (
       <h2 data-reader-block id={block.id} key={block.id}>
         {title}

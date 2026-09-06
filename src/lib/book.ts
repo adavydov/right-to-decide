@@ -33,6 +33,7 @@ export type TableBlock = {
   type: "table";
   id: string;
   rows: string[][];
+  cellRuns?: TextRun[][][];
   cellLayout: { colSpan: number; verticalMerge: "restart" | "continue" | null }[][];
 };
 
@@ -68,7 +69,10 @@ export type BookChapter = {
   download?: { docx: string; sha256: string; bytes: number };
 };
 
+export type BookDownload = { path: string; sha256: string; bytes: number };
+
 export type Book = {
+  downloads?: { docx: BookDownload; pdf: BookDownload };
   contentKind?: "outline" | "manuscript";
   version?: string;
   editionVersion?: string;

@@ -6,6 +6,7 @@ import { siteConfig } from "../src/lib/site-config.ts";
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
+const isV7 = ["7.0", "7.1"].includes(book.editionVersion);
 const archiveChapters = archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 const authors = readJSON("src/data/authors.json").authors;
 const sources = readJSON("src/data/library.json").sources;
@@ -226,10 +227,10 @@ for (const author of authors) {
 
 for (const chapter of available) {
   const info = htmlInfo(routeFile("/read/" + chapter.id + "/"));
-  for (const block of chapter.blocks) {
+  for (const block of [...chapter.blocks, ...book.notes.filter(note => note.chapterId === chapter.id).flatMap(note => note.blocks)]) {
     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
     if (block.type === "paragraph" || block.type === "heading") {
-      if (block.id.startsWith("manuscript-v6-")) {
+      if (/^manuscript-v[67]-/.test(block.id)) {
         const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
           text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
           href: run.noteId ? "#" + run.noteId : run.href || null,
@@ -238,6 +239,15 @@ for (const chapter of available) {
       } else {
         assert.ok(info.text.includes(normalized(block.text)), "Lost current author text: " + block.id);
       }
+    }
+    if (block.type === "table") {
+      const expectedRuns = mergeRuns(block.rows.flatMap((row, ri) => row.flatMap((cell, ci) =>
+        (block.cellRuns?.[ri]?.[ci] || [{ text: cell }]).map(run => ({
+          text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
+          href: run.noteId ? "#" + run.noteId : run.href || null,
+        }))
+      )));
+      assert.deepEqual(info.readerRuns.get(block.id), expectedRuns, "Reader table text, order or formatting drifted: " + block.id);
     }
     if (block.type === "image") {
       assert.ok(info.attributes.some(({ tag, attrs }) => tag === "img" && attrs.get("src")?.split("?")[0] === base + block.src), "Missing chapter figure: " + block.src);
@@ -266,10 +276,26 @@ for (const chapter of available) {
   }
 }
 
+if (isV7) {
+  const texts = available.filter(chapter => chapter.contentKind === "manuscript");
+  assert.equal(texts.length, 20, "All twenty literary sections must be exported");
+  assert.equal(texts.filter(chapter => chapter.download?.docx).length, 20, "All twenty section downloads must be exported");
+  const readPage = htmlInfo(routeFile("/read/"));
+  assert.ok(readPage.text.includes("редакция " + book.editionVersion), "The reader must identify the selected edition");
+  for (const format of ["docx", "pdf"]) {
+    const download = book.downloads[format];
+    const href = base + download.path;
+    assert.ok(readPage.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === href && attrs.has("download")), "Missing whole-book download link: " + format);
+    const file = internalTarget(href, urlForFile(routeFile("/read/")), "Whole-book " + format);
+    assert.deepEqual(fs.readFileSync(file), fs.readFileSync("public" + download.path), "Exported whole-book download differs: " + format);
+  }
+}
+
 const teamSource = readJSON("src/data/editorial-team.json");
-assert.deepEqual(teamSource, readJSON("docs/editorial/editorial-team-v3.1.json"), "The public team must match the accepted editorial contract");
+assert.deepEqual(teamSource, readJSON("docs/editorial/editorial-team-v4.0.json"), "The public team must match the accepted editorial contract");
 const teamDocument = readJSON(path.join(output, "editorial-team.json"));
 assert.equal(teamDocument.schemaVersion, 1);
+assert.equal(teamDocument.version, "4.0");
 assert.equal(teamDocument.scope, "editorial-role-catalog");
 assert.deepEqual(teamDocument.humanAuthors.map(({ id, name, role }) => ({ id, name, role })),
   authors.map(({ id, name, role }) => ({ id, name, role })), "Machine-readable human credits drifted");

@@ -1,0 +1,114 @@
+{
+  "pdf_pages": 61,
+  "pdf_nonempty_pages": 61,
+  "complete_pdf_text_matches_docx_ignoring_whitespace_and_page_footers": true,
+  "render_candidate_pages": {
+    "Глава 12.": [
+      1,
+      33,
+      59
+    ],
+    "Глава 14.": [
+      1,
+      39,
+      60
+    ],
+    "Глава 17.": [
+      1,
+      49,
+      60
+    ],
+    "Примечания и источники": [
+      57
+    ]
+  },
+  "main_text_tokens": [
+    {
+      "chapter": 12,
+      "before": 853,
+      "after": 1102,
+      "net_added": 249
+    },
+    {
+      "chapter": 14,
+      "before": 806,
+      "after": 1049,
+      "net_added": 243
+    },
+    {
+      "chapter": 17,
+      "before": 1199,
+      "after": 1261,
+      "net_added": 62
+    }
+  ],
+  "count_rule": "Unicode letter/number runs; headings included, notes and reference markers excluded; same rule as edition 7.0.",
+  "pdf_comparison_rule": "All text compared in document order after removing whitespace, soft hyphens, and the exact printed page number at a page edge.",
+  "rendered_pages": [
+    1,
+    2,
+    33,
+    34,
+    39,
+    40,
+    46,
+    49,
+    50,
+    57,
+    59,
+    60,
+    61
+  ],
+  "visual_review": {
+    "status": "passed",
+    "scope": "13 selected pages inspected as rendered contact sheets; no full-page inspection of the other 48 pages is claimed.",
+    "pages": [
+      1,
+      2,
+      33,
+      34,
+      39,
+      40,
+      46,
+      49,
+      50,
+      57,
+      59,
+      60,
+      61
+    ],
+    "findings": [
+      "No clipped text, overlapping lines, missing glyphs, or accidental empty pages seen in the inspected pages.",
+      "Chapter12/14/17 openings and continuations are readable; headings remain with subsequent text.",
+      "The budget table is complete on page46; its total row is not isolated.",
+      "Notes use continuous numbering, readable smaller type, and visible hyperlinks. The short final notes page is intentional."
+    ],
+    "artifacts": [
+      "validation-render/contact-1.jpg",
+      "validation-render/contact-2.jpg"
+    ]
+  },
+  "docx_checks": {
+    "preservedV7Inputs": 17,
+    "allInputHashesStable": true,
+    "globalNoteDefinitionsSequential": true,
+    "privatePathsAbsent": true,
+    "completeVisibleTextMatchesMarkdown": true,
+    "noteBookmarks": 22,
+    "internalNoteLinks": 23,
+    "externalHyperlinks": 18,
+    "inputTitlesPresent": 20,
+    "pdfPages": 61,
+    "pdfNonemptyPages": 61,
+    "completePdfTextMatchesDocx": true
+  },
+  "pdf_sha256": "6B8373AD90F79B1C328FDD6EAD30589DFC3A2865CF54E977396BBFC71AA843EA",
+  "layout_adjustment": "The compact budget table is kept together on PDF page46; no repeated table header or isolated total row.",
+  "whole_book_main_text_tokens": {
+    "before": 18094,
+    "after": 18648,
+    "net_added": 554
+  },
+  "output_hashes_verified": true,
+  "result": "PASS"
+}

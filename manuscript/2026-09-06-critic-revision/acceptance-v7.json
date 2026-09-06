@@ -1,0 +1,226 @@
+{
+  "edition": "7.0",
+  "date": "2026-09-06",
+  "decision": "accepted-local-editorial-edition",
+  "constitution": "1.2.1",
+  "authorDecision": "../../docs/editorial/AUTHOR-DECISION-2026-09-06-CRITIC.md",
+  "policyCompletedBeforeProse": "policy-completion.md",
+  "texts": [
+    {
+      "path": "prologue.md",
+      "sha256": "DDD2DBF8972FFFADC6DF8D83A61D823440D3180A28712FB9FAB240AEEE88247C",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-01.md",
+      "sha256": "47F5FB6F2CE94A6793046C2FBB7621C458A2DCEB36A14848EA4A123C1BFD3FD0",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-02.md",
+      "sha256": "3DCB79454663C53F0042ABC45E84F31B802EABE2F54C8AFB737F2D5E45CF1C68",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-03.md",
+      "sha256": "B7BA037FA35CB3B2BC8BF40CBD6CA19DA38BEF399BFF89379A8CC1B025C0E6B5",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-04.md",
+      "sha256": "875A56E68846900E0C060994F606BA785F97183A23810A4E65CC087CD28BB87A",
+      "author": "research_history",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-05.md",
+      "sha256": "A48746E135A6B95C7EEB570E3CC71278902256D4215DB7AB2E8A85C037F3FDAC",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-06.md",
+      "sha256": "4C779FCDED559A4DF0981AB12FF6B1C982BF787DBA87F4D9E6E548B22D13ECFF",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-07.md",
+      "sha256": "08CEF721933C6D77384F96FAAAC60F00EDC29DF22F5805CE16E77C3B410BD4C6",
+      "author": "education_economy",
+      "independentReviewer": "integrator",
+      "review": "chapters-v7/editorial/independent-review-07-09-16.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-08.md",
+      "sha256": "96A9ACD202E28A77658250DE1D0C2FE9B40BF5269431927754DB57686AF64867",
+      "author": "education_economy",
+      "independentReviewer": "integrator",
+      "review": "chapters-v7/editorial/independent-review-07-09-16.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-09.md",
+      "sha256": "C0E0D455A11913E544D50E3E14E47B48AE312E989E8AED9B780E72F8AAE8F91B",
+      "author": "education_economy",
+      "independentReviewer": "integrator",
+      "review": "chapters-v7/editorial/independent-review-07-09-16.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-10.md",
+      "sha256": "F0A6EB305AD2BEF45430E6211C9C4AE8D3F5C86B60074A65BF62DAA6C7F7AFA1",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-11.md",
+      "sha256": "A58A7612A1A6B89AC8A9546309C9952345B6DA3C63E48B8CD149736162E68813",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-12.md",
+      "sha256": "B5CAA69A0468B1B18F939F88002757CF04BD89623451923591FF7E24F362EA4B",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-13.md",
+      "sha256": "7C4F1946558502C2C2D5882C61A0A92CCD074161A4AAC7E6ED3DB33D699ECE84",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-14.md",
+      "sha256": "B8DFB7B7494F798B1F79AC90B5D3ED788036BACB178F619F6B237C57E222D102",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-15.md",
+      "sha256": "5B2222E856BC59DDD7B32B35E1B7091B2061836FC9CD22A3A3E7A7D651047BB2",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-16.md",
+      "sha256": "A58B453C70DDB257ADB563B4DDB100624106A8F2812D5DC474729CB3817174D1",
+      "author": "education_economy",
+      "independentReviewer": "integrator",
+      "review": "chapters-v7/editorial/independent-review-07-09-16.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-17.md",
+      "sha256": "BEB4393C575BAB74F6A7F3EAF499B04DBD4C3C922F44651C68FE6CB5D31C1244",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/chapter-18.md",
+      "sha256": "115475DD57A1C7FADB740F4D1D0F5AA960C41E7CCEFCBC58974D84E623A84670",
+      "author": "reader_map",
+      "independentReviewer": "education_economy",
+      "review": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    },
+    {
+      "path": "chapters-v7/epilogue.md",
+      "sha256": "890F7EE96FEC4DE9DF9EA660B8039B068CE92F129279187AFC0AEDD08020BF71",
+      "author": "integrator",
+      "independentReviewer": "research_history",
+      "review": "reviews/research-history-independent-reading.md",
+      "decision": "accepted-agent-editorial",
+      "criteria": "All applicable criteria in cited independent review are at least 3/4; N/A explained; no averaging."
+    }
+  ],
+  "checks": [
+    {
+      "path": "reviews/research-history-independent-reading.md",
+      "sha256": "49E2E3663888588530F09FE6A80113918DDE908DE4C22846D4F7A625477A680E"
+    },
+    {
+      "path": "chapters-v7/editorial/independent-review-07-09-16.md",
+      "sha256": "B89DF028F37AE909197D9D34C6AD1EBE4EE868370F93C23D232333A116BB529A"
+    },
+    {
+      "path": "chapters-v7/editorial/independent-review-04-10-18.md",
+      "sha256": "1D460A5D11A9C9E2106D9B250223EA5F2A838626EACA76893729AFFA531F0D60"
+    },
+    {
+      "path": "chapters-v7/editorial/without-space-review.md",
+      "sha256": "C967644C318834C3C2E6F654872949B0011CF72A01B4301FEA70A2BFBB575661"
+    },
+    {
+      "path": "scenario-passport-v1.2.md",
+      "sha256": "51A5CB0EEF01BB887D0C34FA690E96F2FC67A47E9447306754DBE8FFD6D2F488"
+    },
+    {
+      "path": "model-education-economy.md",
+      "sha256": "15DE4A4B94BD5610C9B836BD59BB36D1A3E2AA0B589384448149404E1DB6945E"
+    }
+  ],
+  "wholeBook": {
+    "space": "integrator: all cosmic fragments separately read; W18 keeps external supplies and removes necessary human sales only",
+    "fullReading": "integrator: all twenty texts fully read by blocks, adjacent transitions checked",
+    "withoutSpace": "reader_map: complete remaining argument, 66 paragraphs excluded; additional test, not sole acceptance of own chapters",
+    "rhythm": "different chapter forms, methodological repetition removed; complete earthly model retains necessary detail"
+  },
+  "newAuthorAcceptanceClaimed": false,
+  "empiricalPilotClaimed": false,
+  "published": false,
+  "historicalSourcesPreserved": true
+}

@@ -9,10 +9,19 @@ const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
 const manifest = readJSON("manuscript/2026-09-05-rebuild/contents-v5.1-manifest.json");
 const isV6 = book.editionVersion === "6.0";
+const isV7 = ["7.0", "7.1"].includes(book.editionVersion);
+const isReviewed = isV6 || isV7;
+const v7SourceRoot = book.editionVersion === "7.1"
+  ? "manuscript/2026-09-06-davydov-cases" : "manuscript/2026-09-06-critic-revision";
 const literaryManifest = book.contentKind === "manuscript"
-  ? readJSON(isV6 ? "manuscript/2026-09-05-rebuild/chapters-v6/release-manifest.json" : "manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
+  ? readJSON(isV7 ? `${v7SourceRoot}/release-manifest.json` : isV6 ? "manuscript/2026-09-05-rebuild/chapters-v6/release-manifest.json" : "manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
 const sha = (raw) => createHash("sha256").update(raw).digest("hex");
 const authors = readJSON("src/data/authors.json").authors;
+const teamCatalog = readJSON("src/data/editorial-team.json");
+assert.equal(teamCatalog.version, "4.0", "Use the current literary role catalog");
+assert.deepEqual(teamCatalog, readJSON("docs/editorial/editorial-team-v4.0.json"), "Public literary roles differ from the current editorial contract");
+assert.equal(teamCatalog.groups.find(group => group.id === "nine-layers")?.roles.length, 9, "Keep all nine layer competencies");
+
 const sources = readJSON("src/data/library.json").sources;
 const cards = readJSON("src/data/evidence-cards.json").cards;
 const publicRoot = path.resolve("public");
@@ -73,14 +82,14 @@ assert.equal(book.version, "5.1");
 const releasedChapters = mainChapters.filter(c => c.status === "available");
 const plannedChapters = mainChapters.filter(c => c.status === "planned");
 assert.deepEqual(book.chapters.filter(c => c.status === "available").map(c => c.id),
-  ["prologue", "contents", ...releasedChapters.map(c => c.id), ...(isV6 && literaryManifest?.includesEpilogue ? ["epilogue"] : [])]);
+  ["prologue", "contents", ...releasedChapters.map(c => c.id), ...(isReviewed && literaryManifest?.includesEpilogue ? ["epilogue"] : [])]);
 assert.equal(book.statistics.availableChapters, releasedChapters.length);
 assert.equal(book.statistics.plannedChapters, plannedChapters.length);
 if (literaryManifest) {
   assert.ok(releasedChapters.length, "A manuscript release must contain a numbered chapter");
-  assert.equal(literaryManifest.schemaVersion, isV6 ? 2 : 1);
+  assert.equal(literaryManifest.schemaVersion, isV7 ? 3 : isV6 ? 2 : 1);
   assert.equal(literaryManifest.architectureVersion, "5.1");
-  assert.equal(literaryManifest.acceptanceStatus, isV6 ? "independent-editorial-review" : "published-texts-pending-constitution-review");
+  assert.equal(literaryManifest.acceptanceStatus, isReviewed ? "independent-editorial-review" : "published-texts-pending-constitution-review");
   assert.equal(literaryManifest.releaseId, book.releaseId);
   assert.deepEqual(literaryManifest.chapterNumbers, releasedChapters.map(c => c.number));
   assert.deepEqual(literaryManifest.chapters,
@@ -90,7 +99,8 @@ if (literaryManifest) {
   for (const chapter of releasedChapters) {
     assert.equal(chapter.contentKind, "manuscript");
     assert.equal(chapter.publicationStatus, "published");
-    assert.equal(chapter.source.path, `manuscript/2026-09-05-rebuild/chapters-${isV6 ? "v6" : "v4"}/${chapter.id}.md`);
+    if (!isV7) assert.equal(chapter.source.path, `manuscript/2026-09-05-rebuild/chapters-${isV6 ? "v6" : "v4"}/${chapter.id}.md`);
+    else assert.ok(chapter.source.path.startsWith("manuscript/2026-09-06-") && !chapter.source.path.split("/").includes(".."), "Unexpected literary source path");
     assert.equal(sha(fs.readFileSync(chapter.source.path)), chapter.source.sha256, "Chapter source checksum: " + chapter.id);
   }
 } else {
@@ -102,7 +112,7 @@ const epilogue = book.chapters.at(-1);
 assert.equal(epilogue.id, "epilogue");
 assert.equal(epilogue.title, "Эпилог. Следующий вопрос — не наш");
 assert.equal(epilogue.kind, "backmatter");
-assert.equal(epilogue.status, isV6 && literaryManifest?.includesEpilogue ? "available" : "planned", "Epilogue availability must match the explicit release");
+assert.equal(epilogue.status, isReviewed && literaryManifest?.includesEpilogue ? "available" : "planned", "Epilogue availability must match the explicit release");
 assert.equal(manifest.checks.separateEpilogue, true);
 assert.equal(manifest.constitution.sha256, sha(fs.readFileSync("CONSTITUTION.md")));
 assert.deepEqual(book.parts.map(p => p.number), ["I", "II", "III", "IV", "V", "VI"]);
@@ -113,12 +123,12 @@ for (const part of book.parts) {
 }
 const prologue = book.chapters.find(c => c.id === "prologue");
 const contents = book.chapters.find(c => c.id === "contents");
-assert.equal(prologue.title, "Пролог");
-assert.equal(prologue.version, isV6 ? literaryManifest.prologueSelection.version : "1.0");
-if (!isV6) {
+assert.equal(prologue.title, isV7 ? "Пролог. Право на решение" : "Пролог");
+assert.equal(prologue.version, isV7 ? "7.0" : isV6 ? literaryManifest.prologueSelection.version : "1.0");
+if (!isReviewed) {
   assert.equal(prologue.blocks.length, 65);
   assert.equal(prologue.blocks.filter(b => b.text === "⸻").length, 4);
-} else {
+} else if (isV6) {
   assert.equal(prologue.source.path, literaryManifest.prologueSelection.path);
   assert.equal(sha(fs.readFileSync(prologue.source.path)), prologue.source.sha256);
   assert.equal(literaryManifest.masterPrologue.path, "manuscript/2026-09-05-rebuild/prologue-v2.0.md");
@@ -132,20 +142,20 @@ if (!isV6) {
 }
 assert.equal(contents.blocks.length, 46, "Reader outline contains 20 headings and summaries, plus six part headings");
 assert.equal(contents.blocks.filter(block => block.type === "paragraph").length, 20, "Each reader section has one paragraph");
-assert.equal(book.notes.length, 0, "Current prologue and contents have no notes");
-for (const chapter of isV6 ? [contents] : [prologue, contents]) {
+if (!isV7) assert.equal(book.notes.length, 0, "Legacy selected edition has no notes");
+for (const chapter of isReviewed ? [contents] : [prologue, contents]) {
   const raw = fs.readFileSync(chapter.source.path);
   assert.equal(sha(raw), chapter.source.sha256, "Author source checksum: " + chapter.id);
   const chunks = raw.toString("utf8").replace(/^\uFEFF/, "").trim().split(/\n\s*\n/u);
   const body = chunks.slice(chapter.id === "prologue" ? 1 : 2).map(text => text.replace(/^#{2,3} /u, "").trim());
   assert.deepEqual(chapter.blocks.map(b => b.text), body, "Author text/order changed: " + chapter.id);
 }
-if (!isV6) {
+if (!isReviewed) {
   assert.equal(prologue.source.sha256, "9c01d468a874bc58d7ee56da3a3130748c90eddd9ff7908fc327332afed32288");
   assert.ok(prologue.blocks.every(b => b.type === "paragraph" && !b.runs?.some(r => r.href || r.noteId)), "Source links in legacy prologue");
 }
 assert.equal(sha(fs.readFileSync("public/book/contents-v5.1.md")), contents.source.sha256, "Contents download differs");
-if (!isV6) assert.deepEqual(manifest.prologue, prologue.source);
+if (!isReviewed) assert.deepEqual(manifest.prologue, prologue.source);
 assert.deepEqual(manifest.authorSource, contents.source);
 if (!literaryManifest) assert.equal(manifest.bookSha256, sha(fs.readFileSync("src/data/book.json")));
 else {
@@ -157,7 +167,7 @@ assert.equal(manifest.archive.sha256, "61b6b6d314f7148798a68170f13fad55223e7d971
 assert.equal(archive.chapters.length, 38);
 assert.equal(archive.chapters.filter(c => c.kind === "chapter").length, 18);
 assert.equal(archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available").length, 37);
-if (isV6) {
+if (isReviewed) {
   const downloadable = book.chapters.filter(c => c.status === "available" && c.contentKind === "manuscript");
   assert.deepEqual(literaryManifest.downloads.map(d => d.id), downloadable.map(c => c.id));
   for (const chapter of downloadable) {
@@ -171,6 +181,32 @@ if (isV6) {
     const item = literaryManifest.downloads.find(d => d.id === chapter.id);
     assert.equal(item.sha256, chapter.download.sha256);
     assert.equal(item.sourceSha256, chapter.source.sha256);
+  }
+}
+if (isV7) {
+  assert.equal(book.source.path, `${v7SourceRoot}/release-manifest.json`);
+  assert.equal(literaryManifest.includesEpilogue, true);
+  const texts = book.chapters.filter(c => c.status === "available" && c.contentKind === "manuscript");
+  assert.equal(texts.length, 20, "Edition 7 must publish the prologue, eighteen chapters and epilogue");
+  assert.equal(literaryManifest.downloads.length, 20, "Every literary section needs its own Word file");
+  for (const chapter of texts) {
+    assert.match(chapter.version, /^7\.[01]$/u);
+    assert.equal(sha(fs.readFileSync(chapter.source.path)), chapter.source.sha256, "Selected section source checksum: " + chapter.id);
+    assert.ok(chapter.blocks.every(block => block.id.startsWith(`manuscript-v7-${chapter.id}-`)), "Wrong edition anchors: " + chapter.id);
+  }
+  assert.equal(book.notes.length, book.editionVersion === "7.1" ? 22 : 20, "All selected literary source notes must remain available");
+  assert.ok(book.chapters.find(c => c.id === "chapter-16").blocks.some(b => b.type === "table"), "Chapter 16 lost its model budget table");
+  assert.deepEqual(Object.keys(book.downloads).sort(), ["docx", "pdf"]);
+  assert.equal(literaryManifest.readingDownloads.length, 2);
+  for (const format of ["docx", "pdf"]) {
+    const item = book.downloads[format];
+    assert.equal(item.path, `/book/right-to-decide-v${book.editionVersion === "7.0" ? "7" : "7.1"}.${format}`);
+    localMedia(item.path, "Whole-book " + format);
+    const raw = fs.readFileSync("public" + item.path);
+    assert.equal(raw.length, item.bytes);
+    assert.equal(sha(raw), item.sha256, "Whole-book checksum: " + format);
+    assert.equal(raw.subarray(0, format === "pdf" ? 5 : 2).toString(), format === "pdf" ? "%PDF-" : "PK");
+    assert.ok(literaryManifest.readingDownloads.some(d => d.sha256 === item.sha256), "Reading download missing in release manifest: " + format);
   }
 }
 assert.equal(authors.length, 3);
@@ -201,6 +237,20 @@ function validateBlock(block, chapterId) {
   if (block.type === "table") {
     assert.ok(Array.isArray(block.rows) && block.rows.length, "Empty table: " + block.id);
     assert.ok(block.rows.every((row) => Array.isArray(row) && row.length && row.every((cell) => typeof cell === "string")), "Invalid table cells: " + block.id);
+    if (block.cellRuns) {
+      assert.equal(block.cellRuns.length, block.rows.length, "Table formatting row count: " + block.id);
+      block.rows.forEach((row, ri) => {
+        assert.equal(block.cellRuns[ri].length, row.length, "Table formatting cell count: " + block.id);
+        row.forEach((cell, ci) => {
+          const runs = block.cellRuns[ri][ci];
+          assert.equal(runs.map(run => run.text).join(""), cell, "Table inline text mismatch: " + block.id);
+          for (const run of runs) {
+            if (run.href !== undefined) safeURL(run.href, block.id);
+            assert.ok(!run.noteId, "Table note references require a dedicated source mapping: " + block.id);
+          }
+        });
+      });
+    }
     return;
   }
   assert.equal(typeof block.text, "string", "Missing text: " + block.id);

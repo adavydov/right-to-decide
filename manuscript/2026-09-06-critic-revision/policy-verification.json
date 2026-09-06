@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-09-06T06:40:35.3456315Z",
+  "scope": "Literary policy only; before any manuscript revision",
+  "policyFiles": 30,
+  "localLinks": 272,
+  "brokenLinks": [],
+  "manuscriptBaselineFiles": 23,
+  "changedManuscriptFiles": [],
+  "policyHashes": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "3FF620A6E6AED8B80E42B4994D560BAB76C700DC799569A6177BCF36505307E5"
+    },
+    {
+      "path": "right-to-decide-site/AGENTS.md",
+      "sha256": "9F8EB30616AF333D6B987721BEB541121C600C4C7ED8FFB65348C48380701B08"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/README.md",
+      "sha256": "3FDC273CEDBCFA75C4E56AD378251C93F042FF39479A768D167D27F3301204D1"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/AUTHOR-DECISION-2026-09-06-CRITIC.md",
+      "sha256": "5E2F4DCADC47BD54AE08061B155AC32FED5595E6E9A23CBA27EC1E0BDA4F4B07"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/LITERARY-POLICY-02-v1.0.md",
+      "sha256": "AF41D190AF935D730DBA4C332F5879524754DD1D59E5D3914174658BD0E64F3A"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/PRINCIPLES-01-v4.0.md",
+      "sha256": "9AED82C86BBCCDC6A2ECB9668831D0158FCCC4032E2171D7995D82E311DB8019"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/STYLE-01-v6.0.md",
+      "sha256": "20599685196DB3472FDF6529F0C700BF24AB975C6F18DD9FF94B5E1CBF30C3C3"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/LITERARY-WORKFLOW-01-v4.0.md",
+      "sha256": "3CE622803A4D122FAC1CEFE2FD4EBA1F4E1472635C71A7D82B0E284A30A5E7D1"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/AGENT-ROLES-01-v3.0.md",
+      "sha256": "606F794DE521B6ABEF625A495D944B7B75929BB76502A60BB65896B11C19CC1C"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/ACCEPTANCE-01-v3.0.md",
+      "sha256": "C15FE51461E9CDEBC8EE22A4A75CEC34B41BC5B810470C1E077427A4C8D25A8B"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/TECH-ENTREPRENEUR-01-v4.0.md",
+      "sha256": "8AE00748ACC31B229464C708AD197C927EB32AF338EE9607088A75B253A63DAB"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/LAYER-REPOSITORIES-01-v3.0.md",
+      "sha256": "AA4FEE12A5ACE1CE02A6FD98D2ABB5563EEC81481085607259A9EF5C10155E39"
+    },
+    {
+      "path": "right-to-decide-site/docs/editorial/PROLOGUE-MASTER-01-v2.0.md",
+      "sha256": "882C063081D08ED0A95AD792552CF6495061EA969ED259C56389970B90114D4A"
+    },
+    {
+      "path": "book-memory/README.md",
+      "sha256": "11079AE7D06BE6DE33276E1028AEE43E7D2B7E94DE6E5EB59D340791B9BF995E"
+    },
+    {
+      "path": "book-memory/layers/AGENTS.md",
+      "sha256": "AB43A10B7FE0F868D20060EFB7B5F2743A853AA84054064BBA0A9FBE82D3D4E2"
+    },
+    {
+      "path": "book-memory/layers/README.md",
+      "sha256": "A6625731238D17CB28D9A009F665B3125F10E798E4A91F58F71361334B17FCA0"
+    },
+    {
+      "path": "book-memory/layers/09-socioeconomic/README.md",
+      "sha256": "38C74B91206517804F43B625DE09F1090D689DA9EA01EA22A033169E507A39BA"
+    },
+    {
+      "path": "book-memory/layers/09-socioeconomic/templates/chapter-use.md",
+      "sha256": "ADAF9F962951BE3D566D5EEF4A11989CED0A4E7B270570E777A1607B646BE7E0"
+    },
+    {
+      "path": "book-memory/agents/book-curator.md",
+      "sha256": "8403193EE79AF3B9ECB49E45A2E936619004F173825E937A573A1623439E91B1"
+    },
+    {
+      "path": "book-memory/agents/chapter-enricher.md",
+      "sha256": "4AF648B523D33F420431C35F0E1B0CDE5670C5465FD41E3A0B32F394705BD6B0"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-05-rebuild/README.md",
+      "sha256": "595262FFCC036823A7A2E10BE0ADC23D1BC15EF2F774D62F807B54D64FE6AA5D"
+    },
+    {
+      "path": "book-memory/layers/01-philosophy/AGENTS.md",
+      "sha256": "D8D7B826390ECD8515ED762BA4576A57AF096A9D7031A3593D4CE762AD927B56"
+    },
+    {
+      "path": "book-memory/layers/02-space/AGENTS.md",
+      "sha256": "32A701DBF85D9B00AAD3018ED4B125368F3C3646B504C28B97CACF780CB4AABC"
+    },
+    {
+      "path": "book-memory/layers/03-history/AGENTS.md",
+      "sha256": "1D06184DEE4109604DE4EEBEAA90920E297C2F230DE15FBD9BFD02B7CE8E771E"
+    },
+    {
+      "path": "book-memory/layers/04-education/AGENTS.md",
+      "sha256": "EF0FF2CC9C05ACDF8E8C6EE2910C94C1E35A9C62E5D377A0194D6B34A0D80EDD"
+    },
+    {
+      "path": "book-memory/layers/05-enterprise/AGENTS.md",
+      "sha256": "D433000AB2D292EB4FEA09255B661490E0B865E80D95DE902CCA3DE073AEBFBB"
+    },
+    {
+      "path": "book-memory/layers/06-society/AGENTS.md",
+      "sha256": "D3B657C3888093E3F6B1733959D1EA9D00EA6249546DC0BB4BFC4E9AD7816403"
+    },
+    {
+      "path": "book-memory/layers/07-personal/AGENTS.md",
+      "sha256": "06D624A4A76EC20552166275A2AA0A12BC35F2BE1D47B7C6CF7FE1C96AB01027"
+    },
+    {
+      "path": "book-memory/layers/08-omega/AGENTS.md",
+      "sha256": "29D015646B54FBE2FD690B966C0D7B6DCD4428DB17EC7BBD1CE6D74DBAC3CB0E"
+    },
+    {
+      "path": "book-memory/layers/09-socioeconomic/AGENTS.md",
+      "sha256": "3508AC53D3EEB6899B95DB550387A8CB90501770F21B76E3455CD1FCA2890DC1"
+    }
+  ]
+}

@@ -62,3 +62,13 @@ public/book/chapters/*.docx binary
 scripts/release_v6.py -text
 scripts/manuscript_markdown.py -text
 scripts/chapter_docx.py -text
+
+# Keep accepted literary revisions and generator evidence byte-exact across platforms.
+manuscript/2026-09-06-critic-revision/** -text whitespace=cr-at-eol,-blank-at-eof
+manuscript/2026-09-06-davydov-cases/** -text whitespace=cr-at-eol,-blank-at-eof
+manuscript/2026-09-05-rebuild/build_reading_documents.py -text
+scripts/release_v7.py -text
+scripts/manuscript_v7.py -text
+public/book/*.docx binary
+public/book/*.pdf binary
+scripts/chapter_docx_v7.py -text

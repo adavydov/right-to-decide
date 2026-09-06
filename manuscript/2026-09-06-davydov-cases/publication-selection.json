@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "7.1",
+  "authorInstruction": "Обнов сайт",
+  "scope": "Выпуск выбранной ранее проверенной редакции; новая литературная авторская приёмка не присваивается.",
+  "newAuthorAcceptanceClaimed": false,
+  "inputs": [
+    {
+      "path": "manuscript/2026-09-06-critic-revision/acceptance-v7.json",
+      "sha256": "c44598cd073e538f0c50f4211ba1fa7d14eff2ada2876eb28915b8a0f3eb01d9"
+    },
+    {
+      "path": "CONSTITUTION.md",
+      "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/reviews/research-history-independent-reading.md",
+      "sha256": "49e2e3663888588530f09fe6a80113918dde908de4c22846d4f7a625477a680e"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/chapters-v7/editorial/independent-review-07-09-16.md",
+      "sha256": "b89df028f37ae909197d9d34c6ad1ebe4ee868370f93c23d232333a116bb529a"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/chapters-v7/editorial/independent-review-04-10-18.md",
+      "sha256": "1d460a5d11a9c9e2106d9b250223ea5f2a838626eaca76893729affa531f0d60"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/chapters-v7/editorial/without-space-review.md",
+      "sha256": "c967644c318834c3c2e6f654872949b0011cf72a01b4301fea70a2bfbb575661"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/scenario-passport-v1.2.md",
+      "sha256": "51a5cb0eef01bb887d0c34fa690e96f2fc67a47e9447306754dbe8ffd6d2f488"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/model-education-economy.md",
+      "sha256": "15de4a4b94bd5610c9b836bd59bb36d1a3e2aa0b589384448149404e1db6945e"
+    },
+    {
+      "path": "docs/editorial/AUTHOR-DECISION-2026-09-06-CRITIC.md",
+      "sha256": "5e2f4dcadc47bd54ae08061b155ac32fed5595e6e9a23cba27ec1e0bda4f4b07"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/policy-completion.md",
+      "sha256": "8062bba6f5d3c56203ee06084d7608b11d796493b90b3c8ff75c7df7480eed59"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/reading/assembly-v7.1.json",
+      "sha256": "066891124e9032eaed22b9fd3c0fbc659c2c0a6e01d1d46d9d4d28bb34f117fb"
+    },
+    {
+      "path": "manuscript/2026-09-06-critic-revision/reading/assembly-v7.json",
+      "sha256": "8bf47dec88ba1c3f051d17cfe47e4de96d4f5e70f5818c60498093b91612a913"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/independent-review.md",
+      "sha256": "e70bcfd03472850dc455bfb8bcdbf3344c7250aab95b094748fd7a042ead7c7d"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/scenario-passport-v1.3.md",
+      "sha256": "5562fa695e64138d4794e01d0de5a479566050e25ed889fc521ca7ff51d40844"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/build-reading.py",
+      "sha256": "7ab475f39e4cc66510853f08db24b8a043ed82d5f0bcc86de4311341a095a443"
+    },
+    {
+      "path": "manuscript/2026-09-05-rebuild/build_reading_documents.py",
+      "sha256": "f598dec0db7912ce5a11d8f9064452a3f56897bc05e5cf67f221c53b6a93fbf4"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/reading/right-to-decide-v7.1.md",
+      "sha256": "ad6b93c9f496ee3637d19ceb4b98aeaac40029849a0fe6684695912ebe56bb1f"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/reading/right-to-decide-v7.1.docx",
+      "sha256": "db3b59d48c8652b8f40f118395e3c37a45348903b6466e05a3a6017e6f9506f6"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/reading/right-to-decide-v7.1.pdf",
+      "sha256": "6b8373ad90f79b1c328fdd6ead30589dfc3a2865cf54e977396bbfc71aa843ea"
+    }
+  ]
+}

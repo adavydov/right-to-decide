@@ -123,13 +123,18 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--chapters", help="Explicit complete release selection, for example 1-3,5 or 1-18")
-    parser.add_argument("--edition", choices=["v4", "v6"], help="Literary source directory; check detects the saved release")
+    parser.add_argument("--edition", choices=["v4", "v6", "v7", "v7.1"], help="Literary source directory; check detects the saved release")
     parser.add_argument("--epilogue", action="store_true", help="Include the independently reviewed v6 epilogue")
     args = parser.parse_args()
     if args.check and args.chapters:
         parser.error("--check reads the saved release selection; do not combine it with --chapters")
     try:
         current = json.loads((ROOT / BOOK).read_text("utf-8")) if (ROOT / BOOK).exists() else {}
+        use_v7 = args.edition in {"v7", "v7.1"} or (args.edition is None and current.get("editionVersion") in {"7.0", "7.1"})
+        if use_v7:
+            import release_v7
+            release_v7.main(args, parser, chapter_selection)
+            return
         use_v6 = args.edition == "v6" or (args.edition is None and current.get("editionVersion") == "6.0")
         if use_v6:
             import release_v6

@@ -1,0 +1,309 @@
+{
+  "status": "local-reading-edition",
+  "edition": "7.1",
+  "created": "2026-09-06",
+  "published": false,
+  "literaryAcceptance": "See separate editorial review; this file validates assembly only",
+  "baselineManifest": "../2026-09-06-critic-revision/reading/assembly-v7.json",
+  "baselineManifestSha256": "8BF47DEC88BA1C3F051D17CFE47E4DE96D4F5E70F5818C60498093B91612A913",
+  "inputs": [
+    {
+      "order": 0,
+      "path": "../2026-09-06-critic-revision/prologue.md",
+      "title": "Пролог. Право на решение",
+      "sha256": "DDD2DBF8972FFFADC6DF8D83A61D823440D3180A28712FB9FAB240AEEE88247C",
+      "edition": "7.0"
+    },
+    {
+      "order": 1,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-01.md",
+      "title": "Глава 1. Следующий мост построит машина",
+      "sha256": "47F5FB6F2CE94A6793046C2FBB7621C458A2DCEB36A14848EA4A123C1BFD3FD0",
+      "edition": "7.0"
+    },
+    {
+      "order": 2,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-02.md",
+      "title": "Глава 2. Обеспечены, но отстранены",
+      "sha256": "3DCB79454663C53F0042ABC45E84F31B802EABE2F54C8AFB737F2D5E45CF1C68",
+      "edition": "7.0"
+    },
+    {
+      "order": 3,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-03.md",
+      "title": "Глава 3. Будущее без новых авторов",
+      "sha256": "B7BA037FA35CB3B2BC8BF40CBD6CA19DA38BEF399BFF89379A8CC1B025C0E6B5",
+      "edition": "7.0"
+    },
+    {
+      "order": 4,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-04.md",
+      "title": "Глава 4. От ученика к создателю",
+      "sha256": "875A56E68846900E0C060994F606BA785F97183A23810A4E65CC087CD28BB87A",
+      "edition": "7.0"
+    },
+    {
+      "order": 5,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-05.md",
+      "title": "Глава 5. Почему настоящая работа не всегда учит",
+      "sha256": "A48746E135A6B95C7EEB570E3CC71278902256D4215DB7AB2E8A85C037F3FDAC",
+      "edition": "7.0"
+    },
+    {
+      "order": 6,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-06.md",
+      "title": "Глава 6. Почему одного знания недостаточно",
+      "sha256": "4C779FCDED559A4DF0981AB12FF6B1C982BF787DBA87F4D9E6E548B22D13ECFF",
+      "edition": "7.0"
+    },
+    {
+      "order": 7,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-07.md",
+      "title": "Глава 7. Три результата одной системы",
+      "sha256": "08CEF721933C6D77384F96FAAAC60F00EDC29DF22F5805CE16E77C3B410BD4C6",
+      "edition": "7.0"
+    },
+    {
+      "order": 8,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-08.md",
+      "title": "Глава 8. Что изменилось в следующей задаче",
+      "sha256": "96A9ACD202E28A77658250DE1D0C2FE9B40BF5269431927754DB57686AF64867",
+      "edition": "7.0"
+    },
+    {
+      "order": 9,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-09.md",
+      "title": "Глава 9. Кто продолжит без основателя",
+      "sha256": "C0E0D455A11913E544D50E3E14E47B48AE312E989E8AED9B780E72F8AAE8F91B",
+      "edition": "7.0"
+    },
+    {
+      "order": 10,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-10.md",
+      "title": "Глава 10. Кому принадлежат средства создания",
+      "sha256": "F0A6EB305AD2BEF45430E6211C9C4AE8D3F5C86B60074A65BF62DAA6C7F7AFA1",
+      "edition": "7.0"
+    },
+    {
+      "order": 11,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-11.md",
+      "title": "Глава 11. Кто оплачивает право пробовать",
+      "sha256": "A58A7612A1A6B89AC8A9546309C9952345B6DA3C63E48B8CD149736162E68813",
+      "edition": "7.0"
+    },
+    {
+      "order": 12,
+      "path": "chapter-12.md",
+      "title": "Глава 12. Кто может изменить правила",
+      "sha256": "7BF4B203E644D04A1A142DB504CE1F4C198FEF3B80590137E5AE35DBD2EE56EC",
+      "edition": "7.1"
+    },
+    {
+      "order": 13,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-13.md",
+      "title": "Глава 13. Когда можно доверить решение",
+      "sha256": "7C4F1946558502C2C2D5882C61A0A92CCD074161A4AAC7E6ED3DB33D699ECE84",
+      "edition": "7.0"
+    },
+    {
+      "order": 14,
+      "path": "chapter-14.md",
+      "title": "Глава 14. Кто выбирает ваше развитие",
+      "sha256": "47CFF60DF90CBC34EFE4D9738DB4018E7351B99ED6A362F41EA0237364A9D6C8",
+      "edition": "7.1"
+    },
+    {
+      "order": 15,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-15.md",
+      "title": "Глава 15. Право не участвовать — и вернуться",
+      "sha256": "5B2222E856BC59DDD7B32B35E1B7091B2061836FC9CD22A3A3E7A7D651047BB2",
+      "edition": "7.0"
+    },
+    {
+      "order": 16,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-16.md",
+      "title": "Глава 16. Как начать в существующем мире",
+      "sha256": "A58B453C70DDB257ADB563B4DDB100624106A8F2812D5DC474729CB3817174D1",
+      "edition": "7.0"
+    },
+    {
+      "order": 17,
+      "path": "chapter-17.md",
+      "title": "Глава 17. Когда ИИ становится сильнее нашего решения",
+      "sha256": "F8E38753BAB5CD4540370C181E36463A68623E356EE4ABE7BC23B1C7C6645DD1",
+      "edition": "7.1"
+    },
+    {
+      "order": 18,
+      "path": "../2026-09-06-critic-revision/chapters-v7/chapter-18.md",
+      "title": "Глава 18. Следующее поколение меняет наш проект",
+      "sha256": "115475DD57A1C7FADB740F4D1D0F5AA960C41E7CCEFCBC58974D84E623A84670",
+      "edition": "7.0"
+    },
+    {
+      "order": 19,
+      "path": "../2026-09-06-critic-revision/chapters-v7/epilogue.md",
+      "title": "Эпилог. Следующий вопрос — не наш",
+      "sha256": "890F7EE96FEC4DE9DF9EA660B8039B068CE92F129279187AFC0AEDD08020BF71",
+      "edition": "7.0"
+    }
+  ],
+  "parts": [
+    "Мир может развиваться без нас",
+    "Как общество выращивает тех, кто способен его изменить",
+    "Инженерная школа как место изобретения деятельности",
+    "Кому доступно создание будущего",
+    "Свобода внутри развивающей среды",
+    "Образование, которого нет"
+  ],
+  "noteMap": [
+    {
+      "input": "../2026-09-06-critic-revision/prologue.md",
+      "local": "1",
+      "global": 1
+    },
+    {
+      "input": "../2026-09-06-critic-revision/prologue.md",
+      "local": "2",
+      "global": 2
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-01.md",
+      "local": "1",
+      "global": 3
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-01.md",
+      "local": "2",
+      "global": 4
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-02.md",
+      "local": "1",
+      "global": 5
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-03.md",
+      "local": "1",
+      "global": 6
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-03.md",
+      "local": "2",
+      "global": 7
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-04.md",
+      "local": "1",
+      "global": 8
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-04.md",
+      "local": "2",
+      "global": 9
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-04.md",
+      "local": "3",
+      "global": 10
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-04.md",
+      "local": "4",
+      "global": 11
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-05.md",
+      "local": "1",
+      "global": 12
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-06.md",
+      "local": "1",
+      "global": 13
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-09.md",
+      "local": "1",
+      "global": 14
+    },
+    {
+      "input": "../2026-09-06-critic-revision/chapters-v7/chapter-11.md",
+      "local": "1",
+      "global": 15
+    },
+    {
+      "input": "chapter-12.md",
+      "local": "1",
+      "global": 16
+    },
+    {
+      "input": "chapter-12.md",
+      "local": "2",
+      "global": 17
+    },
+    {
+      "input": "chapter-14.md",
+      "local": "1",
+      "global": 18
+    },
+    {
+      "input": "chapter-14.md",
+      "local": "2",
+      "global": 19
+    },
+    {
+      "input": "chapter-17.md",
+      "local": "1",
+      "global": 20
+    },
+    {
+      "input": "chapter-17.md",
+      "local": "2",
+      "global": 21
+    },
+    {
+      "input": "chapter-17.md",
+      "local": "3",
+      "global": 22
+    }
+  ],
+  "noteCount": 22,
+  "markdownSha256": "AD6B93C9F496EE3637D19CEB4B98AEAAC40029849A0FE6684695912EBE56BB1F",
+  "builder": "build-reading.py",
+  "builderSha256": "7AB475F39E4CC66510853F08DB24B8A043ED82D5F0BCC86DE4311341A095A443",
+  "converter": "../2026-09-05-rebuild/build_reading_documents.py",
+  "converterSha256": "F598DEC0DB7912CE5A11D8F9064452A3F56897BC05E5CF67F221C53B6A93FBF4",
+  "outputs": [
+    {
+      "name": "right-to-decide-v7.1.md",
+      "bytes": 291542,
+      "sha256": "AD6B93C9F496EE3637D19CEB4B98AEAAC40029849A0FE6684695912EBE56BB1F"
+    },
+    {
+      "name": "right-to-decide-v7.1.docx",
+      "bytes": 114698,
+      "sha256": "DB3B59D48C8652B8F40F118395E3C37A45348903B6466E05A3A6017E6F9506F6"
+    },
+    {
+      "name": "right-to-decide-v7.1.pdf",
+      "bytes": 544571,
+      "sha256": "6B8373AD90F79B1C328FDD6EAD30589DFC3A2865CF54E977396BBFC71AA843EA"
+    }
+  ],
+  "checks": {
+    "preservedV7Inputs": 17,
+    "allInputHashesStable": true,
+    "globalNoteDefinitionsSequential": true,
+    "privatePathsAbsent": true,
+    "completeVisibleTextMatchesMarkdown": true,
+    "noteBookmarks": 22,
+    "internalNoteLinks": 23,
+    "externalHyperlinks": 18,
+    "inputTitlesPresent": 20,
+    "pdfPages": 61,
+    "pdfNonemptyPages": 61,
+    "completePdfTextMatchesDocx": true
+  },
+  "command": "python build-reading.py --pdf"
+}
