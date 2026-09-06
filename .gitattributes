@@ -72,3 +72,18 @@ scripts/manuscript_v7.py -text
 public/book/*.docx binary
 public/book/*.pdf binary
 scripts/chapter_docx_v7.py -text
+
+# Preserve reviewed policy bytes and the original Open Editorial manifesto.
+docs/editorial/AUTHOR-DECISION-2026-09-06-CRITIC.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/LITERARY-POLICY-02-v1.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/PRINCIPLES-01-v4.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/STYLE-01-v6.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/LITERARY-WORKFLOW-01-v4.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/AGENT-ROLES-01-v3.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/ACCEPTANCE-01-v3.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/TECH-ENTREPRENEUR-01-v4.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/LAYER-REPOSITORIES-01-v3.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/PROLOGUE-MASTER-01-v2.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/open-editorial/AUTHOR_DECISION_2026-09-06.md whitespace=-blank-at-eof
+manuscript/2026-09-05-rebuild/build_reading_documents.py -text -whitespace

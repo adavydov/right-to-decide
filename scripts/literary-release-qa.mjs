@@ -51,7 +51,14 @@ async function layout(name, width) {
 }
 async function screenshot(name, locator) {
   const file = path.join(directory, name + ".png");
-  if (locator) await locator.screenshot({ path: file });
+  if (locator) {
+    const viewport = page.viewportSize();
+    const box = await locator.boundingBox();
+    await page.setViewportSize({ width: viewport.width, height: Math.max(viewport.height, Math.ceil(box.height) + 300) });
+    await locator.evaluate(element => element.scrollIntoView({ block: "center", behavior: "instant" }));
+    await locator.screenshot({ path: file });
+    await page.setViewportSize(viewport);
+  }
   else await page.screenshot({ path: file, fullPage: false });
   report.screenshots.push(file.split(path.sep).join("/"));
 }
@@ -90,6 +97,9 @@ try {
   for (const chapter of chapters) {
     await open("/read/" + chapter.id + "/");
     const notes = book.notes.filter(note => note.chapterId === chapter.id);
+    if (notes.length) {
+      assert.equal(await page.locator(".reading-notes ol").evaluate(element => getComputedStyle(element).listStyleType), "decimal", "Visible note numbering: " + chapter.id);
+    }
     const blocks = [...chapter.blocks, ...notes.flatMap(note => note.blocks)];
     const actual = await page.evaluate(ids => Object.fromEntries(ids.map(id => {
       const element = document.getElementById(id);

@@ -414,6 +414,18 @@ def card_record(card):
                    "note": "Цитаты и контекст сверены с использованным FB2. Проверка соответствия мемуарам не устанавливает историческую достоверность событий по независимым документам."},
     }
 
+def append_public_supplement(sources):
+    """Add only the two approved metadata records after the base projection."""
+    supplement = read_json(SITE / "src/data/library-supplement.json")
+    assert supplement["schemaVersion"] == 1
+    additions = supplement["sources"]
+    assert [(s["id"], s["number"]) for s in additions] == [("source-49", 49), ("source-50", 50)]
+    assert all(s["links"] == [] and s["cardIds"] == [] for s in additions)
+    assert len(sources) == 48 and [s["number"] for s in sources] == list(range(1, 49))
+    assert not {s["id"] for s in sources} & {s["id"] for s in additions}
+    return sources + additions, supplement
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--corpus", type=Path, default=SITE.parent / "book-memory")
@@ -468,13 +480,16 @@ def main():
     sources, cards, chertok_audit = merge_chertok(sources, cards, corpus)
     quote_count += chertok_audit["quotes"]
     assert len({s["id"] for s in sources}) == 48
+    sources, supplement = append_public_supplement(sources)
+    library_as_of = max(AS_OF, CHERTOK_DATE, supplement["asOf"])
+    assert len({s["id"] for s in sources}) == 50
     assert all(c["sourceId"] in {s["id"] for s in sources} for c in cards)
     for record in sources:
         for link in record["links"]:
             parsed = urlsplit(link["url"])
             assert parsed.scheme in ("https", "http") and parsed.netloc and not parsed.username
     documents = {
-        "library.json": {"schemaVersion": 1, "asOf": max(AS_OF, CHERTOK_DATE), "sources": sources},
+        "library.json": {"schemaVersion": 1, "asOf": library_as_of, "sources": sources},
         "evidence-cards.json": {"schemaVersion": 1, "asOf": max(AS_OF, CHERTOK_DATE), "cards": cards},
     }
     serialized = "\n".join(json.dumps(v, ensure_ascii=False) for v in documents.values())
@@ -489,7 +504,8 @@ def main():
         target.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     counts = {state: sum(s["availability"] == state for s in sources) for state in AVAILABILITY.values()}
     audit = {
-        "schemaVersion": 1, "asOf": AS_OF, "sourceEntries": len(sources), "cards": len(cards), "chertok": chertok_audit,
+        "schemaVersion": 1, "asOf": library_as_of, "sourceEntries": len(sources), "cards": len(cards), "chertok": chertok_audit,
+        "bibliographySupplement": {"path": "src/data/library-supplement.json", "sha256": sha(SITE / "src/data/library-supplement.json"), "sourceIds": [s["id"] for s in supplement["sources"]]},
         "quotesVerified": quote_count, "sourceSha256": SOURCE_SHA,
         "acceptedCardFiles": verified, "availabilityCounts": counts,
         "checks": {

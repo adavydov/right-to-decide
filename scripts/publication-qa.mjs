@@ -53,18 +53,18 @@ try {
     await field.fill('Грабин');
     await page.waitForFunction(()=>document.querySelector('#library-results')?.querySelectorAll(':scope > ol > li').length===1);
     await page.getByRole('button',{name:'С карточками вики',exact:true}).click();
-    assert.match(await page.getByRole('status').innerText(),/Показано 1 из 48/);
+    assert.match(await page.getByRole('status').innerText(),new RegExp('Показано 1 из '+library.length));
     await page.locator('#library-results details').filter({hasText:'30 карточек в вики'}).locator('summary').click();
     const link=page.locator('#library-results a[href*="/wiki/"]').first();
     await link.click(); await page.waitForURL('**/wiki/**');
     assert.match(await page.locator('main').innerText(),/Грабин/);
     await open('/library/');
     await page.getByRole('button',{name:'Имеется полный текст',exact:true}).click();
-    assert.match(await page.getByRole('status').innerText(),new RegExp('Показано '+library.filter(s=>['complete','provided'].includes(s.availability)).length+' из 48'));
+    assert.match(await page.getByRole('status').innerText(),new RegExp('Показано '+library.filter(s=>['complete','provided'].includes(s.availability)).length+' из '+library.length));
     await field.fill('небывалыйисточник987');
     await page.getByRole('heading',{name:'Источников по этому запросу нет'}).waitFor();
     await page.getByRole('button',{name:'Сбросить поиск и фильтр'}).click();
-    assert.match(await page.getByRole('status').innerText(),/Показано 48 из 48/);
+    assert.match(await page.getByRole('status').innerText(),new RegExp('Показано '+library.length+' из '+library.length));
   });
   await check('Wiki search, filter and detail retain quotations and context limits',async()=>{
     await open('/wiki/');

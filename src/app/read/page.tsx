@@ -22,9 +22,9 @@ export default function ReadIndex() {
             <Link className="button secondary" href="/contents/">Выбрать главу</Link>
           </div>
           {book.downloads && (
-            <section aria-label="Скачать всю книгу">
+            <section aria-label="Скачать всю книгу" style={{ marginTop: 28 }}>
               <p>Вся книга · редакция {book.editionVersion}</p>
-              <div className="read-actions">
+              <div className="read-actions" style={{ marginTop: 12 }}>
                 <a className="button secondary" href={assetPath(book.downloads.docx.path)} download>Скачать Word ↓</a>
                 <a className="button secondary" href={assetPath(book.downloads.pdf.path)} download>Скачать PDF ↓</a>
               </div>

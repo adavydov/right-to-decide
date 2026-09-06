@@ -228,7 +228,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
             {renderBookBlocks(chapter.blocks)}
             {notes.length > 0 && <section className="reading-notes" aria-labelledby={`${chapter.id}-notes-heading`}>
               <h2 id={`${chapter.id}-notes-heading`}>{chapter.notesHeading || "Примечания"}</h2>
-              <ol>
+              <ol style={{ listStyleType: "decimal" }}>
                 {notes.map(note => <li id={note.id} key={note.id} value={Number(note.number) || undefined}>
                   {renderBookBlocks(note.blocks)}
                   <div className="note-backlinks">{(references.get(note.id) || []).map((id, index) => <a key={id} href={`#${id}`} aria-label={`Вернуться к ссылке ${note.number}${index ? `, вхождение ${index + 1}` : ""}`}>↩ К тексту{index ? ` ${index + 1}` : ""}</a>)}</div>

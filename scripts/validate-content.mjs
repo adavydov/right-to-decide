@@ -317,7 +317,16 @@ for (const author of authors) {
 localMedia(siteConfig.coverPath, "Book cover");
 assert.equal(siteConfig.coverPath, "/images/book-cover-digital-v1.webp");
 
-assert.equal(sources.length, 48, "Incomplete selected public bibliography");
+const librarySupplement = readJSON("src/data/library-supplement.json");
+assert.equal(librarySupplement.schemaVersion, 1);
+assert.deepEqual(librarySupplement.sources.map(source => [source.id, source.number]),
+  [["source-49", 49], ["source-50", 50]], "Unexpected approved metadata sources");
+assert.ok(librarySupplement.sources.every(source => source.cardIds.length === 0 && source.links.length === 0),
+  "Metadata supplement must not export private cards or files");
+assert.equal(sources.length, 48 + librarySupplement.sources.length, "Incomplete selected public bibliography");
+assert.deepEqual(sources.slice(0, 48).map(source => source.number), Array.from({ length: 48 }, (_, i) => i + 1));
+assert.deepEqual(sources.slice(48), librarySupplement.sources, "Approved bibliography supplement differs");
+assert.ok(readJSON("src/data/library.json").asOf >= librarySupplement.asOf, "Library date precedes its supplement");
 assert.equal(cards.length, 97, "The public collection must retain 30 cards and add 67 Chertok cards");
 const chertokCards = cards.filter(card => card.sourceId === "source-01");
 const chertokSource = sources.find(source => source.id === "source-01");
