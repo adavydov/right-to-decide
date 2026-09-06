@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "8.0",
+  "authorInstruction": "пиши новую литературную редакцию и публикуй",
+  "scope": "Новая редакция после независимой агентной приёмки; выпуск по прямому поручению автора.",
+  "newAuthorAcceptanceClaimed": false,
+  "inputs": [
+    {
+      "path": "manuscript/2026-09-06-depth-revision/acceptance-v8.json",
+      "sha256": "e52e3b4f1a1927a0ab0f65dc02de79215fa520aa7cd64454fbd373c39cfd671d"
+    },
+    {
+      "path": "CONSTITUTION.md",
+      "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1"
+    },
+    {
+      "path": "docs/open-editorial/identity-transitions/archives/literary-manuscript-v7.1-163743358797/book.json",
+      "sha256": "b84eff36e178274410552fcf4e3b77d96813bbd388eb675b9207454df9bc7909"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/release-manifest.json",
+      "sha256": "e8a606d1686ea334f5f2ee64bd494ae76bac33e7b69c9c37fa65bb99e246473b"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/continuous-reading.md",
+      "sha256": "b9cd9134858223f8dd97a3a4cffdd4def71398d7db97535c8936dc6b34cda1ee"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-independent-review.md",
+      "sha256": "0b4eec4a5f965d701ffb8eb8b2e3d314de5c3bc1b59dc9e4da2e21d52b8d2255"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/education-independent-review.md",
+      "sha256": "a62d282cc00f32b8203c3e3c3240282e1ec15c462d94a67847e3f94306f651b9"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/integrator-decision.md",
+      "sha256": "67ffdf30d8cb663bcc2452874e2ab1c1e93e6af10664d58e747f2e50b59be993"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/pdf-visual-review.md",
+      "sha256": "9de95bda1560d84e285505e5f24b4f10d21e88e8e3203d8ee60689918751300d"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-continuation-review.md",
+      "sha256": "1db893a0f82737b010eae26e81af1a0bb79cba127a0fbbc35b31516895ba3211"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/space-only.md",
+      "sha256": "e05552d86f1ae2bf35e345e6782b2e00e98f2b8f722c1b118ee1fe144a234ccb"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/whole-book-criteria.md",
+      "sha256": "b11c6264777c3caae8d32f3cc264906875988ecba7e4156b5de31450b26e7e28"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reviews/without-space.md",
+      "sha256": "af03f105116285d99261998fc7a65f73d81ea1c9734bb8eecc62b892c962af0f"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/source-ledger-v8.md",
+      "sha256": "339f81795a9629b49bb52af811537ffcb6ca49b2d2b38c97d9044ac14b0356e6"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/AUTHOR-AND-BRIEF.md",
+      "sha256": "8551f27f44369b8b035021753b167714ebcdea6ceefca937d16b0d78f0e50265"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/policy-completed-before-prose.md",
+      "sha256": "a28e70151932ea737a7d2fee8064a6633daead21948c119c582aed806f0d7039"
+    },
+    {
+      "path": "docs/editorial/AUTHOR-DECISION-2026-09-06-MERIT.md",
+      "sha256": "bf8b24b1cba220d202f3f41e855534fbc1bd00c9323c4dce3cf72c6d4f5f01ab"
+    },
+    {
+      "path": "docs/editorial/MERIT-01-v1.0.md",
+      "sha256": "ba57808e2183644874633842815c2275761ade59d344a8012a33513e4ee47339"
+    },
+    {
+      "path": "docs/editorial/MERIT-01-v1.0-validation.md",
+      "sha256": "b8dc0ad230e3a945407d24540e1500dd9451d1c8de14136b56ec6fc662892255"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reading/assembly-v8.json",
+      "sha256": "1fdb4f36063673d21b37bbf12e81b59820b7bbcd09326b2c94fc0cc210fc849f"
+    },
+    {
+      "path": "scripts/build-reading-v8.py",
+      "sha256": "19ba62b746dc1ca5152849252f4508c9d4c6ce71f7f0ce7104a6caa9c16bd43f"
+    },
+    {
+      "path": "manuscript/2026-09-05-rebuild/build_reading_documents.py",
+      "sha256": "f598dec0db7912ce5a11d8f9064452a3f56897bc05e5cf67f221c53b6a93fbf4"
+    },
+    {
+      "path": "manuscript/2026-09-06-davydov-cases/build-reading.py",
+      "sha256": "7ab475f39e4cc66510853f08db24b8a043ed82d5f0bcc86de4311341a095a443"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reading/right-to-decide-v8.0.md",
+      "sha256": "5766715052b04dde58405cdc0f423df0514e18a7505f959cfc112ecf43000c45"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reading/right-to-decide-v8.0.docx",
+      "sha256": "5f8965ed08957b31dc73340d193d37b74d13af6740db0bd9f7dbb261c84f0783"
+    },
+    {
+      "path": "manuscript/2026-09-06-depth-revision/reading/right-to-decide-v8.0.pdf",
+      "sha256": "41f5107fbbd8e19d301210f500d9c52026fc753aa94bf75aecc2677a0007d962"
+    }
+  ]
+}

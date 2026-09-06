@@ -96,3 +96,18 @@ manuscript/2026-09-05-rebuild/build_reading_documents.py -text -whitespace
 
 # Frozen public snapshots and reviewed transition receipts keep exact bytes.
 docs/open-editorial/identity-transitions/** -text whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve exact accepted 8.0 source, policy and generator receipt bytes.
+manuscript/2026-09-06-depth-revision/** -text whitespace=cr-at-eol,-blank-at-eof
+scripts/release_v8.py -text
+scripts/manuscript_v8.py -text
+scripts/build-reading-v8.py -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/AUTHOR-DECISION-2026-09-06-MERIT.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/MERIT-01-v1.0.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/MERIT-01-v1.0-validation.md -text whitespace=cr-at-eol,-blank-at-eof
+
+# Preserve the scoped public editorial transfer and its exact-byte inventory.
+/AGENTS.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/README.md -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/2026-09-06-v7.1-depth-assignments/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/editorial/2026-09-06-v8-publication-docs.json -text

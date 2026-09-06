@@ -102,7 +102,7 @@ function renderBlock(block: BookBlock): ReactNode {
     );
   }
   if (block.type === "heading") {
-    const title = /^manuscript-v[67]-/.test(block.id) ? <InlineText block={block} /> : displayBookTitle(block.text);
+    const title = /^manuscript-v[678]-/.test(block.id) ? <InlineText block={block} /> : displayBookTitle(block.text);
     return (block.level || 2) <= 2 ? (
       <h2 data-reader-block id={block.id} key={block.id}>
         {title}

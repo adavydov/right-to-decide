@@ -30,12 +30,16 @@ test("dotted edition identity is a single safe path component in code and OpenAP
   }
 });
 
-test("reviewed rewrite introduces 450 fresh IDs and retains only 46 identical contents blocks", () => {
+test("reviewed source transition preserves exact old blocks and introduces fresh changed blocks", () => {
   const { mapping, transitions } = deriveTransition(previous, oldEdition, book);
-  assert.deepEqual(transitions.filter(c => c.action === "retain-identical-blocks").map(c => c.chapter_id), ["contents"]);
-  assert.equal(transitions.filter(c => c.action === "new-identities-no-annotation-transfer").length, 20);
-  assert.equal(transitions.reduce((sum, c) => sum + c.introduced_block_ids.length, 0), 450);
-  assert.equal(transitions.reduce((sum, c) => sum + c.retained_block_ids.length, 0), 46);
+  const isV8 = book.editionVersion === "8.0";
+  const preserved = isV8 ? json(receipt.release_manifest.path).preservedSources.map(source => source.id) : [];
+  const retainedIds = book.chapters.filter(chapter => chapter.id === "contents" || preserved.includes(chapter.id)).map(chapter => chapter.id);
+  const countBlocks = chapter => chapter.blocks.length + book.notes.filter(note => note.chapterId === chapter.id).reduce((sum, note) => sum + note.blocks.length, 0);
+  assert.deepEqual(transitions.filter(c => c.action === "retain-identical-blocks").map(c => c.chapter_id), retainedIds);
+  assert.equal(transitions.filter(c => c.action === "new-identities-no-annotation-transfer").length, 20 - preserved.length);
+  assert.equal(transitions.reduce((sum, c) => sum + c.introduced_block_ids.length, 0), isV8 ? book.chapters.filter(c => !retainedIds.includes(c.id)).reduce((sum, c) => sum + countBlocks(c), 0) : 450);
+  assert.equal(transitions.reduce((sum, c) => sum + c.retained_block_ids.length, 0), isV8 ? book.chapters.filter(c => retainedIds.includes(c.id)).reduce((sum, c) => sum + countBlocks(c), 0) : 46);
   const oldIds = new Set(oldEdition.chapters.flatMap(c => c.blocks.map(b => b.id)));
   for (const item of transitions) for (const id of item.introduced_block_ids) assert.equal(oldIds.has(id), false);
   assert.deepEqual(mapping, JSON.parse(currentMap));
@@ -50,7 +54,7 @@ test("exact receipt accepts the frozen old map or installed new map without chan
 test("rewritten paragraph cannot inherit a historical annotation identity", () => {
   const changed = structuredClone(book);
   changed.chapters.find(c => c.id === "prologue").blocks[0].id = oldEdition.chapters.find(c => c.id === "prologue").blocks[0].id;
-  assert.throws(() => deriveTransition(previous, oldEdition, changed), /entirely new v7/);
+  assert.throws(() => deriveTransition(previous, oldEdition, changed), /entirely new/);
 });
 
 test("retained contents identity cannot hide changed text under the same source checksum", () => {
@@ -81,13 +85,13 @@ test("modified accepted chapter Markdown invalidates the transition before impor
 
 test("a modified pinned independent review invalidates the transition", t => {
   const selection = json(receipt.publication_selection.path);
-  const review = selection.inputs.find(item => item.path.endsWith("independent-review.md"));
+  const review = book.editionVersion === "8.0" ? json(receipt.release_manifest.path).reviews[0] : selection.inputs.find(item => item.path.endsWith("independent-review.md"));
   assert.ok(review);
   changeRead(t, review.path, bytes => Buffer.concat([bytes, Buffer.from("changed")]));
   assert.throws(() => verifyTransition(root, book, currentMap), /Transition evidence changed/);
 });
 
-test("a modified published v6 snapshot invalidates the transition", t => {
+test("a modified previous published snapshot invalidates the transition", t => {
   const snapshot = receipt.frozen_files.find(item => item.path.endsWith(".txt"));
   assert.ok(snapshot);
   changeRead(t, snapshot.path, bytes => Buffer.concat([bytes, Buffer.from("changed")]));

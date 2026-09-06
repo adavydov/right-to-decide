@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "scope": "public-editorial-document-transfer-for-v8",
+  "status": "copied-for-integrator-review",
+  "published": false,
+  "sourceWorkspace": "right-to-decide-site",
+  "releaseWorkspace": "right-to-decide-depth-release",
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "source_sha256": "414867fd312a545e1c05484c6a707db8c55c212ed92cabb459f50de923deb63e",
+      "target_sha256": "2eb2758ff736f6b2325b2fe625719cd7d6fa11108f6fd7e443813c5a6bb38925",
+      "previous_target_sha256": "743485e7ea5eb257c63bc8ca1951ee705f30343903e61ec9b53b67631e40dc17",
+      "bytes": 17164,
+      "mode": "derived-for-release",
+      "changed": true,
+      "transformation": "Merge the current MERIT notice into the published AGENTS, preserving its detailed static-only, local-note privacy and test-environment instructions."
+    },
+    {
+      "path": "docs/editorial/AUTHOR-DECISION-2026-09-06-MERIT.md",
+      "source_sha256": "bf8b24b1cba220d202f3f41e855534fbc1bd00c9323c4dce3cf72c6d4f5f01ab",
+      "target_sha256": "bf8b24b1cba220d202f3f41e855534fbc1bd00c9323c4dce3cf72c6d4f5f01ab",
+      "previous_target_sha256": null,
+      "bytes": 4800,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/MERIT-01-v1.0.md",
+      "source_sha256": "ba57808e2183644874633842815c2275761ade59d344a8012a33513e4ee47339",
+      "target_sha256": "ba57808e2183644874633842815c2275761ade59d344a8012a33513e4ee47339",
+      "previous_target_sha256": null,
+      "bytes": 20773,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/MERIT-01-v1.0-validation.md",
+      "source_sha256": "b8dc0ad230e3a945407d24540e1500dd9451d1c8de14136b56ec6fc662892255",
+      "target_sha256": "b8dc0ad230e3a945407d24540e1500dd9451d1c8de14136b56ec6fc662892255",
+      "previous_target_sha256": null,
+      "bytes": 5753,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/LITERARY-POLICY-02-v1.0.md",
+      "source_sha256": "bffef6867d93829ef36ac14e51e0a3a64e4b9185244046d37efa1a801a0dd8bd",
+      "target_sha256": "bffef6867d93829ef36ac14e51e0a3a64e4b9185244046d37efa1a801a0dd8bd",
+      "previous_target_sha256": "af41d190af935d730dba4c332f5879524754dd1d59e5d3914174658bd0e64f3a",
+      "bytes": 26410,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/PRINCIPLES-01-v4.0.md",
+      "source_sha256": "2392f2a794469319907678242b50037337433e8ec47c3db6e4e1622e52106356",
+      "target_sha256": "2392f2a794469319907678242b50037337433e8ec47c3db6e4e1622e52106356",
+      "previous_target_sha256": "9aed82c86bbccdc6a2ecb9668831d0158fccc4032e2171d7995d82e311db8019",
+      "bytes": 7346,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/AGENT-ROLES-01-v3.0.md",
+      "source_sha256": "12759fb232fdadba4ead6eda6649b0c7914d2311a6adf128691ae7826286011c",
+      "target_sha256": "12759fb232fdadba4ead6eda6649b0c7914d2311a6adf128691ae7826286011c",
+      "previous_target_sha256": "606f794de521b6abef625a495d944b7b75929bb76502a60bb65896b11c19cc1c",
+      "bytes": 10474,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/ACCEPTANCE-01-v3.0.md",
+      "source_sha256": "2b217f040feca824b7c4a1dc0441ca42e8275eaf8ed98dece4cf99af8aedd468",
+      "target_sha256": "2b217f040feca824b7c4a1dc0441ca42e8275eaf8ed98dece4cf99af8aedd468",
+      "previous_target_sha256": "c15fe51461e9cdebc8ee22a4a75cec34b41bc5b810470c1e077427a4c8d25a8b",
+      "bytes": 18082,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/TECH-ENTREPRENEUR-01-v4.0.md",
+      "source_sha256": "a88cf7d5ce51710cc876a93ba1c7e5712b77a59fa2ecebdb23dff38f3042c501",
+      "target_sha256": "a88cf7d5ce51710cc876a93ba1c7e5712b77a59fa2ecebdb23dff38f3042c501",
+      "previous_target_sha256": "8ae00748acc31b229464c708ad197c927eb32af338ee9607088a75b253a63dab",
+      "bytes": 9846,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/LITERARY-WORKFLOW-01-v4.0.md",
+      "source_sha256": "5434487418cac25f9495b4ef0e79c16e88cf323da1aa7032892fad421affe138",
+      "target_sha256": "5434487418cac25f9495b4ef0e79c16e88cf323da1aa7032892fad421affe138",
+      "previous_target_sha256": "3ce622803a4d122fac1cefe2fd4eba1f4e1472635c71a7d82b0e284a30a5e7d1",
+      "bytes": 12911,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/LAYER-REPOSITORIES-01-v3.0.md",
+      "source_sha256": "08ef79c6bd100c8be323884b6937e635d9a63bf4190a82447164718e31ca60a8",
+      "target_sha256": "08ef79c6bd100c8be323884b6937e635d9a63bf4190a82447164718e31ca60a8",
+      "previous_target_sha256": "aa4fee12a5ace1ce02a6fd98d2abb5563eec81481085607259a9ef5c10155e39",
+      "bytes": 8794,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/2026-09-06-v7.1-depth-assignments/README.md",
+      "source_sha256": "92c0487bb13d6688d0cea4db1099a16f1a764c72138eb1be04a89cbc4f659398",
+      "target_sha256": "92c0487bb13d6688d0cea4db1099a16f1a764c72138eb1be04a89cbc4f659398",
+      "previous_target_sha256": null,
+      "bytes": 3571,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/2026-09-06-v7.1-depth-assignments/assignments.md",
+      "source_sha256": "accd11ef1139da3c23efd090fbdb2ef5620fcb18d1652c48d7d09e36eea798ae",
+      "target_sha256": "accd11ef1139da3c23efd090fbdb2ef5620fcb18d1652c48d7d09e36eea798ae",
+      "previous_target_sha256": null,
+      "bytes": 21239,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/2026-09-06-v7.1-depth-assignments/agent-decision.md",
+      "source_sha256": "a0b0b4d2d97941bd7b00c8a012069fbed3a77a9b1ccb71472524511be7f4aae0",
+      "target_sha256": "a0b0b4d2d97941bd7b00c8a012069fbed3a77a9b1ccb71472524511be7f4aae0",
+      "previous_target_sha256": null,
+      "bytes": 8476,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/2026-09-06-v7.1-depth-assignments/research-findings.md",
+      "source_sha256": "dac6d11371aaadd51e7bcb9015012949598aca4ffbcaa59248caf3104ce10e37",
+      "target_sha256": "dac6d11371aaadd51e7bcb9015012949598aca4ffbcaa59248caf3104ce10e37",
+      "previous_target_sha256": null,
+      "bytes": 15570,
+      "mode": "exact-copy",
+      "changed": true,
+      "transformation": null
+    },
+    {
+      "path": "docs/editorial/README.md",
+      "source_sha256": "b7543536f6dd89e406715d4e0f27663e568978cfb9a444d25a1620fae7cdac94",
+      "target_sha256": "8f99ec91b73cdcbf08602ff6019c0881a195f2a3653fd5a5290c159c87d3ab6e",
+      "previous_target_sha256": "effe845905fadeaf24338e33120e9a593c92a6a22c8936dd031eb3c5fcbd634d",
+      "bytes": 8341,
+      "mode": "derived-for-release",
+      "changed": true,
+      "transformation": "Release-scoped registry: retain MERIT and the depth research package; omit the parallel working-edition 7.2 section; record preparation of 8.0 without claiming acceptance or publication. Final integrator update links the accepted8.0sources,independentacceptanceand releasemanifest."
+    }
+  ],
+  "checkedLocalLinks": 97,
+  "missingLocalLinks": [],
+  "outsideRepositoryLinksNotCopied": [],
+  "protectedFilesUnchanged": {
+    "src/data/book.json": "b84eff36e178274410552fcf4e3b77d96813bbd388eb675b9207454df9bc7909",
+    "CONSTITUTION.md": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+    "public/editorial/corpus.json": "cd1d722b380da62fd7ed5b0e9bb7d133162b2dcafca96173e11fc8301d429505",
+    "docs/open-editorial/block-identities.json": "76ef1c31bf6047fb5c0b5ba81fac97c9e7125290b21b22302e41e1292d3a12a9",
+    "package.json": "5b3f4569fb22f7de7517de81d6aee91e3c586c7be9a158789815c86577d1d679"
+  },
+  "excluded": [
+    "manuscript prose",
+    "book-memory",
+    "server implementation",
+    "parallel 7.2 package",
+    "unrelated package.json changes"
+  ],
+  "acceptance": "No manuscript or publication acceptance is claimed by this transfer."
+}

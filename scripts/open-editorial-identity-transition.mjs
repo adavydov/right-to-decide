@@ -63,8 +63,8 @@ export function deriveTransition(previous, oldEdition, book) {
       if (!/^[a-zA-Z0-9][a-zA-Z0-9_-]*$/.test(block.id)) throw new Error("Unsafe reader block identifier.");
       let stable;
       if (changed) {
-        if (!block.id.startsWith("manuscript-v7-" + chapter.id + "-") || oldIds.has(block.id))
-          throw new Error("A rewritten chapter must have entirely new v7 block identities.");
+        if (!block.id.startsWith((book.editionVersion === "8.0" ? "manuscript-v8-" : "manuscript-v7-") + chapter.id + "-") || oldIds.has(block.id))
+          throw new Error("A rewritten chapter must have entirely new v7/v8 block identities.");
         stable = block.id;
       } else {
         stable = before.blocks[block.id];
@@ -83,8 +83,12 @@ export function deriveTransition(previous, oldEdition, book) {
       retained_block_ids: changed ? [] : Object.values(ids),
       introduced_block_ids: changed ? Object.values(ids) : [] });
   }
-  assert.deepEqual(transitions.filter(item => item.action === "retain-identical-blocks").map(item => item.chapter_id), ["contents"], "Only the unchanged contents retains identities in this literary rewrite.");
-  assert.equal(transitions.filter(item => item.action === "new-identities-no-annotation-transfer").length, 20);
+  if (book.editionVersion === "8.0") {
+    assert.ok(transitions.some(item => item.chapter_id === "contents" && item.action === "retain-identical-blocks"), "The fixed contents must retain exact identities");
+  } else {
+    assert.deepEqual(transitions.filter(item => item.action === "retain-identical-blocks").map(item => item.chapter_id), ["contents"], "Only the unchanged contents retains identities in this literary rewrite.");
+    assert.equal(transitions.filter(item => item.action === "new-identities-no-annotation-transfer").length, 20);
+  }
   return { mapping, transitions };
 }
 
@@ -92,13 +96,13 @@ export function verifyTransition(root, book, currentMapBytes) {
   const editionId = assertEditionId(book.releaseId);
   const receiptPath = "docs/open-editorial/identity-transitions/" + editionId + ".json";
   if (!fs.existsSync(local(root, receiptPath))) {
-    if (book.editionVersion === "7.1") throw new Error("The literary 7.1 identity transition requires its explicit receipt.");
+    if (["7.1", "8.0"].includes(book.editionVersion)) throw new Error("The literary identity transition requires its explicit receipt.");
     return parse(currentMapBytes);
   }
   const receipt = parse(fs.readFileSync(local(root, receiptPath)));
   assert.equal(receipt.schema_version, "1.0");
   assert.equal(receipt.to_edition_id, editionId);
-  assert.equal(receipt.strategy, "new-identities-for-literary-rewrite");
+  assert.equal(receipt.strategy, book.editionVersion === "8.0" ? "new-identities-for-source-revision" : "new-identities-for-literary-rewrite");
   assert.equal(receipt.annotation_transfer, "none");
   assertEditionId(receipt.from_edition_id);
   const bookBytes = checked(root, receipt.book);
@@ -114,7 +118,7 @@ export function verifyTransition(root, book, currentMapBytes) {
   assert.equal(book.source.path, receipt.release_manifest.path);
   const selection = parse(checked(root, receipt.publication_selection));
   assert.equal(selection.editionVersion, book.editionVersion);
-  assert.equal(selection.authorInstruction, "Обнов сайт");
+  assert.equal(selection.authorInstruction, book.editionVersion === "8.0" ? "пиши новую литературную редакцию и публикуй" : "Обнов сайт");
   for (const entry of selection.inputs) checked(root, entry);
   const oldMapBytes = checked(root, receipt.previous_identity_map), previous = parse(oldMapBytes);
   const oldCorpus = parse(checked(root, receipt.previous_corpus));
@@ -123,6 +127,13 @@ export function verifyTransition(root, book, currentMapBytes) {
   assert.equal(oldEdition.id, receipt.from_edition_id);
   assert.deepEqual(oldCorpus.editions.find(e => e.id === oldEdition.id), oldEdition);
   assert.deepEqual(inventory(root, "public/editorial/editions/" + receipt.from_edition_id), receipt.frozen_files, "Published historical files changed.");
+  if (book.editionVersion === "8.0") {
+    assert.deepEqual(receipt.historical_editions?.map(e => e.id), oldCorpus.editions.map(e => e.id), "Historical edition inventory missing");
+    for (const item of receipt.historical_editions) {
+      assertEditionId(item.id);
+      assert.deepEqual(inventory(root, "public/editorial/editions/" + item.id), item.files, "Historical snapshot changed: " + item.id);
+    }
+  }
   const derived = deriveTransition(previous, oldEdition, book);
   assert.deepEqual(receipt.chapter_transitions, derived.transitions, "Explicit chapter transition differs.");
   assert.equal(receipt.next_identity_map_sha256, hash(encode(derived.mapping)), "Reviewed target identity map differs.");

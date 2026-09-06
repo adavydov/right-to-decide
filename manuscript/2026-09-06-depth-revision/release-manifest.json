@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 4,
+  "releaseId": "literary-manuscript-v8.0-f3c9128893a3",
+  "editionVersion": "8.0",
+  "architectureVersion": "5.1",
+  "chapterNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "includesEpilogue": true,
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "number": 1,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-01.md",
+      "sha256": "2c1db664ee5831bb3cee74273dedee6cd78ad0d84483fb87db504fe2c0583fb1"
+    },
+    {
+      "id": "chapter-02",
+      "number": 2,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-02.md",
+      "sha256": "3e4d03de3aa00da7720d62ae3330b549e60ecb32e697be5766207988b0adbab7"
+    },
+    {
+      "id": "chapter-03",
+      "number": 3,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-03.md",
+      "sha256": "144f280c8a3a266a5ebc934e22cb29c7992b679b10bc2574acd8d39018138de8"
+    },
+    {
+      "id": "chapter-04",
+      "number": 4,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-04.md",
+      "sha256": "2b03394a7087856e8c8a5654ee6f67876cd04d588380c9cb68fc2c6b9e0f500c"
+    },
+    {
+      "id": "chapter-05",
+      "number": 5,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-05.md",
+      "sha256": "52c14a4ce733852bb3e9d7283c06f8804d5a4d8ccd5b9877fa19af5fba421fd8"
+    },
+    {
+      "id": "chapter-06",
+      "number": 6,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-06.md",
+      "sha256": "47593ece32682c5f1610b29f1cfa929d8bc418e274c2471a5015fa4403447f44"
+    },
+    {
+      "id": "chapter-07",
+      "number": 7,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-07.md",
+      "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+    },
+    {
+      "id": "chapter-08",
+      "number": 8,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-08.md",
+      "sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a"
+    },
+    {
+      "id": "chapter-09",
+      "number": 9,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-09.md",
+      "sha256": "659d3a36e88aeb2a1a79a79937446a58dcaa302134eca42fecaaac1ac21c012e"
+    },
+    {
+      "id": "chapter-10",
+      "number": 10,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-10.md",
+      "sha256": "66e9508834f012f3b6330860a17868f9bc6bea0a5f4ef8cca1eea1767f233fec"
+    },
+    {
+      "id": "chapter-11",
+      "number": 11,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-11.md",
+      "sha256": "764a3ec4f1dc8013cdf960722d5c7df27a9b905091a8964e6aac152571a1d3df"
+    },
+    {
+      "id": "chapter-12",
+      "number": 12,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-12.md",
+      "sha256": "c3989c5b45386a93da0aa92bfe139c6312da869dc46a796ecafeeff4eda59d1e"
+    },
+    {
+      "id": "chapter-13",
+      "number": 13,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-13.md",
+      "sha256": "f25707882e09b47be7cd4cd6fa83b1b37f81f6dd18a85c5d608cfcf491a6bf3c"
+    },
+    {
+      "id": "chapter-14",
+      "number": 14,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-14.md",
+      "sha256": "806b31b7b04a0a552d8c3e9e7e7573a9ffc3bc3e6ba4d2b07feee50df8c93041"
+    },
+    {
+      "id": "chapter-15",
+      "number": 15,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-15.md",
+      "sha256": "e5c3f693465aac9fd05ad05b165c214f5f28dc220c47d292375e77d5e800402e"
+    },
+    {
+      "id": "chapter-16",
+      "number": 16,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-16.md",
+      "sha256": "dddf34b753a0f6bbe7a5fabfb1f791bf4f745c1eb4b307dfa49d1a97ddab2f10"
+    },
+    {
+      "id": "chapter-17",
+      "number": 17,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-17.md",
+      "sha256": "5ef8ef4041d1969d73a037dc56effffc962c21c41a0a32e20abb9c4c04dc9303"
+    },
+    {
+      "id": "chapter-18",
+      "number": 18,
+      "path": "manuscript/2026-09-06-depth-revision/chapters/chapter-18.md",
+      "sha256": "eb6c36926749e2fe3c08862891f318f30b02c18b30cc8b0f3b406a4102e522c2"
+    },
+    {
+      "id": "epilogue",
+      "number": null,
+      "path": "manuscript/2026-09-06-depth-revision/epilogue.md",
+      "sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58"
+    }
+  ],
+  "authorContents": {
+    "path": "manuscript/2026-09-05-rebuild/contents-v5.1.md",
+    "sha256": "07fecd4dc66f0b0d7acad2d609e6e18bb9d3003af5c825b007a9dbc532e2f855"
+  },
+  "prologue": {
+    "path": "manuscript/2026-09-06-depth-revision/prologue.md",
+    "sha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393"
+  },
+  "constitution": {
+    "path": "CONSTITUTION.md",
+    "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+    "version": "1.2.1"
+  },
+  "prologueSelection": {
+    "path": "manuscript/2026-09-06-depth-revision/prologue.md",
+    "sha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393",
+    "version": "8.0",
+    "status": "accepted"
+  },
+  "masterPrologue": {
+    "path": "manuscript/2026-09-05-rebuild/prologue-v2.0.md",
+    "sha256": "732ef9208463e2b6cf23d31ac6ed62d73486b4e27aa74b4a3135ef6d1970f308",
+    "version": "2.0"
+  },
+  "acceptanceStatus": "independent-editorial-review",
+  "acceptance": {
+    "path": "manuscript/2026-09-06-depth-revision/acceptance-v8.json",
+    "sha256": "e52e3b4f1a1927a0ab0f65dc02de79215fa520aa7cd64454fbd373c39cfd671d"
+  },
+  "assembly": {
+    "path": "manuscript/2026-09-06-depth-revision/reading/assembly-v8.json",
+    "sha256": "1fdb4f36063673d21b37bbf12e81b59820b7bbcd09326b2c94fc0cc210fc849f"
+  },
+  "noteCount": 32,
+  "baselineBook": {
+    "path": "docs/open-editorial/identity-transitions/archives/literary-manuscript-v7.1-163743358797/book.json",
+    "sha256": "b84eff36e178274410552fcf4e3b77d96813bbd388eb675b9207454df9bc7909"
+  },
+  "baselineRelease": {
+    "path": "manuscript/2026-09-06-davydov-cases/release-manifest.json",
+    "sha256": "e8a606d1686ea334f5f2ee64bd494ae76bac33e7b69c9c37fa65bb99e246473b"
+  },
+  "preservedSources": [
+    {
+      "id": "chapter-07",
+      "path": "manuscript/2026-09-06-critic-revision/chapters-v7/chapter-07.md",
+      "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+    }
+  ],
+  "selection": {
+    "path": "manuscript/2026-09-06-depth-revision/publication-selection.json",
+    "sha256": "e7f221c7b0a718ba87a7ebcceeccde3257a82655518830f754cb96f8d1c4c9b0"
+  },
+  "reviews": [
+    {
+      "id": "prologue",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-01",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-02",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-03",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-04",
+      "author": "write_education_history",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-05",
+      "author": "write_education_history",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-06",
+      "author": "write_education_history",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-07",
+      "author": "v7.1 source — preserved without textual change",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-08",
+      "author": "write_education_history",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-09",
+      "author": "write_education_history",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-10",
+      "author": "write_economy_institutions",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-11",
+      "author": "write_economy_institutions",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-12",
+      "author": "write_economy_institutions",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-13",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-14",
+      "author": "root",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-15",
+      "author": "root",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-16",
+      "author": "write_economy_institutions",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-17",
+      "author": "root",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "chapter-18",
+      "author": "root",
+      "reviewer": "write_economy_institutions",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    },
+    {
+      "id": "epilogue",
+      "author": "root",
+      "reviewer": "write_education_history",
+      "path": "manuscript/2026-09-06-depth-revision/reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "status": "independent-editorial-review",
+      "constitutionVersion": "1.2.1",
+      "policySupplement": "MERIT-01 1.0"
+    }
+  ],
+  "wholeBookReviewScope": {
+    "continuousReading": {
+      "path": "reviews/continuous-reading.md",
+      "sha256": "b9cd9134858223f8dd97a3a4cffdd4def71398d7db97535c8936dc6b34cda1ee"
+    },
+    "withoutSpace": {
+      "path": "reviews/without-space.md",
+      "sha256": "af03f105116285d99261998fc7a65f73d81ea1c9734bb8eecc62b892c962af0f"
+    },
+    "spaceOnly": {
+      "path": "reviews/space-only.md",
+      "sha256": "e05552d86f1ae2bf35e345e6782b2e00e98f2b8f722c1b118ee1fe144a234ccb"
+    },
+    "criteria": {
+      "path": "reviews/whole-book-criteria.md",
+      "sha256": "b11c6264777c3caae8d32f3cc264906875988ecba7e4156b5de31450b26e7e28"
+    }
+  },
+  "downloads": [
+    {
+      "id": "prologue",
+      "path": "public/book/chapters/prologue-v8.0.docx",
+      "sha256": "c26664e86c5c092e952a4660876cb7dc7b0e72b0710f7625e1cbf10e090a782f",
+      "sourceSha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393"
+    },
+    {
+      "id": "chapter-01",
+      "path": "public/book/chapters/chapter-01-v8.0.docx",
+      "sha256": "9ad831c0956774a7245d53338a2e4a300ac348f7d98c71fbca78a9894741ae14",
+      "sourceSha256": "2c1db664ee5831bb3cee74273dedee6cd78ad0d84483fb87db504fe2c0583fb1"
+    },
+    {
+      "id": "chapter-02",
+      "path": "public/book/chapters/chapter-02-v8.0.docx",
+      "sha256": "f6aae9c7c9ef86fcf64ce690fb028ee63a6df246be84eca3a0f84d8e0751041c",
+      "sourceSha256": "3e4d03de3aa00da7720d62ae3330b549e60ecb32e697be5766207988b0adbab7"
+    },
+    {
+      "id": "chapter-03",
+      "path": "public/book/chapters/chapter-03-v8.0.docx",
+      "sha256": "207e3080e6ffeea012602ff14e437b0fc6d0bce68867567a2b6afb00e5e64452",
+      "sourceSha256": "144f280c8a3a266a5ebc934e22cb29c7992b679b10bc2574acd8d39018138de8"
+    },
+    {
+      "id": "chapter-04",
+      "path": "public/book/chapters/chapter-04-v8.0.docx",
+      "sha256": "d5ef05a7a7ef6ef252545d2d7d6d726808774eb5c99f5880036b2504d02fdbc5",
+      "sourceSha256": "2b03394a7087856e8c8a5654ee6f67876cd04d588380c9cb68fc2c6b9e0f500c"
+    },
+    {
+      "id": "chapter-05",
+      "path": "public/book/chapters/chapter-05-v8.0.docx",
+      "sha256": "a9083fcffb6ed52366d3da8bcd2de74a14f43ad2d6b029affbb63fba8ec51d50",
+      "sourceSha256": "52c14a4ce733852bb3e9d7283c06f8804d5a4d8ccd5b9877fa19af5fba421fd8"
+    },
+    {
+      "id": "chapter-06",
+      "path": "public/book/chapters/chapter-06-v8.0.docx",
+      "sha256": "f0aa7a035d651401db06118982eeb433e5a551429a90ce33633a9c88e961db4a",
+      "sourceSha256": "47593ece32682c5f1610b29f1cfa929d8bc418e274c2471a5015fa4403447f44"
+    },
+    {
+      "id": "chapter-07",
+      "path": "public/book/chapters/chapter-07-v8.0.docx",
+      "sha256": "6c806a6d92cefecb7473ffc34504d69a4a27dee946a48342fd709a917a3fcfdb",
+      "sourceSha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+    },
+    {
+      "id": "chapter-08",
+      "path": "public/book/chapters/chapter-08-v8.0.docx",
+      "sha256": "1458dcb9ec2e746c3fb17f604b0d9ce61cb996614ff51477bb443e09482e3fb4",
+      "sourceSha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a"
+    },
+    {
+      "id": "chapter-09",
+      "path": "public/book/chapters/chapter-09-v8.0.docx",
+      "sha256": "d2dd106c98edc0755a8eb5982b822dd34205d7bdfa0e1cebd24e29917723d687",
+      "sourceSha256": "659d3a36e88aeb2a1a79a79937446a58dcaa302134eca42fecaaac1ac21c012e"
+    },
+    {
+      "id": "chapter-10",
+      "path": "public/book/chapters/chapter-10-v8.0.docx",
+      "sha256": "a6043c9926829374fe6bab676478ad056a5f7643901dcf8f1d684202d3ace83e",
+      "sourceSha256": "66e9508834f012f3b6330860a17868f9bc6bea0a5f4ef8cca1eea1767f233fec"
+    },
+    {
+      "id": "chapter-11",
+      "path": "public/book/chapters/chapter-11-v8.0.docx",
+      "sha256": "0f3ce69aa7608123036f4fa3a946b5d00e2685e33ff686f51fc412e073c51192",
+      "sourceSha256": "764a3ec4f1dc8013cdf960722d5c7df27a9b905091a8964e6aac152571a1d3df"
+    },
+    {
+      "id": "chapter-12",
+      "path": "public/book/chapters/chapter-12-v8.0.docx",
+      "sha256": "3aa51273fdd36a1c0122b47e7ca34fdd18baaac26de2960046d6bc4ed8d92d12",
+      "sourceSha256": "c3989c5b45386a93da0aa92bfe139c6312da869dc46a796ecafeeff4eda59d1e"
+    },
+    {
+      "id": "chapter-13",
+      "path": "public/book/chapters/chapter-13-v8.0.docx",
+      "sha256": "bd3df97eb404092ff6f60c923ff354adc8e2cca4ee03e83e291dda06750f1ba7",
+      "sourceSha256": "f25707882e09b47be7cd4cd6fa83b1b37f81f6dd18a85c5d608cfcf491a6bf3c"
+    },
+    {
+      "id": "chapter-14",
+      "path": "public/book/chapters/chapter-14-v8.0.docx",
+      "sha256": "e022ceb6fc03ecde8cffc6b0a0eac4e6d0596794b2ff709a46085c12c0687ad2",
+      "sourceSha256": "806b31b7b04a0a552d8c3e9e7e7573a9ffc3bc3e6ba4d2b07feee50df8c93041"
+    },
+    {
+      "id": "chapter-15",
+      "path": "public/book/chapters/chapter-15-v8.0.docx",
+      "sha256": "a7b40614aee130b05dc2362166bc77368d681489ff033c6579f13ddb6d365ca7",
+      "sourceSha256": "e5c3f693465aac9fd05ad05b165c214f5f28dc220c47d292375e77d5e800402e"
+    },
+    {
+      "id": "chapter-16",
+      "path": "public/book/chapters/chapter-16-v8.0.docx",
+      "sha256": "ef02c1f4ef04d0071dd7622c59d287986aa63d9bbf14799658446092bed13104",
+      "sourceSha256": "dddf34b753a0f6bbe7a5fabfb1f791bf4f745c1eb4b307dfa49d1a97ddab2f10"
+    },
+    {
+      "id": "chapter-17",
+      "path": "public/book/chapters/chapter-17-v8.0.docx",
+      "sha256": "2316c1c4c6801633b0087ef136ec3fadc0af2392c07b0d5bbfa95b66760da07e",
+      "sourceSha256": "5ef8ef4041d1969d73a037dc56effffc962c21c41a0a32e20abb9c4c04dc9303"
+    },
+    {
+      "id": "chapter-18",
+      "path": "public/book/chapters/chapter-18-v8.0.docx",
+      "sha256": "3f9e6578c5fa6e3078a658a22aa9658e3194d03bc4b9cf49359addd2a5a05492",
+      "sourceSha256": "eb6c36926749e2fe3c08862891f318f30b02c18b30cc8b0f3b406a4102e522c2"
+    },
+    {
+      "id": "epilogue",
+      "path": "public/book/chapters/epilogue-v8.0.docx",
+      "sha256": "85f8029418f8ba139c8d501836d54f8f331b583be3fb0c8da64b506d670ef11c",
+      "sourceSha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58"
+    }
+  ],
+  "readingDownloads": [
+    {
+      "kind": "docx",
+      "path": "/book/right-to-decide-v8.0.docx",
+      "sha256": "5f8965ed08957b31dc73340d193d37b74d13af6740db0bd9f7dbb261c84f0783",
+      "bytes": 126747,
+      "sourcePath": "manuscript/2026-09-06-depth-revision/reading/right-to-decide-v8.0.docx"
+    },
+    {
+      "kind": "pdf",
+      "path": "/book/right-to-decide-v8.0.pdf",
+      "sha256": "41f5107fbbd8e19d301210f500d9c52026fc753aa94bf75aecc2677a0007d962",
+      "bytes": 629117,
+      "sourcePath": "manuscript/2026-09-06-depth-revision/reading/right-to-decide-v8.0.pdf"
+    }
+  ],
+  "archive": {
+    "path": "src/data/previous-edition.json",
+    "sha256": "61b6b6d314f7148798a68170f13fad55223e7d9713938ab18b79aca12685ee35"
+  },
+  "bookSha256": "4502d9c925f8895e0d6c9351f0cdfe57a27939706948ad67c791356fdf446322",
+  "generators": [
+    {
+      "path": "scripts/publish-manuscript.py",
+      "sha256": "644e46b643a2cba0a8ac5061cfefff929dc53f1da73b73f4a0f899a19bb40a3f"
+    },
+    {
+      "path": "scripts/release_v8.py",
+      "sha256": "31c7ba0fd5825a5e2301dab5d88f3f996c5c61c72d3cc39ccd4856ecc25ee523"
+    },
+    {
+      "path": "scripts/manuscript_v8.py",
+      "sha256": "e4bd94cedb869f5c01e349be8a85741e89c255bbf7f9cc5ed84e204394cdb249"
+    },
+    {
+      "path": "scripts/manuscript_v7.py",
+      "sha256": "c1965dfe51306fda627c7285ba9d31da9a0197ba3fae2c13ee4af428dfbd5e7d"
+    },
+    {
+      "path": "scripts/chapter_docx_v7.py",
+      "sha256": "1b02daa72028ac14df01ab2c2b5bfef6ae4fbd2d96b6f2bd2464a314a2540e7b"
+    },
+    {
+      "path": "scripts/manuscript_markdown.py",
+      "sha256": "58bcc7d703940fb4c32dc45210689f7456749d67a5b7eb78c82cafe4695d04e4"
+    },
+    {
+      "path": "scripts/chapter_docx.py",
+      "sha256": "ed4595b264d1754699f5f272b481bdf70eeb06888715b6916115eb2fa4f3088f"
+    },
+    {
+      "path": "scripts/build-reading-v8.py",
+      "sha256": "19ba62b746dc1ca5152849252f4508c9d4c6ce71f7f0ce7104a6caa9c16bd43f"
+    }
+  ],
+  "published": true,
+  "newAuthorAcceptanceClaimed": false,
+  "scope": "Двадцать зафиксированных текстов редакции 8.0 по прямому поручению написать и опубликовать новую редакцию."
+}

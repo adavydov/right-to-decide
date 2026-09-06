@@ -1,0 +1,247 @@
+{
+  "edition": "8.0",
+  "decision": "accepted-local-editorial-edition",
+  "date": "2026-09-06",
+  "texts": [
+    {
+      "path": "prologue.md",
+      "sha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-01.md",
+      "sha256": "2c1db664ee5831bb3cee74273dedee6cd78ad0d84483fb87db504fe2c0583fb1",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-02.md",
+      "sha256": "3e4d03de3aa00da7720d62ae3330b549e60ecb32e697be5766207988b0adbab7",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-03.md",
+      "sha256": "144f280c8a3a266a5ebc934e22cb29c7992b679b10bc2574acd8d39018138de8",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-04.md",
+      "sha256": "2b03394a7087856e8c8a5654ee6f67876cd04d588380c9cb68fc2c6b9e0f500c",
+      "author": "write_education_history",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-05.md",
+      "sha256": "52c14a4ce733852bb3e9d7283c06f8804d5a4d8ccd5b9877fa19af5fba421fd8",
+      "author": "write_education_history",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-06.md",
+      "sha256": "47593ece32682c5f1610b29f1cfa929d8bc418e274c2471a5015fa4403447f44",
+      "author": "write_education_history",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-07.md",
+      "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6",
+      "author": "v7.1 source — preserved without textual change",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-08.md",
+      "sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a",
+      "author": "write_education_history",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-09.md",
+      "sha256": "659d3a36e88aeb2a1a79a79937446a58dcaa302134eca42fecaaac1ac21c012e",
+      "author": "write_education_history",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-10.md",
+      "sha256": "66e9508834f012f3b6330860a17868f9bc6bea0a5f4ef8cca1eea1767f233fec",
+      "author": "write_economy_institutions",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/economy-final-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-11.md",
+      "sha256": "764a3ec4f1dc8013cdf960722d5c7df27a9b905091a8964e6aac152571a1d3df",
+      "author": "write_economy_institutions",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/economy-final-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-12.md",
+      "sha256": "c3989c5b45386a93da0aa92bfe139c6312da869dc46a796ecafeeff4eda59d1e",
+      "author": "write_economy_institutions",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/economy-final-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-13.md",
+      "sha256": "f25707882e09b47be7cd4cd6fa83b1b37f81f6dd18a85c5d608cfcf491a6bf3c",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-14.md",
+      "sha256": "806b31b7b04a0a552d8c3e9e7e7573a9ffc3bc3e6ba4d2b07feee50df8c93041",
+      "author": "root",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-15.md",
+      "sha256": "e5c3f693465aac9fd05ad05b165c214f5f28dc220c47d292375e77d5e800402e",
+      "author": "root",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-16.md",
+      "sha256": "dddf34b753a0f6bbe7a5fabfb1f791bf4f745c1eb4b307dfa49d1a97ddab2f10",
+      "author": "write_economy_institutions",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/economy-final-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-17.md",
+      "sha256": "5ef8ef4041d1969d73a037dc56effffc962c21c41a0a32e20abb9c4c04dc9303",
+      "author": "root",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "chapters/chapter-18.md",
+      "sha256": "eb6c36926749e2fe3c08862891f318f30b02c18b30cc8b0f3b406a4102e522c2",
+      "author": "root",
+      "independentReviewer": "write_economy_institutions",
+      "review": "reviews/final-specialist-acceptance.md",
+      "decision": "accepted-agent-editorial"
+    },
+    {
+      "path": "epilogue.md",
+      "sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58",
+      "author": "root",
+      "independentReviewer": "write_education_history",
+      "review": "reviews/root-opening-review.md",
+      "decision": "accepted-agent-editorial"
+    }
+  ],
+  "checks": [
+    {
+      "path": "reviews/continuous-reading.md",
+      "sha256": "b9cd9134858223f8dd97a3a4cffdd4def71398d7db97535c8936dc6b34cda1ee"
+    },
+    {
+      "path": "reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d"
+    },
+    {
+      "path": "reviews/economy-independent-review.md",
+      "sha256": "0b4eec4a5f965d701ffb8eb8b2e3d314de5c3bc1b59dc9e4da2e21d52b8d2255"
+    },
+    {
+      "path": "reviews/education-independent-review.md",
+      "sha256": "a62d282cc00f32b8203c3e3c3240282e1ec15c462d94a67847e3f94306f651b9"
+    },
+    {
+      "path": "reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665"
+    },
+    {
+      "path": "reviews/integrator-decision.md",
+      "sha256": "67ffdf30d8cb663bcc2452874e2ab1c1e93e6af10664d58e747f2e50b59be993"
+    },
+    {
+      "path": "reviews/pdf-visual-review.md",
+      "sha256": "9de95bda1560d84e285505e5f24b4f10d21e88e8e3203d8ee60689918751300d"
+    },
+    {
+      "path": "reviews/root-continuation-review.md",
+      "sha256": "1db893a0f82737b010eae26e81af1a0bb79cba127a0fbbc35b31516895ba3211"
+    },
+    {
+      "path": "reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a"
+    },
+    {
+      "path": "reviews/space-only.md",
+      "sha256": "e05552d86f1ae2bf35e345e6782b2e00e98f2b8f722c1b118ee1fe144a234ccb"
+    },
+    {
+      "path": "reviews/whole-book-criteria.md",
+      "sha256": "b11c6264777c3caae8d32f3cc264906875988ecba7e4156b5de31450b26e7e28"
+    },
+    {
+      "path": "reviews/without-space.md",
+      "sha256": "af03f105116285d99261998fc7a65f73d81ea1c9734bb8eecc62b892c962af0f"
+    },
+    {
+      "path": "scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34"
+    },
+    {
+      "path": "source-ledger-v8.md",
+      "sha256": "339f81795a9629b49bb52af811537ffcb6ca49b2d2b38c97d9044ac14b0356e6"
+    }
+  ],
+  "authorDecision": "AUTHOR-AND-BRIEF.md",
+  "policyCompletedBeforeProse": "policy-completed-before-prose.md",
+  "wholeBook": {
+    "continuousReading": {
+      "path": "reviews/continuous-reading.md",
+      "sha256": "b9cd9134858223f8dd97a3a4cffdd4def71398d7db97535c8936dc6b34cda1ee"
+    },
+    "withoutSpace": {
+      "path": "reviews/without-space.md",
+      "sha256": "af03f105116285d99261998fc7a65f73d81ea1c9734bb8eecc62b892c962af0f"
+    },
+    "spaceOnly": {
+      "path": "reviews/space-only.md",
+      "sha256": "e05552d86f1ae2bf35e345e6782b2e00e98f2b8f722c1b118ee1fe144a234ccb"
+    },
+    "criteria": {
+      "path": "reviews/whole-book-criteria.md",
+      "sha256": "b11c6264777c3caae8d32f3cc264906875988ecba7e4156b5de31450b26e7e28"
+    }
+  },
+  "scope": "Independent agent editorial acceptance. No external peer review, reader test or completed pilot is claimed. One unchanged source (chapter7) is preserved;19sources changed.",
+  "normalization": "Only parser-supported note syntax and line endings; final hashes confirmed by independent reviewers."
+}

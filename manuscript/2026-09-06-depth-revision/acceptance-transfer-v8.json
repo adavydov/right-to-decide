@@ -1,0 +1,90 @@
+{
+  "scope": "exact accepted editorial evidence transfer",
+  "files": [
+    {
+      "path": "acceptance-v8.json",
+      "sha256": "e52e3b4f1a1927a0ab0f65dc02de79215fa520aa7cd64454fbd373c39cfd671d",
+      "bytes": 9786
+    },
+    {
+      "path": "reviews/continuous-reading.md",
+      "sha256": "b9cd9134858223f8dd97a3a4cffdd4def71398d7db97535c8936dc6b34cda1ee",
+      "bytes": 8811
+    },
+    {
+      "path": "reviews/economy-final-acceptance.md",
+      "sha256": "509787200b434e18bc77878ae97e89d0ca66554287cd05fc53def8ab3da60b0d",
+      "bytes": 3196
+    },
+    {
+      "path": "reviews/economy-independent-review.md",
+      "sha256": "0b4eec4a5f965d701ffb8eb8b2e3d314de5c3bc1b59dc9e4da2e21d52b8d2255",
+      "bytes": 20844
+    },
+    {
+      "path": "reviews/education-independent-review.md",
+      "sha256": "a62d282cc00f32b8203c3e3c3240282e1ec15c462d94a67847e3f94306f651b9",
+      "bytes": 27477
+    },
+    {
+      "path": "reviews/final-specialist-acceptance.md",
+      "sha256": "750f623710c3c77544feea1c7d0d8407c99505013280b9416e7049a4637b2665",
+      "bytes": 11869
+    },
+    {
+      "path": "reviews/integrator-decision.md",
+      "sha256": "67ffdf30d8cb663bcc2452874e2ab1c1e93e6af10664d58e747f2e50b59be993",
+      "bytes": 6773
+    },
+    {
+      "path": "reviews/pdf-visual-review.md",
+      "sha256": "9de95bda1560d84e285505e5f24b4f10d21e88e8e3203d8ee60689918751300d",
+      "bytes": 1051
+    },
+    {
+      "path": "reviews/root-continuation-review.md",
+      "sha256": "1db893a0f82737b010eae26e81af1a0bb79cba127a0fbbc35b31516895ba3211",
+      "bytes": 26123
+    },
+    {
+      "path": "reviews/root-opening-review.md",
+      "sha256": "82208be709b0c93a85a44b71179dba4ca553f80785bb7ca1072567d5489d635a",
+      "bytes": 27031
+    },
+    {
+      "path": "reviews/space-only.md",
+      "sha256": "e05552d86f1ae2bf35e345e6782b2e00e98f2b8f722c1b118ee1fe144a234ccb",
+      "bytes": 8873
+    },
+    {
+      "path": "reviews/whole-book-criteria.md",
+      "sha256": "b11c6264777c3caae8d32f3cc264906875988ecba7e4156b5de31450b26e7e28",
+      "bytes": 13666
+    },
+    {
+      "path": "reviews/without-space.md",
+      "sha256": "af03f105116285d99261998fc7a65f73d81ea1c9734bb8eecc62b892c962af0f",
+      "bytes": 6122
+    },
+    {
+      "path": "scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34",
+      "bytes": 12225
+    },
+    {
+      "path": "source-ledger-v8.md",
+      "sha256": "339f81795a9629b49bb52af811537ffcb6ca49b2d2b38c97d9044ac14b0356e6",
+      "bytes": 7116
+    },
+    {
+      "path": "AUTHOR-AND-BRIEF.md",
+      "sha256": "8551f27f44369b8b035021753b167714ebcdea6ceefca937d16b0d78f0e50265",
+      "bytes": 10789
+    },
+    {
+      "path": "policy-completed-before-prose.md",
+      "sha256": "a28e70151932ea737a7d2fee8064a6633daead21948c119c582aed806f0d7039",
+      "bytes": 2968
+    }
+  ]
+}

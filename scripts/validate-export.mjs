@@ -7,7 +7,7 @@ import { siteConfig } from "../src/lib/site-config.ts";
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
-const isV7 = ["7.0", "7.1"].includes(book.editionVersion);
+const isV7 = ["7.0", "7.1", "8.0"].includes(book.editionVersion);
 const archiveChapters = archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 const authors = readJSON("src/data/authors.json").authors;
 const sources = readJSON("src/data/library.json").sources;
@@ -245,7 +245,7 @@ for (const chapter of available) {
   for (const block of [...chapter.blocks, ...book.notes.filter(note => note.chapterId === chapter.id).flatMap(note => note.blocks)]) {
     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
     if (block.type === "paragraph" || block.type === "heading") {
-      if (/^manuscript-v[67]-/.test(block.id)) {
+      if (/^manuscript-v[678]-/.test(block.id)) {
         const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
           text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
           href: run.noteId ? "#" + run.noteId : run.href || null,

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "edition": "8.0",
+  "scope": "exact fixed manuscript transfer",
+  "texts": 20,
+  "supportingDocuments": 5,
+  "published": false,
+  "literaryAcceptance": "Separate independent review; not established by this transfer",
+  "files": [
+    {
+      "path": "prologue.md",
+      "sha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393",
+      "bytes": 11006,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-01.md",
+      "sha256": "2c1db664ee5831bb3cee74273dedee6cd78ad0d84483fb87db504fe2c0583fb1",
+      "bytes": 14721,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-02.md",
+      "sha256": "3e4d03de3aa00da7720d62ae3330b549e60ecb32e697be5766207988b0adbab7",
+      "bytes": 14341,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-03.md",
+      "sha256": "144f280c8a3a266a5ebc934e22cb29c7992b679b10bc2574acd8d39018138de8",
+      "bytes": 14471,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-04.md",
+      "sha256": "2b03394a7087856e8c8a5654ee6f67876cd04d588380c9cb68fc2c6b9e0f500c",
+      "bytes": 19045,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-05.md",
+      "sha256": "52c14a4ce733852bb3e9d7283c06f8804d5a4d8ccd5b9877fa19af5fba421fd8",
+      "bytes": 17130,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-06.md",
+      "sha256": "47593ece32682c5f1610b29f1cfa929d8bc418e274c2471a5015fa4403447f44",
+      "bytes": 13721,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-07.md",
+      "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6",
+      "bytes": 11765,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-08.md",
+      "sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a",
+      "bytes": 12170,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-09.md",
+      "sha256": "659d3a36e88aeb2a1a79a79937446a58dcaa302134eca42fecaaac1ac21c012e",
+      "bytes": 18691,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-10.md",
+      "sha256": "66e9508834f012f3b6330860a17868f9bc6bea0a5f4ef8cca1eea1767f233fec",
+      "bytes": 18520,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-11.md",
+      "sha256": "764a3ec4f1dc8013cdf960722d5c7df27a9b905091a8964e6aac152571a1d3df",
+      "bytes": 21950,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-12.md",
+      "sha256": "c3989c5b45386a93da0aa92bfe139c6312da869dc46a796ecafeeff4eda59d1e",
+      "bytes": 22414,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-13.md",
+      "sha256": "f25707882e09b47be7cd4cd6fa83b1b37f81f6dd18a85c5d608cfcf491a6bf3c",
+      "bytes": 13154,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-14.md",
+      "sha256": "806b31b7b04a0a552d8c3e9e7e7573a9ffc3bc3e6ba4d2b07feee50df8c93041",
+      "bytes": 25397,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-15.md",
+      "sha256": "e5c3f693465aac9fd05ad05b165c214f5f28dc220c47d292375e77d5e800402e",
+      "bytes": 13955,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-16.md",
+      "sha256": "dddf34b753a0f6bbe7a5fabfb1f791bf4f745c1eb4b307dfa49d1a97ddab2f10",
+      "bytes": 25428,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-17.md",
+      "sha256": "5ef8ef4041d1969d73a037dc56effffc962c21c41a0a32e20abb9c4c04dc9303",
+      "bytes": 25407,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "chapters/chapter-18.md",
+      "sha256": "eb6c36926749e2fe3c08862891f318f30b02c18b30cc8b0f3b406a4102e522c2",
+      "bytes": 23807,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "epilogue.md",
+      "sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58",
+      "bytes": 5699,
+      "kind": "manuscript-text"
+    },
+    {
+      "path": "AUTHOR-AND-BRIEF.md",
+      "sha256": "8551f27f44369b8b035021753b167714ebcdea6ceefca937d16b0d78f0e50265",
+      "bytes": 10789,
+      "kind": "editorial-support"
+    },
+    {
+      "path": "policy-completed-before-prose.md",
+      "sha256": "a28e70151932ea737a7d2fee8064a6633daead21948c119c582aed806f0d7039",
+      "bytes": 2968,
+      "kind": "editorial-support"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d0a5df9e5a75c919fdc8f709c201b2c7b69de641fa4adbb0244e708d499a8910",
+      "bytes": 2932,
+      "kind": "editorial-support"
+    },
+    {
+      "path": "scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34",
+      "bytes": 12225,
+      "kind": "editorial-support"
+    },
+    {
+      "path": "source-ledger-v8.md",
+      "sha256": "339f81795a9629b49bb52af811537ffcb6ca49b2d2b38c97d9044ac14b0356e6",
+      "bytes": 7116,
+      "kind": "editorial-support"
+    }
+  ],
+  "sourceHashesStableDuringCopy": true
+}
