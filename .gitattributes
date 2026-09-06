@@ -62,3 +62,10 @@ public/book/chapters/*.docx binary
 scripts/release_v6.py -text
 scripts/manuscript_markdown.py -text
 scripts/chapter_docx.py -text
+
+# Keep manifesto hashes and generated snapshots stable on Windows and Linux.
+/docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md text eol=lf
+/docs/open-editorial/block-identities.json text eol=lf
+/docs/open-editorial/STATIC_AGENT_GUIDE.md text eol=lf
+/public/editorial/** text eol=lf
+/public/open-editorial/** text eol=lf

@@ -37,6 +37,7 @@ export default function HomePage() {
         <div className="publication-prose">{home.library.paragraphs.map(text => <p key={text}>{text}</p>)}<Link className="publication-link" href="/library/">{home.library.cta}</Link></div>
       </div>
     </section>
+    <section className="publication-section wrap"><div className="book-callout"><div><p className="eyebrow">Открытая редакция будущего</p><h2>Эту книгу можно изменить.</h2><p>Читайте манифест, сохраняйте личные заметки и готовьте замечания к конкретным фрагментам книги.</p></div><Link className="button" href="/open-editorial/">Как участвовать ↗</Link></div></section>
     <AuthorsGrid compact />
     <section className="publication-section wrap"><div className="publication-grid"><h2 className="publication-heading">{home.closing.heading}</h2><div className="publication-prose"><p>{home.closing.text}</p><Link className="button" href="/read/">{home.closing.cta}</Link></div></div></section>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structured).replaceAll("<", "\\u003c") }} />

@@ -69,6 +69,7 @@ export type BookChapter = {
 };
 
 export type Book = {
+  releaseId?: string;
   contentKind?: "outline" | "manuscript";
   version?: string;
   editionVersion?: string;

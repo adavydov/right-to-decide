@@ -56,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="ru" data-scroll-behavior="smooth">
       <head>
+        <link rel="alternate" type="application/json" title="Участие с собственным ИИ" href={assetPath("/open-editorial/agent-manifest.json")} />
         <link rel="alternate" type="application/json" title="Авторы и литературные ИИ-агенты" href={assetPath("/editorial-team.json")} />
       </head>
       <body className={interfaceFont.variable}>
