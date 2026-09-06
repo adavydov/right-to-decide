@@ -11,6 +11,7 @@ import json
 import re
 from pathlib import Path
 from urllib.parse import urlsplit
+from export_chertok import AS_OF as CHERTOK_DATE, merge_chertok, source_record as chertok_source_record
 
 SITE = Path(__file__).resolve().parents[1]
 AS_OF = "2026-09-05"
@@ -38,7 +39,6 @@ MATERIAL_DEFAULTS = {
 }
 # Bibliographic fields are deliberately separate from research/acquisition notes.
 EDITIONS = {
-1: "NASA History Series, тома I–IV: 2005, 2006, 2009, 2011. Русская книга 1: Машиностроение, 2-е издание, 1999.",
 2: "Москва: Политиздат, 1989. Использован электронный экземпляр FB2.",
 3: "9-е исправленное и дополненное издание. Санкт-Петербург: Политехника, 2003. Электронная публикация Flot.com.",
 4: "Киев: Наукова думка, 1993. ISBN 5-12-003734-8. Выходные данные из метаданных FB2.",
@@ -88,7 +88,6 @@ EDITIONS = {
 48: "Русский перевод: Люберцы, Производственно-издательский комбинат ВИНИТИ, 1997. Английский оригинал — 1959.",
 }
 MATERIAL_NOTES = {
-1: "На английском получены полные четыре тома; на русском — полная книга 1. Русские книги 2–4 отсутствуют. Иллюстрации русской веб-версии не собраны, печатная пагинация не восстановлена.",
 2: "Предоставленный автором проекта FB2 без печатной пагинации. Цитаты сверены по этому экземпляру; номера Pxxxxx обозначают абзацы электронной версии.",
 6: "Доступен PDF объёмом 69 страниц. До сопоставления с оглавлением и печатным изданием полнота остаётся неопределённой.",
 9: "Произведение получено в составе электронного сборника двух книг.",
@@ -305,6 +304,8 @@ def sentence(value, field):
 
 def source_link(entry):
     number = entry["id"]
+    if number == 1:
+        return []
     # Only selected descriptive source pages; no file mirrors or private-share URLs.
     candidates = entry["source_urls"]
     selected = entry["acquisition_url"]
@@ -325,13 +326,12 @@ def source_link(entry):
     if number == 2:
         return [{"label": "Другая электронная публикация", "url": selected, "kind": "text",
                  "note": "Ссылка из библиографического реестра. Её тождество использованному FB2 1989 года не установлено; цитаты сверены по предоставленному экземпляру."}]
-    if number == 1:
-        return [{"label": "Четыре английских тома · NASA", "url": candidates[0], "kind": "archive"},
-                {"label": "Русская книга 1", "url": candidates[1], "kind": "text"}]
     return [{"label": labels[kind], "url": selected, "kind": kind}]
 
 def source_record(entry, card_ids):
     n = entry["id"]
+    if n == 1:
+        return chertok_source_record([])
     raw = entry["title"].replace("*", "")
     if n == 14:
         title, authors = "Воспоминания об А. Ф. Иоффе", ["Коллектив авторов"]
@@ -350,7 +350,7 @@ def source_record(entry, card_ids):
         "id": f"source-{n:02d}", "number": n, "title": title, "authors": authors,
         "category": ("Инженерные воспоминания" if n <= 15 else "Создатели и организации" if n <= 34
                      else "Инженерный опыт в литературе" if n <= 42 else "История и устройство образования"),
-        "edition": EDITIONS[n], "languages": ["ru", "en"] if n == 1 else ["ru" if n <= 15 or 35 <= n <= 40 or n == 48 else "en"],
+        "edition": EDITIONS[n], "languages": ["ru" if n <= 15 or 35 <= n <= 40 or n == 48 else "en"],
         "materialNote": MATERIAL_NOTES.get(n, MATERIAL_DEFAULTS[state]),
         "availability": state,
         "reading": "documented-text-reading" if n == 2 else "not-claimed",
@@ -465,6 +465,8 @@ def main():
     assert len(set(card_ids)) == 30
     assert set(LIMITS) == set(TOPIC_KEYS) == set(card_ids)
     sources = [source_record(e, card_ids) for e in entries]
+    sources, cards, chertok_audit = merge_chertok(sources, cards, corpus)
+    quote_count += chertok_audit["quotes"]
     assert len({s["id"] for s in sources}) == 48
     assert all(c["sourceId"] in {s["id"] for s in sources} for c in cards)
     for record in sources:
@@ -472,8 +474,8 @@ def main():
             parsed = urlsplit(link["url"])
             assert parsed.scheme in ("https", "http") and parsed.netloc and not parsed.username
     documents = {
-        "library.json": {"schemaVersion": 1, "asOf": AS_OF, "sources": sources},
-        "evidence-cards.json": {"schemaVersion": 1, "asOf": AS_OF, "cards": cards},
+        "library.json": {"schemaVersion": 1, "asOf": max(AS_OF, CHERTOK_DATE), "sources": sources},
+        "evidence-cards.json": {"schemaVersion": 1, "asOf": max(AS_OF, CHERTOK_DATE), "cards": cards},
     }
     serialized = "\n".join(json.dumps(v, ensure_ascii=False) for v in documents.values())
     forbidden = [r"(?<![A-Za-z])[A-Za-z]:[\\/]", r"file://", r"book-memory", r"pending_independent_reader",
@@ -487,7 +489,7 @@ def main():
         target.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     counts = {state: sum(s["availability"] == state for s in sources) for state in AVAILABILITY.values()}
     audit = {
-        "schemaVersion": 1, "asOf": AS_OF, "sourceEntries": len(sources), "cards": len(cards),
+        "schemaVersion": 1, "asOf": AS_OF, "sourceEntries": len(sources), "cards": len(cards), "chertok": chertok_audit,
         "quotesVerified": quote_count, "sourceSha256": SOURCE_SHA,
         "acceptedCardFiles": verified, "availabilityCounts": counts,
         "checks": {

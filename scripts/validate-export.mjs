@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { siteConfig } from "../src/lib/site-config.ts";
 
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
@@ -154,11 +155,25 @@ for (const route of routes) {
   assert.ok(info.ids.has("main-content"), "No main content in " + route);
   assert.ok(info.text.includes(book.title), "No book identity in " + route);
 }
+// User-provided source PDFs remain private even if renamed before export.
+const privateChertokFiles = new Map([
+  [3940124, "220e3551350337aa5f28f9458dfbdceec30f9a73ea5abe3f2af310cd3ee244aa"],
+  [3777066, "988d36286df44e11c5d227868ba36bee712db4394922c7cd419910b567f52aad"],
+  [10808631, "5b8fa12d319aab9bccb07805ffb0ae0290786152b0d8723fa7b6dcec86aefe4b"],
+  [5883741, "4c48b355128e39cdb06e5ca0809b09eaf2d98fd11e8b9542c5407d6f19f08325"],
+]);
 const files = walk(output);
 for (const file of files) {
   const relative = path.relative(output, file).split(path.sep).join("/");
   assert.ok(!/(?:^|\/)(?:book-memory|\.env(?:\.[^/]*)?)(?:\/|$)/i.test(relative), "Private file or directory in export: " + relative);
   assert.ok(!/\.fb2(?:\.zip)?$/i.test(relative), "Full source FB2 in export: " + relative);
+  assert.ok(!/(?:chertok|черток|ракеты.{0,10}люди).*\.(?:pdf|epub|zip)$/iu.test(relative),
+    "Chertok source file in export: " + relative);
+  const privateHash = privateChertokFiles.get(fs.statSync(file).size);
+  if (privateHash) {
+    assert.notEqual(createHash("sha256").update(fs.readFileSync(file)).digest("hex"), privateHash,
+      "Private Chertok PDF in export: " + relative);
+  }
   if (/\.(?:html|css|js|mjs|json|txt|xml|map|md)$/i.test(file)) {
     const text = fs.readFileSync(file, "utf8");
     assert.ok(!/\b[a-z]:\\{1,2}[\w\u0400-\u04ff]/iu.test(text) && !/file:\/\/\/[a-z]:\//i.test(text), "Local Windows path in " + relative);
@@ -329,6 +344,16 @@ for (const source of sources) assert.ok(libraryPage.ids.has(source.id), "Missing
 for (const card of cards) {
   const info = htmlInfo(routeFile("/wiki/" + card.id + "/"));
   assert.ok(info.text.includes(normalized(card.title)), "Missing wiki title: " + card.id);
+  const locatorHeading = card.locatorKind === "pdf-page" ? "Страницы PDF-файла" : "Абзацы электронного экземпляра";
+  assert.ok(info.text.includes(locatorHeading), "Wrong source pagination label: " + card.id);
+  if (card.locatorNote) assert.ok(info.text.includes(normalized(card.locatorNote)), "Missing pagination note: " + card.id);
+  if (card.locatorKind === "pdf-page") {
+    assert.ok(!info.text.includes("Абзацы электронного экземпляра"), "PDF pages mislabeled as paragraphs: " + card.id);
+    assert.ok(!info.text.includes("В предоставленном FB2"), "FB2 note on a PDF card: " + card.id);
+  }
+  for (const id of card.paragraphIds) {
+    assert.ok(info.text.includes(id), "Missing source locator on wiki page: " + id);
+  }
   for (const quote of card.quotes) {
     assert.ok(info.text.includes(normalized(quote.text)), "Missing wiki quote: " + card.id);
     assert.ok(info.text.includes(normalized(quote.attribution)), "Missing quote attribution: " + card.id);
