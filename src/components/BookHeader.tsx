@@ -19,6 +19,7 @@ export function BookHeader() {
     { href: "/contents/", label: "Содержание" },
     { href: "/manifesto/", label: "Манифест" },
     { href: "/authors/", label: "Авторы" },
+    { href: "/open-editorial/", label: "Открытая редакция" },
     { href: "/library/", label: "Библиотека" },
   ];
   return (

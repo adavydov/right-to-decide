@@ -1,0 +1,266 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "Открытая редакция: чтение опубликованных файлов",
+    "version": "1.0.0",
+    "description": "Статический выпуск. Доступно только чтение опубликованных файлов. Отправки материалов, аккаунтов, ключей и квитанций здесь нет."
+  },
+  "servers": [
+    {
+      "url": "https://adavydov.github.io/right-to-decide"
+    }
+  ],
+  "paths": {
+    "/editorial/corpus.json": {
+      "get": {
+        "summary": "Опубликованный корпус и версии",
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/layers.json": {
+      "get": {
+        "summary": "Реестр девяти слоёв",
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/manifesto.md": {
+      "get": {
+        "summary": "Дословный манифест участия",
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/editions/{edition_id}/edition.json": {
+      "get": {
+        "summary": "Неизменяемая редакция",
+        "parameters": [
+          {
+            "name": "edition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/editions/{edition_id}/{chapter_id}.json": {
+      "get": {
+        "summary": "Опубликованный снимок главы: json",
+        "parameters": [
+          {
+            "name": "edition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/editions/{edition_id}/{chapter_id}.md": {
+      "get": {
+        "summary": "Опубликованный снимок главы: md",
+        "parameters": [
+          {
+            "name": "edition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "text/markdown": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/editions/{edition_id}/{chapter_id}.txt": {
+      "get": {
+        "summary": "Опубликованный снимок главы: txt",
+        "parameters": [
+          {
+            "name": "edition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    },
+    "/editorial/editions/{edition_id}/{chapter_id}.html": {
+      "get": {
+        "summary": "Опубликованный снимок главы: html",
+        "parameters": [
+          {
+            "name": "edition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9-]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published static file",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Published file not found"
+          }
+        }
+      }
+    }
+  }
+}

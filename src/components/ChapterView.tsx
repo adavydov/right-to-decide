@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { OpenEditorialReader } from "@/components/OpenEditorialReader";
 import { ReaderShell } from "@/components/ReaderShell";
 import {
   book,
@@ -258,6 +259,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
             )}
           </nav>
         </article>
+        {book.releaseId && <OpenEditorialReader chapterId={chapter.id} revision={book.releaseId} />}
       </ReaderShell>
     </main>
   );

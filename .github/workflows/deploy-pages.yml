@@ -38,6 +38,7 @@ jobs:
         run: npm run check
         env:
           NEXT_PUBLIC_BASE_PATH: /right-to-decide
+          NEXT_PUBLIC_EDITORIAL_MODE: static
 
       - name: Upload static export
         uses: actions/upload-pages-artifact@v4

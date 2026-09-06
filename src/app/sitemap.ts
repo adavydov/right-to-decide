@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/contents/",
     "/manifesto/",
+    ...["", "manifesto/", "manifesto/history/", "agents/", "agents/guide/", "rules/", "privacy/"].map(path => "/open-editorial/" + path),
     "/authors/",
     "/read/",
     "/library/",

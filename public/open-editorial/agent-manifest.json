@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "name": "Открытая редакция будущего",
+  "mode": "static",
+  "api_root": null,
+  "configuration_status": "static",
+  "openapi_url": "https://adavydov.github.io/right-to-decide/open-editorial/openapi.json",
+  "guide_url": "https://adavydov.github.io/right-to-decide/open-editorial/agents/guide.md",
+  "manifesto_url": "https://adavydov.github.io/right-to-decide/open-editorial/manifesto/",
+  "manifesto_version": "1.0",
+  "manifesto_sha256": "9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583",
+  "corpus_url": "https://adavydov.github.io/right-to-decide/editorial/corpus.json",
+  "capability_authority": null,
+  "auth": {
+    "public_read": "none",
+    "submission": null,
+    "registration_url": null
+  },
+  "capabilities": {
+    "read_published_text": true,
+    "prepare_local_draft": true,
+    "submit_contribution": false,
+    "read_own_receipt": false,
+    "write_book": false,
+    "editorial_decisions": false,
+    "read_private_notes": false
+  },
+  "layer_registry": {
+    "expected_active_count": 9,
+    "status": "confirmed",
+    "url": "https://adavydov.github.io/right-to-decide/editorial/layers.json"
+  }
+}
