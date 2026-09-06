@@ -10,6 +10,7 @@ export type EvidenceQuote = {text: string; attribution: string; paragraphIds: st
 export type EvidenceCard = {
   id: string; sourceId: string; title: string; topics: string[]; tags: string[];
   sections: string[]; paragraphIds: string[]; context: string; observation: string; interpretation: string;
+  locatorKind?: "pdf-page" | "paragraph"; locatorNote?: string;
   quotes: EvidenceQuote[]; capability: string; workProcedure: string; limits: string[];
   review: {date: string; sourceCorrespondence: "checked"; historicalCorroboration: "not-established"; note: string};
 };

@@ -38,7 +38,7 @@ function Paragraphs({ text }: { text: string }) {
   ));
 }
 
-function ParagraphLocators({ ids }: { ids: string[] }) {
+function SourceLocators({ ids }: { ids: string[] }) {
   return (
     <span className={styles.locators}>
       {ids.map((id, index) => (
@@ -105,7 +105,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
                   <blockquote><p>{quote.text}</p></blockquote>
                   <figcaption>
                     <span className={styles.quoteVoice}>{quote.attribution}</span>
-                    <ParagraphLocators ids={quote.paragraphIds} />
+                    <SourceLocators ids={quote.paragraphIds} />
                   </figcaption>
                 </figure>
               ))}
@@ -152,14 +152,11 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
               </ul>
             </div>
             <div className={styles.locationGroup}>
-              <h3>Абзацы электронного экземпляра</h3>
-              <ParagraphLocators ids={card.paragraphIds} />
+              <h3>{card.locatorKind === "pdf-page" ? "Страницы PDF-файла" : "Абзацы электронного экземпляра"}</h3>
+              <SourceLocators ids={card.paragraphIds} />
             </div>
             <p className={styles.locatorNote}>
-              Идентификаторы вида GRABIN1989:P00170 обозначают абзацы
-              использованного электронного экземпляра. В предоставленном FB2
-              нет разметки печатных страниц; эти номера не являются страницами
-              издания.
+              {card.locatorNote ?? "Идентификаторы вида GRABIN1989:P00170 обозначают абзацы использованного электронного экземпляра. В предоставленном FB2 нет разметки печатных страниц; эти номера не являются страницами издания."}
             </p>
             <div className={styles.review}>
               <h3>Сверка с источником</h3>

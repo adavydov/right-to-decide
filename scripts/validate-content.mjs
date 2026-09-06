@@ -318,7 +318,49 @@ localMedia(siteConfig.coverPath, "Book cover");
 assert.equal(siteConfig.coverPath, "/images/book-cover-digital-v1.webp");
 
 assert.equal(sources.length, 48, "Incomplete selected public bibliography");
-assert.equal(cards.length, 30, "Incomplete selected public card collection");
+assert.equal(cards.length, 97, "The public collection must retain 30 cards and add 67 Chertok cards");
+const chertokCards = cards.filter(card => card.sourceId === "source-01");
+const chertokSource = sources.find(source => source.id === "source-01");
+assert.ok(chertokSource, "Missing Russian Chertok source");
+assert.deepEqual(chertokSource.languages, ["ru"], "Chertok must use only the Russian originals");
+assert.deepEqual(chertokSource.links, [], "Private Chertok originals must not become download links");
+assert.equal(chertokSource.availability, "provided");
+assert.equal(chertokSource.reading, "not-claimed", "Selected Chertok fragments are not a full close reading");
+nonempty(chertokSource.readingNote, "Chertok reading scope");
+assert.equal(chertokCards.length, 67, "Incomplete Russian Chertok collection");
+assert.equal(chertokCards.reduce((total, card) => total + card.quotes.length, 0), 99, "Unexpected Chertok quote count");
+const chertokVolumes = [
+  { volume: 1, cards: 19, pages: 294 },
+  { volume: 2, cards: 16, pages: 298 },
+  { volume: 3, cards: 16, pages: 398 },
+  { volume: 4, cards: 16, pages: 437 },
+];
+for (const { volume, cards: count, pages } of chertokVolumes) {
+  const prefix = `CHERTOKRU-PDF-V${volume}`;
+  const volumeCards = chertokCards.filter(card => card.id.startsWith(prefix + "-C"));
+  assert.deepEqual(volumeCards.map(card => card.id).sort(),
+    Array.from({ length: count }, (_, index) => `${prefix}-C${String(index + 1).padStart(2, "0")}`),
+    "Unexpected Chertok card IDs in volume " + volume);
+  for (const card of volumeCards) {
+    assert.equal(card.locatorKind, "pdf-page", "Chertok locators must be PDF pages: " + card.id);
+    nonempty(card.locatorNote, "PDF pagination note: " + card.id);
+    for (const id of card.paragraphIds) {
+      const match = id.match(new RegExp(`^${prefix}:PDF(\\d{4})$`));
+      assert.ok(match, "Wrong volume or invalid PDF locator: " + id);
+      assert.ok(Number(match[1]) >= 1 && Number(match[1]) <= pages, "PDF page outside source: " + id);
+    }
+  }
+}
+const chertokMetadata = JSON.stringify([chertokSource, ...chertokCards.map(card => ({
+  id: card.id, sourceId: card.sourceId, sections: card.sections, paragraphIds: card.paragraphIds,
+  quotes: card.quotes.map(quote => ({ attribution: quote.attribution, paragraphIds: quote.paragraphIds })),
+  review: card.review,
+}))]);
+assert.ok(!/NASA|Rockets\s+and\s+People|chertok-rockets-and-people/iu.test(chertokMetadata),
+  "English Chertok corpus remains in the active Wiki metadata");
+const publicKnowledge = JSON.stringify([sources, cards]);
+assert.ok(!/book-memory[\\/]|file:\/\/\/|\b[a-z]:(?:\\{1,2}|\/)[\w\u0400-\u04ff]/iu.test(publicKnowledge),
+  "Private source path in public library or cards");
 const sourceIds = uniqueIds(sources, "library source");
 const cardIds = uniqueIds(cards, "evidence card");
 const cardsById = new Map(cards.map((card) => [card.id, card]));
@@ -342,6 +384,11 @@ for (const card of cards) {
   assert.ok(Array.isArray(card.quotes) && card.quotes.length, "No quotes: " + card.id);
   assert.ok(Array.isArray(card.limits) && card.limits.length, "No limits: " + card.id);
   assert.ok(Array.isArray(card.paragraphIds) && card.paragraphIds.length, "No source locators: " + card.id);
+  if (card.locatorKind !== undefined) {
+    assert.ok(["pdf-page", "paragraph"].includes(card.locatorKind), "Unknown source locator kind: " + card.id);
+  }
+  if (card.locatorNote !== undefined) nonempty(card.locatorNote, "Source locator note: " + card.id);
+  if (card.locatorKind === "pdf-page") nonempty(card.locatorNote, "PDF pagination note: " + card.id);
   for (const quote of card.quotes) {
     nonempty(quote.text, "Quote: " + card.id);
     nonempty(quote.attribution, "Quote attribution: " + card.id);
