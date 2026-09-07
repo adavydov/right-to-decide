@@ -1,0 +1,58 @@
+
+> right-to-decide@1.0.0 editorial:static:check
+> node scripts/build-open-editorial.mjs --check && npm run editorial:static:test
+
+(node:19236) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"mode":"verified","edition_id":"literary-manuscript-v9.0-26472e4aa686","editions":4,"chapters":22,"blocks":935,"layers":9,"manifesto_sha256":"9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583"}
+
+> right-to-decide@1.0.0 editorial:static:test
+> node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs
+
+✔ dotted edition identity is a single safe path component in code and OpenAPI (3.6478ms)
+✔ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (33.2435ms)
+✔ exact receipt accepts the frozen old map or installed new map without changing either (870.0988ms)
+✔ rewritten paragraph cannot inherit a historical annotation identity (21.6146ms)
+✔ retained contents identity cannot hide changed text under the same source checksum (12.8538ms)
+✔ missing receipt cannot be bypassed by an already installed matching identity map (6.1298ms)
+✔ arbitrary active map changes are rejected rather than silently regenerated (675.2548ms)
+✔ modified accepted chapter Markdown invalidates the transition before import (48.2824ms)
+✔ a modified pinned independent review invalidates the transition (112.1535ms)
+✔ a modified previous published snapshot invalidates the transition (509.7692ms)
+✔ receipt cannot claim a different transfer decision (16.1625ms)
+(node:11304) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ static discovery advertises only existing public file GETs without auth or write promises (223.0498ms)
+✔ public corpus references complete immutable files and keeps original manifesto bytes (542.376ms)
+✔ default static generator is reproducible in a minimal checkout with no service or npm modules (9586.8833ms)
+✔ local draft accepts a faithful Unicode target and never mutates the selected published snapshot (27.5405ms)
+✔ local draft rejects mismatched identity, snapshot, ambiguous quote and unsupported partial selection (1.4337ms)
+✔ local draft exports preserve author text but never manufacture receipt, consent or credentials (1.3618ms)
+✔ 8.0 introduces fresh identities for all twenty rewritten sources (11.4368ms)
+✔ 8.0 rejects old or wrong-edition anchors on rewritten prose (2.2968ms)
+✔ unchanged source checksum cannot conceal changed contents (1.0813ms)
+✔ 8.0 requires its receipt even if a map already exists (6.6275ms)
+✔ 8.0 preserves an unchanged chapter while nineteen sources receive fresh identities (1.8315ms)
+✔ 9.0 retains all exact published identities and adds appendix D without transferring annotations (72.7642ms)
+✔ 9.0 rejects a missing or wrong appendix and any removed baseline section (151.7326ms)
+✔ added and changed sources cannot reuse earlier block identities (81.614ms)
+✔ unchanged source hash cannot conceal changed visible text (36.2013ms)
+✔ rewritten source receives new v9 identities including its notes (60.1725ms)
+✔ 9.0 requires an explicit receipt before building editorial projection (36.9918ms)
+✔ canonical normalization preserves whitespace, Cyrillic, emoji and NFC (4.2425ms)
+✔ positions are Unicode code points and cannot split a grapheme cluster (83.7162ms)
+✔ ambiguous quotes need context, absent or invalid positions fail (2.8655ms)
+✔ published corpus is faithful, excludes drafts, has unique frozen blocks and original manifesto (146.9262ms)
+✔ missing or historical eight-layer source never invents a ninth or blocks unclassified intake (57.6769ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10751.9769

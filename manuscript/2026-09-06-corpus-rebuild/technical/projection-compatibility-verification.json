@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "verificationDate": "2026-09-07",
+  "scope": "V9 compatibility code and unchanged 8.0 regression only",
+  "checks": [
+    {
+      "command": "node --check scripts/validate-v9-projection.mjs",
+      "result": "no syntax errors"
+    },
+    {
+      "command": "node --check scripts/validate-content.mjs",
+      "result": "no syntax errors"
+    },
+    {
+      "command": "node --check scripts/validate-export.mjs",
+      "result": "no syntax errors"
+    },
+    {
+      "command": "node --check scripts/literary-release-qa.mjs",
+      "result": "no syntax errors"
+    },
+    {
+      "command": "node --check scripts/prepare-v9-editorial-transition.mjs",
+      "result": "no syntax errors"
+    }
+  ],
+  "typecheck": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+    "exitCode": 0,
+    "afterFinalContentsChange": true
+  },
+  "unchangedBaselineValidation": {
+    "command": "node scripts/validate-content.mjs",
+    "exitCode": 0,
+    "edition": "8.0",
+    "currentBlocks": 569,
+    "notes": 32,
+    "sources": 50,
+    "cards": 97,
+    "warning": "Node reparsed site-config.ts as ES module because package type is unspecified; validation passed"
+  },
+  "bookProjectionUnchanged": {
+    "sha256": "4502d9c925f8895e0d6c9351f0cdfe57a27939706948ad67c791356fdf446322",
+    "equalsFrozenPublished8": true
+  },
+  "inputs": [
+    {
+      "path": "scripts/validate-v9-projection.mjs",
+      "sha256": "96500f225e5517e3b1e1619ffee59665ab758d6c533f173a5dcda7a88b28e084"
+    },
+    {
+      "path": "scripts/validate-content.mjs",
+      "sha256": "4c111395e02d2f02439795e80dc86d8ac6a15e16547c6497f47e6557f1a720d9"
+    },
+    {
+      "path": "scripts/validate-export.mjs",
+      "sha256": "b808bcd4d038e344a84bd7ad66eafde051ce961b4ad7a8f82eee272f4338945e"
+    },
+    {
+      "path": "scripts/literary-release-qa.mjs",
+      "sha256": "f5a581babb06cdd830eda7c9d49033ad50320bbdd57ceefcf897b8d8c7d38e4c"
+    },
+    {
+      "path": "scripts/prepare-v9-editorial-transition.mjs",
+      "sha256": "459893fe8900865af578ec2c3440f5805f5d0784a24438478d6494270843e414"
+    },
+    {
+      "path": "src/lib/book.ts",
+      "sha256": "3e1a356f06e8cf1e32244730a187dcc5e9ecee8500dbd43b3ed18b649b3932e9"
+    },
+    {
+      "path": "src/app/read/page.tsx",
+      "sha256": "b2c0dfa5fedfc3623e289f112af0c882f6248f30c685e68159206d6ae33d0ccb"
+    },
+    {
+      "path": "src/components/ContentsCatalog.tsx",
+      "sha256": "d55f1d0708f35cff450598201ab028ed874dc328c8c42a7aff32bdc1d4f86063"
+    }
+  ],
+  "notRun": [
+    "positive v9 projection validation",
+    "static export validation on v9",
+    "literary browser QA",
+    "transition preparer",
+    "full build or publication"
+  ]
+}

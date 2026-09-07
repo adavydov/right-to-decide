@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-07",
+  "runner": "root",
+  "command": "node --test scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs",
+  "exit_code": 0,
+  "tests": 22,
+  "passed": 22,
+  "failed": 0,
+  "skipped": 0,
+  "scope": "Unit/regression tests of editorial identities only; no v9 transition, projection, build or publication run.",
+  "files": [
+    {
+      "path": "scripts/open-editorial-identity-transition.mjs",
+      "sha256": "b56cb2f73d402856efb674147df855cad257e319d97bad8e54a65703d3ade9a1"
+    },
+    {
+      "path": "scripts/test-open-editorial-identity-transition.mjs",
+      "sha256": "9bd10725b97795cf1a22400102aeea16a9993328b248ad4aef428259d2e4b66f"
+    },
+    {
+      "path": "scripts/test-open-editorial-v8-transition.mjs",
+      "sha256": "62de34c43e658a6725f84f3933d8da7dfa3c009733d509e2fbf00d1709ca60c6"
+    },
+    {
+      "path": "scripts/test-open-editorial-v9-transition.mjs",
+      "sha256": "bfc8ef701f60fe75ea1040967b27803bba2fd228c5f8dc6124ccd2ffa4bfd9f1"
+    }
+  ]
+}

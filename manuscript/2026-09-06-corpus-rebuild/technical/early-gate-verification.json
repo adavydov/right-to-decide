@@ -1,0 +1,7 @@
+{
+  "scope": "Early negative gate only, not complete pipeline verification",
+  "missing_acceptance": true,
+  "exit_code": 1,
+  "projection_bytes_unchanged": true,
+  "diagnostic": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\Алексей\\\\Documents\\\\ChatGPT\\\\Ньютон книги\\\\right-to-decide-corpus-release\\\\manuscript\\\\2026-09-06-corpus-rebuild\\\\acceptance-v9.json'\n"
+}

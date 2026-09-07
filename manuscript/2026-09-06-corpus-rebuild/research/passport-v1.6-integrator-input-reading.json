@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-07",
+  "reader": "root",
+  "purpose": "Independent basis for reviewing unified reader appendix D 1.6",
+  "inputs": [
+    {
+      "path": "2026-09-06-critic-revision/scenario-passport-v1.2.md",
+      "sha256": "51a5cb0eef01bb887d0c34fa690e96f2fc67a47e9447306754dbe8ffd6d2f488",
+      "readFullyNow": true,
+      "lines": 77
+    },
+    {
+      "path": "2026-09-06-davydov-cases/scenario-passport-v1.3.md",
+      "sha256": "5562fa695e64138d4794e01d0de5a479566050e25ed889fc521ca7ff51d40844",
+      "readFullyNow": true,
+      "lines": 25
+    },
+    {
+      "path": "2026-09-06-space-expansion/scenario-passport-v1.4.md",
+      "sha256": "7f4c4a9f833085055f5510cd9d008571d5da10f7d3ed2b2bd55aece121faf0f1",
+      "readFullyNow": true,
+      "lines": 65
+    },
+    {
+      "path": "2026-09-06-depth-revision/scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34",
+      "readFullyNow": true,
+      "lines": 38
+    },
+    {
+      "path": "2026-09-06-critic-revision/model-education-economy.md",
+      "sha256": "15de4a4b94bd5610c9b836bd59bb36d1a3e2aa0b589384448149404e1db6945e",
+      "readFullyNow": true,
+      "lines": 91
+    }
+  ],
+  "coverage": "1.2 in two contiguous ranges1–40/41–end;1.3,1.4,1.5 full untruncated; LAB1–48/49–end. This rereading supports unification, not a claim of new primary-source verification.",
+  "knownPriorities": [
+    "The accepted9 chapter refinements govern over older formulations.",
+    "Correct complete AI assistance can be learned and used; measure decisions and actual help, not lack of AI contribution.",
+    "Only unused funds unbound by obligations become available after stopping.",
+    "Up to24 protected hours stay inside120;84 remain when all24 and12 common probe hours used.",
+    "W20–22 conflicts need explicit mapping; inherited full conditions remain reader-visible."
+  ]
+}

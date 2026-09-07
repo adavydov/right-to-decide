@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-07",
+  "reviewer": "root",
+  "current_canon": [
+    {
+      "path": "CONSTITUTION.md",
+      "workspace_sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+      "release_copy_sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/LITERARY-POLICY-02-v1.0.md",
+      "workspace_sha256": "bffef6867d93829ef36ac14e51e0a3a64e4b9185244046d37efa1a801a0dd8bd",
+      "release_copy_sha256": "bffef6867d93829ef36ac14e51e0a3a64e4b9185244046d37efa1a801a0dd8bd",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/MERIT-01-v1.0.md",
+      "workspace_sha256": "ba57808e2183644874633842815c2275761ade59d344a8012a33513e4ee47339",
+      "release_copy_sha256": "ba57808e2183644874633842815c2275761ade59d344a8012a33513e4ee47339",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/PRINCIPLES-01-v4.0.md",
+      "workspace_sha256": "2392f2a794469319907678242b50037337433e8ec47c3db6e4e1622e52106356",
+      "release_copy_sha256": "2392f2a794469319907678242b50037337433e8ec47c3db6e4e1622e52106356",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/STYLE-01-v6.0.md",
+      "workspace_sha256": "20599685196db3472fdf6529f0c700bf24ab975c6f18dd9ff94b5e1cbf30c3c3",
+      "release_copy_sha256": "20599685196db3472fdf6529f0c700bf24ab975c6f18dd9ff94b5e1cbf30c3c3",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/LITERARY-WORKFLOW-01-v4.0.md",
+      "workspace_sha256": "5434487418cac25f9495b4ef0e79c16e88cf323da1aa7032892fad421affe138",
+      "release_copy_sha256": "5434487418cac25f9495b4ef0e79c16e88cf323da1aa7032892fad421affe138",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/AGENT-ROLES-01-v3.0.md",
+      "workspace_sha256": "12759fb232fdadba4ead6eda6649b0c7914d2311a6adf128691ae7826286011c",
+      "release_copy_sha256": "12759fb232fdadba4ead6eda6649b0c7914d2311a6adf128691ae7826286011c",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/ACCEPTANCE-01-v3.0.md",
+      "workspace_sha256": "2b217f040feca824b7c4a1dc0441ca42e8275eaf8ed98dece4cf99af8aedd468",
+      "release_copy_sha256": "2b217f040feca824b7c4a1dc0441ca42e8275eaf8ed98dece4cf99af8aedd468",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/LAYER-REPOSITORIES-01-v3.0.md",
+      "workspace_sha256": "08ef79c6bd100c8be323884b6937e635d9a63bf4190a82447164718e31ca60a8",
+      "release_copy_sha256": "08ef79c6bd100c8be323884b6937e635d9a63bf4190a82447164718e31ca60a8",
+      "byte_equal": true
+    },
+    {
+      "path": "docs/editorial/TECH-ENTREPRENEUR-01-v4.0.md",
+      "workspace_sha256": "a88cf7d5ce51710cc876a93ba1c7e5712b77a59fa2ecebdb23dff38f3042c501",
+      "release_copy_sha256": "a88cf7d5ce51710cc876a93ba1c7e5712b77a59fa2ecebdb23dff38f3042c501",
+      "byte_equal": true
+    }
+  ],
+  "other_content_differences": {
+    "AGENTS.md": "Both require same manifesto and static-only scope. Published copy additionally names env/static settings and direct-author publication scope. Keep published copy, do not overwrite from older dirty workspace.",
+    "docs/editorial/README.md": "Workspace still lists7.2; published copy correctly8.0. Update published entry to9 only at completed release.",
+    "two_digital_edition_records": "Absent from published copy, unrelated to current literary policy; not copied."
+  },
+  "historical_policy_files": "Other byte differences are newline/BOM only after normalized full-content comparison; historical files not overwritten."
+}

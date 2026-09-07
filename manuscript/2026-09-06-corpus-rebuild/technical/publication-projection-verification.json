@@ -1,0 +1,11 @@
+{
+  "publisherCommand": "bundled Python scripts/publish-manuscript.py --edition v9 --chapters 1-18 --epilogue",
+  "publisherExitCode": 0,
+  "transitionCommand": "bundled Node scripts/prepare-v9-editorial-transition.mjs",
+  "transitionExitCode": 0,
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSHA": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "acceptanceSHA": "3eb9e70dc390f9d10b89f650d9273b03b1d5006af816a33f863d9f6933d3ef8c",
+  "externalPublicationPerformed": false,
+  "commitPushPerformed": false
+}

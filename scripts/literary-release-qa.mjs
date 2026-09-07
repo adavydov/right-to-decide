@@ -11,11 +11,15 @@ const target = new URL(base);
 assert.ok(["127.0.0.1", "localhost", "[::1]"].includes(target.hostname), "This QA script is restricted to the local static export");
 const source = fs.readFileSync("src/data/book.json");
 const book = JSON.parse(source.toString("utf8").replace(/^\uFEFF/, ""));
-assert.equal(book.editionVersion, "7.1");
+assert.ok(["7.1", "8.0", "9.0"].includes(book.editionVersion));
+const isV9 = book.editionVersion === "9.0";
+const release = JSON.parse(fs.readFileSync(book.source.path, "utf8").replace(/^\uFEFF/, ""));
+const formats = isV9 ? ["md", "docx", "pdf"] : ["docx", "pdf"];
 const chapters = book.chapters.filter(chapter => chapter.status === "available" && chapter.contentKind === "manuscript");
-assert.equal(chapters.length, 20);
-assert.equal(book.notes.length, 22);
-const directory = "docs/design-references/literary-v7.1";
+assert.equal(chapters.length, isV9 ? 21 : 20);
+assert.equal(book.notes.length, release.noteCount ?? 22);
+if (isV9) assert.deepEqual(chapters.filter(c => c.kind === "appendix").map(c => ({id: c.id, version: c.version})), [{id: "appendix-d", version: "1.6"}]);
+const directory = "docs/design-references/literary-v" + book.editionVersion;
 fs.mkdirSync(directory, { recursive: true });
 const report = {
   status: "running", at: new Date().toISOString(), base, edition: book.editionVersion,
@@ -74,7 +78,8 @@ async function checkDownload(download, id, format) {
   const raw = await response.body();
   assert.equal(raw.length, download.bytes, "Download size: " + id);
   assert.equal(hash(raw), download.sha256, "Download source checksum: " + id);
-  assert.equal(raw.subarray(0, format === "pdf" ? 5 : 2).toString(), format === "pdf" ? "%PDF-" : "PK");
+  if (format === "md") assert.ok(raw.toString("utf8").startsWith("# "));
+  else assert.equal(raw.subarray(0, format === "pdf" ? 5 : 2).toString(), format === "pdf" ? "%PDF-" : "PK");
   report.downloads.push({ id, format, path: publicPath, bytes: raw.length, sha256: hash(raw) });
 }
 function chapterReferences(chapter) {
@@ -83,8 +88,8 @@ function chapterReferences(chapter) {
 }
 try {
   await open("/read/");
-  assert.ok(norm(await page.locator("main").textContent()).includes("редакция 7.1"));
-  for (const format of ["docx", "pdf"]) {
+  assert.ok(norm(await page.locator("main").textContent()).includes("редакция " + book.editionVersion));
+  for (const format of formats) {
     const download = book.downloads[format];
     const link = page.locator(`main a[href="${target.pathname}${download.path}"]`);
     assert.equal(await link.count(), 1, "Whole-book link: " + format);
@@ -97,7 +102,7 @@ try {
     assert.equal(await link.count(), 1, "Contents section download: " + chapter.id);
     await checkDownload(chapter.download, chapter.id, "docx");
   }
-  assert.equal(await page.locator('main a[href$=".docx"]').count(), 20, "Exactly twenty individual section downloads");
+  assert.equal(await page.locator('main a[href$=".docx"]').count(), chapters.length, "Every selected section has an individual download");
 
   for (const chapter of chapters) {
     await open("/read/" + chapter.id + "/");
@@ -139,9 +144,11 @@ try {
     report.pages.push({ id: chapter.id, blocks: blocks.length, notes: notes.length, references: references.length, exactText: "passed" });
     console.log("Text and notes passed: " + chapter.id);
   }
-  assert.equal(new Set(report.notes.map(note => note.noteId)).size, 22, "All twenty-two notes navigated");
+  assert.equal(new Set(report.notes.map(note => note.noteId)).size, book.notes.length, "All selected notes navigated");
   const repeated = report.notes.filter(note => report.notes.filter(other => other.noteId === note.noteId).length > 1);
-  assert.ok(repeated.length >= 2, "A repeated note must be navigated from both references and back");
+  const expectedReferences = chapters.flatMap(chapterReferences);
+  const expectedRepeated = expectedReferences.filter(ref => expectedReferences.filter(other => other.noteId === ref.noteId).length > 1);
+  assert.equal(repeated.length, expectedRepeated.length, "Every repeated note reference must complete its round trip");
   report.repeatedNotes = repeated;
 
   for (const width of [1440, 390]) {
@@ -154,22 +161,21 @@ try {
     for (const chapter of chapters) {
       await open("/read/" + chapter.id + "/");
       await layout(chapter.id, width);
-      if (chapter.id === "chapter-16") {
-        const tableBlock = chapter.blocks.find(block => block.type === "table");
+      for (const [tableIndex, tableBlock] of chapter.blocks.filter(block => block.type === "table").entries()) {
         const table = page.locator(`[id="${tableBlock.id}"]`);
         const cells = await table.locator("tr").evaluateAll(rows => rows.map(row => [...row.querySelectorAll("th,td")].map(cell => cell.textContent)));
         assert.deepEqual(cells, tableBlock.rows, "Complete budget table at " + width);
-        assert.ok(await table.locator("strong").count() > 0, "Budget total retains emphasis");
+        if (tableBlock.cellRuns?.flat(2).some(run => run.bold)) assert.ok(await table.locator("strong").count() > 0, "Table emphasis retained");
         await table.scrollIntoViewIfNeeded();
-        await screenshot("table-ch16-" + width, table);
+        await screenshot("table-" + chapter.id + "-" + tableIndex + "-" + width, table);
       }
-      if (chapter.id === "chapter-12") {
+      if (chapter.id === "chapter-12" && book.notes.some(note => note.chapterId === chapter.id)) {
         const notes = page.locator(".reading-notes");
         await notes.scrollIntoViewIfNeeded();
         await screenshot("notes-ch12-" + width, notes);
       }
     }
-    console.log("Layout passed: " + width + "px, all twenty sections, read and contents");
+    console.log("Layout passed: " + width + "px, " + chapters.length + " sections, read and contents");
   }
   assert.deepEqual(report.errors, [], "No browser exceptions or missing local resources");
   report.status = "passed";

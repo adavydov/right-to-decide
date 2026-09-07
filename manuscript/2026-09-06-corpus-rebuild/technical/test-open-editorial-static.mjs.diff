@@ -1,0 +1,12 @@
+--- before/scripts/test-open-editorial-static.mjs
++++ scripts/test-open-editorial-static.mjs
+@@ -71,7 +71,8 @@
+  if(fs.existsSync(path.join(root,receiptPath))){
+   const receipt=json(root,receiptPath),selection=json(root,receipt.publication_selection.path);
+   const release=json(root,receipt.release_manifest.path);
+-  inputs.push(...[release.prologue,...release.chapters,release.authorContents].map(item=>item.path));
++  inputs.push(...[release.prologue,...release.chapters,...(release.supplements||[]),release.authorContents].map(item=>item.path));
++  if(book.editionVersion==='9.0')assert.ok(selection.inputs.some(item=>item.path.endsWith('/supplements.json')),'The explicit v9 supplement selection is part of the minimal checkout.');
+   inputs.push(receiptPath,...[receipt.book,receipt.release_manifest,receipt.publication_selection,receipt.previous_identity_map,receipt.previous_corpus,receipt.previous_edition,...selection.inputs,...receipt.frozen_files].map(item=>item.path));
+  }
+  for(const input of new Set(inputs)){const dest=path.join(dir,input);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,input),dest);}

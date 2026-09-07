@@ -1,0 +1,12 @@
+
+> right-to-decide@1.0.0 check:export
+> node scripts/validate-export.mjs
+
+(node:13984) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Editorial credits passed: shared human/AI roster, hierarchy, visible order and structured data.
+Export passed: 164 publication routes; 1606 files; local assets and anchors; current cover/subtitle and biographies; library/wiki; notes and privacy boundaries.
+Constitution DOCX verified: 693 paragraphs/cells, 31 links, complete canonical wording and order.
+Manifesto passed: exact canonical Markdown, verified complete Word copy, rendered text and publication status.

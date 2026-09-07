@@ -1,0 +1,83 @@
+{
+  "verifiedAtUTC": "2026-09-07T03:03:41.820966+00:00",
+  "command": "bundled Python -X utf8 manuscript/2026-09-06-corpus-rebuild/build-reading.py --pdf",
+  "attempts": [
+    {
+      "builderSHA": "cc0eaa9cff0bef8ba56dbfefb27a71f16d66af9caa9f8c304f6289cdc280cb7f",
+      "exitCode": 1,
+      "stage": "DOCX text check",
+      "reason": "Legacy comparison retained unordered Markdown list markers absent from w:t text."
+    },
+    {
+      "builderSHA": "77bcff1dafdda52d22308f38a45601adf7e8e902967d332c060c80fd06e9a023",
+      "exitCode": 1,
+      "stage": "PDF list check",
+      "reason": "Observed Word Symbol U+F0B7 markers did not match initial U+2022-only pattern; no positive assembly written."
+    },
+    {
+      "builderSHA": "73b52f77492876816822da5dbb6e8a5ee0858b00b676af62df595580d312d4d5",
+      "exitCode": 0,
+      "stage": "complete MD DOCX PDF and assembly"
+    }
+  ],
+  "assemblySHA": "7f49e8f99eab7339d5ed33f97e70a8cdbb5ac4cbdb6c018700243d7062336ee7",
+  "inputsMatchFinal21Manifest": true,
+  "acceptedTextChanged": false,
+  "legacyAdapterChanged": false,
+  "releaseDate": "2026-09-07",
+  "outputs": [
+    {
+      "name": "right-to-decide-v9.0.md",
+      "bytes": 623590,
+      "sha256": "320820c17f00942c73ea62153a93db945d1d5462d2867dc1902839ff28326759"
+    },
+    {
+      "name": "right-to-decide-v9.0.docx",
+      "bytes": 200654,
+      "sha256": "bf7c8c8403eb7008e8ff7111c1400586a9014de6c9e61cf8602ffce18619c3fd"
+    },
+    {
+      "name": "right-to-decide-v9.0.pdf",
+      "bytes": 1080275,
+      "sha256": "1135407f5ac737bacc914a316d373eec7124375b11f96da7e521ed5fe33b5936"
+    }
+  ],
+  "checks": {
+    "allInputHashesStable": true,
+    "globalNoteDefinitionsSequential": true,
+    "privatePathsAbsent": true,
+    "completeVisibleTextMatchesMarkdown": true,
+    "noteBookmarks": 57,
+    "internalNoteLinks": 63,
+    "externalHyperlinks": 26,
+    "inputTitlesPresent": 21,
+    "docxBulletLists": 8,
+    "tableLeadParagraphsKeptWithNext": 6,
+    "pdfPages": 124,
+    "pdfNonemptyPages": 124,
+    "completePdfTextMatchesDocx": true,
+    "pdfBulletLists": 8
+  },
+  "normalizationNegativeChecks": "technical/reader-normalization-negative-checks.json",
+  "visualReviewTargets": {
+    "tables": [
+      52,
+      76,
+      96,
+      97,
+      107,
+      111
+    ],
+    "appendixStart": 95,
+    "appendixSources": [
+      113,
+      114
+    ],
+    "notes": [
+      115,
+      124
+    ]
+  },
+  "visualInspectionClaimed": false,
+  "publisherRun": false
+}

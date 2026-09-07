@@ -1,0 +1,17 @@
+{
+  "scope": "Only historical/generic test fixtures; production generators, accepted input and publication selection unchanged",
+  "changes": [
+    {
+      "path": "scripts/test-open-editorial-identity-transition.mjs",
+      "oldSHA": "9bd10725b97795cf1a22400102aeea16a9993328b248ad4aef428259d2e4b66f",
+      "newSHA": "c770a20f981b615dd86b162c4859a148edfa093ed5bd808a96d00e3872561956",
+      "pinnedBySelection": false
+    },
+    {
+      "path": "scripts/test-open-editorial-static.mjs",
+      "oldSHA": "58017be6702699535825df3b97e486093e31df0c7d291e52dca51252354e0595",
+      "newSHA": "07d4a164e7bcbd4b3958d1a76db939187abd8e39c92a48120236b090126d0b94",
+      "pinnedBySelection": false
+    }
+  ]
+}

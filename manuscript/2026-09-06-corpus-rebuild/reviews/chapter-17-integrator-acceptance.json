@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-17.md",
+  "sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-17-source-review.md",
+    "reviews/chapter-17-mechanism-review.md",
+    "reviews/chapter-17-reading-review.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    4,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-17-reading-review.md",
+  "integrator_decision": "Принята после собственного непрерывного чтения всех98 строк с5примечаниями, всех трёх независимых initial/final и литературных12 критериев, полного четырёхточечного diff и целых изменённых абзацев с соседями. Сильная8 сохранена; восстановлен отдельный W20/2 поздний успех части базы, не выводящий W18. Новые различия целей внутри мандата, доли/масштаба/платежа, рычага спроса и добровольной поддержки познания работают по-разному. Изменение помощи не объявлено ростом человека; право и ресурсы различены, сильныйИИ сохраняется. Все12 критериев применимы и >=3/4, без усреднения. Агентная редакционная приёмка не заменяет внешнюю экспертизу или реальный опыт."
+}

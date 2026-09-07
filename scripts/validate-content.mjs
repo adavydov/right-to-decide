@@ -3,6 +3,7 @@ import path from "node:path";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { siteConfig } from "../src/lib/site-config.ts";
+import { validateV9Projection } from "./validate-v9-projection.mjs";
 
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
@@ -11,11 +12,12 @@ const manifest = readJSON("manuscript/2026-09-05-rebuild/contents-v5.1-manifest.
 const isV6 = book.editionVersion === "6.0";
 const isV7 = ["7.0", "7.1"].includes(book.editionVersion);
 const isV8 = book.editionVersion === "8.0";
-const isReviewed = isV6 || isV7 || isV8;
+const isV9 = book.editionVersion === "9.0";
+const isReviewed = isV6 || isV7 || isV8 || isV9;
 const v7SourceRoot = book.editionVersion === "7.1"
   ? "manuscript/2026-09-06-davydov-cases" : "manuscript/2026-09-06-critic-revision";
 const literaryManifest = book.contentKind === "manuscript"
-  ? readJSON(isV8 ? "manuscript/2026-09-06-depth-revision/release-manifest.json" : isV7 ? `${v7SourceRoot}/release-manifest.json` : isV6 ? "manuscript/2026-09-05-rebuild/chapters-v6/release-manifest.json" : "manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
+  ? readJSON(isV9 ? "manuscript/2026-09-06-corpus-rebuild/release-manifest.json" : isV8 ? "manuscript/2026-09-06-depth-revision/release-manifest.json" : isV7 ? `${v7SourceRoot}/release-manifest.json` : isV6 ? "manuscript/2026-09-05-rebuild/chapters-v6/release-manifest.json" : "manuscript/2026-09-05-rebuild/chapters-v4/release-manifest.json") : null;
 const sha = (raw) => createHash("sha256").update(raw).digest("hex");
 const authors = readJSON("src/data/authors.json").authors;
 const teamCatalog = readJSON("src/data/editorial-team.json");
@@ -83,12 +85,12 @@ assert.equal(book.version, "5.1");
 const releasedChapters = mainChapters.filter(c => c.status === "available");
 const plannedChapters = mainChapters.filter(c => c.status === "planned");
 assert.deepEqual(book.chapters.filter(c => c.status === "available").map(c => c.id),
-  ["prologue", "contents", ...releasedChapters.map(c => c.id), ...(isReviewed && literaryManifest?.includesEpilogue ? ["epilogue"] : [])]);
+  ["prologue", "contents", ...releasedChapters.map(c => c.id), ...(isReviewed && literaryManifest?.includesEpilogue ? ["epilogue"] : []), ...(isV9 ? ["appendix-d"] : [])]);
 assert.equal(book.statistics.availableChapters, releasedChapters.length);
 assert.equal(book.statistics.plannedChapters, plannedChapters.length);
 if (literaryManifest) {
   assert.ok(releasedChapters.length, "A manuscript release must contain a numbered chapter");
-  assert.equal(literaryManifest.schemaVersion, isV8 ? 4 : isV7 ? 3 : isV6 ? 2 : 1);
+  assert.equal(literaryManifest.schemaVersion, isV9 ? 5 : isV8 ? 4 : isV7 ? 3 : isV6 ? 2 : 1);
   assert.equal(literaryManifest.architectureVersion, "5.1");
   assert.equal(literaryManifest.acceptanceStatus, isReviewed ? "independent-editorial-review" : "published-texts-pending-constitution-review");
   assert.equal(literaryManifest.releaseId, book.releaseId);
@@ -100,7 +102,7 @@ if (literaryManifest) {
   for (const chapter of releasedChapters) {
     assert.equal(chapter.contentKind, "manuscript");
     assert.equal(chapter.publicationStatus, "published");
-    if (!isV7 && !isV8) assert.equal(chapter.source.path, `manuscript/2026-09-05-rebuild/chapters-${isV6 ? "v6" : "v4"}/${chapter.id}.md`);
+    if (!isV7 && !isV8 && !isV9) assert.equal(chapter.source.path, `manuscript/2026-09-05-rebuild/chapters-${isV6 ? "v6" : "v4"}/${chapter.id}.md`);
     else assert.ok(chapter.source.path.startsWith("manuscript/2026-09-06-") && !chapter.source.path.split("/").includes(".."), "Unexpected literary source path");
     assert.equal(sha(fs.readFileSync(chapter.source.path)), chapter.source.sha256, "Chapter source checksum: " + chapter.id);
   }
@@ -108,8 +110,8 @@ if (literaryManifest) {
   assert.equal(releasedChapters.length, 0, "Outline-only release cannot contain new prose");
 }
 assert.ok(!book.chapters.some(c => c.id === "preface"), "Replaced preface is still active");
-assert.equal(book.chapters.length, 21);
-const epilogue = book.chapters.at(-1);
+assert.equal(book.chapters.length, isV9 ? 22 : 21);
+const epilogue = isV9 ? book.chapters.at(-2) : book.chapters.at(-1);
 assert.equal(epilogue.id, "epilogue");
 assert.equal(epilogue.title, "Эпилог. Следующий вопрос — не наш");
 assert.equal(epilogue.kind, "backmatter");
@@ -124,8 +126,8 @@ for (const part of book.parts) {
 }
 const prologue = book.chapters.find(c => c.id === "prologue");
 const contents = book.chapters.find(c => c.id === "contents");
-assert.equal(prologue.title, (isV7 || isV8) ? "Пролог. Право на решение" : "Пролог");
-assert.equal(prologue.version, isV8 ? "8.0" : isV7 ? "7.0" : isV6 ? literaryManifest.prologueSelection.version : "1.0");
+assert.equal(prologue.title, (isV7 || isV8 || isV9) ? "Пролог. Право на решение" : "Пролог");
+assert.equal(prologue.version, isV9 ? "9.0" : isV8 ? "8.0" : isV7 ? "7.0" : isV6 ? literaryManifest.prologueSelection.version : "1.0");
 if (!isReviewed) {
   assert.equal(prologue.blocks.length, 65);
   assert.equal(prologue.blocks.filter(b => b.text === "⸻").length, 4);
@@ -143,7 +145,7 @@ if (!isReviewed) {
 }
 assert.equal(contents.blocks.length, 46, "Reader outline contains 20 headings and summaries, plus six part headings");
 assert.equal(contents.blocks.filter(block => block.type === "paragraph").length, 20, "Each reader section has one paragraph");
-if (!isV7 && !isV8) assert.equal(book.notes.length, 0, "Legacy selected edition has no notes");
+if (!isV7 && !isV8 && !isV9) assert.equal(book.notes.length, 0, "Legacy selected edition has no notes");
 for (const chapter of isReviewed ? [contents] : [prologue, contents]) {
   const raw = fs.readFileSync(chapter.source.path);
   assert.equal(sha(raw), chapter.source.sha256, "Author source checksum: " + chapter.id);
@@ -172,7 +174,7 @@ if (isReviewed) {
   const downloadable = book.chapters.filter(c => c.status === "available" && c.contentKind === "manuscript");
   assert.deepEqual(literaryManifest.downloads.map(d => d.id), downloadable.map(c => c.id));
   for (const chapter of downloadable) {
-    assert.match(chapter.download?.docx || "", /^\/book\/chapters\/(?:chapter-\d{2}|prologue|epilogue)-v[\d.]+\.docx$/u);
+    assert.match(chapter.download?.docx || "", /^\/book\/chapters\/(?:chapter-\d{2}|prologue|epilogue|appendix-d)-v[\d.]+\.docx$/u);
     localMedia(chapter.download.docx, chapter.id + " DOCX");
     const raw = fs.readFileSync("public" + chapter.download.docx);
     assert.equal(raw.subarray(0, 2).toString(), "PK", "Download is not an OOXML package");
@@ -241,6 +243,7 @@ if (isV8) {
     assert.equal(sha(fs.readFileSync("manuscript/2026-09-06-depth-revision/" + item.path)), item.sha256.toLowerCase());
   }
 }
+if (isV9) validateV9Projection(book, literaryManifest);
 assert.equal(authors.length, 3);
 uniqueIds(authors, "author");
 assert.ok(Array.isArray(book.notes), "Book notes must be an array");

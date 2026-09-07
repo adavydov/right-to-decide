@@ -27,6 +27,7 @@ export default function ReadIndex() {
               <div className="read-actions" style={{ marginTop: 12 }}>
                 <a className="button secondary" href={assetPath(book.downloads.docx.path)} download>Скачать Word ↓</a>
                 <a className="button secondary" href={assetPath(book.downloads.pdf.path)} download>Скачать PDF ↓</a>
+                {book.downloads.md && <a className="button secondary" href={assetPath(book.downloads.md.path)} download>Скачать Markdown ↓</a>}
               </div>
             </section>
           )}

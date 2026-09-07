@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-08.md",
+  "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-08-source-review.md",
+    "reviews/chapter-08-mechanism-review.md",
+    "reviews/chapter-08-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-08-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения исходной новой главы, двухместного diff с окружением и всех трёх финальных независимых заключений. Предметный возврат о необходимой неполноте объяснения закрыт. Сохранены сильный правильный ИИ, локальность наблюдаемого результата и добровольное делегирование; раскрыты память связки, помощь оценивания и пригодность задания. Все12 применимы; источник проверен6 сентября, дата новой приёмки7 сентября не обновляет его."
+}

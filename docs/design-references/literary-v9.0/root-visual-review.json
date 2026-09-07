@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-07",
+  "reviewer": "root",
+  "status": "passed",
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSHA256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "scope": {
+    "overviewScreenshots": 16,
+    "contactSheets": [
+      "root-contact-1.png",
+      "root-contact-2.png",
+      "root-contact-3.png",
+      "root-contact-4.png"
+    ],
+    "additionalFullScreenshots": [
+      "table-appendix-d-0-390-right.png",
+      "table-appendix-d-2-390-right.png"
+    ],
+    "viewportWidths": [
+      1440,
+      390
+    ]
+  },
+  "findings": [],
+  "mobileWideTables": "Tables D0/D2 have working overflow-x:auto. Root read both actual scroll checks, positions79/48 reach the right border and every cell matches. Both final right-edge screenshots with a taller viewport at the same390px width were viewed in full; fixed controls no longer overlap these evidence images. This is visual and interaction QA, not a new continuous literary reading.",
+  "automatedEvidence": [
+    {
+      "path": "browser-qa.json",
+      "sha256": "421751a7c1476ed7fa56d8fe47482b93b60061e0c7518ad45fc47c4b7bd4da01"
+    },
+    {
+      "path": "mobile-table-scroll-qa.json",
+      "sha256": "fce9a339968ddf6172a4ee5853cdaf81d4f5d8147c6004cc4c64400e8ac94562"
+    }
+  ],
+  "finalRightScreenshots": [
+    {
+      "path": "table-appendix-d-0-390-right.png",
+      "sha256": "de4abec6d52761b762422e47625f16c3e9a73c03cf299affad79246098f9a3c4"
+    },
+    {
+      "path": "table-appendix-d-2-390-right.png",
+      "sha256": "c6d6b835a34b3d5d65377209d74e40fd6c10e875678b0ae659547bb307cbffe6"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- before/scripts/validate-export.mjs
++++ scripts/validate-export.mjs
+@@ -246,7 +246,7 @@
+   for (const block of [...chapter.blocks, ...book.notes.filter(note => note.chapterId === chapter.id).flatMap(note => note.blocks)]) {
+     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
+     if (block.type === "paragraph" || block.type === "heading") {
+-      if (/^manuscript-v[678]-/.test(block.id)) {
++      if (/^manuscript-v[6789]-/.test(block.id)) {
+         const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
+           text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
+           href: run.noteId ? "#" + run.noteId : run.href || null,

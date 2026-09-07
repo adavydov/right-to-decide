@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-04.md",
+  "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-04-source-review.md",
+    "reviews/chapter-04-mechanism-review.md",
+    "reviews/chapter-04-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    "N/A"
+  ],
+  "criteria_authority": "reviews/chapter-04-reading-and-acceptance.md",
+  "integrator_decision": "Принята после чтения трёх независимых заключений на окончательный SHA. Сильная историческая композиция сохранена; пересмотр причины непонимания и цена подготовки простого опыта углублены первичными основаниями. Четыре уточнения интегратора проверены отдельно, авторский возврат рецензентам не приписан."
+}

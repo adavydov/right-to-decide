@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "appendices/scenario-passport-v1.6.md",
+  "sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae",
+  "author": "mechanism_recovery",
+  "independentReviewers": [
+    "root",
+    "education_history_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/appendix-d-integrator-review.md",
+    "reviews/appendix-d-source-review.md",
+    "reviews/appendix-d-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    3,
+    "N/A",
+    4,
+    3,
+    3,
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    3
+  ],
+  "criteria_authority": "reviews/appendix-d-reading-and-acceptance.md",
+  "integrator_decision": "Принято после трёх отдельных независимых полных чтений первоначального Д и проверок полного ограниченного diff. Все три итоговых заключения относятся к этому SHA. Уточнены реальная передача ведущей роли и использование материалов новым получателем; сохранены помощь, условность, полные бюджеты, ограничения и источниковые даты. Автор Д не входит в независимых рецензентов. Все применимые критерии не ниже3/4, N/A по справочной драматургической функции обоснован отдельно. Это приёмка приложения, не одна лишь авторская сверка и не внешняя экспертиза."
+}

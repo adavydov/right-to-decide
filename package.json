@@ -29,12 +29,14 @@
     "check:content": "node scripts/validate-content.mjs",
     "check:export": "node scripts/validate-export.mjs",
     "check": "npm run check:source && npm run lint && npm run typecheck && npm run check:content && npm run editorial:static:check && npm run build && npm run check:export && npm run check:editorial-export",
-    "check:source": "python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/test-release-v7.py && python scripts/test-release-v8.py && python scripts/publish-manuscript.py --check",
+    "check:source": "python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/test-release-v7.py && python scripts/test-release-v8.py && python scripts/test-release-v9.py && npm run check:release",
     "editorial:build": "node scripts/build-open-editorial.mjs",
     "prebuild": "npm run editorial:build",
-    "editorial:static:test": "node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs",
+    "editorial:static:test": "node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs",
     "editorial:static:check": "node scripts/build-open-editorial.mjs --check && npm run editorial:static:test",
-    "check:editorial-export": "node scripts/validate-open-editorial-export.mjs && node scripts/scan-open-editorial-artifacts.mjs"
+    "check:editorial-export": "node scripts/validate-open-editorial-export.mjs && node scripts/scan-open-editorial-artifacts.mjs",
+    "check:release": "python scripts/publish-manuscript.py --check",
+    "check:release:v9": "python scripts/publish-manuscript.py --edition v9 --check"
   },
   "dependencies": {
     "next": "16.3.2",

@@ -1,0 +1,104 @@
+--- build-reading.py before list normalization
++++ build-reading.py v9 list normalization
+@@ -97,6 +97,86 @@
+         raise ValueError("Global note sequence is broken")
+     return compiled, sections, note_map, legacy
+ 
++def verify_docx_v9(path, sections, note_map):
++    """Compare every word/link while accounting for genuine Word bullet styles."""
++    from docx import Document
++    from zipfile import ZipFile
++    import xml.etree.ElementTree as ET
++    ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
++    with ZipFile(path) as archive:
++        tree = ET.fromstring(archive.read("word/document.xml"))
++        relationships = ET.fromstring(archive.read("word/_rels/document.xml.rels"))
++    names = [node.get("{" + ns["w"] + "}name") for node in tree.findall(".//w:bookmarkStart", ns)]
++    expected = [f"note_{row['global']}" for row in note_map]
++    if names != expected or len(names) != len(set(names)):
++        raise ValueError("DOCX note bookmarks differ from assembly")
++    anchors = [node.get("{" + ns["w"] + "}anchor") for node in tree.findall(".//w:hyperlink", ns)]
++    anchors = [value for value in anchors if value]
++    if set(anchors) != set(expected):
++        raise ValueError("DOCX internal note references incomplete")
++    urls = [node.get("Target") for node in relationships if node.get("Type", "").endswith("/hyperlink")]
++    source_urls = {m.group(1).strip("<>") for section in sections
++                   for m in re.finditer(r"\]\(([^)\n]+)\)", section["body"] + "\n" + section["notes"])}
++    if set(urls) != source_urls:
++        raise ValueError("DOCX external hyperlinks differ from inputs")
++    visible = "\n".join("".join(node.text or "" for node in paragraph.findall(".//w:t", ns))
++                        for paragraph in tree.findall(".//w:p", ns))
++    raw = path.with_suffix(".md").read_text(encoding="utf-8-sig")
++    raw = re.sub(r"(?m)^\|[-:| ]+\|\s*$", "", raw)
++    raw = re.sub(r"(?m)^(?:-{3,}|\*{3,}|_{3,})\s*$", "⁂", raw)
++    raw = re.sub(r"(?m)^#{1,6}\s+", "", raw)
++    # The converter stores unordered markers as List Bullet style, not w:t text.
++    # Strip only Markdown list syntax, and require the same Word list count.
++    raw, bullets = re.subn(r"(?m)^([ \t]*)[-+*][ \t]+", r"\1", raw)
++    docx_bullets = sum(p.style.name == "List Bullet" for p in Document(path).paragraphs)
++    if bullets != docx_bullets:
++        raise ValueError("DOCX bullet list count differs from Markdown")
++    raw = re.sub(r"\[([^\]]+)\]\([^)\n]+\)", r"\1", raw)
++    raw = re.sub(r"(?m)^\|(.+)\|\s*$", lambda m: m.group(1).replace("|", " "), raw)
++    raw = raw.replace("*", "").replace(chr(96), "")
++    norm = lambda value: re.sub(r"\s+", " ", value).strip()
++    if norm(raw) != norm(visible):
++        import difflib
++        delta = "\n".join(list(difflib.unified_diff(norm(raw).split(), norm(visible).split(), n=5))[:35])
++        raise ValueError("DOCX visible text differs from compiled Markdown:\n" + delta)
++    for section in sections:
++        if section["title"] not in visible:
++            raise ValueError("Missing DOCX title: " + section["title"])
++    return {"completeVisibleTextMatchesMarkdown": True, "noteBookmarks": len(names),
++            "internalNoteLinks": len(anchors), "externalHyperlinks": len(urls),
++            "inputTitlesPresent": len(sections), "docxBulletLists": docx_bullets}
++
++
++def verify_pdf_v9(path, expected_bullets):
++    """Retain full text equality; remove only exact page numbers and list glyphs."""
++    from pypdf import PdfReader
++    from zipfile import ZipFile
++    import xml.etree.ElementTree as ET
++    ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
++    reader, clean, bullet_count = PdfReader(path), [], 0
++    for number, page in enumerate(reader.pages, 1):
++        text = page.extract_text() or ""
++        if not text.strip():
++            raise ValueError(f"Empty PDF page: {number}")
++        text = re.sub(r"^\s*" + str(number) + r"\s*\n", "", text, count=1)
++        text = re.sub(r"\n\s*" + str(number) + r"\s*$", "", text, count=1)
++        # Word Symbol-font bullets may be extracted by LibreOffice as U+F0B7.
++        text, count = re.subn(r"(?m)^[ \t]*[\u2022\uf0b7][ \t]*", "", text)
++        bullet_count += count
++        clean.append(text.replace("\u00ad", ""))
++    if bullet_count != expected_bullets:
++        raise ValueError(f"PDF bullet list count differs from DOCX: {bullet_count} != {expected_bullets}")
++    with ZipFile(path.with_suffix(".docx")) as archive:
++        tree = ET.fromstring(archive.read("word/document.xml"))
++    word = "\n".join("".join(node.text or "" for node in paragraph.findall(".//w:t", ns))
++                     for paragraph in tree.findall(".//w:p", ns))
++    norm = lambda value: re.sub(r"\s+", "", value)
++    if norm(word) != norm("\n".join(clean)):
++        raise ValueError("PDF text differs from DOCX after whitespace, exact footer and list-marker removal")
++    return {"pdfPages": len(reader.pages), "pdfNonemptyPages": len(reader.pages),
++            "completePdfTextMatchesDocx": True, "pdfBulletLists": bullet_count}
++
++
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--pdf", action="store_true")
+@@ -129,12 +209,12 @@
+     doc.core_properties.title = "Право на решение — редакция 9.0"
+     doc.core_properties.subject = "Читательская сборка; литературная приёмка оформляется отдельно"
+     doc.save(docx)
+-    checks = legacy.verify_docx(docx, sections, note_map)
++    checks = verify_docx_v9(docx, sections, note_map)
+     checks["tableLeadParagraphsKeptWithNext"] = table_leads
+     outputs = [markdown, docx]
+     if args.pdf:
+         pdf = converter.build_pdf(docx, converter.OFFICE)
+-        checks.update(legacy.verify_pdf(pdf))
++        checks.update(verify_pdf_v9(pdf, checks["docxBulletLists"]))
+         outputs.append(pdf)
+     for section in sections:
+         if sha(section["path"]) != section["sha256"].lower():

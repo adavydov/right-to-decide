@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-09-07T03:39:49.702600+00:00",
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSHA256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "mainBrowserQA": {
+    "path": "docs/design-references/literary-v9.0/browser-qa.json",
+    "sha256": "421751a7c1476ed7fa56d8fe47482b93b60061e0c7518ad45fc47c4b7bd4da01",
+    "exitCode": 0,
+    "fullTexts": 21,
+    "downloads": 24,
+    "noteRoundTrips": 63,
+    "layouts": 46,
+    "screenshots": 16,
+    "errors": 0
+  },
+  "mobileTableScrollQA": {
+    "path": "docs/design-references/literary-v9.0/mobile-table-scroll-qa.json",
+    "sha256": "fce9a339968ddf6172a4ee5853cdaf81d4f5d8147c6004cc4c64400e8ac94562",
+    "exitCode": 0,
+    "tableIndices": [
+      0,
+      2
+    ],
+    "scrollLeftAtMaximum": [
+      79,
+      48
+    ],
+    "clientWidths": [
+      350,
+      350
+    ],
+    "scrollWidths": [
+      429,
+      398
+    ],
+    "rightEdgesAndLastCellsVisible": true,
+    "cssChanged": false,
+    "screenshotFraming": "The original 390x844 checks are recorded. Screenshot-only viewport height increased to table height plus 300, retaining width 390; no CSS was edited."
+  },
+  "manualImageReview": {
+    "reviewer": "release_pipeline",
+    "method": "Original PNG bytes displayed through an authorized local read after view_image sandbox helper and node_repl failed; no image modification.",
+    "files": [
+      {
+        "path": "docs/design-references/literary-v9.0/read-390.png",
+        "sha256": "cbe5cad0227a38a1bbc9f3e8dbc6ff53d375c9d7b646b71fdab8ae1f2e520e07"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/table-appendix-d-0-390.png",
+        "sha256": "0780199adb21e509108886cacb86bbc31553e728fb9c6bee9bd7aa00486dc675"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/table-appendix-d-0-1440.png",
+        "sha256": "243d738ab5b91ca76d34468138a45eee875c22021b765ef0016e11cd5c5c8f51"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/table-chapter-11-0-1440.png",
+        "sha256": "145e4605c1203236eb26483576f70e1d800e56b5750fbe52d77c8972c4b6ae9e"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/notes-ch12-390.png",
+        "sha256": "e27828a21572685d85e11f36c10ff16b337147c2f141aa981699d1174b68cd3b"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/table-appendix-d-0-390-right.png",
+        "sha256": "de4abec6d52761b762422e47625f16c3e9a73c03cf299affad79246098f9a3c4"
+      },
+      {
+        "path": "docs/design-references/literary-v9.0/table-appendix-d-2-390-right.png",
+        "sha256": "c6d6b835a34b3d5d65377209d74e40fd6c10e875678b0ae659547bb307cbffe6"
+      }
+    ],
+    "diagnosis": "Main mobile reading page, notes and representative desktop tables are legible. Initial mobile table crop is the horizontal scroll position; both rightmost views display the full right column and final cell. Full 16-image independent visual review belongs to root, not this record."
+  },
+  "pinnedInputCount": 119,
+  "allPinnedInputsStillMatch": true,
+  "localPreviewServer": {
+    "host": "127.0.0.1",
+    "port": 3217,
+    "stopped": true,
+    "lastOwnedSession": 60424,
+    "method": "Ctrl-C to the owned exec session; no listener on the port afterward"
+  },
+  "externalPublicationPerformed": false,
+  "gitCommitPushPerformed": false
+}

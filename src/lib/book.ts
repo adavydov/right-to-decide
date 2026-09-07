@@ -72,7 +72,7 @@ export type BookChapter = {
 export type BookDownload = { path: string; sha256: string; bytes: number };
 
 export type Book = {
-  downloads?: { docx: BookDownload; pdf: BookDownload };
+  downloads?: { docx: BookDownload; pdf: BookDownload; md?: BookDownload };
   releaseId?: string;
   contentKind?: "outline" | "manuscript";
   version?: string;

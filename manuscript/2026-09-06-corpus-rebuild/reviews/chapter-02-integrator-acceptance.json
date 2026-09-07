@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-02.md",
+  "sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-02-source-review.md",
+    "reviews/chapter-02-mechanism-review.md",
+    "reviews/chapter-02-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    "N/A"
+  ],
+  "criteria_authority": "reviews/chapter-02-reading-and-acceptance.md",
+  "integrator_decision": "Принята после чтения трёх независимых заключений на точном SHA. Полноценные углы и сильная основа сохранены. Применимость критерия трёх результатов проверена по существу, без требования чуждого главе протокола."
+}

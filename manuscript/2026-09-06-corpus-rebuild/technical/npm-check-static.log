@@ -1,0 +1,199 @@
+
+> right-to-decide@1.0.0 check
+> npm run check:source && npm run lint && npm run typecheck && npm run check:content && npm run editorial:static:check && npm run build && npm run check:export && npm run check:editorial-export
+
+
+> right-to-decide@1.0.0 check:source
+> python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/test-release-v7.py && python scripts/test-release-v8.py && python scripts/test-release-v9.py && npm run check:release
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.053s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.463s
+
+OK
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 1.702s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.060s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.032s
+
+OK
+
+> right-to-decide@1.0.0 check:release
+> python scripts/publish-manuscript.py --check
+
+MANUSCRIPT V9.0 SOURCE, NOTES AND DOWNLOAD CHECK OK
+
+> right-to-decide@1.0.0 lint
+> eslint
+
+
+> right-to-decide@1.0.0 typecheck
+> tsc --noEmit
+
+
+> right-to-decide@1.0.0 check:content
+> node scripts/validate-content.mjs
+
+(node:14212) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Content passed: schema 2; 18/18 available chapters; 935 current blocks; 2773 archive blocks; 57 notes; 3 authors; 50 sources; 97 cards.
+
+> right-to-decide@1.0.0 editorial:static:check
+> node scripts/build-open-editorial.mjs --check && npm run editorial:static:test
+
+(node:14892) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"mode":"verified","edition_id":"literary-manuscript-v9.0-26472e4aa686","editions":4,"chapters":22,"blocks":935,"layers":9,"manifesto_sha256":"9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583"}
+
+> right-to-decide@1.0.0 editorial:static:test
+> node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs
+
+✔ dotted edition identity is a single safe path component in code and OpenAPI (4.8584ms)
+✖ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (19.7403ms)
+✔ exact receipt accepts the frozen old map or installed new map without changing either (800.9468ms)
+✔ rewritten paragraph cannot inherit a historical annotation identity (4.4849ms)
+✔ retained contents identity cannot hide changed text under the same source checksum (6.7845ms)
+✔ missing receipt cannot be bypassed by an already installed matching identity map (4.2567ms)
+✔ arbitrary active map changes are rejected rather than silently regenerated (561.5924ms)
+✔ modified accepted chapter Markdown invalidates the transition before import (43.3672ms)
+✖ a modified pinned independent review invalidates the transition (29.1664ms)
+✔ a modified previous published snapshot invalidates the transition (292.4959ms)
+✔ receipt cannot claim a different transfer decision (6.0041ms)
+(node:16732) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ static discovery advertises only existing public file GETs without auth or write promises (209.1967ms)
+✔ public corpus references complete immutable files and keeps original manifesto bytes (503.2993ms)
+✖ default static generator is reproducible in a minimal checkout with no service or npm modules (2211.3214ms)
+✔ local draft accepts a faithful Unicode target and never mutates the selected published snapshot (29.8077ms)
+✔ local draft rejects mismatched identity, snapshot, ambiguous quote and unsupported partial selection (1.3672ms)
+✔ local draft exports preserve author text but never manufacture receipt, consent or credentials (1.1496ms)
+✔ 8.0 introduces fresh identities for all twenty rewritten sources (11.6991ms)
+✔ 8.0 rejects old or wrong-edition anchors on rewritten prose (2.2899ms)
+✔ unchanged source checksum cannot conceal changed contents (1.0557ms)
+✔ 8.0 requires its receipt even if a map already exists (6.1542ms)
+✔ 8.0 preserves an unchanged chapter while nineteen sources receive fresh identities (1.3019ms)
+✔ 9.0 retains all exact published identities and adds appendix D without transferring annotations (61.1948ms)
+✔ 9.0 rejects a missing or wrong appendix and any removed baseline section (129.0367ms)
+✔ added and changed sources cannot reuse earlier block identities (89.6325ms)
+✔ unchanged source hash cannot conceal changed visible text (36.261ms)
+✔ rewritten source receives new v9 identities including its notes (55.6661ms)
+✔ 9.0 requires an explicit receipt before building editorial projection (24.4454ms)
+✔ canonical normalization preserves whitespace, Cyrillic, emoji and NFC (7.227ms)
+✔ positions are Unicode code points and cannot split a grapheme cluster (83.687ms)
+✔ ambiguous quotes need context, absent or invalid positions fail (1.254ms)
+✔ published corpus is faithful, excludes drafts, has unique frozen blocks and original manifesto (98.1524ms)
+✔ missing or historical eight-layer source never invents a ninth or blocks unclassified intake (8.698ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 30
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3336.9736
+
+✖ failing tests:
+
+test at scripts\test-open-editorial-identity-transition.mjs:33:1
+✖ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (19.7403ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  889 !== 450
+  
+      at TestContext.<anonymous> (file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/scripts/test-open-editorial-identity-transition.mjs:41:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 889,
+    expected: 450,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\test-open-editorial-identity-transition.mjs:86:1
+✖ a modified pinned independent review invalidates the transition (29.1664ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(review)
+  
+      at TestContext.<anonymous> (file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/scripts/test-open-editorial-identity-transition.mjs:89:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts\test-open-editorial-static.mjs:65:1
+✖ default static generator is reproducible in a minimal checkout with no service or npm modules (2211.3214ms)
+  AssertionError [ERR_ASSERTION]: node:fs:622
+    return binding.open(
+                   ^
+  
+  Error: ENOENT: no such file or directory, open 'C:\Users\CD86~1\AppData\Local\Temp\oe-static-build-FAfbCy\manuscript\2026-09-06-corpus-rebuild\appendices\scenario-passport-v1.6.md'
+      at Object.openSync (node:fs:622:18)
+      at Object.readFileSync (node:fs:488:35)
+      at checked (file:///C:/Users/CD86%7E1/AppData/Local/Temp/oe-static-build-FAfbCy/scripts/open-editorial-identity-transition.mjs:28:20)
+      at verifyTransition (file:///C:/Users/CD86%7E1/AppData/Local/Temp/oe-static-build-FAfbCy/scripts/open-editorial-identity-transition.mjs:132:125)
+      at file:///C:/Users/CD86%7E1/AppData/Local/Temp/oe-static-build-FAfbCy/scripts/build-open-editorial.mjs:39:20
+      at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+      at async node:internal/modules/esm/loader:643:26
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'C:\\Users\\CD86~1\\AppData\\Local\\Temp\\oe-static-build-FAfbCy\\manuscript\\2026-09-06-corpus-rebuild\\appendices\\scenario-passport-v1.6.md'
+  }
+  
+  Node.js v24.19.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/scripts/test-open-editorial-static.mjs:90:192)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

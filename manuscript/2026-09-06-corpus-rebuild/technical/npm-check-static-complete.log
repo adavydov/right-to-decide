@@ -1,0 +1,221 @@
+
+> right-to-decide@1.0.0 check
+> npm run check:source && npm run lint && npm run typecheck && npm run check:content && npm run editorial:static:check && npm run build && npm run check:export && npm run check:editorial-export
+
+
+> right-to-decide@1.0.0 check:source
+> python scripts/test-publish-manuscript.py && python scripts/test-chapter-docx.py && python scripts/test-release-v7.py && python scripts/test-release-v8.py && python scripts/test-release-v9.py && npm run check:release
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.052s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.387s
+
+OK
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 1.233s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.050s
+
+OK
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.021s
+
+OK
+
+> right-to-decide@1.0.0 check:release
+> python scripts/publish-manuscript.py --check
+
+MANUSCRIPT V9.0 SOURCE, NOTES AND DOWNLOAD CHECK OK
+
+> right-to-decide@1.0.0 lint
+> eslint
+
+
+> right-to-decide@1.0.0 typecheck
+> tsc --noEmit
+
+
+> right-to-decide@1.0.0 check:content
+> node scripts/validate-content.mjs
+
+(node:6352) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Content passed: schema 2; 18/18 available chapters; 935 current blocks; 2773 archive blocks; 57 notes; 3 authors; 50 sources; 97 cards.
+
+> right-to-decide@1.0.0 editorial:static:check
+> node scripts/build-open-editorial.mjs --check && npm run editorial:static:test
+
+(node:452) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"mode":"verified","edition_id":"literary-manuscript-v9.0-26472e4aa686","editions":4,"chapters":22,"blocks":935,"layers":9,"manifesto_sha256":"9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583"}
+
+> right-to-decide@1.0.0 editorial:static:test
+> node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs
+
+✔ dotted edition identity is a single safe path component in code and OpenAPI (2.7688ms)
+✔ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (21.6993ms)
+✔ exact receipt accepts the frozen old map or installed new map without changing either (820.0125ms)
+✔ rewritten paragraph cannot inherit a historical annotation identity (8.873ms)
+✔ retained contents identity cannot hide changed text under the same source checksum (7.2123ms)
+✔ missing receipt cannot be bypassed by an already installed matching identity map (6.0657ms)
+✔ arbitrary active map changes are rejected rather than silently regenerated (593.8894ms)
+✔ modified accepted chapter Markdown invalidates the transition before import (42.7135ms)
+✔ a modified pinned independent review invalidates the transition (71.0681ms)
+✔ a modified previous published snapshot invalidates the transition (309.6069ms)
+✔ receipt cannot claim a different transfer decision (7.1996ms)
+(node:17788) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ static discovery advertises only existing public file GETs without auth or write promises (192.4057ms)
+✔ public corpus references complete immutable files and keeps original manifesto bytes (490.6236ms)
+✔ default static generator is reproducible in a minimal checkout with no service or npm modules (8882.8ms)
+✔ local draft accepts a faithful Unicode target and never mutates the selected published snapshot (27.0768ms)
+✔ local draft rejects mismatched identity, snapshot, ambiguous quote and unsupported partial selection (1.6127ms)
+✔ local draft exports preserve author text but never manufacture receipt, consent or credentials (1.6316ms)
+✔ 8.0 introduces fresh identities for all twenty rewritten sources (12.0342ms)
+✔ 8.0 rejects old or wrong-edition anchors on rewritten prose (1.9092ms)
+✔ unchanged source checksum cannot conceal changed contents (0.8057ms)
+✔ 8.0 requires its receipt even if a map already exists (4.6033ms)
+✔ 8.0 preserves an unchanged chapter while nineteen sources receive fresh identities (1.9208ms)
+✔ 9.0 retains all exact published identities and adds appendix D without transferring annotations (65.0463ms)
+✔ 9.0 rejects a missing or wrong appendix and any removed baseline section (139.046ms)
+✔ added and changed sources cannot reuse earlier block identities (86.506ms)
+✔ unchanged source hash cannot conceal changed visible text (34.2629ms)
+✔ rewritten source receives new v9 identities including its notes (48.9202ms)
+✔ 9.0 requires an explicit receipt before building editorial projection (31.0158ms)
+✔ canonical normalization preserves whitespace, Cyrillic, emoji and NFC (2.3598ms)
+✔ positions are Unicode code points and cannot split a grapheme cluster (85.6807ms)
+✔ ambiguous quotes need context, absent or invalid positions fail (4.0578ms)
+✔ published corpus is faithful, excludes drafts, has unique frozen blocks and original manifesto (148.5602ms)
+✔ missing or historical eight-layer source never invents a ninth or blocks unclassified intake (9.7686ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9968.7646
+
+> right-to-decide@1.0.0 prebuild
+> npm run editorial:build
+
+
+> right-to-decide@1.0.0 editorial:build
+> node scripts/build-open-editorial.mjs
+
+(node:3088) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"mode":"generated","edition_id":"literary-manuscript-v9.0-26472e4aa686","editions":4,"chapters":22,"blocks":935,"layers":9,"manifesto_sha256":"9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583"}
+
+> right-to-decide@1.0.0 build
+> next build && node scripts/normalize-static-segments.mjs
+
+▲ Next.js 16.3.2 (Turbopack)
+✓ Running next.config.ts took 136ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.6s
+  Running TypeScript ...
+  Finished TypeScript in 5.7s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/189) ...
+  Generating static pages using 3 workers (47/189) 
+  Generating static pages using 3 workers (94/189) 
+  Generating static pages using 3 workers (141/189) 
+✓ Generating static pages using 3 workers (189/189) in 13.5s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /archive
+├   /archive/[chapter]
+│ ├ ● /archive/edition
+│ ├ ● /archive/authors
+│ ├ ● /archive/abstract
+│ └ ● [+34 more paths]
+├ ○ /authors
+├ ○ /contents
+├ ○ /editorial-team.json
+├ ○ /icon.svg
+├ ○ /library
+├ ○ /manifesto
+├ ○ /manifesto/constitution.md
+├ ○ /open-editorial
+├ ○ /open-editorial/admin
+├ ○ /open-editorial/agents
+├ ○ /open-editorial/agents/guide
+├ ○ /open-editorial/changes
+├ ○ /open-editorial/contribution
+├ ○ /open-editorial/discussions
+├ ○ /open-editorial/manifesto
+├ ○ /open-editorial/manifesto/history
+├ ○ /open-editorial/manifesto/manifesto.md
+├ ○ /open-editorial/me
+├ ○ /open-editorial/participants
+├ ○ /open-editorial/participate
+├ ○ /open-editorial/privacy
+├ ○ /open-editorial/rules
+├ ○ /open-editorial/support
+├ ○ /open-editorial/tasks
+├ ○ /read
+├   /read/[chapter]
+│ ├ ● /read/prologue
+│ ├ ● /read/contents
+│ ├ ● /read/chapter-01
+│ └ ● [+19 more paths]
+├ ○ /read/preface
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /wiki
+└   /wiki/[card]
+  ├ ● /wiki/GRABIN1989-P1-C01
+  ├ ● /wiki/GRABIN1989-P1-C02
+  ├ ● /wiki/GRABIN1989-P1-C03
+  └ ● [+94 more paths]
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+Static segment aliases: 181 added; existing files preserved.
+
+> right-to-decide@1.0.0 check:export
+> node scripts/validate-export.mjs
+
+(node:20144) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Editorial credits passed: shared human/AI roster, hierarchy, visible order and structured data.
+Export passed: 164 publication routes; 1606 files; local assets and anchors; current cover/subtitle and biographies; library/wiki; notes and privacy boundaries.
+Constitution DOCX verified: 693 paragraphs/cells, 31 links, complete canonical wording and order.
+Manifesto passed: exact canonical Markdown, verified complete Word copy, rendered text and publication status.
+
+> right-to-decide@1.0.0 check:editorial-export
+> node scripts/validate-open-editorial-export.mjs && node scripts/scan-open-editorial-artifacts.mjs
+
+(node:13072) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/open-editorial-manifesto.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"status":"PASS","mode":"static","base_path":"/right-to-decide","active_routes":9,"readonly_retired_routes":7,"manifesto_blocks":92,"documented_get_paths":8,"static_files_scanned":1606,"private_artifacts":0,"browser_interactions":"NOT_RUN"}
+{"date":"2026-09-06","status":"PASS","static_files":1606,"test_trace_files":0,"findings":[],"scope":"Current static export and available test trace files only; no unrelated environment secrets or private browser/session stores were read."}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-09-07",
+  "reviewer": "root",
+  "decision": "pass",
+  "path": "scripts/validate-export.mjs",
+  "sha256": "cd1eae354031217fce987a7c0050f3e8999be524cdc0339f01ace1832f2e9600",
+  "readingScope": "Full current git diff and lines 219–283 read. Existing exact run comparison remains: text, bold, italic, code and source/note target. Version9 now enters that same strict branch; versions6/7/8 unchanged. Twenty-one selected literary sections, appendix1.6 and all3 whole-book formats are required.",
+  "scopeLimitation": "This is review of the diff and context, not a new full-file reading. Actual complete execution is recorded separately in release-check-verification.json."
+}

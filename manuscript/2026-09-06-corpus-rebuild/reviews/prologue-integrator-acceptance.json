@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "prologue.md",
+  "sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/prologue-source-review.md",
+    "reviews/prologue-mechanism-review.md",
+    "reviews/prologue-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    "N/A",
+    3,
+    3,
+    3,
+    4,
+    "N/A"
+  ],
+  "criteria_authority": "reviews/prologue-reading-and-acceptance.md",
+  "integrator_decision": "Принят после чтения трёх независимых заключений и точной сверки версии. Приёмка относится только к прологу; следующая глава рассматривается отдельно."
+}

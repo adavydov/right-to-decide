@@ -1,0 +1,29 @@
+{
+  "scope": "Temporary corrupted reader copies only; accepted sources and reader files unchanged",
+  "builderSHA": "73b52f77492876816822da5dbb6e8a5ee0858b00b676af62df595580d312d4d5",
+  "setupCorrection": "Initial harness supplied absolute metadata path and was rejected before any sample was created; corrected to required repository-relative path.",
+  "cases": [
+    {
+      "case": "missing_list_word",
+      "outcome": "rejected",
+      "reason": "DOCX visible text differs from compiled Markdown:"
+    },
+    {
+      "case": "extra_real_minus",
+      "outcome": "rejected",
+      "reason": "DOCX visible text differs from compiled Markdown:"
+    },
+    {
+      "case": "missing_list_style",
+      "outcome": "rejected",
+      "reason": "DOCX bullet list count differs from Markdown"
+    },
+    {
+      "case": "changed_source_url",
+      "outcome": "rejected",
+      "reason": "DOCX external hyperlinks differ from inputs"
+    }
+  ],
+  "passed": 4,
+  "temporaryDirectoryRemoved": true
+}

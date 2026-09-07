@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "at": "2026-09-07T03:38:26.134Z",
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSha256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browser": "Microsoft Edge, headless; fresh isolated context",
+  "tables": [
+    {
+      "index": 0,
+      "id": "manuscript-v9-appendix-d-p009",
+      "before": {
+        "className": "table-scroll",
+        "clientWidth": 350,
+        "scrollWidth": 429,
+        "scrollLeft": 0,
+        "overflowX": "auto"
+      },
+      "after": {
+        "scrollLeft": 79,
+        "maxScrollLeft": 79,
+        "wrapper": {
+          "left": 20,
+          "right": 370
+        },
+        "table": {
+          "left": -59,
+          "right": 370
+        },
+        "lastCell": {
+          "left": 214.84375,
+          "right": 369.5,
+          "text": "A2, собственная программа исследования, чистый прирост части лунной базы и обеспечение цикла без необходимого человеческого покупателя вводятся отдельно. Наследуемые средства могут получить иное назначение."
+        },
+        "viewportWidth": 390,
+        "documentWidth": 390
+      },
+      "allCellsMatch": true,
+      "rightEdgeAndLastCellVisible": true,
+      "screenshot": "docs/design-references/literary-v9.0/table-appendix-d-0-390-right.png",
+      "screenshotViewport": {
+        "width": 390,
+        "height": 1879
+      },
+      "scrollLeftAfterScreenshot": 79
+    },
+    {
+      "index": 2,
+      "id": "manuscript-v9-appendix-d-p126",
+      "before": {
+        "className": "table-scroll",
+        "clientWidth": 350,
+        "scrollWidth": 398,
+        "scrollLeft": 0,
+        "overflowX": "auto"
+      },
+      "after": {
+        "scrollLeft": 48,
+        "maxScrollLeft": 48,
+        "wrapper": {
+          "left": 20,
+          "right": 370
+        },
+        "table": {
+          "left": -28,
+          "right": 369.859375
+        },
+        "lastCell": {
+          "left": 235.78125,
+          "right": 369.359375,
+          "text": "2 500"
+        },
+        "viewportWidth": 390,
+        "documentWidth": 390
+      },
+      "allCellsMatch": true,
+      "rightEdgeAndLastCellVisible": true,
+      "screenshot": "docs/design-references/literary-v9.0/table-appendix-d-2-390-right.png",
+      "screenshotViewport": {
+        "width": 390,
+        "height": 1332
+      },
+      "scrollLeftAfterScreenshot": 48
+    }
+  ],
+  "errors": [],
+  "cssChanged": false
+}

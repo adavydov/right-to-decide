@@ -1,0 +1,3130 @@
+{
+  "schema_version": "1.0",
+  "from_edition_id": "literary-manuscript-v8.0-f3c9128893a3",
+  "to_edition_id": "literary-manuscript-v9.0-26472e4aa686",
+  "created": "2026-09-07",
+  "strategy": "new-identities-for-source-revision",
+  "annotation_transfer": "none",
+  "author_instruction": "Ну все, все готово, пересобирай книгу и публикуй все",
+  "review_scope": "Technical transition of accepted source bytes. Identical sources retain exact prior blocks; changed and separately accepted added sources receive new IDs. No annotation transfer or claim that every chapter was rewritten is made.",
+  "book": {
+    "path": "src/data/book.json",
+    "sha256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5"
+  },
+  "release_manifest": {
+    "path": "manuscript/2026-09-06-corpus-rebuild/release-manifest.json",
+    "sha256": "46c98e24b876d8e1d27122027554fcf47c2e5866ba5f7aba0632eb22666b852f"
+  },
+  "publication_selection": {
+    "path": "manuscript/2026-09-06-corpus-rebuild/publication-selection.json",
+    "sha256": "b494952ab7ee6d30767c4c4b706a20c572718b3bf8fb3d677971e15a5e53441e"
+  },
+  "previous_identity_map": {
+    "path": "docs/open-editorial/identity-transitions/archives/literary-manuscript-v8.0-f3c9128893a3/block-identities.json",
+    "sha256": "6bef071d72aa03f10e344e50c74e3d79987cca293011733437c8fa68b34912d1"
+  },
+  "previous_corpus": {
+    "path": "docs/open-editorial/identity-transitions/archives/literary-manuscript-v8.0-f3c9128893a3/corpus.json",
+    "sha256": "41acf5c1275f9a08b1b4611a363ada38ef4a630e7e9e874f874f7d4b0912bc5c"
+  },
+  "previous_edition": {
+    "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/edition.json",
+    "sha256": "312417f3f735e75542e474c4a302062495b1bed035f4aad90d033653086d71e5"
+  },
+  "frozen_files": [
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.html",
+      "sha256": "a1505d67e70036780ae6674d5b98aca6de432f847b3434ffdfd0b7713de17152"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.json",
+      "sha256": "cd8d0e09fa0869a07b5c06f02e4c389a287e50bcc25adb98d8ed7e10e995c467"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.md",
+      "sha256": "659ebe3d4cd2389103477e34d21a93dd4d9312ad6d419ea8546a5f6d2a2924b4"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.txt",
+      "sha256": "e59d6475684142a18907ffeddde725c5e3a5b6cb1e39d82b6fd47b0136c232fe"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.html",
+      "sha256": "b31893b6ff435107ec00b8592f8bf5cb42c6a0dc6330cda4e05d44cd3bae76db"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.json",
+      "sha256": "fc92e3e396e19776070fa955dc6839a3dd1b61cd26e99c4bc5bd265b7fd81c90"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.md",
+      "sha256": "9083f1c1288e9057b85fd6ef553db42a4d0f53fa566d9dc717d23a93f24fdb77"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.txt",
+      "sha256": "9dfee318901480e3d4ba88cf362e172665b31099be482f845d95c5f73bfddead"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.html",
+      "sha256": "04b24803dd10974e6d7ebdfb7c590df45e604a04b197fff8c40e3e49e9321d29"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.json",
+      "sha256": "2e6348c04ac2d762a9a38932aa8bb9fb5e01b29391090930f096c5e505c10d7a"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.md",
+      "sha256": "7cfabadbfc211f12d4a140e4cae969032122a69a4a7ba46c95640f1fc9d480d1"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.txt",
+      "sha256": "268b306ce61b670b00d25ba5ceabbedecdd2fce5f33c76bb905c0b32d3dc4630"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.html",
+      "sha256": "e6a8662d7583555d23d8c0c31984ace115f7891bfc926e159551860ad24ab074"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.json",
+      "sha256": "a98fa23a85af5349b36f7ae7e79c1e30ac481145fdcf22b26bd3da8dfa525e52"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.md",
+      "sha256": "e0d90a00ee19fa38c5701bf212955a4678f86d7a3d80bde438d5a04f6156ab2d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.txt",
+      "sha256": "25e2c990521262de6faf77756b5bf50539fe4d81a60d60fab816f23f712d172e"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.html",
+      "sha256": "91313d78eb846110ae72dd83c4ab00551f0b400dca578d5716f67dccf622a05d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.json",
+      "sha256": "2e9cf579b294235cac4bc76769c3b7b1c9f19c6219d56039b0f3c19b84d8ef79"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.md",
+      "sha256": "21acaf3948079c6d140a69bba7eeec0f3d1799a56732e347029cc62d61dd3de1"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.txt",
+      "sha256": "a4bfc926a879e88ed8fdfe03368d60ab7a4b8ad6e718acc10ac227780e6227e9"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.html",
+      "sha256": "8f67c1baba84a5793ce9eafcb93d2b8762e04fdef3a23dbd81c3e4033fb500cb"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.json",
+      "sha256": "0a72d82e485410f86aa3e7baacfb5a0f6e1de09ef5b7f5ec8041a0cce641cf27"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.md",
+      "sha256": "60dc8cec17c0be3b2bf0154a38e580f5fc22ea38250a6928c840e412da113f3c"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.txt",
+      "sha256": "cd67146aca444ba0ff1f6dd08bff7b3de5b3ab74b47de01d9a26cea9d115f488"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.html",
+      "sha256": "2803d024df0b5845c50c133a4f5a6d958d48e75659bf35a7079d76cdf43f820e"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.json",
+      "sha256": "ad6aaaf0054968051366eaf2ff3c443220363aa7cf9eca766c7e03cd7f0f120d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.md",
+      "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.txt",
+      "sha256": "0de0a98c4e3510906d2c5d5bdae5e38b9d45fe7699171566d67bd5c7610f8adf"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.html",
+      "sha256": "9296445f9addbd06a5f15e8ea7061524d79ae8af66e15fa3ac010b8201c18bde"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.json",
+      "sha256": "830e8f06862e923189d7b76da751595ec66769123bf01b08cee9582887825737"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.md",
+      "sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.txt",
+      "sha256": "f8cfada60a318f9f65509ffe12258edea172ab0ef26329f29bff2f847fddabc9"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.html",
+      "sha256": "1c55b9ff67d305be5b4384021486c1eff3fbce2edee70bb37ddea49592066d93"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.json",
+      "sha256": "79c8f585d8985ab6e745dc541fbfd1002740f814728b83a5accdefae1f9d376f"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.md",
+      "sha256": "85cff234f338b802d8a0a759383bbedfbd5944d5ad7150505804611584dd64c5"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.txt",
+      "sha256": "dd15146eb58e3bf11f61ad01ebe0576aa3cd7836b49a7aed4b30f57d1320d703"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.html",
+      "sha256": "c4f576c885c543c0a0491944b65ac937135e7aea8494dbe55d513e1ef200fa1c"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.json",
+      "sha256": "60ce1ec4cc3ac6e64c297acb257ecd027d236289b19672451ab8b0694bccd28e"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.md",
+      "sha256": "5c7660f7502008b19c8c3ff40ae92492df1dfe288436bf9a4947760fb95a4217"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.txt",
+      "sha256": "bd375ba8b5e0189bcce2d9eb5ec4e2661b223c382a165ea1025b42e35bcb57cb"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.html",
+      "sha256": "dc485f2d0cf47ac5a734d9fbe7c9d19ddcc88383598d07458b8c80750cb61073"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.json",
+      "sha256": "d7aa633480f8c09daac602f9df75b7f3c93daeafa2e4d905bd55240d5e568117"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.md",
+      "sha256": "73ba1d1bab9fe5fdf8432688444603d1c60fffd8c7fdd82e8c91ac60546efc38"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.txt",
+      "sha256": "b80e2c39844ff4284667e1f8a956b055f351f193e14c258893783d9178cd5978"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.html",
+      "sha256": "80518f1d4812354a6818b7db62b0def932e75ad5fbf4a8c5e46565cbac5e904c"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.json",
+      "sha256": "d93dc31b1adfb6f786d393ec64c9404e213481203512320ffda04baa79e7f7dc"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.md",
+      "sha256": "ffbf92a985270e2c0e58c027547ed8d4f0c42fef2fa02f436782b5183d322124"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.txt",
+      "sha256": "b0c4518a20f92941c48a9d93b8a02bd9c12c529f1b8921e81856c8ecd0fea7e7"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.html",
+      "sha256": "269f84645f00b5e7ef803bd9a201338476f3c7f7ad6f41118b3e16746d6d7d01"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.json",
+      "sha256": "2c5ad736edb91dfea25b83c4e2dff4098887e368866d4f79de3e5c8582e20698"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.md",
+      "sha256": "307dcceffc5a67d414657d01de6f1ce3d3c8d12b55a82db844fd5b6c4c63b0b4"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.txt",
+      "sha256": "14475eb0ee56ac132da5c17f6df314e9e6e22a0a761da377ac99f574f8016cb6"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.html",
+      "sha256": "733b3ab21b3880dc5a488a41a206b6ec2e07d6db530fe9225453e49f5b5da0e8"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.json",
+      "sha256": "ded6fea1812b05d42a870a6bd450cfb572e3de4223b0a9b97e44df9f269ee1c7"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.md",
+      "sha256": "d30a21bbb672fc9ae8f482c408daeb66033aa59ee456606d472b51491a7c1885"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.txt",
+      "sha256": "f8db5f26c5a085a2214803a5c281db6ed1f54068931341f5e027f290109cf199"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.html",
+      "sha256": "483daf12bac0f59f3036649d25cd9fc250961e51091a18757b8c1318687daec5"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.json",
+      "sha256": "4c5fa31571a369a9dd93378997cc94ad0931b629fbdd4efe144cd12bb045b78c"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.md",
+      "sha256": "e194844d9138310824de80d51df48394de898f6c0059e682f9388e7fd126b7cb"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.txt",
+      "sha256": "acd70cb9258dd2211a63b2e7ee576a01694d8399dfb961c67e6add7d9c856ac6"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.html",
+      "sha256": "5017fb5232430cc6d0b1638b9f7f3fe8fed6575b68d20a96733920e030654150"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.json",
+      "sha256": "9e3f80ee31d001ddec56084982a125aa99da0b84557dadbb815a7e12a438aea4"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.md",
+      "sha256": "6837e33ab50404a16a6355f627a0c23eaa5685fb5f57e4974be2ed4dc4368a4b"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.txt",
+      "sha256": "7bc9b13c49865fa9d938a2f6e6a545c68a467b394e7bd76cc3cde63c14a5b2a1"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.html",
+      "sha256": "854011462420d2094781b581434a715dec4d6125b5d0cda8036447c8cd10296a"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.json",
+      "sha256": "0d22ce7e4a161333e7cd3ebf1e7de266e36a20c99b1e99576b845994dadfbc23"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.md",
+      "sha256": "85a2e505db8e1659024e97caa6057d591cdf7a5c942cd8d6e86ca06c5290864a"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.txt",
+      "sha256": "1d9098b93873566b1b4f32c0b1a77a0539536cfbd16880986feec2b1dc02f1ea"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.html",
+      "sha256": "64ec131b6a9f639e569c0ed102b740c0bf468fce60ffaa2217d85bf234525f2d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.json",
+      "sha256": "04dd65298f972e0204926f3767b79eb3a4a8ccb063be721680569fb9a169592a"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.md",
+      "sha256": "1bc67ec8349b3a26bd87e6e7ab49386bacad481a152b305c82f8cf7b23bf49ce"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.txt",
+      "sha256": "547414a246f1261b828f2605cfb581585d022f4e5dbc75591cd75a347f687509"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.html",
+      "sha256": "f1db06169158ac0dbb8303a2911d881a5fcb053afef8c3b7442c4fac7aec1a3d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.json",
+      "sha256": "77b29ec07a6e801c6576e06f162f9f3988ca7e2a4feffa841b8850c66a9a929d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.md",
+      "sha256": "36ff4165449479642144fd77600bcfdfeed98c22364bf5cfb3b4dd2fc012cc65"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.txt",
+      "sha256": "4d4435f4122ff8ed6c323996021e6cf4b56c78a7f0a112109cfa33c70c20138f"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/edition.json",
+      "sha256": "312417f3f735e75542e474c4a302062495b1bed035f4aad90d033653086d71e5"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.html",
+      "sha256": "b66674c29e34c498d50d59e715c7cee3798eb792b97bcb5a7f6ff380ef223768"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.json",
+      "sha256": "3ed1934a4f705081f10d8ea69286c09caccbff9911670974108902dbdbfab345"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.md",
+      "sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.txt",
+      "sha256": "c66c39aed4c98a6f2429ac9aa3ef5729f4ec35ba5e7e21f98008f8d7bea8eae5"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/index.html",
+      "sha256": "f2309db58f0c294afc843670e13de98a2b3cedcedb7ddb1bd81529fe233f0240"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.html",
+      "sha256": "1c5f1799bde87f298a4d8228f8395e1d442119c13da8b43bb44f3cf0330153ea"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.json",
+      "sha256": "0c1d79d19d2aaa8798a63976979ce391f9f02bb70522867e4b401bb2399dffcc"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.md",
+      "sha256": "27e3ce7f784fe28ccc5015a1d9ad6dc15a7667a2b115ae91773949689fa89d7d"
+    },
+    {
+      "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.txt",
+      "sha256": "c76d5be4d2c6dfb43c3fcde633c285ad1759492639dcd75dde1b58aaa3dfffd8"
+    }
+  ],
+  "historical_editions": [
+    {
+      "id": "literary-manuscript-v6-67b660773c98",
+      "files": [
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-01.html",
+          "sha256": "0b6b270b79b676a158f3b241861a61525b9feb50aa2c1cbf8c6f91e04e877625"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-01.json",
+          "sha256": "a8a8a0dce8cecb2d780b78de322c13e0cf746a6ee4e1544ab2e02cd342a28446"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-01.md",
+          "sha256": "eb96599ce71d7131d71ed92caf9606c903acfd06bcbbe5531fd5a92ceef0c965"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-01.txt",
+          "sha256": "882726d69bec21a11f575951b88eb2794fd2631bcb142c31741ba61992680493"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-02.html",
+          "sha256": "5138796dd94cb237c40fb2432eb97fbe8cd6b75ba070c382208f947663e72fd0"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-02.json",
+          "sha256": "45a70c910fb557ab62a034d3320c6ed0244296c83e25ee1fd15a0e043d8bce3f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-02.md",
+          "sha256": "85be4aa5efe5c24cd8b9dfc648d41126ee38005381a1ec58052bac8be1319d3c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-02.txt",
+          "sha256": "42016f2fb6f1085f41611f228ddf6c929b4b42f3b725f42c570376d471fa6589"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-03.html",
+          "sha256": "bd0748bf16a9673ac9f9a94117938c14bccffce67ba5330b0e7080c244907b47"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-03.json",
+          "sha256": "ebab6871dd196981344e087d201a685200dcfbaecc2592a70955c5da86134941"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-03.md",
+          "sha256": "fc7c2c2a7ad2afac5b7cfe655fd6a00b38541dfafb502f017482784c2ddf0bb2"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-03.txt",
+          "sha256": "4447348b7e6dd7d1cba4d74b54516b08314e14a6e605fd5a0fb3f394517d376a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-04.html",
+          "sha256": "639d32812f635696187b66c3aff45cda0731ab62ee51b935235f7605706f73d5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-04.json",
+          "sha256": "7167c0657a7a78a00ce9967690166b10fa3ff9249f75714f7cc2b444903fc749"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-04.md",
+          "sha256": "d0e208fd7c8aa3b389ea6b1888d52fe0f86b594185614a22524c2c007836cb84"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-04.txt",
+          "sha256": "75771172ab8404e01922f5fa7ac42cffa1995c0f5a6d08db514795c60235e492"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-05.html",
+          "sha256": "9f8d0f55b9db2797a3deffa62f9e576411e655c278a972349d87bf0c082baf87"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-05.json",
+          "sha256": "2a0d0e3d8f853b2ee2ddc7390cbe4547e45c2a53092c2fb5df0a1d20a5e0dd91"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-05.md",
+          "sha256": "5c33e26612c14121454c520c5d55661da4ef51fb3f193389b1cf16b1352cccb4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-05.txt",
+          "sha256": "075b920545c302840eacfbe73073e35b5f1ff1c748d89057cd4a32db69840446"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-06.html",
+          "sha256": "c9dfa33185c739580c13cd1143551fe43f13405c310cb798af59b70b23402c11"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-06.json",
+          "sha256": "e85f6137342ed39724f702b8c8ae4d0aa8380c3df24c2b6b13798b9913c22367"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-06.md",
+          "sha256": "33e9634e68fa353ccbd3234ccb104e18bebc7b8917b236c61c81a7cb67d12c34"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-06.txt",
+          "sha256": "6516e8f9b66753efaf1c41f6e9470b86801ca445e4a411affd3e45f33477d302"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-07.html",
+          "sha256": "b71575b790568c1d9e6e0503b3c82b7699a9cfbbf9cc5d94d8fe7f9ef08ed572"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-07.json",
+          "sha256": "d6ed33ee772f843064928bde9d09c6727e390bbb64184edf7a271f5b534fa68d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-07.md",
+          "sha256": "062a02d544560ee8eac5188a890d09ccf5534e01d1bfe77f4e2ab5d906caa0dd"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-07.txt",
+          "sha256": "1ca7809bbf0d441182083c9af8c15583db996453f78860def95b7945b7a3e04c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-08.html",
+          "sha256": "578059297f9f08532c1931b0244116a29cd30e7d86b4ae2ae2f3712e2967b88c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-08.json",
+          "sha256": "5511f52975ea0e08d7e3152399c9f317edc2a2179e25ef6c0f1c80df9ccf8239"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-08.md",
+          "sha256": "e5a5c9e60b2fe483221184721e62fd892c2be848438c4ce7a07ea87bd5f093a2"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-08.txt",
+          "sha256": "ac39a26f73463cee97224b5f7e1210b4bddec15929036bd0b65db90bc5042a4d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-09.html",
+          "sha256": "ce5408022f9dc66f0e3bb8265bea85c62dd94883dec724795848485de4d4f27f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-09.json",
+          "sha256": "7bd42a3ccb9f51ce08b513ee7785251286a6e4e946f192c52664545cc3208983"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-09.md",
+          "sha256": "1890e5bde6036610dc18db289bf712ce1a0b3034c6ee076f57cd484817cb337d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-09.txt",
+          "sha256": "c608c0c4793206c035d72e2344ff5bb352aa2ebda70031ec7095344b7f0820c1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-10.html",
+          "sha256": "f0b40334e901c731039fe88e3191040f6253a58f84d5cd86aa75abc63c571caf"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-10.json",
+          "sha256": "bff0152b3a8b4fe5ba26b56874f2c65414af37cbbe0841f3911937903c003881"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-10.md",
+          "sha256": "5ac4271c5435a841503c5d215c1ee6c6e9f3f90a1a672d04c472fa7d6f1a24ab"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-10.txt",
+          "sha256": "e9692479797a3aa0e98eccc1a119f6472bd24211a817a5282748860b8416b59a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-11.html",
+          "sha256": "ccc8fdb8792afaa7c95e8507a9cb9ade4724f81c77dfefc0b91ae292dae5237e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-11.json",
+          "sha256": "b1c8b1eeb389096622c643746007e11831a17f23f79bea3853e73079468cd200"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-11.md",
+          "sha256": "4e2cbc8fa2766249410b54333ea7a1fdb7afb49f7686338694b1f9e135852509"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-11.txt",
+          "sha256": "4aa2b8dbd7e444183cef62260bb6f36d392b439590baf7cd001a97d84de31322"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-12.html",
+          "sha256": "0ebef13da99966be29f04860f11e719b6ebf7a6a88a1f6ad1831a8b8c9993bb6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-12.json",
+          "sha256": "82ed959e93a0a934bdd2f0b484c0d882c1bcbbefcc62d245021c8ed9d534cf15"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-12.md",
+          "sha256": "21aa17c54a3578f3699a8ff164cbe9e76f779fa15db09ad5f2547409f95f9295"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-12.txt",
+          "sha256": "d67bcf6e84650c112a9c27b2d8decfff99ac4831c4aa7f13ab0135130d211d8a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-13.html",
+          "sha256": "0e45828e88fa92c5b2e9dedc59619cdf9378fbde7641aee27d2c408edb741bb9"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-13.json",
+          "sha256": "1c221183fe93d1b94bcfb7e9e4fcdb456d09b96fe237152972f67e8f21f07913"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-13.md",
+          "sha256": "bc738aa5c6a01ce688c7a146360416c667de3cadda752190dbbfc49869f36e63"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-13.txt",
+          "sha256": "a0251969afbb3d083c87cf3f39bbb9d13509b1acfc5ba99424a677dbc7f264bd"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-14.html",
+          "sha256": "bba230e5708499ba6f781cf757071340e447a718f8d7e0613ddee520baf7867f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-14.json",
+          "sha256": "76996cfb266294d3bb6449290a851552a2ff484a506f3521af28dacf0c173a28"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-14.md",
+          "sha256": "ab7e80e72bd2ba1d78def79e875ca94cbdd4c2219da1e233deb16fcac41471e3"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-14.txt",
+          "sha256": "e1394f2739b3274086c100c0f119fad6319d28727038876be9e1d2fd8247c054"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-15.html",
+          "sha256": "39f5f848220519d3e3b6650580e1d278caa725bfdc014d50229826dbb634dd80"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-15.json",
+          "sha256": "e41f01c14b91b178136c2a1eca34cbe5fe1f8c07d13159af55bbedb62aa47581"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-15.md",
+          "sha256": "95e1a453cf21bdcc948af32bac009708ba2b5fb8c83a1ffe49c067c6d880b67c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-15.txt",
+          "sha256": "8ac6451573f11350b8dc65876ee67f4aae78e40eff2c9f39a92a7180f5288bcd"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-16.html",
+          "sha256": "f122901a1ee4a4bfcb31a75d0dfe7b22266b6d9a6f6e8d083a92ffa61e3286f7"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-16.json",
+          "sha256": "6aeb58fd9ff3e42e46e395320c1a2bd282d6d1ccf885cb3e60024fe33f237226"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-16.md",
+          "sha256": "8476082b8f246f098cb3a92a0a31c70801ba661da0148528c5a2dea826d444a1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-16.txt",
+          "sha256": "0f4cd97507349f3f893f76b360ea4e3e47e3d8b9b5cd9971e652e3886e66af78"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-17.html",
+          "sha256": "2b48f3be15b460581ba6f185447d3f7dfa349c5bdaea7ba4539035cf25748c29"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-17.json",
+          "sha256": "4ed890e09d2c76dd2b9246f5a559068b2ee0b17241528316260438ec44fdb398"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-17.md",
+          "sha256": "7b2aa4072b1ffb87b035d378e284f71dbdd21e79cd73111594c1156fe4477c16"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-17.txt",
+          "sha256": "9af1d7265a784d0680198ffb672028651d5664f642d4ec993f4ddd6759741572"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-18.html",
+          "sha256": "d61982c40812baf004b79c7a6a0a2766e79bc629bd4187a046c18452eece041c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-18.json",
+          "sha256": "fbfef3c9801b7fef65220eb15ddb1d76946d1ca3ccdf11c736594c4664c543d2"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-18.md",
+          "sha256": "22edeb9ea094a69342bedf23cc81c00abea85bc6134ce0063d4d9f734cdfc558"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/chapter-18.txt",
+          "sha256": "e12c1f38250531c950515f8d2f93c92a54301528f4c39adacc564a11ddb29a13"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/contents.html",
+          "sha256": "2887a5f18318e9dc709cacd445367cf636dcabfa688ceb2505220514026d5920"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/contents.json",
+          "sha256": "8490182c1c06f616266493795aa7ced46b5b7994258ef1faf547de51f814cc62"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/contents.md",
+          "sha256": "36ff4165449479642144fd77600bcfdfeed98c22364bf5cfb3b4dd2fc012cc65"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/contents.txt",
+          "sha256": "4d4435f4122ff8ed6c323996021e6cf4b56c78a7f0a112109cfa33c70c20138f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/edition.json",
+          "sha256": "508cba7b7c978e1858d43643ef9ea5e8b00f6b1b029a9864b8555ef32e194faa"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/epilogue.html",
+          "sha256": "e150da1764c22c046c75fd934c39152e3609e7ba76c7b840aab42a820b899725"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/epilogue.json",
+          "sha256": "81a7c98f3e3456acac10515121cf477f19be044229cc39cfec67d64b56152c78"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/epilogue.md",
+          "sha256": "2fdf87208a53f5835afa1ab9f176e2962284d6236d5f4605dad6fc4375db4ce4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/epilogue.txt",
+          "sha256": "e357e889d5300bffca861cb4be39b199b8688ed125b2828bbf57f0065ab4953e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/index.html",
+          "sha256": "918be73413ce35ffdd27539e8c53dd0760add713fa836af4aa3c29fbfa2414d0"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/prologue.html",
+          "sha256": "2fe7326f950f219986d986bb9b735d2415c41cb5fd6b9c63c400d65aee9364b7"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/prologue.json",
+          "sha256": "59acf2996895e2ac900ba1131c4e3a45d1268b95e472b56b67a65b9714148370"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/prologue.md",
+          "sha256": "5751e227a8012a979eac36e95ab2cd4a964ff5ea4df0971763cccd76a6b1f5c1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v6-67b660773c98/prologue.txt",
+          "sha256": "6ed597fde1481a678030505ee624c8fda6f16935730d36423a3088b390fdd6b5"
+        }
+      ]
+    },
+    {
+      "id": "literary-manuscript-v7.1-163743358797",
+      "files": [
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-01.html",
+          "sha256": "50b935a275f13cb1661813dc806c2cfe330b721fffe9e78b09dbe8db063e73fd"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-01.json",
+          "sha256": "fe04851d8157aafc3a4f3e88bcd1b656488b629237a95b419111f5568037d09e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-01.md",
+          "sha256": "b6cfd2edf27258c97066474f8e912220c3039ce0522091a3b1e4ac6568eb1fc5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-01.txt",
+          "sha256": "e5664870950aa4f9206e96e12a8205b179e2355151405c892e7c1ea8ddf549d3"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-02.html",
+          "sha256": "916983b28fed6b9d5a582a454e4339f83234ef82391f85ee2efbcdbc5608544a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-02.json",
+          "sha256": "99994b6f59892a08ec2a37770bb364e6b9b7164b4ecbb0202ef9e0cd7bb90b2c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-02.md",
+          "sha256": "5aeb105326db0af0d94c3f52b1589318578f4593e3d8ec8e46884ac57f0621b5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-02.txt",
+          "sha256": "eda86f497241858114120f5dabbd2f822074cbe880f832a8b51adb8cc4731a76"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-03.html",
+          "sha256": "bcb15db537c1eea49941c55a518f747bfa618d93ce545eb6626cf78b762dd009"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-03.json",
+          "sha256": "8a881fa15ea9c63347084e54d2b3251c0837f1c8e37ea9210e2edb8545c50c78"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-03.md",
+          "sha256": "a6bf17e40e80c3014aa268af1ad52c88b8fcf8c1d9f80bd5e029b81919441cd3"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-03.txt",
+          "sha256": "1badd75b03dc19872bb16bec7e5e3fbeb8e423c299ce8bf8c56d400d99bd1f6d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-04.html",
+          "sha256": "d8da0753de362cf23bc3ce18ba4b02e4bde2c6015262b7921c3d9cd1329f978c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-04.json",
+          "sha256": "d3fa681620e54810b1e116e7e183417f060d0255e3217df95acead5a2a1595f2"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-04.md",
+          "sha256": "5e129ee6dd2cb3c63b33094cdad8af1517120de5a2422851a51039faa04f61e0"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-04.txt",
+          "sha256": "eedb76ac64e7a4dc2a65ca9a148c22f846691313ab7f5ffbc1335af987d92b41"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-05.html",
+          "sha256": "94c49f42981ab53d20b5d7b21952b1af04aacca9f686cab6fdeda776ce5bb516"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-05.json",
+          "sha256": "4adfde038f64cfe7afdbc9a7d2a26720070f60fc8bda925cee922da0c69a6582"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-05.md",
+          "sha256": "d6515f91ed6d354a4c3c21625c574244e02031311980b173a92f3db3b5fab261"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-05.txt",
+          "sha256": "935398b99e6f4390940df2be9920b9d905af6e82cd510ab9ac4444782d1636fb"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-06.html",
+          "sha256": "c04754733c8518bbe6776f1b7bfdbb323ae6c1859f4203cc57f724086c8e755c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-06.json",
+          "sha256": "d8ef668bf47a47d089ce2ff753addc6d7b27d32556c93fa8a3bf9af4ff90f9a6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-06.md",
+          "sha256": "a19d5e208ebb55feecb8b76cad6680ccb92f5f43e62c0d56c3e34c4e898e6379"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-06.txt",
+          "sha256": "ebe6c07590f4de8f3e7743da1b90d31a3adacda5a2eac0e0365b549779e40fab"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-07.html",
+          "sha256": "3ad80f46dbc4ba548f6647b487ca58945a033178d4097f4c7b81ac38c9d70753"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-07.json",
+          "sha256": "cc457ba32135678cb2cc8ce732c1004797f0d729cfec86d0899a452964f654c2"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-07.md",
+          "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-07.txt",
+          "sha256": "0de0a98c4e3510906d2c5d5bdae5e38b9d45fe7699171566d67bd5c7610f8adf"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-08.html",
+          "sha256": "1e77470cc870c640c82986b942464c25e85008fc232f71a1a332c306982bf7d1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-08.json",
+          "sha256": "9c40bb1b8dfde82308764c43931112669e3f3d187c8e5b1db854928726d44ddf"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-08.md",
+          "sha256": "96a9acd202e28a77658250de1d0c2fe9b40bf5269431927754db57686af64867"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-08.txt",
+          "sha256": "c3a46e4faa4184135db6d0f5cf159a9225b960df52ae234ed9fe0c0ac903ad76"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-09.html",
+          "sha256": "bf0c1f5ad70b53b385d773c36ac1a9b72d4e95e2b66aa6a388eb59a0aa119261"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-09.json",
+          "sha256": "d2c48b6dc06cab90a8c180d91526df5c143694957272648dbade8ebef4f96f57"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-09.md",
+          "sha256": "b73cf78b95437d7065a99129b675006ab9e789ba837189ecf554ae71915ebb7d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-09.txt",
+          "sha256": "e2264563d049710ea870ccbe06687e7da18a86be445511550d987b33b24d8407"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-10.html",
+          "sha256": "bb0f8eb6498c6c8b88526137705852847b5288dff9d096ae685b96e0169a531e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-10.json",
+          "sha256": "63300378d400cd6811ea13fdba41e5b29bedcb9e4dd67af61b1502f836b7eafe"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-10.md",
+          "sha256": "f8d7486a67ad3416972c71954649dbb9ebb770c2a6da81cc99dfb979d6f46b88"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-10.txt",
+          "sha256": "387a53ce9a6837821b84212600c6a7ab69178c6c83cf1cdbd536a90414d649de"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-11.html",
+          "sha256": "9a8f2b783231bfbd4df88c34fe564bb634604c24e0a58d92b81a00e17fef628d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-11.json",
+          "sha256": "98dbbf51d46683a3524f3a71cb604a872c6a6443fee80a36fa2868378ec30c4c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-11.md",
+          "sha256": "99dd237bf2dc305a3257dd28baa84d6a15cfbb833315912598f190a9f6256be8"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-11.txt",
+          "sha256": "2aff83a55bb3f14b19dfdcdd3faeaa0cdb86f0ab1834ad72200ef7a8cb5fa5bb"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-12.html",
+          "sha256": "ab87c2625fcf83ab5275fe81f496c0412b0f3f7ae87bcec82eacbbebbd613b8c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-12.json",
+          "sha256": "98ce6bb3a91c6280a8b2f3b5cf5343f8fc48b7b67b4cfb01c630b5a170835a47"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-12.md",
+          "sha256": "13ebdada8083a001b9d98194257f9436caceaf6054f5f368906e89747caea9a9"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-12.txt",
+          "sha256": "d18b320684ecb76343f40541d51ffb006a1b33def4311d46788b8ee10ca3f0ba"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-13.html",
+          "sha256": "f0a215ae200695975f7ddf7536504b1f963ebbc6c3a33d645e5eb18e2e140644"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-13.json",
+          "sha256": "0fa8ad0e5abe9321cfa61e28f60dabd804abdf52eca06fd0943029923df5a4a3"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-13.md",
+          "sha256": "5e1a0eab6a01c410863e5127ee9439d492ab381eb86e5022868a84c50ef48872"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-13.txt",
+          "sha256": "9999d2327b2f5b420064c51deb5a3a8dbb586a4bb7baa32f0dedafe183038a03"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-14.html",
+          "sha256": "c9e453bf6a9c4164b9cc2edbb30e8b0a1c664b2dec2a57f428d2d5af78b080c8"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-14.json",
+          "sha256": "a3befb4b9718c4844e75f61d6e8c3b48bb4b6d6faddd369d16ea72a7b89932ad"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-14.md",
+          "sha256": "c32602c08f3e3a9cba2ddd02a731d041c2268448bf32724351c46d270d933abc"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-14.txt",
+          "sha256": "6a156e997ecfbf0ae120fd3156c84302e5589c680800b562b78a4ae36779ef1e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-15.html",
+          "sha256": "68fa00b1977ad6e3628f3a76d6e11a14d072f56b64166dd12b73ae8637edf749"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-15.json",
+          "sha256": "b95e9187d3a48414da70b43089aa757de1390396ad0abdb48cb291a5fe47d218"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-15.md",
+          "sha256": "75c833630d1e2b265403b95475863fd3f25907440bf673b4480b6ad8d95b2f89"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-15.txt",
+          "sha256": "81860bd8d4aad25ebbeabf7d093d1e1b3726b6f77ae432f154bf43a540d4624c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-16.html",
+          "sha256": "2291e2259dcbc9ab0d5e4b04ff56a7093a8a7789f482ef9ce2a070092547e295"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-16.json",
+          "sha256": "5bf8fd3a337df6469870db5610978c592370c76cfdd216e00e1c5338f489c5bd"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-16.md",
+          "sha256": "b2076013aa902c95fda0b779d1f13dc345d01ad50a5ff6553a19739657c13b03"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-16.txt",
+          "sha256": "c1a1d3f19a3022d1f4be1c744506fbb5fa7ef43fa2929fb3566aa2bb6927c9c3"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-17.html",
+          "sha256": "f2ba21578a0ebb2146153c1a26a7492b19c608a37f74d1101c315b549abb6a05"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-17.json",
+          "sha256": "ae55c78865743a38235f6696adf77a202db73368effd07062acdd39dff651b05"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-17.md",
+          "sha256": "0594b8c4bc20b0dca676cc23f9e4c2841b5d09a49776d9e07fcffd0ce0c7c03d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-17.txt",
+          "sha256": "c26a1c8de9245c4c010613564596759a9391378ce6c4185224f8c29002bc798f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-18.html",
+          "sha256": "38a1ab3701926dcb99179072f81bda138b9f49fd35de03c635e54ffbc592feee"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-18.json",
+          "sha256": "b42c32e0b4cac130f3207024ef3c86ffc4832a7e25559fb25e3521d356ac35ed"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-18.md",
+          "sha256": "556f7cf0721179ce8199a3137a2c8a03a6d4c9028f5f4ff8461c66c51d75c2e1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/chapter-18.txt",
+          "sha256": "a654f7c68f8bcbcb2a735c1f90b9afc7005fa2d55f006e0aa6e7af38d50c9b41"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/contents.html",
+          "sha256": "1c233bd3ef850f154c7f6e993400d8db2056a768fe2cfca1c46629a5c83d63c6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/contents.json",
+          "sha256": "d65b99b0530d1229674079a196c7f8cebdd31e9ad7fb55ca167fdca891c9f8b4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/contents.md",
+          "sha256": "36ff4165449479642144fd77600bcfdfeed98c22364bf5cfb3b4dd2fc012cc65"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/contents.txt",
+          "sha256": "4d4435f4122ff8ed6c323996021e6cf4b56c78a7f0a112109cfa33c70c20138f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/edition.json",
+          "sha256": "e94bde305b4ce5a6e2bcbe5420406f86dd8fe64377d49fc89a4289503feafcef"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.html",
+          "sha256": "9ada916c868ed2d156bde43e2ea4c195c7e826da6e108d50fbb8b45237b69f6f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.json",
+          "sha256": "d3aaa0969cd40b4710f301af791889a771a3f7ec4a31a56bdce9f0644b612a56"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.md",
+          "sha256": "d76de73b357fc4482a0bde96d3ff1eeb8b7928a7421ebe69525b3485922a0671"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/epilogue.txt",
+          "sha256": "5c975a7963a6c622d29b81483f39f05abe4eefa03470f6359003e0ed203ac76e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/index.html",
+          "sha256": "160344eefcc4f63a291a862750b99f33b3bfe47484f4c912d2714fa928f41f82"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/prologue.html",
+          "sha256": "466244c7e64fa595ec83ca5eace66e0dbb3c6c02515228824c646dfee67e9c39"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/prologue.json",
+          "sha256": "3402ffacfda9e2c27c714a1fbed4b0f0cbc4ddd891fcab364aa2915b841f947e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/prologue.md",
+          "sha256": "bb169a79824e45bd59d35c44c2f99ea73a5ae9a193d4553c47e9c330c9e3d8a6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v7.1-163743358797/prologue.txt",
+          "sha256": "8b46d823b64719deb086dd73407b5a86cd4bc1d6452308a615407595f1263f72"
+        }
+      ]
+    },
+    {
+      "id": "literary-manuscript-v8.0-f3c9128893a3",
+      "files": [
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.html",
+          "sha256": "a1505d67e70036780ae6674d5b98aca6de432f847b3434ffdfd0b7713de17152"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.json",
+          "sha256": "cd8d0e09fa0869a07b5c06f02e4c389a287e50bcc25adb98d8ed7e10e995c467"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.md",
+          "sha256": "659ebe3d4cd2389103477e34d21a93dd4d9312ad6d419ea8546a5f6d2a2924b4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-01.txt",
+          "sha256": "e59d6475684142a18907ffeddde725c5e3a5b6cb1e39d82b6fd47b0136c232fe"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.html",
+          "sha256": "b31893b6ff435107ec00b8592f8bf5cb42c6a0dc6330cda4e05d44cd3bae76db"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.json",
+          "sha256": "fc92e3e396e19776070fa955dc6839a3dd1b61cd26e99c4bc5bd265b7fd81c90"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.md",
+          "sha256": "9083f1c1288e9057b85fd6ef553db42a4d0f53fa566d9dc717d23a93f24fdb77"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-02.txt",
+          "sha256": "9dfee318901480e3d4ba88cf362e172665b31099be482f845d95c5f73bfddead"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.html",
+          "sha256": "04b24803dd10974e6d7ebdfb7c590df45e604a04b197fff8c40e3e49e9321d29"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.json",
+          "sha256": "2e6348c04ac2d762a9a38932aa8bb9fb5e01b29391090930f096c5e505c10d7a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.md",
+          "sha256": "7cfabadbfc211f12d4a140e4cae969032122a69a4a7ba46c95640f1fc9d480d1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-03.txt",
+          "sha256": "268b306ce61b670b00d25ba5ceabbedecdd2fce5f33c76bb905c0b32d3dc4630"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.html",
+          "sha256": "e6a8662d7583555d23d8c0c31984ace115f7891bfc926e159551860ad24ab074"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.json",
+          "sha256": "a98fa23a85af5349b36f7ae7e79c1e30ac481145fdcf22b26bd3da8dfa525e52"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.md",
+          "sha256": "e0d90a00ee19fa38c5701bf212955a4678f86d7a3d80bde438d5a04f6156ab2d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-04.txt",
+          "sha256": "25e2c990521262de6faf77756b5bf50539fe4d81a60d60fab816f23f712d172e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.html",
+          "sha256": "91313d78eb846110ae72dd83c4ab00551f0b400dca578d5716f67dccf622a05d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.json",
+          "sha256": "2e9cf579b294235cac4bc76769c3b7b1c9f19c6219d56039b0f3c19b84d8ef79"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.md",
+          "sha256": "21acaf3948079c6d140a69bba7eeec0f3d1799a56732e347029cc62d61dd3de1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-05.txt",
+          "sha256": "a4bfc926a879e88ed8fdfe03368d60ab7a4b8ad6e718acc10ac227780e6227e9"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.html",
+          "sha256": "8f67c1baba84a5793ce9eafcb93d2b8762e04fdef3a23dbd81c3e4033fb500cb"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.json",
+          "sha256": "0a72d82e485410f86aa3e7baacfb5a0f6e1de09ef5b7f5ec8041a0cce641cf27"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.md",
+          "sha256": "60dc8cec17c0be3b2bf0154a38e580f5fc22ea38250a6928c840e412da113f3c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-06.txt",
+          "sha256": "cd67146aca444ba0ff1f6dd08bff7b3de5b3ab74b47de01d9a26cea9d115f488"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.html",
+          "sha256": "2803d024df0b5845c50c133a4f5a6d958d48e75659bf35a7079d76cdf43f820e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.json",
+          "sha256": "ad6aaaf0054968051366eaf2ff3c443220363aa7cf9eca766c7e03cd7f0f120d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.md",
+          "sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-07.txt",
+          "sha256": "0de0a98c4e3510906d2c5d5bdae5e38b9d45fe7699171566d67bd5c7610f8adf"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.html",
+          "sha256": "9296445f9addbd06a5f15e8ea7061524d79ae8af66e15fa3ac010b8201c18bde"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.json",
+          "sha256": "830e8f06862e923189d7b76da751595ec66769123bf01b08cee9582887825737"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.md",
+          "sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-08.txt",
+          "sha256": "f8cfada60a318f9f65509ffe12258edea172ab0ef26329f29bff2f847fddabc9"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.html",
+          "sha256": "1c55b9ff67d305be5b4384021486c1eff3fbce2edee70bb37ddea49592066d93"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.json",
+          "sha256": "79c8f585d8985ab6e745dc541fbfd1002740f814728b83a5accdefae1f9d376f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.md",
+          "sha256": "85cff234f338b802d8a0a759383bbedfbd5944d5ad7150505804611584dd64c5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-09.txt",
+          "sha256": "dd15146eb58e3bf11f61ad01ebe0576aa3cd7836b49a7aed4b30f57d1320d703"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.html",
+          "sha256": "c4f576c885c543c0a0491944b65ac937135e7aea8494dbe55d513e1ef200fa1c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.json",
+          "sha256": "60ce1ec4cc3ac6e64c297acb257ecd027d236289b19672451ab8b0694bccd28e"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.md",
+          "sha256": "5c7660f7502008b19c8c3ff40ae92492df1dfe288436bf9a4947760fb95a4217"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-10.txt",
+          "sha256": "bd375ba8b5e0189bcce2d9eb5ec4e2661b223c382a165ea1025b42e35bcb57cb"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.html",
+          "sha256": "dc485f2d0cf47ac5a734d9fbe7c9d19ddcc88383598d07458b8c80750cb61073"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.json",
+          "sha256": "d7aa633480f8c09daac602f9df75b7f3c93daeafa2e4d905bd55240d5e568117"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.md",
+          "sha256": "73ba1d1bab9fe5fdf8432688444603d1c60fffd8c7fdd82e8c91ac60546efc38"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-11.txt",
+          "sha256": "b80e2c39844ff4284667e1f8a956b055f351f193e14c258893783d9178cd5978"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.html",
+          "sha256": "80518f1d4812354a6818b7db62b0def932e75ad5fbf4a8c5e46565cbac5e904c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.json",
+          "sha256": "d93dc31b1adfb6f786d393ec64c9404e213481203512320ffda04baa79e7f7dc"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.md",
+          "sha256": "ffbf92a985270e2c0e58c027547ed8d4f0c42fef2fa02f436782b5183d322124"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-12.txt",
+          "sha256": "b0c4518a20f92941c48a9d93b8a02bd9c12c529f1b8921e81856c8ecd0fea7e7"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.html",
+          "sha256": "269f84645f00b5e7ef803bd9a201338476f3c7f7ad6f41118b3e16746d6d7d01"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.json",
+          "sha256": "2c5ad736edb91dfea25b83c4e2dff4098887e368866d4f79de3e5c8582e20698"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.md",
+          "sha256": "307dcceffc5a67d414657d01de6f1ce3d3c8d12b55a82db844fd5b6c4c63b0b4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-13.txt",
+          "sha256": "14475eb0ee56ac132da5c17f6df314e9e6e22a0a761da377ac99f574f8016cb6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.html",
+          "sha256": "733b3ab21b3880dc5a488a41a206b6ec2e07d6db530fe9225453e49f5b5da0e8"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.json",
+          "sha256": "ded6fea1812b05d42a870a6bd450cfb572e3de4223b0a9b97e44df9f269ee1c7"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.md",
+          "sha256": "d30a21bbb672fc9ae8f482c408daeb66033aa59ee456606d472b51491a7c1885"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-14.txt",
+          "sha256": "f8db5f26c5a085a2214803a5c281db6ed1f54068931341f5e027f290109cf199"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.html",
+          "sha256": "483daf12bac0f59f3036649d25cd9fc250961e51091a18757b8c1318687daec5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.json",
+          "sha256": "4c5fa31571a369a9dd93378997cc94ad0931b629fbdd4efe144cd12bb045b78c"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.md",
+          "sha256": "e194844d9138310824de80d51df48394de898f6c0059e682f9388e7fd126b7cb"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-15.txt",
+          "sha256": "acd70cb9258dd2211a63b2e7ee576a01694d8399dfb961c67e6add7d9c856ac6"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.html",
+          "sha256": "5017fb5232430cc6d0b1638b9f7f3fe8fed6575b68d20a96733920e030654150"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.json",
+          "sha256": "9e3f80ee31d001ddec56084982a125aa99da0b84557dadbb815a7e12a438aea4"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.md",
+          "sha256": "6837e33ab50404a16a6355f627a0c23eaa5685fb5f57e4974be2ed4dc4368a4b"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-16.txt",
+          "sha256": "7bc9b13c49865fa9d938a2f6e6a545c68a467b394e7bd76cc3cde63c14a5b2a1"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.html",
+          "sha256": "854011462420d2094781b581434a715dec4d6125b5d0cda8036447c8cd10296a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.json",
+          "sha256": "0d22ce7e4a161333e7cd3ebf1e7de266e36a20c99b1e99576b845994dadfbc23"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.md",
+          "sha256": "85a2e505db8e1659024e97caa6057d591cdf7a5c942cd8d6e86ca06c5290864a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-17.txt",
+          "sha256": "1d9098b93873566b1b4f32c0b1a77a0539536cfbd16880986feec2b1dc02f1ea"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.html",
+          "sha256": "64ec131b6a9f639e569c0ed102b740c0bf468fce60ffaa2217d85bf234525f2d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.json",
+          "sha256": "04dd65298f972e0204926f3767b79eb3a4a8ccb063be721680569fb9a169592a"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.md",
+          "sha256": "1bc67ec8349b3a26bd87e6e7ab49386bacad481a152b305c82f8cf7b23bf49ce"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/chapter-18.txt",
+          "sha256": "547414a246f1261b828f2605cfb581585d022f4e5dbc75591cd75a347f687509"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.html",
+          "sha256": "f1db06169158ac0dbb8303a2911d881a5fcb053afef8c3b7442c4fac7aec1a3d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.json",
+          "sha256": "77b29ec07a6e801c6576e06f162f9f3988ca7e2a4feffa841b8850c66a9a929d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.md",
+          "sha256": "36ff4165449479642144fd77600bcfdfeed98c22364bf5cfb3b4dd2fc012cc65"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/contents.txt",
+          "sha256": "4d4435f4122ff8ed6c323996021e6cf4b56c78a7f0a112109cfa33c70c20138f"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/edition.json",
+          "sha256": "312417f3f735e75542e474c4a302062495b1bed035f4aad90d033653086d71e5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.html",
+          "sha256": "b66674c29e34c498d50d59e715c7cee3798eb792b97bcb5a7f6ff380ef223768"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.json",
+          "sha256": "3ed1934a4f705081f10d8ea69286c09caccbff9911670974108902dbdbfab345"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.md",
+          "sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/epilogue.txt",
+          "sha256": "c66c39aed4c98a6f2429ac9aa3ef5729f4ec35ba5e7e21f98008f8d7bea8eae5"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/index.html",
+          "sha256": "f2309db58f0c294afc843670e13de98a2b3cedcedb7ddb1bd81529fe233f0240"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.html",
+          "sha256": "1c5f1799bde87f298a4d8228f8395e1d442119c13da8b43bb44f3cf0330153ea"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.json",
+          "sha256": "0c1d79d19d2aaa8798a63976979ce391f9f02bb70522867e4b401bb2399dffcc"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.md",
+          "sha256": "27e3ce7f784fe28ccc5015a1d9ad6dc15a7667a2b115ae91773949689fa89d7d"
+        },
+        {
+          "path": "public/editorial/editions/literary-manuscript-v8.0-f3c9128893a3/prologue.txt",
+          "sha256": "c76d5be4d2c6dfb43c3fcde633c285ad1759492639dcd75dde1b58aaa3dfffd8"
+        }
+      ]
+    }
+  ],
+  "chapter_transitions": [
+    {
+      "chapter_id": "prologue",
+      "from_source_sha256": "7bb9120455d87775f022c1091aff55f4580778029f61349f4494e22391508393",
+      "to_source_sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-prologue-p001",
+        "manuscript-v8-prologue-p002",
+        "manuscript-v8-prologue-p003",
+        "manuscript-v8-prologue-p004",
+        "manuscript-v8-prologue-p005",
+        "manuscript-v8-prologue-p006",
+        "manuscript-v8-prologue-p007",
+        "manuscript-v8-prologue-p008",
+        "manuscript-v8-prologue-p009",
+        "manuscript-v8-prologue-p010",
+        "manuscript-v8-prologue-p011",
+        "manuscript-v8-prologue-p012",
+        "manuscript-v8-prologue-p013",
+        "manuscript-v8-prologue-p014",
+        "manuscript-v8-prologue-p015",
+        "manuscript-v8-prologue-p016",
+        "manuscript-v8-prologue-p017",
+        "manuscript-v8-prologue-p018",
+        "manuscript-v8-prologue-p019",
+        "manuscript-v8-prologue-note-1-p001",
+        "manuscript-v8-prologue-note-2-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-prologue-p001",
+        "manuscript-v9-prologue-p002",
+        "manuscript-v9-prologue-p003",
+        "manuscript-v9-prologue-p004",
+        "manuscript-v9-prologue-p005",
+        "manuscript-v9-prologue-p006",
+        "manuscript-v9-prologue-p007",
+        "manuscript-v9-prologue-p008",
+        "manuscript-v9-prologue-p009",
+        "manuscript-v9-prologue-p010",
+        "manuscript-v9-prologue-p011",
+        "manuscript-v9-prologue-p012",
+        "manuscript-v9-prologue-p013",
+        "manuscript-v9-prologue-p014",
+        "manuscript-v9-prologue-p015",
+        "manuscript-v9-prologue-p016",
+        "manuscript-v9-prologue-p017",
+        "manuscript-v9-prologue-p018",
+        "manuscript-v9-prologue-p019",
+        "manuscript-v9-prologue-note-1-p001",
+        "manuscript-v9-prologue-note-2-p001"
+      ]
+    },
+    {
+      "chapter_id": "contents",
+      "from_source_sha256": "07fecd4dc66f0b0d7acad2d609e6e18bb9d3003af5c825b007a9dbc532e2f855",
+      "to_source_sha256": "07fecd4dc66f0b0d7acad2d609e6e18bb9d3003af5c825b007a9dbc532e2f855",
+      "action": "retain-identical-blocks",
+      "retired_block_ids": [],
+      "retained_block_ids": [
+        "contents-v5-p001",
+        "contents-v5-p002",
+        "contents-v5-p003",
+        "contents-v5-p004",
+        "contents-v5-p005",
+        "contents-v5-p006",
+        "contents-v5-p007",
+        "contents-v5-p008",
+        "contents-v5-p009",
+        "contents-v5-p010",
+        "contents-v5-p011",
+        "contents-v5-p012",
+        "contents-v5-p013",
+        "contents-v5-p014",
+        "contents-v5-p015",
+        "contents-v5-p016",
+        "contents-v5-p017",
+        "contents-v5-p018",
+        "contents-v5-p019",
+        "contents-v5-p020",
+        "contents-v5-p021",
+        "contents-v5-p022",
+        "contents-v5-p023",
+        "contents-v5-p024",
+        "contents-v5-p025",
+        "contents-v5-p026",
+        "contents-v5-p027",
+        "contents-v5-p028",
+        "contents-v5-p029",
+        "contents-v5-p030",
+        "contents-v5-p031",
+        "contents-v5-p032",
+        "contents-v5-p033",
+        "contents-v5-p034",
+        "contents-v5-p035",
+        "contents-v5-p036",
+        "contents-v5-p037",
+        "contents-v5-p038",
+        "contents-v5-p039",
+        "contents-v5-p040",
+        "contents-v5-p041",
+        "contents-v5-p042",
+        "contents-v5-p043",
+        "contents-v5-p044",
+        "contents-v5-p045",
+        "contents-v5-p046"
+      ],
+      "introduced_block_ids": []
+    },
+    {
+      "chapter_id": "chapter-01",
+      "from_source_sha256": "2c1db664ee5831bb3cee74273dedee6cd78ad0d84483fb87db504fe2c0583fb1",
+      "to_source_sha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-01-p001",
+        "manuscript-v8-chapter-01-p002",
+        "manuscript-v8-chapter-01-p003",
+        "manuscript-v8-chapter-01-p004",
+        "manuscript-v8-chapter-01-p005",
+        "manuscript-v8-chapter-01-p006",
+        "manuscript-v8-chapter-01-p007",
+        "manuscript-v8-chapter-01-p008",
+        "manuscript-v8-chapter-01-p009",
+        "manuscript-v8-chapter-01-p010",
+        "manuscript-v8-chapter-01-p011",
+        "manuscript-v8-chapter-01-p012",
+        "manuscript-v8-chapter-01-p013",
+        "manuscript-v8-chapter-01-p014",
+        "manuscript-v8-chapter-01-p015",
+        "manuscript-v8-chapter-01-p016",
+        "manuscript-v8-chapter-01-p017",
+        "manuscript-v8-chapter-01-p018",
+        "manuscript-v8-chapter-01-p019",
+        "manuscript-v8-chapter-01-p020",
+        "manuscript-v8-chapter-01-p021",
+        "manuscript-v8-chapter-01-note-1-p001",
+        "manuscript-v8-chapter-01-note-2-p001",
+        "manuscript-v8-chapter-01-note-2-p002"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-01-p001",
+        "manuscript-v9-chapter-01-p002",
+        "manuscript-v9-chapter-01-p003",
+        "manuscript-v9-chapter-01-p004",
+        "manuscript-v9-chapter-01-p005",
+        "manuscript-v9-chapter-01-p006",
+        "manuscript-v9-chapter-01-p007",
+        "manuscript-v9-chapter-01-p008",
+        "manuscript-v9-chapter-01-p009",
+        "manuscript-v9-chapter-01-p010",
+        "manuscript-v9-chapter-01-p011",
+        "manuscript-v9-chapter-01-p012",
+        "manuscript-v9-chapter-01-p013",
+        "manuscript-v9-chapter-01-p014",
+        "manuscript-v9-chapter-01-p015",
+        "manuscript-v9-chapter-01-p016",
+        "manuscript-v9-chapter-01-p017",
+        "manuscript-v9-chapter-01-p018",
+        "manuscript-v9-chapter-01-p019",
+        "manuscript-v9-chapter-01-p020",
+        "manuscript-v9-chapter-01-p021",
+        "manuscript-v9-chapter-01-p022",
+        "manuscript-v9-chapter-01-p023",
+        "manuscript-v9-chapter-01-p024",
+        "manuscript-v9-chapter-01-p025",
+        "manuscript-v9-chapter-01-p026",
+        "manuscript-v9-chapter-01-p027",
+        "manuscript-v9-chapter-01-p028",
+        "manuscript-v9-chapter-01-p029",
+        "manuscript-v9-chapter-01-p030",
+        "manuscript-v9-chapter-01-note-1-p001",
+        "manuscript-v9-chapter-01-note-2-p001",
+        "manuscript-v9-chapter-01-note-3-p001",
+        "manuscript-v9-chapter-01-note-4-p001",
+        "manuscript-v9-chapter-01-note-4-p002"
+      ]
+    },
+    {
+      "chapter_id": "chapter-02",
+      "from_source_sha256": "3e4d03de3aa00da7720d62ae3330b549e60ecb32e697be5766207988b0adbab7",
+      "to_source_sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-02-p001",
+        "manuscript-v8-chapter-02-p002",
+        "manuscript-v8-chapter-02-p003",
+        "manuscript-v8-chapter-02-p004",
+        "manuscript-v8-chapter-02-p005",
+        "manuscript-v8-chapter-02-p006",
+        "manuscript-v8-chapter-02-p007",
+        "manuscript-v8-chapter-02-p008",
+        "manuscript-v8-chapter-02-p009",
+        "manuscript-v8-chapter-02-p010",
+        "manuscript-v8-chapter-02-p011",
+        "manuscript-v8-chapter-02-p012",
+        "manuscript-v8-chapter-02-p013",
+        "manuscript-v8-chapter-02-p014",
+        "manuscript-v8-chapter-02-p015",
+        "manuscript-v8-chapter-02-p016",
+        "manuscript-v8-chapter-02-p017",
+        "manuscript-v8-chapter-02-p018",
+        "manuscript-v8-chapter-02-p019",
+        "manuscript-v8-chapter-02-note-1-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-02-p001",
+        "manuscript-v9-chapter-02-p002",
+        "manuscript-v9-chapter-02-p003",
+        "manuscript-v9-chapter-02-p004",
+        "manuscript-v9-chapter-02-p005",
+        "manuscript-v9-chapter-02-p006",
+        "manuscript-v9-chapter-02-p007",
+        "manuscript-v9-chapter-02-p008",
+        "manuscript-v9-chapter-02-p009",
+        "manuscript-v9-chapter-02-p010",
+        "manuscript-v9-chapter-02-p011",
+        "manuscript-v9-chapter-02-p012",
+        "manuscript-v9-chapter-02-p013",
+        "manuscript-v9-chapter-02-p014",
+        "manuscript-v9-chapter-02-p015",
+        "manuscript-v9-chapter-02-p016",
+        "manuscript-v9-chapter-02-p017",
+        "manuscript-v9-chapter-02-p018",
+        "manuscript-v9-chapter-02-p019",
+        "manuscript-v9-chapter-02-p020",
+        "manuscript-v9-chapter-02-p021",
+        "manuscript-v9-chapter-02-p022",
+        "manuscript-v9-chapter-02-p023",
+        "manuscript-v9-chapter-02-p024",
+        "manuscript-v9-chapter-02-p025",
+        "manuscript-v9-chapter-02-p026",
+        "manuscript-v9-chapter-02-p027",
+        "manuscript-v9-chapter-02-p028",
+        "manuscript-v9-chapter-02-p029",
+        "manuscript-v9-chapter-02-note-1-p001",
+        "manuscript-v9-chapter-02-note-2-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-03",
+      "from_source_sha256": "144f280c8a3a266a5ebc934e22cb29c7992b679b10bc2574acd8d39018138de8",
+      "to_source_sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-03-p001",
+        "manuscript-v8-chapter-03-p002",
+        "manuscript-v8-chapter-03-p003",
+        "manuscript-v8-chapter-03-p004",
+        "manuscript-v8-chapter-03-p005",
+        "manuscript-v8-chapter-03-p006",
+        "manuscript-v8-chapter-03-p007",
+        "manuscript-v8-chapter-03-p008",
+        "manuscript-v8-chapter-03-p009",
+        "manuscript-v8-chapter-03-p010",
+        "manuscript-v8-chapter-03-p011",
+        "manuscript-v8-chapter-03-p012",
+        "manuscript-v8-chapter-03-p013",
+        "manuscript-v8-chapter-03-p014",
+        "manuscript-v8-chapter-03-p015",
+        "manuscript-v8-chapter-03-p016",
+        "manuscript-v8-chapter-03-p017",
+        "manuscript-v8-chapter-03-note-1-p001",
+        "manuscript-v8-chapter-03-note-2-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-03-p001",
+        "manuscript-v9-chapter-03-p002",
+        "manuscript-v9-chapter-03-p003",
+        "manuscript-v9-chapter-03-p004",
+        "manuscript-v9-chapter-03-p005",
+        "manuscript-v9-chapter-03-p006",
+        "manuscript-v9-chapter-03-p007",
+        "manuscript-v9-chapter-03-p008",
+        "manuscript-v9-chapter-03-p009",
+        "manuscript-v9-chapter-03-p010",
+        "manuscript-v9-chapter-03-p011",
+        "manuscript-v9-chapter-03-p012",
+        "manuscript-v9-chapter-03-p013",
+        "manuscript-v9-chapter-03-p014",
+        "manuscript-v9-chapter-03-p015",
+        "manuscript-v9-chapter-03-p016",
+        "manuscript-v9-chapter-03-p017",
+        "manuscript-v9-chapter-03-p018",
+        "manuscript-v9-chapter-03-p019",
+        "manuscript-v9-chapter-03-p020",
+        "manuscript-v9-chapter-03-p021",
+        "manuscript-v9-chapter-03-p022",
+        "manuscript-v9-chapter-03-p023",
+        "manuscript-v9-chapter-03-p024",
+        "manuscript-v9-chapter-03-p025",
+        "manuscript-v9-chapter-03-note-1-p001",
+        "manuscript-v9-chapter-03-note-2-p001",
+        "manuscript-v9-chapter-03-note-3-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-04",
+      "from_source_sha256": "2b03394a7087856e8c8a5654ee6f67876cd04d588380c9cb68fc2c6b9e0f500c",
+      "to_source_sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-04-p001",
+        "manuscript-v8-chapter-04-p002",
+        "manuscript-v8-chapter-04-p003",
+        "manuscript-v8-chapter-04-p004",
+        "manuscript-v8-chapter-04-p005",
+        "manuscript-v8-chapter-04-p006",
+        "manuscript-v8-chapter-04-p007",
+        "manuscript-v8-chapter-04-p008",
+        "manuscript-v8-chapter-04-p009",
+        "manuscript-v8-chapter-04-p010",
+        "manuscript-v8-chapter-04-p011",
+        "manuscript-v8-chapter-04-p012",
+        "manuscript-v8-chapter-04-p013",
+        "manuscript-v8-chapter-04-p014",
+        "manuscript-v8-chapter-04-p015",
+        "manuscript-v8-chapter-04-p016",
+        "manuscript-v8-chapter-04-p017",
+        "manuscript-v8-chapter-04-p018",
+        "manuscript-v8-chapter-04-p019",
+        "manuscript-v8-chapter-04-p020",
+        "manuscript-v8-chapter-04-p021",
+        "manuscript-v8-chapter-04-p022",
+        "manuscript-v8-chapter-04-p023",
+        "manuscript-v8-chapter-04-p024",
+        "manuscript-v8-chapter-04-p025",
+        "manuscript-v8-chapter-04-p026",
+        "manuscript-v8-chapter-04-note-1-p001",
+        "manuscript-v8-chapter-04-note-2-p001",
+        "manuscript-v8-chapter-04-note-3-p001",
+        "manuscript-v8-chapter-04-note-4-p001",
+        "manuscript-v8-chapter-04-note-5-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-04-p001",
+        "manuscript-v9-chapter-04-p002",
+        "manuscript-v9-chapter-04-p003",
+        "manuscript-v9-chapter-04-p004",
+        "manuscript-v9-chapter-04-p005",
+        "manuscript-v9-chapter-04-p006",
+        "manuscript-v9-chapter-04-p007",
+        "manuscript-v9-chapter-04-p008",
+        "manuscript-v9-chapter-04-p009",
+        "manuscript-v9-chapter-04-p010",
+        "manuscript-v9-chapter-04-p011",
+        "manuscript-v9-chapter-04-p012",
+        "manuscript-v9-chapter-04-p013",
+        "manuscript-v9-chapter-04-p014",
+        "manuscript-v9-chapter-04-p015",
+        "manuscript-v9-chapter-04-p016",
+        "manuscript-v9-chapter-04-p017",
+        "manuscript-v9-chapter-04-p018",
+        "manuscript-v9-chapter-04-p019",
+        "manuscript-v9-chapter-04-p020",
+        "manuscript-v9-chapter-04-p021",
+        "manuscript-v9-chapter-04-p022",
+        "manuscript-v9-chapter-04-p023",
+        "manuscript-v9-chapter-04-p024",
+        "manuscript-v9-chapter-04-p025",
+        "manuscript-v9-chapter-04-p026",
+        "manuscript-v9-chapter-04-p027",
+        "manuscript-v9-chapter-04-p028",
+        "manuscript-v9-chapter-04-p029",
+        "manuscript-v9-chapter-04-p030",
+        "manuscript-v9-chapter-04-p031",
+        "manuscript-v9-chapter-04-p032",
+        "manuscript-v9-chapter-04-p033",
+        "manuscript-v9-chapter-04-note-1-p001",
+        "manuscript-v9-chapter-04-note-2-p001",
+        "manuscript-v9-chapter-04-note-3-p001",
+        "manuscript-v9-chapter-04-note-4-p001",
+        "manuscript-v9-chapter-04-note-5-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-05",
+      "from_source_sha256": "52c14a4ce733852bb3e9d7283c06f8804d5a4d8ccd5b9877fa19af5fba421fd8",
+      "to_source_sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-05-p001",
+        "manuscript-v8-chapter-05-p002",
+        "manuscript-v8-chapter-05-p003",
+        "manuscript-v8-chapter-05-p004",
+        "manuscript-v8-chapter-05-p005",
+        "manuscript-v8-chapter-05-p006",
+        "manuscript-v8-chapter-05-p007",
+        "manuscript-v8-chapter-05-p008",
+        "manuscript-v8-chapter-05-p009",
+        "manuscript-v8-chapter-05-p010",
+        "manuscript-v8-chapter-05-p011",
+        "manuscript-v8-chapter-05-p012",
+        "manuscript-v8-chapter-05-p013",
+        "manuscript-v8-chapter-05-p014",
+        "manuscript-v8-chapter-05-p015",
+        "manuscript-v8-chapter-05-p016",
+        "manuscript-v8-chapter-05-p017",
+        "manuscript-v8-chapter-05-p018",
+        "manuscript-v8-chapter-05-p019",
+        "manuscript-v8-chapter-05-p020",
+        "manuscript-v8-chapter-05-p021",
+        "manuscript-v8-chapter-05-p022",
+        "manuscript-v8-chapter-05-note-1-p001",
+        "manuscript-v8-chapter-05-note-2-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-05-p001",
+        "manuscript-v9-chapter-05-p002",
+        "manuscript-v9-chapter-05-p003",
+        "manuscript-v9-chapter-05-p004",
+        "manuscript-v9-chapter-05-p005",
+        "manuscript-v9-chapter-05-p006",
+        "manuscript-v9-chapter-05-p007",
+        "manuscript-v9-chapter-05-p008",
+        "manuscript-v9-chapter-05-p009",
+        "manuscript-v9-chapter-05-p010",
+        "manuscript-v9-chapter-05-p011",
+        "manuscript-v9-chapter-05-p012",
+        "manuscript-v9-chapter-05-p013",
+        "manuscript-v9-chapter-05-p014",
+        "manuscript-v9-chapter-05-p015",
+        "manuscript-v9-chapter-05-p016",
+        "manuscript-v9-chapter-05-p017",
+        "manuscript-v9-chapter-05-p018",
+        "manuscript-v9-chapter-05-p019",
+        "manuscript-v9-chapter-05-p020",
+        "manuscript-v9-chapter-05-p021",
+        "manuscript-v9-chapter-05-p022",
+        "manuscript-v9-chapter-05-p023",
+        "manuscript-v9-chapter-05-p024",
+        "manuscript-v9-chapter-05-p025",
+        "manuscript-v9-chapter-05-p026",
+        "manuscript-v9-chapter-05-p027",
+        "manuscript-v9-chapter-05-p028",
+        "manuscript-v9-chapter-05-p029",
+        "manuscript-v9-chapter-05-p030",
+        "manuscript-v9-chapter-05-p031",
+        "manuscript-v9-chapter-05-note-1-p001",
+        "manuscript-v9-chapter-05-note-2-p001",
+        "manuscript-v9-chapter-05-note-3-p001",
+        "manuscript-v9-chapter-05-note-4-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-06",
+      "from_source_sha256": "47593ece32682c5f1610b29f1cfa929d8bc418e274c2471a5015fa4403447f44",
+      "to_source_sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-06-p001",
+        "manuscript-v8-chapter-06-p002",
+        "manuscript-v8-chapter-06-p003",
+        "manuscript-v8-chapter-06-p004",
+        "manuscript-v8-chapter-06-p005",
+        "manuscript-v8-chapter-06-p006",
+        "manuscript-v8-chapter-06-p007",
+        "manuscript-v8-chapter-06-p008",
+        "manuscript-v8-chapter-06-p009",
+        "manuscript-v8-chapter-06-p010",
+        "manuscript-v8-chapter-06-p011",
+        "manuscript-v8-chapter-06-p012",
+        "manuscript-v8-chapter-06-p013",
+        "manuscript-v8-chapter-06-p014",
+        "manuscript-v8-chapter-06-p015",
+        "manuscript-v8-chapter-06-p016",
+        "manuscript-v8-chapter-06-p017",
+        "manuscript-v8-chapter-06-p018",
+        "manuscript-v8-chapter-06-note-1-p001",
+        "manuscript-v8-chapter-06-note-1-p002"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-06-p001",
+        "manuscript-v9-chapter-06-p002",
+        "manuscript-v9-chapter-06-p003",
+        "manuscript-v9-chapter-06-p004",
+        "manuscript-v9-chapter-06-p005",
+        "manuscript-v9-chapter-06-p006",
+        "manuscript-v9-chapter-06-p007",
+        "manuscript-v9-chapter-06-p008",
+        "manuscript-v9-chapter-06-p009",
+        "manuscript-v9-chapter-06-p010",
+        "manuscript-v9-chapter-06-p011",
+        "manuscript-v9-chapter-06-p012",
+        "manuscript-v9-chapter-06-p013",
+        "manuscript-v9-chapter-06-p014",
+        "manuscript-v9-chapter-06-p015",
+        "manuscript-v9-chapter-06-p016",
+        "manuscript-v9-chapter-06-p017",
+        "manuscript-v9-chapter-06-p018",
+        "manuscript-v9-chapter-06-p019",
+        "manuscript-v9-chapter-06-p020",
+        "manuscript-v9-chapter-06-p021",
+        "manuscript-v9-chapter-06-p022",
+        "manuscript-v9-chapter-06-p023",
+        "manuscript-v9-chapter-06-p024",
+        "manuscript-v9-chapter-06-p025",
+        "manuscript-v9-chapter-06-p026",
+        "manuscript-v9-chapter-06-p027",
+        "manuscript-v9-chapter-06-p028",
+        "manuscript-v9-chapter-06-p029",
+        "manuscript-v9-chapter-06-note-1-p001",
+        "manuscript-v9-chapter-06-note-2-p001",
+        "manuscript-v9-chapter-06-note-3-p001",
+        "manuscript-v9-chapter-06-note-4-p001",
+        "manuscript-v9-chapter-06-note-4-p002"
+      ]
+    },
+    {
+      "chapter_id": "chapter-07",
+      "from_source_sha256": "08cef721933c6d77384f96faaac60f00edc29df22f5805ce16e77c3b410bd4c6",
+      "to_source_sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v7-chapter-07-p001",
+        "manuscript-v7-chapter-07-p002",
+        "manuscript-v7-chapter-07-p003",
+        "manuscript-v7-chapter-07-p004",
+        "manuscript-v7-chapter-07-p005",
+        "manuscript-v7-chapter-07-p006",
+        "manuscript-v7-chapter-07-p007",
+        "manuscript-v7-chapter-07-p008",
+        "manuscript-v7-chapter-07-p009",
+        "manuscript-v7-chapter-07-p010",
+        "manuscript-v7-chapter-07-p011",
+        "manuscript-v7-chapter-07-p012",
+        "manuscript-v7-chapter-07-p013",
+        "manuscript-v7-chapter-07-p014",
+        "manuscript-v7-chapter-07-p015",
+        "manuscript-v7-chapter-07-p016",
+        "manuscript-v7-chapter-07-p017",
+        "manuscript-v7-chapter-07-p018"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-07-p001",
+        "manuscript-v9-chapter-07-p002",
+        "manuscript-v9-chapter-07-p003",
+        "manuscript-v9-chapter-07-p004",
+        "manuscript-v9-chapter-07-p005",
+        "manuscript-v9-chapter-07-p006",
+        "manuscript-v9-chapter-07-p007",
+        "manuscript-v9-chapter-07-p008",
+        "manuscript-v9-chapter-07-p009",
+        "manuscript-v9-chapter-07-p010",
+        "manuscript-v9-chapter-07-p011",
+        "manuscript-v9-chapter-07-p012",
+        "manuscript-v9-chapter-07-p013",
+        "manuscript-v9-chapter-07-p014",
+        "manuscript-v9-chapter-07-p015",
+        "manuscript-v9-chapter-07-p016",
+        "manuscript-v9-chapter-07-p017",
+        "manuscript-v9-chapter-07-p018",
+        "manuscript-v9-chapter-07-p019",
+        "manuscript-v9-chapter-07-p020",
+        "manuscript-v9-chapter-07-p021",
+        "manuscript-v9-chapter-07-p022",
+        "manuscript-v9-chapter-07-p023",
+        "manuscript-v9-chapter-07-p024",
+        "manuscript-v9-chapter-07-p025",
+        "manuscript-v9-chapter-07-p026",
+        "manuscript-v9-chapter-07-note-1-p001",
+        "manuscript-v9-chapter-07-note-2-p001",
+        "manuscript-v9-chapter-07-note-2-p002"
+      ]
+    },
+    {
+      "chapter_id": "chapter-08",
+      "from_source_sha256": "e5c138e7f8bed759628221bf55797479acb24cf6ce33dc687140cc143cfec56a",
+      "to_source_sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-08-p001",
+        "manuscript-v8-chapter-08-p002",
+        "manuscript-v8-chapter-08-p003",
+        "manuscript-v8-chapter-08-p004",
+        "manuscript-v8-chapter-08-p005",
+        "manuscript-v8-chapter-08-p006",
+        "manuscript-v8-chapter-08-p007",
+        "manuscript-v8-chapter-08-p008",
+        "manuscript-v8-chapter-08-p009",
+        "manuscript-v8-chapter-08-p010",
+        "manuscript-v8-chapter-08-p011",
+        "manuscript-v8-chapter-08-p012",
+        "manuscript-v8-chapter-08-p013",
+        "manuscript-v8-chapter-08-p014",
+        "manuscript-v8-chapter-08-p015",
+        "manuscript-v8-chapter-08-p016",
+        "manuscript-v8-chapter-08-p017",
+        "manuscript-v8-chapter-08-p018",
+        "manuscript-v8-chapter-08-p019"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-08-p001",
+        "manuscript-v9-chapter-08-p002",
+        "manuscript-v9-chapter-08-p003",
+        "manuscript-v9-chapter-08-p004",
+        "manuscript-v9-chapter-08-p005",
+        "manuscript-v9-chapter-08-p006",
+        "manuscript-v9-chapter-08-p007",
+        "manuscript-v9-chapter-08-p008",
+        "manuscript-v9-chapter-08-p009",
+        "manuscript-v9-chapter-08-p010",
+        "manuscript-v9-chapter-08-p011",
+        "manuscript-v9-chapter-08-p012",
+        "manuscript-v9-chapter-08-p013",
+        "manuscript-v9-chapter-08-p014",
+        "manuscript-v9-chapter-08-p015",
+        "manuscript-v9-chapter-08-p016",
+        "manuscript-v9-chapter-08-p017",
+        "manuscript-v9-chapter-08-p018",
+        "manuscript-v9-chapter-08-p019",
+        "manuscript-v9-chapter-08-p020",
+        "manuscript-v9-chapter-08-p021",
+        "manuscript-v9-chapter-08-p022",
+        "manuscript-v9-chapter-08-p023",
+        "manuscript-v9-chapter-08-p024",
+        "manuscript-v9-chapter-08-p025",
+        "manuscript-v9-chapter-08-p026",
+        "manuscript-v9-chapter-08-p027",
+        "manuscript-v9-chapter-08-p028",
+        "manuscript-v9-chapter-08-p029",
+        "manuscript-v9-chapter-08-note-1-p001",
+        "manuscript-v9-chapter-08-note-1-p002"
+      ]
+    },
+    {
+      "chapter_id": "chapter-09",
+      "from_source_sha256": "659d3a36e88aeb2a1a79a79937446a58dcaa302134eca42fecaaac1ac21c012e",
+      "to_source_sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-09-p001",
+        "manuscript-v8-chapter-09-p002",
+        "manuscript-v8-chapter-09-p003",
+        "manuscript-v8-chapter-09-p004",
+        "manuscript-v8-chapter-09-p005",
+        "manuscript-v8-chapter-09-p006",
+        "manuscript-v8-chapter-09-p007",
+        "manuscript-v8-chapter-09-p008",
+        "manuscript-v8-chapter-09-p009",
+        "manuscript-v8-chapter-09-p010",
+        "manuscript-v8-chapter-09-p011",
+        "manuscript-v8-chapter-09-p012",
+        "manuscript-v8-chapter-09-p013",
+        "manuscript-v8-chapter-09-p014",
+        "manuscript-v8-chapter-09-p015",
+        "manuscript-v8-chapter-09-p016",
+        "manuscript-v8-chapter-09-p017",
+        "manuscript-v8-chapter-09-p018",
+        "manuscript-v8-chapter-09-p019",
+        "manuscript-v8-chapter-09-p020",
+        "manuscript-v8-chapter-09-p021",
+        "manuscript-v8-chapter-09-p022",
+        "manuscript-v8-chapter-09-p023",
+        "manuscript-v8-chapter-09-p024",
+        "manuscript-v8-chapter-09-p025",
+        "manuscript-v8-chapter-09-p026",
+        "manuscript-v8-chapter-09-note-1-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-09-p001",
+        "manuscript-v9-chapter-09-p002",
+        "manuscript-v9-chapter-09-p003",
+        "manuscript-v9-chapter-09-p004",
+        "manuscript-v9-chapter-09-p005",
+        "manuscript-v9-chapter-09-p006",
+        "manuscript-v9-chapter-09-p007",
+        "manuscript-v9-chapter-09-p008",
+        "manuscript-v9-chapter-09-p009",
+        "manuscript-v9-chapter-09-p010",
+        "manuscript-v9-chapter-09-p011",
+        "manuscript-v9-chapter-09-p012",
+        "manuscript-v9-chapter-09-p013",
+        "manuscript-v9-chapter-09-p014",
+        "manuscript-v9-chapter-09-p015",
+        "manuscript-v9-chapter-09-p016",
+        "manuscript-v9-chapter-09-p017",
+        "manuscript-v9-chapter-09-p018",
+        "manuscript-v9-chapter-09-p019",
+        "manuscript-v9-chapter-09-p020",
+        "manuscript-v9-chapter-09-p021",
+        "manuscript-v9-chapter-09-p022",
+        "manuscript-v9-chapter-09-p023",
+        "manuscript-v9-chapter-09-p024",
+        "manuscript-v9-chapter-09-p025",
+        "manuscript-v9-chapter-09-p026",
+        "manuscript-v9-chapter-09-p027",
+        "manuscript-v9-chapter-09-p028",
+        "manuscript-v9-chapter-09-p029",
+        "manuscript-v9-chapter-09-p030",
+        "manuscript-v9-chapter-09-p031",
+        "manuscript-v9-chapter-09-p032",
+        "manuscript-v9-chapter-09-p033",
+        "manuscript-v9-chapter-09-note-1-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-10",
+      "from_source_sha256": "66e9508834f012f3b6330860a17868f9bc6bea0a5f4ef8cca1eea1767f233fec",
+      "to_source_sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-10-p001",
+        "manuscript-v8-chapter-10-p002",
+        "manuscript-v8-chapter-10-p003",
+        "manuscript-v8-chapter-10-p004",
+        "manuscript-v8-chapter-10-p005",
+        "manuscript-v8-chapter-10-p006",
+        "manuscript-v8-chapter-10-p007",
+        "manuscript-v8-chapter-10-p008",
+        "manuscript-v8-chapter-10-p009",
+        "manuscript-v8-chapter-10-p010",
+        "manuscript-v8-chapter-10-p011",
+        "manuscript-v8-chapter-10-p012",
+        "manuscript-v8-chapter-10-p013",
+        "manuscript-v8-chapter-10-p014",
+        "manuscript-v8-chapter-10-p015",
+        "manuscript-v8-chapter-10-p016",
+        "manuscript-v8-chapter-10-p017",
+        "manuscript-v8-chapter-10-p018",
+        "manuscript-v8-chapter-10-p019",
+        "manuscript-v8-chapter-10-p020",
+        "manuscript-v8-chapter-10-p021",
+        "manuscript-v8-chapter-10-p022",
+        "manuscript-v8-chapter-10-p023",
+        "manuscript-v8-chapter-10-p024",
+        "manuscript-v8-chapter-10-note-1-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-10-p001",
+        "manuscript-v9-chapter-10-p002",
+        "manuscript-v9-chapter-10-p003",
+        "manuscript-v9-chapter-10-p004",
+        "manuscript-v9-chapter-10-p005",
+        "manuscript-v9-chapter-10-p006",
+        "manuscript-v9-chapter-10-p007",
+        "manuscript-v9-chapter-10-p008",
+        "manuscript-v9-chapter-10-p009",
+        "manuscript-v9-chapter-10-p010",
+        "manuscript-v9-chapter-10-p011",
+        "manuscript-v9-chapter-10-p012",
+        "manuscript-v9-chapter-10-p013",
+        "manuscript-v9-chapter-10-p014",
+        "manuscript-v9-chapter-10-p015",
+        "manuscript-v9-chapter-10-p016",
+        "manuscript-v9-chapter-10-p017",
+        "manuscript-v9-chapter-10-p018",
+        "manuscript-v9-chapter-10-p019",
+        "manuscript-v9-chapter-10-p020",
+        "manuscript-v9-chapter-10-p021",
+        "manuscript-v9-chapter-10-p022",
+        "manuscript-v9-chapter-10-p023",
+        "manuscript-v9-chapter-10-p024",
+        "manuscript-v9-chapter-10-p025",
+        "manuscript-v9-chapter-10-p026",
+        "manuscript-v9-chapter-10-p027",
+        "manuscript-v9-chapter-10-p028",
+        "manuscript-v9-chapter-10-p029",
+        "manuscript-v9-chapter-10-p030",
+        "manuscript-v9-chapter-10-p031",
+        "manuscript-v9-chapter-10-p032",
+        "manuscript-v9-chapter-10-p033",
+        "manuscript-v9-chapter-10-p034",
+        "manuscript-v9-chapter-10-p035",
+        "manuscript-v9-chapter-10-p036",
+        "manuscript-v9-chapter-10-note-1-p001",
+        "manuscript-v9-chapter-10-note-2-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-11",
+      "from_source_sha256": "764a3ec4f1dc8013cdf960722d5c7df27a9b905091a8964e6aac152571a1d3df",
+      "to_source_sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-11-p001",
+        "manuscript-v8-chapter-11-p002",
+        "manuscript-v8-chapter-11-p003",
+        "manuscript-v8-chapter-11-p004",
+        "manuscript-v8-chapter-11-p005",
+        "manuscript-v8-chapter-11-p006",
+        "manuscript-v8-chapter-11-p007",
+        "manuscript-v8-chapter-11-p008",
+        "manuscript-v8-chapter-11-p009",
+        "manuscript-v8-chapter-11-p010",
+        "manuscript-v8-chapter-11-p011",
+        "manuscript-v8-chapter-11-p012",
+        "manuscript-v8-chapter-11-p013",
+        "manuscript-v8-chapter-11-p014",
+        "manuscript-v8-chapter-11-p015",
+        "manuscript-v8-chapter-11-p016",
+        "manuscript-v8-chapter-11-p017",
+        "manuscript-v8-chapter-11-p018",
+        "manuscript-v8-chapter-11-p019",
+        "manuscript-v8-chapter-11-p020",
+        "manuscript-v8-chapter-11-p021",
+        "manuscript-v8-chapter-11-p022",
+        "manuscript-v8-chapter-11-p023",
+        "manuscript-v8-chapter-11-p024",
+        "manuscript-v8-chapter-11-p025",
+        "manuscript-v8-chapter-11-p026",
+        "manuscript-v8-chapter-11-p027",
+        "manuscript-v8-chapter-11-p028",
+        "manuscript-v8-chapter-11-p029",
+        "manuscript-v8-chapter-11-p030",
+        "manuscript-v8-chapter-11-p031",
+        "manuscript-v8-chapter-11-p032",
+        "manuscript-v8-chapter-11-p033",
+        "manuscript-v8-chapter-11-p034",
+        "manuscript-v8-chapter-11-p035",
+        "manuscript-v8-chapter-11-note-1-p001",
+        "manuscript-v8-chapter-11-note-2-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-11-p001",
+        "manuscript-v9-chapter-11-p002",
+        "manuscript-v9-chapter-11-p003",
+        "manuscript-v9-chapter-11-p004",
+        "manuscript-v9-chapter-11-p005",
+        "manuscript-v9-chapter-11-p006",
+        "manuscript-v9-chapter-11-p007",
+        "manuscript-v9-chapter-11-p008",
+        "manuscript-v9-chapter-11-p009",
+        "manuscript-v9-chapter-11-p010",
+        "manuscript-v9-chapter-11-p011",
+        "manuscript-v9-chapter-11-p012",
+        "manuscript-v9-chapter-11-p013",
+        "manuscript-v9-chapter-11-p014",
+        "manuscript-v9-chapter-11-p015",
+        "manuscript-v9-chapter-11-p016",
+        "manuscript-v9-chapter-11-p017",
+        "manuscript-v9-chapter-11-p018",
+        "manuscript-v9-chapter-11-p019",
+        "manuscript-v9-chapter-11-p020",
+        "manuscript-v9-chapter-11-p021",
+        "manuscript-v9-chapter-11-p022",
+        "manuscript-v9-chapter-11-p023",
+        "manuscript-v9-chapter-11-p024",
+        "manuscript-v9-chapter-11-p025",
+        "manuscript-v9-chapter-11-p026",
+        "manuscript-v9-chapter-11-p027",
+        "manuscript-v9-chapter-11-p028",
+        "manuscript-v9-chapter-11-p029",
+        "manuscript-v9-chapter-11-p030",
+        "manuscript-v9-chapter-11-p031",
+        "manuscript-v9-chapter-11-p032",
+        "manuscript-v9-chapter-11-p033",
+        "manuscript-v9-chapter-11-p034",
+        "manuscript-v9-chapter-11-p035",
+        "manuscript-v9-chapter-11-p036",
+        "manuscript-v9-chapter-11-p037",
+        "manuscript-v9-chapter-11-p038",
+        "manuscript-v9-chapter-11-p039",
+        "manuscript-v9-chapter-11-p040",
+        "manuscript-v9-chapter-11-p041",
+        "manuscript-v9-chapter-11-p042",
+        "manuscript-v9-chapter-11-p043",
+        "manuscript-v9-chapter-11-p044",
+        "manuscript-v9-chapter-11-p045",
+        "manuscript-v9-chapter-11-note-1-p001",
+        "manuscript-v9-chapter-11-note-2-p001",
+        "manuscript-v9-chapter-11-note-3-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-12",
+      "from_source_sha256": "c3989c5b45386a93da0aa92bfe139c6312da869dc46a796ecafeeff4eda59d1e",
+      "to_source_sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-12-p001",
+        "manuscript-v8-chapter-12-p002",
+        "manuscript-v8-chapter-12-p003",
+        "manuscript-v8-chapter-12-p004",
+        "manuscript-v8-chapter-12-p005",
+        "manuscript-v8-chapter-12-p006",
+        "manuscript-v8-chapter-12-p007",
+        "manuscript-v8-chapter-12-p008",
+        "manuscript-v8-chapter-12-p009",
+        "manuscript-v8-chapter-12-p010",
+        "manuscript-v8-chapter-12-p011",
+        "manuscript-v8-chapter-12-p012",
+        "manuscript-v8-chapter-12-p013",
+        "manuscript-v8-chapter-12-p014",
+        "manuscript-v8-chapter-12-p015",
+        "manuscript-v8-chapter-12-p016",
+        "manuscript-v8-chapter-12-p017",
+        "manuscript-v8-chapter-12-p018",
+        "manuscript-v8-chapter-12-p019",
+        "manuscript-v8-chapter-12-p020",
+        "manuscript-v8-chapter-12-p021",
+        "manuscript-v8-chapter-12-p022",
+        "manuscript-v8-chapter-12-p023",
+        "manuscript-v8-chapter-12-p024",
+        "manuscript-v8-chapter-12-p025",
+        "manuscript-v8-chapter-12-p026",
+        "manuscript-v8-chapter-12-p027",
+        "manuscript-v8-chapter-12-p028",
+        "manuscript-v8-chapter-12-p029",
+        "manuscript-v8-chapter-12-p030",
+        "manuscript-v8-chapter-12-p031",
+        "manuscript-v8-chapter-12-p032",
+        "manuscript-v8-chapter-12-note-1-p001",
+        "manuscript-v8-chapter-12-note-2-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-12-p001",
+        "manuscript-v9-chapter-12-p002",
+        "manuscript-v9-chapter-12-p003",
+        "manuscript-v9-chapter-12-p004",
+        "manuscript-v9-chapter-12-p005",
+        "manuscript-v9-chapter-12-p006",
+        "manuscript-v9-chapter-12-p007",
+        "manuscript-v9-chapter-12-p008",
+        "manuscript-v9-chapter-12-p009",
+        "manuscript-v9-chapter-12-p010",
+        "manuscript-v9-chapter-12-p011",
+        "manuscript-v9-chapter-12-p012",
+        "manuscript-v9-chapter-12-p013",
+        "manuscript-v9-chapter-12-p014",
+        "manuscript-v9-chapter-12-p015",
+        "manuscript-v9-chapter-12-p016",
+        "manuscript-v9-chapter-12-p017",
+        "manuscript-v9-chapter-12-p018",
+        "manuscript-v9-chapter-12-p019",
+        "manuscript-v9-chapter-12-p020",
+        "manuscript-v9-chapter-12-p021",
+        "manuscript-v9-chapter-12-p022",
+        "manuscript-v9-chapter-12-p023",
+        "manuscript-v9-chapter-12-p024",
+        "manuscript-v9-chapter-12-p025",
+        "manuscript-v9-chapter-12-p026",
+        "manuscript-v9-chapter-12-p027",
+        "manuscript-v9-chapter-12-p028",
+        "manuscript-v9-chapter-12-p029",
+        "manuscript-v9-chapter-12-p030",
+        "manuscript-v9-chapter-12-p031",
+        "manuscript-v9-chapter-12-p032",
+        "manuscript-v9-chapter-12-p033",
+        "manuscript-v9-chapter-12-p034",
+        "manuscript-v9-chapter-12-p035",
+        "manuscript-v9-chapter-12-p036",
+        "manuscript-v9-chapter-12-p037",
+        "manuscript-v9-chapter-12-p038",
+        "manuscript-v9-chapter-12-p039",
+        "manuscript-v9-chapter-12-p040",
+        "manuscript-v9-chapter-12-p041",
+        "manuscript-v9-chapter-12-p042",
+        "manuscript-v9-chapter-12-p043",
+        "manuscript-v9-chapter-12-note-1-p001",
+        "manuscript-v9-chapter-12-note-2-p001",
+        "manuscript-v9-chapter-12-note-3-p001",
+        "manuscript-v9-chapter-12-note-4-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-13",
+      "from_source_sha256": "f25707882e09b47be7cd4cd6fa83b1b37f81f6dd18a85c5d608cfcf491a6bf3c",
+      "to_source_sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-13-p001",
+        "manuscript-v8-chapter-13-p002",
+        "manuscript-v8-chapter-13-p003",
+        "manuscript-v8-chapter-13-p004",
+        "manuscript-v8-chapter-13-p005",
+        "manuscript-v8-chapter-13-p006",
+        "manuscript-v8-chapter-13-p007",
+        "manuscript-v8-chapter-13-p008",
+        "manuscript-v8-chapter-13-p009",
+        "manuscript-v8-chapter-13-p010",
+        "manuscript-v8-chapter-13-p011",
+        "manuscript-v8-chapter-13-p012",
+        "manuscript-v8-chapter-13-p013",
+        "manuscript-v8-chapter-13-p014",
+        "manuscript-v8-chapter-13-p015",
+        "manuscript-v8-chapter-13-p016",
+        "manuscript-v8-chapter-13-p017",
+        "manuscript-v8-chapter-13-p018",
+        "manuscript-v8-chapter-13-apparatus-p001",
+        "manuscript-v8-chapter-13-apparatus-p002"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-13-p001",
+        "manuscript-v9-chapter-13-p002",
+        "manuscript-v9-chapter-13-p003",
+        "manuscript-v9-chapter-13-p004",
+        "manuscript-v9-chapter-13-p005",
+        "manuscript-v9-chapter-13-p006",
+        "manuscript-v9-chapter-13-p007",
+        "manuscript-v9-chapter-13-p008",
+        "manuscript-v9-chapter-13-p009",
+        "manuscript-v9-chapter-13-p010",
+        "manuscript-v9-chapter-13-p011",
+        "manuscript-v9-chapter-13-p012",
+        "manuscript-v9-chapter-13-p013",
+        "manuscript-v9-chapter-13-p014",
+        "manuscript-v9-chapter-13-p015",
+        "manuscript-v9-chapter-13-p016",
+        "manuscript-v9-chapter-13-p017",
+        "manuscript-v9-chapter-13-p018",
+        "manuscript-v9-chapter-13-p019",
+        "manuscript-v9-chapter-13-p020",
+        "manuscript-v9-chapter-13-p021",
+        "manuscript-v9-chapter-13-p022",
+        "manuscript-v9-chapter-13-p023",
+        "manuscript-v9-chapter-13-p024",
+        "manuscript-v9-chapter-13-p025",
+        "manuscript-v9-chapter-13-p026",
+        "manuscript-v9-chapter-13-p027",
+        "manuscript-v9-chapter-13-p028",
+        "manuscript-v9-chapter-13-note-1-p001",
+        "manuscript-v9-chapter-13-note-2-p001",
+        "manuscript-v9-chapter-13-note-3-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-14",
+      "from_source_sha256": "806b31b7b04a0a552d8c3e9e7e7573a9ffc3bc3e6ba4d2b07feee50df8c93041",
+      "to_source_sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-14-p001",
+        "manuscript-v8-chapter-14-p002",
+        "manuscript-v8-chapter-14-p003",
+        "manuscript-v8-chapter-14-p004",
+        "manuscript-v8-chapter-14-p005",
+        "manuscript-v8-chapter-14-p006",
+        "manuscript-v8-chapter-14-p007",
+        "manuscript-v8-chapter-14-p008",
+        "manuscript-v8-chapter-14-p009",
+        "manuscript-v8-chapter-14-p010",
+        "manuscript-v8-chapter-14-p011",
+        "manuscript-v8-chapter-14-p012",
+        "manuscript-v8-chapter-14-p013",
+        "manuscript-v8-chapter-14-p014",
+        "manuscript-v8-chapter-14-p015",
+        "manuscript-v8-chapter-14-p016",
+        "manuscript-v8-chapter-14-p017",
+        "manuscript-v8-chapter-14-p018",
+        "manuscript-v8-chapter-14-p019",
+        "manuscript-v8-chapter-14-p020",
+        "manuscript-v8-chapter-14-p021",
+        "manuscript-v8-chapter-14-p022",
+        "manuscript-v8-chapter-14-p023",
+        "manuscript-v8-chapter-14-p024",
+        "manuscript-v8-chapter-14-p025",
+        "manuscript-v8-chapter-14-p026",
+        "manuscript-v8-chapter-14-p027",
+        "manuscript-v8-chapter-14-p028",
+        "manuscript-v8-chapter-14-p029",
+        "manuscript-v8-chapter-14-p030",
+        "manuscript-v8-chapter-14-p031",
+        "manuscript-v8-chapter-14-note-1-p001",
+        "manuscript-v8-chapter-14-note-2-p001",
+        "manuscript-v8-chapter-14-note-2-p002",
+        "manuscript-v8-chapter-14-note-3-p001",
+        "manuscript-v8-chapter-14-note-4-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-14-p001",
+        "manuscript-v9-chapter-14-p002",
+        "manuscript-v9-chapter-14-p003",
+        "manuscript-v9-chapter-14-p004",
+        "manuscript-v9-chapter-14-p005",
+        "manuscript-v9-chapter-14-p006",
+        "manuscript-v9-chapter-14-p007",
+        "manuscript-v9-chapter-14-p008",
+        "manuscript-v9-chapter-14-p009",
+        "manuscript-v9-chapter-14-p010",
+        "manuscript-v9-chapter-14-p011",
+        "manuscript-v9-chapter-14-p012",
+        "manuscript-v9-chapter-14-p013",
+        "manuscript-v9-chapter-14-p014",
+        "manuscript-v9-chapter-14-p015",
+        "manuscript-v9-chapter-14-p016",
+        "manuscript-v9-chapter-14-p017",
+        "manuscript-v9-chapter-14-p018",
+        "manuscript-v9-chapter-14-p019",
+        "manuscript-v9-chapter-14-p020",
+        "manuscript-v9-chapter-14-p021",
+        "manuscript-v9-chapter-14-p022",
+        "manuscript-v9-chapter-14-p023",
+        "manuscript-v9-chapter-14-p024",
+        "manuscript-v9-chapter-14-p025",
+        "manuscript-v9-chapter-14-p026",
+        "manuscript-v9-chapter-14-p027",
+        "manuscript-v9-chapter-14-p028",
+        "manuscript-v9-chapter-14-p029",
+        "manuscript-v9-chapter-14-p030",
+        "manuscript-v9-chapter-14-p031",
+        "manuscript-v9-chapter-14-p032",
+        "manuscript-v9-chapter-14-p033",
+        "manuscript-v9-chapter-14-p034",
+        "manuscript-v9-chapter-14-p035",
+        "manuscript-v9-chapter-14-p036",
+        "manuscript-v9-chapter-14-p037",
+        "manuscript-v9-chapter-14-p038",
+        "manuscript-v9-chapter-14-p039",
+        "manuscript-v9-chapter-14-note-1-p001",
+        "manuscript-v9-chapter-14-note-2-p001",
+        "manuscript-v9-chapter-14-note-2-p002",
+        "manuscript-v9-chapter-14-note-3-p001",
+        "manuscript-v9-chapter-14-note-4-p001",
+        "manuscript-v9-chapter-14-note-5-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-15",
+      "from_source_sha256": "e5c3f693465aac9fd05ad05b165c214f5f28dc220c47d292375e77d5e800402e",
+      "to_source_sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-15-p001",
+        "manuscript-v8-chapter-15-p002",
+        "manuscript-v8-chapter-15-p003",
+        "manuscript-v8-chapter-15-p004",
+        "manuscript-v8-chapter-15-p005",
+        "manuscript-v8-chapter-15-p006",
+        "manuscript-v8-chapter-15-p007",
+        "manuscript-v8-chapter-15-p008",
+        "manuscript-v8-chapter-15-p009",
+        "manuscript-v8-chapter-15-p010",
+        "manuscript-v8-chapter-15-p011",
+        "manuscript-v8-chapter-15-p012",
+        "manuscript-v8-chapter-15-p013",
+        "manuscript-v8-chapter-15-p014",
+        "manuscript-v8-chapter-15-p015",
+        "manuscript-v8-chapter-15-p016",
+        "manuscript-v8-chapter-15-p017",
+        "manuscript-v8-chapter-15-p018",
+        "manuscript-v8-chapter-15-p019",
+        "manuscript-v8-chapter-15-p020",
+        "manuscript-v8-chapter-15-p021",
+        "manuscript-v8-chapter-15-apparatus-p001",
+        "manuscript-v8-chapter-15-apparatus-p002"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-15-p001",
+        "manuscript-v9-chapter-15-p002",
+        "manuscript-v9-chapter-15-p003",
+        "manuscript-v9-chapter-15-p004",
+        "manuscript-v9-chapter-15-p005",
+        "manuscript-v9-chapter-15-p006",
+        "manuscript-v9-chapter-15-p007",
+        "manuscript-v9-chapter-15-p008",
+        "manuscript-v9-chapter-15-p009",
+        "manuscript-v9-chapter-15-p010",
+        "manuscript-v9-chapter-15-p011",
+        "manuscript-v9-chapter-15-p012",
+        "manuscript-v9-chapter-15-p013",
+        "manuscript-v9-chapter-15-p014",
+        "manuscript-v9-chapter-15-p015",
+        "manuscript-v9-chapter-15-p016",
+        "manuscript-v9-chapter-15-p017",
+        "manuscript-v9-chapter-15-p018",
+        "manuscript-v9-chapter-15-p019",
+        "manuscript-v9-chapter-15-p020",
+        "manuscript-v9-chapter-15-p021",
+        "manuscript-v9-chapter-15-p022",
+        "manuscript-v9-chapter-15-p023",
+        "manuscript-v9-chapter-15-p024",
+        "manuscript-v9-chapter-15-p025",
+        "manuscript-v9-chapter-15-p026",
+        "manuscript-v9-chapter-15-p027",
+        "manuscript-v9-chapter-15-p028",
+        "manuscript-v9-chapter-15-p029",
+        "manuscript-v9-chapter-15-p030",
+        "manuscript-v9-chapter-15-p031",
+        "manuscript-v9-chapter-15-note-1-p001",
+        "manuscript-v9-chapter-15-note-2-p001",
+        "manuscript-v9-chapter-15-note-3-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-16",
+      "from_source_sha256": "dddf34b753a0f6bbe7a5fabfb1f791bf4f745c1eb4b307dfa49d1a97ddab2f10",
+      "to_source_sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-16-p001",
+        "manuscript-v8-chapter-16-p002",
+        "manuscript-v8-chapter-16-p003",
+        "manuscript-v8-chapter-16-p004",
+        "manuscript-v8-chapter-16-p005",
+        "manuscript-v8-chapter-16-p006",
+        "manuscript-v8-chapter-16-p007",
+        "manuscript-v8-chapter-16-p008",
+        "manuscript-v8-chapter-16-p009",
+        "manuscript-v8-chapter-16-p010",
+        "manuscript-v8-chapter-16-p011",
+        "manuscript-v8-chapter-16-p012",
+        "manuscript-v8-chapter-16-p013",
+        "manuscript-v8-chapter-16-p014",
+        "manuscript-v8-chapter-16-p015",
+        "manuscript-v8-chapter-16-p016",
+        "manuscript-v8-chapter-16-p017",
+        "manuscript-v8-chapter-16-p018",
+        "manuscript-v8-chapter-16-p019",
+        "manuscript-v8-chapter-16-p020",
+        "manuscript-v8-chapter-16-p021",
+        "manuscript-v8-chapter-16-p022",
+        "manuscript-v8-chapter-16-p023",
+        "manuscript-v8-chapter-16-p024",
+        "manuscript-v8-chapter-16-p025",
+        "manuscript-v8-chapter-16-p026",
+        "manuscript-v8-chapter-16-p027",
+        "manuscript-v8-chapter-16-p028",
+        "manuscript-v8-chapter-16-p029",
+        "manuscript-v8-chapter-16-p030",
+        "manuscript-v8-chapter-16-p031",
+        "manuscript-v8-chapter-16-p032",
+        "manuscript-v8-chapter-16-p033",
+        "manuscript-v8-chapter-16-p034",
+        "manuscript-v8-chapter-16-p035",
+        "manuscript-v8-chapter-16-p036",
+        "manuscript-v8-chapter-16-p037",
+        "manuscript-v8-chapter-16-p038",
+        "manuscript-v8-chapter-16-note-1-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-16-p001",
+        "manuscript-v9-chapter-16-p002",
+        "manuscript-v9-chapter-16-p003",
+        "manuscript-v9-chapter-16-p004",
+        "manuscript-v9-chapter-16-p005",
+        "manuscript-v9-chapter-16-p006",
+        "manuscript-v9-chapter-16-p007",
+        "manuscript-v9-chapter-16-p008",
+        "manuscript-v9-chapter-16-p009",
+        "manuscript-v9-chapter-16-p010",
+        "manuscript-v9-chapter-16-p011",
+        "manuscript-v9-chapter-16-p012",
+        "manuscript-v9-chapter-16-p013",
+        "manuscript-v9-chapter-16-p014",
+        "manuscript-v9-chapter-16-p015",
+        "manuscript-v9-chapter-16-p016",
+        "manuscript-v9-chapter-16-p017",
+        "manuscript-v9-chapter-16-p018",
+        "manuscript-v9-chapter-16-p019",
+        "manuscript-v9-chapter-16-p020",
+        "manuscript-v9-chapter-16-p021",
+        "manuscript-v9-chapter-16-p022",
+        "manuscript-v9-chapter-16-p023",
+        "manuscript-v9-chapter-16-p024",
+        "manuscript-v9-chapter-16-p025",
+        "manuscript-v9-chapter-16-p026",
+        "manuscript-v9-chapter-16-p027",
+        "manuscript-v9-chapter-16-p028",
+        "manuscript-v9-chapter-16-p029",
+        "manuscript-v9-chapter-16-p030",
+        "manuscript-v9-chapter-16-p031",
+        "manuscript-v9-chapter-16-p032",
+        "manuscript-v9-chapter-16-p033",
+        "manuscript-v9-chapter-16-p034",
+        "manuscript-v9-chapter-16-p035",
+        "manuscript-v9-chapter-16-p036",
+        "manuscript-v9-chapter-16-p037",
+        "manuscript-v9-chapter-16-p038",
+        "manuscript-v9-chapter-16-p039",
+        "manuscript-v9-chapter-16-p040",
+        "manuscript-v9-chapter-16-p041",
+        "manuscript-v9-chapter-16-p042",
+        "manuscript-v9-chapter-16-p043",
+        "manuscript-v9-chapter-16-p044",
+        "manuscript-v9-chapter-16-p045",
+        "manuscript-v9-chapter-16-p046",
+        "manuscript-v9-chapter-16-p047",
+        "manuscript-v9-chapter-16-note-1-p001",
+        "manuscript-v9-chapter-16-note-2-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-17",
+      "from_source_sha256": "5ef8ef4041d1969d73a037dc56effffc962c21c41a0a32e20abb9c4c04dc9303",
+      "to_source_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-17-p001",
+        "manuscript-v8-chapter-17-p002",
+        "manuscript-v8-chapter-17-p003",
+        "manuscript-v8-chapter-17-p004",
+        "manuscript-v8-chapter-17-p005",
+        "manuscript-v8-chapter-17-p006",
+        "manuscript-v8-chapter-17-p007",
+        "manuscript-v8-chapter-17-p008",
+        "manuscript-v8-chapter-17-p009",
+        "manuscript-v8-chapter-17-p010",
+        "manuscript-v8-chapter-17-p011",
+        "manuscript-v8-chapter-17-p012",
+        "manuscript-v8-chapter-17-p013",
+        "manuscript-v8-chapter-17-p014",
+        "manuscript-v8-chapter-17-p015",
+        "manuscript-v8-chapter-17-p016",
+        "manuscript-v8-chapter-17-p017",
+        "manuscript-v8-chapter-17-p018",
+        "manuscript-v8-chapter-17-p019",
+        "manuscript-v8-chapter-17-p020",
+        "manuscript-v8-chapter-17-p021",
+        "manuscript-v8-chapter-17-p022",
+        "manuscript-v8-chapter-17-p023",
+        "manuscript-v8-chapter-17-p024",
+        "manuscript-v8-chapter-17-p025",
+        "manuscript-v8-chapter-17-p026",
+        "manuscript-v8-chapter-17-p027",
+        "manuscript-v8-chapter-17-p028",
+        "manuscript-v8-chapter-17-p029",
+        "manuscript-v8-chapter-17-p030",
+        "manuscript-v8-chapter-17-p031",
+        "manuscript-v8-chapter-17-p032",
+        "manuscript-v8-chapter-17-note-1-p001",
+        "manuscript-v8-chapter-17-note-2-p001",
+        "manuscript-v8-chapter-17-note-3-p001",
+        "manuscript-v8-chapter-17-note-3-p002",
+        "manuscript-v8-chapter-17-note-4-p001"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-17-p001",
+        "manuscript-v9-chapter-17-p002",
+        "manuscript-v9-chapter-17-p003",
+        "manuscript-v9-chapter-17-p004",
+        "manuscript-v9-chapter-17-p005",
+        "manuscript-v9-chapter-17-p006",
+        "manuscript-v9-chapter-17-p007",
+        "manuscript-v9-chapter-17-p008",
+        "manuscript-v9-chapter-17-p009",
+        "manuscript-v9-chapter-17-p010",
+        "manuscript-v9-chapter-17-p011",
+        "manuscript-v9-chapter-17-p012",
+        "manuscript-v9-chapter-17-p013",
+        "manuscript-v9-chapter-17-p014",
+        "manuscript-v9-chapter-17-p015",
+        "manuscript-v9-chapter-17-p016",
+        "manuscript-v9-chapter-17-p017",
+        "manuscript-v9-chapter-17-p018",
+        "manuscript-v9-chapter-17-p019",
+        "manuscript-v9-chapter-17-p020",
+        "manuscript-v9-chapter-17-p021",
+        "manuscript-v9-chapter-17-p022",
+        "manuscript-v9-chapter-17-p023",
+        "manuscript-v9-chapter-17-p024",
+        "manuscript-v9-chapter-17-p025",
+        "manuscript-v9-chapter-17-p026",
+        "manuscript-v9-chapter-17-p027",
+        "manuscript-v9-chapter-17-p028",
+        "manuscript-v9-chapter-17-p029",
+        "manuscript-v9-chapter-17-p030",
+        "manuscript-v9-chapter-17-p031",
+        "manuscript-v9-chapter-17-p032",
+        "manuscript-v9-chapter-17-p033",
+        "manuscript-v9-chapter-17-p034",
+        "manuscript-v9-chapter-17-p035",
+        "manuscript-v9-chapter-17-p036",
+        "manuscript-v9-chapter-17-p037",
+        "manuscript-v9-chapter-17-p038",
+        "manuscript-v9-chapter-17-p039",
+        "manuscript-v9-chapter-17-p040",
+        "manuscript-v9-chapter-17-p041",
+        "manuscript-v9-chapter-17-note-1-p001",
+        "manuscript-v9-chapter-17-note-2-p001",
+        "manuscript-v9-chapter-17-note-3-p001",
+        "manuscript-v9-chapter-17-note-3-p002",
+        "manuscript-v9-chapter-17-note-4-p001",
+        "manuscript-v9-chapter-17-note-5-p001"
+      ]
+    },
+    {
+      "chapter_id": "chapter-18",
+      "from_source_sha256": "eb6c36926749e2fe3c08862891f318f30b02c18b30cc8b0f3b406a4102e522c2",
+      "to_source_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-chapter-18-p001",
+        "manuscript-v8-chapter-18-p002",
+        "manuscript-v8-chapter-18-p003",
+        "manuscript-v8-chapter-18-p004",
+        "manuscript-v8-chapter-18-p005",
+        "manuscript-v8-chapter-18-p006",
+        "manuscript-v8-chapter-18-p007",
+        "manuscript-v8-chapter-18-p008",
+        "manuscript-v8-chapter-18-p009",
+        "manuscript-v8-chapter-18-p010",
+        "manuscript-v8-chapter-18-p011",
+        "manuscript-v8-chapter-18-p012",
+        "manuscript-v8-chapter-18-p013",
+        "manuscript-v8-chapter-18-p014",
+        "manuscript-v8-chapter-18-p015",
+        "manuscript-v8-chapter-18-p016",
+        "manuscript-v8-chapter-18-p017",
+        "manuscript-v8-chapter-18-p018",
+        "manuscript-v8-chapter-18-p019",
+        "manuscript-v8-chapter-18-p020",
+        "manuscript-v8-chapter-18-p021",
+        "manuscript-v8-chapter-18-p022",
+        "manuscript-v8-chapter-18-p023",
+        "manuscript-v8-chapter-18-p024",
+        "manuscript-v8-chapter-18-p025",
+        "manuscript-v8-chapter-18-p026",
+        "manuscript-v8-chapter-18-p027",
+        "manuscript-v8-chapter-18-p028",
+        "manuscript-v8-chapter-18-p029",
+        "manuscript-v8-chapter-18-p030",
+        "manuscript-v8-chapter-18-p031",
+        "manuscript-v8-chapter-18-p032",
+        "manuscript-v8-chapter-18-p033",
+        "manuscript-v8-chapter-18-p034",
+        "manuscript-v8-chapter-18-p035",
+        "manuscript-v8-chapter-18-note-1-p001",
+        "manuscript-v8-chapter-18-note-2-p001",
+        "manuscript-v8-chapter-18-note-2-p002"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-chapter-18-p001",
+        "manuscript-v9-chapter-18-p002",
+        "manuscript-v9-chapter-18-p003",
+        "manuscript-v9-chapter-18-p004",
+        "manuscript-v9-chapter-18-p005",
+        "manuscript-v9-chapter-18-p006",
+        "manuscript-v9-chapter-18-p007",
+        "manuscript-v9-chapter-18-p008",
+        "manuscript-v9-chapter-18-p009",
+        "manuscript-v9-chapter-18-p010",
+        "manuscript-v9-chapter-18-p011",
+        "manuscript-v9-chapter-18-p012",
+        "manuscript-v9-chapter-18-p013",
+        "manuscript-v9-chapter-18-p014",
+        "manuscript-v9-chapter-18-p015",
+        "manuscript-v9-chapter-18-p016",
+        "manuscript-v9-chapter-18-p017",
+        "manuscript-v9-chapter-18-p018",
+        "manuscript-v9-chapter-18-p019",
+        "manuscript-v9-chapter-18-p020",
+        "manuscript-v9-chapter-18-p021",
+        "manuscript-v9-chapter-18-p022",
+        "manuscript-v9-chapter-18-p023",
+        "manuscript-v9-chapter-18-p024",
+        "manuscript-v9-chapter-18-p025",
+        "manuscript-v9-chapter-18-p026",
+        "manuscript-v9-chapter-18-p027",
+        "manuscript-v9-chapter-18-p028",
+        "manuscript-v9-chapter-18-p029",
+        "manuscript-v9-chapter-18-p030",
+        "manuscript-v9-chapter-18-p031",
+        "manuscript-v9-chapter-18-p032",
+        "manuscript-v9-chapter-18-p033",
+        "manuscript-v9-chapter-18-p034",
+        "manuscript-v9-chapter-18-p035",
+        "manuscript-v9-chapter-18-p036",
+        "manuscript-v9-chapter-18-p037",
+        "manuscript-v9-chapter-18-p038",
+        "manuscript-v9-chapter-18-p039",
+        "manuscript-v9-chapter-18-p040",
+        "manuscript-v9-chapter-18-p041",
+        "manuscript-v9-chapter-18-note-1-p001",
+        "manuscript-v9-chapter-18-note-2-p001",
+        "manuscript-v9-chapter-18-note-2-p002"
+      ]
+    },
+    {
+      "chapter_id": "epilogue",
+      "from_source_sha256": "8929fde5daaceabbeeaf409db3c190218b14a569af6a8a8d897dff5a21818e58",
+      "to_source_sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c",
+      "action": "new-identities-no-annotation-transfer",
+      "retired_block_ids": [
+        "manuscript-v8-epilogue-p001",
+        "manuscript-v8-epilogue-p002",
+        "manuscript-v8-epilogue-p003",
+        "manuscript-v8-epilogue-p004",
+        "manuscript-v8-epilogue-p005",
+        "manuscript-v8-epilogue-p006",
+        "manuscript-v8-epilogue-p007",
+        "manuscript-v8-epilogue-p008",
+        "manuscript-v8-epilogue-p009",
+        "manuscript-v8-epilogue-p010",
+        "manuscript-v8-epilogue-p011"
+      ],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-epilogue-p001",
+        "manuscript-v9-epilogue-p002",
+        "manuscript-v9-epilogue-p003",
+        "manuscript-v9-epilogue-p004",
+        "manuscript-v9-epilogue-p005",
+        "manuscript-v9-epilogue-p006",
+        "manuscript-v9-epilogue-p007",
+        "manuscript-v9-epilogue-p008",
+        "manuscript-v9-epilogue-p009",
+        "manuscript-v9-epilogue-p010",
+        "manuscript-v9-epilogue-p011",
+        "manuscript-v9-epilogue-p012"
+      ]
+    },
+    {
+      "chapter_id": "appendix-d",
+      "from_source_sha256": null,
+      "to_source_sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae",
+      "action": "new-chapter-no-annotation-transfer",
+      "retired_block_ids": [],
+      "retained_block_ids": [],
+      "introduced_block_ids": [
+        "manuscript-v9-appendix-d-p001",
+        "manuscript-v9-appendix-d-p002",
+        "manuscript-v9-appendix-d-p003",
+        "manuscript-v9-appendix-d-p004",
+        "manuscript-v9-appendix-d-p005",
+        "manuscript-v9-appendix-d-p006",
+        "manuscript-v9-appendix-d-p007",
+        "manuscript-v9-appendix-d-p008",
+        "manuscript-v9-appendix-d-p009",
+        "manuscript-v9-appendix-d-p010",
+        "manuscript-v9-appendix-d-p011",
+        "manuscript-v9-appendix-d-p012",
+        "manuscript-v9-appendix-d-p013",
+        "manuscript-v9-appendix-d-p014",
+        "manuscript-v9-appendix-d-p015",
+        "manuscript-v9-appendix-d-p016",
+        "manuscript-v9-appendix-d-p017",
+        "manuscript-v9-appendix-d-p018",
+        "manuscript-v9-appendix-d-p019",
+        "manuscript-v9-appendix-d-p020",
+        "manuscript-v9-appendix-d-p021",
+        "manuscript-v9-appendix-d-p022",
+        "manuscript-v9-appendix-d-p023",
+        "manuscript-v9-appendix-d-p024",
+        "manuscript-v9-appendix-d-p025",
+        "manuscript-v9-appendix-d-p026",
+        "manuscript-v9-appendix-d-p027",
+        "manuscript-v9-appendix-d-p028",
+        "manuscript-v9-appendix-d-p029",
+        "manuscript-v9-appendix-d-p030",
+        "manuscript-v9-appendix-d-p031",
+        "manuscript-v9-appendix-d-p032",
+        "manuscript-v9-appendix-d-p033",
+        "manuscript-v9-appendix-d-p034",
+        "manuscript-v9-appendix-d-p035",
+        "manuscript-v9-appendix-d-p036",
+        "manuscript-v9-appendix-d-p037",
+        "manuscript-v9-appendix-d-p038",
+        "manuscript-v9-appendix-d-p039",
+        "manuscript-v9-appendix-d-p040",
+        "manuscript-v9-appendix-d-p041",
+        "manuscript-v9-appendix-d-p042",
+        "manuscript-v9-appendix-d-p043",
+        "manuscript-v9-appendix-d-p044",
+        "manuscript-v9-appendix-d-p045",
+        "manuscript-v9-appendix-d-p046",
+        "manuscript-v9-appendix-d-p047",
+        "manuscript-v9-appendix-d-p048",
+        "manuscript-v9-appendix-d-p049",
+        "manuscript-v9-appendix-d-p050",
+        "manuscript-v9-appendix-d-p051",
+        "manuscript-v9-appendix-d-p052",
+        "manuscript-v9-appendix-d-p053",
+        "manuscript-v9-appendix-d-p054",
+        "manuscript-v9-appendix-d-p055",
+        "manuscript-v9-appendix-d-p056",
+        "manuscript-v9-appendix-d-p057",
+        "manuscript-v9-appendix-d-p058",
+        "manuscript-v9-appendix-d-p059",
+        "manuscript-v9-appendix-d-p060",
+        "manuscript-v9-appendix-d-p061",
+        "manuscript-v9-appendix-d-p062",
+        "manuscript-v9-appendix-d-p063",
+        "manuscript-v9-appendix-d-p064",
+        "manuscript-v9-appendix-d-p065",
+        "manuscript-v9-appendix-d-p066",
+        "manuscript-v9-appendix-d-p067",
+        "manuscript-v9-appendix-d-p068",
+        "manuscript-v9-appendix-d-p069",
+        "manuscript-v9-appendix-d-p070",
+        "manuscript-v9-appendix-d-p071",
+        "manuscript-v9-appendix-d-p072",
+        "manuscript-v9-appendix-d-p073",
+        "manuscript-v9-appendix-d-p074",
+        "manuscript-v9-appendix-d-p075",
+        "manuscript-v9-appendix-d-p076",
+        "manuscript-v9-appendix-d-p077",
+        "manuscript-v9-appendix-d-p078",
+        "manuscript-v9-appendix-d-p079",
+        "manuscript-v9-appendix-d-p080",
+        "manuscript-v9-appendix-d-p081",
+        "manuscript-v9-appendix-d-p082",
+        "manuscript-v9-appendix-d-p083",
+        "manuscript-v9-appendix-d-p084",
+        "manuscript-v9-appendix-d-p085",
+        "manuscript-v9-appendix-d-p086",
+        "manuscript-v9-appendix-d-p087",
+        "manuscript-v9-appendix-d-p088",
+        "manuscript-v9-appendix-d-p089",
+        "manuscript-v9-appendix-d-p090",
+        "manuscript-v9-appendix-d-p091",
+        "manuscript-v9-appendix-d-p092",
+        "manuscript-v9-appendix-d-p093",
+        "manuscript-v9-appendix-d-p094",
+        "manuscript-v9-appendix-d-p095",
+        "manuscript-v9-appendix-d-p096",
+        "manuscript-v9-appendix-d-p097",
+        "manuscript-v9-appendix-d-p098",
+        "manuscript-v9-appendix-d-p099",
+        "manuscript-v9-appendix-d-p100",
+        "manuscript-v9-appendix-d-p101",
+        "manuscript-v9-appendix-d-p102",
+        "manuscript-v9-appendix-d-p103",
+        "manuscript-v9-appendix-d-p104",
+        "manuscript-v9-appendix-d-p105",
+        "manuscript-v9-appendix-d-p106",
+        "manuscript-v9-appendix-d-p107",
+        "manuscript-v9-appendix-d-p108",
+        "manuscript-v9-appendix-d-p109",
+        "manuscript-v9-appendix-d-p110",
+        "manuscript-v9-appendix-d-p111",
+        "manuscript-v9-appendix-d-p112",
+        "manuscript-v9-appendix-d-p113",
+        "manuscript-v9-appendix-d-p114",
+        "manuscript-v9-appendix-d-p115",
+        "manuscript-v9-appendix-d-p116",
+        "manuscript-v9-appendix-d-p117",
+        "manuscript-v9-appendix-d-p118",
+        "manuscript-v9-appendix-d-p119",
+        "manuscript-v9-appendix-d-p120",
+        "manuscript-v9-appendix-d-p121",
+        "manuscript-v9-appendix-d-p122",
+        "manuscript-v9-appendix-d-p123",
+        "manuscript-v9-appendix-d-p124",
+        "manuscript-v9-appendix-d-p125",
+        "manuscript-v9-appendix-d-p126",
+        "manuscript-v9-appendix-d-p127",
+        "manuscript-v9-appendix-d-p128",
+        "manuscript-v9-appendix-d-p129",
+        "manuscript-v9-appendix-d-p130",
+        "manuscript-v9-appendix-d-p131",
+        "manuscript-v9-appendix-d-p132",
+        "manuscript-v9-appendix-d-p133",
+        "manuscript-v9-appendix-d-p134",
+        "manuscript-v9-appendix-d-p135",
+        "manuscript-v9-appendix-d-p136",
+        "manuscript-v9-appendix-d-p137",
+        "manuscript-v9-appendix-d-p138",
+        "manuscript-v9-appendix-d-p139",
+        "manuscript-v9-appendix-d-p140",
+        "manuscript-v9-appendix-d-p141",
+        "manuscript-v9-appendix-d-p142",
+        "manuscript-v9-appendix-d-p143",
+        "manuscript-v9-appendix-d-p144",
+        "manuscript-v9-appendix-d-p145",
+        "manuscript-v9-appendix-d-p146",
+        "manuscript-v9-appendix-d-p147",
+        "manuscript-v9-appendix-d-p148",
+        "manuscript-v9-appendix-d-p149",
+        "manuscript-v9-appendix-d-p150",
+        "manuscript-v9-appendix-d-p151",
+        "manuscript-v9-appendix-d-p152",
+        "manuscript-v9-appendix-d-p153",
+        "manuscript-v9-appendix-d-p154",
+        "manuscript-v9-appendix-d-p155",
+        "manuscript-v9-appendix-d-p156",
+        "manuscript-v9-appendix-d-p157",
+        "manuscript-v9-appendix-d-p158",
+        "manuscript-v9-appendix-d-p159",
+        "manuscript-v9-appendix-d-p160",
+        "manuscript-v9-appendix-d-p161",
+        "manuscript-v9-appendix-d-p162",
+        "manuscript-v9-appendix-d-p163",
+        "manuscript-v9-appendix-d-p164",
+        "manuscript-v9-appendix-d-p165",
+        "manuscript-v9-appendix-d-p166",
+        "manuscript-v9-appendix-d-p167",
+        "manuscript-v9-appendix-d-p168",
+        "manuscript-v9-appendix-d-p169",
+        "manuscript-v9-appendix-d-p170",
+        "manuscript-v9-appendix-d-p171",
+        "manuscript-v9-appendix-d-p172",
+        "manuscript-v9-appendix-d-p173",
+        "manuscript-v9-appendix-d-p174",
+        "manuscript-v9-appendix-d-p175",
+        "manuscript-v9-appendix-d-p176",
+        "manuscript-v9-appendix-d-p177",
+        "manuscript-v9-appendix-d-p178"
+      ]
+    }
+  ],
+  "next_identity_map_sha256": "1f1c0264a405e08a4fe48dae9a7c48f56c2c6773625b5876d27e0a22a0c43ba3"
+}

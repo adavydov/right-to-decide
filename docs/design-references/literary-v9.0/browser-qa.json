@@ -1,0 +1,1154 @@
+{
+  "status": "passed",
+  "at": "2026-09-07T03:30:25.167Z",
+  "base": "http://127.0.0.1:3217/right-to-decide",
+  "edition": "9.0",
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSha256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "browser": "Microsoft Edge, headless; fresh isolated context",
+  "pages": [
+    {
+      "id": "prologue",
+      "blocks": 21,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-01",
+      "blocks": 35,
+      "notes": 4,
+      "references": 4,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-02",
+      "blocks": 31,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-03",
+      "blocks": 28,
+      "notes": 3,
+      "references": 3,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-04",
+      "blocks": 38,
+      "notes": 5,
+      "references": 6,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-05",
+      "blocks": 35,
+      "notes": 4,
+      "references": 4,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-06",
+      "blocks": 34,
+      "notes": 4,
+      "references": 4,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-07",
+      "blocks": 29,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-08",
+      "blocks": 31,
+      "notes": 1,
+      "references": 1,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-09",
+      "blocks": 34,
+      "notes": 1,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-10",
+      "blocks": 38,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-11",
+      "blocks": 48,
+      "notes": 3,
+      "references": 4,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-12",
+      "blocks": 47,
+      "notes": 4,
+      "references": 4,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-13",
+      "blocks": 31,
+      "notes": 3,
+      "references": 3,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-14",
+      "blocks": 45,
+      "notes": 5,
+      "references": 6,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-15",
+      "blocks": 34,
+      "notes": 3,
+      "references": 3,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-16",
+      "blocks": 49,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-17",
+      "blocks": 47,
+      "notes": 5,
+      "references": 7,
+      "exactText": "passed"
+    },
+    {
+      "id": "chapter-18",
+      "blocks": 44,
+      "notes": 2,
+      "references": 2,
+      "exactText": "passed"
+    },
+    {
+      "id": "epilogue",
+      "blocks": 12,
+      "notes": 0,
+      "references": 0,
+      "exactText": "passed"
+    },
+    {
+      "id": "appendix-d",
+      "blocks": 178,
+      "notes": 0,
+      "references": 0,
+      "exactText": "passed"
+    }
+  ],
+  "layouts": [
+    {
+      "name": "read",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Право на решение"
+    },
+    {
+      "name": "contents",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Развёрнутое содержание"
+    },
+    {
+      "name": "prologue",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Пролог. Право на решение"
+    },
+    {
+      "name": "chapter-01",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 1. Следующий мост построит машина"
+    },
+    {
+      "name": "chapter-02",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 2. Обеспечены, но отстранены"
+    },
+    {
+      "name": "chapter-03",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 3. Будущее без новых авторов"
+    },
+    {
+      "name": "chapter-04",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 4. От ученика к создателю"
+    },
+    {
+      "name": "chapter-05",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 5. Почему настоящая работа не всегда учит"
+    },
+    {
+      "name": "chapter-06",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 6. Почему одного знания недостаточно"
+    },
+    {
+      "name": "chapter-07",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 7. Три результата одной системы"
+    },
+    {
+      "name": "chapter-08",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 8. Что изменилось в следующей задаче"
+    },
+    {
+      "name": "chapter-09",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 9. Кто продолжит без основателя"
+    },
+    {
+      "name": "chapter-10",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 10. Кому принадлежат средства создания"
+    },
+    {
+      "name": "chapter-11",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 11. Кто оплачивает право пробовать"
+    },
+    {
+      "name": "chapter-12",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 12. Кто может изменить правила"
+    },
+    {
+      "name": "chapter-13",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 13. Когда можно доверить решение"
+    },
+    {
+      "name": "chapter-14",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 14. Кто выбирает ваше развитие"
+    },
+    {
+      "name": "chapter-15",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 15. Право не участвовать — и вернуться"
+    },
+    {
+      "name": "chapter-16",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 16. Как начать в существующем мире"
+    },
+    {
+      "name": "chapter-17",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 17. Когда ИИ становится сильнее нашего решения"
+    },
+    {
+      "name": "chapter-18",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Глава 18. Следующее поколение меняет наш проект"
+    },
+    {
+      "name": "epilogue",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Эпилог. Следующий вопрос — не наш"
+    },
+    {
+      "name": "appendix-d",
+      "viewport": 1440,
+      "width": 1440,
+      "heading": "Приложение Д. Паспорт сценария и двух земных моделей"
+    },
+    {
+      "name": "read",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Право на решение"
+    },
+    {
+      "name": "contents",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Развёрнутое содержание"
+    },
+    {
+      "name": "prologue",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Пролог. Право на решение"
+    },
+    {
+      "name": "chapter-01",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 1. Следующий мост построит машина"
+    },
+    {
+      "name": "chapter-02",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 2. Обеспечены, но отстранены"
+    },
+    {
+      "name": "chapter-03",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 3. Будущее без новых авторов"
+    },
+    {
+      "name": "chapter-04",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 4. От ученика к создателю"
+    },
+    {
+      "name": "chapter-05",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 5. Почему настоящая работа не всегда учит"
+    },
+    {
+      "name": "chapter-06",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 6. Почему одного знания недостаточно"
+    },
+    {
+      "name": "chapter-07",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 7. Три результата одной системы"
+    },
+    {
+      "name": "chapter-08",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 8. Что изменилось в следующей задаче"
+    },
+    {
+      "name": "chapter-09",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 9. Кто продолжит без основателя"
+    },
+    {
+      "name": "chapter-10",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 10. Кому принадлежат средства создания"
+    },
+    {
+      "name": "chapter-11",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 11. Кто оплачивает право пробовать"
+    },
+    {
+      "name": "chapter-12",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 12. Кто может изменить правила"
+    },
+    {
+      "name": "chapter-13",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 13. Когда можно доверить решение"
+    },
+    {
+      "name": "chapter-14",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 14. Кто выбирает ваше развитие"
+    },
+    {
+      "name": "chapter-15",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 15. Право не участвовать — и вернуться"
+    },
+    {
+      "name": "chapter-16",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 16. Как начать в существующем мире"
+    },
+    {
+      "name": "chapter-17",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 17. Когда ИИ становится сильнее нашего решения"
+    },
+    {
+      "name": "chapter-18",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Глава 18. Следующее поколение меняет наш проект"
+    },
+    {
+      "name": "epilogue",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Эпилог. Следующий вопрос — не наш"
+    },
+    {
+      "name": "appendix-d",
+      "viewport": 390,
+      "width": 390,
+      "heading": "Приложение Д. Паспорт сценария и двух земных моделей"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "whole-book",
+      "format": "md",
+      "path": "/book/right-to-decide-v9.0.md",
+      "bytes": 623590,
+      "sha256": "320820c17f00942c73ea62153a93db945d1d5462d2867dc1902839ff28326759"
+    },
+    {
+      "id": "whole-book",
+      "format": "docx",
+      "path": "/book/right-to-decide-v9.0.docx",
+      "bytes": 200654,
+      "sha256": "bf7c8c8403eb7008e8ff7111c1400586a9014de6c9e61cf8602ffce18619c3fd"
+    },
+    {
+      "id": "whole-book",
+      "format": "pdf",
+      "path": "/book/right-to-decide-v9.0.pdf",
+      "bytes": 1080275,
+      "sha256": "1135407f5ac737bacc914a316d373eec7124375b11f96da7e521ed5fe33b5936"
+    },
+    {
+      "id": "prologue",
+      "format": "docx",
+      "path": "/book/chapters/prologue-v9.0.docx",
+      "bytes": 20233,
+      "sha256": "ac42239c894318c0e1f3154180da1dc61bc2aefb7e76ed485cadb4c3f1a54140"
+    },
+    {
+      "id": "chapter-01",
+      "format": "docx",
+      "path": "/book/chapters/chapter-01-v9.0.docx",
+      "bytes": 37169,
+      "sha256": "0c3ef68a0d84d0ad1937067745592e8d0b2bfe4071702b2898f9588a99e3bf18"
+    },
+    {
+      "id": "chapter-02",
+      "format": "docx",
+      "path": "/book/chapters/chapter-02-v9.0.docx",
+      "bytes": 34071,
+      "sha256": "7055c24d21433d108167a794a1bcaf6001d6b02d1e3b28708b0cd803c25fb6d5"
+    },
+    {
+      "id": "chapter-03",
+      "format": "docx",
+      "path": "/book/chapters/chapter-03-v9.0.docx",
+      "bytes": 34232,
+      "sha256": "bd69627ed89b6ed7eff6148479e5bf6fd196cac4159d05735589999016ff304f"
+    },
+    {
+      "id": "chapter-04",
+      "format": "docx",
+      "path": "/book/chapters/chapter-04-v9.0.docx",
+      "bytes": 38065,
+      "sha256": "d62cce9a9b7ca8ef754fd3161a197dae60b7f58670a32be340b1bd982a0f707e"
+    },
+    {
+      "id": "chapter-05",
+      "format": "docx",
+      "path": "/book/chapters/chapter-05-v9.0.docx",
+      "bytes": 38762,
+      "sha256": "2b8c3edebd15ea248557ef943abf239c08ad59b3875ef5d310c7514789a1cc1b"
+    },
+    {
+      "id": "chapter-06",
+      "format": "docx",
+      "path": "/book/chapters/chapter-06-v9.0.docx",
+      "bytes": 38332,
+      "sha256": "e3d77eb6eab4490150187e0e329639cc48614353fe8660b670c02cebd2c4fb1b"
+    },
+    {
+      "id": "chapter-07",
+      "format": "docx",
+      "path": "/book/chapters/chapter-07-v9.0.docx",
+      "bytes": 32531,
+      "sha256": "d947606d58883180fe190e8aa727d0aa75b745ab11e1771296b84aeb18a6fa7d"
+    },
+    {
+      "id": "chapter-08",
+      "format": "docx",
+      "path": "/book/chapters/chapter-08-v9.0.docx",
+      "bytes": 32421,
+      "sha256": "afd8d2c42bb2e3f0dfc5167f45464e44595e4421ccfcf6bb02028c7a829692a5"
+    },
+    {
+      "id": "chapter-09",
+      "format": "docx",
+      "path": "/book/chapters/chapter-09-v9.0.docx",
+      "bytes": 36517,
+      "sha256": "17bb26a9623079a4367a05af31ac633bc567a58733fccfec5abf65cdabd78f35"
+    },
+    {
+      "id": "chapter-10",
+      "format": "docx",
+      "path": "/book/chapters/chapter-10-v9.0.docx",
+      "bytes": 42398,
+      "sha256": "2218a51e7b107787ecbf3d8d2e9dfd2ac55f23c56df337d2772e89fa8e5f588c"
+    },
+    {
+      "id": "chapter-11",
+      "format": "docx",
+      "path": "/book/chapters/chapter-11-v9.0.docx",
+      "bytes": 46529,
+      "sha256": "56c78efbb3e16b6b8635f597ec194e4d6446481e93a053cebef641ec2f508329"
+    },
+    {
+      "id": "chapter-12",
+      "format": "docx",
+      "path": "/book/chapters/chapter-12-v9.0.docx",
+      "bytes": 45568,
+      "sha256": "11209b9a607e85a32a976fc977279b570eebdcf438b53d48fbc1ae3977526f24"
+    },
+    {
+      "id": "chapter-13",
+      "format": "docx",
+      "path": "/book/chapters/chapter-13-v9.0.docx",
+      "bytes": 33527,
+      "sha256": "320a305d7cdf5c0f2a47bc130462f2d97e38f909e190b268e1e1523008f1b8da"
+    },
+    {
+      "id": "chapter-14",
+      "format": "docx",
+      "path": "/book/chapters/chapter-14-v9.0.docx",
+      "bytes": 47249,
+      "sha256": "372545b7f531defe4ee8c754aca6b65e02f249906acdb095fd06072b02cdce26"
+    },
+    {
+      "id": "chapter-15",
+      "format": "docx",
+      "path": "/book/chapters/chapter-15-v9.0.docx",
+      "bytes": 34001,
+      "sha256": "c501393abda883b1ae6bfa48883ef80936338e369606aa686d25a8b860dcbed7"
+    },
+    {
+      "id": "chapter-16",
+      "format": "docx",
+      "path": "/book/chapters/chapter-16-v9.0.docx",
+      "bytes": 49175,
+      "sha256": "f5e1bf6c16b7e7992696f106e956a5777e590ff2ca2a4e0ef5880a713e03dd0c"
+    },
+    {
+      "id": "chapter-17",
+      "format": "docx",
+      "path": "/book/chapters/chapter-17-v9.0.docx",
+      "bytes": 49212,
+      "sha256": "4d2fe7e1d38ef387c3fd00336eb821fef3e0b6579d54c741b63cfdc7c706fd22"
+    },
+    {
+      "id": "chapter-18",
+      "format": "docx",
+      "path": "/book/chapters/chapter-18-v9.0.docx",
+      "bytes": 40379,
+      "sha256": "b86e1d535bbaea80f60b01151588d598fa5e30f967c2b06b19c69a88dda615d3"
+    },
+    {
+      "id": "epilogue",
+      "format": "docx",
+      "path": "/book/chapters/epilogue-v9.0.docx",
+      "bytes": 12671,
+      "sha256": "47d937dd2065ba7f565c54e7b499aee9c2004e3c1cc4555f3ad6c0b217b7eb4f"
+    },
+    {
+      "id": "appendix-d",
+      "format": "docx",
+      "path": "/book/chapters/appendix-d-v9.0.docx",
+      "bytes": 128173,
+      "sha256": "c059f6bd3a1838ea89afbf75de4110d46b85603e59a35129327409d878a03b31"
+    }
+  ],
+  "notes": [
+    {
+      "chapter": "prologue",
+      "noteId": "manuscript-v9-prologue-note-1",
+      "refId": "manuscript-v9-prologue-p002-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "prologue",
+      "noteId": "manuscript-v9-prologue-note-2",
+      "refId": "manuscript-v9-prologue-p003-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-01",
+      "noteId": "manuscript-v9-chapter-01-note-1",
+      "refId": "manuscript-v9-chapter-01-p013-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-01",
+      "noteId": "manuscript-v9-chapter-01-note-2",
+      "refId": "manuscript-v9-chapter-01-p016-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-01",
+      "noteId": "manuscript-v9-chapter-01-note-3",
+      "refId": "manuscript-v9-chapter-01-p017-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-01",
+      "noteId": "manuscript-v9-chapter-01-note-4",
+      "refId": "manuscript-v9-chapter-01-p021-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-02",
+      "noteId": "manuscript-v9-chapter-02-note-1",
+      "refId": "manuscript-v9-chapter-02-p009-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-02",
+      "noteId": "manuscript-v9-chapter-02-note-2",
+      "refId": "manuscript-v9-chapter-02-p019-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-03",
+      "noteId": "manuscript-v9-chapter-03-note-1",
+      "refId": "manuscript-v9-chapter-03-p012-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-03",
+      "noteId": "manuscript-v9-chapter-03-note-2",
+      "refId": "manuscript-v9-chapter-03-p014-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-03",
+      "noteId": "manuscript-v9-chapter-03-note-3",
+      "refId": "manuscript-v9-chapter-03-p018-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-1",
+      "refId": "manuscript-v9-chapter-04-p004-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-2",
+      "refId": "manuscript-v9-chapter-04-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-2",
+      "refId": "manuscript-v9-chapter-04-p011-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-3",
+      "refId": "manuscript-v9-chapter-04-p020-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-4",
+      "refId": "manuscript-v9-chapter-04-p026-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-5",
+      "refId": "manuscript-v9-chapter-04-p028-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-05",
+      "noteId": "manuscript-v9-chapter-05-note-2",
+      "refId": "manuscript-v9-chapter-05-p006-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-05",
+      "noteId": "manuscript-v9-chapter-05-note-3",
+      "refId": "manuscript-v9-chapter-05-p016-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-05",
+      "noteId": "manuscript-v9-chapter-05-note-1",
+      "refId": "manuscript-v9-chapter-05-p020-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-05",
+      "noteId": "manuscript-v9-chapter-05-note-4",
+      "refId": "manuscript-v9-chapter-05-p022-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-06",
+      "noteId": "manuscript-v9-chapter-06-note-1",
+      "refId": "manuscript-v9-chapter-06-p001-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-06",
+      "noteId": "manuscript-v9-chapter-06-note-2",
+      "refId": "manuscript-v9-chapter-06-p006-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-06",
+      "noteId": "manuscript-v9-chapter-06-note-3",
+      "refId": "manuscript-v9-chapter-06-p014-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-06",
+      "noteId": "manuscript-v9-chapter-06-note-4",
+      "refId": "manuscript-v9-chapter-06-p023-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-07",
+      "noteId": "manuscript-v9-chapter-07-note-1",
+      "refId": "manuscript-v9-chapter-07-p010-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-07",
+      "noteId": "manuscript-v9-chapter-07-note-2",
+      "refId": "manuscript-v9-chapter-07-p019-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-08",
+      "noteId": "manuscript-v9-chapter-08-note-1",
+      "refId": "manuscript-v9-chapter-08-p021-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-09",
+      "noteId": "manuscript-v9-chapter-09-note-1",
+      "refId": "manuscript-v9-chapter-09-p002-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-09",
+      "noteId": "manuscript-v9-chapter-09-note-1",
+      "refId": "manuscript-v9-chapter-09-p003-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-10",
+      "noteId": "manuscript-v9-chapter-10-note-1",
+      "refId": "manuscript-v9-chapter-10-p025-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-10",
+      "noteId": "manuscript-v9-chapter-10-note-2",
+      "refId": "manuscript-v9-chapter-10-p029-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-1",
+      "refId": "manuscript-v9-chapter-11-p009-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-2",
+      "refId": "manuscript-v9-chapter-11-p012-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-2",
+      "refId": "manuscript-v9-chapter-11-p013-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-3",
+      "refId": "manuscript-v9-chapter-11-p019-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-12",
+      "noteId": "manuscript-v9-chapter-12-note-1",
+      "refId": "manuscript-v9-chapter-12-p006-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-12",
+      "noteId": "manuscript-v9-chapter-12-note-2",
+      "refId": "manuscript-v9-chapter-12-p021-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-12",
+      "noteId": "manuscript-v9-chapter-12-note-3",
+      "refId": "manuscript-v9-chapter-12-p031-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-12",
+      "noteId": "manuscript-v9-chapter-12-note-4",
+      "refId": "manuscript-v9-chapter-12-p033-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-13",
+      "noteId": "manuscript-v9-chapter-13-note-1",
+      "refId": "manuscript-v9-chapter-13-p004-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-13",
+      "noteId": "manuscript-v9-chapter-13-note-2",
+      "refId": "manuscript-v9-chapter-13-p016-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-13",
+      "noteId": "manuscript-v9-chapter-13-note-3",
+      "refId": "manuscript-v9-chapter-13-p027-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-5",
+      "refId": "manuscript-v9-chapter-14-p005-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-4",
+      "refId": "manuscript-v9-chapter-14-p007-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-4",
+      "refId": "manuscript-v9-chapter-14-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-1",
+      "refId": "manuscript-v9-chapter-14-p011-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-3",
+      "refId": "manuscript-v9-chapter-14-p017-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-2",
+      "refId": "manuscript-v9-chapter-14-p022-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-15",
+      "noteId": "manuscript-v9-chapter-15-note-1",
+      "refId": "manuscript-v9-chapter-15-p017-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-15",
+      "noteId": "manuscript-v9-chapter-15-note-2",
+      "refId": "manuscript-v9-chapter-15-p024-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-15",
+      "noteId": "manuscript-v9-chapter-15-note-3",
+      "refId": "manuscript-v9-chapter-15-p031-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-16",
+      "noteId": "manuscript-v9-chapter-16-note-1",
+      "refId": "manuscript-v9-chapter-16-p020-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-16",
+      "noteId": "manuscript-v9-chapter-16-note-2",
+      "refId": "manuscript-v9-chapter-16-p041-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-4",
+      "refId": "manuscript-v9-chapter-17-p007-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-4",
+      "refId": "manuscript-v9-chapter-17-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-1",
+      "refId": "manuscript-v9-chapter-17-p014-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-1",
+      "refId": "manuscript-v9-chapter-17-p019-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-2",
+      "refId": "manuscript-v9-chapter-17-p019-ref-2",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-3",
+      "refId": "manuscript-v9-chapter-17-p021-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-5",
+      "refId": "manuscript-v9-chapter-17-p023-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-18",
+      "noteId": "manuscript-v9-chapter-18-note-1",
+      "refId": "manuscript-v9-chapter-18-p004-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-18",
+      "noteId": "manuscript-v9-chapter-18-note-2",
+      "refId": "manuscript-v9-chapter-18-p034-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    }
+  ],
+  "screenshots": [
+    "docs/design-references/literary-v9.0/read-1440.png",
+    "docs/design-references/literary-v9.0/table-chapter-11-0-1440.png",
+    "docs/design-references/literary-v9.0/notes-ch12-1440.png",
+    "docs/design-references/literary-v9.0/table-chapter-16-0-1440.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-0-1440.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-1-1440.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-2-1440.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-3-1440.png",
+    "docs/design-references/literary-v9.0/read-390.png",
+    "docs/design-references/literary-v9.0/table-chapter-11-0-390.png",
+    "docs/design-references/literary-v9.0/notes-ch12-390.png",
+    "docs/design-references/literary-v9.0/table-chapter-16-0-390.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-0-390.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-1-390.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-2-390.png",
+    "docs/design-references/literary-v9.0/table-appendix-d-3-390.png"
+  ],
+  "errors": [],
+  "repeatedNotes": [
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-2",
+      "refId": "manuscript-v9-chapter-04-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-04",
+      "noteId": "manuscript-v9-chapter-04-note-2",
+      "refId": "manuscript-v9-chapter-04-p011-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-09",
+      "noteId": "manuscript-v9-chapter-09-note-1",
+      "refId": "manuscript-v9-chapter-09-p002-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-09",
+      "noteId": "manuscript-v9-chapter-09-note-1",
+      "refId": "manuscript-v9-chapter-09-p003-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-2",
+      "refId": "manuscript-v9-chapter-11-p012-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-11",
+      "noteId": "manuscript-v9-chapter-11-note-2",
+      "refId": "manuscript-v9-chapter-11-p013-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-4",
+      "refId": "manuscript-v9-chapter-14-p007-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-14",
+      "noteId": "manuscript-v9-chapter-14-note-4",
+      "refId": "manuscript-v9-chapter-14-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-4",
+      "refId": "manuscript-v9-chapter-17-p007-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-4",
+      "refId": "manuscript-v9-chapter-17-p008-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-1",
+      "refId": "manuscript-v9-chapter-17-p014-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    },
+    {
+      "chapter": "chapter-17",
+      "noteId": "manuscript-v9-chapter-17-note-1",
+      "refId": "manuscript-v9-chapter-17-p019-ref-1",
+      "forward": "passed",
+      "backward": "passed"
+    }
+  ]
+}

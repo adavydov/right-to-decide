@@ -1,0 +1,10 @@
+{
+  "scope": "AST parsing only; no manuscript assembly, acceptance fixture or release date created",
+  "files": [
+    "scripts/release_v9.py",
+    "scripts/publish-manuscript.py",
+    "manuscript\\2026-09-06-corpus-rebuild\\build-reading.py",
+    "manuscript\\2026-09-06-corpus-rebuild\\technical\\release_metadata.py"
+  ],
+  "allParsed": true
+}

@@ -1,0 +1,7 @@
+{
+  "path": "scripts/validate-export.mjs",
+  "oldSHA": "b808bcd4d038e344a84bd7ad66eafde051ce961b4ad7a8f82eee272f4338945e",
+  "newSHA": "cd1eae354031217fce987a7c0050f3e8999be524cdc0339f01ace1832f2e9600",
+  "publicationSelectionPinned": false,
+  "change": "Include v9 in exact per-run text, formatting and link comparison; existing v6-v8 branches preserved"
+}

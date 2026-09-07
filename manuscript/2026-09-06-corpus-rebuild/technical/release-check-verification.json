@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "recordedAt": "2026-09-07T03:31:13.254149+00:00",
+  "command": "npm run check",
+  "environment": {
+    "NEXT_PUBLIC_EDITORIAL_MODE": "static",
+    "NEXT_PUBLIC_BASE_PATH": "/right-to-decide",
+    "Node": "24.19.0",
+    "Python": "bundled runtime"
+  },
+  "exitCode": 0,
+  "log": "technical/npm-check-static-complete.log",
+  "logSHA256": "dc022f8e60aee4e627dfa998cc4a9d3fb672d5604a48002130907fd1753a59fc",
+  "releaseId": "literary-manuscript-v9.0-26472e4aa686",
+  "bookSHA256": "0ccd9e55bb21b5daf32da5a0a5f3c70bd2d83c289e9b72bed4eaf99252747ed5",
+  "publicationSelectionSHA256": "b494952ab7ee6d30767c4c4b706a20c572718b3bf8fb3d677971e15a5e53441e",
+  "allSelectionInputsMatch": true,
+  "selectionInputCount": 119,
+  "acceptanceSHA256": "3eb9e70dc390f9d10b89f650d9273b03b1d5006af816a33f863d9f6933d3ef8c",
+  "checks": {
+    "pythonTestsPassed": 36,
+    "staticTestsPassed": 33,
+    "testsFailed": 0,
+    "testsSkipped": 0,
+    "exactReleaseGate": true,
+    "lint": true,
+    "typescript": true,
+    "content": true,
+    "productionBuild": true,
+    "generatedPages": 189,
+    "export": true,
+    "publicationRoutes": 164,
+    "staticFiles": 1606,
+    "staticOpenEditorial": true,
+    "privateArtifactFindings": 0
+  },
+  "scope": "Local build and automated checks. Browser QA recorded separately; no external publication, commit or push performed by this agent.",
+  "history": [
+    {
+      "log": "technical/npm-check-static.log",
+      "exitCode": 1,
+      "cause": "Three obsolete test fixture assumptions"
+    },
+    {
+      "log": "technical/npm-check-static-final.log",
+      "exitCode": 1,
+      "cause": "v9 omitted from existing strict reader-run selector; HTML text was present"
+    },
+    {
+      "log": "technical/npm-check-static-complete.log",
+      "exitCode": 0
+    }
+  ],
+  "scannerDateCaveat": "The existing scanner stdout contains its fixed date 2026-09-06; this record timestamp identifies the actual current execution. No source verification dates were changed."
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "Compatibility fixtures only; production gate and accepted bytes unchanged",
+  "selectionSHA": "b494952ab7ee6d30767c4c4b706a20c572718b3bf8fb3d677971e15a5e53441e",
+  "changedFiles": [
+    {
+      "path": "scripts/test-open-editorial-identity-transition.mjs",
+      "oldSHA": "9bd10725b97795cf1a22400102aeea16a9993328b248ad4aef428259d2e4b66f",
+      "newSHA": "c770a20f981b615dd86b162c4859a148edfa093ed5bd808a96d00e3872561956",
+      "pinnedBySelection": false
+    },
+    {
+      "path": "scripts/test-open-editorial-static.mjs",
+      "oldSHA": "58017be6702699535825df3b97e486093e31df0c7d291e52dca51252354e0595",
+      "newSHA": "07d4a164e7bcbd4b3958d1a76db939187abd8e39c92a48120236b090126d0b94",
+      "pinnedBySelection": false
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm run check",
+      "log": "technical/npm-check-static.log",
+      "exitCode": 1,
+      "reached": "editorial:static:check",
+      "staticTests": {
+        "pass": 30,
+        "fail": 3,
+        "skipped": 0
+      },
+      "cause": "Three outdated v7/v8 fixture assumptions",
+      "logSHA256": "430a696d7c5b33a4e2d0b4fab34652c0da3bc7124f29f664b38bdc972bb9d26a"
+    },
+    {
+      "command": "npm run editorial:static:check",
+      "log": "technical/static-fixture-recheck.log",
+      "exitCode": 1,
+      "tests": {
+        "pass": 32,
+        "fail": 1,
+        "skipped": 0
+      },
+      "cause": "New test incorrectly expected an id field in release.prologue",
+      "logSHA256": "90e80eecdfe62ed1485e1672e2f58293a79bf9b0c1cbd841e008445db5e6dd80"
+    },
+    {
+      "command": "npm run editorial:static:check",
+      "log": "technical/static-fixture-final-check.log",
+      "exitCode": 0,
+      "tests": {
+        "pass": 33,
+        "fail": 0,
+        "skipped": 0
+      },
+      "logSHA256": "c4d78f4cde45f44d81a20d3ec34b641dfa39d4b22611f5a418ef9fb51904c23c"
+    }
+  ],
+  "fullFinalCheck": "Running separately; no completion asserted by this record"
+}

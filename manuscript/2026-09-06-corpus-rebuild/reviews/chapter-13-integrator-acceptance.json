@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-13.md",
+  "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-13-source-review.md",
+    "reviews/chapter-13-mechanism-review.md",
+    "reviews/chapter-13-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    4,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-13-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения 65 строк с тремя примечаниями, всех первоначальных и окончательных независимых заключений и полного одноточечного diff с целым абзацем и окружением. Основа 8.0 сохранена; Галлай уточняет атрибуцию личного вклада, Черток — исполнимость поручения во времени, возвраты к подписи и улучшению инструмента меняют область доверия. Все 12 критериев применимы и не ниже 3/4, без усреднения. Проверка не названа исправлением недостатка умения. Новых условий космического паспорта нет. Агентная приёмка не удостоверяет реальные профессиональные допуски и не заменяет отдельное чтение целой книги."
+}

@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-06.md",
+  "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-06-source-review.md",
+    "reviews/chapter-06-mechanism-review.md",
+    "reviews/chapter-06-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-06-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения исходной новой главы, чтения двух изменений с окружением и всех трёх независимых итоговых отзывов. Временная ошибка хранения закрыта, освоение не гарантировано. Исторические опоры и условные варианты различены; понятие делает самостоятельную работу, сильная основа8/7.2 сохранена. Все12 критериев применимы по функции ограниченного анализа, не готовой миссии."
+}

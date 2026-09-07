@@ -111,3 +111,24 @@ docs/editorial/MERIT-01-v1.0-validation.md -text whitespace=cr-at-eol,-blank-at-
 docs/editorial/README.md -text whitespace=cr-at-eol,-blank-at-eof
 docs/editorial/2026-09-06-v7.1-depth-assignments/** -text whitespace=cr-at-eol,-blank-at-eof
 docs/editorial/2026-09-06-v8-publication-docs.json -text
+
+# Preserve exact accepted 9.0 sources, reviews and generator evidence.
+manuscript/2026-09-06-corpus-rebuild/** -text whitespace=cr-at-eol,-blank-at-eof
+scripts/release_v9.py -text
+scripts/prepare-v9-editorial-transition.mjs -text
+scripts/validate-v9-projection.mjs -text
+scripts/test-release-v9.py -text
+scripts/test-open-editorial-v9-transition.mjs -text
+
+# V9 intentional Markdown hard breaks and verbatim execution/diff evidence.
+manuscript/2026-09-06-corpus-rebuild/appendices/scenario-passport-v1.6.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+manuscript/2026-09-06-corpus-rebuild/reading/*.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+manuscript/2026-09-06-corpus-rebuild/technical/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+manuscript/2026-09-06-corpus-rebuild/technical/*.diff whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+public/book/right-to-decide-v9.0.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+public/editorial/editions/literary-manuscript-v9.0-26472e4aa686/appendix-d.* whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Preserve exact verified V9 download and compatibility-test bytes.
+public/book/right-to-decide-v9.0.md -text
+scripts/test-open-editorial-identity-transition.mjs -text whitespace=cr-at-eol
+scripts/test-open-editorial-static.mjs -text whitespace=cr-at-eol

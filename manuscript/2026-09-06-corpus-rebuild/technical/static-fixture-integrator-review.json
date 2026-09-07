@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-07",
+  "reviewer": "root",
+  "decision": "pass",
+  "fullDiffRead": true,
+  "files": [
+    {
+      "path": "scripts/test-open-editorial-static.mjs",
+      "sha256": "07d4a164e7bcbd4b3958d1a76db939187abd8e39c92a48120236b090126d0b94"
+    },
+    {
+      "path": "scripts/test-open-editorial-identity-transition.mjs",
+      "sha256": "c770a20f981b615dd86b162c4859a148edfa093ed5bd808a96d00e3872561956"
+    }
+  ],
+  "scope": "Прочитан полный узкий diff двух тестов. Версия8 сохраняет прежнюю ветвь,9 проверяет21 вход с явным prologue и Д, число блоков с примечаниями, независимость и точную привязку изменяемого отзыва; минимальная копия включает supplements. Тесты порчи источников/архива сохранены. Отдельный источник прочитал оба файла целиком; root не заявляет такого повторного полного чтения.",
+  "productionCodeChanged": false,
+  "releasePinsChanged": false,
+  "mainWorkspaceSync": "Код этих двух тестов не копировался в W: static имеет отдельные изменения, identity-transition отсутствует. Проверяемый и публикуемый репозиторий — изолированный P; отдельные изменения W сохранены."
+}

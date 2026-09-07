@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "verificationDate": "2026-09-07",
+  "scope": "Unit-level v9 acceptance and dispatcher checks; no reading build or publication",
+  "command": "python scripts/test-release-v9.py",
+  "exitCode": 0,
+  "testsRun": 6,
+  "result": "pass",
+  "checks": [
+    "exact 20 literary sources plus explicit appendix D",
+    "ordered 12 criteria with threshold and reason for N/A",
+    "independent author/reviewer and pinned review/receipt selection",
+    "score below threshold stops before release metadata, projection, DOCX and writes",
+    "explicit and saved v9 dispatch; unknown edition fails closed",
+    "existing CI source gate precedes static export and retains static editorial mode"
+  ],
+  "inputs": [
+    {
+      "path": "scripts/release_v9.py",
+      "sha256": "8270adc196f63831ae1ca64e66a25cf59df0f3975c2609e68844fe170418eaa5"
+    },
+    {
+      "path": "scripts/test-release-v9.py",
+      "sha256": "9c7aae496e2730b45b21fcbe0537a79b82aab5e210619e7037e9f8505ed52144"
+    },
+    {
+      "path": "scripts/publish-manuscript.py",
+      "sha256": "dd00e0dff13d8872c667185b327c9e96f9d1016910b3c4aa023c944c88349972"
+    },
+    {
+      "path": "package.json",
+      "sha256": "036391f9f2df0f835794f090c62a34521c40de1e8feb3789173e9fb1deebe027"
+    },
+    {
+      "path": ".github/workflows/deploy-pages.yml",
+      "sha256": "3568592ace9751a6317edb14c9120668eb645f6a3ec9f51c933c642094077682"
+    }
+  ],
+  "notClaimed": [
+    "end-to-end v9 release",
+    "positive exact-source acceptance evidence",
+    "web projection compatibility",
+    "editorial identity transition compatibility",
+    "production build or deployment"
+  ]
+}

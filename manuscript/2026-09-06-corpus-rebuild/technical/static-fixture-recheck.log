@@ -1,0 +1,113 @@
+
+> right-to-decide@1.0.0 editorial:static:check
+> node scripts/build-open-editorial.mjs --check && npm run editorial:static:test
+
+(node:18884) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"mode":"verified","edition_id":"literary-manuscript-v9.0-26472e4aa686","editions":4,"chapters":22,"blocks":935,"layers":9,"manifesto_sha256":"9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583"}
+
+> right-to-decide@1.0.0 editorial:static:test
+> node --test scripts/test-open-editorial.mjs scripts/test-open-editorial-static.mjs scripts/test-open-editorial-identity-transition.mjs scripts/test-open-editorial-v8-transition.mjs scripts/test-open-editorial-v9-transition.mjs
+
+✔ dotted edition identity is a single safe path component in code and OpenAPI (29.1594ms)
+✖ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (27.1311ms)
+✔ exact receipt accepts the frozen old map or installed new map without changing either (1128.0034ms)
+✔ rewritten paragraph cannot inherit a historical annotation identity (22.6944ms)
+✔ retained contents identity cannot hide changed text under the same source checksum (36.0807ms)
+✔ missing receipt cannot be bypassed by an already installed matching identity map (4.9027ms)
+✔ arbitrary active map changes are rejected rather than silently regenerated (846.913ms)
+✔ modified accepted chapter Markdown invalidates the transition before import (43.415ms)
+✔ a modified pinned independent review invalidates the transition (73.9754ms)
+✔ a modified previous published snapshot invalidates the transition (463.21ms)
+✔ receipt cannot claim a different transfer decision (5.5921ms)
+(node:17876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/src/lib/site-config.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Алексей\Documents\ChatGPT\Ньютон книги\right-to-decide-corpus-release\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ static discovery advertises only existing public file GETs without auth or write promises (284.4334ms)
+✔ public corpus references complete immutable files and keeps original manifesto bytes (678.5656ms)
+✔ default static generator is reproducible in a minimal checkout with no service or npm modules (13079.9287ms)
+✔ local draft accepts a faithful Unicode target and never mutates the selected published snapshot (32.6471ms)
+✔ local draft rejects mismatched identity, snapshot, ambiguous quote and unsupported partial selection (1.7137ms)
+✔ local draft exports preserve author text but never manufacture receipt, consent or credentials (1.3399ms)
+✔ 8.0 introduces fresh identities for all twenty rewritten sources (12.8877ms)
+✔ 8.0 rejects old or wrong-edition anchors on rewritten prose (2.3812ms)
+✔ unchanged source checksum cannot conceal changed contents (1.0442ms)
+✔ 8.0 requires its receipt even if a map already exists (7.6671ms)
+✔ 8.0 preserves an unchanged chapter while nineteen sources receive fresh identities (11.0268ms)
+✔ 9.0 retains all exact published identities and adds appendix D without transferring annotations (115.8618ms)
+✔ 9.0 rejects a missing or wrong appendix and any removed baseline section (218.0714ms)
+✔ added and changed sources cannot reuse earlier block identities (107.9873ms)
+✔ unchanged source hash cannot conceal changed visible text (87.0793ms)
+✔ rewritten source receives new v9 identities including its notes (94.2559ms)
+✔ 9.0 requires an explicit receipt before building editorial projection (205.085ms)
+✔ canonical normalization preserves whitespace, Cyrillic, emoji and NFC (4.5644ms)
+✔ positions are Unicode code points and cannot split a grapheme cluster (126.3302ms)
+✔ ambiguous quotes need context, absent or invalid positions fail (3.4831ms)
+✔ published corpus is faithful, excludes drafts, has unique frozen blocks and original manifesto (149.1194ms)
+✔ missing or historical eight-layer source never invents a ninth or blocks unclassified intake (10.0546ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 32
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14617.9155
+
+✖ failing tests:
+
+test at scripts\test-open-editorial-identity-transition.mjs:33:1
+✖ reviewed source transition preserves exact old blocks and introduces fresh changed blocks (27.1311ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'prologue',
+  -   undefined,
+      'chapter-01',
+      'chapter-02',
+      'chapter-03',
+      'chapter-04',
+      'chapter-05',
+  
+      at TestContext.<anonymous> (file:///C:/Users/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9/Documents/ChatGPT/%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/right-to-decide-corpus-release/scripts/test-open-editorial-identity-transition.mjs:47:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      'prologue',   'chapter-01',
+      'chapter-02', 'chapter-03',
+      'chapter-04', 'chapter-05',
+      'chapter-06', 'chapter-07',
+      'chapter-08', 'chapter-09',
+      'chapter-10', 'chapter-11',
+      'chapter-12', 'chapter-13',
+      'chapter-14', 'chapter-15',
+      'chapter-16', 'chapter-17',
+      'chapter-18', 'epilogue',
+      'appendix-d'
+    ],
+    expected: [
+      undefined,    'chapter-01',
+      'chapter-02', 'chapter-03',
+      'chapter-04', 'chapter-05',
+      'chapter-06', 'chapter-07',
+      'chapter-08', 'chapter-09',
+      'chapter-10', 'chapter-11',
+      'chapter-12', 'chapter-13',
+      'chapter-14', 'chapter-15',
+      'chapter-16', 'chapter-17',
+      'chapter-18', 'epilogue',
+      'appendix-d'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

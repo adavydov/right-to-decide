@@ -7,7 +7,8 @@ import { siteConfig } from "../src/lib/site-config.ts";
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
-const isV7 = ["7.0", "7.1", "8.0"].includes(book.editionVersion);
+const isV7 = ["7.0", "7.1", "8.0", "9.0"].includes(book.editionVersion);
+const isV9 = book.editionVersion === "9.0";
 const archiveChapters = archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 const authors = readJSON("src/data/authors.json").authors;
 const sources = readJSON("src/data/library.json").sources;
@@ -245,7 +246,7 @@ for (const chapter of available) {
   for (const block of [...chapter.blocks, ...book.notes.filter(note => note.chapterId === chapter.id).flatMap(note => note.blocks)]) {
     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
     if (block.type === "paragraph" || block.type === "heading") {
-      if (/^manuscript-v[678]-/.test(block.id)) {
+      if (/^manuscript-v[6789]-/.test(block.id)) {
         const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
           text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
           href: run.noteId ? "#" + run.noteId : run.href || null,
@@ -293,11 +294,12 @@ for (const chapter of available) {
 
 if (isV7) {
   const texts = available.filter(chapter => chapter.contentKind === "manuscript");
-  assert.equal(texts.length, 20, "All twenty literary sections must be exported");
-  assert.equal(texts.filter(chapter => chapter.download?.docx).length, 20, "All twenty section downloads must be exported");
+  assert.equal(texts.length, isV9 ? 21 : 20, "Every selected literary text and appendix must be exported");
+  if (isV9) assert.deepEqual(texts.filter(c => c.kind === "appendix").map(c => ({id: c.id, version: c.version})), [{id: "appendix-d", version: "1.6"}]);
+  assert.equal(texts.filter(chapter => chapter.download?.docx).length, texts.length, "Every selected section download must be exported");
   const readPage = htmlInfo(routeFile("/read/"));
   assert.ok(readPage.text.includes("редакция " + book.editionVersion), "The reader must identify the selected edition");
-  for (const format of ["docx", "pdf"]) {
+  for (const format of isV9 ? ["md", "docx", "pdf"] : ["docx", "pdf"]) {
     const download = book.downloads[format];
     const href = base + download.path;
     assert.ok(readPage.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === href && attrs.has("download")), "Missing whole-book download link: " + format);

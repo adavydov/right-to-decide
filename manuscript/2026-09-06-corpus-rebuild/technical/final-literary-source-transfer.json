@@ -1,0 +1,446 @@
+{
+  "date": "2026-09-07",
+  "scope": "Exact accepted literary sources, independent reviews, source manifest and release inputs; no originals or private cards copied.",
+  "files": [
+    {
+      "path": "prologue.md",
+      "sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065"
+    },
+    {
+      "path": "reviews/prologue-integrator-acceptance.json",
+      "sha256": "6af1c607b29e5433ee45bb06c707ec30decf6d9b70b0e7e505e5ca0ed642d2c4"
+    },
+    {
+      "path": "reviews/prologue-source-review.md",
+      "sha256": "7572245f1fb38f9909b0e0a3e648e2039e23a81919f4f4a8391fe474d173d730"
+    },
+    {
+      "path": "reviews/prologue-mechanism-review.md",
+      "sha256": "350804a71d3e6faaa55bec84badbd3f98d5202f1403513ce1fee0cd1a3540626"
+    },
+    {
+      "path": "reviews/prologue-reading-and-acceptance.md",
+      "sha256": "5c5b6f64d5c944da4e7bfd63a8015df755005a1a6e6a46545fa425758de42658"
+    },
+    {
+      "path": "chapters/chapter-01.md",
+      "sha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6"
+    },
+    {
+      "path": "reviews/chapter-01-integrator-acceptance.json",
+      "sha256": "8f4e530f4ceba50dcfb125ac67100206933250b4ec10dbbd4574c3d1dddfc988"
+    },
+    {
+      "path": "reviews/chapter-01-source-review.md",
+      "sha256": "d71eda501687807e6d0052e9ff51b59480c404c2e89f80ab091b6c739eecbdcb"
+    },
+    {
+      "path": "reviews/chapter-01-mechanism-review.md",
+      "sha256": "47861a5251b0f286f55443d198a07b91414f423016a46ae551b7b0a1a86adf90"
+    },
+    {
+      "path": "reviews/chapter-01-reading-and-acceptance.md",
+      "sha256": "0750956e6c1c542f48799c1c27bd4324c105c5b6f18e14e06b604dccd0b53079"
+    },
+    {
+      "path": "chapters/chapter-02.md",
+      "sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7"
+    },
+    {
+      "path": "reviews/chapter-02-integrator-acceptance.json",
+      "sha256": "cc65060981fc5e85beef3cf2dafbde5bc14571180905de78a7fa0748aaae6699"
+    },
+    {
+      "path": "reviews/chapter-02-source-review.md",
+      "sha256": "4b8806da5ef4df76da960e854ab078ea02c14cd10eb595e16c498a7c64e7f163"
+    },
+    {
+      "path": "reviews/chapter-02-mechanism-review.md",
+      "sha256": "f071a43b1512fb63058dab04c83f94c5fd4736fe60775d5fcaaafa9a23a61f44"
+    },
+    {
+      "path": "reviews/chapter-02-reading-and-acceptance.md",
+      "sha256": "7acc5c676ae004eabfd5bad1206c3fcbba2ddbaf36b958c2c9c07449255227bb"
+    },
+    {
+      "path": "chapters/chapter-03.md",
+      "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd"
+    },
+    {
+      "path": "reviews/chapter-03-integrator-acceptance.json",
+      "sha256": "11e79916ac5bd20a2b3fc61690404dcbe4912772218191262e965828cf3a03c0"
+    },
+    {
+      "path": "reviews/chapter-03-source-review.md",
+      "sha256": "7bc6f8dc0b71e81777e2eb71386d15cc4ae52436f5b28609e2fa9175d834b086"
+    },
+    {
+      "path": "reviews/chapter-03-mechanism-review.md",
+      "sha256": "04e3dd45d0f5f9541a560dceaa6e0456d343a51dc491929c25ff2be3ed051878"
+    },
+    {
+      "path": "reviews/chapter-03-reading-and-acceptance.md",
+      "sha256": "9cb49b922e0d43c5188d835fb431edd5fe9117c8dc7eaadb214152edbaa2bd9e"
+    },
+    {
+      "path": "chapters/chapter-04.md",
+      "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3"
+    },
+    {
+      "path": "reviews/chapter-04-integrator-acceptance.json",
+      "sha256": "fce747d5c44d995b095c14755a8f3469fc62307a9a20a0881ba921abbe6e45f6"
+    },
+    {
+      "path": "reviews/chapter-04-source-review.md",
+      "sha256": "86b2c7d2dc7f691bbc3c436cf044e7f099cf21f429f9a4c1ac83dc2978d94c7a"
+    },
+    {
+      "path": "reviews/chapter-04-mechanism-review.md",
+      "sha256": "082dcba5fb6b7f5439404585184287f2d8a1fcfb4f613466fa9378796c2203ce"
+    },
+    {
+      "path": "reviews/chapter-04-reading-and-acceptance.md",
+      "sha256": "b4631d5d1d45b6de3958baad0b92da0104e57de5cf4fcb1d10f2c3a5ba92d44f"
+    },
+    {
+      "path": "chapters/chapter-05.md",
+      "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9"
+    },
+    {
+      "path": "reviews/chapter-05-integrator-acceptance.json",
+      "sha256": "93f9dd5e029e13e35e9eec859c982cf545c06bf3d83852b464ae497737b57002"
+    },
+    {
+      "path": "reviews/chapter-05-source-review.md",
+      "sha256": "a71c5927a87bbfe453403241786b289a66f245ec5f83bdf43b57cf04ef78280e"
+    },
+    {
+      "path": "reviews/chapter-05-mechanism-review.md",
+      "sha256": "8590e95a37d8152c8ccf106330bfff4436eb1c7a2ce1e384f0b42ed7d9f3942f"
+    },
+    {
+      "path": "reviews/chapter-05-reading-and-acceptance.md",
+      "sha256": "8de68603ba5188f71ccc9a082d908960d992c115b0e0b23b4b7c888e8ee8fc4c"
+    },
+    {
+      "path": "chapters/chapter-06.md",
+      "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f"
+    },
+    {
+      "path": "reviews/chapter-06-integrator-acceptance.json",
+      "sha256": "8021f8c406e0a7b69cadd800d4a6d07a59c6e4703afc9e2900714b5cfc2ef4c4"
+    },
+    {
+      "path": "reviews/chapter-06-source-review.md",
+      "sha256": "8ce50990f789f02c6f3438cd7f876d121c80fe47743aac829589b8216c589270"
+    },
+    {
+      "path": "reviews/chapter-06-mechanism-review.md",
+      "sha256": "5e09bd8d54acaf1f655961e9b6f3bc301df85cb2c1af6a107a390ed656928ac3"
+    },
+    {
+      "path": "reviews/chapter-06-reading-and-acceptance.md",
+      "sha256": "6b71a87e818f80a8959e0868fbec2f4c157bcef9e9cace953f0ede6c4a0b3446"
+    },
+    {
+      "path": "chapters/chapter-07.md",
+      "sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550"
+    },
+    {
+      "path": "reviews/chapter-07-integrator-acceptance.json",
+      "sha256": "fb1e39ad0314297b3c2059cb882958fc1d16dba014dff133369f6f849ccf401b"
+    },
+    {
+      "path": "reviews/chapter-07-source-review.md",
+      "sha256": "78def2f0c9f3a2013b7aa4714aacb5e9c7b2b4ce7bc5f020897fccb587447d44"
+    },
+    {
+      "path": "reviews/chapter-07-mechanism-review.md",
+      "sha256": "c12f7af75e234ec2d8e708d8bf1f4f7c2c5bebe4e3eea46997457d03b5f18b09"
+    },
+    {
+      "path": "reviews/chapter-07-reading-and-acceptance.md",
+      "sha256": "d696441c777ca7e11901ea5323811baef1add8fb82711c26454da4c0035a5988"
+    },
+    {
+      "path": "chapters/chapter-08.md",
+      "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1"
+    },
+    {
+      "path": "reviews/chapter-08-integrator-acceptance.json",
+      "sha256": "9e01e9825840a4c0c8aaa67fef7cc79cc7b72df42003c6ec6f187bb4ca2b2261"
+    },
+    {
+      "path": "reviews/chapter-08-source-review.md",
+      "sha256": "70d19ca5bc8a5cde6a5ce436b39df04abd0826ebeac26c607fabd21a66aaded9"
+    },
+    {
+      "path": "reviews/chapter-08-mechanism-review.md",
+      "sha256": "1865607aed52f7161b20b9c06741530962a5bc5f239f1756207a17e54524edff"
+    },
+    {
+      "path": "reviews/chapter-08-reading-and-acceptance.md",
+      "sha256": "6e9a5a4af4340a53deb7c4e01e621f1137a31b523b9276765d25e95a3288a69a"
+    },
+    {
+      "path": "chapters/chapter-09.md",
+      "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e"
+    },
+    {
+      "path": "reviews/chapter-09-integrator-acceptance.json",
+      "sha256": "4dbb7b0d40404529f07f58fff7d3345b4ef3bfd83b34d272e980853424b0c200"
+    },
+    {
+      "path": "reviews/chapter-09-source-review.md",
+      "sha256": "3ec1bbf824f68a02c0e379b56727a5f3e5d1992f0fd82fa7c1723101958d1463"
+    },
+    {
+      "path": "reviews/chapter-09-mechanism-review.md",
+      "sha256": "dfceac56c30c354e2d0330a26878db9e9c6b3a5ea400de1f5cbf01146936daec"
+    },
+    {
+      "path": "reviews/chapter-09-reading-and-acceptance.md",
+      "sha256": "f8306c8165b4c0d52a3bd0ba8847d94c0354bce36693757c91d6264658b312fe"
+    },
+    {
+      "path": "chapters/chapter-10.md",
+      "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4"
+    },
+    {
+      "path": "reviews/chapter-10-integrator-acceptance.json",
+      "sha256": "d1733d0604eb0b2a02e14cac879b60273630febb615cd2d32dc881225add19e6"
+    },
+    {
+      "path": "reviews/chapter-10-source-review.md",
+      "sha256": "12633191903b896bc1be9deed7036d715c1611e004ee84a4b02bbc85a8f7e610"
+    },
+    {
+      "path": "reviews/chapter-10-mechanism-review.md",
+      "sha256": "6fb485cb5a0b1e2e23220727ee7cd2a278e1611a6b35c05a7ecab89097817937"
+    },
+    {
+      "path": "reviews/chapter-10-reading-and-acceptance.md",
+      "sha256": "96802e319140492beb555d85ea4d6ae55fc246405907b4721f509ad1c7157a88"
+    },
+    {
+      "path": "chapters/chapter-11.md",
+      "sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1"
+    },
+    {
+      "path": "reviews/chapter-11-integrator-acceptance.json",
+      "sha256": "1a6601ca6d8480ff4d008571f6c4f1baa5eecd7f3136c583743a2f4d6de7e801"
+    },
+    {
+      "path": "reviews/chapter-11-source-review.md",
+      "sha256": "a6bc90700328cf223d1afce60627b7eeaa47e1f61f3ac493f8dd8b922875a823"
+    },
+    {
+      "path": "reviews/chapter-11-mechanism-review.md",
+      "sha256": "5cb6095ad5d00cf336d88c992df1bc5c0980106b39493e883b83e65b8cfd5c13"
+    },
+    {
+      "path": "reviews/chapter-11-reading-and-acceptance.md",
+      "sha256": "4ac34287c89e3bf0a5d69ab17b142abe74eb42e8f31d0d2c13d806821128a9e2"
+    },
+    {
+      "path": "chapters/chapter-12.md",
+      "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c"
+    },
+    {
+      "path": "reviews/chapter-12-integrator-acceptance.json",
+      "sha256": "8629c8bd08907d689aa1189685880b1d8b8063b501974db57ff7b6d04b58db8c"
+    },
+    {
+      "path": "reviews/chapter-12-source-review.md",
+      "sha256": "893e2be43c4a7ebde144cd9a05afac3081c897b909faca684cf806b4811a0690"
+    },
+    {
+      "path": "reviews/chapter-12-mechanism-review.md",
+      "sha256": "9497ac80130408798bb89f00fe7a982cfc96db25f8c9fa77bc733a0914b7b91c"
+    },
+    {
+      "path": "reviews/chapter-12-reading-and-acceptance.md",
+      "sha256": "f5c0a3e9b0595c6b492ae0f922f6ab1e0efa447ad91bb0e0d82431e1341e9d93"
+    },
+    {
+      "path": "chapters/chapter-13.md",
+      "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b"
+    },
+    {
+      "path": "reviews/chapter-13-integrator-acceptance.json",
+      "sha256": "f9a6472a846e11784e4023da85e852c2e488a5ac0bfa8be6d15328e0499c4dc8"
+    },
+    {
+      "path": "reviews/chapter-13-source-review.md",
+      "sha256": "871449463b1ea4d2c20b97d132c78cc15cc81ebe5176f1562aabf319fa5b210d"
+    },
+    {
+      "path": "reviews/chapter-13-mechanism-review.md",
+      "sha256": "1fbbfaa115b52c87ea2942578cccad966e3a413833432a34ba4c54e0f1cdce71"
+    },
+    {
+      "path": "reviews/chapter-13-reading-and-acceptance.md",
+      "sha256": "d8586b3ee7650e1d1b0089ac0312512c01096b94501e5f0db512a5b9b70bc19a"
+    },
+    {
+      "path": "chapters/chapter-14.md",
+      "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286"
+    },
+    {
+      "path": "reviews/chapter-14-integrator-acceptance.json",
+      "sha256": "3e768a47321f26d68279f75013648a3f816354ca7ba0b7a4a02f029e2cf7ec5a"
+    },
+    {
+      "path": "reviews/chapter-14-source-review.md",
+      "sha256": "2fc72cc3a923f0c6366d0c784a3e85e966aa39cfe625610ccd46d56944e9fda3"
+    },
+    {
+      "path": "reviews/chapter-14-mechanism-review.md",
+      "sha256": "72872119a8e769bd53ad3c697e355aa98e880e697a847723ed8cecea80edf46c"
+    },
+    {
+      "path": "reviews/chapter-14-reading-and-acceptance.md",
+      "sha256": "bfcdb9657984559db64a47e783e1d97d42574f0acfef5ca77a3db00b416a2deb"
+    },
+    {
+      "path": "chapters/chapter-15.md",
+      "sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd"
+    },
+    {
+      "path": "reviews/chapter-15-integrator-acceptance.json",
+      "sha256": "d75633d6d738a37dc8820b9fd20c9eb69ee2e5c7c16fe8294393539564b0911e"
+    },
+    {
+      "path": "reviews/chapter-15-source-review.md",
+      "sha256": "49e5be6940f44029e9d86aeb9ed30906041f407f574e4a956191d06342d3c7a2"
+    },
+    {
+      "path": "reviews/chapter-15-mechanism-review.md",
+      "sha256": "5f98925f45cb4825e9a313071bf1519329ede194183b9466cae88ac8e22a0f67"
+    },
+    {
+      "path": "reviews/chapter-15-reading-and-acceptance.md",
+      "sha256": "67212d1506c2154d5292a822a854c65a2402e939cb3d0651b7b63838c3c369c9"
+    },
+    {
+      "path": "chapters/chapter-16.md",
+      "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1"
+    },
+    {
+      "path": "reviews/chapter-16-integrator-acceptance.json",
+      "sha256": "a40302ff3f56f1e743e4ded777e69d6a4004f09b76b337ec73e3780f57821c41"
+    },
+    {
+      "path": "reviews/chapter-16-source-review.md",
+      "sha256": "d99bfdb6e30d336ed2667a099d90ddc842cb8205b5bbccee46181d5ff87e1c21"
+    },
+    {
+      "path": "reviews/chapter-16-mechanism-review.md",
+      "sha256": "2dce5e69c500ae7314730964c401937de2d0468afa80ab74d8446aed49c5fd96"
+    },
+    {
+      "path": "reviews/chapter-16-reading-review.md",
+      "sha256": "b586ae32f23d5d3beb3b3c08212c3575ec9373885a16937d2e1772a1b1a5d871"
+    },
+    {
+      "path": "chapters/chapter-17.md",
+      "sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c"
+    },
+    {
+      "path": "reviews/chapter-17-integrator-acceptance.json",
+      "sha256": "5cfdc0ebfc4c8241f4f2f8cb24b4680d0db1ea3f8039632c14bbf00460d69c89"
+    },
+    {
+      "path": "reviews/chapter-17-source-review.md",
+      "sha256": "6411eb1ce9decd5e50fce6767456c0b5d4abdcbc563d853c335fca6732b9f9a1"
+    },
+    {
+      "path": "reviews/chapter-17-mechanism-review.md",
+      "sha256": "ea9b89f42928cc3bde7901e5eac8aeb9418422b39137a592839d1dbbc3585db6"
+    },
+    {
+      "path": "reviews/chapter-17-reading-review.md",
+      "sha256": "5b3f0ad64a480ec2e398b9a399629671b19805395f5541fe984c74f93cd0a01d"
+    },
+    {
+      "path": "chapters/chapter-18.md",
+      "sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d"
+    },
+    {
+      "path": "reviews/chapter-18-integrator-acceptance.json",
+      "sha256": "193264635517bb37dfed1bdd7fd2383354c99ec901f37c1ed0bc66fd74ce0270"
+    },
+    {
+      "path": "reviews/chapter-18-source-review.md",
+      "sha256": "12452a2abf7d4d974d59378cb9b5b21ec5af270dc2289c2274c58f6ffadc85b3"
+    },
+    {
+      "path": "reviews/chapter-18-mechanism-review.md",
+      "sha256": "fffc0ee3939f509efe68a15031b6c671aabf6d01597a67203c5830093e368fc4"
+    },
+    {
+      "path": "reviews/chapter-18-reading-review.md",
+      "sha256": "9b7acd8a30abc785f3bdca916773f1a2a3c44a10c1b24ed31771f035fe7d017a"
+    },
+    {
+      "path": "epilogue.md",
+      "sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c"
+    },
+    {
+      "path": "reviews/epilogue-integrator-acceptance.json",
+      "sha256": "d6d2d74857470ec34dc745ff3889647b07e3bf5c9c5d4dcabee2572b8afd7ec3"
+    },
+    {
+      "path": "reviews/epilogue-source-review.md",
+      "sha256": "58061610212911a14454ce25fa7c6db8183d7e9b1b62d80c347fecc9e3754c81"
+    },
+    {
+      "path": "reviews/epilogue-mechanism-review.md",
+      "sha256": "d226d242100176ded921abbf4f809a1b6aaf431f90fd503f9142368578f6df6c"
+    },
+    {
+      "path": "reviews/epilogue-reading-review.md",
+      "sha256": "fa9ba4910a2efec5527a42662704f3f794301d502def34651d0247675b13d7ef"
+    },
+    {
+      "path": "appendices/scenario-passport-v1.6.md",
+      "sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae"
+    },
+    {
+      "path": "reviews/appendix-d-integrator-acceptance.json",
+      "sha256": "7aa916c370c5d2f8aca303b7fc289516c9bf3ff92b345ecdbeeb9a967ed9c421"
+    },
+    {
+      "path": "reviews/appendix-d-integrator-review.md",
+      "sha256": "72ef3d306f930c7da29cc99925fa9ab3bbfc2af233c673a095470ff3ff383d6a"
+    },
+    {
+      "path": "reviews/appendix-d-source-review.md",
+      "sha256": "b07c09648e5fa5806f14854cbba382866552fc6c14a7f642eaa29f146e7f44b9"
+    },
+    {
+      "path": "reviews/appendix-d-reading-and-acceptance.md",
+      "sha256": "068b2e9eb0fe298dd8a8bc6538365d22fc54ffc988aa3c955c1d03b556e1643d"
+    },
+    {
+      "path": "AUTHOR-AND-BRIEF.md",
+      "sha256": "4243ceaa088e50e1e5e29cb97c7c392dc9520a7c8f7b486277565f0adf8d11e7"
+    },
+    {
+      "path": "policy-completed-before-prose.md",
+      "sha256": "0223db18357bdbd749e81c9867efb158f3723d294f12ad5a6b6951fda5f52e19"
+    },
+    {
+      "path": "supplements.json",
+      "sha256": "ca0446969d44186b0552df2d717f867bf595819e97f738113e598de31270c631"
+    },
+    {
+      "path": "release-metadata.json",
+      "sha256": "b6eb29f37fc49566b43fc8976a4c3173ea1502acd34ba43b57669ff68e8ae192"
+    },
+    {
+      "path": "research/whole-book-final-inputs-v9.json",
+      "sha256": "4a938eb35cf4e5b953b6dae8b47c9cb3b0c826115a7bbeec5a79950fad8d0276"
+    }
+  ]
+}

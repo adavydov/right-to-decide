@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-05.md",
+  "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-05-source-review.md",
+    "reviews/chapter-05-mechanism-review.md",
+    "reviews/chapter-05-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-05-reading-and-acceptance.md",
+  "integrator_decision": "Принята после полного чтения трёх независимых заключений на неизменный SHA. Сильная материальная последовательность сохранена; новый режим выдачи раскрывает осмысленное согласие, межролевое действие и отказ внедрения. Все12 критериев применимы к функции конкретной ограниченной пробы; полная программа или лётная готовность не объявлены."
+}
