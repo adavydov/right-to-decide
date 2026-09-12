@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.0",
+  "decision": "accepted",
+  "author": "books_pdf",
+  "reviewer": "root",
+  "catalog": {
+    "path": "public/library-v10/catalog.json",
+    "sha256": "9cc07560ed9654d3cd3770d06f6adf0736d8235cecec14989ce17ad129e770ac"
+  },
+  "sourceIndexSha256": "63f61389a6a588494694c5ad829814476b129ace962f00d1a73fb783dd5cd387",
+  "counts": {
+    "records": 131,
+    "recordsWithCards": 126,
+    "cards": 655
+  },
+  "allowedFields": [
+    "id",
+    "title",
+    "authors",
+    "edition",
+    "category",
+    "annotation",
+    "role",
+    "cardCount",
+    "reading",
+    "links"
+  ],
+  "reviewEvidence": "editorial/PUBLIC_LIBRARY_REVIEW_ROOT.json"
+}

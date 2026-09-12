@@ -132,3 +132,22 @@ public/editorial/editions/literary-manuscript-v9.0-26472e4aa686/appendix-d.* whi
 public/book/right-to-decide-v9.0.md -text
 scripts/test-open-editorial-identity-transition.mjs -text whitespace=cr-at-eol
 scripts/test-open-editorial-static.mjs -text whitespace=cr-at-eol
+
+# Preserve the accepted V10 source, evidence, public packages and release identity.
+/manuscript/v10/** -text whitespace=cr-at-eol
+/public/research/v10/** -text whitespace=cr-at-eol
+/public/library/v10/** -text whitespace=cr-at-eol
+/public/editorial/v10/** -text whitespace=cr-at-eol
+/public/manifesto/v10/** -text whitespace=cr-at-eol
+/public/book/right-to-decide-v10.0.md -text whitespace=cr-at-eol
+/public/images/book-cover-v10.png -text whitespace=cr-at-eol
+/src/data/*-v10.json -text whitespace=cr-at-eol
+/src/data/edition-v9.json -text whitespace=cr-at-eol
+/docs/publishing/v10/archive-*.json -text whitespace=cr-at-eol
+/scripts/*_v10.py -text whitespace=cr-at-eol
+
+# Keep historical V9 JSON at its canonical Git bytes; inventories use these LF blobs.
+/src/data/editorial-team.json -text whitespace=cr-at-eol
+/docs/editorial/editorial-team-v4.0.json -text whitespace=cr-at-eol
+/src/data/space-library.json -text whitespace=cr-at-eol
+/src/data/library-supplement.json -text whitespace=cr-at-eol

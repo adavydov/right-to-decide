@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "sourceSetSha256": "1529694c461e883d97667fcda697606f158044c4dc0b36c3e70a262f00890a6d",
+  "decision": "accepted",
+  "recordedBy": "root",
+  "authority": "Direct user instruction in this task on 2026-09-12",
+  "instructionExcerpt": "Потом проверяй все, критикуй, усиливай. Потом публикуй.",
+  "scope": "New book version 10 and redesigned owned static reading site after editorial and technical checks.",
+  "meaning": "Records the existing publication instruction and completed editorial checks. Does not assert that the human author read or separately approved these exact final bytes.",
+  "technicalReleaseCondition": "Documents, static build, archive integrity and installed artifacts must pass before external publication."
+}

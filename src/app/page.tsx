@@ -19,7 +19,7 @@ export default function HomePage() {
         <div className="publication-prose">{home.about.paragraphs.map(text => <p key={text}>{text}</p>)}</div>
       </div>
     </section>
-    <section className="pillars">
+    <section className="pillars v10-pillars">
       <div className="wrap">
         <div className="section-top"><div><p className="eyebrow">{home.pillars.eyebrow}</p><h2>{home.pillars.heading}</h2></div></div>
         <div className="pillar-grid">{home.pillars.items.map((item, index) => <article className="pillar" key={item.title}><span className="number">0{index + 1} /</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
@@ -27,7 +27,7 @@ export default function HomePage() {
     </section>
     <section className="publication-section wrap">
       <div className="section-top"><div><p className="eyebrow">{home.reading.eyebrow}</p><h2>{home.reading.heading.split("\n").map((line, index) => <span key={line}>{index > 0 && <br />}{line}</span>)}</h2></div><Link href="/contents/" className="text-link">{home.reading.contentsLink}</Link></div>
-      <div className="edition-notice"><span className="status-dot" /><p>{publicationSummary}</p></div>
+      <div className="edition-notice"><span className="status-dot" /><p>Редакция {book.editionVersion}. {publicationSummary}</p></div>
       <div className="preview-list">{book.parts.map(part => <Link className="preview-row" href={`/contents/#${part.id}`} key={part.id}><small>{part.number}</small><span>{displayBookTitle(part.title).replace(/^Часть\s+[IVXLC\d]+[.\s:—–-]*/i, "")}</span><span className="arrow" aria-hidden="true">↗</span></Link>)}</div>
       <div className="book-callout"><div><h3>{home.reading.calloutHeading}</h3><p>{home.reading.calloutText}</p></div><Link href="/read/" className="button">{home.reading.cta}</Link></div>
     </section>
@@ -37,7 +37,7 @@ export default function HomePage() {
         <div className="publication-prose">{home.library.paragraphs.map(text => <p key={text}>{text}</p>)}<Link className="publication-link" href="/library/">{home.library.cta}</Link></div>
       </div>
     </section>
-    <section className="publication-section wrap"><div className="book-callout"><div><p className="eyebrow">Открытая редакция будущего</p><h2>Эту книгу можно изменить.</h2><p>Читайте манифест, сохраняйте личные заметки и готовьте замечания к конкретным фрагментам книги.</p></div><Link className="button" href="/open-editorial/">Как участвовать ↗</Link></div></section>
+    <section className="v10-editorial"><div className="wrap publication-grid"><div><p className="eyebrow publication-kicker">Открытая редакция</p><h2 className="publication-heading">Чтение может стать разговором.</h2></div><div className="publication-prose"><p>Отметьте мысль, к которой хочется вернуться. Сформулируйте вопрос или возражение к точному фрагменту.</p><p>Заметки сохраняются у вас в браузере. Черновик замечания можно скачать; сайт не отправляет его редакции.</p><Link className="publication-link" href="/open-editorial/">Открытая редакция <span aria-hidden="true">↗</span></Link></div></div></section>
     <AuthorsGrid compact />
     <section className="publication-section wrap"><div className="publication-grid"><h2 className="publication-heading">{home.closing.heading}</h2><div className="publication-prose"><p>{home.closing.text}</p><Link className="button" href="/read/">{home.closing.cta}</Link></div></div></section>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structured).replaceAll("<", "\\u003c") }} />

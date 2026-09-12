@@ -4,15 +4,31 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
-import { assertEditionId, EDITION_PATTERN, deriveTransition, verifyTransition, encode } from "./open-editorial-identity-transition.mjs";
+import { assertEditionId, EDITION_PATTERN, deriveTransition, verifyTransition as verifyRecordedTransition, encode } from "./open-editorial-identity-transition.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = relative => fs.readFileSync(path.join(root, relative));
 const json = relative => JSON.parse(read(relative).toString("utf8").replace(/^\uFEFF/, ""));
-const book = json("src/data/book.json");
+const activeBook = json("src/data/book.json");
+const archived = activeBook.editionVersion === "10.0";
+const book = archived ? json("src/data/edition-v9.json") : activeBook;
 const receiptPath = "docs/open-editorial/identity-transitions/" + book.releaseId + ".json";
 const receipt = json(receiptPath);
 const previous = json(receipt.previous_identity_map.path), oldEdition = json(receipt.previous_edition.path);
-const currentMap = read("docs/open-editorial/block-identities.json");
+// The v9 receipt still pins its original path and bytes. Reconstruct its map
+// from the published v9 snapshot, then let the unchanged receipt verify its hash.
+const published = archived ? json("public/editorial/editions/" + book.releaseId + "/edition.json") : null;
+const currentMap = archived ? Buffer.from(encode({schema_version: "1.0", chapters: Object.fromEntries(published.chapters.map(c => [c.id,
+  {source_sha256: c.source_sha256, blocks: Object.fromEntries(c.blocks.map(b => [b.dom_id, b.id]))}]))})) : read("docs/open-editorial/block-identities.json");
+function verifyTransition(directory, selectedBook, map) {
+  if (!archived || directory !== root) return verifyRecordedTransition(directory, selectedBook, map);
+  // Read-only test overlay: resolve the original book path to its byte-identical
+  // archive. Keep all receipt/source/review hashes and negative cases enforced.
+  const original = fs.readFileSync;
+  fs.readFileSync = (file, ...args) => original(path.resolve(String(file)) === path.resolve(root, "src/data/book.json")
+    ? path.join(root, "src/data/edition-v9.json") : file, ...args);
+  try { return verifyRecordedTransition(directory, selectedBook, map); }
+  finally { fs.readFileSync = original; }
+}
 function changeRead(t, relative, transform) {
   const original = fs.readFileSync;
   t.mock.method(fs, "readFileSync", (file, ...args) => {
@@ -113,4 +129,11 @@ test("a modified previous published snapshot invalidates the transition", t => {
 test("receipt cannot claim a different transfer decision", t => {
   changeRead(t, receiptPath, () => Buffer.from(encode({ ...receipt, annotation_transfer: "automatic" })));
   assert.throws(() => verifyTransition(root, book, currentMap));
+});
+
+test("archived v9 bytes still satisfy the original receipt and reject tampering", {skip: !archived}, t => {
+  assert.equal(book.editionVersion, "9.0");
+  verifyTransition(root, book, currentMap);
+  changeRead(t, "src/data/edition-v9.json", bytes => Buffer.concat([bytes, Buffer.from("changed")]));
+  assert.throws(() => verifyTransition(root, book, currentMap), /Transition evidence changed/);
 });

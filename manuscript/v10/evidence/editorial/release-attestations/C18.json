@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C18",
+  "sourceSha256": "8a88f5700d84dff121aca688d4f3c132e4df23a8af59cce1b78cc843f1b827b9",
+  "author": "root",
+  "lastIntegrationEditor": "root",
+  "reviewer": "books_epub",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "Independent agent editorial review of the stated text; no external or blind-reader claim.",
+  "basis": {
+    "report": "ROOT_BLOCK_INDEPENDENT_REVIEW",
+    "sha256": "2d6810da8a7d61017b9f8884e6c77d30da99067b2711149c9848ebedcc33a09c",
+    "retention": "Full review retained in the private editorial package."
+  },
+  "amendmentDisclosure": "Reviews of later cuts and wording corrections supplement the earlier source and chapter reviews. The reviewing agent may have proposed the correction; root applied it."
+}

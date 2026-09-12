@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.0",
+  "decision": "accepted",
+  "author": "editorial_audit",
+  "reviewer": "root",
+  "team": {
+    "path": "public/editorial-v10/team.json",
+    "sha256": "76777e5c36614f9c79c9b29ab59aa682cf1728c5bc2c5070b494ed5d45bea1c3"
+  },
+  "text": {
+    "path": "public/editorial-v10/team.md",
+    "sha256": "ddea8c94cf24b0de5005b0368ee6abe787cc264f7f6bb1948a13914d5e2473ee"
+  },
+  "manifesto": {
+    "path": "public/editorial-v10/manifesto.md",
+    "sha256": "75f8d31021e10c106ae0b3f89dfebed85e91e568334e5cbd18d9049e82021d2d"
+  },
+  "reviewEvidence": "editorial/PUBLIC_EDITORIAL_REVIEW_ROOT.json"
+}

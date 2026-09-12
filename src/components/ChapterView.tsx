@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { OpenEditorialReader } from "@/components/OpenEditorialReader";
+import { EditionChoice } from "@/components/EditionChoice";
 import { ReaderShell } from "@/components/ReaderShell";
 import {
   book,
-  readingChapters,
-  getChapterNeighbors,
   getChapterReadingMinutes,
+  type Book,
   type BookBlock,
   type BookChapter,
   type BookList,
@@ -102,7 +102,7 @@ function renderBlock(block: BookBlock): ReactNode {
     );
   }
   if (block.type === "heading") {
-    const title = /^manuscript-v[678]-/.test(block.id) ? <InlineText block={block} /> : displayBookTitle(block.text);
+    const title = /^manuscript-v(?:[6789]|10)-/.test(block.id) ? <InlineText block={block} /> : displayBookTitle(block.text);
     return (block.level || 2) <= 2 ? (
       <h2 data-reader-block id={block.id} key={block.id}>
         {title}
@@ -190,11 +190,20 @@ export function renderBookBlocks(blocks: BookBlock[]): ReactNode[] {
   return rendered;
 }
 
-export function ChapterView({ chapter }: { chapter: BookChapter }) {
-  const { previous, next } = getChapterNeighbors(chapter.id);
-  const notes = book.notes.filter(note => note.chapterId === chapter.id);
+export function ChapterView({ chapter, sourceBook = book, routePrefix = "/read/", contentsHref = "/contents/", archived = false }: { chapter: BookChapter; sourceBook?: Book; routePrefix?: string; contentsHref?: string; archived?: boolean }) {
+  const readingChapters = sourceBook.chapters.filter(c => c.id !== "source-contents");
+  const available = readingChapters.filter(c => c.status === "available");
+  const position = available.findIndex(c => c.id === chapter.id);
+  const previous = available[position - 1], next = available[position + 1];
+  const notes = sourceBook.notes.filter(note => note.chapterId === chapter.id);
   const references = new Map<string, string[]>();
   for (const block of chapter.blocks) {
+    if (block.type === "table") {
+      block.cellRuns?.forEach((row, ri) => row.forEach((cell, ci) => cell.forEach((run, index) => {
+        if (run.noteId) references.set(run.noteId, [...(references.get(run.noteId) || []), `${block.id}-r${ri}-c${ci}-ref-${index}`]);
+      })));
+      continue;
+    }
     if (block.type !== "paragraph" && block.type !== "heading") continue;
     block.runs?.forEach((run, index) => {
       if (run.noteId) references.set(run.noteId, [...(references.get(run.noteId) || []), `${block.id}-ref-${index}`]);
@@ -213,13 +222,15 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
   return (
     <main id="main-content" className="reader-page">
       <ReaderShell key={chapter.id} currentId={chapter.id} items={items}
-        revision={chapter.source?.sha256 ?? book.source.sha256}
+        revision={chapter.source?.sha256 ?? sourceBook.source.sha256}
+        routePrefix={routePrefix} contentsHref={contentsHref} storageNamespace={archived || sourceBook.editionVersion === "10.0" ? sourceBook.releaseId : undefined}
         headings={chapter.blocks.flatMap(block => block.type === "heading" ? [{ id: block.id, title: displayBookTitle(block.text) }] : [])}
       >
         <article>
           <p className="eyebrow" style={{ marginBottom: 18 }}>
             {chapter.part ? displayBookTitle(chapter.part) : "Право на решение"}
           </p>
+          <EditionChoice archived={archived} />
           <h1 className="reading-title">{displayBookTitle(chapter.title)}</h1>
           <p className="reading-meta">
             <span>{getChapterReadingMinutes(chapter)} мин чтения · {chapter.contentKind === "outline" ? "Авторское содержание · версия " + chapter.version : "Авторский текст · версия " + chapter.version}</span>
@@ -239,7 +250,7 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
           </div>
           <nav className="chapter-end" aria-label="Переход между разделами">
             {previous ? (
-              <Link href={"/read/" + previous.id + "/"}>
+              <Link href={routePrefix + previous.id + "/"}>
                 <small>← ПРЕДЫДУЩИЙ РАЗДЕЛ</small>
                 {displayBookTitle(previous.title)}
               </Link>
@@ -247,19 +258,19 @@ export function ChapterView({ chapter }: { chapter: BookChapter }) {
               <span />
             )}
             {next ? (
-              <Link href={"/read/" + next.id + "/"}>
+              <Link href={routePrefix + next.id + "/"}>
                 <small>СЛЕДУЮЩИЙ РАЗДЕЛ →</small>
                 {displayBookTitle(next.title)}
               </Link>
             ) : (
-              <Link href="/contents/">
+              <Link href={contentsHref}>
                 <small>К СОДЕРЖАНИЮ</small>
                 Вернуться к содержанию ↗
               </Link>
             )}
           </nav>
         </article>
-        {book.releaseId && <OpenEditorialReader chapterId={chapter.id} revision={book.releaseId} />}
+        {sourceBook.releaseId && <OpenEditorialReader chapterId={chapter.id} revision={sourceBook.releaseId} />}
       </ReaderShell>
     </main>
   );

@@ -83,3 +83,10 @@
   text-decoration-color: var(--border);
 }
 .teamLinks a:hover { text-decoration-color: currentColor; }
+
+.footer { padding-top: 44px; }
+.links { gap: 12px 26px; flex-wrap: wrap; }
+.links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.bottom { font: 12px/1.6 var(--font-ui); }
+.title { font-weight: 400; }
+@media(max-width:760px) { .bottom { font-size: 12px; } .links { gap: 0 24px; } }

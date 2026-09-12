@@ -1,0 +1,26 @@
+{
+  "editionVersion": "9.0",
+  "scope": "Immutable public bibliography, historical cards and space catalog; no private library files",
+  "files": [
+    {
+      "path": "src/data/library.json",
+      "sha256": "636aaf3cf0462e5585346fff2d34f51d1002f4e2242101134bdde80dcba96708",
+      "bytes": 64466
+    },
+    {
+      "path": "src/data/evidence-cards.json",
+      "sha256": "ea20821efaa6f9a8bc7a1ac19fdceeabf409bc95ab0f5426495f2f7c13bed27e",
+      "bytes": 494499
+    },
+    {
+      "path": "src/data/space-library.json",
+      "sha256": "7605e6120400fbd8230bbda4b77115b125637dffa4928b3507effac3cd4e60b8",
+      "bytes": 8690
+    },
+    {
+      "path": "src/data/library-supplement.json",
+      "sha256": "552d701cd8019635504e1bb8d2336567c0c2dae35d206e4893e7a5f2da755a84",
+      "bytes": 2795
+    }
+  ]
+}

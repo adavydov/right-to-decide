@@ -7,7 +7,8 @@ import { siteConfig } from "../src/lib/site-config.ts";
 const readJSON = (file) => JSON.parse(fs.readFileSync(file, "utf8").replace(/^\uFEFF/, ""));
 const book = readJSON("src/data/book.json");
 const archive = readJSON("src/data/previous-edition.json");
-const isV7 = ["7.0", "7.1", "8.0", "9.0"].includes(book.editionVersion);
+const archiveV9 = readJSON("src/data/edition-v9.json");
+const isV7 = ["7.0", "7.1", "8.0", "9.0", "10.0"].includes(book.editionVersion);
 const isV9 = book.editionVersion === "9.0";
 const archiveChapters = archive.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 const authors = readJSON("src/data/authors.json").authors;
@@ -18,6 +19,8 @@ const base = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
 const publicOrigin = new URL(siteConfig.publicUrl).origin;
 const available = book.chapters.filter((chapter) => chapter.id !== "source-contents" && chapter.status === "available");
 const routes = ["/", "/contents/", "/authors/", "/read/", "/library/", "/wiki/", "/archive/", "/manifesto/",
+  ...(book.editionVersion === "10.0" ? ["/research/v10/"] : []),
+  "/editions/v9/", "/editions/v9/library/", "/editions/v9/editorial/", "/editions/v9/manifesto/", ...archiveV9.chapters.filter(c => c.status === "available").map(c => "/editions/v9/read/" + c.id + "/"),
   ...archiveChapters.map(c => "/archive/" + c.id + "/"),
   ...available.map((chapter) => "/read/" + chapter.id + "/"),
   ...cards.map((card) => "/wiki/" + card.id + "/")];
@@ -216,9 +219,9 @@ for (const part of book.parts) {
 }
 for (const chapter of book.chapters.filter(c => c.kind === "chapter")) {
   assert.ok(contentsPage.text.includes(normalized(chapter.title.replace(/^Глава \d+\.\s*/u, ""))), "Missing chapter heading: " + chapter.id);
-  assert.ok(contentsPage.text.includes(normalized(chapter.summary)), "Missing constitutional chapter function: " + chapter.id);
+  assert.ok(contentsPage.text.includes(normalized(chapter.summary || "")), "Missing constitutional chapter function: " + chapter.id);
 }
-assert.ok(contentsPage.text.includes("Следующий вопрос — не наш"), "Missing separately planned epilogue");
+assert.ok(contentsPage.text.includes(normalized(book.chapters.find(c => c.id === "epilogue").title)), "Missing selected epilogue");
 const legacyPreface = htmlInfo(routeFile("/read/preface/"));
 assert.ok(legacyPreface.raw.includes("/read/prologue/"), "Legacy preface must lead to the current prologue");
 assert.ok(!legacyPreface.raw.includes("preface-v8-p"), "Legacy address still contains the replaced preface");
@@ -246,7 +249,7 @@ for (const chapter of available) {
   for (const block of [...chapter.blocks, ...book.notes.filter(note => note.chapterId === chapter.id).flatMap(note => note.blocks)]) {
     assert.ok(info.ids.has(block.id), "Lost current block: " + block.id);
     if (block.type === "paragraph" || block.type === "heading") {
-      if (/^manuscript-v[6789]-/.test(block.id)) {
+      if (/^manuscript-v(?:[6789]|10)-/.test(block.id)) {
         const expectedRuns = mergeRuns((block.runs || [{ text: block.text }]).map((run) => ({
           text: run.text, strong: Boolean(run.strong), emphasis: Boolean(run.emphasis), code: Boolean(run.code),
           href: run.noteId ? "#" + run.noteId : run.href || null,
@@ -281,6 +284,13 @@ for (const chapter of available) {
     assert.ok(info.text.includes(normalized(chapter.notesHeading || "Примечания")), "Lost source notes heading: " + chapter.id);
     for (const note of notes) assert.ok(info.ids.has(note.id), "Missing note definition: " + note.id);
     for (const block of [...chapter.blocks, ...notes.flatMap((note) => note.blocks)]) {
+      if (block.type === "table") block.cellRuns?.forEach((row, ri) => row.forEach((cell, ci) => cell.forEach((run, index) => {
+        if (!run.noteId) return;
+        const refId = `${block.id}-r${ri}-c${ci}-ref-${index}`;
+        assert.ok(info.ids.has(refId), "Missing table note reference: " + refId);
+        assert.ok(info.attributes.some(({tag, attrs}) => tag === "a" && attrs.get("id") === refId && attrs.get("href") === "#" + run.noteId));
+        assert.ok(info.attributes.some(({tag, attrs}) => tag === "a" && attrs.get("href") === "#" + refId), "Missing table note backlink");
+      })));
       block.runs?.forEach((run, index) => {
         if (!run.noteId) return;
         const refId = block.id + "-ref-" + index;
@@ -292,14 +302,24 @@ for (const chapter of available) {
   }
 }
 
+for (const chapter of archiveV9.chapters.filter(c => c.status === "available")) {
+  const info = htmlInfo(routeFile("/editions/v9/read/" + chapter.id + "/"));
+  for (const block of [...chapter.blocks, ...archiveV9.notes.filter(n => n.chapterId === chapter.id).flatMap(n => n.blocks)]) {
+    assert.ok(info.ids.has(block.id), "Lost v9 anchor: " + block.id);
+    const runs = block.type === "table" ? block.cellRuns.flat(2) : block.runs || [{text:block.text}];
+    const expected = mergeRuns(runs.map(run => ({text:run.text,strong:Boolean(run.strong),emphasis:Boolean(run.emphasis),code:Boolean(run.code),href:run.noteId ? "#"+run.noteId : run.href || null})));
+    assert.deepEqual(info.readerRuns.get(block.id), expected, "Original v9 text or formatting changed: " + block.id);
+  }
+}
+
 if (isV7) {
   const texts = available.filter(chapter => chapter.contentKind === "manuscript");
-  assert.equal(texts.length, isV9 ? 21 : 20, "Every selected literary text and appendix must be exported");
+  assert.equal(texts.length, book.editionVersion === "10.0" ? 26 : isV9 ? 21 : 20, "Every selected literary text and appendix must be exported");
   if (isV9) assert.deepEqual(texts.filter(c => c.kind === "appendix").map(c => ({id: c.id, version: c.version})), [{id: "appendix-d", version: "1.6"}]);
   assert.equal(texts.filter(chapter => chapter.download?.docx).length, texts.length, "Every selected section download must be exported");
   const readPage = htmlInfo(routeFile("/read/"));
   assert.ok(readPage.text.includes("редакция " + book.editionVersion), "The reader must identify the selected edition");
-  for (const format of isV9 ? ["md", "docx", "pdf"] : ["docx", "pdf"]) {
+  for (const format of (isV9 || book.editionVersion === "10.0") ? ["md", "docx", "pdf"] : ["docx", "pdf"]) {
     const download = book.downloads[format];
     const href = base + download.path;
     assert.ok(readPage.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === href && attrs.has("download")), "Missing whole-book download link: " + format);
@@ -308,6 +328,27 @@ if (isV7) {
   }
 }
 
+if (book.editionVersion === "10.0") {
+  const team=readJSON("src/data/editorial-team-v10.json");
+  const doc=readJSON(path.join(output,"editorial-team.json"));
+  assert.equal(team.status,"accepted-public-package");assert.equal(doc.version,"10.0");assert.equal(doc.roles.length,13);
+  assert.deepEqual(doc.roles.map(({id,name,description,libraryThemes})=>({id,name,description,libraryThemes})),team.roles);
+  assert.deepEqual(doc.workflow,team.workflow);assert.ok(doc.roles.every(r=>r.type==="ai-agent-role"));
+  assert.deepEqual(doc.humanAuthors.map(({id,name,role})=>({id,name,role})),authors.map(({id,name,role})=>({id,name,role})));
+  for(const role of team.roles) {assert.ok(authorsPage.text.includes(normalized(role.name)));assert.ok(authorsPage.text.includes(normalized(role.description)));}
+  assert.ok(authorsPage.text.includes(normalized(team.roleNote)));assert.ok(!authorsPage.text.includes("Девять кураторов слоёв"));
+  const archived=htmlInfo(routeFile("/editions/v9/editorial/"));
+  const oldTeam=readJSON("src/data/editorial-team.json");
+  for(const role of [oldTeam.conductor,...oldTeam.groups.flatMap(g=>g.roles)]) assert.ok(archived.text.includes(normalized(role.name)),"Missing archived role: "+role.id);
+  const oldDoc=readJSON(path.join(output,"editions/v9/editorial-team.json"));assert.equal(oldDoc.version,"4.0");
+  assert.equal(oldDoc.groups.find(g=>g.id==="nine-layers").roles.length,9);
+  for(const info of [homepage,authorsPage]) {
+    const credit=[...info.raw.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).find(d=>d["@type"]==="Book");
+    assert.ok(credit);assert.deepEqual(credit.author.map(a=>a.name),authors.map(a=>a.name));assert.equal(credit.creditText,team.intro);
+    assert.equal(credit.contributor["@id"],doc.humanReadableUrl);assert.equal(credit.contributor.subjectOf.url,doc.machineReadableUrl);
+  }
+  console.log("V10 editorial credits passed: 13 virtual roles and immutable v9 archive");
+} else {
 const teamSource = readJSON("src/data/editorial-team.json");
 assert.deepEqual(teamSource, readJSON("docs/editorial/editorial-team-v4.0.json"), "The public team must match the accepted editorial contract");
 const teamDocument = readJSON(path.join(output, "editorial-team.json"));
@@ -339,7 +380,8 @@ assert.equal(new Set([teamDocument.conductor.id, ...teamRoles.map((role) => role
   teamRoles.length + 1, "Duplicate editorial role ID");
 assert.ok(teamRoles.some((role) => role.id === teamDocument.governance.commonVersionEditor));
 assert.ok(teamRoles.every((role) => role.type === "ai-agent-role" && role.coordinatedBy === teamDocument.conductor.id));
-for (const info of [homepage, authorsPage]) {
+// The homepage links to the full team; responsibilities and pilot status belong on /authors/.
+for (const info of [authorsPage]) {
   assert.ok(info.text.includes(normalized(teamSource.practicalProject.status)), "Missing visible pilot assignment status");
   assert.ok(info.text.includes(normalized(teamSource.practicalProject.description)), "Missing distinction between editorial AI and human responsibility");
   assert.ok(info.ids.has("literary-team"), "Missing visible editorial team");
@@ -351,6 +393,10 @@ for (const info of [homepage, authorsPage]) {
     assert.ok(info.text.includes(normalized(role.name)), "Missing visible role: " + role.id);
     assert.ok(info.text.includes(normalized(role.description)), "Missing visible responsibility: " + role.id);
   }
+}
+assert.ok(homepage.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === base + "/authors/#literary-team"),
+  "Homepage must retain access to the full literary team");
+for (const info of [homepage, authorsPage]) {
   assert.ok(info.attributes.some(({ tag, attrs }) => tag === "a" && attrs.get("href") === base + "/editorial-team.json"),
     "No visible machine-readable credits link");
   assert.ok(info.attributes.some(({ tag, attrs }) => tag === "link" && attrs.get("rel") === "alternate" &&
@@ -367,7 +413,29 @@ for (const info of [homepage, authorsPage]) {
 }
 console.log("Editorial credits passed: shared human/AI roster, hierarchy, visible order and structured data.");
 
-const libraryPage = htmlInfo(routeFile("/library/"));
+}
+
+if(book.editionVersion === "10.0") {
+  const research=readJSON("src/data/research-v10.json"), manifesto=readJSON("src/data/manifesto-v10.json");
+  assert.equal(research.status,"accepted-public-package");assert.equal(manifesto.status,"accepted-public-package");
+  for(const [route,sections] of [["/research/v10/",[research,...research.models]],["/manifesto/",[manifesto]]]) {
+    const info=htmlInfo(routeFile(route));
+    for(const section of sections) for(const block of [...section.blocks,...section.notes.flatMap(n=>n.blocks)]) {
+      assert.ok(info.ids.has(block.id),"Missing public source block: "+block.id);
+      const runs=block.type === "table" ? block.cellRuns.flat(2) : block.runs || [{text:block.text}];
+      const expected=mergeRuns(runs.map(run=>({text:run.text,strong:Boolean(run.strong),emphasis:Boolean(run.emphasis),code:Boolean(run.code),href:run.noteId?"#"+run.noteId:run.href||null})));
+      assert.deepEqual(info.readerRuns.get(block.id),expected,"Public source text drift: "+block.id);
+    }
+  }
+}
+
+const libraryPage = htmlInfo(routeFile(book.editionVersion === "10.0" ? "/editions/v9/library/" : "/library/"));
+if (book.editionVersion === "10.0") {
+  const catalog = readJSON("src/data/library-v10.json");
+  assert.equal(catalog.status, "accepted-public-package");
+  const currentLibrary = htmlInfo(routeFile("/library/"));
+  for (const source of catalog.sources) assert.ok(currentLibrary.ids.has(source.id), "Missing current bibliography anchor: " + source.id);
+}
 for (const source of sources) assert.ok(libraryPage.ids.has(source.id), "Missing library source anchor: " + source.id);
 for (const card of cards) {
   const info = htmlInfo(routeFile("/wiki/" + card.id + "/"));

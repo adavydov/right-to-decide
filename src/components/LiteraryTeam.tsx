@@ -1,9 +1,13 @@
+import { book } from "@/lib/book";
+import teamV10 from "@/data/editorial-team-v10.json";
+import {PublicEditorialTeam} from "./PublicEditorialTeam";
 import Link from "next/link";
 import { editorialTeam } from "@/lib/editorial-team";
 import { assetPath } from "@/lib/site-config";
 import styles from "./LiteraryTeam.module.css";
 
-export function LiteraryTeam({ compact = false }: { compact?: boolean }) {
+export function LiteraryTeam({ compact = false, archived=false }: { compact?: boolean; archived?:boolean }) {
+  if(!archived && book.editionVersion==="10.0" && teamV10.status==="accepted-public-package")return <PublicEditorialTeam team={teamV10} compact={compact}/>;
   const team = editorialTeam;
   const roleCount = 1 + team.groups.reduce((total, group) => total + group.roles.length, 0);
   return (
@@ -83,7 +87,7 @@ export function LiteraryTeam({ compact = false }: { compact?: boolean }) {
       </aside>
       <div className={styles.links}>
         {compact && <Link href="/authors/#literary-team" className={styles.link}>Подробнее о команде <span aria-hidden="true">↗</span></Link>}
-        <a href={assetPath("/editorial-team.json")} type="application/json" className={styles.link}>Команда в JSON <span aria-hidden="true">↗</span></a>
+        <a href={assetPath(archived ? "/editions/v9/editorial-team.json" : "/editorial-team.json")} type="application/json" className={styles.link}>Команда в JSON <span aria-hidden="true">↗</span></a>
         <Link href="/manifesto/" className={styles.link}>Конституция проекта <span aria-hidden="true">↗</span></Link>
       </div>
     </section>

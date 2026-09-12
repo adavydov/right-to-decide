@@ -1,3 +1,4 @@
+import { EditionChoice } from "@/components/EditionChoice";
 import Link from "next/link";
 import { contents } from "@/data/site-copy.json";
 import { ContentsCatalog } from "@/components/ContentsCatalog";
@@ -22,9 +23,10 @@ export default function ContentsPage() {
         <h1 className="page-heading">Развёрнутое содержание</h1>
         <p className="page-intro">{contents.intro}</p>
         <p className="page-intro" style={{ marginTop: 18 }}>{publicationSummary}</p>
-        <p style={{ marginTop: 22 }}><a className="text-link" href={assetPath("/book/contents-v5.1.md")} download>Скачать содержание ↓</a></p>
+        <EditionChoice />
+        {book.editionVersion !== "10.0" && <p style={{ marginTop: 22 }}><a className="text-link" href={assetPath("/book/contents-v5.1.md")} download>Скачать содержание ↓</a></p>}
       </div>
-      <Link href="/read/contents/" className="button">Открыть в читалке ↗</Link>
+      <Link href={book.editionVersion === "10.0" ? "/read/prologue/" : "/read/contents/"} className="button">Открыть в читалке ↗</Link>
     </div>
     <ContentsCatalog items={items} parts={book.parts} />
     <div className="book-callout">

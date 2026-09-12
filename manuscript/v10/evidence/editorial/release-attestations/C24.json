@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C24",
+  "sourceSha256": "5e5fa94d93776e0ffa4cfb7849a112036c90ebf43510f7fa049114aa3e5bf330",
+  "author": "root",
+  "lastIntegrationEditor": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "Independent agent editorial review of the stated text; no external or blind-reader claim.",
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW",
+    "sha256": "d999bd3e4c26b2799692a5b720087213b04c2ef639111f84e8c2a8fe55dd9856",
+    "retention": "Full review retained in the private editorial package."
+  },
+  "amendmentDisclosure": "Reviews of later cuts and wording corrections supplement the earlier source and chapter reviews. The reviewing agent may have proposed the correction; root applied it."
+}

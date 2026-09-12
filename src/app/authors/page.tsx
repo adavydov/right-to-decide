@@ -1,3 +1,4 @@
+import {book} from "@/lib/book";
 import type { Metadata } from "next";
 import { AuthorsGrid } from "@/components/AuthorsGrid";
 import { siteConfig } from "@/lib/site-config";
@@ -5,7 +6,7 @@ import { getBookCreditsStructuredData } from "@/lib/editorial-team";
 export const metadata: Metadata = {
   title: "Авторы",
   description:
-    "Три автора «Права на решение», девять кураторов слоёв и редакционные ИИ-роли по конституции 1.2.1. Ответственность людей в практическом проекте.",
+    book.editionVersion === "10.0" ? "Три автора «Права на решение» и виртуальная литературная редакция: исследование, письмо, независимое чтение и сборка книги." : "Три автора «Права на решение» и литературная команда редакции 9.0.",
   alternates: { canonical: siteConfig.publicUrl + "/authors/" },
 };
 export default function AuthorsPage() {
@@ -18,8 +19,7 @@ export default function AuthorsPage() {
           <p className="page-intro">
             Академический опыт, технологическое предпринимательство и практика
             управленческого консалтинга. Три перспективы на способность человека принимать
-            решения. Ниже — каталог редакционных ИИ-ролей по конституции проекта
-            и функции людей, необходимые для практической проверки.
+            решения. {book.editionVersion === "10.0" ? "Ниже — функции виртуальной литературной редакции и порядок независимого чтения книги." : "Ниже — каталог редакционных ИИ-ролей по конституции проекта и функции людей, необходимые для практической проверки."}
           </p>
         </div>
       </div>

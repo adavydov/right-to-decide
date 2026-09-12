@@ -18,7 +18,7 @@ for(const file of [...compiled,...logs]){
  if(/\.sqlite(?:-wal|-shm)?$|\.token\.json$|(?:^|[\\/])\.env(?:\.local)?$/.test(file)||bytes.subarray(0,15).toString()==='SQLite format 3')findings.push({path:relative(root,file),kind:'private-file'});
  for(const [kind,pattern]of patterns)if(pattern.test(text))findings.push({path:relative(root,file),kind});
 }
-const result={date:'2026-09-06',status:findings.length?'FAIL':'PASS',static_files:compiled.length,test_trace_files:logs.length,findings,scope:'Current static export and available test trace files only; no unrelated environment secrets or private browser/session stores were read.'};
+const result={date:new Date().toISOString().slice(0,10),status:findings.length?'FAIL':'PASS',static_files:compiled.length,test_trace_files:logs.length,findings,scope:'Current static export and available test trace files only; no unrelated environment secrets or private browser/session stores were read.'};
 mkdirSync(join(root,'docs/open-editorial/verification'),{recursive:true});
 writeFileSync(join(root,'docs/open-editorial/verification/artifact-security-scan.json'),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result));

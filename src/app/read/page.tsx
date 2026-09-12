@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ContinueReading } from "@/components/ContinueReading";
+import { EditionChoice } from "@/components/EditionChoice";
 import { book, readingChapters } from "@/lib/book";
 import { assetPath, siteConfig } from "@/lib/site-config";
 
@@ -17,6 +18,7 @@ export default function ReadIndex() {
           <p className="eyebrow">Читать книгу</p>
           <h1 className="page-heading">{siteConfig.title}</h1>
           <p className="page-intro">{siteConfig.subtitle}</p>
+          <EditionChoice />
           <div className="read-actions">
             <Link className="button" href="/read/prologue/">Начать с пролога ↗</Link>
             <Link className="button secondary" href="/contents/">Выбрать главу</Link>

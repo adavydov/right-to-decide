@@ -1,3 +1,4 @@
+import { verifyV10Transition } from "./open-editorial-v10.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -36,7 +37,7 @@ const site = siteConfig.publicUrl;
 const base = site + "/editorial/editions/" + editionId;
 const mapPath = "docs/open-editorial/block-identities.json";
 const identityBytes = fs.existsSync(path.join(root, mapPath)) ? fs.readFileSync(path.join(root, mapPath)) : Buffer.from(encode({ schema_version: "1.0", chapters: {} }));
-const identities = verifyTransition(root, book, identityBytes);
+const identities = book.editionVersion === "10.0" ? verifyV10Transition(root, book) : verifyTransition(root, book, identityBytes);
 const seen = new Set();
 const chapters = book.chapters.filter(c => c.status === "available" && c.publicationStatus === "published" && c.id !== "source-contents").map(c => {
   const source = c.source?.sha256 ?? c.sourceSha256;

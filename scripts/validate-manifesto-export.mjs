@@ -10,7 +10,8 @@ assert.deepEqual(fs.readFileSync("out/manifesto/" + wordName), fs.readFileSync("
   "The Word download must preserve the verified reader copy");
 execFileSync("python", ["scripts/constitution_docx.py", "--check"], { stdio: "inherit" });
 
-const html = fs.readFileSync("out/manifesto/index.html", "utf8");
+const isV10 = JSON.parse(fs.readFileSync("src/data/book.json","utf8")).editionVersion === "10.0";
+const html = fs.readFileSync(isV10 ? "out/editions/v9/manifesto/index.html" : "out/manifesto/index.html", "utf8");
 const article = html.match(/<article\b[^>]*aria-label="Полный авторский текст конституции"[^>]*>([\s\S]*?)<\/article>/)?.[1];
 assert.ok(article, "The manifesto needs a complete, labelled author document");
 const normalize = (text) => text.replace(/\s+/gu, " ").trim();

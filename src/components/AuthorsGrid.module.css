@@ -209,3 +209,25 @@
     font-size: clamp(100px, 25vw, 150px);
   }
 }
+
+/* The homepage introduces people briefly; biographies and team details live on /authors/. */
+.section { padding-block: var(--section-space); background: var(--paper); }
+.eyebrow, .role, .credit { color: var(--ink-soft); }
+.title { font-size: clamp(38px,4.17vw,60px); line-height: 1.08; letter-spacing: -.045em; }
+.more, .links a { min-height: 44px; align-items: center; }
+.compact .grid { gap: 48px; }
+.compact .portrait, .compact .monogramPanel { width: 160px; aspect-ratio: 1; border-radius: 0; }
+.compact .monogram { font-size: 65px; color: var(--ink-soft); }
+.compact .monogramCaption { display: none; }
+.compact .name { font-size: 25px; line-height: 1.2; }
+.compact .role { font: 14px/1.5 var(--font-ui); text-transform: none; letter-spacing: 0; max-width: 280px; }
+.compact .details { padding-top: 22px; }
+@media(max-width:760px) {
+ .compact .grid { gap: 32px; }
+ .compact .author { display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 24px; align-items: center; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+ .compact .portrait, .compact .monogramPanel { width: 96px; }
+ .compact .monogram { font-size: 44px; }
+ .compact .details { padding-top: 0; }
+ .compact .name { font-size: 21px; }
+ .compact .role { font-size: 13px; margin-top: 9px; }
+}

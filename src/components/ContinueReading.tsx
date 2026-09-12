@@ -4,7 +4,7 @@ import { displayBookTitle } from "@/lib/book-display";
 import { useReadingPreference } from "@/lib/reading-storage";
 export function ContinueReading({ validIds, revision, revisions, allowLegacy = false }: { validIds: string[]; revision: string; revisions?: Record<string, string>; allowLegacy?: boolean }) {
   const raw = useReadingPreference("right-to-decide-reading");
-  let last: { id: string; title: string } | null = null;
+  let last: { id: string; title: string; routePrefix?: string } | null = null;
   try {
     const saved = JSON.parse(raw || "null");
     if (saved && (saved.revision === (revisions?.[saved.id] ?? revision) || (allowLegacy && saved.revision === undefined)) && validIds.includes(saved.id) && typeof saved.title === "string")
@@ -21,7 +21,7 @@ export function ContinueReading({ validIds, revision, revisions, allowLegacy = f
       <p className="eyebrow" style={{ marginBottom: 12 }}>
         Вы остановились здесь
       </p>
-      <Link className="text-link" href={"/read/" + last.id + "/"}>
+      <Link className="text-link" href={(last.routePrefix === "/editions/v9/read/" ? last.routePrefix : "/read/") + last.id + "/"}>
         Продолжить: {displayBookTitle(last.title)} ↗
       </Link>
     </div>

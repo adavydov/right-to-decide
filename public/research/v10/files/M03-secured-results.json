@@ -1,0 +1,3170 @@
+{
+  "units": "illustrative common asset-value units",
+  "cases": [
+    {
+      "case": "funded_recovery",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -7.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 8.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -9.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 8.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "enforce"
+      ],
+      "enforce_advantage_over_inaction": 4.0,
+      "execution_advantage_after_verification": 5.0,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        8.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": true,
+        "guarantor_indifference_payment": 5.0,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": [
+          5.0,
+          8.0
+        ],
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "expensive_verification",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 7,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 10,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 22.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -14.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 7.0,
+          "guarantor_payoff": -13.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 7.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 22.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 7
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 8.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -9.0,
+          "verification_and_execution_cost": 8.0,
+          "guarantor_payoff": -8.0,
+          "operator_additional_breach_cost": 8.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 7.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 22.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 7
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": -2.0,
+      "execution_advantage_after_verification": 5.0,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": true,
+        "guarantor_indifference_payment": 5.0,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": [
+          5.0,
+          8.0
+        ],
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "valuable_continuation",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 9,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": 1.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": 0.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 8.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -9.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 8.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": -3.0,
+      "execution_advantage_after_verification": -2.0,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "inaccessible_operator_collateral",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 0.25,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 2.5,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.5,
+            "operator_collateral_in_guarantor_custody": 7.5,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.5
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 2.5,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -7.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.5,
+            "operator_collateral_in_guarantor_custody": 7.5,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.5
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 2.5,
+          "operator_payment_after_breach": 2.5,
+          "guarantor_asset_delta": -6.5,
+          "operator_asset_delta": -3.5,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -7.5,
+          "operator_additional_breach_cost": 2.5,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.5,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 11.0,
+            "operator_collateral_in_guarantor_custody": 7.5,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 2.5
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": -1.5,
+      "execution_advantage_after_verification": -0.5,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 2.5,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "small_coverage",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 2,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 2,
+          "uncovered_repair_loss": 6.0,
+          "recoverable_collateral": 2,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": 0.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 2.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 2
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 10.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 2,
+          "uncovered_repair_loss": 6.0,
+          "recoverable_collateral": 2,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -2.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -1.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 2.0,
+            "guarantor_free": 14.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 2
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 10.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 2,
+          "uncovered_repair_loss": 6.0,
+          "recoverable_collateral": 2,
+          "operator_payment_after_breach": 2,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -3.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 2.0,
+          "accounts": {
+            "earth": 2.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 19.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 2
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 2
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 10.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 8.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": -2.0,
+      "execution_advantage_after_verification": -1.0,
+      "payout_to_earth": 2,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 2.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "no_execution_liquidity",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 5.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 12.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -7.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 4.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 12.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {
+        "enforce": "Verification/execution must be funded before recovery"
+      },
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": null,
+      "execution_advantage_after_verification": null,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "no_attribution",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": false
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -7.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {
+        "enforce": "No attributable covered claim supports collection/settlement"
+      },
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": null,
+      "execution_advantage_after_verification": null,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 0.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "failed_independent_trigger",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": false,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 0.0,
+          "uncovered_repair_loss": 8.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": 1.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": 2.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 0.0,
+            "guarantor_free": 17.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 12.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 0.0,
+          "uncovered_repair_loss": 8.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": 0.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": 1.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 12.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {
+        "enforce": "No attributable covered claim supports collection/settlement"
+      },
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": null,
+      "execution_advantage_after_verification": null,
+      "payout_to_earth": 0.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 0.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "earth_control_lost",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 0.0,
+          "uncovered_repair_loss": 8.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": 1.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": 2.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 0.0,
+            "guarantor_free": 5.0,
+            "guarantor_bond_in_earth_custody": 12.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 0.0,
+          "uncovered_repair_loss": 8.0,
+          "recoverable_collateral": 0.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": 0.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": 1.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 0.0,
+            "guarantor_free": 4.0,
+            "guarantor_bond_in_earth_custody": 12.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {
+        "enforce": "No attributable covered claim supports collection/settlement"
+      },
+      "best_responses": [
+        "ignore"
+      ],
+      "enforce_advantage_over_inaction": null,
+      "execution_advantage_after_verification": null,
+      "payout_to_earth": 0.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": false,
+        "guarantor_indifference_payment": null,
+        "operator_maximum_payment": 0.0,
+        "strictly_mutually_profitable_interval": null,
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "side_payment_six",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -6.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -7.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 8.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -9.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 8.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "settlement": {
+          "action": "settlement",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 6,
+          "guarantor_asset_delta": -2.0,
+          "operator_asset_delta": -7.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -1.0,
+          "operator_additional_breach_cost": 6.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 14.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 15.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "bilateral_settlement",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 6
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "settlement"
+      ],
+      "enforce_advantage_over_inaction": 4.0,
+      "execution_advantage_after_verification": 5.0,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        6.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": true,
+        "guarantor_indifference_payment": 5.0,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": [
+          5.0,
+          8.0
+        ],
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "loss_beyond_coverage",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 2.0,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 50,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 10.0,
+          "uncovered_repair_loss": 40.0,
+          "recoverable_collateral": 10.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -9.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -8.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 10.0,
+            "guarantor_free": 7.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 10.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 2.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 10.0,
+          "uncovered_repair_loss": 40.0,
+          "recoverable_collateral": 10.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -10.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -9.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 10.0,
+            "guarantor_free": 6.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 10.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 2.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 10.0,
+          "uncovered_repair_loss": 40.0,
+          "recoverable_collateral": 10.0,
+          "operator_payment_after_breach": 10.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -11.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 10.0,
+          "accounts": {
+            "earth": 10.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 11.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 10.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 10.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "enforce"
+      ],
+      "enforce_advantage_over_inaction": 6.0,
+      "execution_advantage_after_verification": 7.0,
+      "payout_to_earth": 10.0,
+      "conditional_operator_costs_at_best_responses": [
+        10.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": true,
+        "guarantor_indifference_payment": 7.0,
+        "operator_maximum_payment": 10.0,
+        "strictly_mutually_profitable_interval": [
+          7.0,
+          10.0
+        ],
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    },
+    {
+      "case": "tie_is_not_security",
+      "contract": {
+        "earth_bond": 12.0,
+        "coverage_limit": 10.0,
+        "operator_collateral": 10.0,
+        "earth_control": 1.0,
+        "collateral_access": 1.0,
+        "verification_cost": 1.0,
+        "execution_cost": 1.0,
+        "continuation_margin": 6,
+        "operator_continuation_value": 0.0,
+        "guarantor_cash": 4.0,
+        "operator_cash": 12.0,
+        "fee": 1.0,
+        "guarantor_capital_charge": 1.0,
+        "operator_capital_charge": 0.5
+      },
+      "event": {
+        "repair_loss": 8.0,
+        "covered_event": true,
+        "independent_trigger": true,
+        "attributable": true
+      },
+      "paths": {
+        "ignore": {
+          "action": "ignore",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -7.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 0.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 9.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "verify_only": {
+          "action": "verify_only",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 0.0,
+          "guarantor_asset_delta": -8.0,
+          "operator_asset_delta": -1.0,
+          "verification_and_execution_cost": 1.0,
+          "guarantor_payoff": -3.0,
+          "operator_additional_breach_cost": 0.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 8.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 21.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 0.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 10.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        },
+        "enforce": {
+          "action": "enforce",
+          "payout_to_earth": 8.0,
+          "uncovered_repair_loss": 0.0,
+          "recoverable_collateral": 8.0,
+          "operator_payment_after_breach": 8.0,
+          "guarantor_asset_delta": -1.0,
+          "operator_asset_delta": -9.0,
+          "verification_and_execution_cost": 2.0,
+          "guarantor_payoff": -2.0,
+          "operator_additional_breach_cost": 8.0,
+          "accounts": {
+            "earth": 8.0,
+            "guarantor_free": 15.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 13.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 1.0,
+            "execution_provider": 1.0
+          },
+          "initial_accounts": {
+            "earth": 0.0,
+            "guarantor_free": 16.0,
+            "guarantor_bond_in_earth_custody": 0.0,
+            "operator_free": 22.0,
+            "operator_collateral_in_guarantor_custody": 0.0,
+            "verification_provider": 0.0,
+            "execution_provider": 0.0
+          },
+          "transfers": [
+            {
+              "state": "funding",
+              "from": "guarantor_free",
+              "to": "guarantor_bond_in_earth_custody",
+              "amount": 12.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "operator_collateral_in_guarantor_custody",
+              "amount": 10.0
+            },
+            {
+              "state": "funding",
+              "from": "operator_free",
+              "to": "guarantor_free",
+              "amount": 1.0
+            },
+            {
+              "state": "independent_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "earth",
+              "amount": 8.0
+            },
+            {
+              "state": "verification",
+              "from": "guarantor_free",
+              "to": "verification_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "execution",
+              "from": "guarantor_free",
+              "to": "execution_provider",
+              "amount": 1.0
+            },
+            {
+              "state": "recovery",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "guarantor_free",
+              "amount": 8.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "guarantor_bond_in_earth_custody",
+              "to": "guarantor_free",
+              "amount": 4.0
+            },
+            {
+              "state": "close_one_claim",
+              "from": "operator_collateral_in_guarantor_custody",
+              "to": "operator_free",
+              "amount": 2.0
+            }
+          ],
+          "asset_balance_error": 0.0,
+          "future_margin_is_not_an_asset_transfer": true,
+          "coverage_renewed": false
+        }
+      },
+      "unavailable": {},
+      "best_responses": [
+        "ignore",
+        "enforce"
+      ],
+      "enforce_advantage_over_inaction": 0.0,
+      "execution_advantage_after_verification": 1.0,
+      "payout_to_earth": 8.0,
+      "conditional_operator_costs_at_best_responses": [
+        0.0,
+        8.0
+      ],
+      "side_payment_audit": {
+        "credible_collection_after_proof": true,
+        "guarantor_indifference_payment": 1.0,
+        "operator_maximum_payment": 8.0,
+        "strictly_mutually_profitable_interval": [
+          1.0,
+          8.0
+        ],
+        "verification_cost_is_sunk_here": true,
+        "earth_payout_cannot_be_reversed_by_this_settlement": true,
+        "bargaining_price_determined": false
+      },
+      "scope": "One specified claim, complete-information cases, no automatic transfer into original M03"
+    }
+  ],
+  "participation": [
+    {
+      "case": "moderate_claim_frequency",
+      "frequency_is_scenario_input": true,
+      "breach_frequency": 0.25,
+      "operator_contract_surplus": 4,
+      "specified_response": "enforce",
+      "guarantor_expected_increment": 1.0,
+      "operator_expected_increment": 0.5,
+      "guarantor_participates_weakly": true,
+      "operator_participates_weakly": true,
+      "zero_profit_fee_interval_before_liquidity_recheck": [
+        0.0,
+        1.5
+      ],
+      "nonnegative_fee_interval_exists": true,
+      "response_optimality_and_cash_must_be_rechecked_if_fee_changes": true
+    },
+    {
+      "case": "frequent_claims_no_price_interval",
+      "frequency_is_scenario_input": true,
+      "breach_frequency": 0.75,
+      "operator_contract_surplus": 4,
+      "specified_response": "enforce",
+      "guarantor_expected_increment": -1.0,
+      "operator_expected_increment": -3.5,
+      "guarantor_participates_weakly": false,
+      "operator_participates_weakly": false,
+      "zero_profit_fee_interval_before_liquidity_recheck": [
+        2.0,
+        -2.5
+      ],
+      "nonnegative_fee_interval_exists": false,
+      "response_optimality_and_cash_must_be_rechecked_if_fee_changes": true
+    },
+    {
+      "case": "specified_side_payment",
+      "frequency_is_scenario_input": true,
+      "breach_frequency": 0.25,
+      "operator_contract_surplus": 4,
+      "specified_response": "settlement",
+      "guarantor_expected_increment": 1.25,
+      "operator_expected_increment": 1.0,
+      "guarantor_participates_weakly": true,
+      "operator_participates_weakly": true,
+      "zero_profit_fee_interval_before_liquidity_recheck": [
+        0.0,
+        2.0
+      ],
+      "nonnegative_fee_interval_exists": true,
+      "response_optimality_and_cash_must_be_rechecked_if_fee_changes": true
+    }
+  ]
+}

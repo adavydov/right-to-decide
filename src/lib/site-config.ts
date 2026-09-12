@@ -8,9 +8,9 @@ export const siteConfig = {
   email: "letterdam@mail.ru",
   repository: "https://github.com/adavydov/right-to-decide",
   publicUrl: "https://adavydov.github.io/right-to-decide",
-  coverPath: "/images/book-cover-digital-v1.webp",
-  coverWidth: 1536,
-  coverHeight: 1024,
+  coverPath: "/images/book-cover-v10.png",
+  coverWidth: 1055,
+  coverHeight: 1491,
   editionLabel: "Рабочая редакция",
 } as const;
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

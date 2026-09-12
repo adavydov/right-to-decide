@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.0",
+  "decision": "accepted",
+  "author": "books_pdf",
+  "reviewer": "root",
+  "texts": [
+    {
+      "id": "INDEX",
+      "path": "public/research-v10/index.md",
+      "sha256": "2c39853c66f3a4cd9081b527510ab0416f2229e5a033878ecafd66694a736aa5"
+    },
+    {
+      "id": "M01",
+      "path": "public/research-v10/M01.md",
+      "sha256": "4e7ac512dc5ce216dee4a64a8c04337d9cc1e880d4a135f0cb7f106ffb11b017"
+    },
+    {
+      "id": "M02",
+      "path": "public/research-v10/M02.md",
+      "sha256": "1705c097235aeabea512a1f6d16ed23eaa0fe64c2b4fd6f51f3e86cf4ed59af0"
+    },
+    {
+      "id": "M03",
+      "path": "public/research-v10/M03.md",
+      "sha256": "372fca010b29216089b98cd1e8934fcfa7d732a669e151040ac5257a36d21e1f"
+    },
+    {
+      "id": "M04",
+      "path": "public/research-v10/M04.md",
+      "sha256": "3d8519bd36e966797e692e702494dc5f86376d1e04b6ab9c56b116ea171039ea"
+    }
+  ],
+  "downloads": [
+    {
+      "modelId": "M01",
+      "path": "models/coalition_game.py",
+      "name": "coalition_game.py",
+      "label": "Код игры коалиций",
+      "sha256": "6fd716ebd669dd3aa9fc68e3827dfcb67d525a8c644b5026892d34cae802aee3"
+    },
+    {
+      "modelId": "M02",
+      "path": "models/preferences.py",
+      "name": "preferences.py",
+      "label": "Код динамики предпочтений",
+      "sha256": "cc3c8f96694f73c5a67a402c730aa1e7aa1f9eb4a104b98bbec55e7058264047"
+    },
+    {
+      "modelId": "M03",
+      "path": "models/boundary.py",
+      "name": "boundary.py",
+      "label": "Код исходной игры границы",
+      "sha256": "6790ce6e9d77afcd96f2e3d9a51fe949525040db9dd98d8292a26299e4554f55"
+    },
+    {
+      "modelId": "M03",
+      "path": "models/secured_boundary.py",
+      "name": "secured_boundary.py",
+      "label": "Код ограниченного залога",
+      "sha256": "5867ef4cdb9fa9bffcd53c1d1821fe201113bda7842e13e81dcd26e63792464d"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/space_economics.py",
+      "name": "space_economics.py",
+      "label": "Параметры и годовой расчёт",
+      "sha256": "395278d0bb358b613a88d3e733a3fd21b8ec9bdd392d1b8aafdc772a9db842d5"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/space_lagged.py",
+      "name": "space_lagged.py",
+      "label": "Расчёт с вводом в следующем году",
+      "sha256": "e0488ef2143c056b4943fa92687a66daf9afdc5f4c4cda1a5ae5c5a5bd0bbb46"
+    },
+    {
+      "modelId": "M01",
+      "path": "models/public/reproduce.py",
+      "name": "reproduce.py",
+      "label": "Повторить все четыре модели",
+      "sha256": "ee7bcbc1e214a4fe326d0dadcc117f4b97355233e26311d58372b70e9e44aa74"
+    },
+    {
+      "modelId": "M01",
+      "path": "models/public/public-results/M01-results.json",
+      "name": "M01-results.json",
+      "label": "Результаты: M01-results.json",
+      "sha256": "dd3ac8d03405388246fdea32b7ea910a5f3cfb11f67de8b3b03d8b5305b67579"
+    },
+    {
+      "modelId": "M02",
+      "path": "models/public/public-results/M02-curiosity.csv",
+      "name": "M02-curiosity.csv",
+      "label": "Результаты: M02-curiosity.csv",
+      "sha256": "139e4c53368eee99c0397dfe01e111ba96e8520803b2017d4c66791c65d9ac3a"
+    },
+    {
+      "modelId": "M02",
+      "path": "models/public/public-results/M02-none.csv",
+      "name": "M02-none.csv",
+      "label": "Результаты: M02-none.csv",
+      "sha256": "f2590d046c4fbb4476a26c16077b50444ac92ad348ed8ffda257da137f2943e5"
+    },
+    {
+      "modelId": "M02",
+      "path": "models/public/public-results/M02-normalizing.csv",
+      "name": "M02-normalizing.csv",
+      "label": "Результаты: M02-normalizing.csv",
+      "sha256": "afcf8d8442437308e9efb8f3d02dbec399f5d966b1e07682b88ba439cd2e6e5c"
+    },
+    {
+      "modelId": "M02",
+      "path": "models/public/public-results/M02-self_authored.csv",
+      "name": "M02-self_authored.csv",
+      "label": "Результаты: M02-self_authored.csv",
+      "sha256": "2a33fd73ab9dde55e70edbe12c3134f9ec2b6ffd043532382a3a7677849102dc"
+    },
+    {
+      "modelId": "M03",
+      "path": "models/public/public-results/M03-boundary.json",
+      "name": "M03-boundary.json",
+      "label": "Результаты: M03-boundary.json",
+      "sha256": "87022ce39952e8c0d447e45e7aff288ae2d897de5bf2884b56b80a28ea07aa08"
+    },
+    {
+      "modelId": "M03",
+      "path": "models/public/public-results/M03-secured-results.json",
+      "name": "M03-secured-results.json",
+      "label": "Результаты: M03-secured-results.json",
+      "sha256": "3bf146761f55a1c051b2b1b4f5b20a4305f95a7877da10cab3b7da3c679b53d7"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-2500-earth.csv",
+      "name": "M04-2500-earth.csv",
+      "label": "Результаты: M04-2500-earth.csv",
+      "sha256": "a97afc2fddb964ad2e2aa04a59343da437ea74e8aa57c04aaf7114b9aee22e50"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-2500-local.csv",
+      "name": "M04-2500-local.csv",
+      "label": "Результаты: M04-2500-local.csv",
+      "sha256": "47ef45f3d666a746f24330e97b1d259f7ec5effc55089d08cf6ffabf13afcebe"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-5000-earth.csv",
+      "name": "M04-5000-earth.csv",
+      "label": "Результаты: M04-5000-earth.csv",
+      "sha256": "c7e3ee972cd1125053abd2380ac72614b753eee29e10a3e8b8fb3becb6a7a260"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-5000-local.csv",
+      "name": "M04-5000-local.csv",
+      "label": "Результаты: M04-5000-local.csv",
+      "sha256": "004fa9cb2cf2e81b65c80835afd1a6d99258fff744f2b7e0bfd2deea8ce5326b"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-comparison-annual.csv",
+      "name": "M04-comparison-annual.csv",
+      "label": "Результаты: M04-comparison-annual.csv",
+      "sha256": "84caed29a6ccc643894138d0950eda4f0c403137d9b522351772f89a1e4422c1"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-comparison-lagged.csv",
+      "name": "M04-comparison-lagged.csv",
+      "label": "Результаты: M04-comparison-lagged.csv",
+      "sha256": "7f972b326d00ee6cd0c018c9d8f9afa0c55f1560a8c5c84e7338f83d0ea13c72"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-parameters.json",
+      "name": "M04-parameters.json",
+      "label": "Результаты: M04-parameters.json",
+      "sha256": "0089e897742565e79153fa23cc5632de91f8dfcf628488c13c4652480ac2fc38"
+    },
+    {
+      "modelId": "M04",
+      "path": "models/public/public-results/M04-sensitivity.csv",
+      "name": "M04-sensitivity.csv",
+      "label": "Результаты: M04-sensitivity.csv",
+      "sha256": "fb545a2944f5afa309c5fe68525f60b6b579e3147d2b6103a80fa9ae11db741a"
+    }
+  ],
+  "reviewEvidence": "editorial/PUBLIC_MODEL_REVIEW_ROOT.json"
+}

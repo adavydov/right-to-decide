@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-06",
+  "date": "2026-09-12",
   "status": "PASS",
-  "static_files": 1606,
+  "static_files": 1979,
   "test_trace_files": 0,
   "findings": [],
   "scope": "Current static export and available test trace files only; no unrelated environment secrets or private browser/session stores were read."

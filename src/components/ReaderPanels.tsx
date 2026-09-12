@@ -16,6 +16,7 @@ import styles from "./ReaderPanels.module.css";
 import ReaderFontPicker from "./ReaderFontPicker";
 
 type ReaderPanelsProps = {
+  routePrefix?: string;
   panel: ReaderPanel | null;
   onClose: () => void;
   settings: ReaderSettings;
@@ -47,7 +48,7 @@ function groupName(chapter: ChapterNavigation) {
 }
 
 export function ReaderPanels({
-  panel, onClose, settings, onSettingsChange, items, currentId, headings,
+  routePrefix = "/read/", panel, onClose, settings, onSettingsChange, items, currentId, headings,
   query, onQueryChange, results, onJump, bookmarks, onBookmarkOpen,
   onBookmarkRemove, onBookmarkAdd,
 }: ReaderPanelsProps) {
@@ -173,7 +174,7 @@ export function ReaderPanels({
                 {items.filter((item) => groupName(item) === group).map((item) => (
                   <li key={item.id}>
                     {item.status === "available" ? (
-                      <Link className={styles.chapterLink} href={"/read/" + item.id + "/"} aria-current={item.id === currentId ? "page" : undefined} onClick={onClose}>
+                      <Link className={styles.chapterLink} href={routePrefix + item.id + "/"} aria-current={item.id === currentId ? "page" : undefined} onClick={onClose}>
                         <span>{displayBookTitle(item.title)}</span>
                         {item.id === currentId && <span className={styles.currentLabel}>Вы здесь</span>}
                       </Link>

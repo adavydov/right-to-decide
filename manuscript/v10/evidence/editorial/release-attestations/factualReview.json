@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "scope": "factualReview",
+  "decision": "accepted",
+  "sourceSetSha256": "1529694c461e883d97667fcda697606f158044c4dc0b36c3e70a262f00890a6d",
+  "reviewer": "root/integration-of-independent-source-reviews",
+  "reviewNature": "Integration of completed independent source checks and amendment reviews, not a new reading of every original.",
+  "reviewersByOriginalAuthorBlock": {
+    "C01-C07": "editorial_audit",
+    "C08-C14": "root",
+    "P00,C15-C24,E00": "books_epub"
+  },
+  "basis": [
+    {
+      "report": "FRONT_BLOCK_INDEPENDENT_REVIEW",
+      "sha256": "9b4b9f354f52e99d3e8901f3ddde3311453f6e7ae240f02f9cc3a9a0b3bea4e8",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "MIDDLE_BLOCK_INDEPENDENT_REVIEW",
+      "sha256": "372744db8cb7c9c7802d50c536b69e52949a5dc7ad347c69343ec028e8c2a028",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "ROOT_BLOCK_INDEPENDENT_REVIEW",
+      "sha256": "2d6810da8a7d61017b9f8884e6c77d30da99067b2711149c9848ebedcc33a09c",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "FUNCTION_EDIT_INDEPENDENT_A",
+      "sha256": "5968a3c7ef53cd630b8749d5b94b26a329dad4d864009ff060fdfd6966c11995",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "FUNCTION_EDIT_INDEPENDENT_B",
+      "sha256": "623d044fd307454d522bf54f1009cdc898d0f025e18672bc6ca9b4fbaa8edc80",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "ROOT_BLOCK_MODEL_CHECK",
+      "sha256": "40148602f8d80e7f18ecde8bf0992e282ab0625fba9a2407ca7a490abcfba6e9",
+      "retention": "Full review retained in the private editorial package."
+    },
+    {
+      "report": "PUBLIC_MODEL_REVIEW_ROOT",
+      "sha256": "211a4dad500d937859032f802d0f7ab66b4e43d5d62bd3d8b03385778f5214e0",
+      "retention": "Full review retained in the private editorial package."
+    }
+  ],
+  "grounds": [
+    "Historical and contemporary claims checked against identified primary passages in the block reviews.",
+    "Conditional models checked by independent readers and numerical tests; no empirical forecast or full industrial feasibility claim.",
+    "Later functional cuts retain sources and material boundaries; final C16/C24 wording corrections checked by the whole-book reader."
+  ],
+  "libraryScope": "655 cards read; this does not mean that all 131 source records were read in full.",
+  "unresolvedMaterialIssues": 0
+}

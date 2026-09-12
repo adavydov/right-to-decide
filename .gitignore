@@ -64,3 +64,19 @@ docs/research/brand-ai/extracted.json
 /docs/design-references/kobo-reader/kobo-public-guide.png
 /docs/design-references/kobo-reader/kobo-reader-reference.png
 /docs/research/reader-preview*.log
+
+# Authorized reference inspection stays local; publish design specifications only.
+/docs/research/v10-design/reference/
+/docs/research/v10-design/*.log
+
+# Local uninstalled manuscript release artifacts
+.release-staging/
+
+# Private design research, reference captures, local QA evidence and one-off runners.
+/docs/research/v10-design/
+/docs/research/v10-pipeline/
+/docs/research/v10-public-package/
+/scripts/v10-reference-inspection.mjs
+/scripts/v10-final-snapshot.mjs
+/scripts/v10-library-qa.mjs
+/scripts/v10-editorial-qa.mjs

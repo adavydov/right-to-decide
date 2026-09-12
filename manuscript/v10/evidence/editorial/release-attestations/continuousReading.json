@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "scope": "continuousReading",
+  "decision": "accepted",
+  "grounds": [
+    "Читается последовательная история решений: ответ → производство → предприятие → распределение прав → общество → изменяющийся человек → открытая сеть → правила → общий союз → внешний покупатель → расхождение.",
+    "Концы глав оставляют новый предмет следующей; сильные документальные эпизоды, война, два численных сравнения и смена человеческого масштаба разрывают однообразие объяснений.",
+    "C24 и E00 по-разному оценивают один и тот же исход; эпилог не меняет его условия."
+  ],
+  "limits": [
+    "Это подготовленное агентное чтение, не проверка на неподготовленной аудитории."
+  ],
+  "reviewer": "books_pdf",
+  "sourceSetSha256": "1529694c461e883d97667fcda697606f158044c4dc0b36c3e70a262f00890a6d",
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW",
+    "sha256": "d999bd3e4c26b2799692a5b720087213b04c2ef639111f84e8c2a8fe55dd9856",
+    "retention": "Full review retained in the private editorial package."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false,
+  "unresolvedMaterialIssues": 0
+}

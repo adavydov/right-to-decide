@@ -65,8 +65,13 @@ test('public corpus references complete immutable files and keeps original manif
 test('default static generator is reproducible in a minimal checkout with no service or npm modules',t=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'oe-static-build-'));
  t.after(()=>{const within=path.relative(os.tmpdir(),dir);assert.ok(within&&!within.startsWith('..')&&!path.isAbsolute(within));assert.ok(path.basename(dir).startsWith('oe-static-build-'));fs.rmSync(dir,{recursive:true,force:true});});
- const inputs=['scripts/open-editorial-identity-transition.mjs','scripts/build-open-editorial.mjs','shared/open-editorial-text.mjs','shared/open-editorial-layers.mjs','src/lib/site-config.ts','src/data/site-copy.json','src/data/book.json','CONSTITUTION.md','docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md','docs/open-editorial/block-identities.json','docs/open-editorial/STATIC_AGENT_GUIDE.md'];
+ const inputs=['scripts/open-editorial-v10.mjs','scripts/open-editorial-identity-transition.mjs','scripts/build-open-editorial.mjs','shared/open-editorial-text.mjs','shared/open-editorial-layers.mjs','src/lib/site-config.ts','src/data/site-copy.json','src/data/book.json','CONSTITUTION.md','docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md','docs/open-editorial/block-identities.json','docs/open-editorial/STATIC_AGENT_GUIDE.md'];
  const book=json(root,'src/data/book.json');
+ if(book.editionVersion==='10.0') {
+  const manifest=json(root,'manuscript/v10/release-manifest.json');
+  const archive=json(root,'docs/publishing/v10/archive-v9.json');
+  inputs.push('manuscript/v10/release-manifest.json','docs/publishing/v10/archive-v9.json',...manifest.artifacts.map(i=>i.path),...archive.files.map(i=>i.path));
+ }
  const receiptPath='docs/open-editorial/identity-transitions/'+book.releaseId+'.json';
  if(fs.existsSync(path.join(root,receiptPath))){
   const receipt=json(root,receiptPath),selection=json(root,receipt.publication_selection.path);

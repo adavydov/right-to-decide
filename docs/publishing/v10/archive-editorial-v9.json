@@ -1,0 +1,25 @@
+{
+  "editionVersion": "9.0",
+  "files": [
+    {
+      "path": "src/data/editorial-team.json",
+      "sha256": "052c46c7126ffdd7eda2b9fd27b5c5ea503b3783fd5ee02aceebd6a255cbcf7f",
+      "bytes": 21665
+    },
+    {
+      "path": "docs/editorial/editorial-team-v4.0.json",
+      "sha256": "052c46c7126ffdd7eda2b9fd27b5c5ea503b3783fd5ee02aceebd6a255cbcf7f",
+      "bytes": 21665
+    },
+    {
+      "path": "CONSTITUTION.md",
+      "sha256": "d40184060f08b0cc71a4a6ea3ac09a926e78ffb6d3c21a7fbeed5ec7e171ccd1",
+      "bytes": 241326
+    },
+    {
+      "path": "public/manifesto/Pravo_na_reshenie_Manifest_Constitution_v1.2.1.docx",
+      "sha256": "f6edc78cb5db57dc1ab032635e1e25e57aa2f9b59552dda1d24d6ce3b1a0df27",
+      "bytes": 101021
+    }
+  ]
+}

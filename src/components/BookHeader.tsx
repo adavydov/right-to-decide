@@ -1,15 +1,16 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./BookHeader.module.css";
 export function BookHeader() {
   const [open, setOpen] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   useEffect(() => {
     if (!open) return;
     const close = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") { setOpen(false); toggle.current?.focus(); }
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
@@ -73,16 +74,18 @@ export function BookHeader() {
             className={styles.read}
             onClick={() => setOpen(false)}
           >
-            Читать книгу <span aria-hidden="true">↗</span>
+            Читать <span aria-hidden="true">↗</span>
           </Link>
           <button
+            ref={toggle}
+            type="button"
             className={styles.toggle}
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={open}
             aria-controls="book-navigation"
             onClick={() => setOpen(!open)}
           >
-            {open ? "✕" : "☰"}
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d={open ? "M5 5l10 10M15 5L5 15" : "M3 6h14M3 14h14"} stroke="currentColor" strokeWidth="1.5" /></svg>
           </button>
         </nav>
       </header>

@@ -87,13 +87,13 @@ export function AuthorsGrid({ compact = false }: AuthorsGridProps) {
   if (!compact) return <>{cards}<LiteraryTeam /></>;
 
   return (
-    <section className={styles.section} id="authors" aria-labelledby="authors-heading">
+    <section className={`${styles.section} ${styles.compact}`} id="authors" aria-labelledby="authors-heading">
       <div className="wrap">
         <header className={styles.header}>
           <div>
             <p className={styles.eyebrow}>Авторы</p>
             <h2 className={styles.title} id="authors-heading">
-              Образование, технологии и управление
+              Три взгляда на один вопрос
             </h2>
           </div>
           <Link className={styles.more} href="/authors/">
@@ -101,7 +101,7 @@ export function AuthorsGrid({ compact = false }: AuthorsGridProps) {
           </Link>
         </header>
         {cards}
-        <LiteraryTeam compact />
+
       </div>
     </section>
   );

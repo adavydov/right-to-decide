@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./publication-tokens.css";
 import { assetPath, siteConfig } from "@/lib/site-config";
 import { BookHeader } from "@/components/BookHeader";
 import { BookFooter } from "@/components/BookFooter";
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
   authors: authorsData.authors.map((a) => ({ name: a.name })),
   creator: authorsData.authors.map((a) => a.name).join(", "),
   keywords: [
-    "инженерное образование",
+    "будущее человека",
     "искусственный интеллект",
-    "общественная самостоятельность",
+    "собственность и власть",
     "создание будущего",
     "Право на решение",
   ],

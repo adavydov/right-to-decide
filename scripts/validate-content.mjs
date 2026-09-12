@@ -350,7 +350,7 @@ for (const author of authors) {
   }
 }
 localMedia(siteConfig.coverPath, "Book cover");
-assert.equal(siteConfig.coverPath, "/images/book-cover-digital-v1.webp");
+assert.equal(siteConfig.coverPath, "/images/book-cover-v10.png");
 
 const librarySupplement = readJSON("src/data/library-supplement.json");
 assert.equal(librarySupplement.schemaVersion, 1);

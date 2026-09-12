@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cards, getCard, getSource } from "@/lib/library";
+import { book } from "@/lib/book";
 import { siteConfig } from "@/lib/site-config";
 import styles from "../WikiArticle.module.css";
+
+const legacyLibraryPath=book.editionVersion==="10.0"?"/editions/v9/library/":"/library/";
 
 type WikiPageProps = { params: Promise<{ card: string }> };
 
@@ -84,7 +87,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
           </ul>
           <div className={styles.sourceIdentity}>
             <p className={styles.smallLabel}>Источник</p>
-            <Link href={`/library/#${source.id}`} className={styles.sourceTitle}>
+            <Link href={`${legacyLibraryPath}#${source.id}`} className={styles.sourceTitle}>
               {source.authors.join(", ")}. {source.title} <span aria-hidden="true">↗</span>
             </Link>
             <p className={styles.edition}>{source.edition}</p>
@@ -176,7 +179,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
                 </div>
               </dl>
             </div>
-            <Link href={`/library/#${source.id}`} className={styles.textLink}>
+            <Link href={`${legacyLibraryPath}#${source.id}`} className={styles.textLink}>
               Об издании в библиотеке <span aria-hidden="true">↗</span>
             </Link>
           </section>
@@ -208,7 +211,7 @@ export default async function WikiArticlePage({ params }: WikiPageProps) {
         </section>
       )}
       <nav className={styles.backlinks} aria-label="Продолжение чтения">
-        <Link href="/library/#history">← Все свидетельства</Link>
+        <Link href={legacyLibraryPath+"#history"}>← Все свидетельства</Link>
         <Link href="/library/">Библиотека <span aria-hidden="true">↗</span></Link>
       </nav>
     </main>

@@ -23,10 +23,12 @@ function Icon({ name }: { name: "back" | "next" | "contents" | "search" | "bookm
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name]} /></svg>;
 }
 const positionKey = (id: string) => `right-to-decide-position:${id}`;
-export function ReaderShell({ currentId, items, headings, revision, children }: {
+export function ReaderShell({ currentId, items, headings, revision, children, routePrefix = "/read/", contentsHref = "/contents/", storageNamespace }: {
+  routePrefix?: string; contentsHref?: string; storageNamespace?: string;
   currentId: string; items: ChapterNavigation[]; headings: ReaderHeading[]; revision: string; children: ReactNode;
 }) {
   const router = useRouter();
+  const savedPositionKey = useCallback((id: string) => storageNamespace ? `right-to-decide-position:${storageNamespace}:${id}` : positionKey(id), [storageNamespace]);
   const rawSettings = useReadingPreference("right-to-decide-settings");
   const legacySize = useReadingPreference("right-to-decide-font-size");
   const settings = useMemo(() => parseSettings(rawSettings, legacySize), [rawSettings, legacySize]);
@@ -107,8 +109,8 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       const position = article.current?.isConnected ? capture() : lastLocation;
       if (!position) return;
       lastLocation = position;
-      writeReadingPreference(positionKey(currentId), JSON.stringify(position), false);
-      writeReadingPreference("right-to-decide-reading", JSON.stringify({ id: currentId, title: current.title, revision, progress: position.progress }), false);
+      writeReadingPreference(savedPositionKey(currentId), JSON.stringify(position), false);
+      writeReadingPreference("right-to-decide-reading", JSON.stringify({ id: currentId, title: current.title, revision, routePrefix, progress: position.progress }), false);
     };
     const update = () => {
       cancelAnimationFrame(frame);
@@ -141,7 +143,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
           if (disposed) return;
           if (window.location.hash) hashJump();
           else if (fontRequests.current === initialFontChangeVersion) {
-            const saved = parseLocation(readReadingPreference(positionKey(currentId)));
+            const saved = parseLocation(readReadingPreference(savedPositionKey(currentId)) || readReadingPreference(positionKey(currentId)));
             if (saved) restore(saved);
             else window.scrollTo({ top: 0, behavior: "instant" });
           }
@@ -163,7 +165,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       window.removeEventListener("scroll", update); window.removeEventListener("resize", update);
       window.removeEventListener("pagehide", save); window.removeEventListener("hashchange", hashJump);
     };
-  }, [currentId, current.title, revision, capture, restore, jump]);
+  }, [currentId, current.title, revision, capture, restore, jump, routePrefix, savedPositionKey]);
 
   useLayoutEffect(() => {
     if (!pending.current) return;
@@ -226,8 +228,8 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       window.history.replaceState(null, "", window.location.pathname);
       restore(bookmark);
     } else {
-      writeReadingPreference(positionKey(bookmark.chapterId), JSON.stringify(bookmark), false);
-      router.push(`/read/${bookmark.chapterId}/`);
+      writeReadingPreference(savedPositionKey(bookmark.chapterId), JSON.stringify(bookmark), false);
+      router.push(`${routePrefix}${bookmark.chapterId}/`);
     }
   }
   function searchChapter(value: string) {
@@ -255,7 +257,7 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
     <div className={styles.reader} data-theme={settings.theme} data-font={settings.font} data-focus={focus} style={readerStyle} data-testid="reader">
       <header className={styles.toolbar} data-testid="reader-toolbar" inert={focus}>
         <div className={styles.identity}>
-          <Link href="/read/" className={styles.back} aria-label="К книге"><Icon name="back" /><span>К книге</span></Link>
+          <Link href={contentsHref} className={styles.back} aria-label="К книге"><Icon name="back" /><span>К книге</span></Link>
           <span className={styles.divider} />
           <Link href="/" className={styles.bookName}>Право на решение</Link>
         </div>
@@ -272,14 +274,14 @@ export function ReaderShell({ currentId, items, headings, revision, children }: 
       {focus && <button className={styles.showControls} onClick={() => setFocus(false)} aria-label="Показать управление"><Icon name="focus" /><span>Показать управление</span></button>}
       <div className={styles.articleColumn} ref={article}>{children}</div>
       <footer className={styles.footer} data-testid="reader-footer" inert={focus}>
-        {previous ? <Link href={`/read/${previous.id}/`} className={styles.chapterNav} aria-label="Предыдущий раздел"><Icon name="back" /><span>Предыдущий раздел</span></Link> : <span className={styles.chapterNav} aria-disabled="true"><Icon name="back" /><span>Начало книги</span></span>}
+        {previous ? <Link href={`${routePrefix}${previous.id}/`} className={styles.chapterNav} aria-label="Предыдущий раздел"><Icon name="back" /><span>Предыдущий раздел</span></Link> : <span className={styles.chapterNav} aria-disabled="true"><Icon name="back" /><span>Начало книги</span></span>}
         <div className={styles.progress}>
           <div className={styles.progressLabel}><span>{percent}% главы</span><span>{remaining > 0 ? `Ещё ≈ ${remaining} мин` : "Глава прочитана"}</span></div>
           <input type="range" min="0" max="100" value={percent} aria-label="Прогресс главы" aria-valuetext={`${percent}% главы`} onChange={e => { const value = Number(e.target.value) / 100; window.scrollTo({ top: value * Math.max(0, document.documentElement.scrollHeight - window.innerHeight), behavior: "instant" }); setProgress(value); }} />
         </div>
-        {next ? <Link href={`/read/${next.id}/`} className={styles.chapterNav} aria-label="Следующий раздел"><span>Следующий раздел</span><Icon name="next" /></Link> : <Link href="/contents/" className={styles.chapterNav}><span>К содержанию</span><Icon name="next" /></Link>}
+        {next ? <Link href={`${routePrefix}${next.id}/`} className={styles.chapterNav} aria-label="Следующий раздел"><span>Следующий раздел</span><Icon name="next" /></Link> : <Link href={contentsHref} className={styles.chapterNav}><span>К содержанию</span><Icon name="next" /></Link>}
       </footer>
-      <ReaderPanels panel={panel} onClose={() => setPanel(null)} settings={draftSettings || settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(allBookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
+      <ReaderPanels routePrefix={routePrefix} panel={panel} onClose={() => setPanel(null)} settings={draftSettings || settings} onSettingsChange={changeSettings} items={items} currentId={currentId} headings={headings} query={query} onQueryChange={searchChapter} results={results} onJump={jump} bookmarks={bookmarks} onBookmarkOpen={openBookmark} onBookmarkRemove={id => writeReadingPreference("right-to-decide-bookmarks", JSON.stringify(allBookmarks.filter(b => b.id !== id)))} onBookmarkAdd={addBookmark} />
       <div role="status" className={notice ? styles.toast : styles.srOnly}>{notice}</div>
     </div>
   );

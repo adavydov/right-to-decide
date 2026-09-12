@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C08",
+  "sourceSha256": "655d372c047074b5825db50cb51444038e240e1fffa80e3d24159013718605b9",
+  "author": "editorial_audit",
+  "lastIntegrationEditor": "root",
+  "reviewer": "root",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "Independent agent editorial review of the stated text; no external or blind-reader claim.",
+  "basis": {
+    "report": "MIDDLE_BLOCK_INDEPENDENT_REVIEW",
+    "sha256": "372744db8cb7c9c7802d50c536b69e52949a5dc7ad347c69343ec028e8c2a028",
+    "retention": "Full review retained in the private editorial package."
+  },
+  "amendmentDisclosure": "Reviews of later cuts and wording corrections supplement the earlier source and chapter reviews. The reviewing agent may have proposed the correction; root applied it."
+}
