@@ -10,8 +10,12 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
 .essence-introduction { padding-top: 156px; padding-bottom: 64px; }
 .essence-eyebrow { font-size: 12px; line-height: 1.5; letter-spacing: .075em; text-transform: uppercase; }
 .essence-introduction h1 { margin-top: 28px; font-size: clamp(56px, 7vw, 100px); font-weight: 500; line-height: .99; letter-spacing: -.058em; }
+.essence-literary-label { max-width: 720px; margin-top: 20px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
 .essence-subtitle { max-width: 850px; margin-top: 28px; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.14; letter-spacing: -.035em; }
 .essence-intro-copy { max-width: 720px; margin-top: 26px; font-size: 20px; line-height: 1.55; }
+.essence-epigraph { max-width: 680px; margin: 34px 0 0; padding-left: 24px; border-left: 2px solid var(--border); }
+.essence-epigraph blockquote { margin: 0; font-size: 20px; font-style: italic; line-height: 1.55; letter-spacing: -.016em; }
+.essence-epigraph figcaption { margin-top: 12px; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
 .essence-entry-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 30px; margin-top: 32px; }
 .essence-start { display: inline-flex; align-items: center; justify-content: center; gap: 32px; min-height: 46px; padding: 12px 22px; border: 1px solid var(--ink); border-radius: 6px; color: var(--paper); background: var(--ink); font-size: 15px; }
 .essence-start:hover { color: var(--paper); background: #3c3b37; }
@@ -29,6 +33,7 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
 .essence-contents li + li { border-top: 1px solid var(--border); }
 .essence-contents li a { display: flex; align-items: baseline; gap: 18px; min-height: 44px; padding-block: 11px; font-size: 17px; line-height: 1.4; }
 .essence-contents li a > span { min-width: 24px; color: var(--ink-soft); font-size: 13px; }
+.essence-contents-notes { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; margin-top: 20px; font-size: 16px; }
 .essence-progress { position: sticky; top: var(--essence-nav-height); z-index: 40; background: var(--paper); border-top: 1px solid var(--border); }
 .essence-progress-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 18px 30px; min-height: 68px; padding-block: 8px; }
 .essence-position { font-size: 14px; line-height: 1.4; }
@@ -45,6 +50,14 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
 .essence-step-body { min-width: 0; max-width: 65ch; }
 .essence-paragraphs { font-size: clamp(18px, 1.4vw, 20px); line-height: 1.6; letter-spacing: -.016em; overflow-wrap: anywhere; }
 .essence-paragraphs p + p { margin-top: 1.2em; }
+.essence-paragraphs strong, .essence-notes strong { font-weight: 600; }
+.essence-paragraphs em, .essence-notes em { font-style: italic; }
+.essence-paragraphs a, .essence-notes a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+.essence-paragraphs a:hover, .essence-notes a:hover { text-decoration-thickness: 2px; }
+.essence-note-reference { position: relative; top: -.35em; font-size: .7em; line-height: 0; vertical-align: baseline; }
+.essence-note-reference a { display: inline; padding: .2em .18em; text-decoration: none; font-weight: 600; scroll-margin-top: calc(var(--essence-nav-height) + var(--essence-progress-height) + 36px); }
+.essence-note-reference a:hover { text-decoration: underline; }
+.essence-note-reference a:target { outline: 2px solid currentColor; outline-offset: 3px; }
 .essence-part-opening { background: var(--dark-surface); color: var(--paper); border-color: #ffffff2b; }
 .essence-part-opening .essence-eyebrow { color: #d6d8cf; }
 .essence-part-opening a:hover { color: #d5e4d1; }
@@ -62,6 +75,14 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
 .essence-step-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 32px; margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--border); }
 .essence-step-footer a { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; font-size: 15px; line-height: 1.4; }
 .essence-part-opening .essence-step-footer { border-color: #ffffff40; }
+.essence-notes { padding-block: clamp(64px, 6.4vw, 104px); border-top: 1px solid var(--border); scroll-margin-top: calc(var(--essence-nav-height) + var(--essence-progress-height) + 24px); }
+.essence-notes h2 { font-size: clamp(32px, 3.5vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -.035em; }
+.essence-notes ol { margin: 0; padding-left: 1.5em; font-size: 16px; line-height: 1.65; overflow-wrap: anywhere; }
+.essence-notes li { padding-left: .4em; scroll-margin-top: calc(var(--essence-nav-height) + var(--essence-progress-height) + 32px); }
+.essence-notes li + li { margin-top: 1.6em; }
+.essence-notes li::marker { color: var(--ink-soft); font-size: 14px; }
+.essence-notes li:target { outline: 2px solid var(--focus); outline-offset: 8px; border-radius: 2px; }
+.essence-notes .essence-note-backlink { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-left: 6px; font-size: 14px; white-space: nowrap; }
 .essence-journey a:focus-visible,
 .essence-journey button:focus-visible,
 .essence-journey summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; }
@@ -78,8 +99,11 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
   .essence-container { width: calc(100% - 48px); }
   .essence-introduction { padding-top: 124px; padding-bottom: 48px; }
   .essence-introduction h1 { margin-top: 24px; font-size: 62px; }
+  .essence-literary-label { margin-top: 18px; font-size: 13px; }
   .essence-subtitle { margin-top: 24px; font-size: 28px; }
   .essence-intro-copy { margin-top: 22px; font-size: 18px; line-height: 1.55; }
+  .essence-epigraph { margin-top: 28px; padding-left: 18px; }
+  .essence-epigraph blockquote { font-size: 18px; }
   .essence-entry-actions { gap: 18px 24px; margin-top: 28px; }
   .essence-contents { margin-top: 30px; }
   .essence-contents li a { gap: 14px; font-size: 16px; }
@@ -98,6 +122,8 @@ html:has(.essence-journey) { scroll-padding-top: 0; }
   .essence-fork button { padding: 20px; }
   .essence-option-outcome { font-size: 17px; }
   .essence-step-footer { margin-top: 34px; gap: 10px 24px; }
+  .essence-notes { padding-block: 56px; }
+  .essence-notes ol { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html:has(.essence-journey) { scroll-behavior: auto; }

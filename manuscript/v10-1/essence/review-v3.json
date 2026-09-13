@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "decision": "accepted-exact-transfer",
+  "reviewer": "/root/essence_review",
+  "reviewedAt": "2026-09-13T12:25:50.583Z",
+  "sourceSha256": "150182c07baa24ddc37cc53174623239d3d5cf7f986653237360cbcfff8060d1",
+  "projectionSha256": "a06df7f7a3b26db5073768a0e8c962f6df07ebc74ab0a2e0212ad8419ee7d182",
+  "sourceCopySha256": "150182c07baa24ddc37cc53174623239d3d5cf7f986653237360cbcfff8060d1",
+  "scope": "Independent fidelity review of supplied literary revision 3 and its structured site projection. No rewriting, scientific source refresh, or new literary acceptance is claimed.",
+  "method": "Original Markdown read in full; an independent JavaScript character-and-format comparator was written without calling or importing the production parser. Raw source copy compared byte-for-byte. Every paragraph, heading, footnote, note anchor, linked character and emphasis character compared; chapter mapping compared with prior projection.",
+  "details": {
+    "steps": 28,
+    "paragraphs": 291,
+    "paragraphsByStep": [
+      11,
+      8,
+      9,
+      9,
+      11,
+      8,
+      8,
+      9,
+      8,
+      10,
+      8,
+      10,
+      8,
+      9,
+      9,
+      10,
+      9,
+      10,
+      10,
+      8,
+      10,
+      8,
+      10,
+      17,
+      18,
+      16,
+      15,
+      15
+    ],
+    "footnotes": 7,
+    "footnoteReferences": [
+      {
+        "step": "01",
+        "sourceNote": "allen",
+        "number": 1
+      },
+      {
+        "step": "05",
+        "sourceNote": "schelling",
+        "number": 2
+      },
+      {
+        "step": "21",
+        "sourceNote": "model",
+        "number": 3
+      },
+      {
+        "step": "24",
+        "sourceNote": "schuman",
+        "number": 4
+      },
+      {
+        "step": "25",
+        "sourceNote": "nash",
+        "number": 5
+      },
+      {
+        "step": "26",
+        "sourceNote": "hobbes",
+        "number": 6
+      },
+      {
+        "step": "28",
+        "sourceNote": "oxygen",
+        "number": 7
+      }
+    ],
+    "strongParagraphs": 2,
+    "metadataMatches": [
+      "bookTitle",
+      "subtitle",
+      "literaryLabel",
+      "epigraph.text",
+      "epigraph.attribution"
+    ],
+    "mapping": [
+      {
+        "step": "01",
+        "chapter": "P00"
+      },
+      {
+        "step": "02",
+        "chapter": "C01"
+      },
+      {
+        "step": "03",
+        "chapter": "C02"
+      },
+      {
+        "step": "04",
+        "chapter": "C03"
+      },
+      {
+        "step": "05",
+        "chapter": "C04"
+      },
+      {
+        "step": "06",
+        "chapter": "C05"
+      },
+      {
+        "step": "07",
+        "chapter": "C06"
+      },
+      {
+        "step": "08",
+        "chapter": "C07"
+      },
+      {
+        "step": "09",
+        "chapter": "C08"
+      },
+      {
+        "step": "10",
+        "chapter": "C09"
+      },
+      {
+        "step": "11",
+        "chapter": "C10"
+      },
+      {
+        "step": "12",
+        "chapter": "C11"
+      },
+      {
+        "step": "13",
+        "chapter": "C11A"
+      },
+      {
+        "step": "14",
+        "chapter": "C11B"
+      },
+      {
+        "step": "15",
+        "chapter": "C12"
+      },
+      {
+        "step": "16",
+        "chapter": "C13"
+      },
+      {
+        "step": "17",
+        "chapter": "C14"
+      },
+      {
+        "step": "18",
+        "chapter": "C15"
+      },
+      {
+        "step": "19",
+        "chapter": "C16"
+      },
+      {
+        "step": "20",
+        "chapter": "C17"
+      },
+      {
+        "step": "21",
+        "chapter": "C18"
+      },
+      {
+        "step": "22",
+        "chapter": "C19"
+      },
+      {
+        "step": "23",
+        "chapter": "C20"
+      },
+      {
+        "step": "24",
+        "chapter": "C21"
+      },
+      {
+        "step": "25",
+        "chapter": "C22"
+      },
+      {
+        "step": "26",
+        "chapter": "C23"
+      },
+      {
+        "step": "27",
+        "chapter": "C24"
+      },
+      {
+        "step": "28",
+        "chapter": "E00"
+      }
+    ],
+    "legacyInsightAndForkAbsent": true,
+    "transformation": "Markdown markers become structured emphasis/link/reference fields; footnote labels become numbered references [1]–[7]. All other visible source characters and paragraph boundaries are preserved.",
+    "externalUrlsRefetched": false,
+    "uiScope": "Data projection checked; visual browser and deployment validation remain release checks."
+  },
+  "findings": []
+}

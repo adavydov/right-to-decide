@@ -1,14 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+
+export interface TextRun {
+  text: string;
+  strong?: boolean;
+  emphasis?: boolean;
+  href?: string;
+  noteId?: string;
+}
 
 export interface EssenceData {
   schemaVersion: number;
   editionVersion: string;
+  contentRevision?: string;
+  bookTitle?: string;
+  literaryLabel?: string;
   title: string;
   subtitle: string;
   intro: string;
+  epigraph?: { text: string; attribution: string };
+  notes?: { id: string; number: number; runs: TextRun[]; text: string }[];
   readingMinutes: { min: number; max: number; basis: string };
   parts: { id: string; title: string }[];
   steps: {
@@ -16,10 +29,34 @@ export interface EssenceData {
     part: string;
     chapterId: string;
     title: string;
-    insight: string;
+    insight?: string;
     paragraphs: string[];
+    paragraphRuns?: TextRun[][];
     fork?: { question: string; options: { title: string; outcome: string }[] };
   }[];
+}
+
+function externalHref(href?: string) {
+  if (!href) return undefined;
+  try {
+    const url = new URL(href);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : undefined;
+  } catch { return undefined; }
+}
+
+function InlineText({ runs, referenceIds }: { runs: TextRun[]; referenceIds?: (string | undefined)[] }) {
+  return runs.map((run, index) => {
+    let content: ReactNode = run.text;
+    if (run.emphasis) content = <em>{content}</em>;
+    if (run.strong) content = <strong>{content}</strong>;
+    if (run.noteId) {
+      return <sup className="essence-note-reference" key={index}>
+        <a id={referenceIds?.[index]} href={"#" + run.noteId} role="doc-noteref" aria-label={"Примечание " + run.text}>{content}</a>
+      </sup>;
+    }
+    const href = externalHref(run.href);
+    return href ? <a key={index} href={href}>{content}</a> : <span key={index}>{content}</span>;
+  });
 }
 
 function chapterHref(id: string) {
@@ -45,16 +82,29 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
   const contents = useRef<HTMLDetailsElement>(null);
   const [currentId, setCurrentId] = useState(data.steps[0]?.id ?? "");
   const [choices, setChoices] = useState<Record<string, number | undefined>>({});
-  const storageKey = "right-to-decide:essence-progress:v1:" + data.editionVersion;
+  const contentRevision = data.contentRevision ?? "1";
+  const storageKey = "right-to-decide:essence-progress:v2:" + data.editionVersion + ":revision:" + contentRevision;
   const stepIds = useMemo(() => new Set(data.steps.map(step => step.id)), [data.steps]);
+  const richParagraphs = useMemo(() => {
+    const referenceCounts = new Map<string, number>();
+    return new Map(data.steps.map(step => [step.id, step.paragraphRuns?.map(runs => ({
+      runs,
+      referenceIds: runs.map(run => {
+        if (!run.noteId) return undefined;
+        const count = (referenceCounts.get(run.noteId) ?? 0) + 1;
+        referenceCounts.set(run.noteId, count);
+        return "essence-ref-" + run.noteId + (count > 1 ? "-" + count : "");
+      }),
+    }))]));
+  }, [data.steps]);
   const getSnapshot = useCallback(() => readStorage(storageKey), [storageKey]);
   const stored = useSyncExternalStore(subscribeToStorage, getSnapshot, serverSnapshot);
   const savedId = useMemo(() => {
     try {
       const saved = stored ? JSON.parse(stored) : null;
-      return saved?.editionVersion === data.editionVersion && stepIds.has(saved.lastStep) ? saved.lastStep as string : null;
+      return saved?.editionVersion === data.editionVersion && saved?.contentRevision === contentRevision && stepIds.has(saved.lastStep) ? saved.lastStep as string : null;
     } catch { return null; }
-  }, [stored, data.editionVersion, stepIds]);
+  }, [stored, data.editionVersion, contentRevision, stepIds]);
   const currentIndex = Math.max(0, data.steps.findIndex(step => step.id === currentId));
   const current = data.steps[currentIndex];
   const currentPart = data.parts.find(part => part.id === current?.part);
@@ -64,11 +114,14 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
     if (!stepIds.has(id)) return;
     try {
       const prior = readStorage(storageKey);
-      // A mismatched edition is never reassigned to the current sequence.
-      if (prior && JSON.parse(prior)?.editionVersion !== data.editionVersion) return;
-      window.localStorage.setItem(storageKey, JSON.stringify({ editionVersion: data.editionVersion, lastStep: id }));
+      // Earlier editions and literary revisions keep their own saved positions.
+      if (prior) {
+        const saved = JSON.parse(prior);
+        if (saved?.editionVersion !== data.editionVersion || saved?.contentRevision !== contentRevision) return;
+      }
+      window.localStorage.setItem(storageKey, JSON.stringify({ editionVersion: data.editionVersion, contentRevision, lastStep: id }));
     } catch { /* Reading works when storage is unavailable or contains invalid data. */ }
-  }, [data.editionVersion, stepIds, storageKey]);
+  }, [data.editionVersion, contentRevision, stepIds, storageKey]);
 
   useEffect(() => {
     const root = journey.current;
@@ -132,10 +185,15 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
   return (
     <main id="main-content" className="essence-journey" ref={journey}>
       <header className="essence-introduction essence-container">
-        <p className="essence-eyebrow">Весь путь, включая финал</p>
+        <p className="essence-eyebrow">{data.bookTitle && <>{data.bookTitle} · </>}Весь путь, включая финал</p>
         <h1>{data.title}</h1>
+        {data.literaryLabel && <p className="essence-literary-label"><em>{data.literaryLabel}</em></p>}
         <p className="essence-subtitle">{data.subtitle}</p>
         <p className="essence-intro-copy">{data.intro}</p>
+        {data.epigraph && <figure className="essence-epigraph">
+          <blockquote><p>{data.epigraph.text}</p></blockquote>
+          <figcaption>{data.epigraph.attribution}</figcaption>
+        </figure>}
         <div className="essence-entry-actions">
           {data.steps[0] && <a className="essence-start" href={"#step-" + data.steps[0].id} onClick={() => goToStep(data.steps[0].id)}>Начать <span aria-hidden="true">↓</span></a>}
           {savedId && savedId !== data.steps[0]?.id && <a className="essence-resume" href={"#step-" + savedId} onClick={() => goToStep(savedId)}>Продолжить со шага {data.steps.findIndex(step => step.id === savedId) + 1} <span aria-hidden="true">↗</span></a>}
@@ -152,6 +210,7 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
                 <ol>{steps.map(step => <li key={step.id}><a href={"#step-" + step.id} onClick={() => goToStep(step.id)}><span>{step.id}</span>{step.title}</a></li>)}</ol>
               </div>;
             })}
+            {!!data.notes?.length && <a className="essence-contents-notes" href="#essence-notes" onClick={() => { if (contents.current) contents.current.open = false; }}>Примечания <span aria-hidden="true">↓</span></a>}
           </nav>
         </details>
       </header>
@@ -174,10 +233,13 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
             <div className="essence-step-heading">
               <p className="essence-eyebrow"><span>{step.id}</span> / {part?.title}</p>
               <h2 id={"step-title-" + step.id}>{step.title}</h2>
-              <p className="essence-insight">{step.insight}</p>
+              {step.insight && <p className="essence-insight">{step.insight}</p>}
             </div>
             <div className="essence-step-body">
-              <div className="essence-paragraphs">{step.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}</div>
+              <div className="essence-paragraphs">{step.paragraphs.map((paragraph, paragraphIndex) => {
+                const rich = richParagraphs.get(step.id)?.[paragraphIndex];
+                return <p key={paragraphIndex} id={`essence-${step.id}-p${paragraphIndex + 1}`} data-essence-text="paragraph">{rich ? <InlineText runs={rich.runs} referenceIds={rich.referenceIds} /> : paragraph}</p>;
+              })}</div>
               {step.fork && <div className="essence-fork" aria-labelledby={"fork-" + step.id}>
                 <h3 id={"fork-" + step.id}>{step.fork.question}</h3>
                 <ul>{step.fork.options.map((option, optionIndex) => <li key={option.title}>
@@ -195,6 +257,17 @@ export function EssenceJourney({ data }: { data: EssenceData }) {
           </div>
         </section>;
       })}
+      {!!data.notes?.length && <section id="essence-notes" className="essence-notes" role="doc-endnotes" aria-labelledby="essence-notes-title">
+        <div className="essence-container essence-step-grid">
+          <div className="essence-step-heading"><h2 id="essence-notes-title">Примечания</h2></div>
+          <div className="essence-step-body">
+            <ol>{data.notes.map(note => <li key={note.id} id={note.id} value={note.number}>
+              <p><span id={note.id + "-text"} data-essence-text="note"><InlineText runs={note.runs} /></span> <a className="essence-note-backlink" href={"#essence-ref-" + note.id} role="doc-backlink" aria-label={"Вернуться к примечанию " + note.number + " в тексте"}>К тексту <span aria-hidden="true">↑</span></a></p>
+            </li>)}</ol>
+            <footer className="essence-step-footer"><a href="#main-content">К началу <span aria-hidden="true">↑</span></a></footer>
+          </div>
+        </div>
+      </section>}
     </main>
   );
 }

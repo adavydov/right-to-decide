@@ -163,3 +163,7 @@ scripts/test-open-editorial-static.mjs -text whitespace=cr-at-eol
 /public/images/book-cover-v10-1.png binary
 /public/images/right-to-decide-hero-v10-1.png binary
 /docs/open-editorial/test-fixtures/** -text -whitespace
+
+# Preserve the independently verified Essence revision on every platform.
+/src/data/essence-v3.json -text whitespace=cr-at-eol
+/scripts/essence_v3.py -text whitespace=cr-at-eol

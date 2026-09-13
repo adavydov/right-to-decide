@@ -1,5 +1,5 @@
 import { EssenceJourney, type EssenceData } from "@/components/EssenceJourney";
-import data from "@/data/essence-v10-1.json";
+import data from "@/data/essence-v3.json";
 import { siteConfig } from "@/lib/site-config";
 import "./essence.css";
 

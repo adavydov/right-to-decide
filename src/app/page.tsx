@@ -16,7 +16,7 @@ export default function HomePage() {
     <section className="publication-section wrap" aria-labelledby="essence-intro">
       <div className="publication-grid">
         <div><p className="eyebrow publication-kicker">Вся книга за один вечер</p><h2 className="publication-heading" id="essence-intro">Сначала понять суть.</h2></div>
-        <div className="publication-prose"><p>28 больших карточек проведут через всю историю: полезная помощь, новый порядок доходов и власти, изменение человека, космическая индустрия и последний выбор.</p><p>На каждой развилке — интересы сторон, работающие альтернативы и последствия решения. Здесь раскрывается финал.</p><Link className="button" href="/essence/">Пройти путь книги <span aria-hidden="true">↗</span></Link></div>
+        <div className="publication-prose"><p>28 разделов проведут через всю историю: полезная помощь, новый порядок доходов и власти, изменение человека, космическая индустрия и последний выбор.</p><p>Связный литературный текст с примечаниями к источникам и расчётам. Здесь раскрывается финал.</p><Link className="button" href="/essence/">Пройти путь книги <span aria-hidden="true">↗</span></Link></div>
       </div>
     </section>
     <section className="publication-section wrap" id="about">

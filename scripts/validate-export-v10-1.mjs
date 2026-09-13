@@ -12,7 +12,7 @@ const sha = raw => createHash("sha256").update(raw).digest("hex");
 const book = readJSON("src/data/book.json");
 const release = readJSON("manuscript/v10-1/release-manifest.json");
 const library = readJSON("src/data/library-source-cards.json");
-const essence = readJSON("src/data/essence-v10-1.json");
+const essence = readJSON("src/data/essence-v3.json");
 const authors = readJSON("src/data/authors.json").authors;
 const output = path.resolve("out");
 const base = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
@@ -60,7 +60,7 @@ function readerRuns(markup) {
         .map((match) => [match[1].toLowerCase(), decodeEntities(match[2] ?? match[3])]));
       if (!voidTags.has(tag)) {
         stack.push({ tag, attrs });
-        if (attrs.has("data-reader-block") && attrs.has("id") && !active) {
+        if ((attrs.has("data-reader-block") || attrs.has("data-essence-text")) && attrs.has("id") && !active) {
           active = { depth: stack.length, runs: [] };
           result.set(attrs.get("id"), active.runs);
         }
@@ -381,18 +381,21 @@ assert.deepEqual(essence.steps.map(step => step.chapterId), sectionIds);
 assert.deepEqual(essence.steps.map(step => step.id), Array.from({length:28},(_,i) => String(i+1).padStart(2,'0')));
 textPresent(essencePage, essence.intro, 'Essence introduction');
 textPresent(essencePage, essence.subtitle, 'Essence subtitle');
+textPresent(essencePage, essence.literaryLabel, 'Essence revision');
+textPresent(essencePage, essence.epigraph.text, 'Essence epigraph');
+textPresent(essencePage, essence.epigraph.attribution, 'Essence epigraph attribution');
+assert.equal(essence.contentRevision, '3');
+const expectedEssenceRuns = runs => mergeRuns(runs.map(run => ({text:run.text,strong:Boolean(run.strong),emphasis:Boolean(run.emphasis),code:false,href:run.noteId ? '#' + run.noteId : run.href || null})));
 assert.deepEqual(essencePage.attributes.filter(({attrs}) => attrs.has('data-essence-step')).map(({attrs}) => attrs.get('data-essence-step')), essence.steps.map(step => step.id));
 let paragraphCount = 0, forkCount = 0;
 for (const step of essence.steps) {
   const stepInfo = elementInfo(essencePage, 'step-' + step.id);
   assert.ok(essencePage.ids.has('step-' + step.id));
   assert.ok(essencePage.ids.has('step-title-' + step.id));
-  for (const text of [step.title,step.insight,...step.paragraphs]) textPresent(stepInfo, text, 'Essence step ' + step.id);
-  let paragraphPosition = -1;
-  for (const paragraph of step.paragraphs) {
-    const nextPosition = stepInfo.text.indexOf(normalized(paragraph), paragraphPosition + 1);
-    assert.ok(nextPosition > paragraphPosition, 'Essence paragraph order differs in step ' + step.id);
-    paragraphPosition = nextPosition;
+  textPresent(stepInfo, step.title, 'Essence title ' + step.id);
+  assert.deepEqual([...essencePage.readerRuns.keys()].filter(id => id.startsWith(`essence-${step.id}-p`)), step.paragraphs.map((_,i) => `essence-${step.id}-p${i + 1}`), 'Essence paragraph order differs: ' + step.id);
+  for (let i = 0; i < step.paragraphs.length; i++) {
+    assert.deepEqual(essencePage.readerRuns.get(`essence-${step.id}-p${i + 1}`), expectedEssenceRuns(step.paragraphRuns[i]), 'Essence visible text, emphasis or note differs: ' + step.id + '/' + i);
   }
   assert.ok(hasLink(essencePage, base + '/read/' + webId(step.chapterId) + '/'), 'Missing Essence chapter link: ' + step.id);
   paragraphCount += step.paragraphs.length;
@@ -406,6 +409,19 @@ for (const step of essence.steps) {
       forkPosition = nextPosition;
     }
   }
+}
+
+for (const note of essence.notes) {
+  assert.ok(essencePage.ids.has(note.id));
+  assert.ok(essencePage.ids.has('essence-ref-' + note.id));
+  assert.ok(hasLink(essencePage, '#' + note.id));
+  assert.ok(hasLink(essencePage, '#essence-ref-' + note.id));
+  assert.deepEqual(essencePage.readerRuns.get(note.id + '-text'), expectedEssenceRuns(note.runs), 'Essence note text or formatting differs: ' + note.id);
+}
+assert.equal(forkCount, 0, 'Retired choices must not appear in the author revision');
+const retiredEssence = readJSON('src/data/essence-v10-1.json');
+for (const file of files.filter(file => /\.(?:html|js|json|txt)$/.test(file))) {
+  assert.ok(!fs.readFileSync(file, 'utf8').includes(retiredEssence.steps[0].paragraphs[0]), 'Retired Essence text leaked into the current export: ' + file);
 }
 
 const libraryPage = htmlInfo(routeFile('/library/'));

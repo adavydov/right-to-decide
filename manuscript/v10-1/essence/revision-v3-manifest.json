@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.1",
+  "contentRevision": "3",
+  "decision": "accepted-exact-transfer",
+  "integrator": "/root",
+  "baseReleaseId": "literary-manuscript-v10.1-0faeff4aa10e",
+  "baseBookSha256": "e1ff913835b661253ab8a4928f7555133383bb2c2fd8ede1fc57c13557965757",
+  "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+  "authorization": "The author requested updating the website Essence section from Pravo_na_reshenie_Sut_v3.md on 2026-09-13.",
+  "scope": "Essence only; manuscript, book downloads and annotation identity unchanged.",
+  "source": {
+    "path": "manuscript/v10-1/essence/source-v3.md",
+    "sha256": "150182c07baa24ddc37cc53174623239d3d5cf7f986653237360cbcfff8060d1",
+    "bytes": 115774
+  },
+  "projection": {
+    "path": "src/data/essence-v3.json",
+    "sha256": "a06df7f7a3b26db5073768a0e8c962f6df07ebc74ab0a2e0212ad8419ee7d182",
+    "bytes": 259468
+  },
+  "review": {
+    "path": "manuscript/v10-1/essence/review-v3.json",
+    "sha256": "52bd1ddd04b4306012423a8c2b975a00845dbe8da73ed5cec2152b656fba3487",
+    "bytes": 4419
+  },
+  "generator": {
+    "path": "scripts/essence_v3.py",
+    "sha256": "d9343ed92ff9093827b4e057a3b4b0084394ba120abff45aeac43ed5d200dd7e",
+    "bytes": 8044
+  }
+}
