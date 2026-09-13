@@ -22,7 +22,7 @@ def put(root,path,value):
     target.write_bytes(value if isinstance(value,bytes) else release.encode(value))
     return release.record(root,path)
 
-def fixture(root, line_ending='\n', ending_suffix=''):
+def fixture(root, line_ending='\n', ending_suffix='', paragraph='Технический абзац.'):
     plans=[{'id':i,'title':'Формат '+i,'number':n,'part':1 if i.startswith('C') else 0,'part_title':'Техническая проверка'} for n,i in enumerate(release.IDS)]
     metadata={'title':'Техническая книга','subtitle':'Технический подзаголовок','final_sentence':'Технический конец.','epilogue_sentence':'Технический эпилог.'}
     for path in release.POLICIES:
@@ -30,7 +30,7 @@ def fixture(root, line_ending='\n', ending_suffix=''):
     authority=put(root,'editorial/AUTHOR_DECISION_2026-09-13_FINAL_PATCH.md',b'Technical authorization fixture, not a user instruction.')
     sources=[]
     for i in release.IDS:
-        text='# Формат '+i+'\n\nТехнический абзац.\n'
+        text='# Формат '+i+'\n\n'+paragraph+'\n'
         if i in ['C24','E00']:text+='\n'+metadata['final_sentence' if i=='C24' else 'epilogue_sentence']+ending_suffix+'\n'
         item={'id':i,**put(root,f'manuscript/chapters/{i}.md',text.replace('\n',line_ending).encode()),'author':'fixture-writer','independentReviewer':'fixture-reader','decision':'accepted','unresolvedMaterialIssues':0}
         item['evidence']=put(root,f'editorial/release-attestations-v10-1/{i}.json',{'schemaVersion':1,'chapter':i,'sourceSha256':item['sha256'],'author':item['author'],'reviewer':item['independentReviewer'],'decision':'accepted','unresolvedMaterialIssues':0})
@@ -121,8 +121,9 @@ class ReleaseTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'missing'):release.prepare(target,stage,'editorial/acceptance-v10-1.json')
         self.assertFalse(stage.exists())
     def test_path_escape_rejected(self):
-        for path in ['../private','/tmp/file','C:/private','a/../../private','a\\b']:
-            with self.assertRaises(ValueError):release.local(self.source,path)
+        for path in ['../private','/tmp/file','C:/private','c:private','C:','//server/share/private','a/../../private','a\\b']:
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                release.local(self.source,path)
     def test_cover_new_aspect_ratio_and_original_png(self):
         png=(release.ROOT/release.COVER).read_bytes();width,height=struct.unpack('>II',png[16:24]);self.assertEqual((width,height),(1024,1536))
         chapter={'id':'fixture','title':'Тест','version':'10.1','blocks':[{'id':'p','type':'paragraph','text':'Технический абзац'}]}
@@ -216,5 +217,108 @@ class ReleaseTests(unittest.TestCase):
             release.install(stage,snapshot)  # exact reinstall is harmless
             put(repo,'src/data/book.json',{'editionVersion':'9.0'})
             with self.assertRaisesRegex(ValueError,'10.0 to 10.1'):release.install(stage,snapshot)
+
+    def replacement_fixture(self, change=None):
+        # Every preparation/install here targets a fresh temporary technical repo.
+        self.value=fixture(self.source);public_fixtures(self.source)
+        repo=self.base/('replacement-'+str(len(list(self.base.glob('replacement-*')))));repo.mkdir()
+        for path in release.GENERATOR_FILES+['scripts/public_packages_v10_1.py','scripts/public_library_v10.py','scripts/public_editorial_v10.py','scripts/book_cover_v10.py',release.COVER]:
+            put(repo,path,b'Technical generator/cover fixture')
+        self.enterContext(patch.object(release,'ROOT',repo))
+        self.enterContext(patch.object(release,'documents',fake_documents))
+        old_book=release.encode({'editionVersion':'10.0','releaseId':'old-technical-fixture'})
+        put(repo,'src/data/book.json',old_book)
+        put(repo,'manuscript/v10/release-manifest.json',{'bookSha256':release.sha(old_book)})
+        original=repo/'.release-staging/original'
+        release.prepare(self.source,original,'editorial/acceptance-v10-1.json')
+        release.install(original,self.base/(repo.name+'-10.0.zip'))
+        previous=release.read(repo/release.MANIFEST)
+        put(repo,release.GENERATOR_FILES[0],b'Repaired technical generator fixture')
+        if change=='source':
+            self.value=fixture(self.source,paragraph='Другой принятый технический абзац.')
+        elif change=='acceptance':
+            self.value['releaseDate']='2026-09-14';self.save()
+        elif change=='public':
+            cards=release.read(self.source/'public/library-source-cards.json')
+            cards['sources'][0]['annotation']='Другой принятый комментарий.'
+            receipt=release.read(self.source/'public/library-v10/manifest.json')
+            receipt['cards']=put(self.source,'public/library-source-cards.json',cards)
+            put(self.source,'public/library-v10/manifest.json',receipt)
+        stage=repo/'.release-staging/repaired'
+        release.prepare(self.source,stage,'editorial/acceptance-v10-1.json')
+        snapshot=self.base/(repo.name+'-10.1.zip')
+        return repo,stage,snapshot,previous
+
+    def test_prepared_replacement_preserves_content_and_snapshots_exact_previous_package(self):
+        repo,stage,snapshot,old=self.replacement_fixture()
+        before={item['path']:(repo/item['path']).read_bytes() for item in old['artifacts']}
+        before[release.MANIFEST]=(repo/release.MANIFEST).read_bytes()
+        # The ordinary verifier remains strict after current generator repair.
+        with self.assertRaisesRegex(ValueError,'hash differs'):release.verify(repo)
+        release.install(stage,snapshot,old['releaseId'])
+        new=release.verify(repo)
+        self.assertNotEqual(old['releaseId'],new['releaseId'])
+        self.assertEqual(old['sourceSetSha256'],new['sourceSetSha256'])
+        with ZipFile(snapshot) as archive:
+            self.assertIsNone(archive.testzip())
+            self.assertEqual(json.loads(archive.read('snapshot.json'))['fromReleaseId'],old['releaseId'])
+            for path,raw in before.items():self.assertEqual(archive.read(path),raw,path)
+        for item in old['sources']+old['evidence']:
+            self.assertEqual((repo/item['path']).read_bytes(),before[item['path']])
+
+    def test_prepared_replacement_requires_explicit_exact_old_id_before_mutation(self):
+        repo,stage,snapshot,old=self.replacement_fixture()
+        before=(repo/'src/data/book.json').read_bytes()
+        for expected in [None,'literary-manuscript-v10.1-wrong',release.read(stage/release.MANIFEST)['releaseId']]:
+            with self.subTest(expected=expected),self.assertRaises(ValueError):
+                release.install(stage,snapshot,expected)
+            self.assertFalse(snapshot.exists())
+            self.assertEqual((repo/'src/data/book.json').read_bytes(),before)
+
+    def test_prepared_replacement_rejects_published_or_nonprepared_record(self):
+        repo,stage,snapshot,old=self.replacement_fixture()
+        for field,value in [('published',True),('status','published')]:
+            changed={**old,field:value};put(repo,release.MANIFEST,changed)
+            with self.subTest(field=field),self.assertRaisesRegex(ValueError,'unpublished preparation'):
+                release.install(stage,snapshot,old['releaseId'])
+            self.assertFalse(snapshot.exists())
+        put(repo,release.MANIFEST,old)
+
+    def test_prepared_replacement_rejects_tampered_previous_artifacts_and_generator_identity(self):
+        repo,stage,snapshot,old=self.replacement_fixture()
+        for path in ['src/data/book.json',old['sources'][0]['path'],old['evidence'][0]['path'],'public/book/right-to-decide-v10.1.pdf']:
+            target=repo/path;raw=target.read_bytes();target.write_bytes(raw+b' ')
+            with self.subTest(path=path),self.assertRaises(ValueError):
+                release.install(stage,snapshot,old['releaseId'])
+            target.write_bytes(raw)
+            self.assertFalse(snapshot.exists())
+        tampered=copy.deepcopy(old);tampered['generators'][0]['sha256']='0'*64
+        put(repo,release.MANIFEST,tampered)
+        with self.assertRaisesRegex(ValueError,'Release identity differs'):
+            release.install(stage,snapshot,old['releaseId'])
+        self.assertFalse(snapshot.exists())
+
+    def test_prepared_replacement_rejects_newly_accepted_content_or_receipts(self):
+        for change,message in [('source','accepted source set'),('acceptance','exact acceptance bytes'),('public','exact public receipts')]:
+            with self.subTest(change=change):
+                repo,stage,snapshot,old=self.replacement_fixture(change)
+                before=(repo/release.MANIFEST).read_bytes()
+                release.verify(stage)  # The incoming package is valid, but outside technical replacement scope.
+                with self.assertRaisesRegex(ValueError,message):release.install(stage,snapshot,old['releaseId'])
+                self.assertFalse(snapshot.exists())
+                self.assertEqual((repo/release.MANIFEST).read_bytes(),before)
+
+    def test_prepared_replacement_restores_all_previous_bytes_after_install_failure(self):
+        repo,stage,snapshot,old=self.replacement_fixture()
+        before={item['path']:(repo/item['path']).read_bytes() for item in old['artifacts']}
+        before[release.MANIFEST]=(repo/release.MANIFEST).read_bytes()
+        real_verify=release.verify
+        def fail_installed(base):
+            if base==repo:raise ValueError('Simulated final verification failure')
+            return real_verify(base)
+        with patch.object(release,'verify',side_effect=fail_installed),self.assertRaisesRegex(ValueError,'Simulated final'):
+            release.install(stage,snapshot,old['releaseId'])
+        self.assertTrue(snapshot.exists())
+        for path,raw in before.items():self.assertEqual((repo/path).read_bytes(),raw,path)
 
 if __name__=='__main__':unittest.main()

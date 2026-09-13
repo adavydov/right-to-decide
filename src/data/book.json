@@ -5552,12 +5552,12 @@
     "parts": 6,
     "notes": 39
   },
-  "releaseId": "literary-manuscript-v10.1-ed9e942ef5a3",
+  "releaseId": "literary-manuscript-v10.1-0faeff4aa10e",
   "source": {
     "filename": "release-manifest.json",
     "path": "manuscript/v10-1/release-manifest.json",
     "format": "markdown-manuscript",
-    "sha256": "ed9e942ef5a3934585ab40960ffffc35e5f1274b3f82b8d3a96712640e5d8e72",
+    "sha256": "0faeff4aa10e9be33040a62754dfb5b72cd0ea9cd1a93f7394f483783dba0cca",
     "importer": "scripts/release_v10_1.py",
     "textPolicy": "Зафиксированный текст редакции 10.1. Независимая агентная редакционная проверка; внешняя экспертиза не заявляется."
   },
@@ -5569,7 +5569,7 @@
     },
     "pdf": {
       "path": "/book/right-to-decide-v10.1.pdf",
-      "sha256": "1b2ae798a1afa1e22048f017c4afe41345440740a35b10b1e20c282b09e3fbd8",
+      "sha256": "c62ca200fa78db4952f571d5c0d5c4728210b43aa84bb0a2bdf144439bddeb9e",
       "bytes": 983013
     },
     "md": {

@@ -5,7 +5,7 @@ import copy
 import hashlib
 import importlib.util
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import re
 import shutil
 import tempfile
@@ -32,7 +32,7 @@ def read(path): return json.loads(path.read_text(encoding='utf-8-sig'))
 def require(condition, message):
     if not condition: raise ValueError(message)
 def local(root, relative):
-    require(isinstance(relative, str) and '\\' not in relative and not Path(relative).is_absolute() and all(p not in ['', '.', '..'] for p in relative.split('/')), 'Unsafe relative path')
+    require(isinstance(relative, str) and '\\' not in relative and not PurePosixPath(relative).is_absolute() and not PureWindowsPath(relative).drive and all(p not in ['', '.', '..'] for p in relative.split('/')), 'Unsafe relative path')
     target = (root / relative).resolve()
     require(target.is_relative_to(root.resolve()), 'Path escapes selected root')
     return target
@@ -360,7 +360,7 @@ def verify_public_packages(base, receipts):
     return set(expected)
 
 
-def verify(base):
+def _verify(base, *, current_generators=True):
     manifest=read(base/MANIFEST);book=read(base/'src/data/book.json')
     require(manifest.get('editionVersion')==book.get('editionVersion')==VERSION,'Not edition 10.1')
     require(sha((base/'src/data/book.json').read_bytes())==manifest['bookSha256'],'Book projection changed')
@@ -369,7 +369,8 @@ def verify(base):
     paths=[x['path'] for x in manifest['artifacts']]
     require(len(paths)==len(set(paths)) and all(allowed_artifact(p) and p!=MANIFEST for p in paths),'Unsafe or duplicate release artifact')
     for item in manifest['artifacts']:checked(base,item)
-    for item in manifest['generators']:checked(ROOT,item)
+    if current_generators:
+        for item in manifest['generators']:checked(ROOT,item)
     frozen=base/'manuscript/v10-1/evidence'
     prefix='manuscript/v10-1/evidence/'
     require(manifest['acceptancePath'].startswith(prefix),'Unexpected acceptance export path')
@@ -405,6 +406,39 @@ def verify(base):
     return manifest
 
 
+def verify(base):
+    return _verify(base)
+
+
+def prepared_replacement(stage, incoming, expected_release_id):
+    """Check the exact prior package, retaining its recorded generator identity.
+
+    The caller explicitly identifies a failed, unpublished preparation. The local
+    prepared flag alone cannot establish whether a remote deployment occurred.
+    Historical generator bytes are not compared with the repaired current code;
+    their pinned records still participate in the recomputed prior release ID.
+    """
+    old=read(ROOT/MANIFEST)
+    require(old.get('editionVersion')==VERSION and old.get('releaseId')==expected_release_id,
+            'Prepared replacement requires the exact current 10.1 release ID')
+    require(old.get('status')=='prepared-for-static-release' and old.get('published') is False,
+            'Prepared replacement requires an unpublished preparation record')
+    old=_verify(ROOT,current_generators=False)
+    require(old['releaseId']!=incoming['releaseId'],'Prepared replacement must have a new technical release ID')
+    require(old['sourceSetSha256']==incoming['sourceSetSha256'] and old['sources']==incoming['sources'],
+            'Prepared replacement must preserve the accepted source set')
+    require(old['acceptancePath']==incoming['acceptancePath'] and
+            local(ROOT,old['acceptancePath']).read_bytes()==local(stage,incoming['acceptancePath']).read_bytes(),
+            'Prepared replacement must preserve exact acceptance bytes')
+    require(old['evidence']==incoming['evidence'],'Prepared replacement must preserve exact evidence bytes')
+    require(old['publicReceipts']==incoming['publicReceipts'] and all(
+            local(ROOT,path).read_bytes()==local(stage,path).read_bytes() for path in old['publicReceipts'].values()),
+            'Prepared replacement must preserve exact public receipts')
+    require({item['path'] for item in old['artifacts']}=={item['path'] for item in incoming['artifacts']},
+            'Prepared replacement must preserve the artifact inventory')
+    return old
+
+
 def snapshot_transition(targets, destination, current):
     require(not destination.resolve().is_relative_to(ROOT.resolve()),'Transition snapshot must stay outside published Git worktree')
     payload={path:local(ROOT,path).read_bytes() for path in targets if local(ROOT,path).is_file()}
@@ -422,17 +456,24 @@ def snapshot_transition(targets, destination, current):
     return payload
 
 
-def install(stage, snapshot):
+def install(stage, snapshot, replace_prepared_release=None):
     manifest=verify(stage)
     current=read(ROOT/'src/data/book.json')
-    require(current.get('editionVersion')=='10.0' or current.get('releaseId')==manifest['releaseId'],'Only explicit 10.0 to 10.1 transition or identical reinstall is allowed')
+    if replace_prepared_release is not None:
+        require(current.get('editionVersion')==VERSION and current.get('releaseId')==replace_prepared_release,
+                'Prepared replacement requires the exact current 10.1 release ID')
+        prepared_replacement(stage,manifest,replace_prepared_release)
+    else:
+        require(current.get('editionVersion')=='10.0' or current.get('releaseId')==manifest['releaseId'],
+                'Only explicit 10.0 to 10.1 transition, identical reinstall or explicit prepared replacement is allowed')
     records=manifest['artifacts']+[record(stage,MANIFEST)]
     payload={item['path']:checked(stage,item) for item in records}
     if current.get('releaseId')!=manifest['releaseId']:
-        old_manifest='manuscript/v10/release-manifest.json'
-        require((ROOT/old_manifest).is_file(),'Current 10.0 release identity is missing')
-        old=read(ROOT/old_manifest)
-        require(old['bookSha256']==sha((ROOT/'src/data/book.json').read_bytes()),'Current 10.0 book differs from its manifest')
+        old_manifest=MANIFEST if replace_prepared_release is not None else 'manuscript/v10/release-manifest.json'
+        if replace_prepared_release is None:
+            require((ROOT/old_manifest).is_file(),'Current 10.0 release identity is missing')
+            old=read(ROOT/old_manifest)
+            require(old['bookSha256']==sha((ROOT/'src/data/book.json').read_bytes()),'Current 10.0 book differs from its manifest')
         snapshot_transition(set(payload)|{old_manifest},snapshot,current)
     before={path:(local(ROOT,path).read_bytes() if local(ROOT,path).exists() else None) for path in payload}
     try:
@@ -457,11 +498,15 @@ def main():
     parser.add_argument('--stage',type=Path,default=ROOT/'.release-staging/v10-1')
     parser.add_argument('--acceptance',default='editorial/acceptance-v10-1.json')
     parser.add_argument('--snapshot',type=Path,default=ROOT.parent/'book-memory/reviews/2026-09-13-final-package/v10-0-release-before-install.zip')
+    parser.add_argument('--replace-prepared-release',metavar='EXACT_OLD_RELEASE_ID',
+                        help='Explicitly replace a failed unpublished 10.1 preparation with identical accepted content; requires a separate private snapshot')
     args=parser.parse_args();stage=args.stage.resolve()
+    require(args.replace_prepared_release is None or args.action=='install',
+            '--replace-prepared-release is only valid for install')
     if args.action=='source-set':
         items=[{'id':i,**record(args.source,f'manuscript/chapters/{i}.md')} for i in IDS]
         print(json.dumps({'sources':items,'sourceSetSha256':source_set(items)},ensure_ascii=False,indent=2));return
     if args.action=='prepare':prepare(args.source.resolve(),stage,args.acceptance)
-    elif args.action=='install':install(stage,args.snapshot.resolve())
+    elif args.action=='install':install(stage,args.snapshot.resolve(),args.replace_prepared_release)
     else:verify(stage if (stage/MANIFEST).exists() else ROOT);print('V10.1 exact sources, evidence, documents and public packages verified')
 if __name__=='__main__':main()

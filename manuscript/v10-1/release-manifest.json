@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
   "editionVersion": "10.1",
-  "releaseId": "literary-manuscript-v10.1-ed9e942ef5a3",
+  "releaseId": "literary-manuscript-v10.1-0faeff4aa10e",
   "releaseDate": "2026-09-13",
   "status": "prepared-for-static-release",
   "published": false,
   "acceptanceStatus": "independent-editorial-review",
-  "bookSha256": "57a5baf23789ce768f41d8176d73e5e3a8377f4c9b0a9a744ffa4e5bd52f6bcd",
+  "bookSha256": "e1ff913835b661253ab8a4928f7555133383bb2c2fd8ede1fc57c13557965757",
   "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
   "generators": [
     {
       "path": "scripts/release_v10_1.py",
-      "sha256": "6e4d70b60c9b7018ca2547ceee7761a40c93f14316aa13c6a1592a653cd8d880",
-      "bytes": 35224
+      "sha256": "5344a30fd27f0863bde1f9fd9437d2e5601012e8bb5976bd68c9a9ac53b1e8ae",
+      "bytes": 38352
     },
     {
       "path": "scripts/manuscript_v10.py",
@@ -952,7 +952,7 @@
     },
     {
       "path": "public/book/right-to-decide-v10.1.pdf",
-      "sha256": "1b2ae798a1afa1e22048f017c4afe41345440740a35b10b1e20c282b09e3fbd8",
+      "sha256": "c62ca200fa78db4952f571d5c0d5c4728210b43aa84bb0a2bdf144439bddeb9e",
       "bytes": 983013
     },
     {
@@ -1137,7 +1137,7 @@
     },
     {
       "path": "src/data/book.json",
-      "sha256": "57a5baf23789ce768f41d8176d73e5e3a8377f4c9b0a9a744ffa4e5bd52f6bcd",
+      "sha256": "e1ff913835b661253ab8a4928f7555133383bb2c2fd8ede1fc57c13557965757",
       "bytes": 566657
     },
     {
