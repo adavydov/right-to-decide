@@ -1,12 +1,21 @@
 # Право на решение
-Футурологический манифест-проект Алексея Михайловича Давыдова, Алексея Алексеевича Давыдова и Егора Алексеевича Давыдова.
-Как остаться авторами будущего рядом с более сильным интеллектом.
-Конституция проекта: версия 1.0 от 5 сентября 2026, принята инициатором 6 сентября 2026. Согласие всех соавторов не зафиксировано. Принятие конституции не означает повторной приёмки существующих глав.
-Авторские материалы; открытая контент-лицензия не предоставлена.
+
+Чего мы захотим, когда получим всё.
+
+Футурологический нон-фикшн и манифест-проект Алексея Михайловича Давыдова, Алексея Алексеевича Давыдова и Егора Алексеевича Давыдова.
+Актуальная редакция: 10.1 от 13 сентября 2026 года. Пролог, 26 глав (включая 11A и 11B) и эпилог — всего 28 разделов.
+Текст прошёл независимую агентную редакционную проверку; она не объявляется внешней человеческой экспертизой.
+Сайт содержит только актуальную редакцию. Прежние публичные версии сняты. Авторские материалы; открытая контент-лицензия не предоставлена.
+
 Главная: https://adavydov.github.io/right-to-decide/
+Читать: https://adavydov.github.io/right-to-decide/read/prologue/
 Содержание: https://adavydov.github.io/right-to-decide/contents/
-Манифест и конституция: https://adavydov.github.io/right-to-decide/manifesto/
-Канонический Markdown: https://adavydov.github.io/right-to-decide/manifesto/constitution.md
-Читать: https://adavydov.github.io/right-to-decide/read/
-Авторы: https://adavydov.github.io/right-to-decide/authors/
+Суть (полный маршрут, включая финал): https://adavydov.github.io/right-to-decide/essence/
+Полный текст Markdown: https://adavydov.github.io/right-to-decide/book/right-to-decide-v10.1.md
+Машиночитаемый корпус: https://adavydov.github.io/right-to-decide/editorial/corpus.json
+Манифест: https://adavydov.github.io/right-to-decide/manifesto/
+Манифест Markdown: https://adavydov.github.io/right-to-decide/manifesto/v10/manifesto.md
+Библиотека и карточки источников: https://adavydov.github.io/right-to-decide/library/
+Исследовательские модели: https://adavydov.github.io/right-to-decide/research/v10/
+Авторы и редакция: https://adavydov.github.io/right-to-decide/authors/
 Все доступные разделы имеют отдельные статические страницы и перечислены в sitemap.xml.

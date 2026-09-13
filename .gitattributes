@@ -156,6 +156,7 @@ scripts/test-open-editorial-static.mjs -text whitespace=cr-at-eol
 /manuscript/v10-1/** -text whitespace=cr-at-eol
 /scripts/release_v10_1.py -text whitespace=cr-at-eol
 /scripts/public_packages_v10_1.py -text whitespace=cr-at-eol
+/public/llms.txt text eol=lf
 /src/data/library-source-cards.json -text whitespace=cr-at-eol
 /src/data/essence-v10-1.json -text whitespace=cr-at-eol
 /public/book/right-to-decide-v10.1.md -text whitespace=cr-at-eol
