@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C01",
+  "sourceSha256": "3ab7416eee2052a2ab1d6144f473359896a38d019a3aa09d845e18d18a41d821",
+  "author": "books_epub; root — интеграция текущих дополнений",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Материал, опытная партия и следующий цикл показывают, откуда возникает преимущество готового предложения. Две сети введены через разные условия заказа. Рабочая граница человеческого разрешения серии сохраняется.",
+    "Контрактная статья служит ограниченной аналогией контроля, не доказательством всей производственной цепи."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

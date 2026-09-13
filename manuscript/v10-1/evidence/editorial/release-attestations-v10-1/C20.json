@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C20",
+  "sourceSha256": "5f68bc7123c274a5cd2f3baa1004715feabeb9c79ffaa301098ee1e4756cd09f",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "И накопление, и сохранение могут защищать интересы своих владельцев. Независимая проверка реально останавливает стройку, другая защищает длительный опыт. Федерация остаётся ценным ответом перед объединением.",
+    "Лем — вопрос о целях предприятия, не математическое доказательство возникновения преемника."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

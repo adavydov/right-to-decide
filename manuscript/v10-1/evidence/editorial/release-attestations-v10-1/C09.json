@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C09",
+  "sourceSha256": "1a467e601478c3bdcbc68327f273555d2bb9c262bf1ed26881f67cb25b44f290",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Различие между приятным вечером и собственной продолжающейся работой показано без обязательства всем стать инженерами. Площадка может получать выручку после ухода успешной команды. Переход к состоянию тела мотивирован.",
+    "Кэлхун не доказывает судьбу обеспеченных людей; SDT остаётся определённой теорией мотивации."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C18",
+  "sourceSha256": "020d0c27f36ba534a12a239a91629c3ec81833d5d4c2d34f82920cdddf5aa2ef",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Расчёт заканчивается неожиданным отказом от местной фабрики при 2500 долларах за кг. Названы и задержка ввода, и изменение планирования. Более дорогой маршрут и поздний пуск меняют выбор; критические импорты остаются.",
+    "Две стратегии, не глобальный оптимум. Полное воспроизводство, тепловой проект и миссия из расчёта не выводятся; Blue Alchemist — план демонстрации после обзора."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

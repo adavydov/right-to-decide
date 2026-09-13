@@ -1,0 +1,3672 @@
+{
+  "schema": "r2d-passport-v1.6-integration/v1",
+  "prepared_at": "2026-09-07",
+  "author": "mechanism_recovery",
+  "status": "author-revised-awaiting-independent-local-check; not-accepted",
+  "artifact": {
+    "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/appendices/scenario-passport-v1.6.md",
+    "sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae",
+    "line_count": 379,
+    "word_count_whitespace": 6355,
+    "public_private_path_dependencies": false
+  },
+  "scope": "Самостоятельный читательский паспорт 9.0. Авторская сборка четырёх паспортов, полной содержательной карты и принятых дельт. Не общая приёмка, не запуск и не завершённый отдельный космический проход.",
+  "initial_frozen_literary_manifest": {
+    "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/whole-book-literary-inputs-v9.json",
+    "sha256": "a69dfa6a341404415641eb27cf8b6a5512c8cd8794501246bbed2968fa068a11",
+    "inputs": [
+      {
+        "path": "prologue.md",
+        "sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065"
+      },
+      {
+        "path": "chapters/chapter-01.md",
+        "sha256": "1641ea9189fd4a9b161fa920c51feadc7b943da8b4d984642413967997927385"
+      },
+      {
+        "path": "chapters/chapter-02.md",
+        "sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7"
+      },
+      {
+        "path": "chapters/chapter-03.md",
+        "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd"
+      },
+      {
+        "path": "chapters/chapter-04.md",
+        "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3"
+      },
+      {
+        "path": "chapters/chapter-05.md",
+        "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9"
+      },
+      {
+        "path": "chapters/chapter-06.md",
+        "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f"
+      },
+      {
+        "path": "chapters/chapter-07.md",
+        "sha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4"
+      },
+      {
+        "path": "chapters/chapter-08.md",
+        "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1"
+      },
+      {
+        "path": "chapters/chapter-09.md",
+        "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e"
+      },
+      {
+        "path": "chapters/chapter-10.md",
+        "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4"
+      },
+      {
+        "path": "chapters/chapter-11.md",
+        "sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1"
+      },
+      {
+        "path": "chapters/chapter-12.md",
+        "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c"
+      },
+      {
+        "path": "chapters/chapter-13.md",
+        "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b"
+      },
+      {
+        "path": "chapters/chapter-14.md",
+        "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286"
+      },
+      {
+        "path": "chapters/chapter-15.md",
+        "sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd"
+      },
+      {
+        "path": "chapters/chapter-16.md",
+        "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1"
+      },
+      {
+        "path": "chapters/chapter-17.md",
+        "sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c"
+      },
+      {
+        "path": "chapters/chapter-18.md",
+        "sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d"
+      },
+      {
+        "path": "epilogue.md",
+        "sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c"
+      }
+    ],
+    "history_preserved": true
+  },
+  "current_literary_inputs_for_appendix": {
+    "inputs": [
+      {
+        "path": "prologue.md",
+        "sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065",
+        "initial_frozen_sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-01.md",
+        "sha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+        "initial_frozen_sha256": "1641ea9189fd4a9b161fa920c51feadc7b943da8b4d984642413967997927385",
+        "changed_since_frozen": true
+      },
+      {
+        "path": "chapters/chapter-02.md",
+        "sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7",
+        "initial_frozen_sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-03.md",
+        "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd",
+        "initial_frozen_sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-04.md",
+        "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3",
+        "initial_frozen_sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-05.md",
+        "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+        "initial_frozen_sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-06.md",
+        "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+        "initial_frozen_sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-07.md",
+        "sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550",
+        "initial_frozen_sha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4",
+        "changed_since_frozen": true
+      },
+      {
+        "path": "chapters/chapter-08.md",
+        "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+        "initial_frozen_sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-09.md",
+        "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+        "initial_frozen_sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-10.md",
+        "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+        "initial_frozen_sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-11.md",
+        "sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+        "initial_frozen_sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-12.md",
+        "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+        "initial_frozen_sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-13.md",
+        "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b",
+        "initial_frozen_sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-14.md",
+        "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286",
+        "initial_frozen_sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-15.md",
+        "sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd",
+        "initial_frozen_sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-16.md",
+        "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+        "initial_frozen_sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-17.md",
+        "sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+        "initial_frozen_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "chapters/chapter-18.md",
+        "sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+        "initial_frozen_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+        "changed_since_frozen": false
+      },
+      {
+        "path": "epilogue.md",
+        "sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c",
+        "initial_frozen_sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c",
+        "changed_since_frozen": false
+      }
+    ],
+    "changes_announced_by": "root",
+    "changed_files": {
+      "chapters/chapter-01.md": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+      "chapters/chapter-07.md": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550"
+    },
+    "limit": "Объявлены языковые исправления 1/7 без изменения сценария. Их отдельное полное чтение и diff этим автором ещё не выполнены на момент сохранения Д; исходный frozen20 не перезаписан. Полного нового чтения всех 20 здесь нет."
+  },
+  "input_reading_log": [
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-critic-revision/scenario-passport-v1.2.md",
+      "sha256": "51a5cb0eef01bb887d0c34fa690e96f2fc67a47e9447306754dbe8ffd6d2f488",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь документ последовательно прочитан в этом авторском проходе; прежняя чужая приёмка не присвоена.",
+      "lines": [
+        1,
+        77
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-davydov-cases/scenario-passport-v1.3.md",
+      "sha256": "5562fa695e64138d4794e01d0de5a479566050e25ed889fc521ca7ff51d40844",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь документ последовательно прочитан в этом авторском проходе; прежняя чужая приёмка не присвоена.",
+      "lines": [
+        1,
+        25
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-space-expansion/scenario-passport-v1.4.md",
+      "sha256": "7f4c4a9f833085055f5510cd9d008571d5da10f7d3ed2b2bd55aece121faf0f1",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь документ последовательно прочитан в этом авторском проходе; прежняя чужая приёмка не присвоена.",
+      "lines": [
+        1,
+        65
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-depth-revision/scenario-passport-v1.5.md",
+      "sha256": "558182ad4d05a934cb13f3038f89dff5fa7e671b3882a7e81dd1f4a8f43aae34",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь документ последовательно прочитан в этом авторском проходе; прежняя чужая приёмка не присвоена.",
+      "lines": [
+        1,
+        38
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/passport-merge-map.json",
+      "sha256": "7d04eaa08aec5b2d6d7a8b3946f6ef9f1468aa639de778f60c7a0f6078dde614",
+      "read_by": "mechanism_recovery",
+      "scope": "Все 28 canonical governing content, 36 исторических соответствий, 19 глобальных записей, пять этапов и 10 исходных строк этапов, две модели целиком, четыре встроенные дельты, metadata/lineage/renumbering/editorial limits/validation. Повторяющиеся historical source cells полностью прочитаны в четырёх исходных паспортах; повторное чтение каждого дубликата JSON не заявляется."
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-critic-revision/model-education-economy.md",
+      "sha256": "15de4a4b94bd5610c9b836bd59bb36d1a3e2aa0b589384448149404e1db6945e",
+      "read_by": "mechanism_recovery",
+      "scope": "Полный исходный R2D-LAB-1: статьи, права, сравнение и чувствительность. Принятые уточнения 8/9/16 имеют приоритет в явно перечисленных различиях.",
+      "lines": [
+        1,
+        91
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/whole-book-literary-inputs-v9.json",
+      "sha256": "a69dfa6a341404415641eb27cf8b6a5512c8cd8794501246bbed2968fa068a11",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь JSON, первоначальная проверка совпадения байтов всех 20 входов; при завершении отдельно зафиксированы объявленные root изменения 1/7. Это не новое непрерывное чтение 20 текстов и не полный космический проход."
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-05.json",
+      "sha256": "32bb23db1d4dea7e8d02bf71bbb58e8f7fb780b33af3cf424a9ea9d9de0ec0f0",
+      "read_by": "mechanism_recovery",
+      "scope": "Полностью прочитано внутри карты; отдельно проверены точное равенство JSON принятой дельты и вложенной записи, а также SHA главы.",
+      "accepted_chapter_sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-06.json",
+      "sha256": "5b8b1d35c745ef6e6f915e5dd59fdd26c666d13eec802055f65c732bf9a04c0c",
+      "read_by": "mechanism_recovery",
+      "scope": "Полностью прочитано внутри карты; отдельно проверены точное равенство JSON принятой дельты и вложенной записи, а также SHA главы.",
+      "accepted_chapter_sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-08.json",
+      "sha256": "3a0de7bf8ee14438da5cd178cded5d47795ef7c094506aedd4b684f9e645719c",
+      "read_by": "mechanism_recovery",
+      "scope": "Полностью прочитано внутри карты; отдельно проверены точное равенство JSON принятой дельты и вложенной записи, а также SHA главы.",
+      "accepted_chapter_sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-09.json",
+      "sha256": "f181624b69a27212cf5f24777b6de6b973b5a97d2bb5ebe04dea5f4ed5fa5a5e",
+      "read_by": "mechanism_recovery",
+      "scope": "Полностью прочитано внутри карты; отдельно проверены точное равенство JSON принятой дельты и вложенной записи, а также SHA главы.",
+      "accepted_chapter_sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-10.json",
+      "sha256": "0cc7d431f7056171c5b70b51b99033090e967bcafd25ef963160636e6810cc24",
+      "read_by": "mechanism_recovery",
+      "scope": "Полное содержимое прочитано в этом проходе.",
+      "accepted_chapter_sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-11.json",
+      "sha256": "1eeafaf4f1a88e64e3ae4da1c1eff53e29291cd5befe07d6f775d192144e53dc",
+      "read_by": "mechanism_recovery",
+      "scope": "Полное содержимое прочитано в этом проходе.",
+      "accepted_chapter_sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-12.json",
+      "sha256": "38f5e6757642bcdec647ccc34050b2640ffc502d4e307d5fdf905d67ec0f4b15",
+      "read_by": "mechanism_recovery",
+      "scope": "Полное содержимое прочитано в этом проходе.",
+      "accepted_chapter_sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter16.json",
+      "sha256": "b893b175a7830dfe3e8ab9796a85fe5ac4b7a4bab10b470590c8ca44105deb18",
+      "read_by": "mechanism_recovery",
+      "scope": "Полное содержательное чтение выполнено ранее при предметной работе 16–18; неизменность файла подтверждена SHA сейчас. Новое повторное полное чтение не заявляется.",
+      "accepted_chapter_sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter17.json",
+      "sha256": "869915968986a968622405660fe2480648479e8299ef54d82b24d9e57ca68bbe",
+      "read_by": "mechanism_recovery",
+      "scope": "Полное содержательное чтение выполнено ранее при предметной работе 16–18; неизменность файла подтверждена SHA сейчас. Новое повторное полное чтение не заявляется.",
+      "accepted_chapter_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter18.json",
+      "sha256": "14e82167a5e7967ee12efa78dafd2b1770185f7358db059b31e2bbcedf96a300",
+      "read_by": "mechanism_recovery",
+      "scope": "Собственный final draft ранее прочитан полностью. Официальная дельта целиком сопоставлена по полям с ним: содержимое одинаково; полностью прочитаны отличающиеся поля статуса и интегратора. Повторного чтения неизменных оригиналов нет.",
+      "accepted_chapter_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d"
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/chapters/chapter-01.md",
+      "sha256_at_reading": "1641ea9189fd4a9b161fa920c51feadc7b943da8b4d984642413967997927385",
+      "read_by": "mechanism_recovery",
+      "scope": "Примечания полностью прочитаны в этом проходе для публичных ссылок, дат и пределов. У 1 указаны точные байты до поздней языковой правки root; её отдельная новая проверка ещё впереди.",
+      "lines": [
+        65,
+        71
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/chapters/chapter-06.md",
+      "sha256_at_reading": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+      "read_by": "mechanism_recovery",
+      "scope": "Примечания полностью прочитаны в этом проходе для публичных ссылок, дат и пределов. У 1 указаны точные байты до поздней языковой правки root; её отдельная новая проверка ещё впереди.",
+      "lines": [
+        63,
+        69
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/chapters/chapter-10.md",
+      "sha256_at_reading": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+      "read_by": "mechanism_recovery",
+      "scope": "Примечания полностью прочитаны в этом проходе для публичных ссылок, дат и пределов. У 1 указаны точные байты до поздней языковой правки root; её отдельная новая проверка ещё впереди.",
+      "lines": [
+        77,
+        79
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/chapters/chapter-11.md",
+      "sha256_at_reading": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+      "read_by": "mechanism_recovery",
+      "scope": "Примечания полностью прочитаны в этом проходе для публичных ссылок, дат и пределов. У 1 указаны точные байты до поздней языковой правки root; её отдельная новая проверка ещё впереди.",
+      "lines": [
+        102,
+        106
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/chapters/chapter-14.md",
+      "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286",
+      "read_by": "mechanism_recovery",
+      "scope": "Повторно прочитаны целые абзацы ради глобального условия 1.3 о сведениях и сильного правдивого узкого поручения; прежнее полное чтение — в собственной приёмке 14.",
+      "lines": [
+        25,
+        67
+      ]
+    },
+    {
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/chapter-17-mechanism-preparation.md",
+      "sha256": "c2e68a61ea34b0a1e26a6bca974dae07a325253576cd57b86ce11c060a4bfb0d",
+      "read_by": "mechanism_recovery",
+      "scope": "Весь собственный отчёт перечитан ради точных названий первичных разделов и границ ранее выполненного чтения.",
+      "lines": [
+        1,
+        51
+      ]
+    }
+  ],
+  "reused_prior_reading_boundary": "Неизменившиеся ранее прочитанные конституция, политики, роли, приёмка и ведущие слои повторно не загружались. Первые независимые чтения 11–18/эпилога и финальные локальные сверки отражены в собственных reviews; они не названы новым чтением всей книги при авторстве Д.",
+  "source_map": {
+    "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/passport-merge-map.json",
+    "sha256": "7d04eaa08aec5b2d6d7a8b3946f6ef9f1468aa639de778f60c7a0f6078dde614",
+    "status_preserved": "content-correspondence-only; target-passport-not-written-or-accepted",
+    "lineage": {
+      "passport-1.3": [
+        "passport-1.2"
+      ],
+      "passport-1.4": [
+        "passport-1.2",
+        "passport-1.3"
+      ],
+      "passport-1.5": [
+        "passport-1.2",
+        "passport-1.3"
+      ],
+      "parallel_branches": [
+        "passport-1.4",
+        "passport-1.5"
+      ],
+      "no_silent_inheritance": "1.5 не наследует 1.4. Одинаковые исторические номера нельзя совмещать без идентификатора источника."
+    }
+  },
+  "collision_resolution": {
+    "preserve_1_4_ids": [
+      "W20",
+      "W21",
+      "W22"
+    ],
+    "rename_1_5_only": {
+      "W20/1": "W25/1",
+      "W21/1": "W26/1",
+      "W22/1": "W27/1"
+    },
+    "then_clarify_versions": {
+      "W25/1": "W25/2",
+      "W26/1": "W26/2",
+      "W27/1": "W27/2"
+    },
+    "new_ids": [],
+    "note": "Переименование только разрешает коллизию; последующее обновление версии отдельно фиксирует содержательное уточнение. 1.5 не объявлена наследницей 1.4."
+  },
+  "historical_to_final": [
+    {
+      "source_id": "passport-1.2",
+      "line": 35,
+      "historical_ref": "W01/1",
+      "target_id": "W01",
+      "proposed_target_ref": "W01/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W01/1",
+      "reader_line": 58,
+      "source_qualified_ref": "passport-1.2:W01/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W01/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 35,
+      "historical_ref": "W02/1",
+      "target_id": "W02",
+      "proposed_target_ref": "W02/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W02/1",
+      "reader_line": 64,
+      "source_qualified_ref": "passport-1.2:W02/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W02/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 36,
+      "historical_ref": "W03/1",
+      "target_id": "W03",
+      "proposed_target_ref": "W03/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W03/2",
+      "reader_line": 70,
+      "source_qualified_ref": "passport-1.2:W03/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W03/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W03/2",
+          "reason": "Дельта 18: полная цепь нового дела и отсутствие заранее соединённой сети Луна/астероид/орбита."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 36,
+      "historical_ref": "W05/1",
+      "target_id": "W05",
+      "proposed_target_ref": "W05/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W05/2",
+      "reader_line": 82,
+      "source_qualified_ref": "passport-1.2:W05/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W05/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W05/2",
+          "reason": "Дельта 18: сопоставимая полезная услуга, полные затраты, отходы и последствия без объявленного экологического выигрыша."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 37,
+      "historical_ref": "W04/1",
+      "target_id": "W04",
+      "proposed_target_ref": "W04/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W04/1",
+      "reader_line": 76,
+      "source_qualified_ref": "passport-1.2:W04/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W04/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 38,
+      "historical_ref": "W06/2",
+      "target_id": "W06",
+      "proposed_target_ref": "W06/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W06/3",
+      "reader_line": 88,
+      "source_qualified_ref": "passport-1.2:W06/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W06/3"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 39,
+      "historical_ref": "W07/2",
+      "target_id": "W07",
+      "proposed_target_ref": "W07/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W07/2",
+      "reader_line": 94,
+      "source_qualified_ref": "passport-1.2:W07/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W07/2"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 39,
+      "historical_ref": "W08/2",
+      "target_id": "W08",
+      "proposed_target_ref": "W08/2",
+      "operation": "clarify-with-accepted-9.0-deltas",
+      "final_ref": "W08/3",
+      "reader_line": 100,
+      "source_qualified_ref": "passport-1.2:W08/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W08/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W08/3",
+          "reason": "Уточнения 8/9/16: фактическая помощь и основание оценки; готовое правильное решение совместимо с освоением, отсутствие наблюдения не диагноз неспособности."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 40,
+      "historical_ref": "W09/3",
+      "target_id": "W09",
+      "proposed_target_ref": "W09/4",
+      "operation": "clarify-with-accepted-9.0-deltas",
+      "final_ref": "W09/4",
+      "reader_line": 110,
+      "source_qualified_ref": "passport-1.2:W09/3",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W09/4"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 41,
+      "historical_ref": "W10/2",
+      "target_id": "W10",
+      "proposed_target_ref": "W10/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W10/4",
+      "reader_line": 116,
+      "source_qualified_ref": "passport-1.2:W10/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W10/3"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W10/4",
+          "reason": "Дельты 9/18 и принятые 13/15: признанная часть подтверждения, основания решений и конечность передачи; выбранная команда отличается от внешнего входа."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 42,
+      "historical_ref": "W11/1",
+      "target_id": "W11",
+      "proposed_target_ref": "W11/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W11/1",
+      "reader_line": 124,
+      "source_qualified_ref": "passport-1.2:W11/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W11/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 43,
+      "historical_ref": "W12/1",
+      "target_id": "W12",
+      "proposed_target_ref": "W12/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W12/3",
+      "reader_line": 130,
+      "source_qualified_ref": "passport-1.2:W12/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W12/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W12/3",
+          "reason": "Дельта 18: прошлые вложения, действующие обещания и новое финансирование; реальное закрытие пути после исполнения обязательств."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 44,
+      "historical_ref": "W13/1",
+      "target_id": "W13",
+      "proposed_target_ref": "W13/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W13/3",
+      "reader_line": 136,
+      "source_qualified_ref": "passport-1.2:W13/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W13/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W13/3",
+          "reason": "Дельты 10/11: цена переключения модуля, совместимые окна и добровольная координация; общий расход не списывается дважды."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 45,
+      "historical_ref": "W14/1",
+      "target_id": "W14",
+      "proposed_target_ref": "W14/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W14/1",
+      "reader_line": 144,
+      "source_qualified_ref": "passport-1.2:W14/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W14/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 46,
+      "historical_ref": "W15/1",
+      "target_id": "W15",
+      "proposed_target_ref": "W15/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W15/2",
+      "reader_line": 150,
+      "source_qualified_ref": "passport-1.2:W15/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W15/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W15/2",
+          "reason": "Дельта 12: будущее нераспределённое время, исполнение и оплата пересмотра, разные полномочия, конечность спора и реальная цена входа."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 47,
+      "historical_ref": "W16/1",
+      "target_id": "W16",
+      "proposed_target_ref": "W16/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W16/4",
+      "reader_line": 160,
+      "source_qualified_ref": "passport-1.2:W16/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W16/3"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W16/4",
+          "reason": "Дельты 17/18: локально верный прогноз не выбирает цель и не расширяет полномочий; перенос оснований и конечные средства."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 48,
+      "historical_ref": "W17/1",
+      "target_id": "W17",
+      "proposed_target_ref": "W17/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W17/1",
+      "reader_line": 168,
+      "source_qualified_ref": "passport-1.2:W17/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W17/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 49,
+      "historical_ref": "W18/1",
+      "target_id": "W18",
+      "proposed_target_ref": "W18/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W18/3",
+      "reader_line": 174,
+      "source_qualified_ref": "passport-1.2:W18/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W18/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W18/3",
+          "reason": "Дельта 17: следующий цикл обеспечен после замены, расходов и обязательств; поставщики и иные человеческие права сохраняются; W20/2 не влечёт W18."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.3",
+      "line": 9,
+      "historical_ref": "W19/1",
+      "target_id": "W19",
+      "proposed_target_ref": "W19/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W19/2",
+      "reader_line": 180,
+      "source_qualified_ref": "passport-1.3:W19/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W19/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W19/2",
+          "reason": "Полностью перенесён глобальный контекст 1.3 и согласован с принятой 12: цена совместимости, возможные неразрешённые различия критериев, отсутствие общего победителя."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.3",
+      "line": 10,
+      "historical_ref": "W16/2",
+      "target_id": "W16",
+      "proposed_target_ref": "W16/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W16/4",
+      "reader_line": 160,
+      "source_qualified_ref": "passport-1.3:W16/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W16/3"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W16/4",
+          "reason": "Дельты 17/18: локально верный прогноз не выбирает цель и не расширяет полномочий; перенос оснований и конечные средства."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.3",
+      "line": 11,
+      "historical_ref": "D14/1",
+      "target_id": "D14",
+      "proposed_target_ref": "D14/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "D14/1",
+      "reader_line": 246,
+      "source_qualified_ref": "passport-1.3:D14/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "D14/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 19,
+      "historical_ref": "W20/1",
+      "target_id": "W20",
+      "proposed_target_ref": "W20/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "branch_clause": "opportunity-only",
+      "final_ref": "W20/3",
+      "reader_line": 186,
+      "source_qualified_ref": "passport-1.4:W20/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W20/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W20/3",
+          "reason": "Дельты 10/17/18: ранняя возможность и прежний поздний W20/2 раздельны; введённая net-прибавка на горизонте и её новое назначение без новых прав или бесплатных средств."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 20,
+      "historical_ref": "W20/2",
+      "target_id": "W20",
+      "proposed_target_ref": "W20/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "branch_clause": "separately-assumed-success-after-own-needs-and-wear",
+      "final_ref": "W20/3",
+      "reader_line": 186,
+      "source_qualified_ref": "passport-1.4:W20/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W20/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W20/3",
+          "reason": "Дельты 10/17/18: ранняя возможность и прежний поздний W20/2 раздельны; введённая net-прибавка на горизонте и её новое назначение без новых прав или бесплатных средств."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 21,
+      "historical_ref": "W21/1",
+      "target_id": "W21",
+      "proposed_target_ref": "W21/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W21/2",
+      "reader_line": 194,
+      "source_qualified_ref": "passport-1.4:W21/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W21/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W21/2",
+          "reason": "Дельты 10/16/18 и глобальные условия 1.4: одна услуга, полный путь энергии и аппаратуры, сроки, отрицательные сочетания параметров."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 22,
+      "historical_ref": "W22/1",
+      "target_id": "W22",
+      "proposed_target_ref": "W22/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W22/1",
+      "reader_line": 202,
+      "source_qualified_ref": "passport-1.4:W22/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W22/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 23,
+      "historical_ref": "W23/1",
+      "target_id": "W23",
+      "proposed_target_ref": "W23/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W23/1",
+      "reader_line": 208,
+      "source_qualified_ref": "passport-1.4:W23/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W23/1"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 24,
+      "historical_ref": "W24/1",
+      "target_id": "W24",
+      "proposed_target_ref": "W24/1",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W24/2",
+      "reader_line": 214,
+      "source_qualified_ref": "passport-1.4:W24/1",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W24/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W24/2",
+          "reason": "Дельта 16 и преемственность 18: воспроизводимое сравнение, net-энергия/мощность, решающая неизвестная, чувствительность; цены расчёта, стенда и полёта раздельны."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 25,
+      "historical_ref": "W18/2",
+      "target_id": "W18",
+      "proposed_target_ref": "W18/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W18/3",
+      "reader_line": 174,
+      "source_qualified_ref": "passport-1.4:W18/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W18/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W18/3",
+          "reason": "Дельта 17: следующий цикл обеспечен после замены, расходов и обязательств; поставщики и иные человеческие права сохраняются; W20/2 не влечёт W18."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 9,
+      "historical_ref": "W06/3",
+      "target_id": "W06",
+      "proposed_target_ref": "W06/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W06/3",
+      "reader_line": 88,
+      "source_qualified_ref": "passport-1.5:W06/3",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W06/3"
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 10,
+      "historical_ref": "W20/1",
+      "target_id": "W25",
+      "proposed_target_ref": "W25/1",
+      "operation": "rename-only",
+      "final_ref": "W25/2",
+      "reader_line": 222,
+      "source_qualified_ref": "passport-1.5:W20/1",
+      "integration_steps": [
+        {
+          "operation": "collision-rename-only",
+          "from": "W20/1",
+          "to": "W25/1"
+        },
+        {
+          "operation": "map-content-lineage",
+          "to": "W25/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W25/2",
+          "reason": "После переименования коллизии 1.5 дельта 10 уточняет потери до приёмки, массу/операции/цену, резерв и стоимость переделки."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 11,
+      "historical_ref": "W21/1",
+      "target_id": "W26",
+      "proposed_target_ref": "W26/1",
+      "operation": "rename-only",
+      "final_ref": "W26/2",
+      "reader_line": 230,
+      "source_qualified_ref": "passport-1.5:W21/1",
+      "integration_steps": [
+        {
+          "operation": "collision-rename-only",
+          "from": "W21/1",
+          "to": "W26/1"
+        },
+        {
+          "operation": "map-content-lineage",
+          "to": "W26/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W26/2",
+          "reason": "После переименования коллизии 1.5 дельты 10/11/17/18 различают импортную долю, общий масштаб, внешний платёж и цену новой цели."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 12,
+      "historical_ref": "W13/2",
+      "target_id": "W13",
+      "proposed_target_ref": "W13/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W13/3",
+      "reader_line": 136,
+      "source_qualified_ref": "passport-1.5:W13/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W13/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W13/3",
+          "reason": "Дельты 10/11: цена переключения модуля, совместимые окна и добровольная координация; общий расход не списывается дважды."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 13,
+      "historical_ref": "W10/3",
+      "target_id": "W10",
+      "proposed_target_ref": "W10/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W10/4",
+      "reader_line": 116,
+      "source_qualified_ref": "passport-1.5:W10/3",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W10/3"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W10/4",
+          "reason": "Дельты 9/18 и принятые 13/15: признанная часть подтверждения, основания решений и конечность передачи; выбранная команда отличается от внешнего входа."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 14,
+      "historical_ref": "W12/2",
+      "target_id": "W12",
+      "proposed_target_ref": "W12/2",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W12/3",
+      "reader_line": 130,
+      "source_qualified_ref": "passport-1.5:W12/2",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W12/2"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W12/3",
+          "reason": "Дельта 18: прошлые вложения, действующие обещания и новое финансирование; реальное закрытие пути после исполнения обязательств."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 15,
+      "historical_ref": "W16/3",
+      "target_id": "W16",
+      "proposed_target_ref": "W16/3",
+      "operation": "preserve-or-explicitly-merge-version-lineage",
+      "final_ref": "W16/4",
+      "reader_line": 160,
+      "source_qualified_ref": "passport-1.5:W16/3",
+      "integration_steps": [
+        {
+          "operation": "map-content-lineage",
+          "to": "W16/3"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W16/4",
+          "reason": "Дельты 17/18: локально верный прогноз не выбирает цель и не расширяет полномочий; перенос оснований и конечные средства."
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 16,
+      "historical_ref": "W22/1",
+      "target_id": "W27",
+      "proposed_target_ref": "W27/1",
+      "operation": "rename-only",
+      "final_ref": "W27/2",
+      "reader_line": 238,
+      "source_qualified_ref": "passport-1.5:W22/1",
+      "integration_steps": [
+        {
+          "operation": "collision-rename-only",
+          "from": "W22/1",
+          "to": "W27/1"
+        },
+        {
+          "operation": "map-content-lineage",
+          "to": "W27/1"
+        },
+        {
+          "operation": "explicit-content-clarification",
+          "to": "W27/2",
+          "reason": "После переименования коллизии 1.5 дельты 17/18 уточняют повторные добровольные решения, три устройства, внешний вход и отказ от нового финансирования."
+        }
+      ]
+    }
+  ],
+  "condition_versions": [
+    {
+      "id": "W01",
+      "previous_map_ref": "W01/1",
+      "final_ref": "W01/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 58
+    },
+    {
+      "id": "W02",
+      "previous_map_ref": "W02/1",
+      "final_ref": "W02/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 64
+    },
+    {
+      "id": "W03",
+      "previous_map_ref": "W03/1",
+      "final_ref": "W03/2",
+      "changed": true,
+      "reason": "Дельта 18: полная цепь нового дела и отсутствие заранее соединённой сети Луна/астероид/орбита.",
+      "line_start": 70
+    },
+    {
+      "id": "W04",
+      "previous_map_ref": "W04/1",
+      "final_ref": "W04/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 76
+    },
+    {
+      "id": "W05",
+      "previous_map_ref": "W05/1",
+      "final_ref": "W05/2",
+      "changed": true,
+      "reason": "Дельта 18: сопоставимая полезная услуга, полные затраты, отходы и последствия без объявленного экологического выигрыша.",
+      "line_start": 82
+    },
+    {
+      "id": "W06",
+      "previous_map_ref": "W06/3",
+      "final_ref": "W06/3",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 88
+    },
+    {
+      "id": "W07",
+      "previous_map_ref": "W07/2",
+      "final_ref": "W07/2",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 94
+    },
+    {
+      "id": "W08",
+      "previous_map_ref": "W08/2",
+      "final_ref": "W08/3",
+      "changed": true,
+      "reason": "Уточнения 8/9/16: фактическая помощь и основание оценки; готовое правильное решение совместимо с освоением, отсутствие наблюдения не диагноз неспособности.",
+      "line_start": 100
+    },
+    {
+      "id": "W09",
+      "previous_map_ref": "W09/4",
+      "final_ref": "W09/4",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 110
+    },
+    {
+      "id": "W10",
+      "previous_map_ref": "W10/3",
+      "final_ref": "W10/4",
+      "changed": true,
+      "reason": "Дельты 9/18 и принятые 13/15: признанная часть подтверждения, основания решений и конечность передачи; выбранная команда отличается от внешнего входа.",
+      "line_start": 116
+    },
+    {
+      "id": "W11",
+      "previous_map_ref": "W11/1",
+      "final_ref": "W11/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 124
+    },
+    {
+      "id": "W12",
+      "previous_map_ref": "W12/2",
+      "final_ref": "W12/3",
+      "changed": true,
+      "reason": "Дельта 18: прошлые вложения, действующие обещания и новое финансирование; реальное закрытие пути после исполнения обязательств.",
+      "line_start": 130
+    },
+    {
+      "id": "W13",
+      "previous_map_ref": "W13/2",
+      "final_ref": "W13/3",
+      "changed": true,
+      "reason": "Дельты 10/11: цена переключения модуля, совместимые окна и добровольная координация; общий расход не списывается дважды.",
+      "line_start": 136
+    },
+    {
+      "id": "W14",
+      "previous_map_ref": "W14/1",
+      "final_ref": "W14/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 144
+    },
+    {
+      "id": "W15",
+      "previous_map_ref": "W15/1",
+      "final_ref": "W15/2",
+      "changed": true,
+      "reason": "Дельта 12: будущее нераспределённое время, исполнение и оплата пересмотра, разные полномочия, конечность спора и реальная цена входа.",
+      "line_start": 150
+    },
+    {
+      "id": "W16",
+      "previous_map_ref": "W16/3",
+      "final_ref": "W16/4",
+      "changed": true,
+      "reason": "Дельты 17/18: локально верный прогноз не выбирает цель и не расширяет полномочий; перенос оснований и конечные средства.",
+      "line_start": 160
+    },
+    {
+      "id": "W17",
+      "previous_map_ref": "W17/1",
+      "final_ref": "W17/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 168
+    },
+    {
+      "id": "W18",
+      "previous_map_ref": "W18/2",
+      "final_ref": "W18/3",
+      "changed": true,
+      "reason": "Дельта 17: следующий цикл обеспечен после замены, расходов и обязательств; поставщики и иные человеческие права сохраняются; W20/2 не влечёт W18.",
+      "line_start": 174
+    },
+    {
+      "id": "W19",
+      "previous_map_ref": "W19/1",
+      "final_ref": "W19/2",
+      "changed": true,
+      "reason": "Полностью перенесён глобальный контекст 1.3 и согласован с принятой 12: цена совместимости, возможные неразрешённые различия критериев, отсутствие общего победителя.",
+      "line_start": 180
+    },
+    {
+      "id": "W20",
+      "previous_map_ref": "W20/2",
+      "final_ref": "W20/3",
+      "changed": true,
+      "reason": "Дельты 10/17/18: ранняя возможность и прежний поздний W20/2 раздельны; введённая net-прибавка на горизонте и её новое назначение без новых прав или бесплатных средств.",
+      "line_start": 186
+    },
+    {
+      "id": "W21",
+      "previous_map_ref": "W21/1",
+      "final_ref": "W21/2",
+      "changed": true,
+      "reason": "Дельты 10/16/18 и глобальные условия 1.4: одна услуга, полный путь энергии и аппаратуры, сроки, отрицательные сочетания параметров.",
+      "line_start": 194
+    },
+    {
+      "id": "W22",
+      "previous_map_ref": "W22/1",
+      "final_ref": "W22/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 202
+    },
+    {
+      "id": "W23",
+      "previous_map_ref": "W23/1",
+      "final_ref": "W23/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 208
+    },
+    {
+      "id": "W24",
+      "previous_map_ref": "W24/1",
+      "final_ref": "W24/2",
+      "changed": true,
+      "reason": "Дельта 16 и преемственность 18: воспроизводимое сравнение, net-энергия/мощность, решающая неизвестная, чувствительность; цены расчёта, стенда и полёта раздельны.",
+      "line_start": 214
+    },
+    {
+      "id": "W25",
+      "previous_map_ref": "W25/1",
+      "final_ref": "W25/2",
+      "changed": true,
+      "reason": "После переименования коллизии 1.5 дельта 10 уточняет потери до приёмки, массу/операции/цену, резерв и стоимость переделки.",
+      "line_start": 222
+    },
+    {
+      "id": "W26",
+      "previous_map_ref": "W26/1",
+      "final_ref": "W26/2",
+      "changed": true,
+      "reason": "После переименования коллизии 1.5 дельты 10/11/17/18 различают импортную долю, общий масштаб, внешний платёж и цену новой цели.",
+      "line_start": 230
+    },
+    {
+      "id": "W27",
+      "previous_map_ref": "W27/1",
+      "final_ref": "W27/2",
+      "changed": true,
+      "reason": "После переименования коллизии 1.5 дельты 17/18 уточняют повторные добровольные решения, три устройства, внешний вход и отказ от нового финансирования.",
+      "line_start": 238
+    },
+    {
+      "id": "D14",
+      "previous_map_ref": "D14/1",
+      "final_ref": "D14/1",
+      "changed": false,
+      "reason": "Самостоятельно перенесено прежнее условие с общими границами, без отдельной новой функции или нового допущения.",
+      "line_start": 246
+    }
+  ],
+  "canonical_conditions": [
+    {
+      "id": "W01",
+      "ref": "W01/1",
+      "previous_map_ref": "W01/1",
+      "title": "Водный продукт у получателя",
+      "status": "С",
+      "chapter_scope": "1–2, 5–6, 10–12, 17",
+      "line_start": 58,
+      "line_end": 63,
+      "section_sha256": "55214574d881c0737e19bda8b82723f0560d24d7f44628294178d524a2c95c25",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 35,
+          "historical_ref": "W01/1",
+          "target_id": "W01",
+          "proposed_target_ref": "W01/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W01/1, W02/1",
+          "source_cells": [
+            "С. Прежние продукт и внешний человеческий покупатель сохранены.",
+            "1–2,5–6,10–12; исходная ветвь17.",
+            "Нет пригодного сырья, потребителя или цепи — изменение замысла либо отказ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "ref": "W02/1",
+      "previous_map_ref": "W02/1",
+      "title": "Исходный внешний человеческий покупатель",
+      "status": "С",
+      "chapter_scope": "1–2, 5–6, 10–12, 17",
+      "line_start": 64,
+      "line_end": 69,
+      "section_sha256": "f3d6c4ed35952f9a11ca8771af94621a0640f63d4381895e9c7bb9b3ef15bf11",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 35,
+          "historical_ref": "W02/1",
+          "target_id": "W02",
+          "proposed_target_ref": "W02/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W01/1, W02/1",
+          "source_cells": [
+            "С. Прежние продукт и внешний человеческий покупатель сохранены.",
+            "1–2,5–6,10–12; исходная ветвь17.",
+            "Нет пригодного сырья, потребителя или цепи — изменение замысла либо отказ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "ref": "W03/2",
+      "previous_map_ref": "W03/1",
+      "title": "Качественная материальная цепь",
+      "status": "С/П",
+      "chapter_scope": "космические фрагменты; 18",
+      "line_start": 70,
+      "line_end": 75,
+      "section_sha256": "f654fe7dabc410d09261682f5914b3ba3ad474377c6e148bf5036a2d990b519e",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 36,
+          "historical_ref": "W03/1",
+          "target_id": "W03",
+          "proposed_target_ref": "W03/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W03/1, W05/1",
+          "source_cells": [
+            "С/П. Прежняя качественная материальная цепь и конечные ограничения сохранены; численные параметры не установлены.",
+            "Все водные фрагменты.",
+            "Ограничения могут сделать астероидную поставку хуже земной/лунной или ненужной."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W04",
+      "ref": "W04/1",
+      "previous_map_ref": "W04/1",
+      "title": "Сильный A1 без обязательного машинного упущения",
+      "status": "С",
+      "chapter_scope": "1–18",
+      "line_start": 76,
+      "line_end": 81,
+      "section_sha256": "ed7fc1fe256ff8ed838de9baeb34d054621c0edadec71d6c07b9136a9c736975",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 37,
+          "historical_ref": "W04/1",
+          "target_id": "W04",
+          "proposed_target_ref": "W04/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W04/1",
+          "source_cells": [
+            "С. Сильный A1 сохранён; может учить лучше человека, не требует спасителя.",
+            "1–18.",
+            "Доступная помощь может сама обеспечить развитие и лишить специальный режим преимущества."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W05",
+      "ref": "W05/2",
+      "previous_map_ref": "W05/1",
+      "title": "Физические и экономические ограничения полного пути",
+      "status": "С/П",
+      "chapter_scope": "космические фрагменты; 18",
+      "line_start": 82,
+      "line_end": 87,
+      "section_sha256": "1894dde45a2e40f3600007c2a8cd118e82e3da29d5f5b7962d27913a84e943cd",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 36,
+          "historical_ref": "W05/1",
+          "target_id": "W05",
+          "proposed_target_ref": "W05/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W03/1, W05/1",
+          "source_cells": [
+            "С/П. Прежняя качественная материальная цепь и конечные ограничения сохранены; численные параметры не установлены.",
+            "Все водные фрагменты.",
+            "Ограничения могут сделать астероидную поставку хуже земной/лунной или ненужной."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W06",
+      "ref": "W06/3",
+      "previous_map_ref": "W06/3",
+      "title": "Разведка с возможностью отказа и отдельно допущенный оплаченный успех",
+      "status": "С",
+      "chapter_scope": "5–6, 10–12, 17",
+      "line_start": 88,
+      "line_end": 93,
+      "section_sha256": "591524a9a5b4eee8c54882f5220ee4dd4bfd48004c22fad1d897d5513b406bda",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 38,
+          "historical_ref": "W06/2",
+          "target_id": "W06",
+          "proposed_target_ref": "W06/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W06/2",
+          "source_cells": [
+            "С. В начале5 явно допущены принятая поставка и покрытие расходов выбранного предприятия. Прежний этап успеха сохранён, формулировка уточнена.",
+            "5–6,10–12,17.",
+            "Это не вывод из NASA и не гарантия будущей прибыли при новом рынке. Неуспех этапаI не удаляется из реального проектного выбора."
+          ]
+        },
+        {
+          "source_id": "passport-1.5",
+          "line": 9,
+          "historical_ref": "W06/3",
+          "target_id": "W06",
+          "proposed_target_ref": "W06/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W06/3, С",
+          "source_cells": [
+            "Глава5 сначала разворачивает исследовательский путь до принятой поставки: наблюдение, контакт, малая проба, выход и потери, квалификация у получателя. После этого явно выбирается удачная ветвь прежнего технического успеха.",
+            "Разведка может обосновать отказ; исследовательский заказ может быть исполнен при убытке инвестора. Покрытие расходов предприятия остаётся допущением, не выводом из разведки."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W07",
+      "ref": "W07/2",
+      "previous_map_ref": "W07/2",
+      "title": "Отдельная земная проверка образовательных режимов",
+      "status": "С/П",
+      "chapter_scope": "7–9, 16",
+      "line_start": 94,
+      "line_end": 99,
+      "section_sha256": "24b0ff224910aac15c60a2f33ea245ed199c1fc76651fb573184f414565debc8",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 39,
+          "historical_ref": "W07/2",
+          "target_id": "W07",
+          "proposed_target_ref": "W07/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W07/2, W08/2",
+          "source_cells": [
+            "С/П. Главное сравнение двух образовательных режимов перенесено в отдельную R2D-LAB-1 с одинаковыми полными ресурсами/правами/ИИ; производственный режим остаётся логическим ориентиром5.",
+            "7–9,11,16,17.",
+            "Сопоставимость не выводится из одинакового числа участников. Свободная команда вправе сама устроить обучение и оказаться достаточной. Космическая кооперация не считается доказательством метода."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W08",
+      "ref": "W08/3",
+      "previous_map_ref": "W08/2",
+      "title": "Сопоставимость полных ресурсов, прав и фактической помощи",
+      "status": "С/П",
+      "chapter_scope": "7–9, 16–17",
+      "line_start": 100,
+      "line_end": 109,
+      "section_sha256": "1d4863f63889cf2663baf5fa26e49f38700be94846b2ad39cf58987e885bf651",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 39,
+          "historical_ref": "W08/2",
+          "target_id": "W08",
+          "proposed_target_ref": "W08/2",
+          "operation": "clarify-with-accepted-9.0-deltas",
+          "source_label": "W07/2, W08/2",
+          "source_cells": [
+            "С/П. Главное сравнение двух образовательных режимов перенесено в отдельную R2D-LAB-1 с одинаковыми полными ресурсами/правами/ИИ; производственный режим остаётся логическим ориентиром5.",
+            "7–9,11,16,17.",
+            "Сопоставимость не выводится из одинакового числа участников. Свободная команда вправе сама устроить обучение и оказаться достаточной. Космическая кооперация не считается доказательством метода."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W09",
+      "ref": "W09/4",
+      "previous_map_ref": "W09/4",
+      "title": "Новый режим выдачи воды и различение запаса/потока",
+      "status": "С/П",
+      "chapter_scope": "5–6",
+      "line_start": 110,
+      "line_end": 115,
+      "section_sha256": "12de2911a9906ac4a85b71a85c731a01d010f3de1c3439d851672d89afe5c8d0",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 40,
+          "historical_ref": "W09/3",
+          "target_id": "W09",
+          "proposed_target_ref": "W09/4",
+          "operation": "clarify-with-accepted-9.0-deltas",
+          "source_label": "W09/3",
+          "source_cells": [
+            "С. Прежний специальный порог примеси версии1.1 больше не является сквозной проверкой. В5–6 другой потребитель вводит другое назначение и вопрос о достаточности прежнего контроля; прежняя поставка не становится плохой.",
+            "5–6. Основная эмпирическая иллюстрация переноса теперь LAB-02 в8.",
+            "При недостатке данных обоснованно отложить новое применение. Объём/цена/требования нового заказа не выдаются за неизменные и не используются в численном сравнении."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W10",
+      "ref": "W10/4",
+      "previous_map_ref": "W10/3",
+      "title": "Продолжение выбранной команды и отдельный вход внешней группы",
+      "status": "П/С",
+      "chapter_scope": "9–12, 15–18",
+      "line_start": 116,
+      "line_end": 123,
+      "section_sha256": "44d6a8477cccf73df8c2167ecad006bbfec9d5a1a8acb048d339ec7ef6ad6e62",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 41,
+          "historical_ref": "W10/2",
+          "target_id": "W10",
+          "proposed_target_ref": "W10/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W10/2",
+          "source_cells": [
+            "П. Передача средств, роли и материалов без личного вето основателя; вход следующей группы. Для космоса развёрнута в инфраструктурную коалицию.",
+            "9–12,15–18.",
+            "Формальный выход без данных/цепи/капитала не подтверждает продолжения; общий узел может закрыться кругом основателей."
+          ]
+        },
+        {
+          "source_id": "passport-1.5",
+          "line": 13,
+          "historical_ref": "W10/3",
+          "target_id": "W10",
+          "proposed_target_ref": "W10/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W10/3, П/С",
+          "source_cells": [
+            "Главы9,12,16,18: продолжение команды отделено от входа внешней группы. Оплаченная безопасная проба может дать переносимое подтверждение, если следующий оператор признаёт его.",
+            "Деньги двух циклов и резерв выхода не оплачивают третью группу. Формальная заявка без доступной цены и следующего ресурса не доказывает вход. Членство финансирующего объединения не условие заявки."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W11",
+      "ref": "W11/1",
+      "previous_map_ref": "W11/1",
+      "title": "Одинаково доступное педагогическое и организационное усиление A2",
+      "status": "С",
+      "chapter_scope": "17–18",
+      "line_start": 124,
+      "line_end": 129,
+      "section_sha256": "1cd9a7b794cff3cf5c86c8046ce4c22bfbc92591a6c6a06de6755d30564f6779",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 42,
+          "historical_ref": "W11/1",
+          "target_id": "W11",
+          "proposed_target_ref": "W11/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W11/1",
+          "source_cells": [
+            "С. A2 усиливает организацию развития при одинаковом доступе и учёте цены.",
+            "17–18.",
+            "Методика может стать лишней; эффект обновления не объявлен чистым ростом человека."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W12",
+      "ref": "W12/3",
+      "previous_map_ref": "W12/2",
+      "title": "Достоинство, добровольность и основание доступа по MERIT",
+      "status": "Ц/П",
+      "chapter_scope": "2–3, 9, 12–18; эпилог",
+      "line_start": 130,
+      "line_end": 135,
+      "section_sha256": "da9e1a49ef9f54007c5dce661508a89fbea56270f506703d9e587f31c3aeb856",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 43,
+          "historical_ref": "W12/1",
+          "target_id": "W12",
+          "proposed_target_ref": "W12/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W12/1",
+          "source_cells": [
+            "Ц/П. Достоинство независимо от квалификации; добровольность, отказ, выход, возвращение и реальный пересмотр.",
+            "2–3,9,12–18, эпилог.",
+            "Право на достойную жизнь не отменяет профессиональной безопасности; несогласие не оплачивает чужой ресурс."
+          ]
+        },
+        {
+          "source_id": "passport-1.5",
+          "line": 14,
+          "historical_ref": "W12/2",
+          "target_id": "W12",
+          "proposed_target_ref": "W12/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W12/2, Ц/П",
+          "source_cells": [
+            "MERIT: достоинство не зависит от эффективности; конкретный доступ основан на владении, договоре, делегировании или отдельно обоснованном общественном институте. Добровольность распространяется на плательщика.",
+            "Принятое обязательство исполняется; будущего бессрочного финансирования нет. Выход учитывает реальные средства жизни, чужие данные и предел передачи. Возврат требует нового соглашения."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W13",
+      "ref": "W13/3",
+      "previous_map_ref": "W13/2",
+      "title": "Коалиция и совместимость при разных интересах владельцев",
+      "status": "С/Г/П",
+      "chapter_scope": "10–12",
+      "line_start": 136,
+      "line_end": 143,
+      "section_sha256": "687b961dd4d42a031f3c6b66d73b8040328d9079dd34d72cf812e462fe4c5e6c",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 44,
+          "historical_ref": "W13/1",
+          "target_id": "W13",
+          "proposed_target_ref": "W13/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W13/1",
+          "source_cells": [
+            "С/Г/П. При наличии свободной мощности интересы продавца воды, перевозчика и покупателя расходятся; коалиция оплачивает совместимость и доступ.",
+            "10; предпосылка11–12.",
+            "Вертикальный единый владелец, полная загрузка или слишком высокая цена совместимости могут закрыть этот путь. Тогда другая коалиция, расширение или отказ."
+          ]
+        },
+        {
+          "source_id": "passport-1.5",
+          "line": 12,
+          "historical_ref": "W13/2",
+          "target_id": "W13",
+          "proposed_target_ref": "W13/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W13/2, С/Г/П",
+          "source_cells": [
+            "Главы10–12: интерес к новым поставщикам влияет на совместимость и строящееся оборудование; успех первых пользователей меняет загрузку и нормы.",
+            "Несколько операторов не предполагаются бесплатно существующими. Другой модуль требует капитала, эксплуатации и покупателя; прежний владелец может законно отказаться от нового обязательства."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W14",
+      "ref": "W14/1",
+      "previous_map_ref": "W14/1",
+      "title": "Отдельно допущенный рост предложения и условное снижение цены",
+      "status": "С/Г",
+      "chapter_scope": "11–12, 17",
+      "line_start": 144,
+      "line_end": 149,
+      "section_sha256": "909f8b9aac4a6b2c9add153d69deffbc625f05a23dfdc055ced4b0576a7b585b",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 45,
+          "historical_ref": "W14/1",
+          "target_id": "W14",
+          "proposed_target_ref": "W14/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W14/1",
+          "source_cells": [
+            "С/Г. Несколько независимых поставщиков сумели увеличить предложение. При росте быстрее платёжеспособного спроса и конкуренции возможна меньшая цена.",
+            "11–12,17.",
+            "Это явный новый успех производства, не вывод из образовательной пробы. Цена может не снизиться при растущем спросе/закрытом рынке. Дешевизна не гарантирует прибыль; расходы и недозагрузка могут закрыть узел."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W15",
+      "ref": "W15/2",
+      "previous_map_ref": "W15/1",
+      "title": "Пересмотр распределения ещё не обещанной будущей мощности",
+      "status": "С/П",
+      "chapter_scope": "12–13, 18",
+      "line_start": 150,
+      "line_end": 159,
+      "section_sha256": "069629ba788876c26f886daf1b8d1bf72d929b6f1cf1ad4476cc0aa3c3c63508",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 46,
+          "historical_ref": "W15/1",
+          "target_id": "W15",
+          "proposed_target_ref": "W15/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W15/1",
+          "source_cells": [
+            "С/П. В12 спор касается ещё не обещанных будущих окон. Прежние договоры и требования безопасности не отменены; новая команда может не получить опыт из-за правила приоритета прошлого объёма.",
+            "12–13,18.",
+            "Правильный отказ может сохранять закрытую норму. Изменение нормы требует оплаченного времени/проверки и носителей пересмотра; нулевая мощность не исчезает от голосования."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W16",
+      "ref": "W16/4",
+      "previous_map_ref": "W16/3",
+      "title": "Обособленная машинная программа, капитал и согласованные полномочия",
+      "status": "С/Ц/П",
+      "chapter_scope": "17–18",
+      "line_start": 160,
+      "line_end": 167,
+      "section_sha256": "c9381eb4679f73eefde4a03607accf7289e17dba6a4a64e43c0a19eae8e92380",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 47,
+          "historical_ref": "W16/1",
+          "target_id": "W16",
+          "proposed_target_ref": "W16/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W16/1",
+          "source_cells": [
+            "С/П. В17 конечный капитал передаётся машинной исследовательской организации; направления и вложения выбираются без каждого нового человеческого заказа в принятых пределах.",
+            "17–18.",
+            "Самостоятельная программа не равна сознанию, правосубъектности модели, единой воле ИИ или нарушению правил. Без остатка после расходов/пополнения работа заканчивается."
+          ]
+        },
+        {
+          "source_id": "passport-1.3",
+          "line": 10,
+          "historical_ref": "W16/2",
+          "target_id": "W16",
+          "proposed_target_ref": "W16/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W16/2",
+          "source_cells": [
+            "Выделенные машинной программе собственные средства используются в пределах согласованной программы и условий доступа. Ожидаемая польза людям сама не даёт права переназначить общую мощность.",
+            "Ц/П, уточнение границы прежней С W16/1. Глава 17; зависимый вывод 18 сохранён. Прежние договоры, финансирование, конечный водный заказ W17 и внешние зависимости не отменены. Согласованное делегирование может быть широким; самовольное расширение не следует из качества прогноза."
+          ]
+        },
+        {
+          "source_id": "passport-1.5",
+          "line": 15,
+          "historical_ref": "W16/3",
+          "target_id": "W16",
+          "proposed_target_ref": "W16/3",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W16/3, С/Ц/П",
+          "source_cells": [
+            "Глава17 различает силу помощника, цель организации и материальную автономность. Лем помогает различить выпуск, прибыль и сохранение предприятия. Машинная программа воздействует на все три человеческие петли.",
+            "Не четвёртый исключающий аттрактор. Нельзя из законной покупки свободной мощности вывести право менять чужие обязательства. Предел W18 сохраняет оплату остаточных внешних поставок."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W17",
+      "ref": "W17/1",
+      "previous_map_ref": "W17/1",
+      "title": "Конечный водный заказ для внутреннего теплового контура",
+      "status": "С",
+      "chapter_scope": "17",
+      "line_start": 168,
+      "line_end": 173,
+      "section_sha256": "576513a7727a1bacf11abc77892a773d13fe75a6e410bb86541c484c968acb56",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 48,
+          "historical_ref": "W17/1",
+          "target_id": "W17",
+          "proposed_target_ref": "W17/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W17/1",
+          "source_cells": [
+            "С. Водный заказ новой программы — конечное заполнение и оговорённое пополнение внутреннего теплового контура модуля.",
+            "17.",
+            "Жидкость не заменяет радиатор и не превращается в чипы. Температура/совместимость/цена требуют отдельного обоснования. Альтернативы: Земля, иной модуль, отказ. Прежний заказ сохранён."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W18",
+      "ref": "W18/3",
+      "previous_map_ref": "W18/2",
+      "title": "Предельное обеспечение следующего цикла без необходимой продажи людям",
+      "status": "С",
+      "chapter_scope": "17–18",
+      "line_start": 174,
+      "line_end": 179,
+      "section_sha256": "91712144ab08f120e7a69f1ac715df5f888d489b573db6f49f833e57c890f15d",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.2",
+          "line": 49,
+          "historical_ref": "W18/1",
+          "target_id": "W18",
+          "proposed_target_ref": "W18/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W18/1",
+          "source_cells": [
+            "С. Только предельная ветвь17: цикл воспроизводит достаточно средств для энергии, ремонта и остающихся внешних поставок без необходимой продажи результата людям.",
+            "Поворот17 «не только работник, но и покупатель», затем18.",
+            "Большей локальной автономии недостаточно. Если остаточная зависимость требует человеческой выручки, предельный вывод не действует. Взаимные счета не создают материю/энергию; потери, обязательства, внешние последствия сохраняются."
+          ]
+        },
+        {
+          "source_id": "passport-1.4",
+          "line": 25,
+          "historical_ref": "W18/2",
+          "target_id": "W18",
+          "proposed_target_ref": "W18/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W18/2",
+          "source_cells": [
+            "С, после W20/2 в17. После износа, потерь, энергии, ремонта, внешних поставок и обязательств средств хватает на следующий исследовательский цикл без необходимой продажи результата людям.",
+            "Предельный смысл W18/1 сохранён, расходы уточнены. Если импорт требует человеческой выручки, вывод не действует. Это не полная независимость от поставщиков и не прогноз с датой."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W19",
+      "ref": "W19/2",
+      "previous_map_ref": "W19/1",
+      "title": "Самостоятельность производственных звеньев при общих ограничениях",
+      "status": "С/П",
+      "chapter_scope": "12",
+      "line_start": 180,
+      "line_end": 185,
+      "section_sha256": "0f213758c5cbe947d152b4bdee91948f7b554ebd37d1512f418b5262b9d91946",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.3",
+          "line": 9,
+          "historical_ref": "W19/1",
+          "target_id": "W19",
+          "proposed_target_ref": "W19/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W19/1",
+          "source_cells": [
+            "Производственные звенья могут выбирать способы работы самостоятельно при согласованных требованиях к совместимости, безопасности и ответственности. Разделение решений отличается от отказа от общих правил.",
+            "С/П. Глава 12 после «Двух адмиралов», этап IV. Не новая техника или бюджет. При сильной взаимозависимости действий совместное согласование может оставаться необходимым; автономия внутренних звеньев не обеспечивает вход новым. Кейс иллюстрирует вопрос, не доказывает жизнеспособность космического устройства."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W20",
+      "ref": "W20/3",
+      "previous_map_ref": "W20/2",
+      "title": "Лунное энергетическое оборудование: возможность и отдельная ветвь успеха",
+      "status": "С/П",
+      "chapter_scope": "1, 9–11, 16–18",
+      "line_start": 186,
+      "line_end": 193,
+      "section_sha256": "d8345f9dda1c3ee4ff24c378407d0d74991b580afa10340360a0ade531cfe1f5",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.4",
+          "line": 19,
+          "historical_ref": "W20/1",
+          "target_id": "W20",
+          "proposed_target_ref": "W20/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "branch_clause": "opportunity-only",
+          "source_label": "W20/1",
+          "source_cells": [
+            "С/П, глава 10; ранний вопрос1, переход9. Отдельная лунная ветвь может производить энергетическое оборудование из местного материала после доставки начальных средств.",
+            "Возможность, не успех. Вода и покупатель сохранены, Луна не стала обязательной перевалкой. Критические компоненты, инструменты, ремонт и начальное питание обеспечиваются извне."
+          ]
+        },
+        {
+          "source_id": "passport-1.4",
+          "line": 20,
+          "historical_ref": "W20/2",
+          "target_id": "W20",
+          "proposed_target_ref": "W20/2",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "branch_clause": "separately-assumed-success-after-own-needs-and-wear",
+          "source_label": "W20/2",
+          "source_cells": [
+            "С, глава17: «Теперь допустим» — ветвь дала пригодные установки и мощность после собственных нужд и возмещения износа.",
+            "Чистый прирост части базы не выводится из Blue Alchemist и не означает воспроизводства всех станков/компонентов. Глава18 наследует только этот условный рост."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W21",
+      "ref": "W21/2",
+      "previous_map_ref": "W21/1",
+      "title": "Сопоставимость покупки системы, местного изготовления и услуги",
+      "status": "С/П",
+      "chapter_scope": "10–11, 16, 18",
+      "line_start": 194,
+      "line_end": 201,
+      "section_sha256": "29baf119f624d330b5114705e5f21376d76f6eb4628b58d29b73e2a42093e594",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.4",
+          "line": 21,
+          "historical_ref": "W21/1",
+          "target_id": "W21",
+          "proposed_target_ref": "W21/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W21/1",
+          "source_cells": [
+            "С/П, главы10–11. Земная готовая система, местное изготовление и покупка услуги сопоставляются по одинаковой полезной мощности в том же месте, качестве, доступности и горизонте.",
+            "Первая полезная отдача, выход годного, ресурс, запас, потери и ремонт меняют выбор. Энергия для Луны, орбитального аппарата и Земли — три разные услуги."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W22",
+      "ref": "W22/1",
+      "previous_map_ref": "W22/1",
+      "title": "Загрузка инфраструктуры и удешевление земной альтернативы",
+      "status": "Г/С",
+      "chapter_scope": "10–11",
+      "line_start": 202,
+      "line_end": 207,
+      "section_sha256": "acc96e17a516528f91045e25e5a6170df6c941895d5c84b87f2387960be2a4be",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.4",
+          "line": 22,
+          "historical_ref": "W22/1",
+          "target_id": "W22",
+          "proposed_target_ref": "W22/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W22/1",
+          "source_cells": [
+            "Г/С, главы10–11. Экономия общей инфраструктуры зависит от загрузки; дешёвая земная доставка помогает местному комплексу и его конкуренту.",
+            "При слабом потоке прямое снабжение/собственные средства могут выиграть. Не требуется одинаковый темп удешевления; преимущество пересчитывается. Самовыписанный счёт не создаёт спроса."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W23",
+      "ref": "W23/1",
+      "previous_map_ref": "W23/1",
+      "title": "Отдельная ранняя орбитальная услуга и непредположенное финансирование добычи",
+      "status": "Г/П",
+      "chapter_scope": "11",
+      "line_start": 208,
+      "line_end": 213,
+      "section_sha256": "db00a7b0a254dab5b1cf7042970996dbf2242a633588fe90542aa1d71df8e361",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.4",
+          "line": 23,
+          "historical_ref": "W23/1",
+          "target_id": "W23",
+          "proposed_target_ref": "W23/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W23/1",
+          "source_cells": [
+            "Г/П, глава11. Ранний орбитальный продукт может дать самостоятельную услугу; связь с добычей требует конкретного переноса и основания финансирования.",
+            "Varda — отдельный документальный случай, не плательщик сценария. Прибыльность и последующая инвестиция не допущены. У владельца нет обязанности финансировать добычу."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W24",
+      "ref": "W24/2",
+      "previous_map_ref": "W24/1",
+      "title": "Отдельная возможная проба сравнения энергетических архитектур",
+      "status": "П",
+      "chapter_scope": "16",
+      "line_start": 214,
+      "line_end": 221,
+      "section_sha256": "bcf05514ed0face79e235f0d4c9c77164a633108afeb9752f7e1867894766e1d",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.4",
+          "line": 24,
+          "historical_ref": "W24/1",
+          "target_id": "W24",
+          "proposed_target_ref": "W24/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "W24/1",
+          "source_cells": [
+            "П, глава16. Возможная отдельная проба — воспроизвести сравнение энергетических архитектур и найти неизвестное, меняющее выбор.",
+            "Нет принятого заказчика, цены или старта. Закрытие проигравшей ветви допустимо. Сохранение оснований помогает продолжению, но не доказывает развития участника."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W25",
+      "ref": "W25/2",
+      "previous_map_ref": "W25/1",
+      "title": "Различные материальные ограничения последовательных переходов",
+      "status": "С/Г",
+      "chapter_scope": "5, 10",
+      "line_start": 222,
+      "line_end": 229,
+      "section_sha256": "ac9c7e70dabfcd23a4a1c7553dafd4b5fb486d390221c5b797cc74c91690b3ec",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.5",
+          "line": 10,
+          "historical_ref": "W20/1",
+          "target_id": "W25",
+          "proposed_target_ref": "W25/1",
+          "operation": "rename-only",
+          "source_label": "W20/1, С/Г",
+          "source_cells": [
+            "Главы5,10: механика контакта, выделение, хранение, доставка, энергия, отвод тепла, обслуживание и доступная приёмная мощность ограничивают разные переходы.",
+            "Увеличение добычи не устраняет недостаток приёмной мощности. Отказ от расширения и более дешёвая земная цепь сохраняются."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W26",
+      "ref": "W26/2",
+      "previous_map_ref": "W26/1",
+      "title": "Частичная местная база при сохраняемых внешних зависимостях",
+      "status": "С/Г/П",
+      "chapter_scope": "10–11, 17–18",
+      "line_start": 230,
+      "line_end": 237,
+      "section_sha256": "a7361dc7690c66c65794d9e17f33d0c31ff7c490db11517e5d6765f5bd9f8e20",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.5",
+          "line": 11,
+          "historical_ref": "W21/1",
+          "target_id": "W26",
+          "proposed_target_ref": "W26/1",
+          "operation": "rename-only",
+          "source_label": "W21/1, С/Г",
+          "source_cells": [
+            "Главы10,17: часть вещества и простых конструкций получают на месте; критические комплектующие, измерения и услуги остаются внешними.",
+            "Доля местной массы не измеряет независимость. Подешевевший земной запуск помогает доставить оборудование и усиливает ценовую альтернативу местной воде. Сравниваются одинаковые место, состояние и надёжность."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "W27",
+      "ref": "W27/2",
+      "previous_map_ref": "W27/1",
+      "title": "Повторяющаяся коалиция продолжения и закрытие входа после успеха",
+      "status": "С/Г/Ц",
+      "chapter_scope": "11–12, 17–18",
+      "line_start": 238,
+      "line_end": 245,
+      "section_sha256": "4d7422f747c8dbae400023468236bda943f4b7612456d3404e4cd9a48a9151e0",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.5",
+          "line": 16,
+          "historical_ref": "W22/1",
+          "target_id": "W27",
+          "proposed_target_ref": "W27/1",
+          "operation": "rename-only",
+          "source_label": "W22/1, С/Г",
+          "source_cells": [
+            "Главы11–12,18: коалиция продолжения зависит от повторения разных платежей и решений. Успех может усилить доход и законно закрыть будущий вход.",
+            "Популярное делегирование может исправлять недостатки услуг без расширения соавторства. Открытость не объявляется неизбежной и не получает вечного вето основателя."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D14",
+      "ref": "D14/1",
+      "previous_map_ref": "D14/1",
+      "title": "Отдельный земной эксперимент о пользе и полномочиях",
+      "status": "С/Ц",
+      "chapter_scope": "14; отсылка 17",
+      "line_start": 246,
+      "line_end": 251,
+      "section_sha256": "41cc73b5ce6214ebf6da7fbb93309c09a70d103061fb83a05160360b4ad7e1aa",
+      "historical_sources": [
+        {
+          "source_id": "passport-1.3",
+          "line": 11,
+          "historical_ref": "D14/1",
+          "target_id": "D14",
+          "proposed_target_ref": "D14/1",
+          "operation": "preserve-or-explicitly-merge-version-lineage",
+          "source_label": "D14/1 — отдельный земной эксперимент",
+          "source_cells": [
+            "Допускается, что более сильная система сохранит предприятие, а раскрытие искажения исключено. Проверяется только достаточность полезного результата как основания полномочий.",
+            "С/Ц. Глава 14, затем смысловая отсылка 17. Это не факт аэропорта и не допущение безотказности всех машин. Водная экономика и режимы A/B/C не меняются. Если вред раскрытия вернуть, появится дополнительное последствие, но нормативный вопрос о поручении остаётся."
+          ]
+        }
+      ]
+    }
+  ],
+  "global_clauses_trace": [
+    {
+      "source_id": "passport-1.2",
+      "line": 9,
+      "text": "Вода производится из вещества неназванного астероида и доставляется оговорённого качества в орбитальный узел для использования вне Земли. Первоначальный покупатель — внешний оператор с финансируемой человеческой потребностью. Количество, окно, траектория, параметры оборудования и цены численно не назначены. Значение имеет пригодный продукт у получателя, не оценка вещества в недрах.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W01/1",
+          "line": 58
+        },
+        {
+          "ref": "W02/1",
+          "line": 64
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 11,
+      "text": "На этапе возможности сравниваются доставка с Земли, отдельно обоснованное лунное снабжение, астероидная цепь и отказ. Луна не объявлена обязательным транзитом. Качественная цепь включает подготовку и испытания, выведение/сборку, разведку, добычу/выделение, хранение, перевозку и приёмку. Энергия, масса, теплоотвод, потери, замена оборудования и цена капитала остаются расходами. Числа RF-100 не перенесены.",
+      "destinations": [
+        {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        },
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W03/2",
+          "line": 70
+        },
+        {
+          "ref": "W05/2",
+          "line": 82
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 13,
+      "text": "Исходный ИИ A1 уже способен исследовать неизвестное, изобретать и организовывать обучение; обязательной поломки или вечной человеческой исключительности нет. A2 в главе17 — дальнейшее педагогическое и организационное усиление, одинаково доступное сравниваемым режимам. Организация исследования имеет отдельную ось: человеческое конечное поручение, совместное согласование программ или условная обособленная машинная программа. Сила инструмента не определяет эту ось автоматически.",
+      "destinations": [
+        {
+          "section": "1. Как читать условия",
+          "line": 8
+        },
+        {
+          "ref": "W04/1",
+          "line": 76
+        },
+        {
+          "ref": "W11/1",
+          "line": 124
+        },
+        {
+          "ref": "W16/4",
+          "line": 160
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 15,
+      "text": "В основных ветвях оборудование, запасные части и существенные услуги поступают с Земли. Ни дистанционное управление, ни изготовление отдельных деталей не означают замкнутого хозяйства. Лишь отдельное предельное условие главы17 снимает необходимость продажи результата людям для продолжения цикла. Оно не объявлено датированным прогнозом.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W18/3",
+          "line": 174
+        },
+        {
+          "ref": "W26/2",
+          "line": 230
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 55,
+      "text": "После расширения предложения прибыль от редкости воды может ослабеть. Оплата готовности и использования инфраструктуры поддерживает другой результат, но не отменяет ремонт и риск недозагрузки. Поддержку развития нельзя навсегда считать долей прежней ренты. Коалиция заказчика, исследовательской программы, образовательной стороны и пользователей распределяет один расход по разным приобретаемым результатам. Бюджет, основанный на труде, испытывает давление лишь при явно принятой ветви сокращения зарплатного фонда; текущая статистика стран не введена.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W13/3",
+          "line": 136
+        },
+        {
+          "ref": "W14/1",
+          "line": 144
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.2",
+      "line": 57,
+      "text": "Машинная программа покупает конечное исследовательское применение за обеспеченные средства. Она может дать заказы человеческим операторам и коллективам; может вытеснить иной спрос на ещё не обещанную мощность. Самостоятельность конечной цели не делает всё хозяйство независимым от Земли. Только W18 проверяет отказ от необходимого человеческого конечного спроса. Человеческое соавторство в этой ветви имеет отдельную цену и общественное основание.",
+      "destinations": [
+        {
+          "ref": "W16/4",
+          "line": 160
+        },
+        {
+          "ref": "W17/1",
+          "line": 168
+        },
+        {
+          "ref": "W18/3",
+          "line": 174
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 45,
+      "text": "Первая ведомость: введённая пригодная мощность минус выбывшая. Она показывает прирост определённой части базы. Вторая: доступная энергия/услуга после потребления этой базой, потерь, резервов и обещанных поставок. Рост числа панелей при нулевом втором остатке не даёт новой внешней услуги. Доля местной массы не отвечает, какой импортный узел и через какое время остановит процесс.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        },
+        {
+          "ref": "W26/2",
+          "line": 230
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 47,
+      "text": "Денежный остаток не выводится из этих двух показателей. Внешние поступления, капитал или договорная поддержка оплачивают счета поставщиков; внутренняя передача не создаёт выручки. Натуральное обеспечение должно существовать и не учитываться дважды. В W18 лишь условно дано обеспечение внешних зависимостей без необходимого человеческого заказа.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W18/3",
+          "line": 174
+        },
+        {
+          "section": "6. R2D-NODE-1: ежегодное продолжение земного узла",
+          "line": 317
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 49,
+      "text": "Цена архитектуры включает начальный комплект и ввод, питание до запуска местного процесса, годный выпуск, срок службы и замены, монтаж, накопление/передачу/приём, ремонт, резерв, связь, теплоотвод и капитал. Нет универсального удешевления при удвоении серии. Разные даты ввода или бесплатный резерв не считаются преимуществом технологии. Вычислительная ветвь дополнительно зависит от нагрузки, связи, обновления и радиации; киловатт не измеряет знание. Согласованный неблагоприятный набор входов вправе закрыть ветвь.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W21/2",
+          "line": 194
+        },
+        {
+          "ref": "W24/2",
+          "line": 214
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 39,
+      "text": "Ветви не задают календарный мегаплан. Луна, орбита и астероид не стали бесплатно соединённой сетью. Полезность лунного производства не доказывает выгоду лунного транзита. Внешние зависимости сохраняются и при W18, если обеспечены без необходимой конечной человеческой продажи.",
+      "destinations": [
+        {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        },
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W03/2",
+          "line": 70
+        },
+        {
+          "ref": "W18/3",
+          "line": 174
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 59,
+      "text": "Принятый продукт и новые средства производства — технические результаты внутри первого результата книги, не четвёртый образовательный продукт. Развитие требует наблюдаемого нового выбора при сопоставимой помощи; продолжение — следующей работы, средств и полномочий. Техническая удача или закрытие ветви сами по себе не доказывают их. Поддержка LAB сохраняется по заранее принятым добровольным условиям, не как долг любого работодателя.",
+      "destinations": [
+        {
+          "section": "1. Как читать условия",
+          "line": 8
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 55,
+      "text": "Владелец установки несёт риск капитала и недозагрузки; пользователь — цену услуги, совместимости и собственного проекта. Ущерб не переносится на посторонних одной привлекательностью замысла. Плательщик может отказаться от нового цикла, исполнив старый. Альтернативная покупка/собственная инфраструктура сохраняются; их успех и доступность не назначены заранее.",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "section": "7. Новое назначение и границы продолжения",
+          "line": 354
+        },
+        {
+          "ref": "W12/3",
+          "line": 130
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 34,
+      "text": "Факт продукта, развитие человека и самостоятельное продолжение — три разных результата. Человек, команда, внешняя среда и общество — четыре масштаба их обоснования. Перенос с тем же ИИ, передача роли, внешний вход и долгосрочные коалиции проверяются разными материалами. Ограниченный пилот не доказывает общественный аттрактор.",
+      "destinations": [
+        {
+          "section": "1. Как читать условия",
+          "line": 8
+        },
+        {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 36,
+      "text": "Омега в18 добавляет вопрос о совместности при несходящихся конечных целях; взаимная выгода, ограничения и добровольное признание другой инициативы различаются. Философский источник Тейяра не превращается в научную неизбежность или доказательство сознания машин.",
+      "destinations": [
+        {
+          "section": "7. Новое назначение и границы продолжения",
+          "line": 354
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.3",
+      "line": 17,
+      "text": "Разделение полномочий может уменьшить затраты на согласования, но потребовать работы над совместимостью и оставить неразрешённые различия критериев. Численная экономия не назначается. Общие ограничения и ответственность сохраняются. Полная централизация, разделение областей и сохранение совместного решения сравниваются по предмету; единый победитель не объявлен.",
+      "destinations": [
+        {
+          "ref": "W19/2",
+          "line": 180
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.3",
+      "line": 19,
+      "text": "Контроль сведений в 14 меняет возможность проверить распределение потерь. Без достоверной опоры объяснение расчёта не даёт такой проверки. Предложение независимого доступа имеет организационную цену, но её размер из источника не известен. Речь не о трудовой норме конкретной юрисдикции и не о рекомендации руководителю скрывать данные.",
+      "destinations": [
+        {
+          "section": "7. Новое назначение и границы продолжения",
+          "line": 354
+        },
+        {
+          "ref": "D14/1",
+          "line": 246
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 27,
+      "text": "LEAP71, Blue Origin, Varda и аннотация Metzger — документальные опоры с пределами в сносках, не технологические параметры сценария. Экология18 — требование сравнить полные цепочки, а не сообщение об установленном выигрыше.",
+      "destinations": [
+        {
+          "section": "8. Фактические опоры и даты их проверки",
+          "line": 366
+        },
+        {
+          "ref": "W05/2",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.4",
+      "line": 65,
+      "text": "Физическая осуществимость ветви, прибыльность, реальные полномочия сторон, эффективность образования и экологический выигрыш не установлены. Проверка этой версии — согласованность аргумента и границ. [Независимый отзыв](independent-review.md) связывает приёмку с точными хэшами; [источниковая проверка](sources-review.md) имеет отдельный результат. Публикация и реальный пилот не выполняются.",
+      "destinations": [
+        {
+          "section": "Вводная граница статуса",
+          "line": 1
+        },
+        {
+          "section": "8. Фактические опоры и даты их проверки",
+          "line": 366
+        }
+      ]
+    },
+    {
+      "source_id": "passport-1.5",
+      "line": 30,
+      "text": "Эти две сметы не складываются, не являются космическими затратами и не описывают действующий договор. Разные отказы различаются: нет средств; есть средства, но выбирают другое; нарушено уже принятое обещание.",
+      "destinations": [
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        },
+        {
+          "section": "6. R2D-NODE-1: ежегодное продолжение земного узла",
+          "line": 317
+        },
+        {
+          "section": "7. Новое назначение и границы продолжения",
+          "line": 354
+        }
+      ]
+    }
+  ],
+  "five_stages": {
+    "content": [
+      {
+        "stage": "I",
+        "meaning": "Возможность",
+        "preserve": "Сравнение Земли, отдельно обоснованной Луны, астероидной цепи и отказа; различие образца, поставки и средств будущих производств."
+      },
+      {
+        "stage": "II",
+        "meaning": "Отдельно допущенный технический успех",
+        "preserve": "Принятая оплаченная вода после сохранённой возможности отказа; не вывод обучения или внешнего входа."
+      },
+      {
+        "stage": "III",
+        "meaning": "Альтернативная организация",
+        "preserve": "Земные режимы LAB сравниваются при сопоставимых условиях; космическая кооперация и изготовить/купить/услуга не доказывают педагогику."
+      },
+      {
+        "stage": "IV",
+        "meaning": "Право продолжить",
+        "preserve": "Цепь чужих средств, капитал, перенос роли/материалов и внешний вход; возможная отдельная энергетическая проба не оплачена LAB."
+      },
+      {
+        "stage": "V",
+        "meaning": "Более сильный интеллект",
+        "preserve": "A2, самостоятельное назначение программы, частичный чистый прирост W20 и предельное W18 — отдельные предпосылки, не шестой этап."
+      }
+    ],
+    "destination": {
+      "section": "2. Пять смысловых этапов",
+      "line": 18
+    },
+    "all_historical_rows": [
+      {
+        "source_id": "passport-1.2",
+        "line": 21,
+        "text": "| I. Возможность | 1; предварительное сравнение2 | Земля даёт средства и назначение. Доступный проект ещё не имеет материальной цепи. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.2",
+        "line": 22,
+        "text": "| II. Допущенный технический успех | 5–6 | Поставка принята, экономика выбранной цепи позволяет продолжение. Из этого не выводятся обучение или доступ нового коллектива. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.2",
+        "line": 23,
+        "text": "| III. Альтернативная организация | 7–8 как отдельная земная проверка; 10 как космическая институциональная ветвь | Сравнение свободной и организованной учёбы не подменяется успехом инфраструктурной кооперации. В космосе обсуждается совместное использование дорогих звеньев. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.2",
+        "line": 24,
+        "text": "| IV. Право продолжить | 9 на Земле; 10–12 в космосе | Отдельная команда собирает цепь среди чужих средств; условно появляются независимые поставщики, меняют цену и основание будущих вложений. Правила могут закрыть вход следующему. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.2",
+        "line": 25,
+        "text": "| V. Более сильный интеллект | 17–18 | A2 может заменить методику. Отдельно машинная программа становится конечным заказчиком, затем предельное условие снимает необходимость человеческой продажи. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.4",
+        "line": 33,
+        "text": "| I. Возможность | 1–2 | Образец, поставка и средства новых производств задают разные первые шаги. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.4",
+        "line": 34,
+        "text": "| II. Допущенный успех | 5–6 | Успех воды не доказывает развития. LEAP71 — отдельный случай измерение → изменение модели. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.4",
+        "line": 35,
+        "text": "| III. Альтернативная организация | Земные7–8; космическая10 | Изготовить/купить/кооперироваться; промышленная модель не подтверждает учебный режим. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.4",
+        "line": 36,
+        "text": "| IV. Право продолжить | 9–12; возможная проба16 | Приобретаемая цепь услуг, начальный капитал, загрузка и перенос раннего результата. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      },
+      {
+        "source_id": "passport-1.4",
+        "line": 37,
+        "text": "| V. Более сильный интеллект | 17–18 | A2, конечная программа, частичный чистый прирост и W18 — отдельные условия. |",
+        "destination": {
+          "section": "2. Пять смысловых этапов",
+          "line": 18
+        }
+      }
+    ]
+  },
+  "accepted_deltas_integrated": [
+    {
+      "chapter": 5,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-05.json",
+      "sha256": "32bb23db1d4dea7e8d02bf71bbb58e8f7fb780b33af3cf424a9ea9d9de0ec0f0",
+      "accepted_chapter_sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+      "destinations": [
+        {
+          "ref": "W09/4",
+          "line": 110
+        }
+      ],
+      "source_content": {
+        "edition": "9.0",
+        "text": "chapters/chapter-05.md",
+        "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9",
+        "status": "accepted-text-condition; integrate-and-review-in-unified-passport1.6",
+        "parent_condition": "W09/3",
+        "condition": "Для нового получателя исследуется режим выдачи воды прежнего качества меньшими порциями по его расписанию. Сохраняются общий объём за выбранный период и прежний узел приёмки. Это следующая продукция, не распоряжение уже переданной партией.",
+        "not_assumed": [
+          "численные размеры порций и сроки",
+          "готовность нового режима/оборудования",
+          "прежняя цена",
+          "новый договор",
+          "успех освоения",
+          "следующая оплата"
+        ],
+        "alternatives": [
+          "получатель принимает обычную партию и сам обеспечивает разбивку",
+          "отдельная согласованная услуга хранения и выдачи",
+          "сохранение прежней процедуры при достаточности",
+          "отказ от нового заказа при неподтверждённом или неоплаченном продолжении"
+        ],
+        "comparability": "Полная цена дополнительных действий учитывается независимо от исполнителя; готовность альтернатив исследуется.",
+        "continuity": "Старая оплаченная поставка остаётся принятой. Нет обязательной ошибкиИИ. Главе6 согласовать понятийный пример; коалиции/мощность/расширение относятся к10."
+      }
+    },
+    {
+      "chapter": 6,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-06.json",
+      "sha256": "5b8b1d35c745ef6e6f915e5dd59fdd26c666d13eec802055f65c732bf9a04c0c",
+      "accepted_chapter_sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+      "destinations": [
+        {
+          "ref": "W09/4",
+          "line": 110
+        },
+        {
+          "ref": "W25/2",
+          "line": 222
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-06.md",
+        "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f",
+        "depends_on": "research/scenario-delta-chapter-05.json",
+        "content": "Суммарный объём за выбранный период недостаточен для вывода о выполнимости каждой выдачи. Для сравнения расписаний нужны начальное доступное количество, поступления, выдачи, потери и возможность передачи.",
+        "unchanged": [
+          "quality",
+          "total volume over same chosen period",
+          "receiving node"
+        ],
+        "hypotheses_only": [
+          "late arrival before required issue is a considered variant, not observed deficit",
+          "initial stock not assumed",
+          "holding/storage requires actually available water beforehand, equipment and agreed service",
+          "alternative may be recipient arrangement, changed schedule or refusal; no selected success"
+        ],
+        "ownership": "Общий запас узла не равен ресурсу команды. Следующая продукция не присваивает прежнюю уже переданную партию.",
+        "passport_integration": "УточнениеW09 вместе с принятой5 включить в1.6; не вводить отдельное осуществлённое событие или новые численные параметры."
+      }
+    },
+    {
+      "chapter": 8,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-08.json",
+      "sha256": "3a0de7bf8ee14438da5cd178cded5d47795ef7c094506aedd4b684f9e645719c",
+      "accepted_chapter_sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+      "destinations": [
+        {
+          "ref": "W08/3",
+          "line": 100
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-08.md",
+        "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1",
+        "status": "Editorial content for unified passport, not a new trial",
+        "unchanged": "LAB teams, cycles, hours and budget; first-cycle file instrument remains valid for its task.",
+        "clarifications": [
+          "New use compares two series; calibration change does not itself establish incompatibility or a valid conversion.",
+          "Opposite-direction probe conditionally supplies sufficient calibration description/check for a chosen precision; no numerical correction invented.",
+          "Same model label is insufficient when actual shared memory, reference or template changes; this is a hypothetical alternative, not an intervention already conducted.",
+          "Common assessment questions may themselves be support; the comparison concerns additional support above it.",
+          "Cost of assessment is inside LAB; refusal of additional observation beyond agreement is neither inability nor evidence for new delegation."
+        ]
+      }
+    },
+    {
+      "chapter": 9,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-09.json",
+      "sha256": "f181624b69a27212cf5f24777b6de6b973b5a97d2bb5ebe04dea5f4ed5fa5a5e",
+      "accepted_chapter_sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+      "destinations": [
+        {
+          "ref": "W08/3",
+          "line": 100
+        },
+        {
+          "ref": "W10/4",
+          "line": 116
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-09.md",
+        "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+        "status": "Editorial content for unified passport, not a new trial",
+        "unchanged": "Same second LAB cycle and budget; no third team or funded outside test.",
+        "clarifications": [
+          "New payer and new product demand remain conditional; service/product/research support are distinct.",
+          "Retained expert service and a leader are compatible with delegated decisions within agreed authority.",
+          "Recognized part of a transferable report need not be repurchased; a new task/risk may justify a new check.",
+          "Potential fabrication/testing means for unanticipated space projects are restored from7.2 without asserting material readiness or entitlement."
+        ]
+      }
+    },
+    {
+      "chapter": 10,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-10.json",
+      "sha256": "0cc7d431f7056171c5b70b51b99033090e967bcafd25ef963160636e6810cc24",
+      "accepted_chapter_sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+      "destinations": [
+        {
+          "ref": "W13/3",
+          "line": 136
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        },
+        {
+          "ref": "W21/2",
+          "line": 194
+        },
+        {
+          "ref": "W25/2",
+          "line": 222
+        },
+        {
+          "ref": "W26/2",
+          "line": 230
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-10.md",
+        "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+        "status": "Accepted editorial scenario content; not a trial or measured engineering result",
+        "unchanged": [
+          "First accepted water remains accepted; LAB/NODE budgets untouched.",
+          "Lunar fabrication is a separate possibility, not assumed lunar success or mandatory transit; later W20/2 and W18 remain distinct."
+        ],
+        "clarifications": [
+          "Subsequent-water loss before the receiving node is a new conditional variant with identical recipient, useful accepted quantity/quality, location and delivery schedule; no loss rate or winning process assumed.",
+          "Reduced loss may reduce required extraction while receiving batches/operations stay unchanged; transport cost need not scale with mass at fixed trips.",
+          "Reduction in occupied capacity requires its own operational/time change; old stock and necessary reserves are not consumed as a hidden saving.",
+          "Modification requires equipment, energy, heat removal, validation and repair; prior process may win. Any freed capacity remains subject to owners and existing commitments.",
+          "Module switching needs preparation/measurement/recovery time; alternative architectures include this cost.",
+          "Transport, instrument and receiving windows must form actual compatible commitments; AI may participate within delegated authority, coordination can be purchased voluntarily.",
+          "Restored7.2 lunar comparison: imported finished solar systems vs local fabrication means, same useful power/place/availability/horizon, own consumption and replacement precede usable expansion; full energy service and lunar production site differ from a transport stop."
+        ]
+      }
+    },
+    {
+      "chapter": 11,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-11.json",
+      "sha256": "1eeafaf4f1a88e64e3ae4da1c1eff53e29291cd5befe07d6f775d192144e53dc",
+      "accepted_chapter_sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W13/3",
+          "line": 136
+        },
+        {
+          "ref": "W14/1",
+          "line": 144
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        },
+        {
+          "ref": "W23/1",
+          "line": 208
+        },
+        {
+          "section": "6. R2D-NODE-1: ежегодное продолжение земного узла",
+          "line": 317
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-11.md",
+        "sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+        "status": "Accepted editorial content for unified passport; no actual project",
+        "unchanged": "NODE asset, hours, budgets, five-year repetition, legal refusal and low-load case unchanged; no LAB or space-budget transfer",
+        "clarifications": [
+          "More water providers are an assumed condition, not a measured school outcome.",
+          "Lunar factory requires upfront funding and repeat demand; own usable equipment is neither outside revenue nor payment for critical imports.",
+          "Varda W1 is a documented reported production/reentry; paid order, profit and transfer to mining are not established. New transfer requires a concrete item and separate agreement.",
+          "One trial can serve several purposes without duplicate payment, but technical acceptance, research answer and human development retain distinct grounds.",
+          "Available funds before promised work are an explicit assumption, not inferred from positive annual balance. Multi-year agreement is an alternative, not an added model guarantee.",
+          "Replacement reserve restores the service asset, not arbitrary future equipment. Same equipment may serve another worthwhile task.",
+          "Five renewals require five renewed decisions about agreed purposes; an honest negative research result may fulfill its own funded purpose."
+        ],
+        "source_limit": "Kapitsa restart estimate remains historical author estimate, not NODE timing; primary source dates reflect actual source reading7Sep2026."
+      }
+    },
+    {
+      "chapter": 12,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter-12.json",
+      "sha256": "38f5e6757642bcdec647ccc34050b2640ffc502d4e307d5fdf905d67ec0f4b15",
+      "accepted_chapter_sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+      "destinations": [
+        {
+          "ref": "W15/2",
+          "line": 150
+        },
+        {
+          "ref": "W19/2",
+          "line": 180
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-12.md",
+        "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+        "status": "Accepted editorial content for unified passport, no real operating procedure",
+        "clarifications": [
+          "Automatic execution of existing selection is an explicit conditional variant. StrongAI may detect, propose and implement a rule within delegated authority; no independent machine final program is introduced. Agreed revision must reach executable conditions for defined futureperiod and be checked; implementation and review cost resources.",
+          "A revision proposal concerns future uncommitted capacity and cannot take an already promised window. Agreed and paid opportunity for timely review has opportunitycost and is not simultaneously sold; no new numerical reserve or appropriation from NODE/LAB.",
+          "Ordinary dispute about future selection, checking correct application and responding to direct danger are different matters with respective authority. No perpetual automatic workstop; a danger signal is not dismissed solely because claimant lost before.",
+          "Past selection can change equipment and actual price of new entry. Alternative priorcheck, next equipment purchase and retrofit are distinct; actualcost is not fictitious and retrofit maylose.",
+          "Schoolsuccess is explicitly assumed; victory of one entrant is not fulfillment of the promised program to all. Continued remedy is bounded by acceptedperiod and grounds, no foreverfreeaccess."
+        ],
+        "numbers": "No new numerical capacities, prices, time limits, or actual legal contracts."
+      }
+    },
+    {
+      "chapter": 16,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter16.json",
+      "sha256": "b893b175a7830dfe3e8ab9796a85fe5ac4b7a4bab10b470590c8ca44105deb18",
+      "accepted_chapter_sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+      "destinations": [
+        {
+          "ref": "W08/3",
+          "line": 100
+        },
+        {
+          "ref": "W24/2",
+          "line": 214
+        },
+        {
+          "section": "5. R2D-LAB-1: ограниченный земной опыт",
+          "line": 252
+        }
+      ],
+      "source_content": {
+        "chapter": "chapters/chapter-16.md",
+        "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+        "prepared_by": "mechanism_recovery",
+        "prepared_at": "2026-09-07",
+        "status": "accepted editorial content delta from accepted chapter; not accepted passport1.6 or conducted trial",
+        "existing_references": [
+          "R2D-LAB-1",
+          "W24"
+        ],
+        "unchanged": [
+          "LAB teams, cycles, hours, support, budget, exit reserve and hourly-price sensitivity remain unchanged; protected participant time is inside the paid hours.",
+          "Both second cycles are funded before the start even with zero first-product revenue; participation remains voluntary and continuation requires a meaningful safe next step.",
+          "LAB, NODE and the separate energy probe have separate resources. No new numerical price, capacity, duration, flight result or source of funds is introduced."
+        ],
+        "lab_clarifications": [
+          "A real laboratory need does not itself justify building another instrument if an available product or strong AI already meets it. A changed research subject, activity or help requires reconsidering the budget and comparison; the existing amount is not a universal price.",
+          "A ready AI proposal is compatible with human learning. Development remains unestablished when no change in choosing, checking and applying the actually received help is visible; model version alone is insufficient for comparability.",
+          "The laboratory payment buys research with a possible negative conclusion, not a guaranteed software product. Absence of the desired product does not itself mean that a promised product was withheld.",
+          "Product fitness, observed development and use of the remaining budget require different grounds. One positive or negative result does not decide the other questions; renewed willingness to fund is not evidence absent from observation.",
+          "Independent assessment informs the authorized next-step decision without itself appropriating control of funds. A changed promised result outside prior terms needs agreement from those paying for and accepting it.",
+          "When work stops, only unspent funds not bound by existing obligations are released. A failed first product does not withdraw the already funded second-cycle opportunity; available funds do not compel a pointless or unsafe continuation.",
+          "A limited pilot may rely on data, equipment, people and permissions supplied by its host on agreed terms. Its price does not establish the cost of creating the whole host environment or the availability of the same conditions elsewhere."
+        ],
+        "w24_restored_content": {
+          "scope": "An optional separate research probe reproduces the comparison of delivered finished solar systems and equipment for local fabrication, then identifies an unknown that could change the next measurement or investment decision.",
+          "comparison": "Same useful energy service at the same location, required timing and horizon. Power and energy are assessed after the system own costs, with commissioning time, maintenance and replacement; panel output alone is not the promised service.",
+          "sensitivity": "Consider justified ranges of service life and usable-product yield and relevant combinations of conditions. No numerical ranges or winning architecture are assigned. Closure applies only within the justified examined range; a new material condition may reopen the question.",
+          "recipient_and_continuation": "The recipient needs reproducible assumptions, rejected options and the unknown that matters for a next decision. A different team must be able to reproduce the basis and continue from it. Useful calculation alone does not establish author development.",
+          "funding_and_stage": "Calculation, ground testing and flight demonstration have different subjects and prices. No customer, price or start has been accepted for this probe. The earth-pilot budget, including exit reserve, does not pay for it."
+        },
+        "integration_limits": [
+          "Use existing references only; assign no new assumption ID in this draft.",
+          "Link the already accepted chapter 7/8 comparability and optional-help clarifications without claiming a new experiment.",
+          "W24 is restored by function from actual 7.2 together with the four evidential scales retained from basis 8; no extra stage or funded external team is added.",
+          "The shared map and passport are untouched. Integrator review and later unified passport acceptance remain separate actions."
+        ],
+        "integrator": "root",
+        "integrator_reviewed_at": "2026-09-07"
+      }
+    },
+    {
+      "chapter": 17,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter17.json",
+      "sha256": "869915968986a968622405660fe2480648479e8299ef54d82b24d9e57ca68bbe",
+      "accepted_chapter_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+      "destinations": [
+        {
+          "ref": "W16/4",
+          "line": 160
+        },
+        {
+          "ref": "W18/3",
+          "line": 174
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        },
+        {
+          "ref": "W26/2",
+          "line": 230
+        },
+        {
+          "ref": "W27/2",
+          "line": 238
+        }
+      ],
+      "source_content": {
+        "status": "accepted editorial content delta from accepted chapter; not accepted passport1.6 or conducted trial",
+        "prepared_by": "mechanism_recovery",
+        "prepared_at": "2026-09-07",
+        "chapter": 17,
+        "text_path": "chapters/chapter-17.md",
+        "text_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+        "review_path": "reviews/chapter-17-mechanism-review.md",
+        "scope": "Содержательные предложения по окончательно проверенной главе 17. Без новых ID, общей карты и принятия паспорта 1.6.",
+        "existing_map_sha256": "7d04eaa08aec5b2d6d7a8b3946f6ef9f1468aa639de778f60c7a0f6078dde614",
+        "changes": [
+          {
+            "existing_refs": [
+              "W20"
+            ],
+            "text_lines": [
+              41,
+              43,
+              45,
+              47,
+              51
+            ],
+            "content": "В поздней ветви 17 отдельно допущены пригодные и введённые лунные энергетические установки: после собственных нужд, обслуживания и замены изношенного остаются доступная мощность и энергия на выбранном горизонте. Добыча и переработка обеспечивают часть следующих средств. Принятый выпуск, средства для следующей деятельности и доступ нового коллектива различаются; владелец может направить прибавку на свой следующий вопрос в пределах обязательств.",
+            "epistemic_status": "С — отдельный допущенный успех W20/2; П — различение результатов и доступа.",
+            "limits": "Не выводится из лабораторного сообщения, расчёта главы 16 или Metzger. Нет полного воспроизводства всех средств, снятия внешних зависимостей, переноса бюджета земных моделей или обратного переноса успеха в раннюю возможность."
+          },
+          {
+            "existing_refs": [
+              "W26",
+              "W20"
+            ],
+            "text_lines": [
+              43,
+              45,
+              49,
+              53
+            ],
+            "content": "Изготовление части конструкций из местного материала может изменить цену перевозки и частоту земных поставок. Уменьшение импортной доли совместимо с ростом общего объёма требуемых внешних компонентов при расширении хозяйства. Снижение массы импорта не определяет платёж: существенны состав покупок и условия. Пригодная местная мощность не погашает сама собой внешний счёт.",
+            "epistemic_status": "С/П — условное сопоставление доли, масштаба и платежа без новых чисел.",
+            "limits": "Не обязательный рост импорта, не инженерная закономерность и не новая цена. Земные поставщики, критические компоненты, измерение, ремонт, совместная инфраструктура и более дешёвая земная альтернатива сохраняются."
+          },
+          {
+            "existing_refs": [
+              "W18"
+            ],
+            "text_lines": [
+              55,
+              57,
+              59,
+              61,
+              63
+            ],
+            "content": "Отдельно обеспечен следующий исследовательский цикл после возмещения износа и потерь, оплаты энергии, ремонта и остающихся внешних поставок, а также исполнения принятых обязательств — без необходимой продажи результата людям. Если оплата остаточного импорта требует такой выручки, условие не достигнуто. Следующее продолжение требует вновь обеспечить те же условия. Отказ от покупки может изменить выгодность операций, но по введённому условию сам по себе не лишает хозяйство средств на обеспеченный следующий цикл.",
+            "epistemic_status": "С — отдельная предельная ветвь; условный вывод об одном рычаге влияния.",
+            "limits": "W20/2 не влечёт W18. Не бесконечное самофинансирование, не отсутствие всех поставщиков, не создание ресурсов внутренними счетами. Собственность, согласованные права управления, общественные решения и внешние последствия сохраняются."
+          },
+          {
+            "existing_refs": [
+              "W16"
+            ],
+            "text_lines": [
+              17,
+              19,
+              21,
+              23,
+              25,
+              37
+            ],
+            "content": "Локально допускается, что усиленный ИИ верно объясняет существенные последствия доступных вариантов. Несколько исследований могут оставаться разумными и допустимыми; спор о предпочтении и альтернативной цене возможен при верном расчёте и соблюдённых полномочиях.",
+            "epistemic_status": "С — локальное усиление помощника; Ц/П — различение прогноза, предпочтения и полномочия.",
+            "limits": "Не универсальное всеведение и не результат Лема или существующего ИИ. Устойчивость цели, сознание, юридический статус модели и право распоряжения ресурсами не отождествляются. Общая польза не расширяет полномочия."
+          },
+          {
+            "existing_refs": [
+              "W16",
+              "W27"
+            ],
+            "text_lines": [
+              63,
+              65,
+              67,
+              69,
+              71,
+              73,
+              75,
+              77
+            ],
+            "content": "Добровольная поддержка знания без личного участия в каждом решении может выражать человеческую инициативу; подготовка новых коллективов сопоставляется с другим ценным исследованием. Три общественных устройства сохраняются. Автономия машинной программы и открытость входа образуют разные вопросы: открытое объединение может делегировать широко, закрытый круг — сохранять частые личные разрешения владельцев.",
+            "epistemic_status": "Ц/П и условные сопоставления общественных устройств.",
+            "limits": "Редкие указания людей не означают закрытого входа; частые указания не делают вход широким. Нет автоматической доли, чужого капитала, обязательного бесплатного входа или вечной обязанности финансировать новых участников; оплаченные возможности и принятые обязательства сохраняются."
+          }
+        ],
+        "preserved": [
+          {
+            "existing_refs": [
+              "W17"
+            ],
+            "content": "Водный заказ конечен: заполнение и оговорённое пополнение внутреннего теплового контура. Жидкость не заменяет излучающее оборудование; выбор воды, режим, совместимость и экономика остаются отдельными условиями. Новый заказ не отменяет прежний."
+          },
+          {
+            "existing_refs": [
+              "W16",
+              "W25",
+              "W26",
+              "W27"
+            ],
+            "content": "Конечный капитал, плательщики и остаток после обязательств; законный выбор свободной мощности; разные ограничения материальных переходов; внешние зависимости; добровольное следующее финансирование; различие права, влияния и экономической способности сохраняются."
+          },
+          {
+            "existing_refs": [
+              "W24"
+            ],
+            "content": "Глава 16 остаётся возможной отдельной расчётной пробой с собственным получателем и непринятыми заказчиком, ценой и началом. Её расчёт не превращён в лётный результат или источник денег для успеха 17."
+          }
+        ],
+        "source_boundary": "Первичные NASA/JPL/NRC/ISS и abstract/библиография Metzger проверены в подготовке 7 сентября 2026 года в указанном там объёме. Полная модель Metzger не прочитана; источниковая проверка расширенного Лема не принадлежит этому предметному рецензенту. C45/C16 — прочитанные исходные TXT, без аудиопроверки и без независимого подтверждения технических прогнозов.",
+        "validation": {
+          "new_ids_assigned": false,
+          "global_map_modified": false,
+          "passport_1_6_accepted": false,
+          "manuscript_modified": false,
+          "final_exact_four_replacements_verified": true,
+          "unchanged_notes_verified": true
+        },
+        "lineage": {
+          "initial_text_sha256": "7ffaaa4b1c4205ed7a343ee8458dd48ff56d91ef50840b9f5316ff5b1daef238",
+          "initial_archive": "reviews/revisions/chapter-17-7ffaaa4b.md",
+          "final_text_sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c",
+          "final_review_scope": "Полный четырёхточечный diff и целые изменённые абзацы с соседями; точное байтовое тождество остального, включая примечания. Не новое полное чтение."
+        },
+        "integrator": "root",
+        "integrator_reviewed_at": "2026-09-07"
+      }
+    },
+    {
+      "chapter": 18,
+      "path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/scenario-delta-chapter18.json",
+      "sha256": "14e82167a5e7967ee12efa78dafd2b1770185f7358db059b31e2bbcedf96a300",
+      "accepted_chapter_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+      "destinations": [
+        {
+          "section": "3. Полный путь продукта, услуги и средств",
+          "line": 30
+        },
+        {
+          "ref": "W03/2",
+          "line": 70
+        },
+        {
+          "ref": "W05/2",
+          "line": 82
+        },
+        {
+          "ref": "W10/4",
+          "line": 116
+        },
+        {
+          "ref": "W12/3",
+          "line": 130
+        },
+        {
+          "ref": "W16/4",
+          "line": 160
+        },
+        {
+          "ref": "W20/3",
+          "line": 186
+        },
+        {
+          "ref": "W21/2",
+          "line": 194
+        },
+        {
+          "ref": "W24/2",
+          "line": 214
+        },
+        {
+          "ref": "W26/2",
+          "line": 230
+        },
+        {
+          "ref": "W27/2",
+          "line": 238
+        },
+        {
+          "section": "7. Новое назначение и границы продолжения",
+          "line": 354
+        }
+      ],
+      "source_content": {
+        "status": "accepted-content-for-passport-integration-not-accepted-passport",
+        "prepared_by": "mechanism_recovery",
+        "prepared_at": "2026-09-07",
+        "chapter": 18,
+        "text_path": "chapters/chapter-18.md",
+        "text_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+        "review_path": "reviews/chapter-18-mechanism-review.md",
+        "scope": "Содержательные уточнения проверенного initial главы 18. Без новых ID, изменения общей карты и принятия приложения Д 1.6.",
+        "existing_map_sha256": "7d04eaa08aec5b2d6d7a8b3946f6ef9f1468aa639de778f60c7a0f6078dde614",
+        "changes": [
+          {
+            "existing_refs": [
+              "W20"
+            ],
+            "text_lines": [
+              17
+            ],
+            "content": "Допущенная в 17 пригодная прибавка части лунной энергетической базы после собственных нужд, обслуживания и замен рассматривается как наследуемый предмет другого назначения. Те, кто вправе распорядиться им, могут продолжить расширение, поддержать иное исследование или изменить назначение части базы. Новое использование требует своих средств и проверки.",
+            "epistemic_status": "С/П — следствие ранее отдельно допущенного W20/2 для наследования и пересмотра.",
+            "limits": "Нет нового физического успеха, полного замыкания производства, снятия внешних зависимостей или права всякого желающего на прибавку. Отдельность W18 и его повторно обеспечиваемого следующего цикла сохранена."
+          },
+          {
+            "existing_refs": [
+              "W20",
+              "W21",
+              "W24",
+              "W26"
+            ],
+            "text_lines": [
+              19,
+              21
+            ],
+            "content": "Преемники сравнивают космическое продолжение с земным способом получить ту же полезную услугу. Сопоставляется вся выбранная цепь: исходное оборудование, доставка, ввод, собственные затраты, обслуживание, замены, отходы и последствия использования. Возвращение продукта на Землю учитывается лишь там, где оно входит в выбранное дело. Перенос отдельной операции не доказывает экологического выигрыша всей цепи; прекращение более дорогого или причиняющего больший существенный ущерб пути может быть разумным использованием наследства.",
+            "epistemic_status": "С/П — условное сопоставление без назначенного результата и новых чисел.",
+            "limits": "Не новый выигравший земной или космический проект. Сохраняются место, качество, доступность и горизонт сопоставимой услуги. Нет количественного экологического эффекта, лётного результата или переноса средств земного опыта."
+          },
+          {
+            "existing_refs": [
+              "W17",
+              "W20",
+              "W21",
+              "W23",
+              "W26"
+            ],
+            "text_lines": [
+              19
+            ],
+            "content": "Лунная база, добыча астероидной воды и орбитальный узел не образуют готовую транспортную сеть по факту совместного упоминания. Каждая необходимая связь требует своей цены и ограничений.",
+            "epistemic_status": "П — сохранение раздельности ветвей и условий их возможной связи.",
+            "limits": "Не назначаются обязательный лунный транзит, новые маршруты и мощности, бесплатные перевозки, новые поставщики или плательщики. Водный заказ и отдельная орбитальная услуга не меняют своей функции."
+          },
+          {
+            "existing_refs": [
+              "W16",
+              "W24",
+              "W27"
+            ],
+            "text_lines": [
+              47,
+              49,
+              51,
+              53,
+              55,
+              57,
+              59
+            ],
+            "content": "Перенос оснований прежних решений позволяет отличить сохраняемую работающую опору от средства оставленной цели. Прошлая затрата объясняет наследство, но сама не требует новой траты. Сохраняются стоимость работающих средств для дальнейшего использования, владелец, действующие обязательства и цена изменения назначения. Сильный ИИ может правдиво восстановить рассуждение и предложить альтернативу, не выбирая новую цель за уполномоченных участников. Оплаченную пробу и выход исполняют; новое продление остаётся новым решением.",
+            "epistemic_status": "Ц/П — различение наследования оснований, прошлых вложений, действующих обязательств и будущих расходов.",
+            "limits": "Не отмена собственности, договора или цены завершения; не автоматическое право нового участника на чужой ресурс. Архив не заменяет оборудование; внешний поставщик и средства не объявлены найденными. Если после обязательств финансирования и доступного поставщика нет, путь закрывается."
+          },
+          {
+            "existing_refs": [
+              "W27"
+            ],
+            "text_lines": [
+              39,
+              41
+            ],
+            "content": "Следующий участник может уже жить рядом: прийти из другой области, вернуться после перерыва или не иметь унаследованных связей. Открытость проверяется осуществимым входом человека вне первоначального круга, не его возрастом или предполагаемым недостатком способностей.",
+            "epistemic_status": "Ц/П — уточнение адресата повторной возможности входа.",
+            "limits": "Не автоматическая доля, должность, бесплатная проба или бессрочная обязанность владельцев. Сохраняются основания доступа, проверка и добровольное решение о финансировании."
+          }
+        ],
+        "preserved": [
+          "Компетентность, законные интересы и собственность успешных прежних владельцев; возможность отказать новому заявителю; различие ресурсов, дохода, полномочий и достоинства.",
+          "Три условных общественных устройства, разные добровольные решения коалиции продолжения и отсутствие ещё не полученной выручки.",
+          "Право закончить новое финансирование после исполнения обязательств; действительный предел закрытия при отсутствии средств, поставщика и общественной поддержки; отдельное публичное основание обязательного финансирования.",
+          "Раздельность LAB, NODE и космических ветвей. Никакие численные параметры, капитальные затраты или найденные контрагенты не добавлены.",
+          "W18 не вытекает из W20/2; продолжение следующего цикла вновь требует обеспечения его условий. Машинная программа не получает автоматически сознания или человеческого правового статуса.",
+          "Омега — философский вопрос о совместности разных инициатив, не доказанная сходимость целей или гарантия взаимного финансирования."
+        ],
+        "source_boundary": "Новых эмпирических результатов в добавленных абзацах нет. Точные космические основания и прежние дельты проверены в указанных объёмах в подготовках 16–18. Проверка текстового слоя Тойнби и визуальная проверка Тейяра, обозначенные в примечаниях главы, не являются личным чтением этого предметного рецензента.",
+        "validation": {
+          "full_chapter_read_before_other_reviews": true,
+          "full_normalized_diff_read": true,
+          "all_base8_body_blocks_preserved": true,
+          "new_ids_assigned": false,
+          "global_map_modified": false,
+          "passport_1_6_accepted": false,
+          "manuscript_modified": false
+        },
+        "lineage": {
+          "initial_text_sha256": "089dd210f245e36366f3abffc0eedf3c69ce9815a9ccc0210066d975473c85e4",
+          "initial_archive": "reviews/revisions/chapter-18-089dd210.md",
+          "final_text_sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d",
+          "final_review_scope": "Полный одноточечный diff и целый абзац 49 с соседними 47 и 51; байтовое тождество прочего и примечаний. Новое полное чтение не заявляется."
+        },
+        "integrator": "root",
+        "integrator_review": "Full original content read; final SHA and lineage updated by reviewer after only phrase change; proposal accepted for integration, not a passport acceptance."
+      }
+    }
+  ],
+  "separate_models": {
+    "R2D-LAB-1": {
+      "destination": {
+        "section": "5. R2D-LAB-1: ограниченный земной опыт",
+        "line": 252
+      },
+      "preserved_map_numbers": {
+        "teams": 2,
+        "participants_per_team": 6,
+        "cycles_per_team": 2,
+        "weeks_per_cycle": 6,
+        "planned_hours_per_week": 20,
+        "hours_per_participant_cycle": 120,
+        "protected_hours_within_participant_cycle_max": 24,
+        "budget_rub_per_team_cycle": 1200000,
+        "total_team_cycles": 4,
+        "cycles_total_rub": 4800000,
+        "separate_transfer_exit_reserve_rub": 200000,
+        "total_limit_rub": 5000000,
+        "second_cycle_both_teams_funding_rub": 2400000,
+        "participant_support_rub_per_cycle": 120000,
+        "base_hourly_rate_rub": 1000,
+        "sensitivity_hourly_rate_rub": 1500,
+        "sensitivity_total_limit_rub": 6440000
+      },
+      "source_full_model": "right-to-decide-site/manuscript/2026-09-06-critic-revision/model-education-economy.md",
+      "source_sha256": "15de4a4b94bd5610c9b836bd59bb36d1a3e2aa0b589384448149404e1db6945e",
+      "restored_full_details": [
+        "Все шесть равных статей по 1,2 млн за командный цикл",
+        "Условные источники 2+2+1 млн до начала, исследование без гарантированного инструмента",
+        "12 часов общих проб, до 24 внутри 120, остаток 84 лишь при всех 24",
+        "70 часов помощи по 2 тысячи — вариант внутри 140 тысяч",
+        "60 учебных файлов, 20 критических, до 2 ложных тревог среди 40; не отраслевой норматив",
+        "Права на данные/передачу, исходный знаменатель и две независимые команды",
+        "Удвоение цены вычислений +240 тысяч; рост поддержки +1,44 млн до 6,44 млн"
+      ],
+      "accepted_priority_over_old_model": [
+        "Готовая верная помощь совместима с освоением; отсутствие видимого изменения не диагноз неспособности.",
+        "Экспертное заключение о пробе не присваивает распоряжение следующим бюджетом.",
+        "Первый провал не отзывает обеспеченное финансирование; для продолжения нужны безопасный вопрос и новое добровольное участие.",
+        "Высвобождаются лишь неиспользованные и не связанные обязательствами средства.",
+        "Создание всей принимающей среды не включено в пять миллионов.",
+        "Для конкретной второй пробы ведущая роль действительно передана другому участнику; он принимает существенное решение, а новый получатель использует комплект. Прежний ведущий вправе помогать как специалист. Общая допустимость сохранить хорошего руководителя не заменяет этой проверки."
+      ]
+    },
+    "R2D-NODE-1": {
+      "destination": {
+        "section": "6. R2D-NODE-1: ежегодное продолжение земного узла",
+        "line": 317
+      },
+      "preserved_map_numbers": {
+        "initial_asset_rub": 6000000,
+        "initial_asset_debt_rub": 0,
+        "capacity_hours": 1200,
+        "paid_hours": 900,
+        "external_trial_hours": 200,
+        "maintenance_hours": 100,
+        "productive_hours_in_operating_cost": 1100,
+        "services_revenue_rub": 9000000,
+        "member_contribution_rub": 1000000,
+        "operating_cost_rub": 6000000,
+        "human_program_rub": 2000000,
+        "human_program_from_contribution_rub": 1000000,
+        "human_program_from_operator_remainder_rub": 1000000,
+        "replacement_reserve_rub_per_renewal": 1200000,
+        "free_remainder_rub": 800000,
+        "identical_renewals_to_replacement": 5,
+        "replacement_reserve_rub_after_five": 6000000,
+        "free_remainder_rub_after_five": 4000000,
+        "free_remainder_without_new_cohort_and_contribution_rub": 1800000,
+        "free_remainder_only_if_extra_demand_for_200_hours_rub": 3800000,
+        "low_paid_hours_variant": 700,
+        "deficit_before_education_rub_at_700_paid_hours": 200000
+      },
+      "source_current_chapter": "chapters/chapter-11.md",
+      "source_sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1",
+      "human_program_breakdown_million_rub": {
+        "help": 1.2,
+        "assessment": 0.3,
+        "support_and_exit": 0.5
+      },
+      "clarifications": [
+        "Актив 6 млн без долга отдельно от годовых потоков и LAB.",
+        "Взнос и операторская часть входят в одну человеческую программу, не вычитаются второй раз.",
+        "Модель годовая; пять возобновлений условны; многолетний договор — альтернатива.",
+        "Деньги к сроку обязательств обеспечены условием, не годовым остатком.",
+        "3,8 млн только при продаже дополнительных 200 часов; при 700 дефицит до обучения.",
+        "Налоги, инфляция, неплатежи, дисконтирование не оценены."
+      ]
+    }
+  },
+  "budget_and_branch_separation": [
+    "LAB не складывается с NODE; обе сметы не являются ценой миссии или W24.",
+    "W20/3 включает раннюю возможность и отдельный поздний успех, прежде W20/2; он не влечёт W18/3.",
+    "В W18 обеспечен следующий цикл без необходимой человеческой продажи; поставщики и другие человеческие права остаются.",
+    "Луна, астероид и орбитальный узел не получили бесплатных связей; внешние плательщики и поставщики не объявлены найденными."
+  ],
+  "public_source_dates_and_scope": {
+    "destination": {
+      "section": "8. Фактические опоры и даты их проверки",
+      "line": 366
+    },
+    "fresh_web_reading_in_this_pass": false,
+    "dates_preserved": {
+      "OSIRIS-REx": "2026-09-06",
+      "LEAP71": "2026-09-06",
+      "Blue_Alchemist": "2026-09-07",
+      "Varda_W1": "2026-09-07",
+      "NASA_thermal_and_ISS": "2026-09-07",
+      "JPL_solar": "2026-09-07",
+      "NRC_2014": "2026-09-07",
+      "Metzger_abstract_and_bibliography": "2026-09-07"
+    },
+    "personal_boundary": "NASA thermal/ISS, JPL, NRC и аннотация/библиография Metzger первично прочитаны мной в подготовке 17. Остальные даты и пределы перенесены из принятых примечаний и источниковой приёмки; нового личного чтения их веб-оригиналов здесь не было. Полная модель Metzger не читалась.",
+    "iss_pdf_sha256": "141fdcde49d376f9a6ec8f0a6f732d334bdaa65bb0f194aed08f32ed99139288",
+    "private_originals_republished": false
+  },
+  "author_validation": {
+    "checks": {
+      "lab_cycle_thousand": true,
+      "lab_program_rub": true,
+      "lab_second_cycles_rub": true,
+      "lab_hours_cycle": true,
+      "lab_hours_if_all_24_protected": true,
+      "lab_protected_team_hours": true,
+      "lab_optional_help_thousand": true,
+      "lab_support_sensitivity_rub": true,
+      "lab_compute_doubling_rub": true,
+      "node_capacity_hours": true,
+      "node_annual_million": true,
+      "node_human_breakdown_million": true,
+      "node_five_renewals_million": true,
+      "node_no_renewal_million": true,
+      "node_extra_sold_200_million": true,
+      "node_700_deficit_before_education_million": true,
+      "canonical_28_historical_36": true,
+      "new_ids_none": true,
+      "no_private_reader_paths": true,
+      "no_soft_hyphen": true,
+      "old_passports_and_map_unchanged": true,
+      "current_20_match_frozen_plus_two_author_updates": true
+    },
+    "meaning": "Структурные и арифметические проверки плюс авторская сверка всех разделов с прочитанными входами. Не независимая приёмка и не автоматическое доказательство отсутствия смысловых потерь."
+  },
+  "independent_acceptance": {
+    "status": "pending",
+    "author_may_not_accept_alone": true,
+    "reviewers_requested_by_parent": [
+      "root",
+      "source",
+      "literary"
+    ],
+    "whole_space_fragments_pass": "separate-next-stage-not-claimed"
+  },
+  "unmodified_by_this_author": "Старые паспорта, общая карта, принятые дельты и 20 литературных файлов не редактировались этим автором. Поздние изменения 1/7 выполнены root и отражены отдельно.",
+  "post_draft_literary_clarification_check": {
+    "date": "2026-09-07",
+    "read_by": "mechanism_recovery",
+    "sequence": "Выполнено после сохранения полного авторского Д. Сначала каждая текущая глава непрерывно целиком, затем полный архивный diff; своё прежнее полное чтение 1/7 не заявлялось.",
+    "results": [
+      {
+        "chapter": 1,
+        "review_path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/chapter-01-mechanism-review.md",
+        "review_sha256": "47861a5251b0f286f55443d198a07b91414f423016a46ae551b7b0a1a86adf90",
+        "chapter_sha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+        "full_read_lines": 73,
+        "exact_declared_byte_changes": 1,
+        "notes_unchanged": true,
+        "pass": true
+      },
+      {
+        "chapter": 7,
+        "review_path": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/chapter-07-mechanism-review.md",
+        "review_sha256": "c12f7af75e234ec2d8e708d8bf1f4f7c2c5bebe4e3eea46997457d03b5f18b09",
+        "chapter_sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550",
+        "full_read_lines": 61,
+        "exact_declared_byte_changes": 2,
+        "notes_unchanged": true,
+        "pass": true
+      }
+    ],
+    "appendix_sha256_unchanged": "5e9eeb2d8daffa52f569e7ec4a78a0d4112c1b83ac208df626342798210fc624",
+    "effect": "Изменения сценария не найдены; состав текущих входов выше подтверждён. Исходный frozen20 и первоначальный журнал чтения не переписаны."
+  },
+  "local_revision_after_independent_review": {
+    "date": "2026-09-07",
+    "author": "mechanism_recovery",
+    "authorized_by": "root",
+    "initial_sha256": "5e9eeb2d8daffa52f569e7ec4a78a0d4112c1b83ac208df626342798210fc624",
+    "revised_sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae",
+    "archives": [
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/appendices/scenario-passport-v1.6.md",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/text.md",
+        "sha256": "5e9eeb2d8daffa52f569e7ec4a78a0d4112c1b83ac208df626342798210fc624"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/appendix-d-integrator-review.md",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/appendix-d-integrator-review.md",
+        "sha256": "094d27fc6a65c858d57df5169540c8504b51f4d9208fcff2940f9640b3c4ecf2"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/appendix-d-source-review.md",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/appendix-d-source-review.md",
+        "sha256": "2299d1209b105b014fe901215f9d9740cb203a9e326e62858625f6887439f564"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/appendix-d-reading-and-acceptance.md",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/appendix-d-reading-and-acceptance.md",
+        "sha256": "dcd96f2ab146a3250008d2d8d95f9c2860d46a0823e3182b278562b914cc3fbe"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/appendix-d-source-preparation.md",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/appendix-d-source-preparation.md",
+        "sha256": "92a31b4beae85dd986fc7221f0561ea36dd1e1f775d570983f6753bf0e1cbab3"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/passport-v1.6-integration.json",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/passport-v1.6-integration.json",
+        "sha256": "9f4327e02e219a17798d81d6ecb060a812eff49aa69bacbef3db84604d946660"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/appendix-d-continuous-reading-log.json",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/appendix-d-continuous-reading-log.json",
+        "sha256": "40f07f820a83bbefddc621f4444c71a4aff31f8f00c172d0ef1f329d10a00dac"
+      },
+      {
+        "source": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/research/passport-v1.6-integrator-input-reading.json",
+        "archive": "right-to-decide-site/manuscript/2026-09-06-corpus-rebuild/reviews/revisions/appendix-d-initial/passport-v1.6-integrator-input-reading.json",
+        "sha256": "c4b12f6435c43d57a7c123f234f5d4543e3948fad604e5199617e84f515ee1bd"
+      }
+    ],
+    "changes": [
+      {
+        "line": 4,
+        "before": "Черновик от 7 сентября 2026 года для независимой редакционной проверки.",
+        "after": "Редакция от 7 сентября 2026 года."
+      },
+      {
+        "line": 297,
+        "before": "Она может сохранить хорошего руководителя и прежнего эксперта.",
+        "after": "В этой пробе ведущую роль действительно принимает другой участник; прежний ведущий может помогать как специалист. В общем случае самостоятельность совместима с сохранением хорошего руководителя и эксперта."
+      },
+      {
+        "line": 303,
+        "before": "Продолжение проверяется следующей работой: команда выбирает вопрос и средства, получает рабочий пакет, понимает его пределы и может привлечь другого исполнителя.",
+        "after": "Продолжение проверяется следующей работой: команда выбирает вопрос и средства, получает рабочий пакет, понимает его пределы и может привлечь другого исполнителя. Другой участник принимает существенное решение, а новый получатель использует переданный комплект для согласованного следующего шага."
+      }
+    ],
+    "verification": "Полный diff и точное трёхместное преобразование байтов. Изменены только строки 4/297/303; 379 строк, все остальные байты и раздел источников неизменны. Это авторское исправление D-S01, не собственная независимая приёмка.",
+    "independent_initial_reviews_read": "Все три отзыва прочитаны полностью; усечённые совместные выводы дочитаны отдельными полными чтениями source/literary.",
+    "preserved": "Новые ID/версии условий, цифры, космические предпосылки и даты первичных источников не введены. Необязательное добавление о готовом инструменте по решению root не сделано."
+  }
+}

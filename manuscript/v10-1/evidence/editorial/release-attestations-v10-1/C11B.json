@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C11B",
+  "sourceSha256": "2a34d766db8da663bbb464a01d0da349397909d13c00d6dc47a7f5656777b830",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Хранение отделено от активной жизни. Резерв вычислений, формат состояния и второй оператор превращают выход в событие: кооператив действительно переносится. Участие в сильной сети имеет собственную привлекательность и цену.",
+    "Хансон используется как сценарный предшественник; тарифы будущей жизни и обязательная нужда ИИ в людях не придуманы."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C19",
+  "sourceSha256": "6796861183f8925dac361e9f67f04407604538110844d3bf5ff169376e06e60c",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Новый исследовательский покупатель возникает после реального производства и распределения прав. Внутренние счета прямо отделены от дополнительной энергии и приборов. Земные доли/союз сохраняются; две миссии покупают разные исследования.",
+    "Моравек даёт сценарное предшествие, не принятую датировку или дешёвую смету."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

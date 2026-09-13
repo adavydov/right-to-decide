@@ -1,21 +1,22 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { book, readingChapters } from "@/lib/book";
-import { cards } from "@/lib/library";
-import libraryData from "@/data/library.json";
+import libraryData from "@/data/library-source-cards.json";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
+    "/essence/",
     "/contents/",
     "/manifesto/",
     ...["", "manifesto/", "manifesto/history/", "agents/", "agents/guide/", "rules/", "privacy/"].map(path => "/open-editorial/" + path),
     "/authors/",
     "/read/",
     "/library/",
-    ...cards.map((card) => "/wiki/" + card.id + "/"),
+    ...libraryData.sources.map((source) => "/library/" + source.id + "/"),
+    "/research/v10/",
     ...readingChapters
       .filter((chapter) => chapter.status === "available")
       .map((chapter) => "/read/" + chapter.id + "/"),
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   return [...new Set(routes)].map((route) => ({
     url: siteConfig.publicUrl + route,
-    lastModified: route === "/manifesto/" ? new Date("2026-09-06") : lastModified,
+    lastModified,
     changeFrequency: "monthly" as const,
     priority: route === "/" ? 1 : 0.7,
   }));

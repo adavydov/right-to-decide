@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-09.md",
+  "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-09-source-review.md",
+    "reviews/chapter-09-mechanism-review.md",
+    "reviews/chapter-09-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    4,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-09-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения новой главы с примечанием и всех трёх финальных независимых заключений. Возвратов не было. Сохранена основа8 и восстановлена функция космического перехода7.2. Репутация, спрос на новый продукт, самостоятельный выбор обязательства и переносимое свидетельство различены. Один второй цикл, добровольный плательщик, помощь и права на ресурс сохранены. Все12 применимы к конкретному ограниченному следующему действию; реальный запуск и коммерческий успех не заявлены."
+}

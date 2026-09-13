@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C02",
+  "sourceSha256": "4a06eaa05f5f241ebf947677ae581dd2c26bd477af048a8154f4e6b317f705ee",
+  "author": "books_epub",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Очередь переносится с расчёта на оборудование. Покупка стандартного узла, новая установка, совместная площадка и изменение продукта дают разные реальные выходы. Это новая экономика ограничения, а не повтор запрета на вывод.",
+    "Кейс Егора Давыдова обозначен как предоставленный материал; выдуманной численной оценки потерь нет."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

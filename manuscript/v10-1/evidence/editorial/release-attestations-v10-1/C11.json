@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C11",
+  "sourceSha256": "570d594400d841e13a24414428b82ae33356dcf1e11547c695f9002caf402746",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Два решения — как жить теперь и выполнен ли исходный заказ — снимают ложную альтернативу вечного права прежнего я и всевластия нынешней благодарности. Оплаченный выход из клиники действует. Наследуемость отдельно переносит спор на человека без первоначального согласия.",
+    "M02 сравнивает веса при одинаковых нынешних возможностях. Наследуемое изменение не выведено из сегодняшней клиники."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C07",
+  "sourceSha256": "f15cd8450faf789872b368ba48beb7b76afb7778e452dc454bf6c87f45d004ff",
+  "author": "books_epub; root — интеграция текущих дополнений",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Конфликт возникает из будущей утраты контроля, а не из общей плохой природы людей. Мирная компенсация работает в других узлах; выбранная силовая коалиция оставляет жертвы, долги и права. Послевоенный мандат получает новое основание.",
+    "Исход войны — условный результат ветви. Статья о рисках кооперации не выдана за его прогноз."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

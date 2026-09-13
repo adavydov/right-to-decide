@@ -5,11 +5,13 @@ import path from "node:path";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
 import { assertEditionId, EDITION_PATTERN, deriveTransition, verifyTransition as verifyRecordedTransition, encode } from "./open-editorial-identity-transition.mjs";
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+// The complete original receipt is exercised against exact retired bytes outside public.
+const root = path.join(siteRoot, 'docs/open-editorial/test-fixtures/v9');
 const read = relative => fs.readFileSync(path.join(root, relative));
 const json = relative => JSON.parse(read(relative).toString("utf8").replace(/^\uFEFF/, ""));
-const activeBook = json("src/data/book.json");
-const archived = activeBook.editionVersion === "10.0";
+const activeBook = JSON.parse(fs.readFileSync(path.join(siteRoot, 'src/data/book.json'), 'utf8'));
+const archived = ["10.0", "10.1"].includes(activeBook.editionVersion);
 const book = archived ? json("src/data/edition-v9.json") : activeBook;
 const receiptPath = "docs/open-editorial/identity-transitions/" + book.releaseId + ".json";
 const receipt = json(receiptPath);

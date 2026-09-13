@@ -80,3 +80,9 @@ docs/research/brand-ai/extracted.json
 /scripts/v10-final-snapshot.mjs
 /scripts/v10-library-qa.mjs
 /scripts/v10-editorial-qa.mjs
+
+# Private VC reference and one-off inspection output for the current site redesign.
+/docs/research/v10-1-reference/
+/scripts/extract-v10-1-reference.mjs
+/scripts/v10-1-ui-qa.mjs
+/scripts/v10-1-live-qa.mjs

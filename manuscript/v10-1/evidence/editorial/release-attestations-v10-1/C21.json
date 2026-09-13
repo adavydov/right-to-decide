@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C21",
+  "sourceSha256": "1858588bf3f41326e957b118186ca3d1e228e9dc1b59c27e96c6cbdd79336ba3",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Общий субъект появляется через совместный продукт, спор целей, проверенные решения и передачу определённых полномочий. Выкуплены/сохранены прежние права; общий союз не исчез. Достигнутая самостоятельность обеих баз позволяет реальный уход.",
+    "Полное воспроизводство — отдельный поздний рубеж. M01/M04 и Stastny не объявлены доказательством слияния миссий или одного сознания."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

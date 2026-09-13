@@ -1,18 +1,21 @@
 @import "tailwindcss";
 :root {
   --paper: #f7f5f2;
-  --paper-strong: #eeece7;
+  --paper-strong: #eceae5;
   --ink: #1b1b1b;
-  --ink-soft: #68645f;
-  --accent: #e66f45;
-  --accent-dark: #b34525;
-  --border: #dcd9d2;
-  --rule: #dcd9d2;
-  --focus: #b94a29;
+  --ink-soft: #66655f;
+  --accent: #bd321f;
+  --accent-dark: #942618;
+  --border: #d8d6d0;
+  --rule: #d8d6d0;
+  --focus: #608764;
   --content: 1240px;
   --reading: 740px;
-  --font-ui: var(--font-interface), Arial, Helvetica, "Segoe UI", sans-serif;
+  --font-ui: Arial, Helvetica, var(--font-interface), "Segoe UI", sans-serif;
   --font-reading: Georgia, "Times New Roman", serif;
+  --sage: #c7d4c6;
+  --dark-surface: #242622;
+  --reference-gutter: clamp(24px, 6.94vw, 112px);
   --motion-fast: 180ms;
   --motion-base: 250ms;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -57,7 +60,7 @@ img {
   height: auto;
 }
 ::selection {
-  background: #efb99f;
+  background: #c7d4c6;
 }
 :focus-visible {
   outline: 2px solid var(--focus);

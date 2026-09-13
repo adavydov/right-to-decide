@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-07",
+  "reader": "root",
+  "scope": "Separate reading of all six part/end transitions; not a new complete reading of the whole book.",
+  "transitions": [
+    {
+      "from": 3,
+      "to": 4,
+      "inputs": [
+        {
+          "path": "chapters/chapter-03.md",
+          "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd"
+        },
+        {
+          "path": "chapters/chapter-04.md",
+          "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "inputs": [
+        {
+          "path": "chapters/chapter-06.md",
+          "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f"
+        },
+        {
+          "path": "chapters/chapter-07.md",
+          "sha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "inputs": [
+        {
+          "path": "chapters/chapter-09.md",
+          "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e"
+        },
+        {
+          "path": "chapters/chapter-10.md",
+          "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "inputs": [
+        {
+          "path": "chapters/chapter-12.md",
+          "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c"
+        },
+        {
+          "path": "chapters/chapter-13.md",
+          "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    },
+    {
+      "from": 15,
+      "to": 16,
+      "inputs": [
+        {
+          "path": "chapters/chapter-15.md",
+          "sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd"
+        },
+        {
+          "path": "chapters/chapter-16.md",
+          "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    },
+    {
+      "from": 18,
+      "to": "epilogue",
+      "inputs": [
+        {
+          "path": "chapters/chapter-18.md",
+          "sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d"
+        },
+        {
+          "path": "epilogue.md",
+          "sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c"
+        }
+      ],
+      "read": "Last two body paragraphs of preceding chapter and first two body paragraphs of next, plus titles."
+    }
+  ],
+  "readingCorrection": "First extraction for chapter9 used only plural notes heading and returned note text; chapter9 body end was re-extracted with singular/plural matching and read before this record.",
+  "judgment": "Each transition changes the next task: individual question; comparable earth trial; infrastructure; permission for consequential action; complete price; successor question. No additional transition repair identified here. Independent complete readings remain separate."
+}

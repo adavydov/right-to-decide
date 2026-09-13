@@ -4,7 +4,9 @@ import Link from "next/link";
 import authorsData from "@/data/authors.json";
 import { assetPath } from "@/lib/site-config";
 
-import { LiteraryTeam } from "./LiteraryTeam";
+import { PublicEditorialTeam } from "./PublicEditorialTeam";
+import team from "@/data/editorial-team-v10.json";
+import type { PublicEditorialTeam as Team } from "@/types/editorial-v10";
 import styles from "./AuthorsGrid.module.css";
 
 type AuthorsGridProps = {
@@ -84,7 +86,7 @@ export function AuthorsGrid({ compact = false }: AuthorsGridProps) {
     </div>
   );
 
-  if (!compact) return <>{cards}<LiteraryTeam /></>;
+  if (!compact) return <>{cards}<PublicEditorialTeam team={team as Team} /></>;
 
   return (
     <section className={`${styles.section} ${styles.compact}`} id="authors" aria-labelledby="authors-heading">

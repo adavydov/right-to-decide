@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C17",
+  "sourceSha256": "fca239974df6c5340f5e4d84e16984d074ce7d279c613bc4ee9b74aa662244d3",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Возвращается тот же водный проект и тот же получатель. Первый маршрут отклонён, второй даёт принятую поставку и общий протокол. Передача доли соединяет первоначальное предприятие с союзом; история собственности не пропущена.",
+    "Varda подтверждает конкретную миссию/продукт, не рентабельность неизвестной сделки."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

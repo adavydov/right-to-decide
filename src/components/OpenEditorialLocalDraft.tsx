@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { resolveSelector } from "../../shared/open-editorial-text.mjs";
-import { editorialBlockTarget, editorialKinds, loadEditorialCorpus, safeEditorialUrl, type EditorialCorpus, type EditorialTarget } from "@/lib/open-editorial-local";
+import { editorialBlockTarget, editorialKinds, loadEditorialCorpus, safeEditorialUrl, currentEditorialEdition, type EditorialCorpus, type EditorialTarget } from "@/lib/open-editorial-local";
 import { downloadLocalEditorialFile, localDraftMarkdown, localDraftJson, validateLocalDraftTarget, type LocalEditorialDraft } from "@/lib/open-editorial-local";
 import { OpenEditorialModeNotice } from "./OpenEditorialModeNotice";
 import styles from "./OpenEditorial.module.css";
@@ -30,7 +30,7 @@ export function OpenEditorialLocalDraft() {
 
   useEffect(() => {
     let active = true;
-    loadEditorialCorpus().then(value => { if (active) { setCorpus(value); if (!search.get("edition") && !search.get("transfer") && !search.get("note_draft")) setEditionId(value.editions.find(edition => edition.id === value.current_edition_id)?.id || value.editions[0]?.id || ""); } }).catch(err => { if (active) setError(err.message); });
+    loadEditorialCorpus().then(value => { if (active) { setCorpus(value); if (!search.get("edition") && !search.get("transfer") && !search.get("note_draft")) setEditionId(currentEditorialEdition(value)?.id || ""); } }).catch(err => { if (active) setError(err.message); });
     return () => { active = false; };
   }, [search]);
   useEffect(() => {

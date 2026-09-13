@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-14.md",
+  "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-14-source-review.md",
+    "reviews/chapter-14-mechanism-review.md",
+    "reviews/chapter-14-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-14-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения 94 строк с пятью примечаниями, всех трёх первоначальных и окончательных независимых заключений, полного двухточечного diff с целыми изменёнными абзацами и окружением. Все 32 блока основной прозы8 сохранены; содержательной потери7.2 нет. Новые углы различают интересную работу и путь, множество вариантов и критерий, цель от успешного учения и правдивый узкий заказ. Сильный ИИ и основания собственности сохранены. Все12 критериев применимы, каждый не ниже3/4, без усреднения. Нового космического условия нет. Приёмка агентная, не внешний опыт и не реальная договорная норма."
+}

@@ -1,0 +1,315 @@
+{
+  "interpretation": "Illustrative utility scores; no probability forecast.",
+  "timing": "I/S publicly chosen; human simultaneous actions; credible AI response.",
+  "cases": {
+    "indifference": {
+      "parameters": {
+        "loss": 1,
+        "guard_cost": 3.0,
+        "intervention_cost": 2.0,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 8.0,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": 1.0
+      },
+      "equilibria": [
+        {
+          "regime": "I",
+          "on_path_actions": [
+            "W",
+            "W"
+          ],
+          "human_strategy_1": [
+            "W",
+            "W"
+          ],
+          "human_strategy_2": [
+            "W",
+            "W"
+          ],
+          "ai_reactions": [
+            false,
+            false,
+            false
+          ],
+          "payoffs": [
+            1.0,
+            1.0,
+            -1.0
+          ],
+          "ai_withdraw_payoff": -1.0,
+          "ai_guard_payoff": -4.0,
+          "max_ai_gain_from_switching_regime": -3.0
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "limited_guardianship": {
+      "parameters": {
+        "loss": 10,
+        "guard_cost": 3.0,
+        "intervention_cost": 2.0,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 8.0,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": 1.0
+      },
+      "equilibria": [
+        {
+          "regime": "S",
+          "on_path_actions": [
+            "P",
+            "P"
+          ],
+          "human_strategy_1": [
+            "W",
+            "P"
+          ],
+          "human_strategy_2": [
+            "W",
+            "P"
+          ],
+          "ai_reactions": [
+            true,
+            true,
+            true
+          ],
+          "payoffs": [
+            4.0,
+            4.0,
+            -3.0
+          ],
+          "ai_withdraw_payoff": -10.0,
+          "ai_guard_payoff": -3.0,
+          "max_ai_gain_from_switching_regime": -7.0
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "guard_too_expensive": {
+      "parameters": {
+        "loss": 10,
+        "guard_cost": 12,
+        "intervention_cost": 2.0,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 8.0,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": 1.0
+      },
+      "equilibria": [
+        {
+          "regime": "I",
+          "on_path_actions": [
+            "W",
+            "W"
+          ],
+          "human_strategy_1": [
+            "W",
+            "P"
+          ],
+          "human_strategy_2": [
+            "W",
+            "P"
+          ],
+          "ai_reactions": [
+            true,
+            true,
+            true
+          ],
+          "payoffs": [
+            1.0,
+            1.0,
+            -10.0
+          ],
+          "ai_withdraw_payoff": -10.0,
+          "ai_guard_payoff": -12.0,
+          "max_ai_gain_from_switching_regime": -2.0
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "intervention_not_credible": {
+      "parameters": {
+        "loss": 10,
+        "guard_cost": 3.0,
+        "intervention_cost": 12,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 8.0,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": 1.0
+      },
+      "equilibria": [
+        {
+          "regime": "I",
+          "on_path_actions": [
+            "W",
+            "W"
+          ],
+          "human_strategy_1": [
+            "W",
+            "W"
+          ],
+          "human_strategy_2": [
+            "W",
+            "W"
+          ],
+          "ai_reactions": [
+            false,
+            false,
+            false
+          ],
+          "payoffs": [
+            1.0,
+            1.0,
+            -10.0
+          ],
+          "ai_withdraw_payoff": -10.0,
+          "ai_guard_payoff": -13.0,
+          "max_ai_gain_from_switching_regime": -3.0
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "humans_keep_their_own_peace": {
+      "parameters": {
+        "loss": 10,
+        "guard_cost": 3.0,
+        "intervention_cost": 2.0,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 4,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": -1
+      },
+      "equilibria": [
+        {
+          "regime": "I",
+          "on_path_actions": [
+            "P",
+            "P"
+          ],
+          "human_strategy_1": [
+            "P",
+            "P"
+          ],
+          "human_strategy_2": [
+            "P",
+            "P"
+          ],
+          "ai_reactions": [
+            true,
+            true,
+            true
+          ],
+          "payoffs": [
+            5.0,
+            5.0,
+            -0.0
+          ],
+          "ai_withdraw_payoff": -0.0,
+          "ai_guard_payoff": -3.0,
+          "max_ai_gain_from_switching_regime": -3.0
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "oversight_cheaper_with_same_low_preservation_value": {
+      "parameters": {
+        "loss": 1,
+        "guard_cost": 0.4,
+        "intervention_cost": 0.2,
+        "autonomy_cost": 1.0,
+        "failed_attempt_payoff": -2.0,
+        "peace_payoff": 5.0,
+        "unilateral_gain": 8.0,
+        "victim_payoff": 0.0,
+        "mutual_conflict_payoff": 1.0
+      },
+      "equilibria": [
+        {
+          "regime": "S",
+          "on_path_actions": [
+            "P",
+            "P"
+          ],
+          "human_strategy_1": [
+            "W",
+            "P"
+          ],
+          "human_strategy_2": [
+            "W",
+            "P"
+          ],
+          "ai_reactions": [
+            true,
+            true,
+            true
+          ],
+          "payoffs": [
+            4.0,
+            4.0,
+            -0.4
+          ],
+          "ai_withdraw_payoff": -1.0,
+          "ai_guard_payoff": -0.4,
+          "max_ai_gain_from_switching_regime": -0.6
+        }
+      ],
+      "unilateral_gains": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "phase_map": {
+    "points": 10000,
+    "counts": {
+      "I": 5240,
+      "S": 4760,
+      "mixed_or_boundary": 0
+    },
+    "meaning": "Parameter-space counts, NOT empirical scenario probabilities."
+  }
+}

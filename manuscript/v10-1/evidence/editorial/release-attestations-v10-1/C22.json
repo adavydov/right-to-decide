@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C22",
+  "sourceSha256": "3d2615f2989008ae2688d65a8006e806b29531266a21b467b16fc13f00a69b3b",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Самостоятельность сначала приносит действительные разные человеческие жизни. Конфликт признания цифровых голосов и общих узлов не требует возврата голода. Мирные соглашения, отдельные узлы и общий союз остаются; война не приписана всем.",
+    "Будущие события не представлены эмпирическими данными. Добровольная перестройка мотивации не обещает всеобщего политического согласия."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

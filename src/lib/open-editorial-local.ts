@@ -1,4 +1,6 @@
 import { assetPath } from "./site-config";
+import { currentEditorialCorpus } from "../../shared/open-editorial-current.mjs";
+export { currentEditorialEdition, currentNoteReference, browserNotesJson } from "../../shared/open-editorial-current.mjs";
 import type { EditorialTarget, EditorialCorpus, EditorialEdition, EditorialChapter, EditorialBlock, EditorialNote } from "./open-editorial";
 export type { EditorialTarget, EditorialCorpus, EditorialEdition, EditorialChapter, EditorialBlock, EditorialNote } from "./open-editorial";
 export { localDraftMarkdown, localDraftJson, validateLocalDraftTarget } from "../../shared/open-editorial-draft.mjs";
@@ -31,7 +33,7 @@ export const editorialKinds: Record<string, string> = { question: "Неясно"
 export function editorialDate(value?: string) { return value ? new Date(value).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Moscow" }) : ""; }
 export function safeEditorialUrl(value?: string) { if (!value) return undefined; try { const url = new URL(value); return ["http:", "https:"].includes(url.protocol) && !url.username && !url.password ? value : undefined; } catch { return value.startsWith("/") && !value.startsWith("//") ? value : undefined; } }
 
-export async function loadEditorialCorpus(): Promise<EditorialCorpus> { const response = await fetch(assetPath("/editorial/corpus.json")); if (!response.ok) throw new Error("Индекс опубликованной книги пока недоступен."); return response.json(); }
+export async function loadEditorialCorpus(): Promise<EditorialCorpus> { const response = await fetch(assetPath("/editorial/corpus.json"), { cache: "no-store" }); if (!response.ok) throw new Error("Индекс опубликованной книги пока недоступен."); return currentEditorialCorpus(await response.json()); }
 export function editorialBlockTarget(bookId: string, edition: EditorialEdition, chapter: EditorialChapter, block: EditorialBlock): EditorialTarget { return { scope: "block", book_id: bookId, edition_id: edition.id, chapter_id: chapter.id, block_id: block.id, block_snapshot_sha256: block.snapshot_sha256, normalization: "oe-text-v1" }; }
 const privateNotesKey = "right-to-decide:open-editorial:browser-notes:v1";
 export function readBrowserNotes(): EditorialNote[] { try { const value: unknown = JSON.parse(localStorage.getItem(privateNotesKey) || "[]"); return Array.isArray(value) ? value.filter((note): note is EditorialNote => Boolean(note && typeof note.id === "string" && typeof note.message === "string" && note.target?.edition_id)) : []; } catch { return []; } }

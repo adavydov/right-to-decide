@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { normalizeText, resolveSelector } from "../../shared/open-editorial-text.mjs";
-import { editorialBlockTarget, loadEditorialCorpus, readBrowserNotes, saveBrowserNotes, type EditorialCorpus, type EditorialTarget } from "@/lib/open-editorial-local";
+import { editorialBlockTarget, loadEditorialCorpus, readBrowserNotes, saveBrowserNotes, currentEditorialEdition, type EditorialCorpus, type EditorialTarget } from "@/lib/open-editorial-local";
 import styles from "./OpenEditorial.module.css";
 
 export function OpenEditorialStaticReader({ chapterId, revision }: { chapterId: string; revision: string }) {
@@ -28,7 +28,8 @@ export function OpenEditorialStaticReader({ chapterId, revision }: { chapterId: 
   async function prepare() {
     try {
       const value = corpus || await loadEditorialCorpus(); setCorpus(value);
-      const edition = value.editions.find(item => item.id === revision);
+      const current = currentEditorialEdition(value);
+      const edition = current?.id === revision ? current : undefined;
       const chapter = edition?.chapters.find(item => item.id === chapterId);
       if (!edition || !chapter) { setTarget(null); setQuote(""); setNotice("Исходная редакция этой главы недоступна в индексе. Привязка к другой версии не перенесена."); return; }
       const captured = selection.current;

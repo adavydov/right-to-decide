@@ -2,15 +2,15 @@ import siteCopy from "../data/site-copy.json" with { type: "json" };
 
 export const siteConfig = {
   title: "Право на решение",
-  subtitle: "Как остаться авторами будущего рядом с более сильным интеллектом",
+  subtitle: "Чего мы захотим, когда получим всё",
   description: siteCopy.home.metadataDescription,
   author: "Алексей Михайлович Давыдов",
   email: "letterdam@mail.ru",
   repository: "https://github.com/adavydov/right-to-decide",
   publicUrl: "https://adavydov.github.io/right-to-decide",
-  coverPath: "/images/book-cover-v10.png",
-  coverWidth: 1055,
-  coverHeight: 1491,
+  coverPath: "/images/book-cover-v10-1.png",
+  coverWidth: 1024,
+  coverHeight: 1536,
   editionLabel: "Рабочая редакция",
 } as const;
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

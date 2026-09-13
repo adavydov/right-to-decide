@@ -1,13 +1,13 @@
 /* Shared publication foundation. Reader preferences keep their own scoped variables. */
 :root {
   --paper: #f7f5f2;
-  --paper-strong: #eeece7;
+  --paper-strong: #eceae5;
   --ink: #1b1b1b;
   --ink-soft: #66655f;
-  --accent-dark: #ad4223;
-  --border: #d5d2cb;
+  --accent-dark: #942618;
+  --border: #d8d6d0;
   --rule: var(--border);
-  --focus: #ad4223;
+  --focus: #608764;
   --gutter: clamp(24px, 6.94vw, 112px);
   --section-space: 112px;
 }

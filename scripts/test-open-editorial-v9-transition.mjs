@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { deriveTransition, verifyTransition, encode } from "./open-editorial-identity-transition.mjs";
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../docs/open-editorial/test-fixtures/v9");
 const baseline = "literary-manuscript-v8.0-f3c9128893a3";
 const json = relative => JSON.parse(fs.readFileSync(path.join(root, relative), "utf8").replace(/^\uFEFF/, ""));
 function fixture() {

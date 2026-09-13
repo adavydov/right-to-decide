@@ -10,6 +10,10 @@
   "manifesto_version": "1.0",
   "manifesto_sha256": "9e29567a9908bf858a6f3c09a2c5c0c3e2518ab05c17de2307d6c0e311cc7583",
   "corpus_url": "https://adavydov.github.io/right-to-decide/editorial/corpus.json",
+  "current_edition_id": "literary-manuscript-v10.1-ed9e942ef5a3",
+  "edition_policy": "current-only",
+  "annotation_transfer": "none",
+  "unavailable_note_targets": "preserve-local-quote-and-export-without-reader-link",
   "capability_authority": null,
   "auth": {
     "public_read": "none",

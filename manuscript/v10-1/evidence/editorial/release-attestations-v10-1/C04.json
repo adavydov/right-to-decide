@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C04",
+  "sourceSha256": "8810c6bea017b7a4bbbd22ac670c519e23f1bad025012bc543f5a9741e6b1b82",
+  "author": "books_epub",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Печь и её уже проданная неделя делают политэкономический аргумент зримым. Ограничение возникает из чужих приобретённых прав. Собственная линия действительно работает и имеет клиентов; обеспеченный доход остаётся полноценным другим выбором.",
+    "Условие согласия покупателя задано внутри авторского договора, не объявлено универсальным действующим правом."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

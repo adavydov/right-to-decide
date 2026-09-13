@@ -1,0 +1,64 @@
+{
+  "scope": "Editorial content proposals from independent whole-book reading; not an operational tracker and not applied changes.",
+  "originalSourceSet": "research/whole-book-literary-inputs-v9.json",
+  "proposals": [
+    {
+      "text": "chapters/chapter-01.md",
+      "sourceSha256": "1641ea9189fd4a9b161fa920c51feadc7b943da8b4d984642413967997927385",
+      "originalParagraphLine": 57,
+      "before": "Когда-нибудь мы допустим, что предприятие преодолело эти трудности. В какие отношения им предстоит войти? Кто сможет выделить средства на их незавершённость? Что изменится, когда они начнут предлагать другой путь?",
+      "after": "Когда-нибудь мы допустим, что предприятие преодолело эти трудности. В какие отношения предстоит войти людям, которые хотят освоить это дело? Кто сможет выделить средства на их незавершённость? Что изменится, когда они начнут предлагать другой путь?",
+      "reason": "Оба независимых общекнижных читателя обнаружили смену субъекта: местоимения им/их/они относились к не названным в переходе людям. Минимальная замена вводит их явно, не меняет факты, сценарий или источниковые даты.",
+      "rootReading": "Read complete paragraph and surrounding 47–65; proposal not applied while initial reading uses frozen 20-source set."
+    },
+    {
+      "text": "chapters/chapter-07.md",
+      "sourceSha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4",
+      "originalParagraphLine": 27,
+      "before": "ИИ может предложить и это решение. ",
+      "after": "",
+      "reason": "Соседний абзац25 уже точно говорит, что сильный ИИ способен предложить примеры и весь правильный ход. Удаление первой фразы27 оставляет это условие рядом и устраняет повтор без новой функции.",
+      "rootReading": "Read complete paragraphs19–31. Agree with independent literary observation; no change applied during frozen whole-book pass."
+    },
+    {
+      "text": "chapters/chapter-07.md",
+      "sourceSha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4",
+      "originalParagraphLine": 43,
+      "before": "это не даст лаборатории обещанного инструмента.",
+      "after": "это не даст лаборатории нужного инструмента.",
+      "reason": "Исследовательский платёж главы16 допускает отрицательный вывод и не обещает гарантированного программного продукта. Нужный результат и обязательство дать его различены одной заменой.",
+      "rootReading": "Read entire7:37–49 and16:35–47; confirmed independent without-space observation. Proposal not applied during initial frozen reading."
+    }
+  ],
+  "appliedDate": "2026-09-07",
+  "status": "applied-and-independently-accepted",
+  "results": [
+    {
+      "path": "chapters/chapter-01.md",
+      "initialSha256": "1641ea9189fd4a9b161fa920c51feadc7b943da8b4d984642413967997927385",
+      "finalCandidateSha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+      "archiveDirectory": "reviews/revisions/whole-book-initial/chapter-01",
+      "changeCount": 1
+    },
+    {
+      "path": "chapters/chapter-07.md",
+      "initialSha256": "dbcb4ca10d4e614971ef517933e596adfb1bab5a095d5c05380d86978a763de4",
+      "finalCandidateSha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550",
+      "archiveDirectory": "reviews/revisions/whole-book-initial/chapter-07",
+      "changeCount": 2
+    }
+  ],
+  "closure": {
+    "date": "2026-09-07",
+    "acceptedSha256": {
+      "1": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6",
+      "7": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550"
+    },
+    "reviewers": [
+      "education_history_rebuild",
+      "mechanism_recovery",
+      "release_pipeline"
+    ],
+    "rootRead": "Полные локальные diff и окружение прочитаны до правки и после неё; все шесть окончательных предметных отзывов и оба общекнижных дополнения прочитаны."
+  }
+}

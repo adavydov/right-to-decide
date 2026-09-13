@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "E00",
+  "sourceSha256": "a2c63898bc1cd624c0a11f22d4f5716ad80dc159236699e07c7a5c74c707eb88",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Эпилог меняет оценку при неизменных ключах. Человеческая наука и частная жизнь не обесценены чужим масштабом. Образ плодотворного предшественника позволяет признать достижение без отмены утраты.",
+    "Цианобактерии — обозначенная аналогия масштаба вклада, не эволюционное доказательство будущего ИИ."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

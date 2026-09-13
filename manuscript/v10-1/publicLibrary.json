@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.1",
+  "decision": "accepted",
+  "author": "books_epub (667 карточек); library_finish (6 дополнительных карточек)",
+  "reviewer": "library_finish (публичная проекция, 125 правок, 12 цифровых карточек, 6 цитат); root (6 дополнительных карточек); прежние приёмки неизменённых контекстов сохранены",
+  "cards": {
+    "path": "public/library-source-cards.json",
+    "sha256": "1714e058f5feb0bb6c0988fa8f5e4125aed8cbe3e6014fa3e5c159a19e825403"
+  },
+  "counts": {
+    "records": 135,
+    "recordsWithCards": 132,
+    "cards": 673
+  }
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PublicationHero } from "@/components/PublicationHero";
+import { HomeHeroV101 } from "@/components/HomeHeroV101";
 import { AuthorsGrid } from "@/components/AuthorsGrid";
 import { siteConfig } from "@/lib/site-config";
 import { book, publicationSummary } from "@/lib/book";
@@ -12,7 +12,13 @@ export const metadata = { alternates: { canonical: siteConfig.publicUrl + "/" } 
 export default function HomePage() {
   const structured = getBookCreditsStructuredData();
   return <main id="main-content">
-    <PublicationHero />
+    <HomeHeroV101 />
+    <section className="publication-section wrap" aria-labelledby="essence-intro">
+      <div className="publication-grid">
+        <div><p className="eyebrow publication-kicker">Вся книга за один вечер</p><h2 className="publication-heading" id="essence-intro">Сначала понять суть.</h2></div>
+        <div className="publication-prose"><p>28 больших карточек проведут через всю историю: полезная помощь, новый порядок доходов и власти, изменение человека, космическая индустрия и последний выбор.</p><p>На каждой развилке — интересы сторон, работающие альтернативы и последствия решения. Здесь раскрывается финал.</p><Link className="button" href="/essence/">Пройти путь книги <span aria-hidden="true">↗</span></Link></div>
+      </div>
+    </section>
     <section className="publication-section wrap" id="about">
       <div className="publication-grid">
         <div><p className="eyebrow publication-kicker">{home.about.eyebrow}</p><h2 className="publication-heading">{home.about.heading}</h2></div>

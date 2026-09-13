@@ -32,6 +32,8 @@ function assertStaticContract(dir){
  const spec=json(dir,'public/open-editorial/openapi.json');assert.ok(spec.openapi.startsWith('3.1.'));
  assert.deepEqual(spec.servers,[{url:siteConfig.publicUrl}]);assert.ok(!spec.security?.length);assert.equal(Object.keys(spec.components?.securitySchemes||{}).length,0);
  const corpus=json(dir,'public/editorial/corpus.json');
+ assert.deepEqual(corpus.editions.map(e=>e.id),[corpus.current_edition_id]);
+ assert.equal(corpus.edition_policy,'current-only');assert.equal(manifest.current_edition_id,corpus.current_edition_id);
  assert.equal(Object.keys(spec.paths).length,8);
  for(const [template,item]of Object.entries(spec.paths)){
   assert.deepEqual(Object.keys(item),['get'],'Every advertised action is a static GET.');assert.ok(template.startsWith('/editorial/'));
@@ -67,10 +69,10 @@ test('default static generator is reproducible in a minimal checkout with no ser
  t.after(()=>{const within=path.relative(os.tmpdir(),dir);assert.ok(within&&!within.startsWith('..')&&!path.isAbsolute(within));assert.ok(path.basename(dir).startsWith('oe-static-build-'));fs.rmSync(dir,{recursive:true,force:true});});
  const inputs=['scripts/open-editorial-v10.mjs','scripts/open-editorial-identity-transition.mjs','scripts/build-open-editorial.mjs','shared/open-editorial-text.mjs','shared/open-editorial-layers.mjs','src/lib/site-config.ts','src/data/site-copy.json','src/data/book.json','CONSTITUTION.md','docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md','docs/open-editorial/block-identities.json','docs/open-editorial/STATIC_AGENT_GUIDE.md'];
  const book=json(root,'src/data/book.json');
- if(book.editionVersion==='10.0') {
-  const manifest=json(root,'manuscript/v10/release-manifest.json');
-  const archive=json(root,'docs/publishing/v10/archive-v9.json');
-  inputs.push('manuscript/v10/release-manifest.json','docs/publishing/v10/archive-v9.json',...manifest.artifacts.map(i=>i.path),...archive.files.map(i=>i.path));
+ if(['10.0','10.1'].includes(book.editionVersion)) {
+  const manifestPath=book.editionVersion==='10.1'?'manuscript/v10-1/release-manifest.json':'manuscript/v10/release-manifest.json';
+  const manifest=json(root,manifestPath);
+  inputs.push(manifestPath,...manifest.artifacts.map(i=>i.path));
  }
  const receiptPath='docs/open-editorial/identity-transitions/'+book.releaseId+'.json';
  if(fs.existsSync(path.join(root,receiptPath))){
@@ -95,7 +97,8 @@ test('default static generator is reproducible in a minimal checkout with no ser
  const env={...process.env,NEXT_PUBLIC_EDITORIAL_MODE:'',NEXT_PUBLIC_EDITORIAL_API_URL:'https://must-not-contact.invalid/v1'};
  for(const args of [[],['--check']]){const result=spawnSync(process.execPath,['scripts/build-open-editorial.mjs',...args],{cwd:dir,env,encoding:'utf8',windowsHide:true,timeout:30000});assert.equal(result.status,0,result.stderr||result.stdout);}
  assertStaticContract(dir);
- assert.equal(read(dir,'public/open-editorial/agents/guide.md'),read(root,'docs/open-editorial/STATIC_AGENT_GUIDE.md'));
+ assert.ok(read(dir,'public/open-editorial/agents/guide.md').startsWith(read(root,'docs/open-editorial/STATIC_AGENT_GUIDE.md')));
+ assert.ok(read(dir,'public/open-editorial/agents/guide.md').includes(book.releaseId));
  assert.deepEqual(json(dir,'public/editorial/corpus.json'),json(root,'public/editorial/corpus.json'));
  assert.ok(!read(dir,'public/open-editorial/agent-manifest.json').includes('must-not-contact.invalid'));
 });

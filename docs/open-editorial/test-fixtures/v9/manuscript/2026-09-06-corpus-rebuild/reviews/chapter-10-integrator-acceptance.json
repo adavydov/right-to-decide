@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-10.md",
+  "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-10-source-review.md",
+    "reviews/chapter-10-mechanism-review.md",
+    "reviews/chapter-10-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-10-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения новой главы, полного трёхместного diff с окружением и всех трёх окончательных независимых заключений. Первоначальных возвратов не было; три локальных уточнения отдельно сверены на текущем SHA. Сохранены сильная основа8, права владельца и единый загруженный узел как альтернатива. Восстановлены лунная производственная возможность и стыковка обязательств7.2. Уменьшение потерь, меньшая добыча, деньги, время приёмки и распределение эффекта различены. Применимы все12 в пределах условного конкретного действия, без внешней экспертизы и проведённого проекта."
+}

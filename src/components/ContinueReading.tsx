@@ -7,7 +7,7 @@ export function ContinueReading({ validIds, revision, revisions, allowLegacy = f
   let last: { id: string; title: string; routePrefix?: string } | null = null;
   try {
     const saved = JSON.parse(raw || "null");
-    if (saved && (saved.revision === (revisions?.[saved.id] ?? revision) || (allowLegacy && saved.revision === undefined)) && validIds.includes(saved.id) && typeof saved.title === "string")
+    if (saved && (!saved.routePrefix || saved.routePrefix === "/read/") && (saved.revision === (revisions?.[saved.id] ?? revision) || (allowLegacy && saved.revision === undefined)) && validIds.includes(saved.id) && typeof saved.title === "string")
       last = saved;
   } catch {}
   return last ? (
@@ -21,7 +21,7 @@ export function ContinueReading({ validIds, revision, revisions, allowLegacy = f
       <p className="eyebrow" style={{ marginBottom: 12 }}>
         Вы остановились здесь
       </p>
-      <Link className="text-link" href={(last.routePrefix === "/editions/v9/read/" ? last.routePrefix : "/read/") + last.id + "/"}>
+      <Link className="text-link" href={"/read/" + last.id + "/"}>
         Продолжить: {displayBookTitle(last.title)} ↗
       </Link>
     </div>

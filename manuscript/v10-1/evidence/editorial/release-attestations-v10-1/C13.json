@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C13",
+  "sourceSha256": "95001532186087dbe2e4e10606cdeba91efcfda0788a95b11e0a86226b9c0435",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Тимошенко получает новый способ спрашивать. Независимая команда проходит неудачу, улучшает узел и получает покупателя. Уход плательщика сокращает резерв, но не закрывает вход: оставшиеся платят за альтернативы и имеют вторую площадку.",
+    "Остром не названа автором или эмпирическим испытателем данного лабораторного устройства; предел исчезновения всего спроса указан один раз."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

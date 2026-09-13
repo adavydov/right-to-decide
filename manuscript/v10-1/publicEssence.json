@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.1",
+  "decision": "accepted",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "content": {
+    "path": "public/essence-v10-1.json",
+    "sha256": "0c4934939438cd428e1a392636d3c6279b52fec071122b264ef775f261eb8770",
+    "bytes": 111020
+  }
+}

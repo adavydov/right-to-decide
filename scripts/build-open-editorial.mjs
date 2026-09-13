@@ -37,7 +37,7 @@ const site = siteConfig.publicUrl;
 const base = site + "/editorial/editions/" + editionId;
 const mapPath = "docs/open-editorial/block-identities.json";
 const identityBytes = fs.existsSync(path.join(root, mapPath)) ? fs.readFileSync(path.join(root, mapPath)) : Buffer.from(encode({ schema_version: "1.0", chapters: {} }));
-const identities = book.editionVersion === "10.0" ? verifyV10Transition(root, book) : verifyTransition(root, book, identityBytes);
+const identities = ["10.0", "10.1"].includes(book.editionVersion) ? verifyV10Transition(root, book) : verifyTransition(root, book, identityBytes);
 const seen = new Set();
 const chapters = book.chapters.filter(c => c.status === "available" && c.publicationStatus === "published" && c.id !== "source-contents").map(c => {
   const source = c.source?.sha256 ?? c.sourceSha256;
@@ -69,11 +69,25 @@ const edition = { id: editionId, title: book.title + " · редакция " + b
   content_manifest_sha256: hash(JSON.stringify(chapters.map(c => ({ id: c.id, source_sha256: c.source_sha256, blocks: c.blocks.map(b => ({ id: b.id, snapshot_sha256: b.snapshot_sha256 })) })))),
   source_manifest_sha256: book.source.sha256, chapters };
 const editionsDir = path.join(root, "public/editorial/editions");
-const previousEditions = fs.existsSync(editionsDir) ? fs.readdirSync(editionsDir).filter(id => id !== editionId)
-  .map(id => path.join(editionsDir, id, "edition.json")).filter(f => fs.existsSync(f)).map(f => JSON.parse(fs.readFileSync(f, "utf8"))) : [];
 const corpus = { schema_version: "1.0", book_id: "right-to-decide", current_edition_id: editionId,
+  edition_policy: "current-only", annotation_transfer: "none",
   manifesto: { version: "1.0", sha256: hash(manifestoBytes), canonical_url: site + "/open-editorial/manifesto/" },
-  layers, editions: [...previousEditions, edition] };
+  layers, editions: [edition] };
+// Historical acceptance fixtures live under docs/. They are never copied into the site.
+// Validate every actual target before a bounded recursive removal from this export tree.
+if (fs.existsSync(editionsDir)) for (const entry of fs.readdirSync(editionsDir, { withFileTypes: true })) {
+  if (entry.name === editionId) continue;
+  assertEditionId(entry.name);
+  const target = path.resolve(editionsDir, entry.name), relative = path.relative(editionsDir, target);
+  const realExport = fs.realpathSync(editionsDir), realPublic = fs.realpathSync(path.join(root, 'public'));
+  const exportWithinPublic = path.relative(realPublic, realExport);
+  if (!exportWithinPublic || exportWithinPublic.startsWith('..') || path.isAbsolute(exportWithinPublic))
+    throw new Error('Edition export resolves outside the public tree');
+  if (!entry.isDirectory() || entry.isSymbolicLink() || !relative || relative.startsWith('..') || path.isAbsolute(relative))
+    throw new Error('Unsafe retired edition export: ' + entry.name);
+  if (checking) throw new Error('Retired edition remains in public export: ' + entry.name);
+  fs.rmSync(target, { recursive: true });
+}
 const escape = text => text.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const page = (title, content) => '<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escape(title) + '</title><style>body{max-width:76ch;margin:3rem auto;padding:0 1rem;background:#f4f1eb;color:#20231e;font:1.15rem/1.7 system-ui}a{color:#275441}section{white-space:pre-wrap;margin:1.5rem 0}a:focus-visible{outline:3px solid}</style><body><nav><a href="' + site + '/open-editorial/">Открытая редакция</a></nav><main><h1>' + escape(title) + '</h1>' + content + "</main></body></html>\n";
 for (const c of chapters) {
@@ -103,13 +117,14 @@ const discovery = {
   configuration_status: connectedMode ? (configuredApi ? "probe_live_meta" : "not_configured") : "static",
   openapi_url: site + "/open-editorial/openapi.json", guide_url: site + "/open-editorial/agents/guide.md",
   manifesto_url: site + "/open-editorial/manifesto/", manifesto_version: "1.0", manifesto_sha256: hash(manifestoBytes),
-  corpus_url: site + "/editorial/corpus.json", capability_authority: configuredApi ? configuredApi + "/meta" : null,
+  corpus_url: site + "/editorial/corpus.json", current_edition_id: editionId, edition_policy: "current-only", annotation_transfer: "none",
+  unavailable_note_targets: "preserve-local-quote-and-export-without-reader-link", capability_authority: configuredApi ? configuredApi + "/meta" : null,
   auth: { public_read: "none", submission: configuredApi ? "owner-issued-scoped-bearer" : null, registration_url: configuredApi ? site + "/open-editorial/me/" : null },
   capabilities: { read_published_text: true, prepare_local_draft: !connectedMode, submit_contribution: false, read_own_receipt: false, write_book: false, editorial_decisions: false, read_private_notes: false },
   layer_registry: { expected_active_count: 9, status: layers.registry_status, url: site + "/editorial/layers.json" }
 };
 output("public/open-editorial/agent-manifest.json", discovery);
-output("public/open-editorial/agents/guide.md", read(connectedMode ? "docs/open-editorial/AGENT_GUIDE.md" : "docs/open-editorial/STATIC_AGENT_GUIDE.md"));
+output("public/open-editorial/agents/guide.md", read(connectedMode ? "docs/open-editorial/AGENT_GUIDE.md" : "docs/open-editorial/STATIC_AGENT_GUIDE.md") + "\n## Текущая книга и прежние заметки\n\nНа сайте опубликована только текущая редакция: `" + editionId + "`. Не выбирайте редакцию по первому совпадению номера главы. Прежние локальные заметки сохраняют собственную редакцию, хеш и цитату; их нельзя переносить к новым абзацам. Если исходная редакция больше не опубликована, ссылка на главу не предлагается, а заметку можно прочитать и выгрузить с устройства.\n");
 if (connectedMode) {
   const openapiPath = path.join(root, "open-editorial-service/openapi.json");
   if (fs.existsSync(openapiPath)) output("public/open-editorial/openapi.json", read("open-editorial-service/openapi.json"));

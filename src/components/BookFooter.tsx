@@ -9,6 +9,7 @@ export function BookFooter() {
           <span className="eyebrow">Футурологический манифест · 2026</span>
           <div className={styles.links}>
             <Link href="/">О книге</Link>
+            <Link href="/essence/">Суть</Link>
             <Link href="/contents/">Содержание</Link>
             <Link href="/manifesto/">Манифест</Link>
             <Link href="/read/">Читать</Link>
@@ -25,7 +26,7 @@ export function BookFooter() {
         </div>
         <div className={styles.bottom}>
           <span>© А. М. Давыдов, А. А. Давыдов, Е. А. Давыдов</span>
-          <span>Как остаться авторами будущего</span>
+          <span>Чего мы захотим, когда получим всё</span>
         </div>
       </div>
     </footer>

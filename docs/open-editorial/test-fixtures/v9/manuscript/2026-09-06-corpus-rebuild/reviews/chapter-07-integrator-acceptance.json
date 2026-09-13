@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-07.md",
+  "sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-07-source-review.md",
+    "reviews/chapter-07-mechanism-review.md",
+    "reviews/chapter-07-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    4,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-07-reading-and-acceptance.md",
+  "integrator_decision": "Окончательная версия принята после двух полных общекнижных чтений, собственного чтения полного локального diff с окружением и трёх независимых заключений на текущий SHA. В главе 1 назван человеческий субъект; в главе 7 снят повтор правильной помощи ИИ и устранён намёк на гарантированный исследовательский продукт. Все остальные байты и примечания тождественны архивам. Все двенадцать прежних оценок подтверждены литературным рецензентом. Прежняя приёмка сохранена в reviews/revisions/whole-book-initial; новый полный проход корневого интегратора после точечных правок не заявляется.",
+  "date": "2026-09-07"
+}

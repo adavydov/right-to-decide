@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-12.md",
+  "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-12-source-review.md",
+    "reviews/chapter-12-mechanism-review.md",
+    "reviews/chapter-12-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3
+  ],
+  "criteria_authority": "reviews/chapter-12-reading-and-acceptance.md",
+  "integrator_decision": "Принята после собственного полного чтения97строк с4notes, всех трёх независимых первоначальных и окончательных заключений, полного двухместного diff с целыми изменёнными единицами. Сильная8 сохранена, функции7.2 возвращены. Кузнецов и Капица меняют механизм исполнения и следующего возражения; первичные пределы названы. Новый доступ к точному Остром не приписан, старый абзац и дата сохранены. Все12 применимы без усреднения. Реальная юридическая и космическая работоспособность не установлена; единый паспорт и целая книга имеют отдельную будущую проверку."
+}

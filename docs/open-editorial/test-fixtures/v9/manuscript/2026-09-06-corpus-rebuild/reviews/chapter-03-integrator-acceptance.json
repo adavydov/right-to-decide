@@ -1,0 +1,33 @@
+{
+  "version": "9.0",
+  "text": "chapters/chapter-03.md",
+  "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "space_economy_rebuild",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-03-source-review.md",
+    "reviews/chapter-03-mechanism-review.md",
+    "reviews/chapter-03-reading-and-acceptance.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    4,
+    3,
+    3,
+    3,
+    4,
+    "N/A"
+  ],
+  "criteria_authority": "reviews/chapter-03-reading-and-acceptance.md",
+  "integrator_decision": "Принята после полного чтения трёх независимых заключений. Сохранено движение сильной основы; углублены отбор, собственная работа с предложенным вопросом, граница новизны Дьюи и основания поддержки. Независимый возврат о подмене развития доступом исправлен, точный SHA повторно проверен."
+}

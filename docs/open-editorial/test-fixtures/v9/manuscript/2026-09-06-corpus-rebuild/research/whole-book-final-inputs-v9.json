@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "edition": "9.0",
+  "date": "2026-09-07",
+  "scope": "Точный состав финальных редакционных заключений. Этот перечень сам не является приёмкой или новым чтением.",
+  "inputs": [
+    {
+      "path": "prologue.md",
+      "sha256": "fb990133cd480e380f0b8bb238d5423ece6f700de9c6d6a3ceb5d686ef00a065"
+    },
+    {
+      "path": "chapters/chapter-01.md",
+      "sha256": "474dc787c7b55721efe6caa8dd01d908488d2d736f437d6beedb52509d5d3ff6"
+    },
+    {
+      "path": "chapters/chapter-02.md",
+      "sha256": "7744e34060ad33c63fb5e78cb73a913e398c669ed15896a3e7fecdf335c695b7"
+    },
+    {
+      "path": "chapters/chapter-03.md",
+      "sha256": "580136a43a96e8ed7eed4793c8a8bf257bb1015c9773a6304b82f9afc40820cd"
+    },
+    {
+      "path": "chapters/chapter-04.md",
+      "sha256": "0378289cfba7e96d9586fa19452fc4ee80bdcdae47d82cca611fcdb0e69e5ea3"
+    },
+    {
+      "path": "chapters/chapter-05.md",
+      "sha256": "5e3457cc356e3c16d6561b8af1609c82531d99175b1e5d986f0f3f21593cd0b9"
+    },
+    {
+      "path": "chapters/chapter-06.md",
+      "sha256": "cb037cba2a4ef301c51562b341201c80b0a33bcc3ce31a78e8b21e429c96e64f"
+    },
+    {
+      "path": "chapters/chapter-07.md",
+      "sha256": "15577aff91aabeb738c3fae3cf3ff3c700450d028db84456aaf4df6d19069550"
+    },
+    {
+      "path": "chapters/chapter-08.md",
+      "sha256": "5754ddab52a0e377029c8d1b726f6b1ca421228132440bc680c1d29bd345bfb1"
+    },
+    {
+      "path": "chapters/chapter-09.md",
+      "sha256": "46d13ec5537f4e4a0e2381aad12243c4145dbb868028532d248ac9809500d67e"
+    },
+    {
+      "path": "chapters/chapter-10.md",
+      "sha256": "6c73ecf1430c7c2a9476141dd5d1ff1101bf21346227a9109f20397e29ef5db4"
+    },
+    {
+      "path": "chapters/chapter-11.md",
+      "sha256": "ae61eda2071b9b985b01e2efff422b84a50c70433854104d85b22abd34b81fd1"
+    },
+    {
+      "path": "chapters/chapter-12.md",
+      "sha256": "5c4e65eec62ec4911ddb5c2fd0d00489fa920362648b3f48d80a1714b82ea45c"
+    },
+    {
+      "path": "chapters/chapter-13.md",
+      "sha256": "c8183dc20217e3195e12854827e79026618e85bd144cea715695e34eb534876b"
+    },
+    {
+      "path": "chapters/chapter-14.md",
+      "sha256": "bd57c08e4ff5bdb301795b70bd434c2cc31168431571a21b37544a21ff406286"
+    },
+    {
+      "path": "chapters/chapter-15.md",
+      "sha256": "ae1c0c690aa85a301848a754e1930427dcbbdb0abb2f9f04248c2e262f74d0dd"
+    },
+    {
+      "path": "chapters/chapter-16.md",
+      "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1"
+    },
+    {
+      "path": "chapters/chapter-17.md",
+      "sha256": "d7cbc63aa29ecaa0710848c1681e1d66106cf13ba7d21ba1ad4127bf2867fa3c"
+    },
+    {
+      "path": "chapters/chapter-18.md",
+      "sha256": "46205974036456edbb1e69fe707eca6066e512da37a06d405423dc53e825fb0d"
+    },
+    {
+      "path": "epilogue.md",
+      "sha256": "b4f13b2097ec81256e0fb7cf8cdd7c5919e3d60d896fabfe945b388a79363b3c"
+    },
+    {
+      "path": "appendices/scenario-passport-v1.6.md",
+      "sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae"
+    }
+  ],
+  "sourceSetSha256": "cbe8a8720c86c6f99fb9c856207b0e1e5555ca72ee675a1472e72947b350008c",
+  "sourceSetEncoding": "SHA256 UTF-8 (json.dumps(inputs, ensure_ascii=False, indent=2) + newline), fields path and sha256 only; paths relative to this working package."
+}

@@ -151,3 +151,14 @@ scripts/test-open-editorial-static.mjs -text whitespace=cr-at-eol
 /docs/editorial/editorial-team-v4.0.json -text whitespace=cr-at-eol
 /src/data/space-library.json -text whitespace=cr-at-eol
 /src/data/library-supplement.json -text whitespace=cr-at-eol
+
+# Preserve accepted 10.1 sources, projections, generators and historical test fixtures exactly.
+/manuscript/v10-1/** -text whitespace=cr-at-eol
+/scripts/release_v10_1.py -text whitespace=cr-at-eol
+/scripts/public_packages_v10_1.py -text whitespace=cr-at-eol
+/src/data/library-source-cards.json -text whitespace=cr-at-eol
+/src/data/essence-v10-1.json -text whitespace=cr-at-eol
+/public/book/right-to-decide-v10.1.md -text whitespace=cr-at-eol
+/public/images/book-cover-v10-1.png binary
+/public/images/right-to-decide-hero-v10-1.png binary
+/docs/open-editorial/test-fixtures/** -text -whitespace

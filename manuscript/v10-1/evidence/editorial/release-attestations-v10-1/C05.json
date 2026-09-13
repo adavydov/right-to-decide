@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C05",
+  "sourceSha256": "5bb5c41451346fd441e8600d8bf3860f90c2b64216827719e4d06df9c4cc1a8f",
+  "author": "books_epub",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Денежный перевод, исполнимое требование и резерв физического замещения разведены на одном заказе. Возврат аванса не ремонтирует печь. Публичная денежная система и совместимость сетей имеют собственные преимущества.",
+    "BIS представлен как предложение архитектуры и описание прототипа; производственная сеть остаётся сценарием."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

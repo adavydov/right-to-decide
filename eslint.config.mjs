@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local generated release packages, visual QA and private design references.
+    ".release-staging/**",
+    "docs/research/v10-1-reference/**",
   ]),
 ]);
 

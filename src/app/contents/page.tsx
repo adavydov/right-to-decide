@@ -24,9 +24,9 @@ export default function ContentsPage() {
         <p className="page-intro">{contents.intro}</p>
         <p className="page-intro" style={{ marginTop: 18 }}>{publicationSummary}</p>
         <EditionChoice />
-        {book.editionVersion !== "10.0" && <p style={{ marginTop: 22 }}><a className="text-link" href={assetPath("/book/contents-v5.1.md")} download>Скачать содержание ↓</a></p>}
+        {book.downloads?.md && <p style={{ marginTop: 22 }}><a className="text-link" href={assetPath(book.downloads.md.path)} download>Скачать текст в Markdown ↓</a></p>}
       </div>
-      <Link href={book.editionVersion === "10.0" ? "/read/prologue/" : "/read/contents/"} className="button">Открыть в читалке ↗</Link>
+      <Link href="/read/prologue/" className="button">Открыть в читалке ↗</Link>
     </div>
     <ContentsCatalog items={items} parts={book.parts} />
     <div className="book-callout">

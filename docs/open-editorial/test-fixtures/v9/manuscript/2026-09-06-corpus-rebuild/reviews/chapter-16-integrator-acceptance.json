@@ -1,0 +1,34 @@
+{
+  "version": "9.0",
+  "date": "2026-09-07",
+  "text": "chapters/chapter-16.md",
+  "sha256": "0b328908e4f5b75100c7415e7cfc21ac7da1f6bea8d79e2acd46f809d38da2c1",
+  "author": "root",
+  "independentReviewers": [
+    "education_history_rebuild",
+    "mechanism_recovery",
+    "release_pipeline"
+  ],
+  "reviews": [
+    "reviews/chapter-16-source-review.md",
+    "reviews/chapter-16-mechanism-review.md",
+    "reviews/chapter-16-reading-review.md"
+  ],
+  "decision": "accepted-agent-editorial",
+  "criteria": [
+    4,
+    3,
+    4,
+    3,
+    3,
+    4,
+    4,
+    4,
+    3,
+    3,
+    4,
+    4
+  ],
+  "criteria_authority": "reviews/chapter-16-reading-review.md",
+  "integrator_decision": "Принята после собственного полного чтения всех109 строк с таблицей и2примечаниями, полного источникового и предметного initial/final, литературного initial/final со всеми12 критериями и точной единственной последующей замены с целым окружением. Смета и четыре масштаба8 сохранены; восстановлена самостоятельная функция энергетической пробы7.2. Новые ходы различают нужду строить, готовую сильную помощь, частичные исходы, решение о бюджете и стоимость принимающей среды. Все12 критериев применимы и >=3/4, без усреднения. Это агентная редакционная приёмка, не проведённый опыт или внешняя экспертиза."
+}

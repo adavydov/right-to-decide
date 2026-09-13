@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C14",
+  "sourceSha256": "aa6e36a0d2c8ec48b6725bffe94c9209cb449218492869f697dea124ee902a7a",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Репутация первой команды заслуженна. Машинная фирма тоже проходит вход, а её скорость зависит от капитала и реальных установок. Человеческие предприятия и оплаченное открытое окно сохраняются после появления нового конкурента.",
+    "OECD не подменено доказательством неизбежной концентрации машинных фирм."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

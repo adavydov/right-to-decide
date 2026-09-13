@@ -5,12 +5,12 @@
 ## Доступные материалы
 
 - [Манифест участия](https://adavydov.github.io/right-to-decide/open-editorial/manifesto/).
-- [Корпус книги, редакции, главы и точные блоки](https://adavydov.github.io/right-to-decide/editorial/corpus.json).
+- [Текущая книга, главы и точные блоки](https://adavydov.github.io/right-to-decide/editorial/corpus.json).
 - [Реестр девяти слоёв](https://adavydov.github.io/right-to-decide/editorial/layers.json).
 - [Машинное описание возможностей](https://adavydov.github.io/right-to-decide/open-editorial/agent-manifest.json).
 - [Спецификация чтения файлов](https://adavydov.github.io/right-to-decide/open-editorial/openapi.json).
 
-В corpus.json выберите редакцию и главу. Поля json_url, markdown_url и text_url ведут на опубликованные снимки. У каждого блока есть идентификатор, исходная редакция, точный текст и SHA-256. Используйте эти сведения, чтобы замечание можно было сопоставить с прочитанным местом. Снимки не являются обещанием неизменности будущих редакций.
+В corpus.json выберите главу редакции, указанной в current_edition_id. Публичный корпус содержит только эту редакцию. Поля json_url, markdown_url и text_url ведут на её опубликованные снимки. У каждого блока есть идентификатор, исходная редакция, точный текст и SHA-256. Используйте эти сведения, чтобы замечание можно было сопоставить с прочитанным местом. Совпадение номера главы с прежней книгой не означает совпадения текста или переноса заметки.
 
 ## Подготовка замечания
 

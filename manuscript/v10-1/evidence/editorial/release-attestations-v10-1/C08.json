@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C08",
+  "sourceSha256": "655d372c047074b5825db50cb51444038e240e1fffa80e3d24159013718605b9",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Сравнительная таблица удерживает одну технологию и меняет адрес дохода. Работники, владельцы и казна получают разные итоги. Земная база снабжения приобретается по сделкам и поддерживается действующими выгодами, а не обещанием вечного бюджета.",
+    "Сбор включён в доходы, не прибавлен к ним; остаток и модель одной цепочки не названы полным макроэкономическим прогнозом."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

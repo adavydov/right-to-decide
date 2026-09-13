@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.1",
+  "decision": "accepted",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "team": {
+    "path": "public/editorial-v10/team.json",
+    "sha256": "f72b613a1294be73d445beef9b0476f42618ac22499dcb046b5fda85c93205cc",
+    "bytes": 11348
+  },
+  "text": {
+    "path": "public/editorial-v10/team.md",
+    "sha256": "0518ce9979135cf652834df9f7c11be237954e194cb6932e288bd5f4fbc9411f",
+    "bytes": 8866
+  },
+  "manifesto": {
+    "path": "public/editorial-v10/manifesto.md",
+    "sha256": "a5ef2981f6c66cb30a787be29199aa9ed19fb96c4732bb661a2c63387838a3d3",
+    "bytes": 6790
+  }
+}

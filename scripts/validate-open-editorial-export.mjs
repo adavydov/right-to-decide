@@ -38,6 +38,11 @@ for(const block of getOpenEditorialManifesto().blocks.filter(b=>b.kind!=='rule')
 const hash=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 assert.equal(hash(fs.readFileSync('docs/open-editorial/OPEN_EDITORIAL_MANIFESTO.md')),hash(fs.readFileSync(path.join(root,'editorial/manifesto.md'))));
 const discovery=JSON.parse(read('open-editorial/agent-manifest.json'));
+const corpus=JSON.parse(read('editorial/corpus.json'));
+assert.deepEqual(corpus.editions.map(edition=>edition.id),[corpus.current_edition_id],'Only the current edition enters the public corpus');
+assert.equal(corpus.edition_policy,'current-only');assert.equal(corpus.annotation_transfer,'none');
+assert.equal(discovery.current_edition_id,corpus.current_edition_id);assert.equal(discovery.edition_policy,'current-only');
+assert.deepEqual(fs.readdirSync(path.join(root,'editorial/editions')),[corpus.current_edition_id],'Retired edition files must not survive static export');
 assert.equal(discovery.mode,'static');assert.equal(discovery.configuration_status,'static');assert.equal(discovery.api_root,null);assert.equal(discovery.capability_authority,null);
 assert.equal(discovery.auth.submission,null);assert.equal(discovery.auth.registration_url,null);
 for(const name of ['submit_contribution','read_own_receipt','write_book','editorial_decisions','read_private_notes'])assert.equal(discovery.capabilities[name],false,name);

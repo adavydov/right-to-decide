@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C03",
+  "sourceSha256": "0fd55af1818d3e0f33bc6e977c60f4036eec156da1a56093e25df92f24fbe938",
+  "author": "books_epub",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Изготовление, обслуживание, первая оплата и капитал складываются в предприятие. Ньюи/Brawn показывает конкретную силу соглашений. Старый поставщик тоже способен ответить; победа предпринимателя не гарантирована одной новизной.",
+    "Мемуарный ракурс Ньюи сохранён, описание не выдано за полную корпоративную историю."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

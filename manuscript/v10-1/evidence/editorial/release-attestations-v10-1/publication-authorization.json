@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "scope": "publication-authorization",
+  "decision": "authorized",
+  "reviewer": "user-direct-instruction",
+  "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+  "instructionExcerpt": "закончи и опубликуй",
+  "meaning": "Прямое разрешение завершить и опубликовать текущий согласованный выпуск; не утверждение о чтении рукописи человеком.",
+  "technicalReleaseCondition": "Проверенная согласованность текущего текста, скачиваний, библиотеки и сайта."
+}

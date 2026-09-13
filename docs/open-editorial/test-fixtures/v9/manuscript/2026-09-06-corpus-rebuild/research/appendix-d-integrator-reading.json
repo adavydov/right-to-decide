@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-07",
+  "reader": "root",
+  "author": "mechanism_recovery",
+  "path": "appendices/scenario-passport-v1.6.md",
+  "sha256": "5e9eeb2d8daffa52f569e7ec4a78a0d4112c1b83ac208df626342798210fc624",
+  "lineCount": 379,
+  "completeRanges": [
+    [
+      1,
+      85
+    ],
+    [
+      86,
+      166
+    ],
+    [
+      167,
+      244
+    ],
+    [
+      245,
+      325
+    ],
+    [
+      326,
+      379
+    ]
+  ],
+  "allOutputsDelivered": true,
+  "dependentContexts": {
+    "chapters/chapter-16.md": [
+      [
+        45,
+        61
+      ]
+    ],
+    "chapters/chapter-09.md": [
+      [
+        25,
+        49
+      ]
+    ],
+    "chapters/chapter-07.md": [
+      [
+        45,
+        57
+      ]
+    ]
+  },
+  "decision": "local-revision-required",
+  "limit": "Полный проход Д и названные контексты; не новое полное чтение всех 20 литературных текстов или всех первоисточников.",
+  "finalLocalReview": {
+    "date": "2026-09-07",
+    "sha256": "068070b2fca30a15c4cb0685b122e69275b7ffb1fc07ea677e63975414e9b2ae",
+    "fullDiffRead": true,
+    "fullContextRanges": [
+      [
+        2,
+        6
+      ],
+      [
+        295,
+        299
+      ],
+      [
+        301,
+        305
+      ]
+    ],
+    "decision": "pass",
+    "unresolvedRequiredChanges": 0,
+    "wholeNewReadingClaimed": false
+  }
+}

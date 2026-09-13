@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "P00",
+  "sourceSha256": "8e6cbd7b34c447361f4192cd3af4c17641184f7492a836779e07e5f9c1c94ecc",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "История ткачей открывает различие между общим выигрышем и одной жизнью, затем сознательно меняется задача: исследуется удачный технический мир. Переход к первому заказу естественен; задана одна условная дорога, а не неизбежный прогноз.",
+    "Документальная реконструкция и парламентское высказывание отделены от сценария."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

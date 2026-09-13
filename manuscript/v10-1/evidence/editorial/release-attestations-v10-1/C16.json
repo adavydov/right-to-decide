@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C16",
+  "sourceSha256": "e870620bef5ea4ed8614da8ff1661d1cdfa0fe8c6b13879e7e366e7f7e051c9a",
+  "author": "root",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Условные взносы, обеспеченная компенсация и построенная замена решают разные препятствия. Общий союз всех шести учреждён, человеческий голос сохранён. Отсутствует всеобщий заказчик, а не сама работающая коалиция.",
+    "M01 с компенсациями не назван обычным Нэшем или оценкой продаваемости реальных политических прав."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

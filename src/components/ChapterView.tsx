@@ -223,7 +223,7 @@ export function ChapterView({ chapter, sourceBook = book, routePrefix = "/read/"
     <main id="main-content" className="reader-page">
       <ReaderShell key={chapter.id} currentId={chapter.id} items={items}
         revision={chapter.source?.sha256 ?? sourceBook.source.sha256}
-        routePrefix={routePrefix} contentsHref={contentsHref} storageNamespace={archived || sourceBook.editionVersion === "10.0" ? sourceBook.releaseId : undefined}
+        routePrefix={routePrefix} contentsHref={contentsHref} storageNamespace={sourceBook.releaseId}
         headings={chapter.blocks.flatMap(block => block.type === "heading" ? [{ id: block.id, title: displayBookTitle(block.text) }] : [])}
       >
         <article>

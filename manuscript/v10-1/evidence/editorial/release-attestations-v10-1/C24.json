@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C24",
+  "sourceSha256": "f921452538f669d38f405398fa7ff471aca20b88db56ceb418c866913d49f245",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Охрана исполняется и ограничивает обе стороны. Затем люди выигрывают содержательный спор о биологическом изменении, не получая право отозвать мандат. Так различие верховной власти и способности изменить частное решение проживается в результате.",
+    "Сценарий не назван гарантией любого ущерба. Несогласные и местная политика не исчезают ради слова заповедник."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

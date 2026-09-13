@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C10",
+  "sourceSha256": "0745b0c926bcf40efff9a330f8ebe743f34297e97fedcad057970db682b4e8c8",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Сначала понятен выигрыш от уменьшения нежелательного влечения; затем отдельно вводится дальняя биологическая предпосылка. Личный выигрыш создаёт отрасль и сторонников, после чего меняется оценщик результата.",
+    "Размер и срок испытания названы. Musunuru строго по резюме одного пациента; краткое наблюдение не стало долгосрочной безопасностью."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C12",
+  "sourceSha256": "809f9d285b02f60bc2610165eb013a856f83c7efddfb934a7a6c93d6941fe025",
+  "author": "editorial_audit; root — интеграция текущего дополнения",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "Ресурс сильного претендента не совпадает с доступной должностью. Ротация и новые организации действительно расширяют возможности, но не удваивают последнее слово об общей установке. Копирование добавляет новый предмет представительства.",
+    "Механизм Турчина перенесён как гипотеза, не как установленный прогноз общества ИИ."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}

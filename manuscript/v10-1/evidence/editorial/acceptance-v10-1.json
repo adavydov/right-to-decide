@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "editionVersion": "10.1",
+  "decision": "accepted-for-release",
+  "releaseDate": "2026-09-13",
+  "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+  "sources": [
+    {
+      "id": "P00",
+      "path": "manuscript/chapters/P00.md",
+      "sha256": "8e6cbd7b34c447361f4192cd3af4c17641184f7492a836779e07e5f9c1c94ecc",
+      "bytes": 9227,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/P00.json",
+        "sha256": "4e93ad0febf9882d5bd817e4603206b299028987cad3042fa786c5f23ffbf992",
+        "bytes": 1306
+      }
+    },
+    {
+      "id": "C01",
+      "path": "manuscript/chapters/C01.md",
+      "sha256": "3ab7416eee2052a2ab1d6144f473359896a38d019a3aa09d845e18d18a41d821",
+      "bytes": 13015,
+      "author": "books_epub; root — интеграция текущих дополнений",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C01.json",
+        "sha256": "3a55ca5e7f53384b1e40d6a1b899ebcb78cabf8e9fe46296f6f2bdb163db8feb",
+        "bytes": 1386
+      }
+    },
+    {
+      "id": "C02",
+      "path": "manuscript/chapters/C02.md",
+      "sha256": "4a06eaa05f5f241ebf947677ae581dd2c26bd477af048a8154f4e6b317f705ee",
+      "bytes": 11967,
+      "author": "books_epub",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C02.json",
+        "sha256": "9cf79d3d96a121ecf7108998a2455e46eb465b0b6922f43a73cba26a631d6e83",
+        "bytes": 1324
+      }
+    },
+    {
+      "id": "C03",
+      "path": "manuscript/chapters/C03.md",
+      "sha256": "0fd55af1818d3e0f33bc6e977c60f4036eec156da1a56093e25df92f24fbe938",
+      "bytes": 12842,
+      "author": "books_epub",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C03.json",
+        "sha256": "d099d4e59ba9b24ccdb64a8475f4727efb857e43ebc47268a658b14767fd0268",
+        "bytes": 1298
+      }
+    },
+    {
+      "id": "C04",
+      "path": "manuscript/chapters/C04.md",
+      "sha256": "8810c6bea017b7a4bbbd22ac670c519e23f1bad025012bc543f5a9741e6b1b82",
+      "bytes": 17839,
+      "author": "books_epub",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C04.json",
+        "sha256": "67f1a35f7daa46383339ca725e541e9a07ecc42df0804cb2e45251d9b2c09f0e",
+        "bytes": 1379
+      }
+    },
+    {
+      "id": "C05",
+      "path": "manuscript/chapters/C05.md",
+      "sha256": "5bb5c41451346fd441e8600d8bf3860f90c2b64216827719e4d06df9c4cc1a8f",
+      "bytes": 12413,
+      "author": "books_epub",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C05.json",
+        "sha256": "296328ee445ce02a9c7d04621af6231d7222b09436f7062a8311a80a3c028823",
+        "bytes": 1325
+      }
+    },
+    {
+      "id": "C06",
+      "path": "manuscript/chapters/C06.md",
+      "sha256": "233250bbabb68dd7c0219137999ff32f9b14e2bd308b0e5479bee7cd485f6841",
+      "bytes": 13168,
+      "author": "books_epub",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C06.json",
+        "sha256": "29aba1646d30fc9182d939b4529d50f7f90bb9dc0e9245e550aff61bcedec717",
+        "bytes": 1261
+      }
+    },
+    {
+      "id": "C07",
+      "path": "manuscript/chapters/C07.md",
+      "sha256": "f15cd8450faf789872b368ba48beb7b76afb7778e452dc454bf6c87f45d004ff",
+      "bytes": 15803,
+      "author": "books_epub; root — интеграция текущих дополнений",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C07.json",
+        "sha256": "8341351aa242d6396cad4e80a71aa411f056673ee57589adaace8276fd5091ad",
+        "bytes": 1391
+      }
+    },
+    {
+      "id": "C08",
+      "path": "manuscript/chapters/C08.md",
+      "sha256": "655d372c047074b5825db50cb51444038e240e1fffa80e3d24159013718605b9",
+      "bytes": 16126,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C08.json",
+        "sha256": "a837d3b6efafee74536cd2525439cf9bf2f3168e8f8b43423ed6a9ded3486875",
+        "bytes": 1404
+      }
+    },
+    {
+      "id": "C09",
+      "path": "manuscript/chapters/C09.md",
+      "sha256": "1a467e601478c3bdcbc68327f273555d2bb9c262bf1ed26881f67cb25b44f290",
+      "bytes": 12135,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C09.json",
+        "sha256": "4d3ed2037eda48e77fdf0496ce659d5e62b656848f48a582cb168d3f3fa3135e",
+        "bytes": 1309
+      }
+    },
+    {
+      "id": "C10",
+      "path": "manuscript/chapters/C10.md",
+      "sha256": "0745b0c926bcf40efff9a330f8ebe743f34297e97fedcad057970db682b4e8c8",
+      "bytes": 12682,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C10.json",
+        "sha256": "055fb44453d54dc3dbbb1c692241d91b21e756cb68cbdb3bb70d3c50dd28dfef",
+        "bytes": 1355
+      }
+    },
+    {
+      "id": "C11",
+      "path": "manuscript/chapters/C11.md",
+      "sha256": "570d594400d841e13a24414428b82ae33356dcf1e11547c695f9002caf402746",
+      "bytes": 17654,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C11.json",
+        "sha256": "9285023a7ecaaf93bb07b1998eec40cd057ee89c506d1057658a2a1b7dcb688a",
+        "bytes": 1446
+      }
+    },
+    {
+      "id": "C11A",
+      "path": "manuscript/chapters/C11A.md",
+      "sha256": "56bda217ebe7b491fed47b42b360d592da8e7385d351cc371ba35e8467e104de",
+      "bytes": 11864,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C11A.json",
+        "sha256": "01561ac2049f304cfc91445a2322e5e9714288877ddf21853aa1637fabde04f7",
+        "bytes": 1340
+      }
+    },
+    {
+      "id": "C11B",
+      "path": "manuscript/chapters/C11B.md",
+      "sha256": "2a34d766db8da663bbb464a01d0da349397909d13c00d6dc47a7f5656777b830",
+      "bytes": 12171,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C11B.json",
+        "sha256": "41ad8fecfb91ef293ba4e134c4f0f514ab394676b0c52d1b31361acfef9521b6",
+        "bytes": 1352
+      }
+    },
+    {
+      "id": "C12",
+      "path": "manuscript/chapters/C12.md",
+      "sha256": "809f9d285b02f60bc2610165eb013a856f83c7efddfb934a7a6c93d6941fe025",
+      "bytes": 15837,
+      "author": "editorial_audit; root — интеграция текущего дополнения",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C12.json",
+        "sha256": "335f8608cc53b05faea8f751dd81f80434744714de7ae550ceafcfe746938554",
+        "bytes": 1395
+      }
+    },
+    {
+      "id": "C13",
+      "path": "manuscript/chapters/C13.md",
+      "sha256": "95001532186087dbe2e4e10606cdeba91efcfda0788a95b11e0a86226b9c0435",
+      "bytes": 15188,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C13.json",
+        "sha256": "3d8e0dbcf8a419d37b9323b7e02969f595ee0b072c39caae2b547842131375c7",
+        "bytes": 1424
+      }
+    },
+    {
+      "id": "C14",
+      "path": "manuscript/chapters/C14.md",
+      "sha256": "aa6e36a0d2c8ec48b6725bffe94c9209cb449218492869f697dea124ee902a7a",
+      "bytes": 14902,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C14.json",
+        "sha256": "8d385f9074523e582af063b312ba433d6c980fca5af43393aa72930e6e2814c9",
+        "bytes": 1285
+      }
+    },
+    {
+      "id": "C15",
+      "path": "manuscript/chapters/C15.md",
+      "sha256": "f51d675fdc255352adbe93c7f9276aac34ee4f439e1472dc3a297cee3a4bc331",
+      "bytes": 10788,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C15.json",
+        "sha256": "c0658da0acf45fcbf667ba746fd75606a6ca3f76738a0be0b0f8b009eb6525f3",
+        "bytes": 1269
+      }
+    },
+    {
+      "id": "C16",
+      "path": "manuscript/chapters/C16.md",
+      "sha256": "e870620bef5ea4ed8614da8ff1661d1cdfa0fe8c6b13879e7e366e7f7e051c9a",
+      "bytes": 13310,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C16.json",
+        "sha256": "75d17e8c0b0d43ec4584af3627e13e7b6cbfb27b0cc8f2e5519abed38d00cd94",
+        "bytes": 1293
+      }
+    },
+    {
+      "id": "C17",
+      "path": "manuscript/chapters/C17.md",
+      "sha256": "fca239974df6c5340f5e4d84e16984d074ce7d279c613bc4ee9b74aa662244d3",
+      "bytes": 11716,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C17.json",
+        "sha256": "ba0f14e9638dcbee5fde0966b6afa884781414da2c0e65b9eca23ca5d840ea00",
+        "bytes": 1287
+      }
+    },
+    {
+      "id": "C18",
+      "path": "manuscript/chapters/C18.md",
+      "sha256": "020d0c27f36ba534a12a239a91629c3ec81833d5d4c2d34f82920cdddf5aa2ef",
+      "bytes": 13068,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C18.json",
+        "sha256": "742e3ea693928fa3dfb68807865b526e48f6e366d42d5c48d2727017d25e6b8c",
+        "bytes": 1400
+      }
+    },
+    {
+      "id": "C19",
+      "path": "manuscript/chapters/C19.md",
+      "sha256": "6796861183f8925dac361e9f67f04407604538110844d3bf5ff169376e06e60c",
+      "bytes": 11990,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C19.json",
+        "sha256": "fe2809f4f50ac5fcd6a1b392b2a01b4f3477fbb192ec90dc9fb406ae46e30d24",
+        "bytes": 1315
+      }
+    },
+    {
+      "id": "C20",
+      "path": "manuscript/chapters/C20.md",
+      "sha256": "5f68bc7123c274a5cd2f3baa1004715feabeb9c79ffaa301098ee1e4756cd09f",
+      "bytes": 11335,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C20.json",
+        "sha256": "47f1535b84e15925e495e5c467afc804702513a85b06892e274d0e5a2c9a9b0e",
+        "bytes": 1290
+      }
+    },
+    {
+      "id": "C21",
+      "path": "manuscript/chapters/C21.md",
+      "sha256": "1858588bf3f41326e957b118186ca3d1e228e9dc1b59c27e96c6cbdd79336ba3",
+      "bytes": 14966,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C21.json",
+        "sha256": "33003cf4f36dec12aefcad173c63be305d17a8f3d4ec4b34a2f1ad9f06f6494d",
+        "bytes": 1410
+      }
+    },
+    {
+      "id": "C22",
+      "path": "manuscript/chapters/C22.md",
+      "sha256": "3d2615f2989008ae2688d65a8006e806b29531266a21b467b16fc13f00a69b3b",
+      "bytes": 14892,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C22.json",
+        "sha256": "bfbbb177f7d75497abe8a79ccdf1162e77514461849a55405f7e746e4ee06b7a",
+        "bytes": 1424
+      }
+    },
+    {
+      "id": "C23",
+      "path": "manuscript/chapters/C23.md",
+      "sha256": "8e98ac2ab5036161381068e35cec216ef8d955af3443fd35485556dfe3301667",
+      "bytes": 16476,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C23.json",
+        "sha256": "6a47b77e8c2740b648935c4e65e5a9e7154914245a35a17050efe733cd71ebf0",
+        "bytes": 1459
+      }
+    },
+    {
+      "id": "C24",
+      "path": "manuscript/chapters/C24.md",
+      "sha256": "f921452538f669d38f405398fa7ff471aca20b88db56ceb418c866913d49f245",
+      "bytes": 11097,
+      "author": "editorial_audit",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/C24.json",
+        "sha256": "6f1b45700ccc36ab5b7fa1ba3cc76bd0d4c4c2f66f5fa1f32c0f9696210cfdb7",
+        "bytes": 1389
+      }
+    },
+    {
+      "id": "E00",
+      "path": "manuscript/chapters/E00.md",
+      "sha256": "a2c63898bc1cd624c0a11f22d4f5716ad80dc159236699e07c7a5c74c707eb88",
+      "bytes": 8523,
+      "author": "root",
+      "independentReviewer": "books_pdf",
+      "decision": "accepted",
+      "unresolvedMaterialIssues": 0,
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/E00.json",
+        "sha256": "c7a4471838dee3deae3183d96025014264ae22a313d8e31e57fd386915bc5fbf",
+        "bytes": 1269
+      }
+    }
+  ],
+  "policies": [
+    {
+      "path": "CONSTITUTION.md",
+      "sha256": "fd552bc85082bc798c99602fa71b47eae9b7fb3615dacba02cf46400d2f5e7d0",
+      "bytes": 56809
+    },
+    {
+      "path": "planning/chapters.json",
+      "sha256": "b1bda4d9bdbeed5c01c577ed826047e71d09a070357a6d7d2d4f68cc8bfd63ec",
+      "bytes": 50539
+    },
+    {
+      "path": "editorial/QUALITY_GATES.md",
+      "sha256": "0e3bbb1ab0b2204bf667ea281ee019ef7c5d294f9b16589e4919ff79cdcd4d68",
+      "bytes": 6034
+    },
+    {
+      "path": "BOOK_METADATA.json",
+      "sha256": "976448f01b04f967d2bf34d4cb171fd61ba646c72f8b58930cb94bea7886b652",
+      "bytes": 1447
+    }
+  ],
+  "wholeBook": {
+    "continuousReading": {
+      "reviewer": "books_pdf",
+      "decision": "accepted",
+      "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/continuousReading.json",
+        "sha256": "5d4a450e17870dfff792660d1691b9ad6988b8039ced8e51bbb1005680363c95",
+        "bytes": 2451
+      }
+    },
+    "factualReview": {
+      "reviewer": "books_pdf",
+      "decision": "accepted",
+      "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/factualReview.json",
+        "sha256": "2306311ffcc031d2281dab9dec037d6738b9838349c257f0ee0e0ab305f95291",
+        "bytes": 2687
+      }
+    },
+    "alternativesReview": {
+      "reviewer": "books_pdf",
+      "decision": "accepted",
+      "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/alternativesReview.json",
+        "sha256": "39a55023c6bbb0b0190e086d8759b89001398d4065e58f3132f3410e410815d8",
+        "bytes": 2719
+      }
+    },
+    "continuityReview": {
+      "reviewer": "books_pdf",
+      "decision": "accepted",
+      "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/continuityReview.json",
+        "sha256": "4b62d9673967bc7015667710fd5ee9d5c0f9edae5b5efe92c364695af6d87f2a",
+        "bytes": 2735
+      }
+    },
+    "repetitionReview": {
+      "reviewer": "books_pdf",
+      "decision": "accepted",
+      "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+      "evidence": {
+        "path": "editorial/release-attestations-v10-1/repetitionReview.json",
+        "sha256": "d70cb69ba6ef3e909403ae39fad717e8ec44c8f8cb5efeff64b8b568e73cf757",
+        "bytes": 2901
+      }
+    }
+  },
+  "authorApproval": {
+    "scope": "publication-authorization",
+    "reviewer": "user-direct-instruction",
+    "decision": "authorized",
+    "sourceSetSha256": "bf6f6c409bb1397ba9a25326ab1d4c3e5259df5b331228cae74be3c0e9363921",
+    "authorityEvidence": {
+      "path": "editorial/AUTHOR_DECISION_2026-09-13_FINAL_PATCH.md",
+      "sha256": "03fca8434cb2422e305a3df08a741309b83207f82997e4cd076643aaaea5ee48",
+      "bytes": 4589
+    },
+    "evidence": {
+      "path": "editorial/release-attestations-v10-1/publication-authorization.json",
+      "sha256": "f07fbd6c1e736b50fb665ff0dd61f97f96e803869a6943e041e88d04ed05c3b7",
+      "bytes": 698
+    }
+  }
+}

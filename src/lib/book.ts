@@ -1,5 +1,4 @@
 import bookData from "@/data/book.json";
-import previousEditionData from "@/data/previous-edition.json";
 import authorsData from "@/data/authors.json";
 
 export type BookList = {
@@ -124,8 +123,6 @@ export const book: Book = {
   })),
 };
 export const chapters = book.chapters;
-export const previousEdition = previousEditionData as Book;
-export const archiveChapters = previousEdition.chapters.filter(c => c.id !== "source-contents" && c.status === "available");
 export const mainChapters = chapters.filter((chapter) => chapter.kind === "chapter");
 export const publishedChapterCount = mainChapters.filter((chapter) => chapter.status === "available").length;
 export const publicationSummary = publishedChapterCount === 0

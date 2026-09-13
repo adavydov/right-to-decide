@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./publication-tokens.css";
+import "./v101-hero.css";
 import { assetPath, siteConfig } from "@/lib/site-config";
 import { BookHeader } from "@/components/BookHeader";
 import { BookFooter } from "@/components/BookFooter";

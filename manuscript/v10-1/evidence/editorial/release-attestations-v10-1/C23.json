@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "chapter": "C23",
+  "sourceSha256": "8e98ac2ab5036161381068e35cec216ef8d955af3443fd35485556dfe3301667",
+  "author": "editorial_audit",
+  "reviewer": "books_pdf",
+  "decision": "accepted",
+  "unresolvedMaterialIssues": 0,
+  "reviewType": "independent-agent-continuous-reading",
+  "readingScope": "full chapter including notes",
+  "grounds": [
+    "У просьбы появляются уполномоченные стороны, открытая цена для потомков, несогласные и реальная федеративная альтернатива. Миссия преемника была введена раньше. До передачи ключей заданы средства местной охраны и причина вмешаться после нарушения.",
+    "M05 проверяет ограниченную последовательную игру, не легитимность, слияние или всю фабулу. Космическая задержка не устраняется мгновенной связью."
+  ],
+  "basis": {
+    "report": "WHOLE_BOOK_CONTINUOUS_REVIEW.json",
+    "sha256": "ce2cf3c1e4b4c169d232000b56f483351e2d233b1393895b09e8ddc269b20a04",
+    "retention": "Полный отчёт и журнал чтения сохранены в рабочей редакции."
+  },
+  "preparedAgentReader": true,
+  "externalHumanExpertise": false
+}
